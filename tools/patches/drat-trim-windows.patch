@@ -1,0 +1,36 @@
+diff --git a/drat-trim.c b/drat-trim.c
+index cf8a676..ea1f966 100644
+--- a/drat-trim.c
++++ b/drat-trim.c
+@@ -22,7 +22,31 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <assert.h>
++#ifdef _WIN32
++#include <windows.h>
++#define getc_unlocked getc
++#ifdef ERROR
++#undef ERROR
++#endif
++#ifdef FAILED
++#undef FAILED
++#endif
++static int gettimeofday(struct timeval *value, void *timezone_unused) {
++  FILETIME file_time;
++  ULARGE_INTEGER ticks;
++  (void) timezone_unused;
++  GetSystemTimeAsFileTime(&file_time);
++  ticks.LowPart = file_time.dwLowDateTime;
++  ticks.HighPart = file_time.dwHighDateTime;
++  /* FILETIME counts 100 ns intervals since 1601-01-01. */
++  ticks.QuadPart -= 116444736000000000ULL;
++  value->tv_sec = (long) (ticks.QuadPart / 10000000ULL);
++  value->tv_usec = (long) ((ticks.QuadPart % 10000000ULL) / 10ULL);
++  return 0;
++}
++#else
+ #include <sys/time.h>
++#endif
+ 
+ //#define PARTIALPROOF
+ 

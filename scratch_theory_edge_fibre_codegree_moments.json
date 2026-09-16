@@ -1,0 +1,837 @@
+{
+  "status": "EDGE_FIBRE_CODEGREE_MOMENT_DECOMPOSITION_AND_BOUNDARY_PASS",
+  "inputs": {
+    "scratch_theory_root_flag_union_audit.json": "D21FB3A92CAB1063A6290671F708D1260D89FF4520A55F5A3567D77841EAB5B7",
+    "scratch_theory_root_yyt_augmented_relation.json": "67895D4287A1F0DD8E99F587F13D60FDEFA9ECE34BEC6E46A4CE83F4D830CCF5",
+    "scratch_theory_root_yyt_order8_shadow.json": "3B28F9686EC0CECB33FD875520F3E096480630506FB0941894957D7FB8EB3883",
+    "scratch_theory_global_fibre_block_gram.json": "F6705681BEA137ECB9D78DF0A3BF2BDE8C251A2D2276E8539AEF097121238248",
+    "scratch_root_order8_e0_lower_bound_boundary.json": "0745D3DD92171780BDB1C92CCCE79E0028790B8CC25FB13093ADE2BB951962AE"
+  },
+  "parameters": {
+    "triangles": 231,
+    "edges": 693,
+    "nonedges": 4158
+  },
+  "finite_role_audit": {
+    "triangular_prism_canonical_mask": 7100,
+    "side_root_for_each_triangle_edge": {
+      "0-1": 5,
+      "0-2": 4,
+      "1-2": 3,
+      "3-4": 2,
+      "3-5": 1,
+      "4-5": 0
+    },
+    "each_prism_supplies_one_side_root_to_each_of_its_six_triangle_edges": true,
+    "H_delta_canonical_mask": 120568,
+    "H_delta_degree_sequence": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "intrinsic_root": 0,
+    "intrinsic_diagonal_chord": [
+      5,
+      6
+    ]
+  },
+  "edgewise_decomposition": {
+    "definitions": {
+      "q(T)": "12-a3(T)",
+      "p_e": "number of prism/side roots for e",
+      "d_e": "number of H_delta diagonal roots whose chord is e",
+      "H_e": "number of roots whose fibre contains both endpoints of e"
+    },
+    "identities": [
+      "p_e=a3(T(e))=12-q(T(e))",
+      "H_e=p_e+d_e=12-q(T(e))+d_e",
+      "0<=d_e<=floor(q(T(e))/2)",
+      "sum_e p_e=6P=8316-2n3",
+      "sum_e d_e=D_*=n3-z11/4",
+      "sum_e H_e=T=8316-2n3+D_*"
+    ],
+    "d_bound_proof": "For e=T\\{u}, d_e is the number of entries equal to two in column (T,u) of Y.  Its column sum is q(T), so 2d_e<=q(T).",
+    "local_state_count": 49,
+    "local_states": [
+      {
+        "q": 0,
+        "p=12-q": 12,
+        "d": 0,
+        "H_e": 12,
+        "binom(H_e,2)": 66,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 1,
+        "p=12-q": 11,
+        "d": 0,
+        "H_e": 11,
+        "binom(H_e,2)": 55,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 2,
+        "p=12-q": 10,
+        "d": 0,
+        "H_e": 10,
+        "binom(H_e,2)": 45,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 2,
+        "p=12-q": 10,
+        "d": 1,
+        "H_e": 11,
+        "binom(H_e,2)": 55,
+        "increment_over_binom(p,2)": 10,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 3,
+        "p=12-q": 9,
+        "d": 0,
+        "H_e": 9,
+        "binom(H_e,2)": 36,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 3,
+        "p=12-q": 9,
+        "d": 1,
+        "H_e": 10,
+        "binom(H_e,2)": 45,
+        "increment_over_binom(p,2)": 9,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 4,
+        "p=12-q": 8,
+        "d": 0,
+        "H_e": 8,
+        "binom(H_e,2)": 28,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 4,
+        "p=12-q": 8,
+        "d": 1,
+        "H_e": 9,
+        "binom(H_e,2)": 36,
+        "increment_over_binom(p,2)": 8,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 4,
+        "p=12-q": 8,
+        "d": 2,
+        "H_e": 10,
+        "binom(H_e,2)": 45,
+        "increment_over_binom(p,2)": 17,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 5,
+        "p=12-q": 7,
+        "d": 0,
+        "H_e": 7,
+        "binom(H_e,2)": 21,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 5,
+        "p=12-q": 7,
+        "d": 1,
+        "H_e": 8,
+        "binom(H_e,2)": 28,
+        "increment_over_binom(p,2)": 7,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 5,
+        "p=12-q": 7,
+        "d": 2,
+        "H_e": 9,
+        "binom(H_e,2)": 36,
+        "increment_over_binom(p,2)": 15,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 6,
+        "p=12-q": 6,
+        "d": 0,
+        "H_e": 6,
+        "binom(H_e,2)": 15,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 6,
+        "p=12-q": 6,
+        "d": 1,
+        "H_e": 7,
+        "binom(H_e,2)": 21,
+        "increment_over_binom(p,2)": 6,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 6,
+        "p=12-q": 6,
+        "d": 2,
+        "H_e": 8,
+        "binom(H_e,2)": 28,
+        "increment_over_binom(p,2)": 13,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 6,
+        "p=12-q": 6,
+        "d": 3,
+        "H_e": 9,
+        "binom(H_e,2)": 36,
+        "increment_over_binom(p,2)": 21,
+        "augmented_offdiagonal_column_mass": 63
+      },
+      {
+        "q": 7,
+        "p=12-q": 5,
+        "d": 0,
+        "H_e": 5,
+        "binom(H_e,2)": 10,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 7,
+        "p=12-q": 5,
+        "d": 1,
+        "H_e": 6,
+        "binom(H_e,2)": 15,
+        "increment_over_binom(p,2)": 5,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 7,
+        "p=12-q": 5,
+        "d": 2,
+        "H_e": 7,
+        "binom(H_e,2)": 21,
+        "increment_over_binom(p,2)": 11,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 7,
+        "p=12-q": 5,
+        "d": 3,
+        "H_e": 8,
+        "binom(H_e,2)": 28,
+        "increment_over_binom(p,2)": 18,
+        "augmented_offdiagonal_column_mass": 63
+      },
+      {
+        "q": 8,
+        "p=12-q": 4,
+        "d": 0,
+        "H_e": 4,
+        "binom(H_e,2)": 6,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 8,
+        "p=12-q": 4,
+        "d": 1,
+        "H_e": 5,
+        "binom(H_e,2)": 10,
+        "increment_over_binom(p,2)": 4,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 8,
+        "p=12-q": 4,
+        "d": 2,
+        "H_e": 6,
+        "binom(H_e,2)": 15,
+        "increment_over_binom(p,2)": 9,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 8,
+        "p=12-q": 4,
+        "d": 3,
+        "H_e": 7,
+        "binom(H_e,2)": 21,
+        "increment_over_binom(p,2)": 15,
+        "augmented_offdiagonal_column_mass": 63
+      },
+      {
+        "q": 8,
+        "p=12-q": 4,
+        "d": 4,
+        "H_e": 8,
+        "binom(H_e,2)": 28,
+        "increment_over_binom(p,2)": 22,
+        "augmented_offdiagonal_column_mass": 62
+      },
+      {
+        "q": 9,
+        "p=12-q": 3,
+        "d": 0,
+        "H_e": 3,
+        "binom(H_e,2)": 3,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 9,
+        "p=12-q": 3,
+        "d": 1,
+        "H_e": 4,
+        "binom(H_e,2)": 6,
+        "increment_over_binom(p,2)": 3,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 9,
+        "p=12-q": 3,
+        "d": 2,
+        "H_e": 5,
+        "binom(H_e,2)": 10,
+        "increment_over_binom(p,2)": 7,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 9,
+        "p=12-q": 3,
+        "d": 3,
+        "H_e": 6,
+        "binom(H_e,2)": 15,
+        "increment_over_binom(p,2)": 12,
+        "augmented_offdiagonal_column_mass": 63
+      },
+      {
+        "q": 9,
+        "p=12-q": 3,
+        "d": 4,
+        "H_e": 7,
+        "binom(H_e,2)": 21,
+        "increment_over_binom(p,2)": 18,
+        "augmented_offdiagonal_column_mass": 62
+      },
+      {
+        "q": 10,
+        "p=12-q": 2,
+        "d": 0,
+        "H_e": 2,
+        "binom(H_e,2)": 1,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 10,
+        "p=12-q": 2,
+        "d": 1,
+        "H_e": 3,
+        "binom(H_e,2)": 3,
+        "increment_over_binom(p,2)": 2,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 10,
+        "p=12-q": 2,
+        "d": 2,
+        "H_e": 4,
+        "binom(H_e,2)": 6,
+        "increment_over_binom(p,2)": 5,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 10,
+        "p=12-q": 2,
+        "d": 3,
+        "H_e": 5,
+        "binom(H_e,2)": 10,
+        "increment_over_binom(p,2)": 9,
+        "augmented_offdiagonal_column_mass": 63
+      },
+      {
+        "q": 10,
+        "p=12-q": 2,
+        "d": 4,
+        "H_e": 6,
+        "binom(H_e,2)": 15,
+        "increment_over_binom(p,2)": 14,
+        "augmented_offdiagonal_column_mass": 62
+      },
+      {
+        "q": 10,
+        "p=12-q": 2,
+        "d": 5,
+        "H_e": 7,
+        "binom(H_e,2)": 21,
+        "increment_over_binom(p,2)": 20,
+        "augmented_offdiagonal_column_mass": 61
+      },
+      {
+        "q": 11,
+        "p=12-q": 1,
+        "d": 0,
+        "H_e": 1,
+        "binom(H_e,2)": 0,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 11,
+        "p=12-q": 1,
+        "d": 1,
+        "H_e": 2,
+        "binom(H_e,2)": 1,
+        "increment_over_binom(p,2)": 1,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 11,
+        "p=12-q": 1,
+        "d": 2,
+        "H_e": 3,
+        "binom(H_e,2)": 3,
+        "increment_over_binom(p,2)": 3,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 11,
+        "p=12-q": 1,
+        "d": 3,
+        "H_e": 4,
+        "binom(H_e,2)": 6,
+        "increment_over_binom(p,2)": 6,
+        "augmented_offdiagonal_column_mass": 63
+      },
+      {
+        "q": 11,
+        "p=12-q": 1,
+        "d": 4,
+        "H_e": 5,
+        "binom(H_e,2)": 10,
+        "increment_over_binom(p,2)": 10,
+        "augmented_offdiagonal_column_mass": 62
+      },
+      {
+        "q": 11,
+        "p=12-q": 1,
+        "d": 5,
+        "H_e": 6,
+        "binom(H_e,2)": 15,
+        "increment_over_binom(p,2)": 15,
+        "augmented_offdiagonal_column_mass": 61
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "d": 0,
+        "H_e": 0,
+        "binom(H_e,2)": 0,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 66
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "d": 1,
+        "H_e": 1,
+        "binom(H_e,2)": 0,
+        "increment_over_binom(p,2)": 0,
+        "augmented_offdiagonal_column_mass": 65
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "d": 2,
+        "H_e": 2,
+        "binom(H_e,2)": 1,
+        "increment_over_binom(p,2)": 1,
+        "augmented_offdiagonal_column_mass": 64
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "d": 3,
+        "H_e": 3,
+        "binom(H_e,2)": 3,
+        "increment_over_binom(p,2)": 3,
+        "augmented_offdiagonal_column_mass": 63
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "d": 4,
+        "H_e": 4,
+        "binom(H_e,2)": 6,
+        "increment_over_binom(p,2)": 6,
+        "augmented_offdiagonal_column_mass": 62
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "d": 5,
+        "H_e": 5,
+        "binom(H_e,2)": 10,
+        "increment_over_binom(p,2)": 10,
+        "augmented_offdiagonal_column_mass": 61
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "d": 6,
+        "H_e": 6,
+        "binom(H_e,2)": 15,
+        "increment_over_binom(p,2)": 15,
+        "augmented_offdiagonal_column_mass": 60
+      }
+    ],
+    "sharp_edge_codegree_cap": 12
+  },
+  "K_edge_exact_and_moment_bounds": {
+    "exact": "K_edge=45738-23n3+(3/2)Q2+sum_e[(12-q(T(e)))d_e+binom(d_e,2)]",
+    "definitions": [
+      "Q2=sum_T q(T)^2",
+      "cmin(S,m)=minimum sum of binom(x_i,2) over m nonnegative integers of sum S",
+      "cmax6(S,693)=maximum sum of binom(x_i,2) with 0<=x_i<=6 and sum S"
+    ],
+    "lower": "K_edge>=45738-23n3+(3/2)Q2+cmin(D_*,693), and independently K_edge>=bundle_min(T)",
+    "upper_family": [
+      "K_edge<=45738-23n3+(3/2)Q2+10D_*-3cmin(D_*,693)",
+      "K_edge<=cmax12(T,693)",
+      "K_edge<=45738-D_*",
+      "K_edge<=45738+n3-(3/2)Q2+cmax6(D_*,693)"
+    ],
+    "odd_q_capacity_refinement": "D_*<=n3-(3/2)O_q, where O_q is the number of triangles with odd q(T)",
+    "q_moment_region": {
+      "sum_q": "2n3/3",
+      "n3_congruence_and_range": "n3 is a multiple of 3 in [0,4158]",
+      "Q2_interval": "sqmin(2n3/3,231)<=Q2<=sqmax_cap12(2n3/3,231)",
+      "parity": "Q2 congruent to sum_q modulo 2, hence Q2 is even",
+      "n3_values_checked": 1387,
+      "samples": [
+        {
+          "n3": 0,
+          "sum_q": 0,
+          "Q2_min": 0,
+          "Q2_max": 0
+        },
+        {
+          "n3": 3,
+          "sum_q": 2,
+          "Q2_min": 2,
+          "Q2_max": 4
+        },
+        {
+          "n3": 2079,
+          "sum_q": 1386,
+          "Q2_min": 8316,
+          "Q2_max": 16596
+        },
+        {
+          "n3": 4158,
+          "sum_q": 2772,
+          "Q2_min": 33264,
+          "Q2_max": 33264
+        }
+      ]
+    }
+  },
+  "exact_three_edge_bundle_floor": {
+    "formula": "bundle_min(T)=cmin(T,693) for T<=7623 and T=8316; for 7624<=T<=8313 add (3-((T-7623) mod 3)) mod 3; T=8314,8315 are locally impossible",
+    "reason": "An edge can have H_e=12 only when q=0,d=0, hence all three edges of that triangle have H=12.  Explicit q,d constructions attain every stated value and the stated correction.",
+    "T_values_checked": 8315,
+    "unreachable_T": [
+      8314,
+      8315
+    ],
+    "values_strictly_stronger_than_unbundled_cmin": 460,
+    "first_stronger": {
+      "T": 7624,
+      "extra": 2
+    },
+    "last_stronger": {
+      "T": 8312,
+      "extra": 1
+    }
+  },
+  "order8_shadow_connection": {
+    "augmented_column": "For e, Yhat has p_e prism singleton roots, q(T) good flag occurrences, and d_e doubled roots; its offdiagonal root-pair mass is 66-d_e.",
+    "relational_domination": [
+      "K_edge_adjacent_root_pairs<=beta_e",
+      "K_edge_nonadjacent_root_pairs<=beta_n"
+    ],
+    "beta_e_order8_nonzero_coefficients": [
+      [
+        5691760,
+        2
+      ],
+      [
+        127242964,
+        4
+      ],
+      [
+        144594160,
+        2
+      ]
+    ],
+    "beta_n_order8_nonzero_coefficients": [
+      [
+        15424580,
+        2
+      ],
+      [
+        15436356,
+        2
+      ],
+      [
+        44489072,
+        2
+      ],
+      [
+        110787152,
+        2
+      ],
+      [
+        127315016,
+        2
+      ],
+      [
+        149654084,
+        2
+      ]
+    ],
+    "beta_sum": "beta_e+beta_n=45738-D_*",
+    "bad_mate_total": "R_e+R_n=45738+n3-(3/2)Q2",
+    "scope": "The domination is one-sided.  The shadow also counts singleton good roots that are not fibre roots for e, so it gives no lower bound on K_edge."
+  },
+  "combined_with_global_collision": {
+    "old_global_bound": "K_fb=K_edge+K_nonedge>=10395",
+    "bundle_plus_nonedge_integer_floor_minimum": 10395,
+    "equality_T_interval": [
+      1386,
+      2079
+    ],
+    "strict_improvement_of_absolute_bound": false,
+    "positive_T_consequence": false,
+    "strict_n3_upper_bound": false,
+    "sample_relaxation_points": [
+      {
+        "n3": 4158,
+        "Q2": 33264,
+        "D_star": 0,
+        "T": 0,
+        "K_edge": 0,
+        "prism_base": 0,
+        "bad_mate_correction_total": 0,
+        "lower": 0,
+        "upper": 0,
+        "q_Q2_D_upper": 0,
+        "H_e_cap_12_upper": 0,
+        "augmented_column_mass_upper": 45738,
+        "bad_mate_Q2_upper": 0,
+        "K_nonedge_integer_floor": 12474,
+        "combined_collision_floor": 12474
+      },
+      {
+        "n3": 4158,
+        "Q2": 33264,
+        "D_star": 1,
+        "T": 1,
+        "K_edge": 0,
+        "prism_base": 0,
+        "bad_mate_correction_total": 0,
+        "lower": 0,
+        "upper": 0,
+        "q_Q2_D_upper": 10,
+        "H_e_cap_12_upper": 0,
+        "augmented_column_mass_upper": 45737,
+        "bad_mate_Q2_upper": 0,
+        "K_nonedge_integer_floor": 12472,
+        "combined_collision_floor": 12472
+      },
+      {
+        "n3": 3465,
+        "Q2": 23100,
+        "D_star": 0,
+        "T": 1386,
+        "K_edge": 693,
+        "prism_base": 693,
+        "bad_mate_correction_total": 14553,
+        "lower": 693,
+        "upper": 693,
+        "q_Q2_D_upper": 693,
+        "H_e_cap_12_upper": 7605,
+        "augmented_column_mass_upper": 45738,
+        "bad_mate_Q2_upper": 14553,
+        "K_nonedge_integer_floor": 9702,
+        "combined_collision_floor": 10395
+      },
+      {
+        "n3": 3120,
+        "Q2": 18730,
+        "D_star": 3,
+        "T": 2079,
+        "K_edge": 2079,
+        "prism_base": 2073,
+        "bad_mate_correction_total": 20763,
+        "lower": 2079,
+        "upper": 2103,
+        "q_Q2_D_upper": 2103,
+        "H_e_cap_12_upper": 11421,
+        "augmented_column_mass_upper": 45735,
+        "bad_mate_Q2_upper": 20766,
+        "K_nonedge_integer_floor": 8316,
+        "combined_collision_floor": 10395
+      },
+      {
+        "n3": 2079,
+        "Q2": 8316,
+        "D_star": 0,
+        "T": 4158,
+        "K_edge": 10395,
+        "prism_base": 10395,
+        "bad_mate_correction_total": 35343,
+        "lower": 10395,
+        "upper": 10395,
+        "q_Q2_D_upper": 10395,
+        "H_e_cap_12_upper": 22851,
+        "augmented_column_mass_upper": 45738,
+        "bad_mate_Q2_upper": 35343,
+        "K_nonedge_integer_floor": 4158,
+        "combined_collision_floor": 14553
+      },
+      {
+        "n3": 348,
+        "Q2": 234,
+        "D_star": 3,
+        "T": 7623,
+        "K_edge": 38115,
+        "prism_base": 38085,
+        "bad_mate_correction_total": 45735,
+        "lower": 38115,
+        "upper": 38115,
+        "q_Q2_D_upper": 38115,
+        "H_e_cap_12_upper": 41913,
+        "augmented_column_mass_upper": 45735,
+        "bad_mate_Q2_upper": 45738,
+        "K_nonedge_integer_floor": 693,
+        "combined_collision_floor": 38808
+      },
+      {
+        "n3": 690,
+        "Q2": 920,
+        "D_star": 688,
+        "T": 7624,
+        "K_edge": 38128,
+        "prism_base": 31248,
+        "bad_mate_correction_total": 45048,
+        "lower": 38128,
+        "upper": 38128,
+        "q_Q2_D_upper": 38128,
+        "H_e_cap_12_upper": 41916,
+        "augmented_column_mass_upper": 45050,
+        "bad_mate_Q2_upper": 46764,
+        "K_nonedge_integer_floor": 692,
+        "combined_collision_floor": 38820
+      },
+      {
+        "n3": 690,
+        "Q2": 920,
+        "D_star": 689,
+        "T": 7625,
+        "K_edge": 38138,
+        "prism_base": 31248,
+        "bad_mate_correction_total": 45048,
+        "lower": 38138,
+        "upper": 38138,
+        "q_Q2_D_upper": 38138,
+        "H_e_cap_12_upper": 41920,
+        "augmented_column_mass_upper": 45049,
+        "bad_mate_Q2_upper": 46768,
+        "K_nonedge_integer_floor": 691,
+        "combined_collision_floor": 38829
+      },
+      {
+        "n3": 690,
+        "Q2": 920,
+        "D_star": 690,
+        "T": 7626,
+        "K_edge": 38148,
+        "prism_base": 31248,
+        "bad_mate_correction_total": 45048,
+        "lower": 38148,
+        "upper": 38148,
+        "q_Q2_D_upper": 38148,
+        "H_e_cap_12_upper": 41925,
+        "augmented_column_mass_upper": 45048,
+        "bad_mate_Q2_upper": 46773,
+        "K_nonedge_integer_floor": 690,
+        "combined_collision_floor": 38838
+      },
+      {
+        "n3": 3,
+        "Q2": 4,
+        "D_star": 3,
+        "T": 8313,
+        "K_edge": 45705,
+        "prism_base": 45675,
+        "bad_mate_correction_total": 45735,
+        "lower": 45705,
+        "upper": 45705,
+        "q_Q2_D_upper": 45705,
+        "H_e_cap_12_upper": 45708,
+        "augmented_column_mass_upper": 45735,
+        "bad_mate_Q2_upper": 45738,
+        "K_nonedge_integer_floor": 3,
+        "combined_collision_floor": 45708
+      },
+      {
+        "n3": 0,
+        "Q2": 0,
+        "D_star": 0,
+        "T": 8316,
+        "K_edge": 45738,
+        "prism_base": 45738,
+        "bad_mate_correction_total": 45738,
+        "lower": 45738,
+        "upper": 45738,
+        "q_Q2_D_upper": 45738,
+        "H_e_cap_12_upper": 45738,
+        "augmented_column_mass_upper": 45738,
+        "bad_mate_Q2_upper": 45738,
+        "K_nonedge_integer_floor": 0,
+        "combined_collision_floor": 45738
+      }
+    ]
+  },
+  "exact_boundary": {
+    "n3": 4158,
+    "z11": 16632,
+    "q(T)_all_triangles": 12,
+    "Q2": 33264,
+    "D_star": 0,
+    "T": 0,
+    "K_edge": 0,
+    "H0_nonedge_collision": 12474,
+    "K_fb_at_H0": 12474,
+    "beta_e": "2070988839162253926522129810139492169693988/517521941776627318214642378508170816671",
+    "beta_n": "21599429733817126353979183298067224643204210/517521941776627318214642378508170816671",
+    "all_scalar_and_order8_shadow_constraints_pass": true,
+    "factorization_caveat": "H0 and the Wave159 order-eight point are exact relaxation controls, not a binary rooted-fibre factorization or a graph."
+  },
+  "conclusion": "The edgewise identity gives a conceptual proof of H_e<=12 and some high-T integer refinements, but neither improves the absolute K_fb floor nor forces T>0 or n3<4158.  A stronger argument must couple the selected prism/double-root set to the order-eight shadow from below, or constrain nonedge fibre collisions."
+}

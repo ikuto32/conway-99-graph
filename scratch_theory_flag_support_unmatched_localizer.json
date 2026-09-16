@@ -1,0 +1,92 @@
+{
+  "status": "EXACT_MINIMAL_UNMATCHED_SLOT_LOCALIZER_BOUNDARY_PASS",
+  "exact_indices": {
+    "K_D_index": "((T,U),(R,S))",
+    "K_D_entry": "D[T,R]D[R,U]D[U,S]D[S,T]",
+    "U_entry": "U[x,(T,U)]=B[x,T]B[x,U]",
+    "L_selector_over_F3": "L=2*(D^(o2)-D)",
+    "W": "W[r,T,U]=B[r,T]L[T,U](1-(AB)[r,U])",
+    "X": "X[(T,r),(U,u)]=W[r,T,U]W[u,U,T]",
+    "Y": "Y[r,(U,u)]=sum_T X[(T,r),(U,u)]",
+    "C": "C[(U,u),R]=1 iff U=R",
+    "M": "M=YC",
+    "Khat": "Khat[(x,T),(y,T');U]=W[x,T,U]W[y,T',U]",
+    "Theta": "Theta[x,y]=sum_(U,T,T')Khat[(x,T),(y,T');U]=(MM^T)[x,y]",
+    "minimal_cross_root_localizer": "3 Lambda=3YY^T-MM^T=Y(3I-CC^T)Y^T >= 0",
+    "pointwise_contraction": "6D(r)>=sum_U M[r,U]^2-3(84-S(r))",
+    "integer_strengthening": "D(r)>=sum_U max(0,M[r,U]-3)"
+  },
+  "slot_basis_search": {
+    "states_checked": 27,
+    "mass_range": [0, 6],
+    "minimum_collision_by_mass": [0, 0, 0, 0, 1, 2, 3],
+    "minimum_witnesses": [
+      [0, 0, 0],
+      [0, 0, 1],
+      [0, 1, 1],
+      [1, 1, 1],
+      [1, 1, 2],
+      [1, 2, 2],
+      [2, 2, 2]
+    ],
+    "symmetric_psd_cone": "aI+bJ PSD iff a>=0 and a+3b>=0",
+    "optimal_boundary_ray": "3I-J",
+    "quadratic_bound": "6d>=m^2-3m"
+  },
+  "frozen_inputs": {
+    "wave205_certificate_sha256": "c169abfcc1ebe0cbb4d0d811307eac284c52e95c751b18677afe77f54bf52ec6",
+    "wave205_exact_results_sha256": "c2bcba090136d5975bfaac29bf52fdeeec21913f2ea371c1c741cc0de93f85e8",
+    "wave147_results_sha256": "a7313af52b86602e2d27278dad0a0beccbacc3634b67cbcb1e15370176104e12",
+    "wave148_results_sha256": "e18007e9fe1119f649437eec12c085f0744a8484b6827af42b3949388e268144",
+    "order8_boundary_sha256": "0745d3dd92171780bdb1c92ccce79e0028790b8cc25fb13093ade2bb951962ae",
+    "rank_U_over_F3": 99,
+    "wave205_hostile_fourth_trace_rank": 9,
+    "wave205_hostile_fourth_trace_diagonal_zero": true,
+    "order8_counts": {
+      "classes": 916,
+      "deletion_rows": 208,
+      "marked_vertex_rows": 944,
+      "marked_pair_rows": 4440,
+      "coefficient_matrices": 2414
+    },
+    "regenerated": false
+  },
+  "strict_positive_T0_control": {
+    "roots": 99,
+    "triangles": 231,
+    "flags": 693,
+    "X_degree": 12,
+    "Y_entry_alphabet": [0, 1],
+    "Y_row_sum": 84,
+    "Y_row_support": 84,
+    "D_row": 0,
+    "formal_E0_row": 0,
+    "M_entry_histogram": {"0": 14553, "1": 8316},
+    "M_row_square_sum": 84,
+    "six_D_bound_rhs_numerator": -168,
+    "three_Lambda": {
+      "diagonal": 168,
+      "rank_over_Q": 94,
+      "nullity_over_Q": 5,
+      "rank_mod_101_103_107": [94, 94, 94],
+      "nullspace_basis_sha256": "652a0db44c8d3ebf538089a830519f3724ec0d8c19f84d63ba05808652b11913",
+      "nullspace_basis_l1_norms": [22, 22, 99, 99, 99],
+      "nullspace_basis_max_abs": [1, 1, 3, 3, 3],
+      "positive_semidefinite": true,
+      "strictly_positive_diagonal": true
+    },
+    "scope_failures": [
+      "formal K2 is not the actual two-cross relation of the shadow",
+      "M^2=21M and transport fail",
+      "the shadow is not srg(99,14,1,2)"
+    ]
+  },
+  "boundary": {
+    "correct_direction_found": true,
+    "proves_support_13_or_12": false,
+    "missing": "a graph-specific lower bound on sum_U M[r,U]^2 or the number of masses M[r,U]>=4",
+    "rank_positive_no_go": "Lambda has positive diagonal and rank 94 already at formal E0=0",
+    "order_boundary": "complete cross-root Lambda entries reach order nine and are not evaluated by the frozen order-eight package",
+    "submission_created": false
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "status": "FORMAL_AUDIT_PASS",
+  "scope": "E72 source row 134, K4 deficit-two support orbit, unique Gram macro",
+  "source_row_index": 134,
+  "support_orbit_size": 35,
+  "port_feasible_labelled_internal_states": 181,
+  "state_orbits": 5,
+  "state_orbit_sizes": [
+    96,
+    32,
+    48,
+    1,
+    4
+  ],
+  "state_orbit_closure_and_partition_verified": true,
+  "effective_residual_actions": 384,
+  "labelled_state_matching_coverage": 101593088,
+  "overlap_graphs_explicitly_enumerated_by_sat_lift": 0,
+  "unrestricted_base_has_no_embedded_fixed_edge_units": true,
+  "historical_portfolio_branch_units_applied": false,
+  "macro": {
+    "ordinary_c4_fibres": 15,
+    "ordinary_overlap_zero_blocks": 93,
+    "adjacent_exceptional_D2_blocks": 12,
+    "opposite_exceptional_D0_blocks": 3,
+    "exactly_two_encoder_truth_table": {
+      "assignments_tested": 65536,
+      "accepted_assignments": 120,
+      "expected_weight_two_assignments": 120,
+      "encoding_equivalence_verified": true
+    },
+    "variables": 817278,
+    "clauses": 1631040,
+    "cnf": "scratch_root_e72_source134_macro.cnf",
+    "cnf_sha256": "4A1AB94312D551DC14030DA83B9EDFD31C85CCE439B9F56E16232EAF571CEE6F",
+    "byte_reconstruction_verified": true
+  },
+  "computational_checkpoint": {
+    "path": "scratch_root_e72_source134_state_c1000000.json",
+    "sha256": "F4BEAE2A03B8C846C9AAAEAA9C8D4B9494CF14CD4664ACDEE05EF308258C2A6F",
+    "direct_unsat_branches": 5,
+    "unknown": 0
+  },
+  "selector_certificate": {
+    "selectors": 5,
+    "selector_core_implications": 58,
+    "variables": 817283,
+    "clauses": 1631099,
+    "cnf": "scratch_root_e72_source134_selector.cnf",
+    "cnf_sha256": "AE33282A8338FFC7AC0D2B2BE2935788D95F3C568F13EE9CCA8B0F901221ADED",
+    "cnf_byte_reconstruction_verified": true,
+    "proof": "scratch_root_e72_source134_selector.drup",
+    "proof_sha256": "263876C6367231FEDE3AB13ECC35D123A5B671E78043671D3DEE525CA47BE377",
+    "proof_lines": 4296162,
+    "external_checker_status": "DRAT_VERIFIED",
+    "checker": "tools\\drat-trim\\drat-trim.exe",
+    "checker_sha256": "10D317DF526C36453986EF09495864BCABD9D02D72D7B772EE78F07939870620",
+    "checker_upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "inputs": {
+    "pilot_script": "scratch_root_e72_source134_state_sat.py",
+    "pilot_script_sha256": "816DA6E6262DBFB4F74E3BFF3F1FF314B41D47CB6ABDB81B708501E1C2EDFF88",
+    "selector_script": "scratch_root_e72_source134_selector_drup.py",
+    "selector_script_sha256": "CFBE81872ADC964C4D2C60E21CB90756876D40671EE4C4D710129EE51E0E0952",
+    "build": "scratch_root_e72_source134_state_build.json",
+    "build_sha256": "93322B55C3C1A95A8A600DA941B2D84BBDEBAA7D35549EB38B731DDA972328C6",
+    "selector_metadata": "scratch_root_e72_source134_selector.json",
+    "selector_metadata_sha256": "EF7DD093EFD65C5D537064DBD5FB9808D37AD8447D7ABD701B6C354EE6E49787",
+    "drat_audit": "scratch_root_e72_source134_selector_drat_audit.json",
+    "drat_audit_sha256": "1AFF81E5D8358D265FA87925EA6641116BE6A1CD967A19AF35E9A50BFB3905D5"
+  },
+  "logical_conclusion": "No exact rooted completion exists in E72 source row 134 for its unique Gram-feasible K4 macro signature.",
+  "claim_boundary": "This is a machine-checked CNF/DRUP elimination of one support orbit. It is not by itself a formal proof that the upstream E72 census, port filter, Gram derivation, or all other E72 support rows are exhaustive."
+}

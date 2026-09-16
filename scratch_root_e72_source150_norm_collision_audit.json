@@ -1,0 +1,58 @@
+{
+  "status": "SOURCE150_NORM_COLLISION_AUDIT_PASS",
+  "source_row_index": 150,
+  "inputs": {
+    "scratch_general_e72_q3_gram_frontier_disjoint_gram_filtered_reps.json": "EA133CC9CB6C3AA1D141A4AFD13043EE72163462CA11B8F27CCF47312E83847F",
+    "scratch_general_e72_q3_gram_fast_expansion_macro_catalog.json": "BED6A7F1258576E8028B6B17736FD91ED8E8D9A79D2E90FC744A07DAE14D6213",
+    "scratch_theory_e72_macro_full_gram.json": "8DC23EE41F24E39256136A647506A61C850F0BC804C402C8D16A8B9797C5CDF3",
+    "scratch_theory_e72_source150_norm_collision_filter.py": "5208AB81A6BA3403DC9E471C58AC396446D6A7676277CB1405F9A396E488FB85",
+    "scratch_theory_e72_source150_norm_collision_filter.json": "607E640391E66B7BD352CBB184B484330893EF932447BAA03A20C864CBC450D1",
+    "scratch_general_e72_remaining_frontier_audit.json": "0DE0069E43C71BE9FF97393EB70C1B7F7D8195FD3B081AB507FE66BBA7B93506"
+  },
+  "coverage": {
+    "canonical_macro_orbits": 17,
+    "local_graph_orbits": 5943,
+    "labelled_mass": 2244608,
+    "all_local_masks_unique": true,
+    "all_local_orbits_classified_to_exactly_one_canonical_macro": true,
+    "per_macro_counts_and_mass_match": true
+  },
+  "independent_recomputation": {
+    "Gram_action_rows_checked": 21,
+    "distinct_exact_Gram_matrices_on_canonical_representatives": 5,
+    "distinct_coordinate_presentations_across_all_action_rows": 6,
+    "disjoint_exceptional_pairs_per_profile": 12,
+    "ordinary_fibres": 13,
+    "ordinary_exceptional_function_blocks": 56,
+    "ordinary_degree_multisets_checked_across_Gram_matrices": 345,
+    "exceptional_pointwise_vertex_rows_checked": 190176,
+    "full_exceptional_compressions_checked": 5943,
+    "distinct_global_DP_instances": 5,
+    "all_DP_instances_feasible": true,
+    "reported_controls_reproduced_exactly": 25
+  },
+  "formula_checks": {
+    "kernel_vectors_sum_zero": true,
+    "kernel_vectors_annihilate_all_seven_support_incidence_rows": true,
+    "all_H_PSD_by_exact_principal_minors": true,
+    "Gram_diagonals_equal_twice_internal_deficit": true,
+    "overlap_Z_equals_negative_block_total": true,
+    "all_twelve_disjoint_Z_equal_four_minus_block_total": true,
+    "c0_norm_squared_is_96": true,
+    "q_norm_target_is_12_times_96_minus_c0_B_c0": true,
+    "same_fibre_collision_target_uses_B_squared_plus_B_identity": true
+  },
+  "relaxation_direction": {
+    "ordinary_to_exceptional": "Every exceptional vertex has degree one into each disjoint ordinary C4. Hence the four ordinary-side row degrees are only required to lie in 0..4 and sum to four; no converse degree-one condition is imposed on an ordinary vertex.",
+    "exceptional_to_exceptional": "Each source fibre obeys all four pointwise group equations and each Gram D block total. Source-side and target-side row vectors are combined independently without a common 4x4 simple matrix, which is a superset of realizable blocks.",
+    "collision": "The six same-fibre pair equations are summed per source fibre; forgetting the six individual equalities enlarges feasibility."
+  },
+  "filter_result": {
+    "passing_local_orbits": 5943,
+    "passing_labelled_mass": 2244608,
+    "rejected_local_orbits": 0,
+    "rejected_labelled_mass": 0,
+    "logical_status": "NO_EXCLUSION_SOURCE150_REMAINS_OPEN"
+  },
+  "claim_boundary": "The independent replay validates the corrected necessary-condition filter and its coverage, but every input passes. It therefore proves no source150 branch UNSAT and constructs no graph. The calculation is an exact executable audit, not a proof-assistant certificate."
+}

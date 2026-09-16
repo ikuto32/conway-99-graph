@@ -1,0 +1,79 @@
+{
+  "status": "C11_SEMIREGULAR_STRUCTURAL_AUDIT_PASS",
+  "scope": "encoder and quotient-filtered WLOG structure only; no solver result audited",
+  "inputs": {
+    "scratch_root_c11_semiregular_sat.py": "4363045FFBFFFDB688B05523B8AB513DD5AF09520FDC1CA3E3942E8C15A8175F",
+    "scratch_root_c11_semiregular.cnf": "86695B2B8DC2440730006732F23D55A98A88FD63DD2219AB6D39F9CAE2140F28",
+    "scratch_root_c11_semiregular_build.json": "FD18873D2BB6C7E13D2EC8ACDEDE15F68D5B6D74C2BBD6494A1E26CA78543A3F",
+    "scratch_root_c11_semiregular_normalized.cnf": "652C25F524596BC050713C68FF308868F39D37E543F03DC00B1619BB40FBA73D",
+    "scratch_root_c11_semiregular_normalized_build.json": "C46202C2EA43E1A90F5D716E2DAE10B043230976AC41566F6D913507B5AC1F98"
+  },
+  "base_encoder": {
+    "vertices": 99,
+    "edge_orbits": 441,
+    "unordered_pair_orbits": 441,
+    "unordered_pairs_exhausted": 4851,
+    "simultaneous_translation_checks": 4851,
+    "members_per_edge_orbit": 11,
+    "weighted_degree_terms_checked": 837,
+    "degree_occurrence_helpers": 882,
+    "common_neighbour_product_helpers": 42777,
+    "product_truth_table_rows": 8,
+    "ordered_clause_rebuild_byte_semantics_match": true,
+    "variables": 234612,
+    "clauses": 511119
+  },
+  "character_consequence": {
+    "invariant_quotient_spectrum": "14^1,3^4,(-4)^4",
+    "nontrivial_character_spectrum": "3^5,(-4)^4",
+    "nontrivial_character_trace": -1,
+    "cyclotomic_Fourier_inversion_exact": true,
+    "each_signed_internal_difference_occurs_in_exactly_one_fibre": true
+  },
+  "quotient_row_identity": {
+    "matrix_identity": "B^2+B=12I+22J on the nine fibre-constant directions",
+    "diagonal_formula": "4*t^2+2*t+sum(c_j^2)=34",
+    "raw_degree_and_unit_WLOG_branch_count": 321,
+    "quotient_filtered_branch_count": 4,
+    "verified": true
+  },
+  "WLOG": {
+    "branch_count": 4,
+    "branches_by_internal_count": {
+      "1": 2,
+      "2": 2
+    },
+    "internal_pattern_orbits_by_size": {
+      "0": 1,
+      "1": 1,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1
+    },
+    "raw_cross_count_partitions_by_internal_size": {
+      "0": 112,
+      "1": 69,
+      "2": 40,
+      "3": 22,
+      "4": 11,
+      "5": 5
+    },
+    "quotient_filtered_partitions_by_positive_internal_size": {
+      "1": 2,
+      "2": 1,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "all_branch_degree_sums_equal_14": true,
+    "all_nonempty_fibre0_cross_blocks_force_difference_zero": true,
+    "selectors_exactly_one": true,
+    "ordered_normalized_clause_rebuild_match": true,
+    "variables": 235279,
+    "clauses": 512750,
+    "coverage_statement": "Fourier inversion gives five internal differences in total. For any semiregular C11 graph, relabel an orbit containing one as fibre 0; permute the other eight by nonincreasing cross count; globally rescale the generator to the canonical internal signed subset; then independently shift every adjacent fibre to put one edge at difference zero. At least one listed branch results.",
+    "not_a_partition_statement": "Different choices of fibre zero or tied fibre permutations may place the same isomorphism class in multiple branches. The four cases are an exhaustive WLOG cover, not claimed disjoint orbits."
+  },
+  "claim_boundary": "The CNF is exact only within graphs admitting a fixed-point-free order-11 automorphism with nine 11-cycles. This audit validates the encoder and WLOG cover but intentionally does not read or endorse the in-progress normalized solver result."
+}

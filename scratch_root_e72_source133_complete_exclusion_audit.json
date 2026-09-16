@@ -1,0 +1,95 @@
+{
+  "status": "SOURCE133_COMPLETE_EXCLUSION_AUDIT_PASS",
+  "source_row_index": 133,
+  "partition_index": 27,
+  "input_sha256": {
+    "scratch_general_e72_source133_regular_exclusion_audit.json": "151CF1A39A9FE91EE1226A2B84CDA3F10F89526CD9F7C08746101A2048804008",
+    "scratch_general_e72_source133_pair_category_exclusion_audit.json": "030EA858E828E7DCED91A83965F0EFC191FA10BEDB85201DC7E3497C60E493F0",
+    "scratch_theory_e72_k23_final_uu_enum.json": "13A2238DF32A434A89D3ABB0D89B0AC261D7BE99AC70A0A087F171ABA13ACE60",
+    "scratch_theory_e72_k23_ee_cross_enum.json": "DD46055D7A4A48F0A54D70C13D4EEB01093C8426D9620781428521398943D55E",
+    "scratch_theory_e72_k23_opposite_collision_enum.py": "A927A72B48AF9B060D32A66756445FE4B0AA594F6A3721A78E3B05BB2BD27C52",
+    "scratch_theory_e72_k23_ee_cross_enum.py": "C28107DA17D2C2AE574E8ADA1B8EEBA2601D997A3D6625EF76C0434518B4AEE9",
+    "scratch_theory_e72_k23_final_uu_enum.py": "783EE2551DC071DC990DA6A8BFABFE4BA8088BF06C94BABE3536CBEF04A763BE",
+    "scratch_root_e72_source133_macro4_formal_audit.json": "D1D110A908CB55FE307F1935E8479366C41B4487AB1597C974E61922F7722D07",
+    "scratch_root_e72_source133_local_assumption_manifest.json": "DC89A4052F2B64D7933B9359FD34CB10C40D72CE7E407655D4C6D315B01C5B32"
+  },
+  "catalog_coverage_partition": {
+    "regular_macros_0_to_3": 2490368,
+    "nonregular_macro_4": 12288,
+    "total": 2502656,
+    "disjoint_and_complete": true
+  },
+  "canonical_local_frontier": {
+    "regular_records": 5138,
+    "regular_orbit_mass": 1129056,
+    "macro4_records": 148,
+    "macro4_orbit_mass": 38016,
+    "total_records": 5286,
+    "total_orbit_mass": 1167072,
+    "full_SRG_edge_assumptions_per_record": 276,
+    "assumption_manifest": "scratch_root_e72_source133_local_assumption_manifest.json"
+  },
+  "regular_exclusion": {
+    "scope": "macros 0,1,2,3",
+    "solver_free_stages_orbits": [
+      5138,
+      81,
+      1,
+      0
+    ],
+    "solver_free_stages_mass": [
+      1129056,
+      9952,
+      16,
+      0
+    ],
+    "independent_SAT_replay_UNSAT_orbits": 5138,
+    "independent_SAT_replay_UNSAT_mass": 1129056,
+    "fixed_pair_category_policy": {
+      "0": [
+        "EE_disjoint",
+        "EE_same",
+        "EU_disjoint",
+        "UU_overlap"
+      ],
+      "1": [
+        "EE_disjoint",
+        "EE_same",
+        "EU_disjoint"
+      ],
+      "2": [
+        "EE_same",
+        "EU_disjoint",
+        "UU_overlap"
+      ],
+      "3": [
+        "EE_same",
+        "EU_disjoint",
+        "UU_overlap"
+      ]
+    },
+    "ordered_SAT_instance_manifest_sha256": "DB25D503F66689FCB45B4D8A1E7648E2CE409F44FB48B3485C8B62DB158D2110"
+  },
+  "macro4_exclusion": {
+    "scope": "nonregular macro 4",
+    "selected_full_SRG_selector": 817283,
+    "catalog_labelled_coverage": 12288,
+    "completed_local_records": 148,
+    "completed_local_orbit_mass": 38016,
+    "cnf_sha256": "C8487D2A7B2E8F8695F75D1F1E6609860E1DADA055DDE8C2FA2AA7685E027869",
+    "drup_sha256": "10F8AC98DBF9316D7B6B89E79A302ED7E126630EFE2CA40E0F5302973E9374AB",
+    "external_checker_status": "DRAT_VERIFIED"
+  },
+  "checks": {
+    "catalog_macro_partition_exact": true,
+    "canonical_local_frontier_partition_exact": true,
+    "regular_solver_free_zero_survivors": true,
+    "regular_independent_SAT_zero_survivors": true,
+    "regular_two_methods_agree": true,
+    "macro4_selector_isolation_exact": true,
+    "macro4_external_DRAT_check_passed": true,
+    "every_local_record_has_full_SRG_edge_assumptions": true
+  },
+  "logical_conclusion": "Every one of the five canonical source-133 macro branches is excluded: regular macros 0--3 by exact solver-free local map enumeration (independently confirmed by finite SAT), and nonregular macro 4 by a checked full-SRG DRUP certificate.",
+  "claim_boundary": "The regular proof is an exact standard-library finite enumeration, not a DRAT certificate.  The macro-4 DRUP is formally checked.  Upstream support/Gram/catalog completeness remains covered by its separate audited artifacts."
+}

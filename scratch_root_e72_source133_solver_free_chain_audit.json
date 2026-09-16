@@ -1,0 +1,92 @@
+{
+  "status": "SOLVER_FREE_CHAIN_AUDIT_PASS",
+  "scope": "E72 source133 regular canonical macros 0--3",
+  "source_row_index": 133,
+  "coverage_chain": {
+    "orbits": [
+      5138,
+      81,
+      1,
+      0
+    ],
+    "labelled_mass": [
+      1129056,
+      9952,
+      16,
+      0
+    ],
+    "catalog_macro_coverage": 2490368
+  },
+  "macro_input_orbits": {
+    "0": 891,
+    "1": 2348,
+    "2": 1234,
+    "3": 665
+  },
+  "convention_audit": {
+    "vertex_order_distinct": true,
+    "mask_pair_order_exact": true,
+    "local_order_per_exceptional_fibre": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "local_opposite_is_xor_3": true,
+    "local_C4_sides_are_xor_1_or_2": true,
+    "target_bottom_bit_is_local_div_2": true,
+    "target_outside_bit_is_local_mod_2": true,
+    "disjoint_collision_truth_rows_checked": 256,
+    "overlap_collision_truth_rows_checked": 32,
+    "equation_32_pair_residual_rows_checked": 1418088,
+    "local_to_global_same_fibre_pair_rows_checked": 184968
+  },
+  "stage_artifacts": {
+    "scratch_theory_e72_k23_opposite_collision_enum.json": "33CEAEFEA409DB9062A63460DA7CFD0088A7D2CB3F6D46BFFE863E5C81DB2B53",
+    "scratch_theory_e72_k23_ee_cross_enum.json": "DD46055D7A4A48F0A54D70C13D4EEB01093C8426D9620781428521398943D55E",
+    "scratch_theory_e72_k23_final_uu_enum.json": "13A2238DF32A434A89D3ABB0D89B0AC261D7BE99AC70A0A087F171ABA13ACE60",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_0.json": "57AC5D65D2CB5B810B2C8848CB3F4F66380F128EAA447F1BCDFC10A1CBEF2586",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_1.json": "02237FAC0444873BAC4A03BC5FCF0A1CF64C8C8B20B655565B69384081610C4F",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_2.json": "04201A738FFB3B745DB2AC9CF9902BBB1261FE5076654CA7EEB35CC4BA822CE8",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_3.json": "F0862318BFC6C87155AADAEBAEE97E81CED65E6703303CC13CA3C2982EABFECE",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_4.json": "246CC30159EF5D35628F05FC2D5FC78F579DC6E9D53BAE13CFEA8F078DBB09A6",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_5.json": "07401AAEB296890A05B973446C4D599EEF2E02A8AC4DC27A5DE5B7B77171C883",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_6.json": "ED8B7A0C70C9D91F91A52CA62E1FD96E69375FB93DA5B561D699522498A652D3",
+    "scratch_theory_e72_k23_opposite_collision_enum_shard_7.json": "9B196D6A0C6BF6453EDC30C4EF524AC7BAFE06D5ECC8580BDC810676FACEABC8"
+  },
+  "implementation_scripts": {
+    "scratch_theory_e72_k23_opposite_collision_enum.py": "A927A72B48AF9B060D32A66756445FE4B0AA594F6A3721A78E3B05BB2BD27C52",
+    "scratch_theory_e72_k23_opposite_collision_combine.py": "BB358DCCB1DC0B069A7B044602E90A64A56D7B947B56415DB725D93F27CDD254",
+    "scratch_theory_e72_k23_ee_cross_enum.py": "C28107DA17D2C2AE574E8ADA1B8EEBA2601D997A3D6625EF76C0434518B4AEE9",
+    "scratch_theory_e72_k23_final_uu_enum.py": "783EE2551DC071DC990DA6A8BFABFE4BA8088BF06C94BABE3536CBEF04A763BE"
+  },
+  "theory": {
+    "scratch_theory_e72_k23_balance.md": "05C60F9E8034B007F765EBC5464AEC2CDE0638D1F4D6CCDD3C6A058F266EB21C",
+    "scratch_theory_e72_k23_balance_audit.json": "41795AF61B42B8D69279DF133B42BEF52E53A97F93F982BF0AF205641CAFC73F",
+    "arithmetic_audit_stored_note_sha256": "FE77C63C6A232C951FA302D30DBE7DEEFB87A8699A34CFFBC99E50D0D516D25D",
+    "arithmetic_audit_stored_note_hash_matches_current": false,
+    "hash_note": "The arithmetic audit was emitted before Sections 9--10 were appended, so its stored Markdown hash does not bind the current expanded note; this audit directly binds the current note."
+  },
+  "independent_sat_crosscheck": {
+    "path": "scratch_general_e72_source133_hf_pair_sat.json",
+    "sha256": "C80196886626459FCF8067180FFEFBBCF7E7C25E3CEADB34860104819E02C9A5",
+    "input_orbits": 5138,
+    "unsat_orbits": 5138,
+    "sat_or_unknown": 0,
+    "result_agrees": true
+  },
+  "logical_conclusion": "Every source133 regular-macro frontier mask violates a necessary four-point map/pair condition; hence macros 0--3 have no completion.",
+  "claim_boundary": "This is an executable finite-enumeration and arithmetic audit, not a proof-assistant kernel certificate. It is solver-free and agrees with an independent SAT census, but still relies on the separately audited upstream frontier and the mathematical derivation of the necessary H/F and pair identities. Macro 4 is outside this audit."
+}

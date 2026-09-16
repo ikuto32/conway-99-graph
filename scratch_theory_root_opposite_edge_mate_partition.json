@@ -1,0 +1,102 @@
+{
+  "status": "TRIANGLE_MATE_PARTITION_BOUNDARY_PASS",
+  "scope": "necessary consequences conditional on a putative srg(99,14,1,2); no construction or nonexistence claim",
+  "input_sha256": {
+    "wave6_opposite_edge": "4197C40E1B43D72D5A2AD9A6203099FFED2E1DBF4F0B3C07186AAAD54CAE4FA2",
+    "wave20_opposite_edge_compression": "23355B845F17DAC5B4EF260544D1664C8943999634EE8D02F63D5A6B0EF048B2",
+    "wave35_endpoint_spectral": "3B3C10E58996850337B5211FE6855CD1717CC1D47AE2F780DD50B4C01B40D0B9",
+    "wave65_independent_results": "076293E960E704799AD1EB68B43AEFF7892D83D240C9B3471789AADC9413349D",
+    "augmented_flag_relation": "67895D4287A1F0DD8E99F587F13D60FDEFA9ECE34BEC6E46A4CE83F4D830CCF5"
+  },
+  "partition": {
+    "opposite_edge_graph_vertices": 693,
+    "cells": 99,
+    "cell_size": 7,
+    "cell_definition": "R_r is the seven graph edges whose unique triangle mate is r",
+    "independent_in_J_edge": true,
+    "local_multiplicity": "k_r(v)=|(N_J_edge(v)) intersect R_r|",
+    "D_r_identity": "D(r)=sum_v binom(k_r(v),2)",
+    "distance_two_equivalence": "D(r)=0 iff R_r is a distance-at-least-three packing in J_edge",
+    "global_endpoint": "D_*=0 iff all 99 cells are distance-at-least-three packings"
+  },
+  "incidence_identities": [
+    "C C^T=14I+A",
+    "R R^T=7I",
+    "C R^T=R C^T=A",
+    "C J_edge=A C-C-2R",
+    "C J_edge R^T=R J_edge C^T=2(One-I-A)"
+  ],
+  "quotient_and_gram": {
+    "definitions": [
+      "Z=R J_edge R^T",
+      "G=R J_edge^2 R^T=(R J_edge)(R J_edge)^T",
+      "P=R^T/sqrt(7)"
+    ],
+    "always": [
+      "Z=Z^T, diag(Z)=0, Z*1=84*1",
+      "G is PSD, G*1=1008*1",
+      "diag(G)_r=84+2D(r)",
+      "tr(G)=8316+2D_*",
+      "7G-Z^2 is PSD",
+      "tr(Z^2)<=58212+14D_*"
+    ],
+    "prism_free_endpoint": [
+      "J_edge is triangle-free",
+      "Z is supported on K=One-I-A",
+      "sum_{r<s} Z_rs=4158=sum_{r<s} K_rs",
+      "W=Z-K has W*1=0 and is Frobenius-orthogonal to I,A,One",
+      "tr(Z^2)=8316+||W||_F^2"
+    ],
+    "basic_variance_bound": "||W||_F^2<=49896+14D_*"
+  },
+  "incidence_schur_refinement": {
+    "first_projection_eigenvalues_on_A_14_3_minus4": [
+      1008,
+      "64/17",
+      "18/5"
+    ],
+    "first_projection_trace": "116424/85",
+    "orthogonal_mate_gram_H_eigenvalues": [
+      0,
+      "110/17",
+      "27/5"
+    ],
+    "second_fixed_projection_eigenvalues": [
+      0,
+      "88/85",
+      "27/5"
+    ],
+    "second_fixed_projection_trace": "24948/85",
+    "remaining_trace_constant_plus_2D": "33264/5+2D_*",
+    "refined_variance_bound": "||W||_F^2<=731808/17+(220/17)D_*",
+    "endpoint_D_zero_even_integral_bound": "||W||_F^2<=43046"
+  },
+  "packing_bounds": {
+    "weighted_distance_two_graph": "L=J_edge^2-12I",
+    "L_degree": 132,
+    "least_eigenvalue_lower_bound": -12,
+    "Hoffman_independence_upper_bound": "231/4",
+    "cell_size": 7,
+    "Hoffman_coloring_lower_bound": 12,
+    "number_of_cells": 99,
+    "closed_neighborhood_sphere_size_for_one_cell": 91,
+    "ambient_vertices": 693
+  },
+  "old_wave_comparison": {
+    "Wave20_C_compression_Ritz_values": [
+      12,
+      "28/17",
+      "-21/5"
+    ],
+    "distinction": "Wave20 compresses with ordinary endpoint incidence C; this artifact compresses with the triangle-mate partition R and then uses C only for a Schur refinement",
+    "Wave35": "uses the Wave6 prism-free/triangle-free endpoint for signed and one-triangle local constraints, but does not form this 99-cell triangle-mate quotient",
+    "Wave65": "row r of R J_edge is precisely the second weighted factor U_r; at D(r)=0 it is the simple (Q,d)=(0,1) factor"
+  },
+  "boundary": {
+    "positive_lower_bound_on_D_star": 0,
+    "distance_two_packing_excluded": false,
+    "reason": "cell size 7 passes the sphere and Hoffman bounds, and all derived Gram/Schur inequalities admit D_*=0 (including W=0)",
+    "W_zero_interpretation": "exactly one J_edge edge between every nonadjacent pair of mate cells",
+    "claim": "NULL_BOUNDARY_NO_ENDPOINT_EXCLUSION"
+  }
+}

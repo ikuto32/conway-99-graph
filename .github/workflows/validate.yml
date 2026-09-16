@@ -1,0 +1,33 @@
+name: Validate research tools
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validators:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check submission validator
+        run: python -B validate_submission.py --self-test
+      - name: Check archived graph validator
+        run: python -B -m unittest discover -s external_conway99_research/verification -p test_check_srg.py -v
+      - name: Check root Python syntax without running experiments
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          files = sorted(Path('.').glob('*.py'))
+          for path in files:
+              compile(path.read_bytes(), str(path), 'exec')
+          print(f'Compiled {len(files)} Python source files')
+          PY

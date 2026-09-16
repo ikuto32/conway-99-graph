@@ -1,0 +1,3116 @@
+{
+  "status": "MINIMAL_ORDER9_MATE_DOUBLED_STATUS_LIFT_PASS",
+  "inputs": {
+    "external_conway99_research\\attempts\\wave147-alternative-lane\\coefficients.json.gz": "A46D8A8B6FD3AE339CDF7C9B633A661D917E3481BED762AE6AA70F1B4886CF1E",
+    "external_conway99_research\\attempts\\wave148-marked-order8\\marked-rows.json.gz": "E7A39699584FE60FF251119063D66D8EED2A14A69D671C183533806CDDC92AA1",
+    "scratch_theory_root_yyt_order8_shadow.json": "3B28F9686EC0CECB33FD875520F3E096480630506FB0941894957D7FB8EB3883",
+    "scratch_theory_root_yyt_pair_classification.json": "72123E4D4C92DB504A8D4413DAB31ED04E590DE52BBCF43FCFB8AAC1EE8E5C31",
+    "scratch_theory_root_yyt_augmented_relation.json": "67895D4287A1F0DD8E99F587F13D60FDEFA9ECE34BEC6E46A4CE83F4D830CCF5",
+    "scratch_theory_edge_shadow_lower_coupling_boundary.json": "E6BEE7D480F5CE04F72EDB95A688C972FA925CD7E232963D5D160F64AC4FD4AB",
+    "external_conway99_research\\attempts\\wave159-four-root-cut-loop\\exact-witness-after-fifteen-cuts.json": "0073AC9D0D6053EEDEB4F9357C10E40A7004E26CEDBEEE119601A6E1996BEA1E"
+  },
+  "frozen_dimensions": {
+    "class_orders": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "class_columns_per_root_relation": 1207,
+    "order8_columns_per_root_relation": 916,
+    "ordered_edge_matrix_size": 66,
+    "ordered_nonedge_matrix_size": 87,
+    "marked_vertex_rows": 944,
+    "marked_ordered_pair_rows": 4440,
+    "order8_columns_touched_by_this_lift": 9
+  },
+  "rooted_state_definition": {
+    "target": "For target edge e with unique triangle mate u, a root r has m=1[r~u], y=Yhat[r,e], and s=m*y+binom(y,2).",
+    "states": {
+      "G": {
+        "mate_bit": 0,
+        "Yhat": 1,
+        "selected": 0,
+        "meaning": "one good X source flag"
+      },
+      "D": {
+        "mate_bit": 0,
+        "Yhat": 2,
+        "selected": 1,
+        "meaning": "two good X source flags (diagonal/doubled)"
+      },
+      "P": {
+        "mate_bit": 1,
+        "Yhat": 1,
+        "selected": 1,
+        "meaning": "one prism source flag"
+      }
+    },
+    "state_pairs": [
+      {
+        "pair": "GG",
+        "mate_bits": [
+          0,
+          0
+        ],
+        "occurrences_per_physical_root_pair": 1,
+        "selected_pair_weight_per_occurrence": 0,
+        "bad_mate_occurrence": false,
+        "smallest_explicit_union_order": 9
+      },
+      {
+        "pair": "GD",
+        "mate_bits": [
+          0,
+          0
+        ],
+        "occurrences_per_physical_root_pair": 2,
+        "selected_pair_weight_per_occurrence": 0,
+        "bad_mate_occurrence": false,
+        "smallest_explicit_union_order": 11
+      },
+      {
+        "pair": "GP",
+        "mate_bits": [
+          0,
+          1
+        ],
+        "occurrences_per_physical_root_pair": 1,
+        "selected_pair_weight_per_occurrence": 0,
+        "bad_mate_occurrence": true,
+        "smallest_explicit_union_order": 9
+      },
+      {
+        "pair": "DG",
+        "mate_bits": [
+          0,
+          0
+        ],
+        "occurrences_per_physical_root_pair": 2,
+        "selected_pair_weight_per_occurrence": 0,
+        "bad_mate_occurrence": false,
+        "smallest_explicit_union_order": 11
+      },
+      {
+        "pair": "DD",
+        "mate_bits": [
+          0,
+          0
+        ],
+        "occurrences_per_physical_root_pair": 4,
+        "selected_pair_weight_per_occurrence": "1/4",
+        "bad_mate_occurrence": false,
+        "smallest_explicit_union_order": 13
+      },
+      {
+        "pair": "DP",
+        "mate_bits": [
+          0,
+          1
+        ],
+        "occurrences_per_physical_root_pair": 2,
+        "selected_pair_weight_per_occurrence": "1/2",
+        "bad_mate_occurrence": true,
+        "smallest_explicit_union_order": 11
+      },
+      {
+        "pair": "PG",
+        "mate_bits": [
+          1,
+          0
+        ],
+        "occurrences_per_physical_root_pair": 1,
+        "selected_pair_weight_per_occurrence": 0,
+        "bad_mate_occurrence": true,
+        "smallest_explicit_union_order": 9
+      },
+      {
+        "pair": "PD",
+        "mate_bits": [
+          1,
+          0
+        ],
+        "occurrences_per_physical_root_pair": 2,
+        "selected_pair_weight_per_occurrence": "1/2",
+        "bad_mate_occurrence": true,
+        "smallest_explicit_union_order": 11
+      },
+      {
+        "pair": "PP",
+        "mate_bits": [
+          1,
+          1
+        ],
+        "occurrences_per_physical_root_pair": 1,
+        "selected_pair_weight_per_occurrence": 1,
+        "bad_mate_occurrence": true,
+        "smallest_explicit_union_order": 9
+      }
+    ],
+    "sufficient_statistic_statement": "On the proved nonzero domain {(0,1),(0,2),(1,1)}, the state label is equivalent to (m,y), hence determines s.  If L_ab counts ordered source-occurrence pairs, then an ordered physical selected pair contributes y_a*y_b occurrences and is recovered with weight s_a*s_b/(y_a*y_b)."
+  },
+  "marked_lift_schema": {
+    "variable": "L[family,K8,marked_orbit,state_left,state_right]",
+    "variable_semantics": "Number of ordered marked source-occurrence pairs whose mate extension has the stated physical root statuses.",
+    "deletion_rows": 11,
+    "raw_orbit_state_dimension": 99,
+    "pair_upper_allowed_orbit_state_dimension": 82,
+    "raw_marked_slot_state_dimension": 180,
+    "pair_upper_allowed_marked_slot_state_dimension": 158,
+    "visible_mate_bit_templates_before_pair_upper": 80,
+    "visible_mate_bit_templates_after_pair_upper": 66,
+    "distinct_visible_degree_cell_order9_masks_after_pair_upper": 19,
+    "visible_order9_type_marked_weights": [
+      [
+        3669386708,
+        4
+      ],
+      [
+        3669678280,
+        12
+      ],
+      [
+        3985958096,
+        4
+      ],
+      [
+        10040402400,
+        4
+      ],
+      [
+        13904794306,
+        4
+      ],
+      [
+        14337762352,
+        2
+      ],
+      [
+        14844285121,
+        2
+      ],
+      [
+        14874613832,
+        2
+      ],
+      [
+        14890181764,
+        2
+      ],
+      [
+        14890182020,
+        8
+      ],
+      [
+        16260620944,
+        2
+      ],
+      [
+        16281591873,
+        4
+      ],
+      [
+        16827884176,
+        2
+      ],
+      [
+        27134186696,
+        2
+      ],
+      [
+        27220517280,
+        2
+      ],
+      [
+        35795456704,
+        2
+      ],
+      [
+        36949028884,
+        4
+      ],
+      [
+        45743280832,
+        2
+      ],
+      [
+        61357049490,
+        2
+      ]
+    ],
+    "forbidden_orbit_state_cells_by_family": {
+      "ordered_nonedge": 17
+    },
+    "exact_functionals": {
+      "ordered_bad_mate_shadow_R_rel": "sum L_ab over state pairs containing P",
+      "unordered_selected_collision_K_rel": "(1/2) sum_ab s_a*s_b/(y_a*y_b) L_ab",
+      "state_Gram": "C_ab=sum_rel L_ab for a!=b; C_aa=sum_rel L_aa+y_a^2*N_a; C is PSD"
+    },
+    "rows": [
+      {
+        "row_id": "E019O0",
+        "family": "ordered_edge",
+        "root_relation": "edge",
+        "order8_canonical_mask": 5691760,
+        "order8_column_index_0_based": 19,
+        "full_1207_column_index_0_based": 310,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 4,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 2,
+        "marked_stabilizer_size": 2,
+        "canonical_mark_key": [
+          3,
+          4,
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "representative_mark": [
+          3,
+          4,
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "deletion_equation": "sum_state L[E019O0,state]=2*x8[5691760]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP",
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [],
+        "allowed_variables": [
+          {
+            "variable": "L_E019O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E019O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E019O0_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E019O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E019O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_E019O0_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E019O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E019O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E019O0_PP",
+            "pair": "PP",
+            "mate_bits": [
+              1,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 1,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 34438066928,
+            "degree_cell_canonical_order9_mask": 35795456704,
+            "deletes_to_order8_mask": 5691760,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 34974937840,
+            "degree_cell_canonical_order9_mask": 10040402400,
+            "deletes_to_order8_mask": 5691760,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 34471621360,
+            "degree_cell_canonical_order9_mask": 10040402400,
+            "deletes_to_order8_mask": 5691760,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 35008492272,
+            "degree_cell_canonical_order9_mask": 13904794306,
+            "deletes_to_order8_mask": 5691760,
+            "pair_upper_feasible": true,
+            "violations": []
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "E515O0",
+        "family": "ordered_edge",
+        "root_relation": "edge",
+        "order8_canonical_mask": 127242964,
+        "order8_column_index_0_based": 515,
+        "full_1207_column_index_0_based": 806,
+        "shadow_coefficient_for_class": 4,
+        "automorphism_group_size": 8,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 4,
+        "marked_stabilizer_size": 2,
+        "canonical_mark_key": [
+          0,
+          3,
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "representative_mark": [
+          0,
+          3,
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "deletion_equation": "sum_state L[E515O0,state]=4*x8[127242964]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP",
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [],
+        "allowed_variables": [
+          {
+            "variable": "L_E515O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E515O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E515O0_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E515O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E515O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_E515O0_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E515O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E515O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E515O0_PP",
+            "pair": "PP",
+            "mate_bits": [
+              1,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 1,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 3635832148,
+            "degree_cell_canonical_order9_mask": 14890182020,
+            "deletes_to_order8_mask": 127242964,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 3669386580,
+            "degree_cell_canonical_order9_mask": 3669678280,
+            "deletes_to_order8_mask": 127242964,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 3635832276,
+            "degree_cell_canonical_order9_mask": 3669678280,
+            "deletes_to_order8_mask": 127242964,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 3669386708,
+            "degree_cell_canonical_order9_mask": 3669386708,
+            "deletes_to_order8_mask": 127242964,
+            "pair_upper_feasible": true,
+            "violations": []
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            8,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "E561O0",
+        "family": "ordered_edge",
+        "root_relation": "edge",
+        "order8_canonical_mask": 144594160,
+        "order8_column_index_0_based": 561,
+        "full_1207_column_index_0_based": 852,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 2,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 2,
+        "marked_stabilizer_size": 1,
+        "canonical_mark_key": [
+          2,
+          4,
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "representative_mark": [
+          2,
+          4,
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "deletion_equation": "sum_state L[E561O0,state]=2*x8[144594160]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP",
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [],
+        "allowed_variables": [
+          {
+            "variable": "L_E561O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E561O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E561O0_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E561O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E561O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_E561O0_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E561O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_E561O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_E561O0_PP",
+            "pair": "PP",
+            "mate_bits": [
+              1,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 1,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 13034400240,
+            "degree_cell_canonical_order9_mask": 16260620944,
+            "deletes_to_order8_mask": 144594160,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 13571271152,
+            "degree_cell_canonical_order9_mask": 3985958096,
+            "deletes_to_order8_mask": 144594160,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 13035448816,
+            "degree_cell_canonical_order9_mask": 3985958096,
+            "deletes_to_order8_mask": 144594160,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 13572319728,
+            "degree_cell_canonical_order9_mask": 3669678280,
+            "deletes_to_order8_mask": 144594160,
+            "pair_upper_feasible": true,
+            "violations": []
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N057O0",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 15424580,
+        "order8_column_index_0_based": 57,
+        "full_1207_column_index_0_based": 348,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 1,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 1,
+        "marked_stabilizer_size": 1,
+        "canonical_mark_key": [
+          0,
+          2,
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "representative_mark": [
+          0,
+          2,
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "deletion_equation": "sum_state L[N057O0,state]=1*x8[15424580]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "DG",
+          "DD",
+          "PG",
+          "PD"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [
+          "GP",
+          "DP",
+          "PP"
+        ],
+        "allowed_variables": [
+          {
+            "variable": "L_N057O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N057O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N057O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N057O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_N057O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N057O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 4518148164,
+            "degree_cell_canonical_order9_mask": 27220517280,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 4519196740,
+            "degree_cell_canonical_order9_mask": 14337765400,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  6,
+                  7,
+                  8
+                ],
+                "upper": 2
+              }
+            ]
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 4518148292,
+            "degree_cell_canonical_order9_mask": 27134186696,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 4519196868,
+            "degree_cell_canonical_order9_mask": 14842221250,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  6,
+                  7,
+                  8
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  7,
+                  8
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  0,
+                  1,
+                  2
+                ],
+                "upper": 2
+              }
+            ]
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "row_id": "N057O1",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 15424580,
+        "order8_column_index_0_based": 57,
+        "full_1207_column_index_0_based": 348,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 1,
+        "marked_orbit_index": 1,
+        "marked_orbit_size": 1,
+        "marked_stabilizer_size": 1,
+        "canonical_mark_key": [
+          2,
+          0,
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "representative_mark": [
+          2,
+          0,
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "deletion_equation": "sum_state L[N057O1,state]=1*x8[15424580]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "allowed_variables": [
+          {
+            "variable": "L_N057O1_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N057O1_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N057O1_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N057O1_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N057O1_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_N057O1_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 4518148164,
+            "degree_cell_canonical_order9_mask": 27220517280,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 4518148292,
+            "degree_cell_canonical_order9_mask": 27134186696,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 4519196740,
+            "degree_cell_canonical_order9_mask": 14337765400,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  6,
+                  7,
+                  8
+                ],
+                "upper": 2
+              }
+            ]
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 4519196868,
+            "degree_cell_canonical_order9_mask": 14842221250,
+            "deletes_to_order8_mask": 15424580,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  6,
+                  7,
+                  8
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  7,
+                  8
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  0,
+                  1,
+                  2
+                ],
+                "upper": 2
+              }
+            ]
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "row_id": "N060O0",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 15436356,
+        "order8_column_index_0_based": 60,
+        "full_1207_column_index_0_based": 351,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 4,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 2,
+        "marked_stabilizer_size": 2,
+        "canonical_mark_key": [
+          0,
+          1,
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "representative_mark": [
+          0,
+          1,
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "deletion_equation": "sum_state L[N060O0,state]=2*x8[15436356]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP",
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [],
+        "allowed_variables": [
+          {
+            "variable": "L_N060O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N060O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N060O0_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N060O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N060O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_N060O0_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N060O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N060O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N060O0_PP",
+            "pair": "PP",
+            "mate_bits": [
+              1,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 1,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 4519236676,
+            "degree_cell_canonical_order9_mask": 45743280832,
+            "deletes_to_order8_mask": 15436356,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 4519253060,
+            "degree_cell_canonical_order9_mask": 36949028884,
+            "deletes_to_order8_mask": 15436356,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 4519236804,
+            "degree_cell_canonical_order9_mask": 36949028884,
+            "deletes_to_order8_mask": 15436356,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 4519253188,
+            "degree_cell_canonical_order9_mask": 61357049490,
+            "deletes_to_order8_mask": 15436356,
+            "pair_upper_feasible": true,
+            "violations": []
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N109O0",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 44489072,
+        "order8_column_index_0_based": 109,
+        "full_1207_column_index_0_based": 400,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 2,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 2,
+        "marked_stabilizer_size": 1,
+        "canonical_mark_key": [
+          0,
+          1,
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "representative_mark": [
+          0,
+          1,
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "deletion_equation": "sum_state L[N109O0,state]=2*x8[44489072]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "DG",
+          "DD"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [
+          "GP",
+          "DP",
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "allowed_variables": [
+          {
+            "variable": "L_N109O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N109O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N109O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N109O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 1765487216,
+            "degree_cell_canonical_order9_mask": 14337762352,
+            "deletes_to_order8_mask": 44489072,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 1765503600,
+            "degree_cell_canonical_order9_mask": 14770628832,
+            "deletes_to_order8_mask": 44489072,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  4
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  3,
+                  6,
+                  8
+                ],
+                "upper": 2
+              }
+            ]
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 1765487344,
+            "degree_cell_canonical_order9_mask": 14770628832,
+            "deletes_to_order8_mask": 44489072,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  0,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  5,
+                  7,
+                  8
+                ],
+                "upper": 2
+              }
+            ]
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 1765503728,
+            "degree_cell_canonical_order9_mask": 2006854312,
+            "deletes_to_order8_mask": 44489072,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  0,
+                  1
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  6,
+                  7,
+                  8
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  0,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  5,
+                  7,
+                  8
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  1,
+                  4
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  3,
+                  6,
+                  8
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  6,
+                  8
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  0,
+                  1,
+                  4
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  7,
+                  8
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  0,
+                  1,
+                  2
+                ],
+                "upper": 2
+              }
+            ]
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            7,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N442O0",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 110787152,
+        "order8_column_index_0_based": 442,
+        "full_1207_column_index_0_based": 733,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 1,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 1,
+        "marked_stabilizer_size": 1,
+        "canonical_mark_key": [
+          0,
+          1,
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "representative_mark": [
+          0,
+          1,
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "deletion_equation": "sum_state L[N442O0,state]=1*x8[110787152]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "DG",
+          "DD",
+          "PG",
+          "PD"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [
+          "GP",
+          "DP",
+          "PP"
+        ],
+        "allowed_variables": [
+          {
+            "variable": "L_N442O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N442O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N442O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N442O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_N442O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N442O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 3403265104,
+            "degree_cell_canonical_order9_mask": 14874613832,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 3403281488,
+            "degree_cell_canonical_order9_mask": 4019808292,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  4,
+                  7,
+                  8
+                ],
+                "upper": 2
+              }
+            ]
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 3403265232,
+            "degree_cell_canonical_order9_mask": 14844285121,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 3403281616,
+            "degree_cell_canonical_order9_mask": 3950781872,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  4,
+                  7,
+                  8
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  7,
+                  8
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  0,
+                  1,
+                  2
+                ],
+                "upper": 2
+              }
+            ]
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N442O1",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 110787152,
+        "order8_column_index_0_based": 442,
+        "full_1207_column_index_0_based": 733,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 1,
+        "marked_orbit_index": 1,
+        "marked_orbit_size": 1,
+        "marked_stabilizer_size": 1,
+        "canonical_mark_key": [
+          1,
+          0,
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "representative_mark": [
+          1,
+          0,
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "deletion_equation": "sum_state L[N442O1,state]=1*x8[110787152]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "allowed_variables": [
+          {
+            "variable": "L_N442O1_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N442O1_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N442O1_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N442O1_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N442O1_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_N442O1_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 3403265104,
+            "degree_cell_canonical_order9_mask": 14874613832,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 3403265232,
+            "degree_cell_canonical_order9_mask": 14844285121,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 3403281488,
+            "degree_cell_canonical_order9_mask": 4019808292,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  4,
+                  7,
+                  8
+                ],
+                "upper": 2
+              }
+            ]
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 3403281616,
+            "degree_cell_canonical_order9_mask": 3950781872,
+            "deletes_to_order8_mask": 110787152,
+            "pair_upper_feasible": false,
+            "violations": [
+              {
+                "pair": [
+                  1,
+                  2
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  4,
+                  7,
+                  8
+                ],
+                "upper": 2
+              },
+              {
+                "pair": [
+                  7,
+                  8
+                ],
+                "adjacent": false,
+                "common_neighbours": [
+                  0,
+                  1,
+                  2
+                ],
+                "upper": 2
+              }
+            ]
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N525O0",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 127315016,
+        "order8_column_index_0_based": 525,
+        "full_1207_column_index_0_based": 816,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 4,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 2,
+        "marked_stabilizer_size": 2,
+        "canonical_mark_key": [
+          0,
+          1,
+          [
+            0,
+            4,
+            7
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "representative_mark": [
+          0,
+          1,
+          [
+            0,
+            4,
+            7
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "deletion_equation": "sum_state L[N525O0,state]=2*x8[127315016]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP",
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [],
+        "allowed_variables": [
+          {
+            "variable": "L_N525O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N525O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N525O0_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N525O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N525O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_N525O0_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N525O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N525O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N525O0_PP",
+            "pair": "PP",
+            "mate_bits": [
+              1,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 1,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 3669661768,
+            "degree_cell_canonical_order9_mask": 14890181764,
+            "deletes_to_order8_mask": 127315016,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 3669678152,
+            "degree_cell_canonical_order9_mask": 14890182020,
+            "deletes_to_order8_mask": 127315016,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 3669661896,
+            "degree_cell_canonical_order9_mask": 14890182020,
+            "deletes_to_order8_mask": 127315016,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 3669678280,
+            "degree_cell_canonical_order9_mask": 3669678280,
+            "deletes_to_order8_mask": 127315016,
+            "pair_upper_feasible": true,
+            "violations": []
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "row_id": "N593O0",
+        "family": "ordered_nonedge",
+        "root_relation": "nonedge",
+        "order8_canonical_mask": 149654084,
+        "order8_column_index_0_based": 593,
+        "full_1207_column_index_0_based": 884,
+        "shadow_coefficient_for_class": 2,
+        "automorphism_group_size": 2,
+        "marked_orbit_index": 0,
+        "marked_orbit_size": 2,
+        "marked_stabilizer_size": 1,
+        "canonical_mark_key": [
+          0,
+          1,
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "representative_mark": [
+          0,
+          1,
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "deletion_equation": "sum_state L[N593O0,state]=2*x8[149654084]",
+        "allowed_state_pairs": [
+          "GG",
+          "GD",
+          "GP",
+          "DG",
+          "DD",
+          "DP",
+          "PG",
+          "PD",
+          "PP"
+        ],
+        "forbidden_state_pairs_by_pair_upper": [],
+        "allowed_variables": [
+          {
+            "variable": "L_N593O0_GG",
+            "pair": "GG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N593O0_GD",
+            "pair": "GD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N593O0_GP",
+            "pair": "GP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N593O0_DG",
+            "pair": "DG",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N593O0_DD",
+            "pair": "DD",
+            "mate_bits": [
+              0,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 4,
+            "selected_pair_weight_per_occurrence": "1/4",
+            "bad_mate_occurrence": false,
+            "smallest_explicit_union_order": 13
+          },
+          {
+            "variable": "L_N593O0_DP",
+            "pair": "DP",
+            "mate_bits": [
+              0,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N593O0_PG",
+            "pair": "PG",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 0,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          },
+          {
+            "variable": "L_N593O0_PD",
+            "pair": "PD",
+            "mate_bits": [
+              1,
+              0
+            ],
+            "occurrences_per_physical_root_pair": 2,
+            "selected_pair_weight_per_occurrence": "1/2",
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 11
+          },
+          {
+            "variable": "L_N593O0_PP",
+            "pair": "PP",
+            "mate_bits": [
+              1,
+              1
+            ],
+            "occurrences_per_physical_root_pair": 1,
+            "selected_pair_weight_per_occurrence": 1,
+            "bad_mate_occurrence": true,
+            "smallest_explicit_union_order": 9
+          }
+        ],
+        "mate_bit_extensions": [
+          {
+            "mate_bits": [
+              0,
+              0
+            ],
+            "labelled_order9_mask": 13109171268,
+            "degree_cell_canonical_order9_mask": 16827884176,
+            "deletes_to_order8_mask": 149654084,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              0,
+              1
+            ],
+            "labelled_order9_mask": 13109187652,
+            "degree_cell_canonical_order9_mask": 16281591873,
+            "deletes_to_order8_mask": 149654084,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              0
+            ],
+            "labelled_order9_mask": 13109171396,
+            "degree_cell_canonical_order9_mask": 16281591873,
+            "deletes_to_order8_mask": 149654084,
+            "pair_upper_feasible": true,
+            "violations": []
+          },
+          {
+            "mate_bits": [
+              1,
+              1
+            ],
+            "labelled_order9_mask": 13109187780,
+            "degree_cell_canonical_order9_mask": 13904794306,
+            "deletes_to_order8_mask": 149654084,
+            "pair_upper_feasible": true,
+            "violations": []
+          }
+        ],
+        "T0_GG_unmarked_H9_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      }
+    ]
+  },
+  "multiplicity_and_deletion_audit": {
+    "all_916_frozen_order8_columns_checked_by_parent_shadow": true,
+    "nonzero_shadow_columns": 9,
+    "ordered_marked_embeddings": 20,
+    "marked_automorphism_orbits": 11,
+    "orbit_sizes_sum_to_each_frozen_shadow_coefficient": true,
+    "orbit_stabilizer_product_equals_automorphism_group_size": true,
+    "all_variable_ids_unique": true,
+    "every_extension_deletes_to_its_exact_frozen_K8": true,
+    "unique_target_edge_mate_inside_every_extension": true,
+    "pair_upper_checked_on_every_mate_bit_extension": true
+  },
+  "T0_all_G_order9_closure": {
+    "premises": [
+      "T=0 implies D_*=0 and P=0",
+      "therefore every nonzero root-edge state is G=(0,1,0)"
+    ],
+    "frozen_H9_types": 9,
+    "H9_incidence_matrix_shape": [
+      11,
+      9
+    ],
+    "H9_incidence_rank_over_Q": 9,
+    "H9_mark_audit": [
+      {
+        "h9_index": 0,
+        "degree_cell_canonical_mask": 45743280832,
+        "ordered_xx_marks": 2,
+        "ordered_relation_histogram": {
+          "ordered_nonedge": 2
+        }
+      },
+      {
+        "h9_index": 1,
+        "degree_cell_canonical_mask": 16827884176,
+        "ordered_xx_marks": 2,
+        "ordered_relation_histogram": {
+          "ordered_nonedge": 2
+        }
+      },
+      {
+        "h9_index": 2,
+        "degree_cell_canonical_mask": 27220517280,
+        "ordered_xx_marks": 2,
+        "ordered_relation_histogram": {
+          "ordered_nonedge": 2
+        }
+      },
+      {
+        "h9_index": 3,
+        "degree_cell_canonical_mask": 35795456704,
+        "ordered_xx_marks": 2,
+        "ordered_relation_histogram": {
+          "ordered_edge": 2
+        }
+      },
+      {
+        "h9_index": 4,
+        "degree_cell_canonical_mask": 14890181764,
+        "ordered_xx_marks": 6,
+        "ordered_relation_histogram": {
+          "ordered_nonedge": 6
+        }
+      },
+      {
+        "h9_index": 5,
+        "degree_cell_canonical_mask": 14874613832,
+        "ordered_xx_marks": 4,
+        "ordered_relation_histogram": {
+          "ordered_nonedge": 4
+        }
+      },
+      {
+        "h9_index": 6,
+        "degree_cell_canonical_mask": 16260620944,
+        "ordered_xx_marks": 2,
+        "ordered_relation_histogram": {
+          "ordered_edge": 2
+        }
+      },
+      {
+        "h9_index": 7,
+        "degree_cell_canonical_mask": 14337762352,
+        "ordered_xx_marks": 2,
+        "ordered_relation_histogram": {
+          "ordered_nonedge": 2
+        }
+      },
+      {
+        "h9_index": 8,
+        "degree_cell_canonical_mask": 14890182020,
+        "ordered_xx_marks": 2,
+        "ordered_relation_histogram": {
+          "ordered_edge": 2
+        }
+      }
+    ],
+    "incidence_rows": [
+      {
+        "row_id": "E019O0",
+        "marked_orbit_size_times_x8": "2*x8[5691760]",
+        "H9_coefficients": [
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "E515O0",
+        "marked_orbit_size_times_x8": "4*x8[127242964]",
+        "H9_coefficients": [
+          [
+            8,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "E561O0",
+        "marked_orbit_size_times_x8": "2*x8[144594160]",
+        "H9_coefficients": [
+          [
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N057O0",
+        "marked_orbit_size_times_x8": "1*x8[15424580]",
+        "H9_coefficients": [
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "row_id": "N057O1",
+        "marked_orbit_size_times_x8": "1*x8[15424580]",
+        "H9_coefficients": [
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "row_id": "N060O0",
+        "marked_orbit_size_times_x8": "2*x8[15436356]",
+        "H9_coefficients": [
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N109O0",
+        "marked_orbit_size_times_x8": "2*x8[44489072]",
+        "H9_coefficients": [
+          [
+            7,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N442O0",
+        "marked_orbit_size_times_x8": "1*x8[110787152]",
+        "H9_coefficients": [
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N442O1",
+        "marked_orbit_size_times_x8": "1*x8[110787152]",
+        "H9_coefficients": [
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      {
+        "row_id": "N525O0",
+        "marked_orbit_size_times_x8": "2*x8[127315016]",
+        "H9_coefficients": [
+          [
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "row_id": "N593O0",
+        "marked_orbit_size_times_x8": "2*x8[149654084]",
+        "H9_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      }
+    ],
+    "wave159_exact_nonnegative_H9_solution": [
+      {
+        "h9_index": 0,
+        "degree_cell_canonical_mask": 45743280832,
+        "count": "24982765285097716115372753444424386087938065/1035043883553254636429284757016341633342"
+      },
+      {
+        "h9_index": 1,
+        "degree_cell_canonical_mask": 16827884176,
+        "count": "2232723628652178851750836209534456341742048/517521941776627318214642378508170816671"
+      },
+      {
+        "h9_index": 2,
+        "degree_cell_canonical_mask": 27220517280,
+        "count": "5143221989603313332538008693293253492114187/517521941776627318214642378508170816671"
+      },
+      {
+        "h9_index": 3,
+        "degree_cell_canonical_mask": 35795456704,
+        "count": 0
+      },
+      {
+        "h9_index": 4,
+        "degree_cell_canonical_mask": 14890181764,
+        "count": 0
+      },
+      {
+        "h9_index": 5,
+        "degree_cell_canonical_mask": 14874613832,
+        "count": 0
+      },
+      {
+        "h9_index": 6,
+        "degree_cell_canonical_mask": 16260620944,
+        "count": "2070988839162253926522129810139492169693988/517521941776627318214642378508170816671"
+      },
+      {
+        "h9_index": 7,
+        "degree_cell_canonical_mask": 14337762352,
+        "count": "3464202946025552224007923346054643530757885/1035043883553254636429284757016341633342"
+      },
+      {
+        "h9_index": 8,
+        "degree_cell_canonical_mask": 14890182020,
+        "count": 0
+      }
+    ],
+    "wave159_ordered_shadow_mass": {
+      "ordered_edge": "4141977678324507853044259620278984339387976/517521941776627318214642378508170816671",
+      "ordered_nonedge": "43198859467634252707958366596134449286408420/517521941776627318214642378508170816671"
+    },
+    "wave159_total_ordered_shadow_mass": 91476,
+    "wave159_selected_collision_from_lift": 0,
+    "wave159_state_incidence_G_D_P": {
+      "G": 8316,
+      "D": 0,
+      "P": 0
+    },
+    "wave159_coarse_state_Gram_G_D_P": [
+      [
+        99792,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "wave159_coarse_state_Gram_PSD_rank": 1,
+    "integer_T0_congruences_from_unmarked_H9_closure": [
+      {
+        "row_id": "E515O0",
+        "equation": "4*x8[127242964]=2*h9[8]",
+        "necessary_at_T0": {
+          "x8_divisible_by": 1,
+          "h9_divisible_by": 2
+        }
+      },
+      {
+        "row_id": "N442O0",
+        "equation": "1*x8[110787152]=2*h9[5]",
+        "necessary_at_T0": {
+          "x8_divisible_by": 2,
+          "h9_divisible_by": 1
+        }
+      },
+      {
+        "row_id": "N442O1",
+        "equation": "1*x8[110787152]=2*h9[5]",
+        "necessary_at_T0": {
+          "x8_divisible_by": 2,
+          "h9_divisible_by": 1
+        }
+      },
+      {
+        "row_id": "N525O0",
+        "equation": "2*x8[127315016]=6*h9[4]",
+        "necessary_at_T0": {
+          "x8_divisible_by": 3,
+          "h9_divisible_by": 1
+        }
+      }
+    ],
+    "conclusion": "The exact Wave159 rational endpoint extends through every deletion row, all local pair-upper zero cells, the restricted unmarked H9 incidence bridge, and the coarse 3x3 PSD state Gram.  Thus this minimal lift gives no positive T lower bound."
+  },
+  "streaming_and_scope_boundary": {
+    "exact_streaming_algorithm": [
+      "Bucket augmented source flags by (root,target_edge), obtaining y.",
+      "Read the unique target-edge mate adjacency bit m and map each nonzero bucket to G,D,P.",
+      "For every ordered pair of distinct root buckets and every Cartesian source-occurrence pair, canonicalize its deleted K8 marked orbit and increment L."
+    ],
+    "why_no_full_order9_census_is_needed": "Only 9 of 916 K8 columns, 11 marked deletion orbits, and 82 locally allowed tagged cells occur.",
+    "doubled_status_visibility_boundary": "D and G have the same mate bit and therefore the same induced nine-vertex graph.  Certifying one D tag adds the other two vertices of its second source triangle; DG/DP needs order 11 and DD needs order 13.  The tag lift is an exact sufficient statistic for s, but its nonnegative deletion rows alone are not sufficient for realization by one graph.",
+    "physical_synchronization": "For each state pair ab, actual occurrence totals come in Cartesian packets of size y_a*y_b.  Global divisibility is necessary; packet compatibility across marked orbits is the first missing order-11/13 constraint.",
+    "full_order9_class_census_performed": false,
+    "frozen_916_or_2414_resources_regenerated": false,
+    "submission_txt_created": false
+  },
+  "lane_conclusion": {
+    "new_exact_local_zero_cells": 17,
+    "new_weighted_marked_zero_cells": 22,
+    "T0_excluded": false,
+    "positive_T_lower_bound_obtained": false,
+    "useful_new_integer_information": "The all-G unmarked H9 bridge supplies the displayed exact divisibility conditions for an actual integer T=0 graph."
+  }
+}

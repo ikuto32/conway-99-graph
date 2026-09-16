@@ -1,0 +1,1244 @@
+{
+  "status": "COMPLETE",
+  "model": "self-contained-root-reduced E0=71,Q>=2 exact compression partition",
+  "partition_index": 22,
+  "partition": [
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "maximum_Q_capacity": 8,
+  "passes_Q_at_least_4_capacity": true,
+  "theorem_inputs": {
+    "external_premise_required": false,
+    "self_contained_root_reduction": "every putative SRG has a root with S(r)<=69",
+    "root_implication": "E0=71 and S(r)<=69 imply Q=E0-S>=2",
+    "side_bound_audit": "scratch_root_side_bound_selfcontained_audit.json",
+    "total_deficit": 13,
+    "total_fibre_edges_E0": 71,
+    "required_diagonal_edges_Q": ">=2",
+    "free_Ritz_interval": [
+      "-4",
+      "3"
+    ],
+    "free_Ritz_sum": "71/2",
+    "spectral_maximizing_free_Ritz_multiset": [
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "-7/2"
+    ],
+    "free_Ritz_maximum_square_sum": "517/4",
+    "spectral_D_square_upper": 4756,
+    "disjoint_constant_derivation": "3360-16*13=3152",
+    "trace_identity": "tr(D^2)=sum_F(8-2*delta_F)^2+3152+2*(overlap_square+x_square)",
+    "BP_overlap_row_sum": "4*delta_F",
+    "disjoint_deviation_row_sum": "sum x_FG=2*delta_F for x=4-D",
+    "weighted_port_balance": "at every root group, 2*max(incident delta)<=sum(incident delta)",
+    "partition_Q_capacity": "2*(number of delta2 fibres)+(number of delta3 fibres)",
+    "external_n3_bound_used": false,
+    "legacy_schema_note": "fields named passes_Q_at_least_4_capacity are engine compatibility fields and mean passes configured Q>=2 in this artifact"
+  },
+  "coverage": {
+    "expected_labelled_placements": 3255840,
+    "expected_weighted_S7_orbits_by_Burnside": 933,
+    "labelled_placements_scanned": 3255840,
+    "balanced_labelled_placements": 3360,
+    "unbalanced_labelled_placements": 3252480,
+    "balanced_orbits_materialized": 5,
+    "checkpoint_every_placements": 250000,
+    "scan_order": "deterministic repeated-weight-unlabelled sparse placement order",
+    "balanced_orbit_image_union_size": 3360,
+    "scan_elapsed_seconds_last_invocation": 18.171,
+    "unbalanced_orbits_by_difference": 928,
+    "balanced_orbit_size_sum": 3360,
+    "labelled_balance_identity_verified": true,
+    "orbit_balance_identity_verified": true
+  },
+  "balanced_raw_orbits": [
+    {
+      "representative_code_hex": "0x20048009b",
+      "orbit_size": 840
+    },
+    {
+      "representative_code_hex": "0x2004800da",
+      "orbit_size": 420
+    },
+    {
+      "representative_code_hex": "0x2004c009a",
+      "orbit_size": 420
+    },
+    {
+      "representative_code_hex": "0x2004c00d2",
+      "orbit_size": 420
+    },
+    {
+      "representative_code_hex": "0x403080681",
+      "orbit_size": 1260
+    }
+  ],
+  "rows": [
+    {
+      "partition": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "orbit_index": 0,
+      "representative_code_hex": "0x20048009b",
+      "orbit_size": 840,
+      "weighted_stabilizer_order": 6,
+      "exceptional_supports": [
+        {
+          "support_index": 0,
+          "support": [
+            0,
+            1
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 1,
+          "support": [
+            0,
+            2
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 2,
+          "support": [
+            0,
+            3
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 6,
+          "support": [
+            1,
+            2
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 7,
+          "support": [
+            1,
+            3
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 11,
+          "support": [
+            2,
+            3
+          ],
+          "deficit": 1
+        }
+      ],
+      "maximum_Q_capacity": 8,
+      "filter_complete": true,
+      "support_signature": {
+        "weighted_edges": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ],
+        "simple_degree_sequence": [
+          3,
+          3,
+          3,
+          3,
+          0,
+          0,
+          0
+        ],
+        "weighted_degree_sequence": [
+          8,
+          7,
+          6,
+          5,
+          0,
+          0,
+          0
+        ]
+      },
+      "diagonal_square": 1052,
+      "joint_off_diagonal_square_budget": 276,
+      "disjoint_continuous_minimum": "2417/165",
+      "disjoint_continuous_ceiling": 15,
+      "weighted_port_balance": true,
+      "weighted_port_balance_details": [
+        {
+          "group": 0,
+          "incident_deficits": [
+            3,
+            3,
+            2
+          ],
+          "total_deficit": 8,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 1,
+          "incident_deficits": [
+            3,
+            2,
+            2
+          ],
+          "total_deficit": 7,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 2,
+          "incident_deficits": [
+            3,
+            2,
+            1
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 3,
+          "incident_deficits": [
+            2,
+            2,
+            1
+          ],
+          "total_deficit": 5,
+          "maximum_deficit": 2,
+          "passes": true
+        }
+      ],
+      "overlap": {
+        "feasible": true,
+        "minimum_square": 70,
+        "visited_complete_assignments": 48,
+        "one_minimizer": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            6,
+            3
+          ],
+          [
+            0,
+            7,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            6,
+            3
+          ],
+          [
+            1,
+            11,
+            2
+          ],
+          [
+            2,
+            7,
+            2
+          ],
+          [
+            2,
+            11,
+            1
+          ],
+          [
+            6,
+            7,
+            2
+          ],
+          [
+            7,
+            11,
+            1
+          ]
+        ],
+        "minimizer_verified": true
+      },
+      "passes_weighted_port_overlap_and_real_relaxation": true
+    },
+    {
+      "partition": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "orbit_index": 1,
+      "representative_code_hex": "0x2004800da",
+      "orbit_size": 420,
+      "weighted_stabilizer_order": 12,
+      "exceptional_supports": [
+        {
+          "support_index": 0,
+          "support": [
+            0,
+            1
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 1,
+          "support": [
+            0,
+            2
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 2,
+          "support": [
+            0,
+            3
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 6,
+          "support": [
+            1,
+            2
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 7,
+          "support": [
+            1,
+            3
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 11,
+          "support": [
+            2,
+            3
+          ],
+          "deficit": 1
+        }
+      ],
+      "maximum_Q_capacity": 8,
+      "filter_complete": true,
+      "support_signature": {
+        "weighted_edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            3
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ],
+        "simple_degree_sequence": [
+          3,
+          3,
+          3,
+          3,
+          0,
+          0,
+          0
+        ],
+        "weighted_degree_sequence": [
+          8,
+          6,
+          6,
+          6,
+          0,
+          0,
+          0
+        ]
+      },
+      "diagonal_square": 1052,
+      "joint_off_diagonal_square_budget": 276,
+      "disjoint_continuous_minimum": "799/55",
+      "disjoint_continuous_ceiling": 15,
+      "weighted_port_balance": true,
+      "weighted_port_balance_details": [
+        {
+          "group": 0,
+          "incident_deficits": [
+            2,
+            3,
+            3
+          ],
+          "total_deficit": 8,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 1,
+          "incident_deficits": [
+            2,
+            2,
+            2
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 2,
+          "passes": true
+        },
+        {
+          "group": 2,
+          "incident_deficits": [
+            3,
+            2,
+            1
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 3,
+          "incident_deficits": [
+            3,
+            2,
+            1
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        }
+      ],
+      "overlap": {
+        "feasible": true,
+        "minimum_square": 76,
+        "visited_complete_assignments": 43,
+        "one_minimizer": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            7,
+            2
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            6,
+            4
+          ],
+          [
+            1,
+            11,
+            2
+          ],
+          [
+            2,
+            7,
+            4
+          ],
+          [
+            2,
+            11,
+            2
+          ],
+          [
+            6,
+            7,
+            2
+          ]
+        ],
+        "minimizer_verified": true
+      },
+      "passes_weighted_port_overlap_and_real_relaxation": true
+    },
+    {
+      "partition": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "orbit_index": 2,
+      "representative_code_hex": "0x2004c009a",
+      "orbit_size": 420,
+      "weighted_stabilizer_order": 12,
+      "exceptional_supports": [
+        {
+          "support_index": 0,
+          "support": [
+            0,
+            1
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 1,
+          "support": [
+            0,
+            2
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 2,
+          "support": [
+            0,
+            3
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 6,
+          "support": [
+            1,
+            2
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 7,
+          "support": [
+            1,
+            3
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 11,
+          "support": [
+            2,
+            3
+          ],
+          "deficit": 1
+        }
+      ],
+      "maximum_Q_capacity": 8,
+      "filter_complete": true,
+      "support_signature": {
+        "weighted_edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ],
+        "simple_degree_sequence": [
+          3,
+          3,
+          3,
+          3,
+          0,
+          0,
+          0
+        ],
+        "weighted_degree_sequence": [
+          7,
+          7,
+          7,
+          5,
+          0,
+          0,
+          0
+        ]
+      },
+      "diagonal_square": 1052,
+      "joint_off_diagonal_square_budget": 276,
+      "disjoint_continuous_minimum": "799/55",
+      "disjoint_continuous_ceiling": 15,
+      "weighted_port_balance": true,
+      "weighted_port_balance_details": [
+        {
+          "group": 0,
+          "incident_deficits": [
+            2,
+            3,
+            2
+          ],
+          "total_deficit": 7,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 1,
+          "incident_deficits": [
+            2,
+            3,
+            2
+          ],
+          "total_deficit": 7,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 2,
+          "incident_deficits": [
+            3,
+            3,
+            1
+          ],
+          "total_deficit": 7,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 3,
+          "incident_deficits": [
+            2,
+            2,
+            1
+          ],
+          "total_deficit": 5,
+          "maximum_deficit": 2,
+          "passes": true
+        }
+      ],
+      "overlap": {
+        "feasible": true,
+        "minimum_square": 76,
+        "visited_complete_assignments": 46,
+        "one_minimizer": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            7,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            6,
+            5
+          ],
+          [
+            1,
+            11,
+            2
+          ],
+          [
+            2,
+            7,
+            3
+          ],
+          [
+            6,
+            7,
+            3
+          ],
+          [
+            6,
+            11,
+            2
+          ]
+        ],
+        "minimizer_verified": true
+      },
+      "passes_weighted_port_overlap_and_real_relaxation": true
+    },
+    {
+      "partition": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "orbit_index": 3,
+      "representative_code_hex": "0x2004c00d2",
+      "orbit_size": 420,
+      "weighted_stabilizer_order": 12,
+      "exceptional_supports": [
+        {
+          "support_index": 0,
+          "support": [
+            0,
+            1
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 1,
+          "support": [
+            0,
+            2
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 2,
+          "support": [
+            0,
+            3
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 6,
+          "support": [
+            1,
+            2
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 7,
+          "support": [
+            1,
+            3
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 11,
+          "support": [
+            2,
+            3
+          ],
+          "deficit": 1
+        }
+      ],
+      "maximum_Q_capacity": 8,
+      "filter_complete": true,
+      "support_signature": {
+        "weighted_edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            3,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ],
+        "simple_degree_sequence": [
+          3,
+          3,
+          3,
+          3,
+          0,
+          0,
+          0
+        ],
+        "weighted_degree_sequence": [
+          7,
+          7,
+          6,
+          6,
+          0,
+          0,
+          0
+        ]
+      },
+      "diagonal_square": 1052,
+      "joint_off_diagonal_square_budget": 276,
+      "disjoint_continuous_minimum": "2377/165",
+      "disjoint_continuous_ceiling": 15,
+      "weighted_port_balance": true,
+      "weighted_port_balance_details": [
+        {
+          "group": 0,
+          "incident_deficits": [
+            2,
+            2,
+            3
+          ],
+          "total_deficit": 7,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 1,
+          "incident_deficits": [
+            2,
+            3,
+            2
+          ],
+          "total_deficit": 7,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 2,
+          "incident_deficits": [
+            2,
+            3,
+            1
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 3,
+          "incident_deficits": [
+            3,
+            2,
+            1
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        }
+      ],
+      "overlap": {
+        "feasible": true,
+        "minimum_square": 78,
+        "visited_complete_assignments": 32,
+        "one_minimizer": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            6,
+            3
+          ],
+          [
+            0,
+            7,
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            6,
+            4
+          ],
+          [
+            2,
+            7,
+            4
+          ],
+          [
+            2,
+            11,
+            2
+          ],
+          [
+            6,
+            7,
+            3
+          ],
+          [
+            6,
+            11,
+            2
+          ]
+        ],
+        "minimizer_verified": true
+      },
+      "passes_weighted_port_overlap_and_real_relaxation": true
+    },
+    {
+      "partition": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "orbit_index": 4,
+      "representative_code_hex": "0x403080681",
+      "orbit_size": 1260,
+      "weighted_stabilizer_order": 4,
+      "exceptional_supports": [
+        {
+          "support_index": 0,
+          "support": [
+            0,
+            1
+          ],
+          "deficit": 1
+        },
+        {
+          "support_index": 2,
+          "support": [
+            0,
+            3
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 3,
+          "support": [
+            0,
+            4
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 6,
+          "support": [
+            1,
+            2
+          ],
+          "deficit": 2
+        },
+        {
+          "support_index": 8,
+          "support": [
+            1,
+            4
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 11,
+          "support": [
+            2,
+            3
+          ],
+          "deficit": 2
+        }
+      ],
+      "maximum_Q_capacity": 8,
+      "filter_complete": true,
+      "support_signature": {
+        "weighted_edges": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            0,
+            4,
+            3
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            4,
+            3
+          ],
+          [
+            2,
+            3,
+            2
+          ]
+        ],
+        "simple_degree_sequence": [
+          3,
+          3,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        "weighted_degree_sequence": [
+          6,
+          6,
+          6,
+          4,
+          4,
+          0,
+          0
+        ]
+      },
+      "diagonal_square": 1052,
+      "joint_off_diagonal_square_budget": 276,
+      "disjoint_continuous_minimum": "2077/165",
+      "disjoint_continuous_ceiling": 13,
+      "weighted_port_balance": true,
+      "weighted_port_balance_details": [
+        {
+          "group": 0,
+          "incident_deficits": [
+            1,
+            2,
+            3
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 1,
+          "incident_deficits": [
+            1,
+            2,
+            3
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 2,
+          "incident_deficits": [
+            2,
+            2
+          ],
+          "total_deficit": 4,
+          "maximum_deficit": 2,
+          "passes": true
+        },
+        {
+          "group": 3,
+          "incident_deficits": [
+            2,
+            2
+          ],
+          "total_deficit": 4,
+          "maximum_deficit": 2,
+          "passes": true
+        },
+        {
+          "group": 4,
+          "incident_deficits": [
+            3,
+            3
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        }
+      ],
+      "overlap": {
+        "feasible": true,
+        "minimum_square": 108,
+        "visited_complete_assignments": 7,
+        "one_minimizer": [
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            0,
+            8,
+            2
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            11,
+            4
+          ],
+          [
+            3,
+            8,
+            6
+          ],
+          [
+            6,
+            8,
+            4
+          ],
+          [
+            6,
+            11,
+            4
+          ]
+        ],
+        "minimizer_verified": true
+      },
+      "passes_weighted_port_overlap_and_real_relaxation": true
+    }
+  ],
+  "claim_boundary": "Necessary E0=71,Q>=2 selected-root branch only.",
+  "schema_compatibility": "fields named passes_Q_at_least_4_capacity are engine compatibility fields and mean passes configured Q>=2 in this artifact",
+  "summary": {
+    "balanced_orbits": 5,
+    "filter_rows_complete": 5,
+    "overlap_rows_computed": 5,
+    "overlap_feasible": 5,
+    "spectral_real_survivors": 5,
+    "balanced_labelled_placements": 3360,
+    "spectral_real_surviving_labelled_placements": 3360
+  }
+}

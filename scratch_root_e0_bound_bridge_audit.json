@@ -1,0 +1,159 @@
+{
+  "status": "ORIGINAL_BRIDGE_FAILED_QUARANTINE_VERIFIED",
+  "model": "independent audit of root E0/prism bridge and conditioned CNF",
+  "scope": {
+    "external_n3_proof_replayed": false,
+    "external_premises_used_only_for_arithmetic": [
+      "n3 >= 708",
+      "n3 + 3P = 4158"
+    ],
+    "heavy_sat_sweep_run": false
+  },
+  "bridge_audit": {
+    "claimed_identity": "sum_r E0(r) = 6P",
+    "claimed_identity_valid_for_126_variable_E0": false,
+    "correct_identity": "sum_r S(r) = 6P",
+    "definitions": {
+      "S(r)": "same-fibre side edges whose root-support intersection has size 1",
+      "D(r)": "same-fibre diagonal edges whose root-support intersection has size 0",
+      "E0(r)_as_encoded": "S(r) + D(r)"
+    },
+    "reason": "The prism bijection is bidirectional for side edges only. A diagonal edge has no shared root-neighbour, so the document's first step does not apply. Diagonal fibre states are locally admissible under the SRG coordinate equations.",
+    "same_fibre_candidate_variables": 126,
+    "side_variables": 84,
+    "diagonal_variables": 42,
+    "diagonal_examples": [
+      {
+        "variable": 13,
+        "left_outer_index": 0,
+        "right_outer_index": 13,
+        "left_support": [
+          0,
+          2
+        ],
+        "right_support": [
+          1,
+          3
+        ],
+        "shared_root_neighbours": 0
+      },
+      {
+        "variable": 94,
+        "left_outer_index": 1,
+        "right_outer_index": 12,
+        "left_support": [
+          0,
+          3
+        ],
+        "right_support": [
+          1,
+          2
+        ],
+        "shared_root_neighbours": 0
+      }
+    ],
+    "locally_admissible_diagonal_orbits": [
+      {
+        "representative_edges": [
+          [
+            0,
+            3
+          ]
+        ],
+        "orbit_size": 2,
+        "edge_count": 1,
+        "cross_edges_C": 0,
+        "diagonal_edges_Q": 1,
+        "degree_sequence": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "representative_edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "orbit_size": 1,
+        "edge_count": 2,
+        "cross_edges_C": 0,
+        "diagonal_edges_Q": 2,
+        "degree_sequence": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "arithmetic_audit": {
+    "arithmetic_correct_under_external_premises": true,
+    "P_upper": 1150,
+    "six_P_upper": 6900,
+    "floor_six_P_over_99": 69,
+    "sound_conclusion": "min_r S(r) <= 69",
+    "unsupported_conclusion": "min_r E0(r) <= 69 for E0=S+D"
+  },
+  "cnf_audit": {
+    "mechanical_encoding_ok": true,
+    "semantic_search_restriction_justified": false,
+    "actual_constraint": "at most 69 of all 126 same-fibre candidate edges",
+    "sound_repaired_constraint": "at most 69 of the 84 side-edge variables",
+    "base_header": [
+      817278,
+      1622502
+    ],
+    "conditioned_header": [
+      821211,
+      1630356
+    ],
+    "base_sha256": "91D22E62625E1221DD46B819E89494DB8141DD4DDC9A06F13B9ABDB530B83242",
+    "conditioned_sha256": "D8D4CA88A347529EFB857E65AFCE74A8CC194380F5C3215E5199125C4C96AEBE",
+    "base_clause_body_preserved_byte_for_byte": true,
+    "base_clause_body_sha256": "4E7D4BC5CA13D65F877C3874E2C52058A74F604065F1C0553DCB172E0CC8F8B9",
+    "appended_counter_clauses": 7854,
+    "added_auxiliary_variables": 3933,
+    "appended_suffix_equals_rebuilt_pysat_seqcounter": true,
+    "maximum_variable_seen": 821211,
+    "header_and_hash_match_metadata": true
+  },
+  "quarantine_audit": {
+    "ok": true,
+    "metadata_status": "QUARANTINED_UNSOUND_PREMISE_NEVER_SOLVED",
+    "marker": "scratch_root_e0_le69_QUARANTINED.txt",
+    "marker_sha256": "FAB6710C45799BA33507EB769A04D90D42CDBA0FCF1A90A2CBFF48933DF6A0B1",
+    "portfolio_absent": true,
+    "solution_absent": true,
+    "main_first_statement_is_raise": true,
+    "cli_sweep_refusal_exit_code": 1,
+    "cli_sweep_refusal_text": "QUARANTINED: prism counting bounds fibre side edges S, not E0=S+diagonal edges; the proposed E0<=69 restriction is unsupported",
+    "refused_invocation_preserved_artifact_hashes": true,
+    "active_source_references_found_by_separate_rg": "only the corrected note, quarantined builder/marker, and this audit",
+    "errors": []
+  },
+  "artifacts": {
+    "scratch_root_e0_prism_bridge.md": "34C0BDB7F346CB68D3FE1DDBCE07E4624CAC8DB090C200A1D03843F792A4678B",
+    "scratch_root_e0_bound_sat.py": "4B040821EC4B891261184229F810F4F1513CDEC588F29A677684C01CD8E4027B",
+    "scratch_general_exact.cnf": "91D22E62625E1221DD46B819E89494DB8141DD4DDC9A06F13B9ABDB530B83242",
+    "scratch_general_exact_build.json": "AA3143DBAF7BB7CB9883D9BA5E320BD973AB0C4894D22CFC04062D79B27BD97E",
+    "scratch_root_e0_le69.cnf": "D8D4CA88A347529EFB857E65AFCE74A8CC194380F5C3215E5199125C4C96AEBE",
+    "scratch_root_e0_le69_build.json": "72705CDD6F00ADD2AE0438DDBFAB254915FF03FF11AF7CE80F343EE1421D6E79",
+    "scratch_general_structural_audit.json": "5411FA08F98471E5D195ECE04288A1C9EEE8022165A252694C18251B1B2F3CDD",
+    "scratch_root_e0_le69_QUARANTINED.txt": "FAB6710C45799BA33507EB769A04D90D42CDBA0FCF1A90A2CBFF48933DF6A0B1"
+  },
+  "errors_in_mechanical_cnf_audit": [],
+  "errors_in_quarantine_audit": [],
+  "mechanical_cnf_audit_ok": true,
+  "quarantine_audit_ok": true,
+  "overall_audit_ok": true,
+  "claim_boundary": "The public proof of n3>=708 was not replayed. More importantly, even granting both external numerical premises, they justify a bound on the 84 side variables, not on the encoded set of 126 side-plus-diagonal variables. Therefore an UNSAT sweep of the current conditioned CNF would not establish conditional nonexistence."
+}

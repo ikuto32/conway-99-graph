@@ -1,0 +1,103 @@
+{
+  "status": "BUILT",
+  "model": "C11-semiregular exact CNF with complete quotient-row WLOG",
+  "input": "scratch_root_c11_semiregular.cnf",
+  "input_sha256": "86695B2B8DC2440730006732F23D55A98A88FD63DD2219AB6D39F9CAE2140F28",
+  "normalization": [
+    "permute the nine C11 vertex orbits and choose one containing an internal edge as fibre zero",
+    "sort the other fibres by their cross-neighbour counts",
+    "shift every directly adjacent fibre so difference zero is an edge",
+    "replace the C11 generator by a unit power and canonicalize the signed internal differences"
+  ],
+  "C11_character_consequences": {
+    "invariant_quotient_spectrum": "14^1,3^4,(-4)^4",
+    "invariant_quotient_trace": 10,
+    "each_nontrivial_character_spectrum": "3^5,(-4)^4",
+    "each_nontrivial_character_trace": -1,
+    "Fourier_inversion": "for each signed difference d=1,...,5, exactly one of the nine internal circulants contains +/-d"
+  },
+  "quotient_row_consequence": "with t internal signed differences and sorted cross counts c_j, 4*t^2+2*t+sum(c_j^2)=34, the diagonal entry of B^2+B=12I+22J",
+  "branch_count": 4,
+  "branches_by_internal_edge_orbits": {
+    "1": 2,
+    "2": 2
+  },
+  "branches": [
+    {
+      "branch_index": 0,
+      "selector": 234653,
+      "internal_pattern": [
+        1
+      ],
+      "cross_counts": [
+        4,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "branch_index": 1,
+      "selector": 234822,
+      "internal_pattern": [
+        1
+      ],
+      "cross_counts": [
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "branch_index": 2,
+      "selector": 235011,
+      "internal_pattern": [
+        1,
+        2
+      ],
+      "cross_counts": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "branch_index": 3,
+      "selector": 235144,
+      "internal_pattern": [
+        1,
+        3
+      ],
+      "cross_counts": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "variables": 235279,
+  "clauses": 512750,
+  "cnf": "scratch_root_c11_semiregular_normalized.cnf",
+  "cnf_sha256": "652C25F524596BC050713C68FF308868F39D37E543F03DC00B1619BB40FBA73D",
+  "build_seconds": 0.829,
+  "claim_boundary": "Exact only for graphs admitting a fixed-point-free automorphism of order 11 whose nine cycles all have length 11."
+}

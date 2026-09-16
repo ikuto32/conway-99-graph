@@ -1,0 +1,59 @@
+{
+  "status": "FORMAL_COMPUTER_ASSISTED_EXCLUSION_VERIFIED",
+  "ok": true,
+  "errors": [],
+  "theorem": "Assuming an srg(99,14,1,2), the root selected by the self-contained S(r)<=69 theorem cannot have E0=74.",
+  "root_bridge": "For the selected root Q=E0-S, so E0=74 and S<=69 imply Q>=5.",
+  "logical_chain": [
+    "the trace/triangle argument guarantees a root with S(r)<=69",
+    "E0=74 therefore forces Q>=5",
+    "complete compression and independent port/local audits cover every Q>=5 state and leave 188 local graph orbits of mass 16384",
+    "the exact SRG CNF plus each complete local assignment is covered by a selector/core implication",
+    "the rebuilt selector CNF is byte-for-byte hash identical to the formula whose DRUP trace drat-trim verified",
+    "therefore all necessary local representatives are impossible"
+  ],
+  "coverage_totals": {
+    "labelled_deficit_placements": 28929495,
+    "weighted_support_orbits": 8680,
+    "compression_survivors": 249,
+    "labelled_fibre_state_assignments": 134371022,
+    "Q_at_least_5_port_feasible_states": 89,
+    "exact_overlap_completions": 1461248,
+    "raw_local_survivors": 16384,
+    "local_graph_orbits": 188,
+    "formally_proved_unsat_branches": 188
+  },
+  "selector_formula": {
+    "shared_variables": 353388,
+    "selectors": 188,
+    "variables": 353576,
+    "clauses": 821831,
+    "core_implications": 4786,
+    "cnf": "scratch_e74_q5_selector_record00.cnf",
+    "cnf_sha256": "81DBE123A76B5ADD76AEA19282889E1F49374625D35BC271C799750F9E29E5C2",
+    "proof": "scratch_e74_q5_selector_record00.drup",
+    "proof_sha256": "552EFD9E535150B2AD1941252FEADDC4B0EAA00A1FD0D7C26F3E764DA7A6FF5C",
+    "drat_audit": "scratch_e74_q5_selector_record00_drat_audit.json",
+    "drat_audit_sha256": "11DFEA29FBBD50AAD7288F4E42D53AAAC406E5E0728A8DE95E288856977F5908"
+  },
+  "checker_fingerprint": {
+    "binary_sha256": "10D317DF526C36453986EF09495864BCABD9D02D72D7B772EE78F07939870620",
+    "source_sha256": "57DF8EFD73FC4FD81C4F255A8A7A1659C80C73AB0829CC8194A65F3432CD3E88",
+    "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "local_patch_scope": "Windows-only gettimeofday/getc_unlocked compatibility; proof logic unchanged"
+  },
+  "artifact_sha256": {
+    "scratch_root_side_bound_selfcontained_audit.json": "4E218FB65924DE96A34C603496330C2F5F39071AC430B1C26BC405C52644846D",
+    "scratch_general_e74_compression_audit.json": "E712C179D5D448642CE44F783280935F7EECBD2EF503FE65401DD3D513B82577",
+    "scratch_general_e74_port_census.json": "AAED683DCAC53A91D5A89AFD2D80B856BBC3A0459D8EF6E9DAE490D7BD424A3F",
+    "scratch_e74_independent_port_audit.json": "03D01C771D993F8C736B0AFF865BBBA94B8439073CBABB4792FD5A92709EEB88",
+    "scratch_general_e74_q5_local_expansion.json": "29E42DD2501D7CE5CDD75FDBC315D0DF2BCF089E89427A4EF260D703A569CE00",
+    "scratch_general_e74_q5_local_graph_reps.json": "3BD5434D24C1E734FC48564A6E8B6906BFAD0E7EC0F6FCF273647C46DAED3D05",
+    "scratch_e74_independent_q5_audit.json": "0E7C7C75C30E46DB9796F6195FAA97B92A5D104EF4BC853554DC592A5168DBD8",
+    "scratch_general_e74_q5_incremental_records.json": "320ECA32019632F6EC4E520E0CAC5EE1B3ED03E9A691611EB3C43C8D243ECDD3",
+    "scratch_general_e74_q5_incremental_sat.json": "08BE5A5C4A862F17DA7FDD247DF9830FBD812A941E9C44EBA9EC377D1ED5E2C5",
+    "scratch_e74_q5_selector_record00.json": "FA8B7B2283A45CF36683A05E3BCE1B25704E526B15E21F7495B83C3C1733D5A3",
+    "scratch_e74_q5_selector_record00_drat_audit.json": "11DFEA29FBBD50AAD7288F4E42D53AAAC406E5E0728A8DE95E288856977F5908"
+  },
+  "claim_boundary": "This excludes only the selected-root E0=74 branch; lower E0 branches remain."
+}

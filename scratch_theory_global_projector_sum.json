@@ -1,0 +1,278 @@
+{
+  "status": "GLOBAL_PROJECTOR_SUM_EXACT_AUDIT_PASS_NO_POSITIVE_E0_BOUND",
+  "format": "global-rank14-fibre-projector-sum-v1",
+  "scope": "SRG parameter-level and projector/incidence consequences; no 916-class regeneration and no binary M factorization claim",
+  "context_only_sha256": {
+    "scratch_theory_global_fibre_block_gram.json": "f6705681bea137ecb9d78df0a3bf2bde8c251a2d2276e8539aef097121238248",
+    "scratch_theory_global_root_fusion_frame.json": "9032d3c168f9c628a67a4dccf4581c7067cf313393df8ef024804967290804ce",
+    "scratch_root_e0_motif_first_moment_audit.json": "0b7488630f41b1e13a19c55f1736a9f92705dfeade5026c66c0a83511f475927"
+  },
+  "parameters": {
+    "srg": [
+      99,
+      14,
+      1,
+      2
+    ],
+    "M_shape": [
+      2079,
+      99
+    ],
+    "W_shape": [
+      99,
+      693
+    ],
+    "fibres_per_root": 21,
+    "fibre_size": 4,
+    "outer_vertices_per_root": 84
+  },
+  "K7_support_projector": {
+    "formula": "Q=I-R^T(5I+J)^(-1)R, (5I+J)^(-1)=I/5-J/60",
+    "rank": 14,
+    "idempotent": true,
+    "kills_constants": true,
+    "entries_support_coordinates": {
+      "equal": "2/3",
+      "overlap": "-2/15",
+      "disjoint": "1/15"
+    },
+    "entries_lifted_to_four_vertex_fibres": {
+      "equal": "1/6",
+      "overlap": "-1/30",
+      "disjoint": "1/60"
+    },
+    "ordered_relation_counts": {
+      "equal": 21,
+      "overlap": 210,
+      "disjoint": 210
+    }
+  },
+  "root_group_incidence": {
+    "oriented_triangle_column": "w_(r,t)=(A-I)c_t-(A+I)e_r",
+    "triangle_incidence_gram": "CC^T=7I+A",
+    "direct_outer_product_sum_before_SRG_reduction": "3(A-I)(7I+A)(A-I)-(A-I)(7I+A)(A+I)-(A+I)(7I+A)(A-I)+7(A+I)^2",
+    "reduced_gram": "WW^T=126I-18A+42J",
+    "entry_values": {
+      "diagonal": 168,
+      "edge": 24,
+      "nonedge": 42
+    },
+    "eigenvalues": {
+      "constant": "4032",
+      "plus3": "72",
+      "minus4": "198"
+    },
+    "eligible_common_outer_roots": {
+      "edge": 72,
+      "nonedge": 71
+    },
+    "support_relation_counts_given_h": {
+      "edge": {
+        "equal": "h",
+        "overlap": "24-2h",
+        "disjoint": "48+h"
+      },
+      "nonedge": {
+        "equal": "h",
+        "overlap": "42-2h",
+        "disjoint": "29+h"
+      }
+    },
+    "H_entry_caps_from_nonnegative_overlap": {
+      "edge": 12,
+      "nonedge": 21
+    }
+  },
+  "summed_projector": {
+    "definition": "S=sum_r P_r",
+    "exact_identity": "S=H/4-7I-(11/12)(J-I-A)",
+    "entry_derivation": {
+      "diagonal": "14",
+      "edge": "H_xy/4",
+      "nonedge": "H_xy/4-11/12"
+    },
+    "PSD": true,
+    "operator_interval": "0<=S<=84I, since P_r is dominated by its outer-support coordinate projector and every vertex is outer for 84 roots",
+    "kills_constants": true,
+    "trace": 1386,
+    "primitive_block_traces": {
+      "plus3": "792+T/14",
+      "minus4": "594-T/14"
+    },
+    "square_trace": "tr(S^2)=K/4+33033/2+11T/12",
+    "primitive_pinching": "K>=12474-3T+T^2/1188"
+  },
+  "per_root_E0": {
+    "outer_edge_counts": {
+      "total": 504,
+      "equal_support": "e_r",
+      "overlap_support": "168-2e_r",
+      "disjoint_support": "336+e_r"
+    },
+    "trace_A_Pr": "e_r/2",
+    "primitive_block_traces": {
+      "plus3": "8+e_r/14",
+      "minus4": "6-e_r/14"
+    },
+    "pointwise_consequence": "0<=e_r<=84; no strictly positive lower bound",
+    "sum_definition": "T=sum_r e_r",
+    "second_moment_integer_interval": "sqmin(T,99)<=sum_r e_r^2<=84T, with exact box maximum 84^2 floor(T/84)+(T mod 84)^2",
+    "block_trace_square_identities": {
+      "sum_plus_trace_squared": "6336+8T/7+(sum e_r^2)/196",
+      "sum_minus_trace_squared": "3564-6T/7+(sum e_r^2)/196"
+    },
+    "positive_contraction_upper_bound": "sum e_r^2<=931392-28T",
+    "comparison": "84T<=931392-28T for every 0<=T<=8316, so the compression bound is redundant"
+  },
+  "integer_H_and_collisions": {
+    "definition": "K=sum_(x<y) binom(H_xy,2)",
+    "energy_identity": "tr(H^2)=723492+4K",
+    "integer_lower_bound": "K>=cmin(T,693)+cmin(12474-T,4158)",
+    "absolute_minimum": 10395,
+    "minimum_T_interval": [
+      1386,
+      2079
+    ],
+    "integer_bound_dominates_projector_pinching_for_all_8317_T": true,
+    "samples": [
+      {
+        "T": 0,
+        "integer_K_lower": 12474,
+        "PSD_K_lower": "12474",
+        "sum_E0_square_lower": 0,
+        "sum_E0_square_upper": 0
+      },
+      {
+        "T": 1,
+        "integer_K_lower": 12472,
+        "PSD_K_lower": "14815549/1188",
+        "sum_E0_square_lower": 1,
+        "sum_E0_square_upper": 1
+      },
+      {
+        "T": 693,
+        "integer_K_lower": 11088,
+        "PSD_K_lower": "43197/4",
+        "sum_E0_square_lower": 4851,
+        "sum_E0_square_upper": 56889
+      },
+      {
+        "T": 1386,
+        "integer_K_lower": 10395,
+        "PSD_K_lower": "9933",
+        "sum_E0_square_lower": 19404,
+        "sum_E0_square_upper": 114660
+      },
+      {
+        "T": 2079,
+        "integer_K_lower": 10395,
+        "PSD_K_lower": "39501/4",
+        "sum_E0_square_lower": 43659,
+        "sum_E0_square_upper": 173313
+      },
+      {
+        "T": 4158,
+        "integer_K_lower": 14553,
+        "PSD_K_lower": "14553",
+        "sum_E0_square_lower": 174636,
+        "sum_E0_square_upper": 347508
+      },
+      {
+        "T": 8316,
+        "integer_K_lower": 45738,
+        "PSD_K_lower": "45738",
+        "sum_E0_square_lower": 698544,
+        "sum_E0_square_upper": 698544
+      }
+    ]
+  },
+  "pointwise_S_row": {
+    "definitions": "t_x=sum_(y~x)H_xy; sum over nonedges in row x is 252-t_x",
+    "relation_row_sums": {
+      "edge": "t_x/4",
+      "nonedge": "-14-t_x/4"
+    },
+    "square_lower_bound": "(S^2)_xx>=196+t_x^2/224+(14+t_x/4)^2/84",
+    "T_zero_value": "595/3",
+    "strict_positive_E0_consequence": false
+  },
+  "T_zero_boundary": {
+    "T": 0,
+    "H0": "84I+3(J-I-A)",
+    "H_entries": {
+      "diagonal": 84,
+      "edge": 0,
+      "nonedge": 3
+    },
+    "H_eigenvalues": {
+      "constant": "336",
+      "plus3": "72",
+      "minus4": "93"
+    },
+    "S0": "14I-(J-I-A)/6",
+    "S_eigenvalues": {
+      "constant": "0",
+      "plus3": "44/3",
+      "minus4": "27/2"
+    },
+    "S_PSD": true,
+    "S_operator_bound_pass": true,
+    "primitive_traces": {
+      "plus3": 792,
+      "minus4": 594
+    },
+    "tr_S_square": "19635",
+    "K": 12474,
+    "integer_collision_bound_equality": true,
+    "per_root_E0_forced_by_T_nonnegative": 0,
+    "sum_E0_squared": 0,
+    "support_counts": {
+      "edge_pair": {
+        "equal": 0,
+        "overlap": 24,
+        "disjoint": 48
+      },
+      "nonedge_pair": {
+        "equal": 3,
+        "overlap": 36,
+        "disjoint": 32
+      },
+      "per_root_outer_edges_if_e_r_zero": {
+        "equal": 0,
+        "overlap": 168,
+        "disjoint": 336
+      }
+    },
+    "mod2": "H0 mod 2 is the complement adjacency: symmetric alternating with zero row sum, hence even rank at most 98",
+    "passes_every_consequence_in_this_audit": true,
+    "not_claimed": "existence of a binary 2079x99 block incidence M or a decomposition into the graph-derived P_r"
+  },
+  "conclusion": {
+    "positive_pointwise_lower_bound_on_E0_r": false,
+    "positive_average_lower_bound_on_T_over_99": false,
+    "reason": "The exact T=0 relation-algebra boundary H0 passes WW^T compatibility counts, S PSD/operator/block-trace/square constraints, integer collision bounds, parity, and the complete second-moment bounds derived here.",
+    "missing_step": "A constraint retaining the assignment of the 2079 fibre blocks to their 99 roots, or an actual binary/fibre-partition factorization, is needed to exclude H0."
+  },
+  "resource_guard": {
+    "minimum_required_free_physical_memory_percent": 18.0,
+    "minimum_observed_free_physical_memory_percent": 66.12382149573912,
+    "samples": [
+      {
+        "label": "start",
+        "free_physical_memory_percent": 66.12392514387857,
+        "available_physical_gib": 63.27476501464844
+      },
+      {
+        "label": "support_projector",
+        "free_physical_memory_percent": 66.12485399066665,
+        "available_physical_gib": 63.27565383911133
+      },
+      {
+        "label": "complete",
+        "free_physical_memory_percent": 66.12382149573912,
+        "available_physical_gib": 63.27466583251953
+      }
+    ],
+    "elapsed_seconds": 0.03100000007543713
+  }
+}

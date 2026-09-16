@@ -1,0 +1,286 @@
+{
+  "status": "E0_MOTIF_FIRST_MOMENT_AUDIT_PASS",
+  "scope": "Clean-room finite graph/isomorphism audit of the side and diagonal motifs, the N4 extension coefficients, and the resulting E0 first moment.",
+  "mask_convention": {
+    "edge_order": "(0,1),(0,2),...,(n-2,n-1)",
+    "bit_rule": "bit i is one iff edge i is present",
+    "canonical_rule": "least integer mask over all vertex permutations"
+  },
+  "source_binding": {
+    "all_seven_tex": "scratch_reimbayev_2608_19410_source\\The_Subgraphs_of_Order_Seven.tex",
+    "all_seven_tex_sha256": "D2C0C9D8985A19C6F5418EED38ECFF6B9B4D177C6359B4F2DF799453CD2530E9",
+    "all_seven_figure_1": "scratch_reimbayev_2608_19410_source\\figure_1.png",
+    "all_seven_figure_1_sha256": "80D471958B2952C9D99796C3318DBBE4AD017B0EDC959EAA0781051681B4AE23",
+    "exact_formula_literal_found": "z_2=&n_3-\\frac{z_{11}}{4},\\\\",
+    "formula_affine_coefficients_constant_n3_z11": [
+      "0",
+      "1",
+      "-1/4"
+    ],
+    "note": "The graph drawings are manually transcribed as explicit edge lists; the PNG itself is not machine-vectorized by this audit."
+  },
+  "canonical_crosscheck": {
+    "expected_masks": {
+      "N3": 5941,
+      "N4": 1916,
+      "Hamiltonian_H11": 48756,
+      "Z2_H18_HDelta": 120568
+    },
+    "observed_masks": {
+      "N3": 5941,
+      "N4": 1916,
+      "Hamiltonian_H11": 48756,
+      "Z2_drawing": 120568,
+      "H18_drawing": 120568,
+      "HDelta": 120568
+    },
+    "HDelta_to_H18_vertex_permutation": [
+      0,
+      2,
+      5,
+      1,
+      3,
+      6,
+      4
+    ],
+    "Z2_drawing_to_HDelta_vertex_permutation": [
+      3,
+      5,
+      2,
+      6,
+      4,
+      1,
+      0
+    ],
+    "identification": "HDelta = all-seven Z2 = Hamiltonian H18"
+  },
+  "motifs": {
+    "triangular_prism": {
+      "order": 6,
+      "edge_count": 9,
+      "degree_multiset": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "automorphism_order": 12,
+      "rooted_side_flags": 6,
+      "rooted_diagonal_flags": 0,
+      "unlabelled_coefficient_in_sum_S": 6,
+      "labelled_embedding_coefficient_in_sum_S": "1/2"
+    },
+    "HDelta_Z2_H18": {
+      "order": 7,
+      "edge_count": 11,
+      "degree_multiset": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "automorphism_order": 4,
+      "rooted_side_flags": 0,
+      "rooted_diagonal_flags": 1,
+      "unlabelled_coefficient_in_sum_D": 1,
+      "labelled_embedding_coefficient_in_sum_D": "1/4"
+    }
+  },
+  "hamiltonian_incidence_crosscheck": {
+    "N3_canonical_mask": 5941,
+    "N3_description": "two disjoint triangles plus an independent two-edge cross matching",
+    "N4_canonical_mask": 1916,
+    "N4_degree_multiset": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3
+    ],
+    "N4_triangle_count": 1,
+    "N4_special_edges": [
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "special_edge_definition": "edge from a degree-2 vertex to a degree-3 vertex in N4's unique triangle",
+    "locally_admissible_extensions": [
+      {
+        "special_edge": [
+          1,
+          5
+        ],
+        "allowed_attachments": [
+          {
+            "attached_N4_vertices": [
+              1,
+              5
+            ],
+            "canonical_mask": 48756,
+            "type": "Hamiltonian H11"
+          },
+          {
+            "attached_N4_vertices": [
+              1,
+              4,
+              5
+            ],
+            "canonical_mask": 120568,
+            "type": "Z2/Hamiltonian H18"
+          }
+        ]
+      },
+      {
+        "special_edge": [
+          2,
+          4
+        ],
+        "allowed_attachments": [
+          {
+            "attached_N4_vertices": [
+              2,
+              4
+            ],
+            "canonical_mask": 48756,
+            "type": "Hamiltonian H11"
+          },
+          {
+            "attached_N4_vertices": [
+              2,
+              4,
+              5
+            ],
+            "canonical_mask": 120568,
+            "type": "Z2/Hamiltonian H18"
+          }
+        ]
+      }
+    ],
+    "Hamiltonian_H11_N4_deletion_flags": [
+      {
+        "deleted_vertex": 6,
+        "card_canonical_mask": 1916,
+        "witness": {
+          "N4_special_edge": [
+            1,
+            5
+          ],
+          "image_edge": [
+            0,
+            5
+          ]
+        }
+      }
+    ],
+    "Z2_H18_N4_deletion_flags": [
+      {
+        "deleted_vertex": 1,
+        "card_canonical_mask": 1916,
+        "witness": {
+          "N4_special_edge": [
+            1,
+            5
+          ],
+          "image_edge": [
+            0,
+            6
+          ]
+        }
+      },
+      {
+        "deleted_vertex": 3,
+        "card_canonical_mask": 1916,
+        "witness": {
+          "N4_special_edge": [
+            1,
+            5
+          ],
+          "image_edge": [
+            0,
+            4
+          ]
+        }
+      },
+      {
+        "deleted_vertex": 4,
+        "card_canonical_mask": 1916,
+        "witness": {
+          "N4_special_edge": [
+            1,
+            5
+          ],
+          "image_edge": [
+            0,
+            3
+          ]
+        }
+      },
+      {
+        "deleted_vertex": 6,
+        "card_canonical_mask": 1916,
+        "witness": {
+          "N4_special_edge": [
+            1,
+            5
+          ],
+          "image_edge": [
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "six_vertex_double_counts": [
+      "6*n1+n4=n*k*(k-2)/2",
+      "3*n1+n3=n*k*(k-2)/4",
+      "therefore n4=2*n3"
+    ],
+    "hamiltonian_seven_vertex_flag_identity": "2*n4=h11+4*h18",
+    "hamiltonian_conclusion": "h18=n3-h11/4",
+    "all_seven_source_conclusion": "z2=n3-z11/4",
+    "cross_table_bridge": "Z2 and H18 are isomorphic, hence z2=h18; comparison forces the numerical frequency equality z11=h11. This is not a graph-index identification."
+  },
+  "E0_first_moment": {
+    "definitions": "E0(r)=S(r)+D(r)",
+    "side_identity": "sum_r S(r)=6*P",
+    "prism_identity": "P=(4158-n3)/3",
+    "diagonal_identity": "sum_r D(r)=z2",
+    "z2_identity": "z2=n3-z11/4",
+    "conclusion": "sum_r E0(r)=8316-n3-z11/4",
+    "affine_coefficients_constant_n3_z11": [
+      "8316",
+      "-1",
+      "-1/4"
+    ],
+    "frequency_convention": "P,n3,n4,z2,z11 count unlabelled induced vertex subsets",
+    "labelled_embedding_translation": {
+      "sum_S": "inj(prism)/2 because |Aut(prism)|=12",
+      "sum_D": "inj(HDelta)/4 because |Aut(HDelta)|=4"
+    }
+  },
+  "E0_second_moment": {
+    "exact_flag_expansion": "sum_r E0(r)^2 = T + 2*sum_r[binom(S(r),2)+S(r)D(r)+binom(D(r),2)], where T=sum_r E0(r)",
+    "balanced_integer_lower_bound": "If T=99*q+s with 0<=s<99, then sum_r E0(r)^2 >= (99-s)q^2+s(q+1)^2 = ceil(T^2/99).",
+    "substitution": "T=8316-n3-z11/4",
+    "closure_warning": "Pairs of two rooted fibre-edge flags can span as many as 13 vertices. The direct square expansion therefore is not a linear 6/7-vertex motif count; an indirect reduction would require additional identities and is not claimed here."
+  },
+  "limitations": [
+    "The side/prism identity and P=(4158-n3)/3 are prerequisite SRG double counts.",
+    "The two displayed six-vertex equations are replayed algebraically; this file does not enumerate an ambient 99-vertex graph.",
+    "Manual figure transcription is checked by canonical masks, not extracted automatically from raster pixels.",
+    "Hamiltonian H11 and all-seven Z11 are distinct table labels and are not asserted to be isomorphic.",
+    "This is not a machine-checked formal proof.",
+    "No srg(99,14,1,2) is constructed or excluded; Conway's 99-graph status remains UNKNOWN."
+  ]
+}

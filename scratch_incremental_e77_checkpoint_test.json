@@ -1,0 +1,243 @@
+{
+  "model": "single-instance incremental exact SAT over local representatives",
+  "solver": "CaDiCaL 1.9.5 via PySAT assumptions",
+  "input": "scratch_general_e77_local_reps.json",
+  "input_selection": {
+    "container": "record",
+    "record_index": 0
+  },
+  "support_form": "E77-orbit22",
+  "build_seconds": 0.625,
+  "solver_load_seconds": 0.406,
+  "conflict_budget_per_branch": 1000,
+  "status": "UNKNOWN",
+  "checkpoint_complete": true,
+  "completed_branch_count": 3,
+  "next_branch_index": null,
+  "solver_session_count": 1,
+  "direct_solver_calls": 3,
+  "direct_solver_unsat_count": 0,
+  "core_covered_unsat_count": 0,
+  "unknown_count": 3,
+  "all_available_reference_statuses_match": false,
+  "shared_cnf_meta": {
+    "model": "shared exact local-representative CNF",
+    "input": "scratch_general_e77_local_reps.json",
+    "input_selection": {
+      "container": "record",
+      "record_index": 0
+    },
+    "support_form": "E77-orbit22",
+    "exceptional_supports": [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "exceptional_fibre_count": 7,
+    "ordinary_c4_fibre_count": 14,
+    "local_vertex_count": 28,
+    "representative_count": 3,
+    "shared_build_count": 1,
+    "incremental_solver_instance_count": 1,
+    "local_edge_variables": 202,
+    "local_same_edge_variables": 42,
+    "local_overlap_blocks": 10,
+    "local_overlap_edge_variables": 160,
+    "disjoint_edge_variables": 1680,
+    "all_edge_variables": 1882,
+    "disjoint_blocks": 105,
+    "ordinary_ordinary_permutation_blocks": 46,
+    "ordinary_exceptional_one_sided_blocks": 48,
+    "exceptional_exceptional_unrestricted_disjoint_blocks": 11,
+    "exact_one_rows": 184,
+    "at_most_one_columns": 376,
+    "redundant_support_aggregate_rows": 0,
+    "bp_equalities": 1176,
+    "outer_pair_equalities": 3486,
+    "pair_target_histogram": {
+      "1": 924,
+      "2": 2562
+    },
+    "product_variables": 84484,
+    "direct_product_terms": 4480,
+    "constant_product_terms": 56,
+    "cardinality_equalities": 4662,
+    "empty_clauses_before_assumptions": 0,
+    "variables": 361998,
+    "clauses": 836316,
+    "branch_assumption_summaries": [
+      {
+        "branch_index": 0,
+        "representative_id": 0,
+        "orbit_size": 256,
+        "assumption_count": 202,
+        "positive_assumptions": 35,
+        "negative_assumptions": 167,
+        "assumption_sha256": "F3EB7342B7D936D283F60CE393F2D0E19A3CE3E937F2326E6EF621E12A2F5204"
+      },
+      {
+        "branch_index": 1,
+        "representative_id": 1,
+        "orbit_size": 128,
+        "assumption_count": 202,
+        "positive_assumptions": 35,
+        "negative_assumptions": 167,
+        "assumption_sha256": "8F205A199C0055A1471FAB468BEE9E3F04A1FC337473477FC3AA2F333A826C5B"
+      },
+      {
+        "branch_index": 2,
+        "representative_id": 2,
+        "orbit_size": 128,
+        "assumption_count": 202,
+        "positive_assumptions": 35,
+        "negative_assumptions": 167,
+        "assumption_sha256": "ACF2420589A10631BB4E5F2AC81C809821C942911016E212DB040B0F69A4AFC2"
+      }
+    ],
+    "soundness_boundary": "all local values are assumptions; no support-aggregate strengthening; UNSAT has no independently checked proof certificate"
+  },
+  "reference_portfolios": [
+    {
+      "path": "scratch_general_e77_exact_sat_portfolio.json",
+      "overall_status": "UNSAT",
+      "branch_statuses": {
+        "0": "UNSAT",
+        "1": "UNSAT",
+        "2": "UNSAT"
+      }
+    },
+    {
+      "path": "scratch_e77_sat_exact_portfolio.json",
+      "overall_status": "UNSAT",
+      "branch_statuses": {
+        "0": "UNSAT",
+        "1": "UNSAT",
+        "2": "UNSAT"
+      }
+    }
+  ],
+  "records": [
+    {
+      "branch_index": 0,
+      "representative_id": 0,
+      "orbit_size": 256,
+      "assumption_count": 202,
+      "positive_assumptions": 35,
+      "negative_assumptions": 167,
+      "assumption_sha256": "F3EB7342B7D936D283F60CE393F2D0E19A3CE3E937F2326E6EF621E12A2F5204",
+      "status": "UNKNOWN",
+      "logical_status": "UNKNOWN",
+      "resolution": "CADICAL",
+      "solve_seconds": 0.672,
+      "solver_session_index": 1,
+      "incremental_stats_delta": {
+        "conflicts": 1000,
+        "decisions": 5108,
+        "propagations": 6906075,
+        "restarts": 106
+      },
+      "incremental_stats_cumulative": {
+        "restarts": 106,
+        "conflicts": 1000,
+        "decisions": 5108,
+        "propagations": 6909435
+      },
+      "formal_proof_certificate": null,
+      "reference_statuses": [
+        "UNSAT",
+        "UNSAT"
+      ],
+      "matches_all_available_references": false
+    },
+    {
+      "branch_index": 1,
+      "representative_id": 1,
+      "orbit_size": 128,
+      "assumption_count": 202,
+      "positive_assumptions": 35,
+      "negative_assumptions": 167,
+      "assumption_sha256": "8F205A199C0055A1471FAB468BEE9E3F04A1FC337473477FC3AA2F333A826C5B",
+      "status": "UNKNOWN",
+      "logical_status": "UNKNOWN",
+      "resolution": "CADICAL",
+      "solve_seconds": 0.735,
+      "solver_session_index": 1,
+      "incremental_stats_delta": {
+        "conflicts": 1001,
+        "decisions": 5151,
+        "propagations": 7040305,
+        "restarts": 133
+      },
+      "incremental_stats_cumulative": {
+        "restarts": 239,
+        "conflicts": 2001,
+        "decisions": 10259,
+        "propagations": 13949740
+      },
+      "formal_proof_certificate": null,
+      "reference_statuses": [
+        "UNSAT",
+        "UNSAT"
+      ],
+      "matches_all_available_references": false
+    },
+    {
+      "branch_index": 2,
+      "representative_id": 2,
+      "orbit_size": 128,
+      "assumption_count": 202,
+      "positive_assumptions": 35,
+      "negative_assumptions": 167,
+      "assumption_sha256": "ACF2420589A10631BB4E5F2AC81C809821C942911016E212DB040B0F69A4AFC2",
+      "status": "UNKNOWN",
+      "logical_status": "UNKNOWN",
+      "resolution": "CADICAL",
+      "solve_seconds": 3.015,
+      "solver_session_index": 1,
+      "incremental_stats_delta": {
+        "conflicts": 1002,
+        "decisions": 5517,
+        "propagations": 7356257,
+        "restarts": 190
+      },
+      "incremental_stats_cumulative": {
+        "restarts": 429,
+        "conflicts": 3003,
+        "decisions": 15776,
+        "propagations": 21305997
+      },
+      "formal_proof_certificate": null,
+      "reference_statuses": [
+        "UNSAT",
+        "UNSAT"
+      ],
+      "matches_all_available_references": false
+    }
+  ],
+  "claim_boundary": "The CNF and assumption coverage are exact and reusable.  CaDiCaL UNSAT answers have no emitted independently checked proof certificates."
+}
