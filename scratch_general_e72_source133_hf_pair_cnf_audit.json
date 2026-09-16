@@ -1,0 +1,45 @@
+{
+  "status": "INDEPENDENT_CNF_CONTROLS_COMPLETE",
+  "inputs": {
+    "scratch_general_e72_source133_hf_exception_csp.json": "545EE55C543DBAFCEEE40EDBBAADE0C26726DAEEC91800C8CE0FCFB60BED3F09",
+    "scratch_general_e72_source133_pointwise_frontier.json": "E9AA80BFE62009B5C247A7C412763835A57CE9C4FDDEA63B84D8F59B54837DD7"
+  },
+  "control_mask_hex": "0x8a0840102102414008806001301200064011144020c01009004a400803000a220042",
+  "variables": 14667,
+  "base_clauses": 8604,
+  "full_clauses": 48060,
+  "stored_combinatorial_witness_satisfies_every_base_clause": true,
+  "solver_crosscheck": {
+    "cadical195": {
+      "base_without_pair_upper": "SAT",
+      "full_with_pair_upper": "UNSAT",
+      "full_stats": {
+        "restarts": 9,
+        "conflicts": 516,
+        "decisions": 917,
+        "propagations": 261140
+      }
+    },
+    "glucose4": {
+      "base_without_pair_upper": "SAT",
+      "full_with_pair_upper": "UNSAT",
+      "full_stats": {
+        "restarts": 1,
+        "conflicts": 757,
+        "decisions": 2003,
+        "propagations": 270841
+      }
+    },
+    "minisat22": {
+      "base_without_pair_upper": "SAT",
+      "full_with_pair_upper": "UNSAT",
+      "full_stats": {
+        "restarts": 3,
+        "conflicts": 279,
+        "decisions": 1562,
+        "propagations": 129186
+      }
+    }
+  },
+  "conclusion": "The H/F, target-load and exceptional-recurrence CNF is SAT, but the independently direct pair-upper layer makes this control instance UNSAT in three solver engines."
+}

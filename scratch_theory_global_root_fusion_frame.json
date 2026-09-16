@@ -1,0 +1,112 @@
+{
+  "adjacent_nonadjacent_split": {
+    "adjacent_exact": "sum_{s in N(r)} tr(P_r L_s^-)=3*tau_r/8+7*h_r/8",
+    "adjacent_interval": "tau_r/4 <= sum_{s in N(r)} tr(P_r L_s^-) <= tau_r/2",
+    "definition": "K_r^-=E_- P_r E_-, h_r=tr(K_r^- T_r), tau_r=84-E0(r)",
+    "nonadjacent_interval": "7*tau_r/4 <= sum_{s in Gamma_2(r)} tr(P_r L_s^-) <= 2*tau_r",
+    "operator_bound": "|h_r|<=tau_r/7 because T_r is 2-regular",
+    "scope": "a localization of the missing cross-root invariant, not a bound on tau_r"
+  },
+  "boundary": {
+    "new_numerical_lower_bound_on_E0": null,
+    "next_target": "bound tr(P_r L_s^-) by the relation r~s versus r not~s, or couple the frame to four-root mask-3/mask-12 covariance",
+    "reason": "Tight-frame positivity gives only n3+z11/4>=0; an upper bound on the paired cross-root energy is still missing."
+  },
+  "closed_neighbourhood": {
+    "minus4": {
+      "kernel_vector": [
+        "4",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "pseudoinverse_categories": {
+        "neighbour_diag": "483/200",
+        "neighbour_mate": "133/200",
+        "neighbour_nonmate": "-21/100",
+        "root_neighbour": "-7/50",
+        "root_root": "49/100"
+      },
+      "rank": 14,
+      "summed_middle_categories": {
+        "adjacent": "77/200",
+        "diagonal": "343/10",
+        "nonadjacent": "-21/50"
+      }
+    },
+    "plus3": {
+      "kernel_vector": [
+        "-3",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "pseudoinverse_categories": {
+        "neighbour_diag": "14266/7935",
+        "neighbour_mate": "-4249/7935",
+        "neighbour_nonmate": "-182/2645",
+        "root_neighbour": "77/529",
+        "root_root": "1078/1587"
+      },
+      "rank": 14,
+      "summed_middle_categories": {
+        "adjacent": "-1939/7935",
+        "diagonal": "8918/345",
+        "nonadjacent": "-364/2645"
+      }
+    }
+  },
+  "free_fibre_projector": {
+    "lifted_entry_values": {
+      "disjoint": "1/60",
+      "overlap": "-1/30",
+      "same": "1/6"
+    },
+    "orthogonality": "P_r is orthogonal to both local evaluation-complement spaces L_r^- and L_r^+",
+    "rank": 14,
+    "row_sum": 0,
+    "trace_P_r_A": "E0(r)/2",
+    "trace_P_r_E_minus4": "(84-E0(r))/14",
+    "trace_P_r_E_plus3": "14-(84-E0(r))/14"
+  },
+  "motif_bridge": {
+    "minus_cross_root_energy": "sum_{r!=s} tr(P_r L_s^-)=9/4*(n3+z11/4)",
+    "sum_r_(84-E0(r))": "n3+z11/4",
+    "trace_Eminus_sumPr": "(n3+z11/4)/14",
+    "trace_Eplus_sumPr": "1386-(n3+z11/4)/14"
+  },
+  "scope": "exact necessary identities; no positive E0 lower bound or Conway-99 resolution",
+  "status": "GLOBAL_ROOT_FUSION_FRAME_IDENTITY_PASS",
+  "tight_fusion_frames": {
+    "minus4": {
+      "sum_local_evaluation_complement_projectors": "63/2 E_minus4",
+      "sum_supported_projectors": "135/2 E_minus4"
+    },
+    "plus3": {
+      "sum_local_evaluation_complement_projectors": "77/3 E_plus3",
+      "sum_supported_projectors": "220/3 E_plus3"
+    }
+  }
+}

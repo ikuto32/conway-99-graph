@@ -1,0 +1,64 @@
+{
+  "status": "FORMAL_AUDIT_PASS",
+  "scope": "E72 source row 248 full-Gram-passing canonical macros",
+  "source_row_index": 248,
+  "port_feasible_labelled_states": 68,
+  "state_orbits": 5,
+  "state_orbits_with_gram_macros": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "state_orbits_without_feasible_overlap_gram_macro": [
+    4
+  ],
+  "canonical_full_gram_macro_branches": 5,
+  "labelled_state_matching_coverage": 28344320,
+  "overlap_graphs_explicitly_enumerated_by_sat_lift": 0,
+  "all_36_exceptional_block_totals_fixed_per_branch": true,
+  "historical_fixed_edge_portfolio_units_applied": false,
+  "deterministic_builder_replay": {
+    "build_byte_identical": true,
+    "cnf_byte_identical": true
+  },
+  "cnf": {
+    "path": "scratch_root_e72_source248_full_gram_macro.cnf",
+    "sha256": "9EE18294D9A69BD9144A90B8B1A89FA5F1DF0E0F2F482FE938AF988D5B84649F",
+    "variables": 824177,
+    "clauses": 1642687
+  },
+  "checkpoint": {
+    "path": "scratch_root_e72_source248_full_gram_macro_c1000000.json",
+    "sha256": "50E10E8BD2A8393BFCEDE75C263682A290139B7E7DC6A58C5DE2F71DA7EC38E7",
+    "status": "UNSAT",
+    "conflicts": 523586
+  },
+  "certificate": {
+    "proof": "scratch_root_e72_source248_full_gram_macro_proof.drup",
+    "proof_sha256": "B32715BF02F12687908489D426FFE4C49D522888ACE0E48C51808973D542144F",
+    "proof_lines": 4702108,
+    "external_checker_status": "DRAT_VERIFIED",
+    "checker": "tools\\drat-trim\\drat-trim.exe",
+    "checker_sha256": "10D317DF526C36453986EF09495864BCABD9D02D72D7B772EE78F07939870620",
+    "checker_upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "inputs": {
+    "builder_script": "scratch_root_e72_full_gram_macro_sat.py",
+    "builder_script_sha256": "95CDA72CA811CB43F59907CEC25588F222C1BCBACB972C880F5EAFC774CAD958",
+    "build": "scratch_root_e72_source248_full_gram_macro_build.json",
+    "build_sha256": "36F8321E4E96495AF4605DAF042A901A5A9A0F7D745B3C45A61D0FA329EC1A51",
+    "macro_catalog": "scratch_general_e72_q3_gram_fast_expansion_macro_catalog.json",
+    "macro_catalog_sha256": "BED6A7F1258576E8028B6B17736FD91ED8E8D9A79D2E90FC744A07DAE14D6213",
+    "full_gram": "scratch_theory_e72_macro_full_gram.json",
+    "full_gram_sha256": "8DC23EE41F24E39256136A647506A61C850F0BC804C402C8D16A8B9797C5CDF3",
+    "proof_producer": "scratch_root_exact_cnf_drup.py",
+    "proof_producer_sha256": "8AF9FAE8240B36C8690D02552BB9ADB7FEB60AB992CC5D2B6E1266A334542C57",
+    "proof_metadata": "scratch_root_e72_source248_full_gram_macro_proof.json",
+    "proof_metadata_sha256": "4C198F3ADC6764E25B6FFDE159AA7B6A0C99B399C2E596231374B77B2493C8CC",
+    "drat_audit": "scratch_root_e72_source248_full_gram_macro_proof_drat_audit.json",
+    "drat_audit_sha256": "DA2A6310E3FD581FE0FF57A2B499E5B7C9B12E783B254940E2648169E2B71C21"
+  },
+  "logical_conclusion": "No exact rooted completion exists in any full-Gram-feasible canonical macro branch of E72 source row 248.",
+  "claim_boundary": "The CNF/DRUP result is machine checked. The upstream E72 port census, macro-catalog completeness, full-Gram derivation, and the statement that the missing fifth state orbit has no Gram macro remain executable/theory audits rather than one end-to-end formal proof."
+}

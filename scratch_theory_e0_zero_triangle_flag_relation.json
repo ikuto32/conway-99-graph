@@ -1,0 +1,289 @@
+{
+  "status": "E0_ZERO_TRIANGLE_FLAG_RELATION_EXACT_STUDY_PASS",
+  "scope": "Necessary consequences conditional on a putative srg(99,14,1,2) and sum_r E0(r)=0.  No endpoint exclusion or graph construction.",
+  "inputs_sha256": {
+    "scratch_theory_wave163_integral_order8_boundary.json": "f5adebb9e52e516e177acf8b665e19e244a0199935e541cbcb56190cabcc0164",
+    "external_conway99_research\\attempts\\wave205-nonedge-fourth-trace-proof-a\\exact-results.json": "48a09ca524d62a1d2b2ee352a4d6689dbf3fa3127c70b03e7358edad452e05cc",
+    "scratch_theory_root_flag_union.md": "d8869461ec6a400c70f5e2e4db86a952be4fce8b001c0dd2a4f7ed62fcff480a",
+    "scratch_theory_root_yyt_augmented_relation.json": "67895d4287a1f0dd8e99f587f13d60fdefa9ece34bec6e46a4ce83f4d830ccf5",
+    "external_conway99_research/agents/2026-07-22-wave6-opposite-edge-graph.md": "4197c40e1b43d72d5a2ad9a6203099ffed2e1dbf4f0b3c07186aaad54cae4fa2",
+    "external_conway99_research/agents/2026-07-26-wave35-n3-4158-combinatorial.md": "bced89beaafae8f3c8e2c80171aad57d91180e175dc6f47adca6724d00ef3a9d",
+    "external_conway99_research/agents/2026-07-26-wave35-n3-upper-spectral.md": "3b3c10e58996850337b5211fe6855cd1717cc1d47ae2f780dd50b4c01b40d0b9"
+  },
+  "endpoint": {
+    "sum_E0": 0,
+    "pointwise": "E0(r)=S(r)=D(r)=0 for every r",
+    "P": 0,
+    "n3": 4158,
+    "q_of_every_triangle": 12,
+    "triangle_profile_a0_a1_a2_a3": [
+      32,
+      144,
+      36,
+      0
+    ]
+  },
+  "flag_relation_X": {
+    "flags": 693,
+    "identification": "(T,t) is the graph edge T\\{t}",
+    "equals_opposite_edge_graph_at_endpoint": true,
+    "simple_symmetric": true,
+    "regular_degree": 12,
+    "edges": 4158,
+    "triangle_free": true,
+    "trace_X": 0,
+    "trace_X2": 8316,
+    "trace_X3": 0,
+    "trace_X4": "191268+8*c4(X)",
+    "first_unfixed_walk_moment": "c4(X), an order-at-most-eight motif count"
+  },
+  "incidence_algebra": {
+    "matrices": {
+      "F": "693x99 flag-to-unmatched-point incidence, F^T F=7I",
+      "Q": "693x231 flag-to-triangle incidence, Q^T Q=3I",
+      "N": "F^T Q, the 99x231 point-triangle incidence",
+      "C": "ordinary point-edge incidence = N Q^T-F^T",
+      "K": "Q^T X Q, the triangle N3 adjacency",
+      "W": "F^T X Q",
+      "H": "F^T X F"
+    },
+    "identities": [
+      "N N^T=7I+A",
+      "C X=A C-C-2F^T",
+      "W=N K-2A N+4N",
+      "N W^T-H=2(J-I-A)",
+      "H=N K N^T+6I-6A-6J",
+      "(F^T X) C^T=2(J-I-A)"
+    ],
+    "normalized_F_Q_principal_angles_squared": {
+      "1": {
+        "multiplicity": 1,
+        "value": 1
+      },
+      "plus3": {
+        "multiplicity": 54,
+        "value": "10/21"
+      },
+      "minus4": {
+        "multiplicity": 44,
+        "value": "1/7"
+      }
+    },
+    "span_dimension": 329
+  },
+  "triangle_projector_and_quotient": {
+    "M_identities": [
+      "M^2=21M",
+      "M1=0",
+      "diag(M)=4",
+      "rank(M)=44"
+    ],
+    "endpoint_M_row": {
+      "+1": 32,
+      "0": 162,
+      "-1": 36,
+      "diagonal_4": 1
+    },
+    "K_from_M": "K=(M o M o M+M o M-2M)/2-36I=(M o M-M)/2-6I at the endpoint",
+    "K_simple_regular_degree": 36,
+    "K_edges": 4158,
+    "trace_K2": 8316,
+    "trace_K3": "6*tau_K, not fixed; tau_K is an order-nine triple of pairwise-disjoint triangles",
+    "trace_K4": "590436+8*c4(K)",
+    "signed_relation_identity": "For S=P-K=M-4I, S^2=13S+68I and tr(P^3)-3tr(P^2K)+3tr(PK^2)-tr(K^3)=204204",
+    "ordinary_projector_equation_does_not_isolate_tau_K": true
+  },
+  "point_partition_H": {
+    "entrywise": {
+      "diagonal": 0,
+      "graph_edge": 0,
+      "graph_nonedge": "H_rs=(N K N^T)_rs-6 in {0,1,...,7}"
+    },
+    "why_blocks_are_partial_matchings": "D(r)=D(s)=0 gives both column and row degrees at most one in each 7x7 block X[F_r,F_s]",
+    "row_sum": 84,
+    "adjacency_algebra_projection": "bar(A)=J-I-A",
+    "wave205_t_profile": {
+      "t": "N K N^T",
+      "diagonal": 0,
+      "graph_edge": 12,
+      "graph_nonedge": "6+H_rs in {6,...,13}",
+      "row_sum": 756
+    },
+    "collision": {
+      "ell_definition": "sum_{r<s} binom(H_rs,2)",
+      "trace_H2": "8316+4*ell",
+      "Delta_definition": "H-(J-I-A)",
+      "norm_Delta_squared": "4*ell",
+      "delta3_delta4": "||Delta E_3||_F^2+||Delta E_-4||_F^2=4*ell",
+      "exact_upper_rational": "182952/17",
+      "integer_upper": 10761,
+      "nonzero_H_blocks_lower_bound": 674
+    }
+  },
+  "zero_H_block_local_boundary": {
+    "identity": "for a graph nonedge r,s, H_rs=(N K N^T)_rs-6=t_rs-6",
+    "frozen_control": "Wave205 t6_h1",
+    "control_t_rs": 6,
+    "therefore_H_rs": 0,
+    "Wave205_h_warning": "the control field claimed_and_recomputed_h=1 is an F_3 fourth trace, not the entry H_rs used in this note",
+    "local_control": {
+      "vertices": 28,
+      "center_degrees": {
+        "x": 14,
+        "y": 14
+      },
+      "center_common_neighbors": [
+        "a",
+        "b"
+      ],
+      "lambda_mu_local_caps": true,
+      "opposite_center_mu_two_for_all_exclusive_neighbors": true,
+      "endpoint_selected_block_cap": true,
+      "two_star_gram_reproduced": true,
+      "two_star_gram_rank": 11,
+      "two_star_gram_principal_determinant": 2,
+      "kernel_minimum_nonzero_weight": 6
+    },
+    "rigorous_boundary": "The listed two-centre lambda/mu caps, selected endpoint block cap, and full local two-star Gram/projectivity conditions do not imply H_rs>=1.  The control is not a 99-vertex completion.",
+    "smallest_missing_synchronization": "simultaneous compatibility of all 99 overlapping point-stars, including completion of every currently unsaturated pair outside the 28-vertex control"
+  },
+  "equitable_and_cover_boundary": {
+    "equitable_iff": "X F=F B, equivalently H=7B",
+    "partial_matching_consequence": "B is a simple 12-regular graph supported on graph nonedges; X is a seven-sheet graph cover of B",
+    "excluded": true,
+    "proof": "Equitability gives Y=B F^T, hence B A=2(J-I-A).  Since A is invertible, B=(J-A-13I)/6, whose diagonal is -2 and whose nonedge entries are 1/6.",
+    "quantitative_residual": {
+      "norm_squared": "||X F-FH/7||_F^2=7128-4*ell/7",
+      "lower_from_integer_ell_bound": "6852/7"
+    }
+  },
+  "triangle_partition": {
+    "compression": "(Q/sqrt(3))^T X (Q/sqrt(3))=K/3",
+    "not_equitable": "each K-edge is represented by exactly one edge in its 3x3 flag block, so a nonzero block cannot have constant integral row degree",
+    "gram_residual": "Q^T X^2 Q-K^2/3 is positive semidefinite",
+    "gram_residual_trace": 5544
+  },
+  "new_projection_bound": {
+    "residual": "R=(F^T X)(I-FF^T/7)",
+    "residual_norm_squared": "7128-4*ell/7",
+    "residual_edge_incidence_gram_spectrum": {
+      "regular": 0,
+      "plus3": "110/7",
+      "minus4": "54/7"
+    },
+    "projected_lower_bound": "2376/5+(9/770)delta3+(8/189)delta4 =2376/5+(18/385)ell+(91/2970)delta4",
+    "consequence": "ell<=10761",
+    "full_F_plus_Q_projection": {
+      "P0": "orthogonal projector onto ker(N) in triangle-label space",
+      "extra_nonnegative_term": "(1/3)||N K P0||_F^2",
+      "kernel_norm_identity": "||N K P0||_F^2=16632/5+2*C8-(2/5)ell-(7/30)delta4",
+      "total_projected_lower_bound": "1584-(20/231)ell+(2/3)C8-(14/297)delta4",
+      "clean_tradeoff_using_0_le_delta4_le_4ell": "4*ell+9*C8<=74844"
+    }
+  },
+  "minimal_unfixed_mixed_motif": {
+    "C8_definition": "sum_{r,U} binom(W_rU,2), W=F^T X Q",
+    "interpretation": "two N3 flag edges with one unmatched root r and one target triangle U; the two source triangles meet only in r",
+    "order": 8,
+    "W_entry_support": "W_rU=0 if r lies in or is adjacent to U; otherwise W_rU is in {0,1,2,3}",
+    "W_margins": {
+      "row_sum": 84,
+      "column_sum": 36
+    },
+    "norm_W_squared": "8316+2*C8",
+    "representative": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "edge_count": 13,
+      "degree_sequence": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "global_least_mask": 5675512,
+      "Wave147_degree_cell_mask": 44481136,
+      "automorphism_order": 2,
+      "marked_event_multiplicity_per_induced_copy": 1
+    },
+    "frozen_integral_T0_pseudocount": 2442,
+    "frozen_control_tradeoff_at_ell_zero": "9*2442=21978<74844",
+    "larger_missing_term": "ell synchronizes two X edges across the same pair of 7-flag point cells and generally reaches order ten"
+  },
+  "interlacing_boundary": {
+    "compressions": [
+      "H/7 on the 99-dimensional F-space",
+      "K/3 on the 231-dimensional Q-space"
+    ],
+    "trace_square_H_over_7": "(8316+4*ell)/49",
+    "trace_square_K_over_3": 924,
+    "conclusion": "The fixed first three traces and these compressions do not contradict a 12-regular triangle-free 693-vertex X; the fourth trace already contains c4(X)."
+  },
+  "conclusion": {
+    "endpoint_excluded": false,
+    "equitable_cover_subcase_excluded": true,
+    "new_strict_collision_bound": "ell<=10761 (versus the partition-only maximum 12474)",
+    "first_unfixed_trace_term": "c4(X), order at most eight",
+    "first_unfixed_F_Q_synchronization": "C8=x8[44481136]",
+    "first_unfixed_triangle_quotient_triangle_term": "tau_K, order nine",
+    "zero_H_block_ruled_out_locally": false,
+    "zero_H_block_control": "Wave205 t6_h1 has t_rs=6 and hence H_rs=0",
+    "required_next_step": "couple the order-eight C8 collision to the two-point collision ell/delta4, or control the endpoint labels around K-triangles; M^2=21M and scalar traces alone do neither"
+  }
+}

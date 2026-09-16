@@ -1,0 +1,118 @@
+{
+  "status": "FORMAL_AUDIT_PASS",
+  "scope": "E72 source332 sole canonical macro, all integral PSD Gram profiles",
+  "source_row_index": 332,
+  "partition_index": 30,
+  "Q": 6,
+  "canonical_macro_count": 1,
+  "macro_labelled_coverage": 131072,
+  "profile_branch_count": 3,
+  "profile_parameters": [
+    -1,
+    0,
+    1
+  ],
+  "profile_coverage_is_partition_not_sum": true,
+  "coverage_accounting": {
+    "single_macro_coverage": 131072,
+    "formal_excluded_coverage": 131072,
+    "incorrect_triple_sum_explicitly_rejected": 393216
+  },
+  "exact_profile_completeness": {
+    "affine_Gram_family_dimension": 1,
+    "integral_range_PSD_cases": [
+      -1,
+      0,
+      1
+    ],
+    "independent_exact_parametric_audit": "scratch_theory_e72_source332_parametric_gram_independent_audit.json",
+    "independent_exact_parametric_audit_sha256": "3F3BF54D7074A8EC7609EC24D5A1AFFF6E53F42B4F85BC7CE7B171DBE564D5B8",
+    "all_cases_encoded": true,
+    "no_other_cases_feasible": true
+  },
+  "selector_partition": {
+    "selectors": [
+      817279,
+      827702,
+      838161
+    ],
+    "source_CNF_tail": [
+      "817279 827702 838161 0",
+      "-817279 -827702 0",
+      "-817279 -838161 0",
+      "-827702 -838161 0"
+    ],
+    "exactly_one_syntactically_encoded": true,
+    "profiles_pairwise_distinct_by_exact_block_cardinality": true
+  },
+  "source_formula": {
+    "build": "scratch_root_e72_source332_parametric_profiles_build.json",
+    "build_sha256": "B04FD74FA5BCB9BDC3AD21036BED0E270B79EC93DD48EB29CEC6E1DC6A3D9FB9",
+    "cnf": "scratch_root_e72_source332_parametric_profiles.cnf",
+    "cnf_sha256": "3B0263EFE8CBE6476A08193724C29B12B461D9F9A53BD0A63922FB225634AFFD",
+    "variables": 848583,
+    "clauses": 1690078
+  },
+  "profiles": [
+    {
+      "gram_profile_index": 0,
+      "parameter_t": -1,
+      "selector": 817279,
+      "derived_cnf": "scratch_root_e72_source332_profile_tminus1.cnf",
+      "derived_cnf_sha256": "692B876BD27CC3D9592804ED788E950539AAFB1A8D42ADA24ED46F2FB0A029E3",
+      "proof": "scratch_root_e72_source332_profile_tminus1.drup",
+      "proof_sha256": "270234C709432D59C083A00F543F4E06F84687ECE488F757FC33E730130FDED5",
+      "proof_lines": 3674428,
+      "proof_solve_seconds": 29.047,
+      "drat_audit": "scratch_root_e72_source332_profile_tminus1_drat_audit.json",
+      "drat_audit_sha256": "2D12C8E10357CC2FC55B9BAD52AE18E35A91ABC6CA7350254DDB8BE62DFCD903",
+      "drat_status": "DRAT_VERIFIED",
+      "drat_check_seconds": 26.422
+    },
+    {
+      "gram_profile_index": 1,
+      "parameter_t": 0,
+      "selector": 827702,
+      "derived_cnf": "scratch_root_e72_source332_profile_t0.cnf",
+      "derived_cnf_sha256": "E63863E6E36F4B1A1C3D7C76A7A7BE6828556C04CE82014C85297AF172E47B01",
+      "proof": "scratch_root_e72_source332_profile_t0.drup",
+      "proof_sha256": "39B74121438C347DFC0E995A5F8D2237C60AAD94A4F9E2D73536754E9F73C1A9",
+      "proof_lines": 7735342,
+      "proof_solve_seconds": 626.344,
+      "drat_audit": "scratch_root_e72_source332_profile_t0_drat_audit.json",
+      "drat_audit_sha256": "9E3A072742F10EFF7EDD8CB6E474421A8C72383F4328A6A7F2FA6FE3E839184D",
+      "drat_status": "DRAT_VERIFIED",
+      "drat_check_seconds": 814.688
+    },
+    {
+      "gram_profile_index": 2,
+      "parameter_t": 1,
+      "selector": 838161,
+      "derived_cnf": "scratch_root_e72_source332_profile_tplus1.cnf",
+      "derived_cnf_sha256": "5C755DEDB15C8CA2F55B7B20574167B6825E098C1E5CC47A4E79A5C0C1CED05D",
+      "proof": "scratch_root_e72_source332_profile_tplus1.drup",
+      "proof_sha256": "744284411B3199F86C1EBDEFCE2EF450E1956C392CD7E3500E287198E14A62FA",
+      "proof_lines": 3568646,
+      "proof_solve_seconds": 23.594,
+      "drat_audit": "scratch_root_e72_source332_profile_tplus1_drat_audit.json",
+      "drat_audit_sha256": "CAE2C5B1182EBC7D04F3A6A6095E87B7FA4897CDF03F5195334D798DD3329C34",
+      "drat_status": "DRAT_VERIFIED",
+      "drat_check_seconds": 25.188
+    }
+  ],
+  "checker": {
+    "sha256": "10D317DF526C36453986EF09495864BCABD9D02D72D7B772EE78F07939870620",
+    "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "checks": {
+    "three_profiles_exactly_all_integral_PSD_cases": true,
+    "exactly_one_profile_selector": true,
+    "profile_sets_pairwise_disjoint": true,
+    "each_derived_payload_byte_identical_plus_selector_unit": true,
+    "all_three_DRUP_hashes_bound": true,
+    "all_three_proofs_externally_verified": true,
+    "coverage_counted_once": true
+  },
+  "logical_conclusion": "The sole source332 canonical macro has no exact rooted SRG completion in any of its three exhaustive Gram profiles.",
+  "claim_boundary": "This audit formally covers the three profile selector CNFs. Upstream macro/catalog and affine-Gram completeness are separately audited and hash-bound here."
+}

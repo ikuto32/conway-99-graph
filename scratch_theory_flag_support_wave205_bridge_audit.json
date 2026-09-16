@@ -1,0 +1,53 @@
+{
+  "status": "EXACT_WAVE205_TO_FLAG_SUPPORT_BRIDGE_AUDIT_PASS",
+  "one_two_cross_pair": {
+    "source_role_table": [
+      {
+        "source_slot": 0,
+        "is_unmatched": false,
+        "target_edge_pairs": 1,
+        "target_nonedge_pairs": 2
+      },
+      {
+        "source_slot": 1,
+        "is_unmatched": false,
+        "target_edge_pairs": 1,
+        "target_nonedge_pairs": 2
+      },
+      {
+        "source_slot": 2,
+        "is_unmatched": true,
+        "target_edge_pairs": 0,
+        "target_nonedge_pairs": 3
+      }
+    ],
+    "all_nine_point_pairs": 9,
+    "matched_graph_edges": 2,
+    "graph_nonedges": 7,
+    "unmatched_endpoint_pair": 1
+  },
+  "pointwise_row_identities": {
+    "u_definition": "u(r)=sum_{T contains r}q(T)=84-S(r)",
+    "K2_star_incidences": "3u(r)",
+    "t_adjacent_row_sum": "2u(r)=2(84-S(r))",
+    "t_nonadjacent_row_sum": "7u(r)=7(84-S(r))",
+    "endpoint_values_S0": {
+      "adjacent": 168,
+      "nonadjacent": 588
+    }
+  },
+  "collision_inequality": {
+    "formula": "3D(r) <= sum_{y nonadjacent r} binom(t_ry,2)",
+    "reason": "Each Y[r,(U,u)]=2 collision injects its source-pair into one pair counted by binom(t_ry,2) for each of the three y in U.",
+    "use_for_lower_bound": "wrong direction: it upper-bounds D from a t second moment and cannot prove E0=S+D large"
+  },
+  "Wave205_translation": {
+    "t_matrix": "N K2 N^T = F^T J_triangle X J_triangle F",
+    "support_matrix": "Y=F^T X; E0(r)=84-|supp(Y[r,*])|",
+    "distinction": "t inflates each X edge to all 3x3 point pairs of its two triangles, whereas Y retains its unmatched source flag and target flag.",
+    "rank_U_99_implication": "No incidence-only rank loss: ordered pairs of distinct triangles in one point-star already supply all unit columns e_r.",
+    "fourth_trace_implication": "H=U K_D U^T is over F_3 and is not the real PSD Gram YY^T; without a new flagged restriction of K_D it gives no support order."
+  },
+  "sample_count": 85,
+  "conclusion": "Wave205 t>=6 and average 7 govern the unflagged star-pair count and recover S(r), not the collision D(r).  The currently verified fourth-trace factorization therefore supplies no pointwise E0=S+D lower bound."
+}

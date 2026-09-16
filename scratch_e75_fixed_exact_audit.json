@@ -1,0 +1,94 @@
+{
+  "model": "audit of independent E0=75 fixed-local exact SAT portfolio",
+  "ok": true,
+  "inputs": {
+    "scratch_general_e75_local_graph_reps.json": "20606727084f8a51f3087207c6153c155f3982d21d662d3f24eb719c3f7457d9",
+    "scratch_general_e75_reps_check.json": "7a8e0a88fc085cdbb206eb417356092c2b18631866ac231c89c5f7d01b5a9999",
+    "scratch_general_e75_incremental_records.json": "0c2d88646b30463494f534bf3b09dd5cfc1306fab1dc6af242ba8d5762054840",
+    "scratch_e75_incremental_sweep.json": "adaa84ccbafda3a5ee27b3cc15b49a69c5fbdf6995a74ef4f519dff1179183c3",
+    "scratch_e75_fixed_exact_catalog.json": "3c47547d2c76c88e22a0428957b2d2c72aebdad0057194e142c8ede79f2340c7",
+    "scratch_e75_fixed_exact_checkpoint.json": "9ac04030349bdf5d66666a72ef9f47d9491cd295addd0d553c6d8aee09a25fe4",
+    "scratch_e75_fixed_exact_portfolio.json": "3157e5c1b3daf3c2021341044d88c4c65ff3e9bc7256428b297aec72e5a6ae73",
+    "scratch_e75_fixed_exact_sat.py": "7e0e8e2d3961f243bde2780d1a411e7ac2a08a1ecda3c9f2745bb5cda8d7390c"
+  },
+  "catalog": {
+    "support_rows": 6,
+    "row_orbit_counts": [
+      128,
+      64,
+      64,
+      32,
+      24,
+      40
+    ],
+    "row_labelled_counts": [
+      8192,
+      8192,
+      4096,
+      8192,
+      65536,
+      16384
+    ],
+    "local_graph_orbits": 352,
+    "labelled_local_graphs_covered": 110592,
+    "local_invariant_histogram": {
+      "exceptional=8,internal=23,overlap=18": 192,
+      "exceptional=9,internal=27,overlap=18": 160
+    }
+  },
+  "shared_incremental_catalog_crosscheck": {
+    "catalog": "scratch_general_e75_incremental_records.json",
+    "intrinsic_cross_key": [
+      "partition",
+      "compression_orbit_index",
+      "canonical_local_mask_hex"
+    ],
+    "cross_keys_matched": 352,
+    "local_edge_lists_matched": 352,
+    "orbit_weights_matched": 352,
+    "row_orbit_counts_match": true,
+    "row_labelled_counts_match": true
+  },
+  "cnf_contract": {
+    "fresh_fixed_local_cnf_per_branch": true,
+    "disjoint_edge_variables_per_branch": 1680,
+    "product_equivalences_per_branch": 65520,
+    "BP_equalities_per_branch": 1176,
+    "outer_pair_equalities_per_branch": 3486,
+    "redundant_support_aggregate_rows": 0,
+    "ordinary_c4_block_policy": {
+      "high_high": "both directions",
+      "high_low": "high side only",
+      "low_low": "none"
+    }
+  },
+  "solver": {
+    "engine": "CaDiCaL 1.9.5 via PySAT",
+    "first_pass": {
+      "conflict_budget": 20000,
+      "UNSAT": 254,
+      "UNKNOWN": 98
+    },
+    "second_pass_unknown_only": {
+      "conflict_budget": 200000,
+      "attempted": 98,
+      "UNSAT": 98,
+      "UNKNOWN": 0,
+      "SAT": 0
+    },
+    "latest_terminal": {
+      "UNSAT": 352,
+      "UNKNOWN": 0,
+      "SAT": 0
+    },
+    "total_attempts": 450,
+    "formal_proof_certificates_checked": 0
+  },
+  "independent_vs_shared_terminal_agreement": {
+    "independent": "352/352 solver-terminal UNSAT",
+    "shared_incremental": "352/352 covered UNSAT",
+    "agree": true
+  },
+  "claim_boundary": "This is exhaustive catalog coverage plus solver-terminal UNSAT agreement. No DRAT/LRAT proof certificates were generated or independently checked, so it is a reproducible finite computation, not a certificate-backed proof.",
+  "errors": []
+}

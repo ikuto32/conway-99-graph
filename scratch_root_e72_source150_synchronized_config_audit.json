@@ -1,0 +1,128 @@
+{
+  "status": "SOURCE150_SYNCHRONIZED_LOCALPAIR_AUDIT_PASS",
+  "source_row_index": 150,
+  "inputs": {
+    "scratch_general_e72_q3_gram_frontier_disjoint_gram_filtered_reps.json": "EA133CC9CB6C3AA1D141A4AFD13043EE72163462CA11B8F27CCF47312E83847F",
+    "scratch_general_e72_q3_gram_fast_expansion_macro_catalog.json": "BED6A7F1258576E8028B6B17736FD91ED8E8D9A79D2E90FC744A07DAE14D6213",
+    "scratch_theory_e72_macro_full_gram.json": "8DC23EE41F24E39256136A647506A61C850F0BC804C402C8D16A8B9797C5CDF3",
+    "scratch_theory_e72_source150_fibre_recurrence_filter.json": "1DBEA199F8309A7ED18777078F9FB606F266CE8B6DA7DEB93FB7D813303ABD2C",
+    "scratch_root_e72_source150_fibre_recurrence_audit.json": "F205E42F2B34091A2D876D0CC0AB73577299721C698FE66355CBCA0FD7A86711",
+    "scratch_theory_e72_source150_global_config_census.py": "F087C888F5F14C32FB269B0D0CC4D369DD5FD14F665A1E80E5E13FD671C6506B",
+    "scratch_theory_e72_source150_global_config_census.json": "EA6348FB8969D4586C31FDA1E2DBF83307C587743365B8A81D9EEB383799FA9D",
+    "scratch_theory_e72_source150_synchronized_config_csp.py": "8A80CF3AA0D49F0292EE8A5C09C317FC91C48B82BAA250F5CE7F5F4D48925F93",
+    "scratch_theory_e72_source150_synchronized_m30.json": "E345DABF6814BBE990FCC95E2780AEE45C422ED424A7B9F66BFB23BC9866095A",
+    "scratch_root_e72_source150_sync_m80.json": "EEFD8EAD3BBD20E93844EF48B4D2AAE14D415920E530E1207E48E32BA99E87C2",
+    "scratch_theory_e72_source150_sync_localpair_m30.json": "3E3EB71611E1FC1F776576DF04E5016EFC1B99B8979F4F165CB11C019DE9ADE1",
+    "scratch_root_e72_source150_sync_localpair_m80_rebound.json": "ADB91E74E9B6FFCB5891760FFFE814CD8E5351D287C9E8317810227E831D8D80"
+  },
+  "global_frontier": {
+    "macros": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    "ordinary_configuration_counts": [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      12,
+      3,
+      3,
+      12,
+      3,
+      12,
+      12
+    ],
+    "solution_path_counts": {
+      "0:0": 143,
+      "0:1": 64,
+      "0:3": 2331,
+      "8:0": 380
+    },
+    "all_reported_configurations_and_solution_paths_reconstructed": true,
+    "all_forward_and_backward_DP_counts_reconstructed": true
+  },
+  "synchronized_CSP": {
+    "audited_macros": [
+      [
+        3,
+        0
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    "input_local_orbits": 132,
+    "input_labelled_mass": 32768,
+    "UNSAT_local_orbits": 107,
+    "UNSAT_labelled_mass": 26496,
+    "SAT_local_orbits": 25,
+    "SAT_labelled_mass": 6272,
+    "UNKNOWN_local_orbits": 0,
+    "per_macro": {
+      "3:0": {
+        "input_orbits": 76,
+        "input_mass": 16384,
+        "UNSAT_orbits": 74,
+        "UNSAT_mass": 16000,
+        "SAT_orbits": 2,
+        "SAT_mass": 384
+      },
+      "8:0": {
+        "input_orbits": 56,
+        "input_mass": 16384,
+        "UNSAT_orbits": 33,
+        "UNSAT_mass": 10496,
+        "SAT_orbits": 23,
+        "SAT_mass": 5888
+      }
+    },
+    "exceptional_pointwise_degree_rows_checked": 4224,
+    "disjoint_block_margin_equalities_checked": 3168,
+    "producer_controls_reproduced": 48,
+    "independent_DFS_traversal_order": true,
+    "all_reported_statuses_reproduced": true
+  },
+  "ordinary_local_pair_extension": {
+    "input_local_orbits": 132,
+    "input_labelled_mass": 32768,
+    "UNSAT_local_orbits": 132,
+    "UNSAT_labelled_mass": 32768,
+    "SAT_local_orbits": 0,
+    "UNKNOWN_local_orbits": 0,
+    "macro_3_0_UNSAT_mass": 16384,
+    "macro_8_0_UNSAT_mass": 16384,
+    "independent_leaf_calls": 86,
+    "independent_factor_tests": 84,
+    "independent_factor_cache_hits": 21,
+    "independent_factor_cache_entries": 84,
+    "ordinary_U_label_symmetry_quotient_used_by_audit": false,
+    "all_reported_statuses_reproduced": true
+  },
+  "soundness": {
+    "global_synchronization": "Each bit denotes one common choice of all thirteen ordinary C4 degree configurations; the same bit is intersected across all eight exceptional fibres.",
+    "ordinary_exceptional_direction": "For every disjoint ordinary/exceptional pair, each exceptional vertex has degree exactly one into the ordinary C4. The four ordinary-side degrees are the chosen configuration and may be 0..4; no false converse degree-one condition is imposed.",
+    "exceptional_blocks": "Every labelled 4x4 simple matrix with both fixed margins is enumerated in each of the twelve disjoint exceptional blocks. The independent DFS checks their simultaneous exceptional-pair common-neighbour upper bounds.",
+    "singular_Gram": "Pointwise vector equations are compared after multiplication by exact PSD H; H*diff=0 is equality of represented Gram vectors.",
+    "ordinary_local_pair_residual": "After fixing the complete exceptional graph, residual capacity for a pair x,y is 2-|support(x) intersect support(y)|-Axy-|N_E(x) intersect N_E(y)|. When it is zero, x and y cannot share an ordinary neighbour. Every allowed one-sided E-to-U function was enumerated without quotienting U labels.",
+    "projection_relaxation": "The mappings witnessing pointwise recurrence and those witnessing the per-U pair condition are not forced to be the same. This enlarges feasibility, so an UNSAT conclusion remains a sound exclusion; passage would not prove realizability."
+  },
+  "claim_boundary": "The base synchronized CSP rejects 26,496 labelled mass. Its exact ordinary-local-pair extension rejects the full 32,768 mass of the two audited macros, independently replayed here. This is executable mathematics, not a proof-assistant certificate. A local SAT status realizes only this subsystem and does not construct an srg(99,14,1,2)."
+}

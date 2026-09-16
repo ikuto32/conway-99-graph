@@ -1,0 +1,70 @@
+{
+  "status": "COMPLETE_Q_CAPACITY_EXCLUDED",
+  "model": "self-contained-root-reduced E0=72,Q>=3 exact compression partition",
+  "partition_index": 4,
+  "partition": [
+    4,
+    4,
+    1,
+    1,
+    1,
+    1
+  ],
+  "maximum_Q_capacity": 0,
+  "passes_Q_at_least_4_capacity": false,
+  "theorem_inputs": {
+    "external_premise_required": false,
+    "self_contained_root_reduction": "every putative SRG has a root with S(r)<=69",
+    "root_implication": "E0=72 and S(r)<=69 imply Q=E0-S>=3",
+    "side_bound_audit": "scratch_root_side_bound_selfcontained_audit.json",
+    "total_deficit": 12,
+    "total_fibre_edges_E0": 72,
+    "required_diagonal_edges_Q": ">=3",
+    "free_Ritz_interval": [
+      "-4",
+      "3"
+    ],
+    "free_Ritz_sum": "36",
+    "spectral_maximizing_free_Ritz_multiset": [
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "-3"
+    ],
+    "free_Ritz_maximum_square_sum": "126",
+    "spectral_D_square_upper": 4704,
+    "disjoint_constant_derivation": "3360-16*12=3168",
+    "trace_identity": "tr(D^2)=sum_F(8-2*delta_F)^2+3168+2*(overlap_square+x_square)",
+    "BP_overlap_row_sum": "4*delta_F",
+    "disjoint_deviation_row_sum": "sum x_FG=2*delta_F for x=4-D",
+    "weighted_port_balance": "at every root group, 2*max(incident delta)<=sum(incident delta)",
+    "partition_Q_capacity": "2*(number of delta2 fibres)+(number of delta3 fibres)",
+    "external_n3_bound_used": false,
+    "legacy_schema_note": "fields named passes_Q_at_least_4_capacity are engine compatibility fields and mean passes configured Q>=3 in this artifact"
+  },
+  "coverage": {
+    "labelled_placements": 813960,
+    "weighted_S7_orbits_by_Burnside": 292,
+    "all_excluded_by_partition_invariant_capacity": true,
+    "placement_generation_skipped_by_early_exact_obstruction": true
+  },
+  "summary": {
+    "capacity_surviving_orbits": 0,
+    "balanced_orbits": 0,
+    "overlap_rows_computed": 0,
+    "spectral_real_survivors": 0
+  },
+  "rows": [],
+  "claim_boundary": "Necessary Q>=3 root branch from the audited self-contained S<=69 theorem.",
+  "schema_compatibility": "fields named passes_Q_at_least_4_capacity are engine compatibility fields and mean passes configured Q>=3 in this artifact"
+}

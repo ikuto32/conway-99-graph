@@ -1,0 +1,552 @@
+{
+  "status": "AUGMENTED_FLAG_RELATION_AND_BAD_MATE_CAPACITY_PASS",
+  "frozen_inputs": {
+    "order8_shadow": "scratch_theory_root_yyt_order8_shadow.json",
+    "order8_shadow_sha256": "3B28F9686EC0CECB33FD875520F3E096480630506FB0941894957D7FB8EB3883",
+    "wave159_exact_witness": "external_conway99_research\\attempts\\wave159-four-root-cut-loop\\exact-witness-after-fifteen-cuts.json",
+    "wave159_exact_witness_sha256": "0073AC9D0D6053EEDEB4F9357C10E40A7004E26CEDBEEE119601A6E1996BEA1E",
+    "wave3_audit": "external_conway99_research\\verification\\2026-07-22-wave3-audit.md",
+    "wave3_audit_sha256": "BF4C000B9EE007439672C64A645E223C1F05B139A7DA0E3EF699CABA52830345",
+    "wave65_independent_results": "external_conway99_research\\verification\\wave65-rooted-hypergraph-algebra\\independent-results.json",
+    "wave65_independent_results_sha256": "076293E960E704799AD1EB68B43AEFF7892D83D240C9B3471789AADC9413349D"
+  },
+  "definitions": {
+    "Pi": "Pi[(T,t),(U,u)]=1 iff T,U form a triangular prism and tu is the corresponding perfect-matching edge",
+    "Xhat": "X+Pi",
+    "Yhat": "F^T Xhat",
+    "G": "Yhat Yhat^T",
+    "beta_e_beta_n": "unordered adjacent/nonadjacent off-diagonal sums of G; equivalently the order-eight shadow functionals",
+    "Re_Rn": "parts of beta_e,beta_n whose unique target-edge mate is adjacent to at least one source root"
+  },
+  "graph_level_identities": {
+    "Xhat_flag_degree": 12,
+    "Yhat_row_sum": 84,
+    "Yhat_column_sum": 12,
+    "Yhat_entry_values": [
+      0,
+      1,
+      2
+    ],
+    "Yhat_value_two_characterization": "Yhat[r,beta]=2 iff the old X-collapse Y[r,beta]=2; these are exactly the D(r) diagonal events",
+    "G_diagonal": "G[r,r]=84+2D(r)",
+    "trace_G": "8316+2D_*",
+    "one_G_one": 99792,
+    "beta_sum": "beta_e+beta_n=45738-D_*",
+    "old_offdiagonal_sum": "a+b=(3Q2-2(n3+D_*))/2",
+    "bad_mate_total": "Re+Rn=45738+n3-3Q2/2",
+    "component_relation": "a=beta_e-Re; b=beta_n-Rn"
+  },
+  "bose_mesner_projection_of_G": {
+    "nontrivial_eigenvalue_conditions": [
+      "84+2D_*/99+3beta_e/693-4beta_n/4158 >= 0",
+      "84+2D_*/99-4beta_e/693+3beta_n/4158 >= 0"
+    ],
+    "equivalent_nontrivial_bounds": [
+      "beta_e >= -7560-4D_*",
+      "beta_e <= 18018+3D_*",
+      "beta_n >= 27720-4D_*",
+      "beta_n <= 53298+3D_*"
+    ],
+    "useful_sides": [
+      "beta_e <= 18018+3D_*",
+      "beta_n >= 27720-4D_*"
+    ],
+    "four_root_raw_moment_form": [
+      "M12[17724,29988] <= 72072+12D_*",
+      "sum_(i in L,j in R) M1[i,j] >= 110880-16D_*"
+    ]
+  },
+  "vertex_edge_incidence_and_weighted_factor": {
+    "edge_column_identification": "Identify flag (T,t) with the graph edge e=T\\{t}.  Then F^T is the triangle-mate incidence R and Xhat is the opposite-edge adjacency J_edge.",
+    "matrices": {
+      "C": "99x693 ordinary vertex-edge incidence",
+      "R": "99x693; R[v,e]=1 iff v is the unique triangle mate of e",
+      "J_edge": "693x693; two disjoint edges are adjacent iff their four cross incidences form a perfect matching",
+      "J_99": "99x99 all-ones matrix"
+    },
+    "entrywise_case_table_for_CJ_edge": [
+      {
+        "class": "endpoint_of_e",
+        "multiplicity_for_fixed_e": 2,
+        "(AC)_ve": 1,
+        "C_ve": 1,
+        "R_ve": 0,
+        "(CJ_edge)_ve": 0
+      },
+      {
+        "class": "unique_triangle_mate_of_e",
+        "multiplicity_for_fixed_e": 1,
+        "(AC)_ve": 2,
+        "C_ve": 0,
+        "R_ve": 1,
+        "(CJ_edge)_ve": 0
+      },
+      {
+        "class": "outside_adjacent_to_exactly_one_endpoint",
+        "multiplicity_for_fixed_e": 24,
+        "(AC)_ve": 1,
+        "C_ve": 0,
+        "R_ve": 0,
+        "(CJ_edge)_ve": 1
+      },
+      {
+        "class": "outside_adjacent_to_neither_endpoint",
+        "multiplicity_for_fixed_e": 72,
+        "(AC)_ve": 0,
+        "C_ve": 0,
+        "R_ve": 0,
+        "(CJ_edge)_ve": 0
+      }
+    ],
+    "identities": [
+      "C J_edge = A C-C-2R",
+      "R C^T=A",
+      "R R^T=7I",
+      "R J_edge C^T=A^2-A-14I=2(J_99-I-A)",
+      "Yhat=R J_edge",
+      "Yhat C^T=2(J_99-I-A)"
+    ],
+    "weighted_two_factor": "For each root r, the nonzero entries of row Yhat[r,*] are edges entirely inside the 84 nonneighbours of r, and their integer weights give weighted degree exactly 2 at every one of those 84 vertices.  Weight two occurs exactly on the D(r) fibre-diagonal edges.",
+    "support_label_relation": {
+      "definition": "For residual support labels L(p),L(q), let d_r(p,q) be the number of x in L(p) whose root-neighbour mate lies in L(q).  On a residual graph edge pq, Yhat[r,pq]=d_r(p,q).",
+      "ambient_unordered_pair_census_by_(overlap,d_r)": {
+        "0,0": 1680,
+        "0,1": 840,
+        "0,2": 42,
+        "1,0": 840,
+        "1,1": 84
+      }
+    },
+    "E0_zero_comparison": {
+      "conclusion": "THE_TWO_FACTORS_ARE_DISTINCT_AND_EDGE_DISJOINT",
+      "reason": "E0(r)=0 forces both S(r)=0 and D(r)=0.  Hence the Yhat factor is the 84 selected residual edges of type (support overlap,d_r)=(0,1).  Wave65's transition factor T consists of the 84 selected exact-symbol-sharing edges, which now have type (1,0).",
+      "Yhat_simple_factor_type": [
+        0,
+        1
+      ],
+      "Wave65_T_type": [
+        1,
+        0
+      ],
+      "Yhat_factor_edges": 84,
+      "Wave65_T_edges": 84,
+      "containment": "The Yhat factor is a spanning simple 2-factor inside Wave65's 10-regular disjoint-label point graph D, not T. It is exactly the selected d_r=1 factor already appearing in the independently verified Wave3 weighted-factor lane."
+    },
+    "endpoint_E0_zero_fixed_Q_spectral_traces": {
+      "premises": [
+        "Q=10I+2J-B^2-B",
+        "spec(B)=12^1,3^40,0^7,(-2)^6,(-4)^30",
+        "Q eigenvalues on those spaces are 22,-2,10,8,-2",
+        "T and U are edge-disjoint simple spanning 2-factors"
+      ],
+      "line_graph_Q2_relation_values": {
+        "T_type_(1,0)": 11,
+        "U_type_(0,1)": 3
+      },
+      "pointwise_identity": {
+        "general_selected_edge_formula": "For a selected outside edge xy, the two endpoint-profile equations give (BQ)[x,y]=2-Q[x,y]-d_r(x,y).",
+        "on_T_union_U": "(BQ)[x,y]=1",
+        "trace_TBQ": 168,
+        "trace_UBQ": 168
+      },
+      "factor_results": {
+        "T": {
+          "relation_(Q,d)": [
+            1,
+            0
+          ],
+          "Q2_entry_on_each_factor_edge": 11,
+          "tr_FQ": 168,
+          "tr_FQ2": 1848,
+          "tr_FBQ_from_pointwise_identity": 168,
+          "spectral_projector_order": [
+            12,
+            3,
+            0,
+            -2,
+            -4
+          ],
+          "tr_F_E_lambda": [
+            2,
+            "72/5",
+            7,
+            "18/5",
+            -27
+          ],
+          "tr_B_power_F": {
+            "1": 168,
+            "2": 0,
+            "3": 5544,
+            "4": 35784
+          }
+        },
+        "U": {
+          "relation_(Q,d)": [
+            0,
+            1
+          ],
+          "Q2_entry_on_each_factor_edge": 3,
+          "tr_FQ": 0,
+          "tr_FQ2": 504,
+          "tr_FBQ_from_pointwise_identity": 168,
+          "spectral_projector_order": [
+            12,
+            3,
+            0,
+            -2,
+            -4
+          ],
+          "tr_F_E_lambda": [
+            2,
+            "112/5",
+            -7,
+            "18/5",
+            -21
+          ],
+          "tr_B_power_F": {
+            "1": 168,
+            "2": 168,
+            "3": 5376,
+            "4": 37968
+          }
+        }
+      },
+      "comparison_with_Wave65": {
+        "Wave65_w=tr(T E_3)_now_fixed": "72/5",
+        "Wave65_prior_interval": [
+          "64/5",
+          "16"
+        ],
+        "Wave65_prior_tr_B3T_interval": [
+          5376,
+          5712
+        ],
+        "new_tr_B3T": 5544,
+        "new_tr_B4T": 35784,
+        "Wave65_identity_checked": "35784+3*5544=52416"
+      },
+      "simultaneous_scalar_screen": {
+        "operator_trace_bounds_T_and_U": "all pass |tr(FE_lambda)|<=2 rank(E_lambda)",
+        "operator_trace_bounds_T_plus_minus_U": "all pass |tr((T+/-U)E_lambda)|<=4 rank(E_lambda)",
+        "projected_Frobenius_lower_bounds": {
+          "T": "10661/250",
+          "U": "10101/250",
+          "T+U": "16912/125",
+          "T-U": "154/5"
+        },
+        "available_Frobenius_norms": {
+          "T": 168,
+          "U": 168,
+          "T+U": 336,
+          "T-U": 336
+        },
+        "scalar_projection_inner_product": "6531/250",
+        "residual_Cauchy_slack_determinant": "9570288/625",
+        "integrality_check": "tr(B^j F), tr(FQ), tr(FQ^2), and tr(FBQ) are all integers; rational fifths occur only in projector traces",
+        "conclusion": "NO_CONTRADICTION_FROM_THE_RECORDED_PSD_CAUCHY_OR_INTEGRALITY_TESTS"
+      }
+    }
+  },
+  "mate_bit_capacity": {
+    "states": [
+      "00 (good-good)",
+      "01",
+      "10",
+      "11"
+    ],
+    "explanation": "For one target flag, p=12-q bad roots form a subset of N(u)=7K2, giving at most floor(p/2) adjacent 11 pairs. Each good root has exactly two neighbours in N(u), giving at most q*min(p,2) adjacent 01/10 flag pairs.",
+    "table": [
+      {
+        "q": 0,
+        "p=12-q": 12,
+        "all_bad_containing_pairs": 66,
+        "adjacent_11_capacity": 6,
+        "adjacent_01_10_capacity": 0,
+        "adjacent_total_capacity_f(q)": 6,
+        "forced_nonadjacent_h(q)": 60
+      },
+      {
+        "q": 1,
+        "p=12-q": 11,
+        "all_bad_containing_pairs": 66,
+        "adjacent_11_capacity": 5,
+        "adjacent_01_10_capacity": 2,
+        "adjacent_total_capacity_f(q)": 7,
+        "forced_nonadjacent_h(q)": 59
+      },
+      {
+        "q": 2,
+        "p=12-q": 10,
+        "all_bad_containing_pairs": 65,
+        "adjacent_11_capacity": 5,
+        "adjacent_01_10_capacity": 4,
+        "adjacent_total_capacity_f(q)": 9,
+        "forced_nonadjacent_h(q)": 56
+      },
+      {
+        "q": 3,
+        "p=12-q": 9,
+        "all_bad_containing_pairs": 63,
+        "adjacent_11_capacity": 4,
+        "adjacent_01_10_capacity": 6,
+        "adjacent_total_capacity_f(q)": 10,
+        "forced_nonadjacent_h(q)": 53
+      },
+      {
+        "q": 4,
+        "p=12-q": 8,
+        "all_bad_containing_pairs": 60,
+        "adjacent_11_capacity": 4,
+        "adjacent_01_10_capacity": 8,
+        "adjacent_total_capacity_f(q)": 12,
+        "forced_nonadjacent_h(q)": 48
+      },
+      {
+        "q": 5,
+        "p=12-q": 7,
+        "all_bad_containing_pairs": 56,
+        "adjacent_11_capacity": 3,
+        "adjacent_01_10_capacity": 10,
+        "adjacent_total_capacity_f(q)": 13,
+        "forced_nonadjacent_h(q)": 43
+      },
+      {
+        "q": 6,
+        "p=12-q": 6,
+        "all_bad_containing_pairs": 51,
+        "adjacent_11_capacity": 3,
+        "adjacent_01_10_capacity": 12,
+        "adjacent_total_capacity_f(q)": 15,
+        "forced_nonadjacent_h(q)": 36
+      },
+      {
+        "q": 7,
+        "p=12-q": 5,
+        "all_bad_containing_pairs": 45,
+        "adjacent_11_capacity": 2,
+        "adjacent_01_10_capacity": 14,
+        "adjacent_total_capacity_f(q)": 16,
+        "forced_nonadjacent_h(q)": 29
+      },
+      {
+        "q": 8,
+        "p=12-q": 4,
+        "all_bad_containing_pairs": 38,
+        "adjacent_11_capacity": 2,
+        "adjacent_01_10_capacity": 16,
+        "adjacent_total_capacity_f(q)": 18,
+        "forced_nonadjacent_h(q)": 20
+      },
+      {
+        "q": 9,
+        "p=12-q": 3,
+        "all_bad_containing_pairs": 30,
+        "adjacent_11_capacity": 1,
+        "adjacent_01_10_capacity": 18,
+        "adjacent_total_capacity_f(q)": 19,
+        "forced_nonadjacent_h(q)": 11
+      },
+      {
+        "q": 10,
+        "p=12-q": 2,
+        "all_bad_containing_pairs": 21,
+        "adjacent_11_capacity": 1,
+        "adjacent_01_10_capacity": 20,
+        "adjacent_total_capacity_f(q)": 21,
+        "forced_nonadjacent_h(q)": 0
+      },
+      {
+        "q": 11,
+        "p=12-q": 1,
+        "all_bad_containing_pairs": 11,
+        "adjacent_11_capacity": 0,
+        "adjacent_01_10_capacity": 11,
+        "adjacent_total_capacity_f(q)": 11,
+        "forced_nonadjacent_h(q)": 0
+      },
+      {
+        "q": 12,
+        "p=12-q": 0,
+        "all_bad_containing_pairs": 0,
+        "adjacent_11_capacity": 0,
+        "adjacent_01_10_capacity": 0,
+        "adjacent_total_capacity_f(q)": 0,
+        "forced_nonadjacent_h(q)": 0
+      }
+    ],
+    "exact_total": "Re+Rn=3 sum_T [66-binomial(q(T),2)]",
+    "pointwise_Rn_bound": "Rn >= 3 sum_T h(q(T))",
+    "sharp_sumq_Q2_lower_hull": [
+      {
+        "touching_q_values": [
+          0,
+          1,
+          2
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          60,
+          0,
+          -1
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          41580,
+          0,
+          -3
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      },
+      {
+        "touching_q_values": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          60,
+          -1,
+          "-1/2"
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          41580,
+          -2,
+          "-3/2"
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      },
+      {
+        "touching_q_values": [
+          0,
+          10,
+          12
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          60,
+          -11,
+          "1/2"
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          41580,
+          -22,
+          "3/2"
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      },
+      {
+        "touching_q_values": [
+          2,
+          3,
+          4
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          56,
+          2,
+          -1
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          38808,
+          4,
+          -3
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      },
+      {
+        "touching_q_values": [
+          4,
+          5,
+          6
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          48,
+          4,
+          -1
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          33264,
+          8,
+          -3
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      },
+      {
+        "touching_q_values": [
+          6,
+          7,
+          8
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          36,
+          6,
+          -1
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          24948,
+          12,
+          -3
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      },
+      {
+        "touching_q_values": [
+          8,
+          9,
+          10
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          20,
+          8,
+          -1
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          13860,
+          16,
+          -3
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      },
+      {
+        "touching_q_values": [
+          10,
+          11,
+          12
+        ],
+        "pointwise_plane_alpha_beta_gamma": [
+          0,
+          0,
+          0
+        ],
+        "bound_on_Rn_constant_n3_Q2": [
+          0,
+          0,
+          0
+        ],
+        "meaning": "Rn >= constant + n3_coefficient*n3 + Q2_coefficient*Q2"
+      }
+    ],
+    "scope": "The eight displayed planes are all quadratic supporting planes through at least three of the 13 points (q,q^2,h(q)); their maximum is the sharp lower convex surface available from only sum(q) and sum(q^2)."
+  },
+  "wave159_boundary_evaluation": {
+    "n3": 4158,
+    "z11": 16632,
+    "D_star": 0,
+    "Q2_forced_at_endpoint": 33264,
+    "beta_e": "2070988839162253926522129810139492169693988/517521941776627318214642378508170816671",
+    "beta_e_decimal": 4001.7411282170015,
+    "beta_n": "21599429733817126353979183298067224643204210/517521941776627318214642378508170816671",
+    "beta_n_decimal": 41736.258871783,
+    "beta_sum": 45738,
+    "Re_plus_Rn": 0,
+    "projected_eigenvalue_3": "221609434036798387119438007098565316434324/3622653592436391227502496649557195716697",
+    "projected_eigenvalue_minus4": "329714613989500776957695298446396800231095/3622653592436391227502496649557195716697",
+    "all_new_scalar_inequalities_pass": true,
+    "interpretation": "The exact rational pseudowitness has q=12 everywhere, so there are no prism/bad mates.  It obeys the augmented shadow identity and both projected PSD bounds while still having sum E0=0.  These scalar inequalities alone cannot yield a positive E0 lower bound."
+  },
+  "limitations": [
+    "No existence of the augmented Gram for the rational pseudowitness is asserted.",
+    "The capacity inequalities are necessary graph-level conditions, not sufficiency.",
+    "They do not constrain D_* independently of the existing first moments.",
+    "No srg(99,14,1,2), positive E0 bound, or Conway-problem resolution is claimed."
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "model": "independent audit of universal exact-CNF assumption cores",
+  "ok": true,
+  "errors": [],
+  "inputs": {
+    "base_cnf": "scratch_general_exact.cnf",
+    "base_cnf_sha256": "91D22E62625E1221DD46B819E89494DB8141DD4DDC9A06F13B9ABDB530B83242",
+    "base_metadata_sha256": "AA3143DBAF7BB7CB9883D9BA5E320BD973AB0C4894D22CFC04062D79B27BD97E",
+    "e75_catalogue": "scratch_general_e75_incremental_records.json",
+    "e75_catalogue_sha256": "0C2D88646B30463494F534BF3B09DD5CFC1306FAB1DC6AF242BA8D5762054840",
+    "probe": "scratch_root_universal_core_probe.json",
+    "probe_sha256_after_scope_wording_correction": "A6E044559128A9C22E4A09706EDEB90E2B14A6A0C9AA4FBC470698885526CB32",
+    "harness_smoke": "scratch_root_universal_core_harness_smoke.json",
+    "harness_smoke_sha256": "5C34AA449D8AA4632DDB56709B8D6E08526BFD77F94E71FAC609FCF873D172EF"
+  },
+  "baseline_coordinate_audit": {
+    "path": "scratch_general_exact.cnf",
+    "sha256": "91D22E62625E1221DD46B819E89494DB8141DD4DDC9A06F13B9ABDB530B83242",
+    "metadata_path": "scratch_general_exact_build.json",
+    "metadata_sha256": "AA3143DBAF7BB7CB9883D9BA5E320BD973AB0C4894D22CFC04062D79B27BD97E",
+    "header_variables": 817278,
+    "header_clauses": 1622502,
+    "outer_edge_variables": 3486,
+    "coordinate_sha256": "314B9AB1519F321E0E9B643E2471632AE7B1245EAE6B758C8798A834BD83EEB7",
+    "pinned_sha256_match": true,
+    "label_count": 84,
+    "outer_edge_variable_count": 3486,
+    "non_disjoint_assumption_variable_count": 1806,
+    "remaining_disjoint_variable_count": 1680,
+    "coordinate_map_matches_baseline_builder": true
+  },
+  "independent_assignment_reconstruction": {
+    "does_not_import_shared_or_fixed_encoder": true,
+    "record_count": 6,
+    "representative_count": 352,
+    "representatives_per_record": {
+      "0": 128,
+      "1": 64,
+      "2": 64,
+      "3": 32,
+      "4": 24,
+      "5": 40
+    },
+    "unique_assignment_hashes": 352,
+    "positive_assumption_histogram": {
+      "93": 352
+    },
+    "all_352_literal_vectors_match_original_probe_path": true,
+    "mismatching_global_indices": []
+  },
+  "fixed_local_differential": [
+    {
+      "global_representative_index": 0,
+      "record_index": 0,
+      "representative_index": 0,
+      "fixed_boolean_non_disjoint_edges": 1806,
+      "remaining_disjoint_edge_variables": 1680,
+      "fixed_local_clause_count": 651953,
+      "fixed_local_variable_count": 280014,
+      "seconds": 0.656,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "global_representative_index": 128,
+      "record_index": 1,
+      "representative_index": 0,
+      "fixed_boolean_non_disjoint_edges": 1806,
+      "remaining_disjoint_edge_variables": 1680,
+      "fixed_local_clause_count": 651825,
+      "fixed_local_variable_count": 279925,
+      "seconds": 0.656,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "global_representative_index": 192,
+      "record_index": 2,
+      "representative_index": 0,
+      "fixed_boolean_non_disjoint_edges": 1806,
+      "remaining_disjoint_edge_variables": 1680,
+      "fixed_local_clause_count": 651503,
+      "fixed_local_variable_count": 279896,
+      "seconds": 0.688,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "global_representative_index": 288,
+      "record_index": 4,
+      "representative_index": 0,
+      "fixed_boolean_non_disjoint_edges": 1806,
+      "remaining_disjoint_edge_variables": 1680,
+      "fixed_local_clause_count": 651345,
+      "fixed_local_variable_count": 279789,
+      "seconds": 0.64,
+      "errors": [],
+      "ok": true
+    }
+  ],
+  "exact_system_equivalence": {
+    "bp_symbol_rhs_sum_per_outer_vertex": 24,
+    "forced_outer_degree": 12,
+    "forced_outer_edges": 504,
+    "forced_common_outer_two_path_sum": 5544,
+    "actual_edge_plus_common_sum": 6048,
+    "pair_target_histogram": {
+      "1": 924,
+      "2": 2562
+    },
+    "pair_target_sum": 6048,
+    "universal_inequalities_become_equalities": true,
+    "ordinary_c4_block_scope": "Not a BP-only claim. BP fixes degree 12 and makes overlap blocks incident with a C4 zero, hence the C4 has 40 disjoint incidences. Each opposite pair in the C4 already has its two internal common neighbours, so the outer-pair upper bound makes every external vertex incident at most once. There are exactly 40 vertices on disjoint supports, so every such incidence is exactly one.",
+    "projected_edge_solution_equivalence": "With all 1806 non-disjoint edge values fixed, the universal CNF and the fixed-local CNF have the same feasible assignments on the remaining 1680 disjoint outer edges. Universal one-way product helpers can be set to exact AND values in the converse direction.",
+    "ok": true
+  },
+  "core_audit": {
+    "solver_core_semantics_used": "For exact baseline F, CaDiCaL get_core after UNSAT under A returns C subset A with F AND C UNSAT. Therefore C subset B implies F AND B UNSAT.",
+    "required_match": "exact signed-literal containment",
+    "unsigned_variable_match_is_unsafe": true,
+    "exact_baseline_hash_required": "91D22E62625E1221DD46B819E89494DB8141DD4DDC9A06F13B9ABDB530B83242",
+    "rows": [
+      {
+        "global_representative_index": 0,
+        "record_index": 0,
+        "representative_index": 0,
+        "assumption_sha256": "4F37F5C9FD088469BC45C75A56FBED0E7483B1C4EB224DF5D6D18B0C8D7164A2",
+        "status": "UNSAT",
+        "conflicts": 10140,
+        "solve_seconds": 9.344,
+        "core_size": 85,
+        "core_positive": 68,
+        "core_negative": 17,
+        "reported_ordered_core_sha256": "AAF7870D88974ADC963B710DBC9DB9B8A5D2FE126A0558B6D6B7F22D9B5B5855",
+        "canonical_literal_set_sha256": "AAF7870D88974ADC963B710DBC9DB9B8A5D2FE126A0558B6D6B7F22D9B5B5855",
+        "signed_e75_covered_global_indices": [
+          0
+        ],
+        "unsigned_variable_only_e75_covered_count": 352,
+        "errors": [],
+        "ok": true
+      },
+      {
+        "global_representative_index": 128,
+        "record_index": 1,
+        "representative_index": 0,
+        "assumption_sha256": "E8D996268BD251FD1FD6F4B6A2675DE95EE75F64F2F97D8C22FC9E3754B52D3E",
+        "status": "UNSAT",
+        "conflicts": 70922,
+        "solve_seconds": 28.782,
+        "core_size": 91,
+        "core_positive": 68,
+        "core_negative": 23,
+        "reported_ordered_core_sha256": "B3164AFA98960AEECE076416C7B8883945463FA5244CA1B377CFDE051C3BFA26",
+        "canonical_literal_set_sha256": "B3164AFA98960AEECE076416C7B8883945463FA5244CA1B377CFDE051C3BFA26",
+        "signed_e75_covered_global_indices": [
+          128
+        ],
+        "unsigned_variable_only_e75_covered_count": 352,
+        "errors": [],
+        "ok": true
+      },
+      {
+        "global_representative_index": 192,
+        "record_index": 2,
+        "representative_index": 0,
+        "assumption_sha256": "2F7398158E4A9479920EB2E5BEB0DB2FB2BA2CC355D3306CFA72584DE066CD95",
+        "status": "UNSAT",
+        "conflicts": 27700,
+        "solve_seconds": 12.062,
+        "core_size": 98,
+        "core_positive": 68,
+        "core_negative": 30,
+        "reported_ordered_core_sha256": "88069BFFAC704F5CE6BA420FCA986F7005750A1A666695B662A16750133AF7CA",
+        "canonical_literal_set_sha256": "88069BFFAC704F5CE6BA420FCA986F7005750A1A666695B662A16750133AF7CA",
+        "signed_e75_covered_global_indices": [
+          192
+        ],
+        "unsigned_variable_only_e75_covered_count": 352,
+        "errors": [],
+        "ok": true
+      },
+      {
+        "global_representative_index": 288,
+        "record_index": 4,
+        "representative_index": 0,
+        "assumption_sha256": "B6C9594DA7CE9CAF159468102E81E34C547A18F77FCC98BD487D7F1C4504A53C",
+        "status": "UNSAT",
+        "conflicts": 36877,
+        "solve_seconds": 14.156,
+        "core_size": 92,
+        "core_positive": 68,
+        "core_negative": 24,
+        "reported_ordered_core_sha256": "FD3361D7D436280B7AB30AF5BE43E7DE2094490C3D39ABEC5E3AE9D68FFBE457",
+        "canonical_literal_set_sha256": "FD3361D7D436280B7AB30AF5BE43E7DE2094490C3D39ABEC5E3AE9D68FFBE457",
+        "signed_e75_covered_global_indices": [
+          288
+        ],
+        "unsigned_variable_only_e75_covered_count": 352,
+        "errors": [],
+        "ok": true
+      }
+    ],
+    "distinct_e75_assignments_covered": 4,
+    "covered_e75_global_indices": [
+      0,
+      128,
+      192,
+      288
+    ],
+    "cross_source_e75_coverage": 0,
+    "future_e74_evaluated": false,
+    "future_e74_note": "E74 has not yet been tested. Its normalized representatives must be converted to complete 1806-literal assignments in the identical coordinate map before these four literal sets can be screened."
+  },
+  "harness_audit": {
+    "path": "scratch_root_universal_core_harness.py",
+    "sha256": "AC3AA786332244921EE5BF1ADC375BFF060F86A8B59EEDEEC15C132DEE51A9F4",
+    "screen_only_source_rows_all_covered": true,
+    "future_catalogue_schema": "normalized record(s) with supports_in_fibre_order, local_vertex_order, and complete representative present-edge lists"
+  },
+  "claim_boundary": "Four E75 representatives only were solved on the universal baseline. The raw CaDiCaL cores cover no other E75 representative, E74 containment is not yet evaluated, and no independently checked UNSAT proof certificate exists.",
+  "seconds": 4.703
+}

@@ -1,0 +1,101 @@
+{
+  "status": "VERIFIED",
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "scope": {
+    "external_n3_lower_bound_proof_replayed": false,
+    "identity_n3_plus_3P_replayed": false,
+    "corrected_prism_bridge_reproved_here": false,
+    "arithmetic_from_stated_external_premises_checked": true,
+    "heavy_sat_sweep_run_by_this_audit": false,
+    "existing_unknown_portfolio_used_as_proof": false
+  },
+  "variable_partition": {
+    "outer_vertices": 84,
+    "outer_edge_variables": 3486,
+    "support_fibres": 21,
+    "same_fibre_candidates": 126,
+    "sides_bounded": 84,
+    "diagonals_excluded": 42,
+    "per_fibre": {
+      "same": 6,
+      "sides": 4,
+      "diagonals": 2
+    },
+    "side_selector": "same group-support fibre and exactly one shared symbol",
+    "diagonal_selector": "same group-support fibre and zero shared symbols",
+    "target_selector_matches_independent_reconstruction": true,
+    "side_variables_sha256": "0B9D8A24CC033FB12897FA92F3636A8E38CD856E02D477C27BF7DF8F2DD612C5",
+    "diagonal_variables_sha256": "D8F74805947BCC786E441AF81DDFAEBCDCA6502D28ED29E7D713B41CAEBFAE54"
+  },
+  "arithmetic_under_external_premises": {
+    "premises": [
+      "n3 >= 708",
+      "n3 + 3 P = 4158",
+      "sum_r S(r) = 6 P"
+    ],
+    "P_upper": 1150,
+    "six_P_upper": 6900,
+    "floor_six_P_over_99": 69,
+    "conclusion": "some root has S(r) <= 69",
+    "does_not_imply": "some root has E0(r)=S(r)+D(r) <= 69",
+    "external_proofs_not_replayed": true,
+    "builder_rejects_every_bound_other_than_69": true
+  },
+  "cnf_audit": {
+    "base_header": [
+      817278,
+      1622502
+    ],
+    "conditioned_header": [
+      818313,
+      1624518
+    ],
+    "base_sha256": "91D22E62625E1221DD46B819E89494DB8141DD4DDC9A06F13B9ABDB530B83242",
+    "base_clause_body_sha256": "4E7D4BC5CA13D65F877C3874E2C52058A74F604065F1C0553DCB172E0CC8F8B9",
+    "base_clause_body_preserved_byte_for_byte": true,
+    "appended_suffix_sha256": "B118A5E6BFBAD999FDD1B09258B181B73C0B434B984991932D793E01A00FE648",
+    "appended_suffix_equals_rebuilt_pysat_seqcounter": true,
+    "cardinality_encoding": "PySAT EncType.seqcounter at-most-69",
+    "cardinality_input_count": 84,
+    "appended_counter_clauses": 2016,
+    "added_auxiliary_variables": 1035,
+    "suffix_outer_inputs_are_exactly_84_sides": true,
+    "suffix_contains_no_diagonal_input": true,
+    "suffix_contains_no_old_base_auxiliary": true,
+    "maximum_variable_seen_in_suffix": 818313,
+    "conditioned_sha256": "C2B9C01DC6E11EC03E5B387060FCA71FEDA893BA12C007F0105326A1D7CB9828",
+    "header_hash_metadata_all_match": true
+  },
+  "separation_from_quarantined_e0": {
+    "old_artifact_status": "QUARANTINED_UNSOUND_PREMISE_NEVER_SOLVED",
+    "old_cardinality_inputs": 126,
+    "old_inputs_equal_sides_union_diagonals": true,
+    "corrected_inputs_equal_old_minus_diagonals": true,
+    "corrected_added_clauses": 2016,
+    "quarantined_added_clauses": 7854,
+    "corrected_added_variables": 1035,
+    "quarantined_added_variables": 3933,
+    "cnf_hashes_differ": true,
+    "no_e0_bound_claim_in_corrected_metadata": true
+  },
+  "existing_portfolio_observation": {
+    "exists": true,
+    "status": "UNKNOWN",
+    "counts": {
+      "SAT": 0,
+      "UNSAT": 9,
+      "UNKNOWN": 17
+    },
+    "used_by_audit": false
+  },
+  "artifacts": {
+    "scratch_root_side_bound_sat.py": "2F802334372AB26BD01580BDB42A53142BCE18B4E532C925A85B0C61E1393299",
+    "scratch_general_exact.cnf": "91D22E62625E1221DD46B819E89494DB8141DD4DDC9A06F13B9ABDB530B83242",
+    "scratch_general_exact_build.json": "AA3143DBAF7BB7CB9883D9BA5E320BD973AB0C4894D22CFC04062D79B27BD97E",
+    "scratch_root_side_le69.cnf": "C2B9C01DC6E11EC03E5B387060FCA71FEDA893BA12C007F0105326A1D7CB9828",
+    "scratch_root_side_le69_build.json": "0F12E771F9352A0F5681DF8AFBB5351CDC2E713FAA9134624B235C49C8945F5F"
+  },
+  "claim_boundary": "The CNF mechanically and exactly encodes at most 69 of the 84 side variables, not E0. Conditional nonexistence would additionally rely on the unreplayed external n3/P premises and an exhaustive UNSAT solve. No solve was run by this audit; the existing portfolio is UNKNOWN."
+}

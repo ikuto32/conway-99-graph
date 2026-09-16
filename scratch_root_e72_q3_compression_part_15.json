@@ -1,0 +1,253 @@
+{
+  "status": "COMPLETE",
+  "model": "self-contained-root-reduced E0=72,Q>=3 exact compression partition",
+  "partition_index": 15,
+  "partition": [
+    3,
+    3,
+    3,
+    3
+  ],
+  "maximum_Q_capacity": 4,
+  "passes_Q_at_least_4_capacity": true,
+  "theorem_inputs": {
+    "external_premise_required": false,
+    "self_contained_root_reduction": "every putative SRG has a root with S(r)<=69",
+    "root_implication": "E0=72 and S(r)<=69 imply Q=E0-S>=3",
+    "side_bound_audit": "scratch_root_side_bound_selfcontained_audit.json",
+    "total_deficit": 12,
+    "total_fibre_edges_E0": 72,
+    "required_diagonal_edges_Q": ">=3",
+    "free_Ritz_interval": [
+      "-4",
+      "3"
+    ],
+    "free_Ritz_sum": "36",
+    "spectral_maximizing_free_Ritz_multiset": [
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "-3"
+    ],
+    "free_Ritz_maximum_square_sum": "126",
+    "spectral_D_square_upper": 4704,
+    "disjoint_constant_derivation": "3360-16*12=3168",
+    "trace_identity": "tr(D^2)=sum_F(8-2*delta_F)^2+3168+2*(overlap_square+x_square)",
+    "BP_overlap_row_sum": "4*delta_F",
+    "disjoint_deviation_row_sum": "sum x_FG=2*delta_F for x=4-D",
+    "weighted_port_balance": "at every root group, 2*max(incident delta)<=sum(incident delta)",
+    "partition_Q_capacity": "2*(number of delta2 fibres)+(number of delta3 fibres)",
+    "external_n3_bound_used": false,
+    "legacy_schema_note": "fields named passes_Q_at_least_4_capacity are engine compatibility fields and mean passes configured Q>=3 in this artifact"
+  },
+  "coverage": {
+    "expected_labelled_placements": 5985,
+    "expected_weighted_S7_orbits_by_Burnside": 10,
+    "labelled_placements_scanned": 5985,
+    "balanced_labelled_placements": 105,
+    "unbalanced_labelled_placements": 5880,
+    "balanced_orbits_materialized": 1,
+    "checkpoint_every_placements": 250000,
+    "scan_order": "deterministic repeated-weight-unlabelled sparse placement order",
+    "unbalanced_orbits_by_difference": 9,
+    "balanced_orbit_size_sum": 105,
+    "labelled_balance_identity_verified": true,
+    "orbit_balance_identity_verified": true,
+    "scan_elapsed_seconds_last_invocation": 0.032
+  },
+  "balanced_raw_orbits": [
+    {
+      "representative_code_hex": "0x6c00d8",
+      "orbit_size": 105
+    }
+  ],
+  "rows": [
+    {
+      "partition": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "orbit_index": 0,
+      "representative_code_hex": "0x6c00d8",
+      "orbit_size": 105,
+      "weighted_stabilizer_order": 48,
+      "exceptional_supports": [
+        {
+          "support_index": 1,
+          "support": [
+            0,
+            2
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 2,
+          "support": [
+            0,
+            3
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 6,
+          "support": [
+            1,
+            2
+          ],
+          "deficit": 3
+        },
+        {
+          "support_index": 7,
+          "support": [
+            1,
+            3
+          ],
+          "deficit": 3
+        }
+      ],
+      "maximum_Q_capacity": 4,
+      "filter_complete": true,
+      "support_signature": {
+        "weighted_edges": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ],
+        "simple_degree_sequence": [
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0
+        ],
+        "weighted_degree_sequence": [
+          6,
+          6,
+          6,
+          6,
+          0,
+          0,
+          0
+        ]
+      },
+      "diagonal_square": 1104,
+      "joint_off_diagonal_square_budget": 216,
+      "disjoint_continuous_minimum": "864/55",
+      "disjoint_continuous_ceiling": 16,
+      "weighted_port_balance": true,
+      "weighted_port_balance_details": [
+        {
+          "group": 0,
+          "incident_deficits": [
+            3,
+            3
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 1,
+          "incident_deficits": [
+            3,
+            3
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 2,
+          "incident_deficits": [
+            3,
+            3
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        },
+        {
+          "group": 3,
+          "incident_deficits": [
+            3,
+            3
+          ],
+          "total_deficit": 6,
+          "maximum_deficit": 3,
+          "passes": true
+        }
+      ],
+      "overlap": {
+        "feasible": true,
+        "minimum_square": 144,
+        "visited_complete_assignments": 7,
+        "one_minimizer": [
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            1,
+            6,
+            6
+          ],
+          [
+            2,
+            7,
+            6
+          ],
+          [
+            6,
+            7,
+            6
+          ]
+        ],
+        "minimizer_verified": true
+      },
+      "passes_weighted_port_overlap_and_real_relaxation": true
+    }
+  ],
+  "claim_boundary": "Necessary Q>=3 root branch from the audited self-contained S<=69 theorem.",
+  "schema_compatibility": "fields named passes_Q_at_least_4_capacity are engine compatibility fields and mean passes configured Q>=3 in this artifact",
+  "summary": {
+    "balanced_orbits": 1,
+    "filter_rows_complete": 1,
+    "overlap_rows_computed": 1,
+    "overlap_feasible": 1,
+    "spectral_real_survivors": 1,
+    "balanced_labelled_placements": 105,
+    "spectral_real_surviving_labelled_placements": 105
+  }
+}

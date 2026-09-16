@@ -1,0 +1,140 @@
+{
+  "status": "SELECTED_ROOT_E0_LE_72_VERIFIED",
+  "ok": true,
+  "errors": [],
+  "theorem": "Every putative srg(99,14,1,2) has a root r with S(r)<=69 and E0(r)<=72.",
+  "logical_chain": [
+    "the self-contained triangle/prism argument selects a root with S<=69",
+    "Q=E0-S and the exact fibre catalogue exclude E0>=77 by diagonal capacity",
+    "exact Gram circulation and an independent graph classification exclude E0=75",
+    "the integral residual/collision argument and an independent occupancy census exclude E0=76",
+    "complete local reductions plus independently checked hash-bound DRUP proofs exclude E0=74 and E0=73",
+    "therefore the selected root has E0<=72"
+  ],
+  "capacity_rows_E0_77_through_84": [
+    {
+      "E0": 77,
+      "total_deficit": 7,
+      "partitions_checked": 11,
+      "maximum_Q_capacity": 6,
+      "required_Q_from_S_le_69": 8,
+      "excluded": true
+    },
+    {
+      "E0": 78,
+      "total_deficit": 6,
+      "partitions_checked": 9,
+      "maximum_Q_capacity": 6,
+      "required_Q_from_S_le_69": 9,
+      "excluded": true
+    },
+    {
+      "E0": 79,
+      "total_deficit": 5,
+      "partitions_checked": 6,
+      "maximum_Q_capacity": 4,
+      "required_Q_from_S_le_69": 10,
+      "excluded": true
+    },
+    {
+      "E0": 80,
+      "total_deficit": 4,
+      "partitions_checked": 5,
+      "maximum_Q_capacity": 4,
+      "required_Q_from_S_le_69": 11,
+      "excluded": true
+    },
+    {
+      "E0": 81,
+      "total_deficit": 3,
+      "partitions_checked": 3,
+      "maximum_Q_capacity": 2,
+      "required_Q_from_S_le_69": 12,
+      "excluded": true
+    },
+    {
+      "E0": 82,
+      "total_deficit": 2,
+      "partitions_checked": 2,
+      "maximum_Q_capacity": 2,
+      "required_Q_from_S_le_69": 13,
+      "excluded": true
+    },
+    {
+      "E0": 83,
+      "total_deficit": 1,
+      "partitions_checked": 1,
+      "maximum_Q_capacity": 0,
+      "required_Q_from_S_le_69": 14,
+      "excluded": true
+    },
+    {
+      "E0": 84,
+      "total_deficit": 0,
+      "partitions_checked": 1,
+      "maximum_Q_capacity": 0,
+      "required_Q_from_S_le_69": 15,
+      "excluded": true
+    }
+  ],
+  "computer_assisted_branches": {
+    "E0_74": {
+      "labelled_deficit_placements": 28929495,
+      "weighted_support_orbits": 8680,
+      "compression_survivors": 249,
+      "labelled_fibre_state_assignments": 134371022,
+      "Q_at_least_5_port_feasible_states": 89,
+      "exact_overlap_completions": 1461248,
+      "raw_local_survivors": 16384,
+      "local_graph_orbits": 188,
+      "formally_proved_unsat_branches": 188
+    },
+    "E0_73": {
+      "deficit_partitions": 27,
+      "weighted_support_orbits": 21699,
+      "Q_at_least_4_complete_fibre_state_assignments": 4758382,
+      "port_feasible_state_assignments": 980,
+      "exact_overlap_completions": 21061632,
+      "raw_local_survivors": 98304,
+      "local_graph_orbits": 1804,
+      "selector_formulas": 6,
+      "formally_proved_unsat_branches": 1804
+    }
+  },
+  "proof_checker": {
+    "binary_sha256": "10D317DF526C36453986EF09495864BCABD9D02D72D7B772EE78F07939870620",
+    "source_sha256": "57DF8EFD73FC4FD81C4F255A8A7A1659C80C73AB0829CC8194A65F3432CD3E88",
+    "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "artifacts": {
+    "side": {
+      "path": "scratch_root_side_bound_selfcontained_audit.json",
+      "sha256": "4E218FB65924DE96A34C603496330C2F5F39071AC430B1C26BC405C52644846D"
+    },
+    "e75": {
+      "path": "scratch_theory_e75_gram_audit.json",
+      "sha256": "E1E0D6A113FE1ACCB879D10C57372E2CF96E8F4450223B518CC964DE7E528A89"
+    },
+    "e75_independent": {
+      "path": "scratch_theory_e75_gram_independent_audit.json",
+      "sha256": "963C41AC7CD83E7DD08B07442CA2DED99E93B73B24D76B43DC3EFF53097AC923"
+    },
+    "e76": {
+      "path": "scratch_theory_e76_analytic_audit.json",
+      "sha256": "62FD85D3DA3C3B5263640C456910FA13FB835E065D6F2923FCFDA5FC7F4C1864"
+    },
+    "e76_independent": {
+      "path": "scratch_theory_e76_occupancy_independent_audit.json",
+      "sha256": "3781BDCFA1DC9BE3F95905F1AB01BF10F7FF251E99A18925893B7A8B0FF6A75B"
+    },
+    "e73": {
+      "path": "scratch_root_e73_q4_formal_exclusion_audit.json",
+      "sha256": "C5FA0C19F5FB966EAF3674D4DF92A68FB7420AC315E5FE4300C3377C620CBBBE"
+    },
+    "e74": {
+      "path": "scratch_root_e74_q5_formal_exclusion_audit.json",
+      "sha256": "EBBEB93B9EFC6713C49267D30CAA5A67D5F53B58BFDD21D980C01AFA80461FAC"
+    }
+  },
+  "claim_boundary": "This is a necessary selected-root reduction, not a construction or a nonexistence proof. The E0<=72 search remains open."
+}

@@ -1,0 +1,54 @@
+{
+  "status": "E71_GRAM_MACRO_CATALOG_AUDIT_PASS",
+  "model": "independent E0=71 macro catalog structural/coverage audit",
+  "inputs": {
+    "scratch_root_e71_q2_gram_fast_expansion_macro_catalog.json": "C0A53C4306887A72B6A1C0F42159EF879E8DDC69E6B6568E9281F27A2AD07049",
+    "scratch_root_e71_q2_gram_fast_expansion_signature_census.json": "81AE15C2AFE1DB19DE272806A2CF57A40C10FF830256E0CE171484D65099A4F1",
+    "scratch_root_e71_q2_port_feasible_states.json": "B9BC30231DBE650905EBFE050FAD2397C4B7DB24097A597887607B206C6F28CB",
+    "scratch_root_e71_q2_local_completion_counts.json": "8842CDCCA6402BB7B26C42327C032C6AC1B9D72D8D43F06074060C8206A3D10E",
+    "scratch_root_e71_unsigned_kernel_filter.json": "8F44FAD9134A031B38EDBEDB24D76CBC7806048441E1AD9C5A461D1B03C50CF0",
+    "scratch_general_e72_q3_gram_fast_expansion_macro_catalog.json": "BED6A7F1258576E8028B6B17736FD91ED8E8D9A79D2E90FC744A07DAE14D6213",
+    "scratch_general_e72_q3_gram_fast_expansion_signature_census.json": "9CDFE380327CB5EF00158A88BCDF5494CAF754714EE74CCDE722C976EAB4D415"
+  },
+  "input_frontier": {
+    "support_rows": 1512,
+    "port_feasible_state_assignments": 361900,
+    "exact_overlap_completions": 15215493120,
+    "state_orbits": 14607
+  },
+  "Gram_frontier": {
+    "nonempty_support_rows": 93,
+    "macro_entries": 193,
+    "macro_entries_mod_state_stabilizers": 180,
+    "labelled_state_matching_coverage": 61112320,
+    "Q_histogram": {
+      "2": 10289152,
+      "4": 33980416,
+      "6": 15728640,
+      "8": 1114112
+    }
+  },
+  "E72_regression": {
+    "catalog_sha256": "BED6A7F1258576E8028B6B17736FD91ED8E8D9A79D2E90FC744A07DAE14D6213",
+    "established_catalog_sha256": "BED6A7F1258576E8028B6B17736FD91ED8E8D9A79D2E90FC744A07DAE14D6213",
+    "macro_entries": 177,
+    "macro_entries_mod_state_stabilizers": 163,
+    "labelled_state_matching_coverage": 141545472,
+    "input_overlap_completions": 596148224,
+    "byte_identical_artifact_preserved": true
+  },
+  "checks": {
+    "catalog_entries_have_distinct_global_keys": true,
+    "all_state_orbit_stabilizer_identities": true,
+    "all_signature_orbits_closed_and_partitioned": true,
+    "one_canonical_entry_per_signature_orbit": true,
+    "canonical_and_unquotiented_coverage_equal": true,
+    "catalog_Q_histogram_matches_signature_census": true,
+    "catalog_nonempty_source_set_matches_signature_census": true,
+    "input_completion_total_matches_count_rows": true,
+    "support_filter_intersection_reconstructed": true,
+    "E72_catalog_regression_totals_unchanged": true,
+    "E72_catalog_downstream_hash_preserved": true
+  },
+  "claim_boundary": "This audits macro materialization against the independently stored signature census and primary count inputs. It does not assert that any macro extends to a full 99-vertex SRG."
+}

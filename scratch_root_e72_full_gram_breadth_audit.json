@@ -1,0 +1,1063 @@
+{
+  "status": "BREADTH_AUDIT_PASS",
+  "model": "lean selector-gated exact E72 full-Gram macro aggregate",
+  "priority_source": "scratch_general_e72_remaining_frontier_priority.md",
+  "priority_source_sha256": "429060C4A2D93E2E209BDE1636863C8AB0FDBC17AEF4BC0D19B7D0C231800901",
+  "screen_conflict_budget_per_source": 100000,
+  "screened_source_rows": 23,
+  "screened_coverage": 5939200,
+  "c100000_terminal_unsat_rows": 6,
+  "c100000_terminal_unsat_coverage": 573440,
+  "c100000_unknown_rows": 17,
+  "sat_rows": 0,
+  "latest_terminal_unsat_rows": 23,
+  "latest_terminal_unsat_coverage": 5939200,
+  "formally_certified_rows_at_audit_time": 11,
+  "formally_certified_coverage_at_audit_time": 4972544,
+  "source332": {
+    "source_row_index": 332,
+    "frozen_priority_rank": 17,
+    "coverage": 131072,
+    "status": "SKIPPED_BY_UNIQUE_GRAM_BUILDER",
+    "reason": "The unique-full-Gram generic builder rejects the sole one-dimensional Gram family. Source332 requires the three separately derived integral profiles t=-1,0,1 to be selector-branched; silently choosing one would be incomplete.",
+    "parametric_gram": "scratch_theory_e72_source332_parametric_gram.json",
+    "parametric_gram_sha256": "875BC3C0FA6B862557EE7ED4A63EF04D966E83A7B0F89874D562C95FA948DE09",
+    "profiles_required": 3
+  },
+  "related_exclusions_outside_breadth_screen": {
+    "source133": {
+      "source_row_index": 133,
+      "frozen_priority_rank": 1,
+      "catalog_labelled_coverage": 2502656,
+      "regular_macros_0_through_3": {
+        "status": "SOLVER_FREE_CHAIN_AUDIT_PASS",
+        "coverage": 2490368,
+        "local_48_vertex_unsat_orbits": 5138,
+        "solver_free_orbit_chain": [
+          5138,
+          81,
+          1,
+          0
+        ],
+        "formal_proof_status": "EXACT_EXECUTABLE_ENUM_NOT_PROOF_ASSISTANT_CERTIFIED",
+        "solver_free_audit": "scratch_root_e72_source133_solver_free_chain_audit.json",
+        "solver_free_audit_sha256": "41BAA71ED637C77377361F94566F813A3E7D3941E96345DE93A572B7D3216D8B",
+        "prior_sat_ledger": "scratch_general_e72_source133_regular_exclusion_audit.json",
+        "prior_sat_ledger_sha256": "151CF1A39A9FE91EE1226A2B84CDA3F10F89526CD9F7C08746101A2048804008"
+      },
+      "nonregular_macro_4": {
+        "status": "FORMAL_AUDIT_PASS",
+        "coverage": 12288,
+        "formal_proof_status": "DRAT_VERIFIED",
+        "audit": "scratch_root_e72_source133_macro4_formal_audit.json",
+        "audit_sha256": "D1D110A908CB55FE307F1935E8479366C41B4487AB1597C974E61922F7722D07",
+        "proof_sha256": "10F8AC98DBF9316D7B6B89E79A302ED7E126630EFE2CA40E0F5302973E9374AB"
+      },
+      "coverage_partition_verified": true,
+      "boundary": "Macro 4 has an externally checked full exact-CNF certificate. The four regular macros are independently excluded by an exact solver-free finite-map enumeration (and agree with the SAT census), but this is not a proof-assistant kernel certificate."
+    }
+  },
+  "rows": [
+    {
+      "screen_sequence": 1,
+      "source_row_index": 181,
+      "frozen_priority_rank": 3,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 31,
+      "port_feasible_labelled_states": 16,
+      "state_orbits": 1,
+      "macro_branches": 1,
+      "coverage": 1048576,
+      "cnf_variables": 426745,
+      "cnf_clauses": 984141,
+      "cnf_sha256": "8419DB1F5357C7339686D160C80ABB35728BAB99BB6D68CAA98F02E400CC0AD0",
+      "c100000": {
+        "path": "scratch_root_e72_source181_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "9C7F38774A369659DB15D6740837AB2326C7476038207DA96465EC9EDAA47C01",
+        "status": "UNKNOWN",
+        "conflicts": 100003,
+        "solve_seconds": 37.015
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source181_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "7455A73B1BB14EF4D47C01E10745E85C8F423C34CBC034759F4030B01C5C0F1C",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 483021,
+        "solve_seconds": 168.312
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source181_formal_audit.json",
+        "sha256": "A4F46955ACE4E6E24034B06920F3B44FDCD1984A6AA86E2CA7ABCEBFB71FF8BC",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "B922E92D320E180625BC070DE82F83BB6D53309661D9109835AD84C03E8E7C9F",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 2,
+      "source_row_index": 182,
+      "frozen_priority_rank": 4,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 32,
+      "port_feasible_labelled_states": 16,
+      "state_orbits": 1,
+      "macro_branches": 1,
+      "coverage": 1048576,
+      "cnf_variables": 395161,
+      "cnf_clauses": 911261,
+      "cnf_sha256": "7930F976F24D52DC896B511CC6BB9780AA437F671DE02E2DA7D541BC44990C8A",
+      "c100000": {
+        "path": "scratch_root_e72_source182_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "5DA63478D21DBBDB9478117D58C9B7B1B26FE02F038F0A8F4C8AEDA056E6C52E",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 34.156
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source182_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "E0650BCE2D875BCA0A79D7D8F1052F4881F86856B48293D06D9D11DB143A1370",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 405910,
+        "solve_seconds": 147.735
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source182_formal_audit.json",
+        "sha256": "244C57C59B106BE9FB09B934743473920819CAF942C70A1CE1AF9CB3FAF796FB",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "036B791C8CBF15C634720E06DCA08AE1549F7727374C1FA070FAB846A4686DAA",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 3,
+      "source_row_index": 194,
+      "frozen_priority_rank": 6,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 44,
+      "port_feasible_labelled_states": 8,
+      "state_orbits": 1,
+      "macro_branches": 1,
+      "coverage": 524288,
+      "cnf_variables": 395092,
+      "cnf_clauses": 911168,
+      "cnf_sha256": "E7358604574DAA2A77E1DF2C253E8B0A468A2C05BCA364392CA9A1DA1A147C35",
+      "c100000": {
+        "path": "scratch_root_e72_source194_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "C4330537DDD3B04DA720C6F8D855335317B78EFCBE16A45A7AFEE13BFADAFC1D",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 34.484
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source194_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "49098E26177766D8AF91A5CCE56AC529FAD349A988C5FA5082BA1716FE0FA5D8",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 297433,
+        "solve_seconds": 131.047
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source194_formal_audit.json",
+        "sha256": "5F505851AED7B017BAB9724DD7E353939FA362D1CF5BEA94F595C6CD0B7C2539",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "EE97270ADFEBA87D50AB538B2458695A83FF1425745DBB5F2EB95F0FAAEFFCE8",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 4,
+      "source_row_index": 177,
+      "frozen_priority_rank": 5,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 27,
+      "port_feasible_labelled_states": 16,
+      "state_orbits": 2,
+      "macro_branches": 1,
+      "coverage": 524288,
+      "cnf_variables": 426676,
+      "cnf_clauses": 984048,
+      "cnf_sha256": "E2AE7BE41C61F88F1D758871EC35548DE073780DEEC2FBDC20C4A3A73E9E4126",
+      "c100000": {
+        "path": "scratch_root_e72_source177_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "4F71EA0D12654AE16F0406E0A285BB7E237B68E99A49810589ED515142FB1D6E",
+        "status": "UNKNOWN",
+        "conflicts": 100005,
+        "solve_seconds": 31.578
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source177_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "AB8460CDCE8C3228B89775BB83318D6CC2038F37A5D512D1AA155B1FB0F79678",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 427510,
+        "solve_seconds": 170.547
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source177_formal_audit.json",
+        "sha256": "294B93D4CE39FF586239EE8BE0667ABC0519F5DD65F6C76D5DDC6EB9B65AD05E",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "696DB539C8082981E5CBBB2F5B6F27573DE1964AB29A2FEE1BE58F3C68C47089",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 5,
+      "source_row_index": 524,
+      "frozen_priority_rank": 7,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 0,
+      "port_feasible_labelled_states": 292,
+      "state_orbits": 6,
+      "macro_branches": 5,
+      "coverage": 442368,
+      "cnf_variables": 493725,
+      "cnf_clauses": 1135181,
+      "cnf_sha256": "CDAAEF4EA6A5EDE7990461ED3ED944428F08B3DC5BD068AD1FB714FF199646E5",
+      "c100000": {
+        "path": "scratch_root_e72_source524_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "E70CA7741C13E0FAD90D1FD4369121D8C3A9AC00DC0A60EB44FA594EA16184E8",
+        "status": "UNKNOWN",
+        "conflicts": 100004,
+        "solve_seconds": 42.047
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source524_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "FD048E2BC26A014EAE355D24A69D4183FD8B3094C50667DAF54BB7C2139487C5",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 860380,
+        "solve_seconds": 372.891
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source524_formal_audit.json",
+        "sha256": "4989815AA45F5D0F91E4703B9A15DD78094089423C713C7C9D8FB27E2753BA43",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "CFD62B9865213FB1A05ED39A458A6E5D9F7700C0AB81788BA5BC09FAF5ECEB7A",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 6,
+      "source_row_index": 587,
+      "frozen_priority_rank": 8,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 63,
+      "port_feasible_labelled_states": 72,
+      "state_orbits": 4,
+      "macro_branches": 3,
+      "coverage": 327680,
+      "cnf_variables": 457939,
+      "cnf_clauses": 1052997,
+      "cnf_sha256": "6F4DA4E079412DCDBE67A8187A1E35BDAE2B539985C4788B73EC3670FE622439",
+      "c100000": {
+        "path": "scratch_root_e72_source587_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "FB5DF958439102A6A97B575049FB5D41A4C4494443C0A3A06791026EDC7F0E4F",
+        "status": "UNKNOWN",
+        "conflicts": 100002,
+        "solve_seconds": 38.172
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source587_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "E01DE9AD5E38BBB5BADBA0372F715EF1F3CA4D2BC805ECB78C036A7BC1BCD97E",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 568674,
+        "solve_seconds": 236.391
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source587_formal_audit.json",
+        "sha256": "73B74A5DD66C987582B530707B439F89C10DE4F7C94661F066EA8443B14EF5A7",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "61A7DCFA58A28429C7FD2E6928770821D7FF96E5CBF45A8E8403AA068352EE1A",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 7,
+      "source_row_index": 195,
+      "frozen_priority_rank": 9,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 45,
+      "port_feasible_labelled_states": 8,
+      "state_orbits": 1,
+      "macro_branches": 1,
+      "coverage": 262144,
+      "cnf_variables": 395119,
+      "cnf_clauses": 911179,
+      "cnf_sha256": "1F094BDD9B016E5B44112AA8D2EF1DF36F51D6CDE684675F7BAB5A1260981334",
+      "c100000": {
+        "path": "scratch_root_e72_source195_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "536449548C22963FBA4B846FE1EBE99EE043B3A8159856ED4241659B9FE966BA",
+        "status": "UNSAT",
+        "conflicts": 79136,
+        "solve_seconds": 23.5
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source195_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "536449548C22963FBA4B846FE1EBE99EE043B3A8159856ED4241659B9FE966BA",
+        "conflict_budget": 100000,
+        "status": "UNSAT",
+        "conflicts": 79136,
+        "solve_seconds": 23.5
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source195_formal_audit.json",
+        "sha256": "AAA6DC3D3F648A2766AD64B74031FE41F585326334A271A458E79C646D82065D",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "DE3A80F78A91E544108255092CBBD0856D876B2060909B831E65AAC120B2B561",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 8,
+      "source_row_index": 172,
+      "frozen_priority_rank": 10,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 22,
+      "port_feasible_labelled_states": 44,
+      "state_orbits": 5,
+      "macro_branches": 3,
+      "coverage": 200704,
+      "cnf_variables": 429595,
+      "cnf_clauses": 990085,
+      "cnf_sha256": "1C6E950AD29786E11C8CF09E9B1197C30887EC2CB7032DC6596F159660100AB2",
+      "c100000": {
+        "path": "scratch_root_e72_source172_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "59216A787399F12B0C0F1850AA62B89883B34FD613E50A00645ABA363D455F1F",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 40.109
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source172_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "C2194896ADB1584EC0FBCA9D7779F90C7FA1D839816848991E640009B246E406",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 350344,
+        "solve_seconds": 146.047
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source172_formal_audit.json",
+        "sha256": "88A4425D11C5CEE1B9F858BB368EEBED7E97C0B08991CDFB428E59B7AADCEF3A",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "C4164FBBC43CEE148EAF0403D267260669A35BF988AB1E0F2BF162E2F3126286",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 9,
+      "source_row_index": 193,
+      "frozen_priority_rank": 11,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 43,
+      "port_feasible_labelled_states": 24,
+      "state_orbits": 3,
+      "macro_branches": 3,
+      "coverage": 200704,
+      "cnf_variables": 398779,
+      "cnf_clauses": 918613,
+      "cnf_sha256": "4F2E925F1479B3E29A5F314296549CA0D36BFE1B787ABFA788E061817C4BE2B7",
+      "c100000": {
+        "path": "scratch_root_e72_source193_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "02BACC75682D382271A3FAA41085AAAA145D6343DF457A9FA7FDCF46727F092D",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 34.453
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source193_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "EFE52F88F0305A39B0C8C8E33386477D03C5241D0513B043D5F21831B6E4E490",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 384031,
+        "solve_seconds": 151.75
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source193_formal_audit.json",
+        "sha256": "8239912EBC428330330FFBA1D52C245D156FDBC437619E93E5E543DDAA5DBF3C",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "B35E109162C81492CC83C443F6D9CDC64854D06D7335EB26A3B732C71CA933FF",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 10,
+      "source_row_index": 197,
+      "frozen_priority_rank": 12,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 47,
+      "port_feasible_labelled_states": 24,
+      "state_orbits": 2,
+      "macro_branches": 2,
+      "coverage": 196608,
+      "cnf_variables": 373774,
+      "cnf_clauses": 862061,
+      "cnf_sha256": "B23A0E0B31B53B4625A739154F1B97C3FB48E288FD1091DA9EEB8B90D948B8F1",
+      "c100000": {
+        "path": "scratch_root_e72_source197_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "484AEF7FB67060A210BE6FE12201242665F91B482FB38C374BFDD26548A1DDD3",
+        "status": "UNKNOWN",
+        "conflicts": 100001,
+        "solve_seconds": 29.547
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source197_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "C9881CA9B59F9908D181FE940E68D10F050DE4ED85FFFC45B3086C5ACE7AB1AB",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 148221,
+        "solve_seconds": 49.578
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source197_formal_audit.json",
+        "sha256": "057B85CB474CCB56B1C34BCF2993EB9084EE1049DB37E5698D1410FAFD85344A",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "999577D5A863182A9F7F5A58BFC1B19CD3F4EDFBFEB60F2E58740BCB757695E3",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 11,
+      "source_row_index": 562,
+      "frozen_priority_rank": 14,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 38,
+      "port_feasible_labelled_states": 72,
+      "state_orbits": 4,
+      "macro_branches": 2,
+      "coverage": 196608,
+      "cnf_variables": 487862,
+      "cnf_clauses": 1122573,
+      "cnf_sha256": "6B9FE284628A75A9276F0662CA712BDD5524E0DB979B3890CF72AD02A0387CB4",
+      "c100000": {
+        "path": "scratch_root_e72_source562_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "52660C4B6B5237446CEDA547F09E0302F5AE1E5A706F098D61B70D0FA9A84A64",
+        "status": "UNKNOWN",
+        "conflicts": 100002,
+        "solve_seconds": 35.078
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source562_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "F7627621BFF20405156A22ECF06884A60BF68D9865F7EAA84DFA36DB700DA9B4",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 520548,
+        "solve_seconds": 216.656
+      },
+      "formal_certificate": {
+        "path": "scratch_root_e72_source562_formal_audit.json",
+        "sha256": "1A0E0E27FD1B17A36D8A382E0165E833FCD8CB09BB7368C32B1E98AAF8FFB2C1",
+        "status": "FORMAL_AUDIT_PASS",
+        "proof_sha256": "7CE916DA8E833EE58002FE97EBDE5B138B5F599B8865B25C1F8CA648080586E8",
+        "checker_status": "DRAT_VERIFIED"
+      }
+    },
+    {
+      "screen_sequence": 12,
+      "source_row_index": 553,
+      "frozen_priority_rank": 13,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 29,
+      "port_feasible_labelled_states": 144,
+      "state_orbits": 8,
+      "macro_branches": 2,
+      "coverage": 196608,
+      "cnf_variables": 487862,
+      "cnf_clauses": 1122573,
+      "cnf_sha256": "0C62E99E12DE38AB78E195996BCE2CC266DA5C8119CFDBEBE1C48D9F31C43813",
+      "c100000": {
+        "path": "scratch_root_e72_source553_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "8C779DFAA8F072401CBE3ADA57E55B67238BFF4AEEAD6B41EB392AB4E6787004",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 43.86
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source553_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "55AA50B2DF3E3FDAE2626A94803B192246EAECA2E479C279F8CFB4A744315A1C",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 362923,
+        "solve_seconds": 133.203
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 13,
+      "source_row_index": 302,
+      "frozen_priority_rank": 16,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 72,
+      "port_feasible_labelled_states": 24,
+      "state_orbits": 3,
+      "macro_branches": 2,
+      "coverage": 131072,
+      "cnf_variables": 414208,
+      "cnf_clauses": 953961,
+      "cnf_sha256": "47A8B4434755CF24C5E8EFAEF63EC6063143E2F5A593A1B0E972EAE109E36168",
+      "c100000": {
+        "path": "scratch_root_e72_source302_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "8A64A655F29464902B3759EB09DC4A07226D11542105305D64F66EF28FFCD843",
+        "status": "UNKNOWN",
+        "conflicts": 100002,
+        "solve_seconds": 41.906
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source302_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "4507C26FF107049EDCEBF8242B440CE1EA34077E5688951BFC78242346C21EB0",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 126080,
+        "solve_seconds": 45.515
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 14,
+      "source_row_index": 162,
+      "frozen_priority_rank": null,
+      "requested_extra_not_in_frozen_ranking": true,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 12,
+      "port_feasible_labelled_states": 172,
+      "state_orbits": 12,
+      "macro_branches": 2,
+      "coverage": 98304,
+      "cnf_variables": 436370,
+      "cnf_clauses": 1006145,
+      "cnf_sha256": "69DEF9020CD02C28980BC0E86E40EAC8419C52195FF8EB4EB6CF6F929C6E7BE2",
+      "c100000": {
+        "path": "scratch_root_e72_source162_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "5A3D097BD6C3BDAF73C5D84A4358E23DFE040EFC4BF664853FE9D989CE70B6FA",
+        "status": "UNSAT",
+        "conflicts": 514,
+        "solve_seconds": 0.391
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source162_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "5A3D097BD6C3BDAF73C5D84A4358E23DFE040EFC4BF664853FE9D989CE70B6FA",
+        "conflict_budget": 100000,
+        "status": "UNSAT",
+        "conflicts": 514,
+        "solve_seconds": 0.391
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 15,
+      "source_row_index": 611,
+      "frozen_priority_rank": 18,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 87,
+      "port_feasible_labelled_states": 32,
+      "state_orbits": 2,
+      "macro_branches": 6,
+      "coverage": 98304,
+      "cnf_variables": 466114,
+      "cnf_clauses": 1069917,
+      "cnf_sha256": "E4782E3B0935F88052AF44EDDC689D9A8F96E5A6866D7DF7C7D3358FC0D53FE5",
+      "c100000": {
+        "path": "scratch_root_e72_source611_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "E99269393A28C97BBDB254B6E0D2A376B4D79C13000CACF61536A028CEDA0A7E",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 49.421
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source611_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "B1093724B347E59D84A10D34892EC5A43D87C1FF4651F1CE499BDE14DD674F23",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 213555,
+        "solve_seconds": 76.359
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 16,
+      "source_row_index": 291,
+      "frozen_priority_rank": 20,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 61,
+      "port_feasible_labelled_states": 24,
+      "state_orbits": 3,
+      "macro_branches": 1,
+      "coverage": 65536,
+      "cnf_variables": 443857,
+      "cnf_clauses": 1022685,
+      "cnf_sha256": "21095F5748330DA35EA15AFEBE5F06BEBAA5BF42AEF7D492BED5DA2D18996285",
+      "c100000": {
+        "path": "scratch_root_e72_source291_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "7118B70C0C7137C00CD2663BA4E34EE1CF875FB32227CFB3682A1D26BF6D4328",
+        "status": "UNSAT",
+        "conflicts": 23743,
+        "solve_seconds": 9.844
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source291_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "7118B70C0C7137C00CD2663BA4E34EE1CF875FB32227CFB3682A1D26BF6D4328",
+        "conflict_budget": 100000,
+        "status": "UNSAT",
+        "conflicts": 23743,
+        "solve_seconds": 9.844
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 17,
+      "source_row_index": 137,
+      "frozen_priority_rank": 19,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "compression_orbit_index": 4,
+      "port_feasible_labelled_states": 16,
+      "state_orbits": 4,
+      "macro_branches": 4,
+      "coverage": 65536,
+      "cnf_variables": 334984,
+      "cnf_clauses": 774481,
+      "cnf_sha256": "27DCF607E2B55D59C8C4F341568C538FD271016F567712C18A8004DF3057C5B7",
+      "c100000": {
+        "path": "scratch_root_e72_source137_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "EAE9655AF38F358F9D6196F70EC806EA1ECD5128D748D2147332FDB9A90CA3A2",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 36.234
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source137_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "D9BA59345C71FC42C30E2ADEE7B33CB003FDFAE124FC92E5C184FC4D04AA1363",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 123977,
+        "solve_seconds": 51.312
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 18,
+      "source_row_index": 335,
+      "frozen_priority_rank": 22,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 105,
+      "port_feasible_labelled_states": 8,
+      "state_orbits": 1,
+      "macro_branches": 1,
+      "coverage": 65536,
+      "cnf_variables": 403785,
+      "cnf_clauses": 930433,
+      "cnf_sha256": "C1DC776E60BF849C22D74B53E229DB2C2F27F9A781BE9D17655FEC062D577229",
+      "c100000": {
+        "path": "scratch_root_e72_source335_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "8D352975093C8EA68BC295E78D179771A76506D40071E1998C308478A558F022",
+        "status": "UNSAT",
+        "conflicts": 85469,
+        "solve_seconds": 23.718
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source335_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "8D352975093C8EA68BC295E78D179771A76506D40071E1998C308478A558F022",
+        "conflict_budget": 100000,
+        "status": "UNSAT",
+        "conflicts": 85469,
+        "solve_seconds": 23.718
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 19,
+      "source_row_index": 331,
+      "frozen_priority_rank": 21,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 101,
+      "port_feasible_labelled_states": 20,
+      "state_orbits": 3,
+      "macro_branches": 2,
+      "coverage": 65536,
+      "cnf_variables": 414192,
+      "cnf_clauses": 953961,
+      "cnf_sha256": "89F7CB47CA9D0CB23D31C962074DB2ADA74159628C41D869F93D31C4200C08A5",
+      "c100000": {
+        "path": "scratch_root_e72_source331_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "8464771852069CE5DD26BB54CCCB0FB924DFEDB1307A76A4078033174D295253",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 35.172
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source331_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "82B61DBF4C1496A013916CB86E9EA9B178DF081AF2C8AE84FB3AF5B166CD5AF2",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 149495,
+        "solve_seconds": 58.687
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 20,
+      "source_row_index": 610,
+      "frozen_priority_rank": 23,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 86,
+      "port_feasible_labelled_states": 48,
+      "state_orbits": 3,
+      "macro_branches": 4,
+      "coverage": 57344,
+      "cnf_variables": 492600,
+      "cnf_clauses": 1132557,
+      "cnf_sha256": "074729F5C556C5CCF4948AE17D8FCCAFEE2F1302BEB4DD32D58BDC3477C46CAB",
+      "c100000": {
+        "path": "scratch_root_e72_source610_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "29576C15699383092D8E24CF5A5C36243644937874EB38365DCC86C6D748797B",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 37.469
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source610_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "1D8CF373B07CDDC3AB48FBA569999C17F937C33DB9F11AA088EB6C092499F0D9",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 288514,
+        "solve_seconds": 99.953
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 21,
+      "source_row_index": 196,
+      "frozen_priority_rank": 26,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 46,
+      "port_feasible_labelled_states": 56,
+      "state_orbits": 11,
+      "macro_branches": 8,
+      "coverage": 40960,
+      "cnf_variables": 393264,
+      "cnf_clauses": 904381,
+      "cnf_sha256": "E392A203F102260271EA6964D470F4828558C79DF1E14B7F0C1010F427E0C25E",
+      "c100000": {
+        "path": "scratch_root_e72_source196_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "0AE7E27333838538F89216C8BAAFE477179B49D6B4522A823383DEDDF056FD77",
+        "status": "UNKNOWN",
+        "conflicts": 100000,
+        "solve_seconds": 43.11
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source196_lean_full_gram_macro_aggregate_c1000000.json",
+        "sha256": "D49E7E8B4A0C85D579CC0FC97FB7ED5F48750B75F90E858AC8059A703CAC4677",
+        "conflict_budget": 1000000,
+        "status": "UNSAT",
+        "conflicts": 184516,
+        "solve_seconds": 76.766
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 22,
+      "source_row_index": 159,
+      "frozen_priority_rank": 24,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 9,
+      "port_feasible_labelled_states": 136,
+      "state_orbits": 8,
+      "macro_branches": 4,
+      "coverage": 40960,
+      "cnf_variables": 415500,
+      "cnf_clauses": 957741,
+      "cnf_sha256": "EAFEB97B437B48A30EE79516B6E1CDEB3938EDA58BD58091476D76CAC532A7B4",
+      "c100000": {
+        "path": "scratch_root_e72_source159_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "7BA62C6CE61CB156494C17C496E3F7113AF83CCDF77EB03E29E7C8A5C46F2442",
+        "status": "UNSAT",
+        "conflicts": 10944,
+        "solve_seconds": 5.234
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source159_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "7BA62C6CE61CB156494C17C496E3F7113AF83CCDF77EB03E29E7C8A5C46F2442",
+        "conflict_budget": 100000,
+        "status": "UNSAT",
+        "conflicts": 10944,
+        "solve_seconds": 5.234
+      },
+      "formal_certificate": null
+    },
+    {
+      "screen_sequence": 23,
+      "source_row_index": 168,
+      "frozen_priority_rank": 25,
+      "requested_extra_not_in_frozen_ranking": false,
+      "partition": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "compression_orbit_index": 18,
+      "port_feasible_labelled_states": 132,
+      "state_orbits": 14,
+      "macro_branches": 6,
+      "coverage": 40960,
+      "cnf_variables": 418478,
+      "cnf_clauses": 964109,
+      "cnf_sha256": "E6DAC19CB5E0F4F4DAA4170356409C8B2538F63B1683DA564F778027D457262A",
+      "c100000": {
+        "path": "scratch_root_e72_source168_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "9DDA0373E07262838C61F7A10DDE1365A53FD8D3FAB780AFBB737195DC771D9D",
+        "status": "UNSAT",
+        "conflicts": 70532,
+        "solve_seconds": 25.14
+      },
+      "latest_terminal_search": {
+        "path": "scratch_root_e72_source168_lean_full_gram_macro_aggregate_c100000.json",
+        "sha256": "9DDA0373E07262838C61F7A10DDE1365A53FD8D3FAB780AFBB737195DC771D9D",
+        "conflict_budget": 100000,
+        "status": "UNSAT",
+        "conflicts": 70532,
+        "solve_seconds": 25.14
+      },
+      "formal_certificate": null
+    }
+  ],
+  "claim_boundary": "UNKNOWN is not evidence of satisfiability. UNSAT search checkpoints are computational unless a formal_certificate is attached. Even a checked CNF certificate remains conditional on separately audited census, canonicalization, full-Gram, and encoder semantic bridges."
+}

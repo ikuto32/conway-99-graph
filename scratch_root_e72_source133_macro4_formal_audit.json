@@ -1,0 +1,66 @@
+{
+  "status": "FORMAL_AUDIT_PASS",
+  "scope": "E72 source133 nonregular canonical macro branch 4 only",
+  "source_row_index": 133,
+  "macro_branch_index": 4,
+  "state_orbit_number": 4,
+  "Q": 4,
+  "state_orbit_size": 48,
+  "catalog_labelled_coverage": 12288,
+  "branch_isolation": {
+    "selectors": [
+      817279,
+      817280,
+      817281,
+      817282,
+      817283
+    ],
+    "appended_negative_units": [
+      -817279,
+      -817280,
+      -817281,
+      -817282
+    ],
+    "source_selector_disjunction_occurrences": 1,
+    "source_payload_byte_identical": true,
+    "derived_tail_exactly_four_core_units": true,
+    "selected_selector_forced": 817283,
+    "prior_assumption_core_equal": true
+  },
+  "cnf": {
+    "path": "scratch_root_e72_source133_macro4.cnf",
+    "sha256": "C8487D2A7B2E8F8695F75D1F1E6609860E1DADA055DDE8C2FA2AA7685E027869",
+    "variables": 822083,
+    "clauses": 1637909,
+    "source_cnf": "scratch_root_e72_source133_full_gram_macro.cnf",
+    "source_cnf_sha256": "BC59641BC72851C25419163D0E4C2B888D15763C4133A559EF1C4742250831FF"
+  },
+  "certificate": {
+    "proof": "scratch_root_e72_source133_macro4.drup",
+    "proof_sha256": "10F8AC98DBF9316D7B6B89E79A302ED7E126630EFE2CA40E0F5302973E9374AB",
+    "proof_lines": 3128709,
+    "external_checker_status": "DRAT_VERIFIED",
+    "checker": "tools\\drat-trim\\drat-trim.exe",
+    "checker_sha256": "10D317DF526C36453986EF09495864BCABD9D02D72D7B772EE78F07939870620",
+    "checker_upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "ucrt_flush_and_native_solver_finalization_present_in_producer": true
+  },
+  "inputs": {
+    "build": "scratch_root_e72_source133_full_gram_macro_build.json",
+    "build_sha256": "7ABDE42750356E1E57618D0ADFD339829C35743C7C2EB8483F85D2598589A0A6",
+    "sweep": "scratch_root_e72_source133_branch_sweep_c100000.json",
+    "sweep_sha256": "6A8B03F9EF1CC29FF22092567F80B7AFDF7FEB485FB00476B3D0B1498105D09F",
+    "producer": "scratch_root_e72_source133_macro4_drup.py",
+    "producer_sha256": "D27E3272FE02533DA2944724C18447075CD055D9D34253E8E3F232EC2843B792",
+    "metadata": "scratch_root_e72_source133_macro4_drup.json",
+    "metadata_sha256": "74F8B11080664CD74435FCB403E0C22E733476654A031E67FB1A50E5DB6B756C",
+    "drat_audit": "scratch_root_e72_source133_macro4_drat_audit.json",
+    "drat_audit_sha256": "CA6DDDD74AC348B1E14E5A7CAC5B48D960675A4F0861D5900E019C88A0CAF1FA",
+    "macro_catalog": "scratch_general_e72_q3_gram_fast_expansion_macro_catalog.json",
+    "macro_catalog_sha256": "BED6A7F1258576E8028B6B17736FD91ED8E8D9A79D2E90FC744A07DAE14D6213",
+    "full_gram": "scratch_theory_e72_macro_full_gram.json",
+    "full_gram_sha256": "8DC23EE41F24E39256136A647506A61C850F0BC804C402C8D16A8B9797C5CDF3"
+  },
+  "logical_conclusion": "The nonregular source133 macro branch 4 has no exact rooted SRG completion in the encoded model.",
+  "claim_boundary": "This checked certificate covers only macro branch 4 (12,288 labelled coverage). It does not itself exclude source133 branches 0--3. The upstream census, orbit/canonicalization, full-Gram derivation, and CNF encoder semantics remain separately audited rather than one formal derivation from the original SRG axioms."
+}
