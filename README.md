@@ -20,7 +20,17 @@
 | --- | --- |
 | [研究資料の案内](docs/RESEARCH_MAP.md) | ディレクトリ、実験系列、検証資料の読み方 |
 | [再現手順](docs/REPRODUCING.md) | 環境構築、軽量チェック、外部成果物の制約 |
-| [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) | 2026-09-05 付の研究継続記録と、その後に追記された結果 |
+| [Rust / CUDA による再開](acceleration/README.md) | 2026-09-16 の高速化、実測値、追加の厳密排除証明 |
+| [再設定したゴールの進捗](docs/GOAL_20260916_PROGRESS.md) | 現在の目標、完全検証済みの有限排除、局所条件と誘導探索 |
+| [マッチング全体の最適化と排除証明](docs/GOAL_20260916_MATCHING_MIP.md) | 1組全体の変更を扱うモデルと、独立した整数計算による条件付き排除 |
+| [全マッチング探索の続報](docs/GOAL_20260916_WHOLE_MATCHING_SEARCH.md) | Rust完全候補生成、CUDA採点、独立検証済みの最良値改善 |
+| [CUDAによる候補ごとの再最適化](docs/GOAL_20260916_CUDA_CP_SEARCH.md) | 最初のGPU反復最適化、独立検証付きで5.944366まで改善 |
+| [GPU改良と異符号側への継続](docs/GOAL_20260916_CP_CONTINUATION.md) | GPU処理の高速化、異符号サイクル、数値ゼロ候補への到達 |
+| [停止・再開記録](docs/STOP_20260916_FRESH_STAR.md) | ユーザー指示で実行終了。最新索引、128候補のGPU採点、未実施の次回作業 |
+| [完成条件と強化LP](docs/GOAL_20260916_STAR_MARGINAL.md) | 固定配置の独立排除、新目的値5.374367への改善 |
+| [強化モデルのCUDA実装](acceleration/STAR_PDHG_GPU.md) | CPUとの一致検査と、同一入力による中央値9.43倍の速度比較 |
+| [再開時チェックポイント監査](docs/RESUME_20260916_CHECKPOINT.md) | 保存済み E72 と overlap 探索の状態 |
+| [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) | 現在の継続地点と保存された研究履歴 |
 | [既存研究アーカイブ](https://github.com/YesterdaysLemon/conway-99-research/blob/85e705cc6c2a14d123120c93a847e30aaab1789e/README.md) | Wave 205 までの詳細な研究記録 |
 | [証拠・主張の台帳](https://github.com/YesterdaysLemon/conway-99-research/blob/85e705cc6c2a14d123120c93a847e30aaab1789e/CLAIMS.yaml) | 主張の範囲と検証状況 |
 
@@ -56,6 +66,7 @@ macOS / Linux では `python3.12 -m venv .venv` と `.venv/bin/python` を使用
 - 既存スクリプトの相対パスと成果物のハッシュを保つため、`scratch_*` や研究アーカイブの配置を維持しています。
 - 小さな CNF・証明を含む研究成果物を保存し、10 MiB を超える外部成果物は [local-artifacts.json](docs/local-artifacts.json) にパス・サイズ・SHA-256 を記録しています。列挙された外部成果物の実体はローカル保存で、通常の clone には含まれません。
 - 依存ライブラリのキャッシュとビルド済みバイナリは公開対象から除外しています。既存の小さなアーカイブログは保存し、新たに生成される実行ログは Git の追跡対象から除外します。
+- 停止時チェックポイントは、非公開のログ・バイナリ・作業用ファイルもハッシュで参照しています。完全な再開には元のワークスペースの保存資料も必要です。
 - 整理前の履歴は元の作業環境のローカルブランチ `archive/pre-publish-20260916` に保存しています。このブランチは通常の clone では取得できません。
 
 入力・証明ファイルが不足する検証は実行できません。成果物の欠落を、検証成功や不成立の根拠として扱わないでください。

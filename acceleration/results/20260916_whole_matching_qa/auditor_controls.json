@@ -1,0 +1,165 @@
+{
+  "status": "INDEPENDENT_WHOLE_MATCHING_FAMILY_AUDITOR_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration\\results\\20260916_two_trade_pilot\\best_candidate.json": "f17498be5a7d7c07ffa43c49271b99a89aa7028841fc791c45864e512dfacd76",
+    "acceleration\\results\\20260916_whole_matching_qa\\selected_0_0.json": "f6b98d4e52383cf3e9755e2ce9e30cd70036ae9f3381fb3fcef6781b71e07e5b",
+    "acceleration\\results\\20260916_whole_matching_qa\\all_independent_audit.json": "2b74ea6d22cbb5904616536a7e6c60450ed7a613e1c99f3226d1ae4e397d870b",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\qa_whole_matching_family_auditor.py": "4e190c8da0a652b3354c298b83660103af78ea80214e471379ac6b357d8f7051",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_whole_matching_family.py": "6cf07c9fbd402616480f06fd2c0ec6af9b005a9c6bb2b57a5473df4c058d8006",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d",
+    "acceleration\\results\\20260916_whole_matching_qa\\input.txt": "9b11b857bb14db973aff04228757786e7af740414a6ed78c8801f5cd5248abec",
+    "acceleration\\results\\20260916_whole_matching_qa\\all.json": "4f06ff4170039f4ca048529837dbcc1079f160572243a882d02715ed9170b4e5",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\overlap_matching_neighbors.rs": "021fce360a184bde2a7f141f381c0058d886e8e7241bf3204deeb77b5f233bde",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\overlap_matching_neighbors.exe": "5815bcbb7736c4375be26f71dbbae11b393b141d7ef020eea09944e0c9afd739"
+  },
+  "positive_singleton_full_family_audit": {
+    "status": "INDEPENDENT_COMPLETE_WHOLE_SAME_SIGN_MATCHING_FAMILY_PASS",
+    "selector": "0:0",
+    "raw_including_initial": 6040,
+    "unchanged_count": 1,
+    "cap_rejected_count": 604,
+    "legal_count": 5435,
+    "by_class": [
+      {
+        "root_group": 0,
+        "matching_class": "same_0",
+        "raw_including_initial": 6040,
+        "unchanged_count": 1,
+        "cap_rejected_count": 604,
+        "legal_count": 5435
+      }
+    ],
+    "unrestricted_matchings_independently_enumerated": 10395,
+    "initial_full99_pair_caps_checked": 4851,
+    "initial_own_label_quotas_checked": 336,
+    "changed_pair_constraints_checked": 6077696,
+    "own_label_quotas_checked": 234272,
+    "alternating_cycle_shape_counts": [
+      {
+        "changed_edges_per_cycle": [
+          2
+        ],
+        "count": 25
+      },
+      {
+        "changed_edges_per_cycle": [
+          2,
+          2
+        ],
+        "count": 126
+      },
+      {
+        "changed_edges_per_cycle": [
+          2,
+          2,
+          2
+        ],
+        "count": 70
+      },
+      {
+        "changed_edges_per_cycle": [
+          2,
+          3
+        ],
+        "count": 556
+      },
+      {
+        "changed_edges_per_cycle": [
+          2,
+          4
+        ],
+        "count": 735
+      },
+      {
+        "changed_edges_per_cycle": [
+          3
+        ],
+        "count": 108
+      },
+      {
+        "changed_edges_per_cycle": [
+          3,
+          3
+        ],
+        "count": 312
+      },
+      {
+        "changed_edges_per_cycle": [
+          4
+        ],
+        "count": 431
+      },
+      {
+        "changed_edges_per_cycle": [
+          5
+        ],
+        "count": 1232
+      },
+      {
+        "changed_edges_per_cycle": [
+          6
+        ],
+        "count": 1840
+      }
+    ],
+    "final_labeled_edge_set_equality_checked": true,
+    "method": "Independent unrestricted recursive perfect matchings, support-domain filtering, full99 Python set neighborhoods on affected pairs, exact own-label quotas, complete final-set equality, and alternating-cycle decomposition checks.",
+    "scope": "Complete only for the selected same-sign coordinate replacements at this one labeled base K. Initial K omitted once per coordinate; multiple cycles and five/six changed edges included. No cross-coordinate changes, cross matchings, local-star/AC proof, LP feasibility, or completed graph claim."
+  },
+  "negative_controls": [
+    {
+      "control": "missing_aligned_legal_final",
+      "rejected": true,
+      "reason": "Native whole-matching family is incomplete"
+    },
+    {
+      "control": "duplicate_aligned_legal_final",
+      "rejected": true,
+      "reason": "Duplicate native replacement"
+    },
+    {
+      "control": "legal_finals_attached_to_wrong_moves",
+      "rejected": true,
+      "reason": "Wrong final candidate"
+    },
+    {
+      "control": "wrong_matching_coordinate",
+      "rejected": true,
+      "reason": "Invalid matching move coordinate or changed-edge count"
+    },
+    {
+      "control": "wrong_changed_edge_count",
+      "rejected": true,
+      "reason": "Invalid matching move coordinate or changed-edge count"
+    },
+    {
+      "control": "repeated_cycle_vertex",
+      "rejected": true,
+      "reason": "Invalid alternating-cycle vertices"
+    },
+    {
+      "control": "omitted_component_of_multiple_cycles",
+      "rejected": true,
+      "reason": "Alternating-cycle edge decomposition mismatch"
+    },
+    {
+      "control": "disconnected_cycles_falsely_joined",
+      "rejected": true,
+      "reason": "Alternating-cycle edge decomposition mismatch"
+    },
+    {
+      "control": "altered_partition_with_unchanged_total",
+      "rejected": true,
+      "reason": "Per-coordinate counts differ"
+    },
+    {
+      "control": "incomplete_status_promoted_to_complete",
+      "rejected": true,
+      "reason": "Wrong native status"
+    }
+  ],
+  "negative_controls_rejected": 10,
+  "multi_cycle_positive_move_index": 1,
+  "scope": "All14-coordinate proof is bound separately; singleton0:0 independently reenumerated for these corruption controls. No additional search or completion claim.",
+  "elapsed_seconds": 3.1999877000052948
+}

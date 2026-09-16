@@ -1,0 +1,86 @@
+{
+  "status": "ALL_CUDA_INITIAL_PAIR_SUPPORT_FLAGS_MATCH_INDEPENDENT_PYTHON_SETS",
+  "complete_pilot_domains": 8209,
+  "batch_candidates": 4,
+  "candidate_controls": [
+    "complete_pilot",
+    "one_domain_per_vertex_subset",
+    "complete_pilot_repeat",
+    "empty_domains"
+  ],
+  "all_nonself_support_flags_checked": 1369666,
+  "records": [
+    {
+      "candidate_index": 0,
+      "domains": 8209,
+      "vertices_with_initial_support": 63,
+      "initial_pair_supported_domains": 422,
+      "unsupported_domain_relations": 23944
+    },
+    {
+      "candidate_index": 1,
+      "domains": 84,
+      "vertices_with_initial_support": 0,
+      "initial_pair_supported_domains": 0,
+      "unsupported_domain_relations": 5142
+    },
+    {
+      "candidate_index": 2,
+      "domains": 8209,
+      "vertices_with_initial_support": 63,
+      "initial_pair_supported_domains": 422,
+      "unsupported_domain_relations": 23944
+    },
+    {
+      "candidate_index": 3,
+      "domains": 0,
+      "vertices_with_initial_support": 0,
+      "initial_pair_supported_domains": 0,
+      "unsupported_domain_relations": 0
+    }
+  ],
+  "malformed_input_controls": [
+    {
+      "case": "wrong_header",
+      "rejected": true,
+      "message": "Wrong binary header"
+    },
+    {
+      "case": "truncated",
+      "rejected": true,
+      "message": "Truncated binary input"
+    },
+    {
+      "case": "trailing",
+      "rejected": true,
+      "message": "Trailing binary input"
+    },
+    {
+      "case": "zero_candidates",
+      "rejected": true,
+      "message": "Invalid candidate count"
+    },
+    {
+      "case": "invalid_degree",
+      "rejected": true,
+      "message": "Neighborhood must be a loop-free degree14 outer full99 row"
+    }
+  ],
+  "python_set_reference_seconds": 1.253835399998934,
+  "cuda_transfer_and_kernel_seconds": 0.0009129,
+  "cuda_kernel_seconds": 0.000354079991579,
+  "elapsed_seconds": 1.6159345000050962,
+  "inputs_sha256": {
+    "acceleration/review_star_pair_gpu.py": "7ab3518e42d511ec2ace59244e29f1cbcbfe499ca9882a8c854ca7fe914a2fae",
+    "acceleration/star_pair_gpu.cu": "31c61617a1422d4629ff1482fb5664b412303f0ec521ff0b8ef376916d131587",
+    "acceleration/build_star_pair_gpu.ps1": "3bf4152d64d6cc85f9aa4c7010c1cb615cb85a30d91185d31c8caddf20125766",
+    "acceleration/build/star_pair_gpu.exe": "23e1247cea90d24eec35aed63ec3db16734208654bae7139c6144b901df2791c",
+    "acceleration/results/20260916_guided_pilot/best_candidate.json": "811a9290f68d550d3d5be2e8d417b6ce407ff280db8be62ba54fe911f287b39d",
+    "acceleration/results/20260916_guided_pilot/best_domains_python.json": "9528bae1ef5791783492c20b7a8db34b463ac5b8f1fcb054c122f435637baeb2",
+    "acceleration/results/20260916_guided_pilot/best_domains_audit.json": "82a96dffc3d3f394dea69c10712dcbc8a1009a7b6a4b2d9e107aeafd41340f68",
+    "acceleration/results/20260916_star_pair_gpu/input.bin": "550b8efc723fbdbb12f03f92e3a006ea7891e000b6d12dae213b912e0e741123",
+    "acceleration/results/20260916_star_pair_gpu/gpu.json": "ff7727a90d67fc8109174a6d63624878b320b44c573c435f27503c0b8e8a2e35",
+    "acceleration/audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d"
+  },
+  "scope": "Every initial support flag and aggregate matched exact independent Python set compatibility on these four controls. Full original domains used for the pilot; subset controls test mechanics only. This is a score backend, not AC propagation, a completion witness or a global exclusion."
+}

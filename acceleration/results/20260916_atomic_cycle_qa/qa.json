@@ -1,0 +1,136 @@
+{
+  "status": "ATOMIC_CYCLE_NATIVE_QA_PASS",
+  "inputs_sha256": {
+    "acceleration/qa_atomic_cycle_family.py": "d56d1caafa0c00a4cdf63aa22f65ed01ad1f7834a4f9b2b3979eca98944ab3fb",
+    "acceleration/overlap_cycle_neighbors.rs": "d6c6563b974050246b14e996a737feb9936d18094257a3b47993d64339aaf41c",
+    "acceleration/build/overlap_cycle_neighbors.exe": "812373d00ac43e069bd961ed9b173e9c6a83bdac1a7cb34fbd02f4cfee2e8e56",
+    "acceleration/audit_atomic_cycle_family.py": "f6878a7c113025382d264e0911f49ca82f2f62cac3237ede1cfcdc5db0138223",
+    "acceleration/audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d",
+    "acceleration/results/20260916_two_trade_pilot/best_candidate.json": "f17498be5a7d7c07ffa43c49271b99a89aa7028841fc791c45864e512dfacd76",
+    "acceleration/results/20260916_atomic_cycle_qa/input.txt": "7097ac11c20f0a60bd23539008702aa332188c2afc7d7fcec27b785599ed8de3",
+    "acceleration/results/20260916_atomic_cycle_qa/both.json": "7256089c68370a06002bec7d141f4a33a3fa960d5d5293d3f7d2e3e9fbb39051",
+    "acceleration/results/20260916_atomic_cycle_qa/both_audit.json": "c4253feac9bb680d488e367a3bafb77473e2ca0d8cdc2f782abb16da9d0f109f",
+    "acceleration/results/20260916_atomic_cycle_qa/mode_default.json": "7685e8b584ebb8855eb3bbcf2c865855b6c18ec5d03413f69f1dded33f273e8d",
+    "acceleration/results/20260916_atomic_cycle_qa/mode_3.json": "3b247b2003590b17791a3ed88d480d61cfdc4c18ea91fe522b077a68d1f63704",
+    "acceleration/results/20260916_atomic_cycle_qa/mode_4.json": "0f853a7380335b718cfb04135daa24c6b6001d82014b4cd930cb95f98914f72f",
+    "acceleration/results/20260916_atomic_cycle_qa/mode_both.json": "75752ed5450c26c16230a1fdad3f7ef3e244dcb8cf647d6040bac9906e6ef21a"
+  },
+  "modes": {
+    "3": {
+      "raw": 5320,
+      "legal": 2940,
+      "seconds": 0.0266077
+    },
+    "4": {
+      "raw": 30870,
+      "legal": 13359,
+      "seconds": 0.1278976
+    },
+    "both": {
+      "raw": 36190,
+      "legal": 16299,
+      "seconds": 0.1571389
+    }
+  },
+  "deterministic": true,
+  "default_is_three": true,
+  "complete_independent_audit": "acceleration/results/20260916_atomic_cycle_qa/both_audit.json",
+  "native_negative_controls": [
+    {
+      "name": "bad_header",
+      "rejected": true,
+      "message": "Expected C99OVERLAPS1 1"
+    },
+    {
+      "name": "wrong_candidate_count",
+      "rejected": true,
+      "message": "Expected C99OVERLAPS1 1"
+    },
+    {
+      "name": "duplicate_edge",
+      "rejected": true,
+      "message": "Invalid, duplicate or non-overlap edge"
+    },
+    {
+      "name": "negative_endpoint",
+      "rejected": true,
+      "message": "Invalid endpoint"
+    },
+    {
+      "name": "range_endpoint",
+      "rejected": true,
+      "message": "Invalid, duplicate or non-overlap edge"
+    },
+    {
+      "name": "same_fibre_edge",
+      "rejected": true,
+      "message": "Invalid, duplicate or non-overlap edge"
+    },
+    {
+      "name": "missing_endpoint",
+      "rejected": true,
+      "message": "Missing endpoint"
+    },
+    {
+      "name": "trailing_token",
+      "rejected": true,
+      "message": "Trailing input"
+    },
+    {
+      "name": "invalid_mode_2",
+      "rejected": true,
+      "message": "cycle size must be 3, 4 or both"
+    },
+    {
+      "name": "invalid_mode_5",
+      "rejected": true,
+      "message": "cycle size must be 3, 4 or both"
+    },
+    {
+      "name": "invalid_mode_BOTH",
+      "rejected": true,
+      "message": "cycle size must be 3, 4 or both"
+    },
+    {
+      "name": "existing_output",
+      "rejected": true,
+      "message": "Output already exists"
+    }
+  ],
+  "independent_audit_negative_controls": [
+    {
+      "name": "omitted_move",
+      "rejected": true,
+      "message": "Native family is incomplete"
+    },
+    {
+      "name": "duplicate_move",
+      "rejected": true,
+      "message": "Duplicate native move"
+    },
+    {
+      "name": "wrong_class",
+      "rejected": true,
+      "message": "Wrong matching metadata"
+    },
+    {
+      "name": "invalid_cycle",
+      "rejected": true,
+      "message": "Invalid alternating cycle"
+    }
+  ],
+  "schema": {
+    "root_group": "0..6",
+    "matching_class": [
+      "same_0",
+      "same_1",
+      "cross"
+    ],
+    "cycle_size": [
+      3,
+      4
+    ],
+    "alternating_cycle": "2k distinct zero-based outer vertices; removed edges at (0,1),(2,3),...; added at (1,2),(3,4),...,(2k-1,0); no repeated closure"
+  },
+  "scope": "Complete only for the declared single-matching alternating-cycle subfamily; no intermediate-state, star-domain, pair-AC or graph-completion claim."
+}

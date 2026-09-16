@@ -1,0 +1,50 @@
+{
+  "status": "PHASE1_API_FINITE_INPUT_AND_NUMERICAL_STATUS_CONTROLS_PASS",
+  "checks": [
+    {
+      "case": "invalid_seconds_0",
+      "rejected": true
+    },
+    {
+      "case": "invalid_seconds_-1",
+      "rejected": true
+    },
+    {
+      "case": "invalid_seconds_nan",
+      "rejected": true
+    },
+    {
+      "case": "invalid_seconds_inf",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_overlap_edge",
+      "rejected": true
+    },
+    {
+      "case": "tiny_time_cap",
+      "optimal": false,
+      "status": "PHASE1_NO_USABLE_NUMERICAL_SOLUTION",
+      "model_status": "HighsModelStatus.kTimeLimit"
+    },
+    {
+      "case": "dimension_mismatch_basis",
+      "basis_status": "DIMENSION_MISMATCH_COLD_FALLBACK",
+      "safe_fallback": true
+    }
+  ],
+  "oldwalk_simplex_ipm_objective_difference": 1.1023558954548207e-08,
+  "oldwalk_simplex_seconds": 8.965817599993898,
+  "oldwalk_ipm_seconds": 0.340066000004299,
+  "oldwalk_solver_speedup": 26.364933865427755,
+  "source_sha256": {
+    "acceleration/phase1_probe.py": "e2e5c02b625c67dffa07795de2d248bb512756488b3f3d869371fe6c9240ea69",
+    "acceleration/phase1_probe_ipm.py": "d15215a6cd7c83e8b8b8aa54809d1f0517e4ce2b4b7db78504673bf84db178fa"
+  },
+  "inputs_sha256": {
+    "acceleration/results/20260916_phase1_controls/oldwalk.json": "6df56a7855cfe8961219ac49d508efbdfcd586c7759b351b56292a18350cb78d",
+    "acceleration/results/20260916_phase1_controls/oldwalk_ipm.json": "c1fcddda9b0cd0742ac10bf8c74c0fe898108a062accfa72e3aec06f23ef57ae",
+    "acceleration/results/20260916_phase1_controls/time_cap.json": "8f8b82f9523fd799d68d89dbd61cb561f8d7b34660d55e5cb7f98d5ddf77d52f"
+  },
+  "scope": "Numerical phase-I API and finite negative controls. Neither floating merit positivity nor zero is an exact graph certificate."
+}

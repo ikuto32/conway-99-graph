@@ -1,0 +1,119 @@
+{
+  "status": "CP_COMPLETION_CHECKPOINT_ASSOCIATION_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/results/20260916_cp_round9_auto/search/summary.json": "babc3506aef20db3b9f90ac359e7db4b47b6e16edbbfa8abf3844cd8642e3289",
+    "acceleration/results/20260916_cp_round9_auto/search/audit.json": "65ad047501f853bf34e921f73ff43d96b0f0cebb0b08bbb3b496aa491dca3f4a",
+    "acceleration/results/20260916_cp_zero_completion/cnf_226/manifest.json": "e45a2ed6e541e2e9f823f63c405ab90a513d828030568f4561f0026e02f0ff0e",
+    "acceleration/results/20260916_cp_zero_completion/cnf_226/independent_audit.json": "8d18cf927663ce112f53cb75c4d9f51ad63375dfbc630c73f665701716736429",
+    "acceleration/results/20260916_cp_zero_completion/sat_226/result.json": "b05d60ebc461e3cae45e71b2f826860f1a307f17ebb1e2e1c15c527378d5000c",
+    "acceleration/results/20260916_cp_zero_completion/drat_226/proof_generation.json": "118dffc609cd544541b94c00bab6d0fe147062ddb0584b67dcf3797677558c98",
+    "acceleration/results/20260916_cp_zero_completion/drat_226/independent_drat_audit.json": "83a5146ba3f0365766f860aa25bbc5a5d93e802bef45478be5477b405942e1f0",
+    "acceleration/results/20260916_cp_zero_completion/local_226/independent_pair_audit.json": "6bcad4bf7a30f062aefb5909a19203fe1914364efcdcd4da3fd47545b6f864bb",
+    "acceleration/results/20260916_cp_round9_auto/search/probes/selection_07_index_226_candidate.json": "de4eb82139414fd3145fa5b2bd379403f191f42ff6aabbf06c8c9a3e886a82a8",
+    "acceleration/review_cp_completion_checkpoint.py": "fcfad37d59f9ce6e9e5a7c70e045acb2ec5c959f15f0161253e92e2ed3293394",
+    "acceleration/build_cp_completion_checkpoint.py": "3ce94bbdd49f9a6f216bb87d2f75ee3e6e2ad6f24dea198c4d4a5b0ba08a5b4f"
+  },
+  "real_case_semantics_positive": true,
+  "negative_controls": [
+    {
+      "name": "wrong_CP_index",
+      "rejected": true,
+      "reason": "CP index association differs"
+    },
+    {
+      "name": "wrong_CP_candidate",
+      "rejected": true,
+      "reason": "CP candidate association differs"
+    },
+    {
+      "name": "wrong_CP_result",
+      "rejected": true,
+      "reason": "CP result association differs"
+    },
+    {
+      "name": "positive_edge_lower",
+      "rejected": true,
+      "reason": "Candidate is outside the audited near-zero selection"
+    },
+    {
+      "name": "nonzero_edge_upper",
+      "rejected": true,
+      "reason": "Candidate is outside the audited near-zero selection"
+    },
+    {
+      "name": "wrong_CNF_candidate",
+      "rejected": true,
+      "reason": "Fixed-K candidate association differs"
+    },
+    {
+      "name": "wrong_CNF_bytes",
+      "rejected": true,
+      "reason": "Fixed CNF association differs"
+    },
+    {
+      "name": "wrong_SAT_status",
+      "rejected": true,
+      "reason": "Original SAT outcome is not unverified UNSAT"
+    },
+    {
+      "name": "SAT_claims_witness",
+      "rejected": true,
+      "reason": "Original SAT outcome is not unverified UNSAT"
+    },
+    {
+      "name": "proof_incomplete",
+      "rejected": true,
+      "reason": "Untrusted or incomplete proof production"
+    },
+    {
+      "name": "synthesized_empty",
+      "rejected": true,
+      "reason": "Untrusted or incomplete proof production"
+    },
+    {
+      "name": "DRAT_failure_return",
+      "rejected": true,
+      "reason": "DRAT contradiction was not independently verified"
+    },
+    {
+      "name": "DRAT_false_flag",
+      "rejected": true,
+      "reason": "DRAT contradiction was not independently verified"
+    },
+    {
+      "name": "DRAT_missing_verified_line",
+      "rejected": true,
+      "reason": "DRAT contradiction was not independently verified"
+    },
+    {
+      "name": "DRAT_wrong_proof",
+      "rejected": true,
+      "reason": "Verified proof differs from generated proof"
+    },
+    {
+      "name": "local_incomplete",
+      "rejected": true,
+      "reason": "Complete independent local closure absent"
+    },
+    {
+      "name": "local_missing_vertex",
+      "rejected": true,
+      "reason": "Complete independent local closure absent"
+    },
+    {
+      "name": "local_empty",
+      "rejected": true,
+      "reason": "Complete independent local closure absent"
+    },
+    {
+      "name": "wrong_actual_file_hash",
+      "rejected": true
+    }
+  ],
+  "all_negative_controls_rejected": true,
+  "semantic_fixtures_in_memory_bypass_hashes_to_reach_guards": true,
+  "files_mutated": false,
+  "solver_or_domain_reruns": 0,
+  "final_index_created": false,
+  "scope": "Pure association guards plus an actual wrong-SHA rejection; full hash/11-case/star-best validation is separately run in validate-only mode."
+}

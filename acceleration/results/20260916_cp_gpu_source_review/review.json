@@ -1,0 +1,149 @@
+{
+  "status": "FROZEN_CP_CUDA_SOURCE_REVIEW_NO_BLOCKING_DEFECT_FOUND",
+  "inputs_sha256": {
+    "acceleration/overlap_cp_gpu.cu": "4ae8a33b53df5176eedfd94f950ee9de2a667bcc850e69069af86049b96344a8",
+    "acceleration/build_overlap_cp_gpu.ps1": "5fbb14853c50330a27352b665d90ff0efbfc135ed1dd3301909ddfea12b2bda5",
+    "acceleration/build/overlap_cp_gpu.exe": "6ddc99a1fa55fd3880f3ce6d1a50e63d4144c1915e6bf30eb6c18abf25865e6d",
+    "acceleration/results/20260916_cp_gpu_controls/audit.json": "80812864937df9f764070bd0a18b6d380257e66a1d148ecc9e095bbb64e3afa9",
+    "acceleration/results/20260916_cp_cli_controls/report.json": "7fa5f9e841ce31612d375bef9fe862630acb3239cf687d1f7379add291898422",
+    "acceleration/results/20260916_cp_native_matvec_qa/audit.json": "4d8e3fc7e807dd6f91d66f7a17e087d2f2c7899213b6b0f7ef43c854b172571a"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260916_cp_gpu_source_review/compiled_resources.txt": "05ab543a8a9a13479df2711d0d10b8c1c4bc66b143fb1864d52b047f39ec18ed"
+  },
+  "review_method": "Source inspection by the CUDA implementer plus a separate source-only review by the independent Rust matvec author; compiled resource inspection with cuobjdump. Existing independent numerical and parser QA are bound, not rerun.",
+  "independent_peer_review": {
+    "agent": "/root/rust_acceleration",
+    "finding": "No concrete forward/transpose, synchronization, candidate-offset or checkpoint-index defect found. Disjoint-column geometry prevents diagonal pair lookups; finalcheckpoint increments ncheck only on the last iteration.",
+    "gpu_jobs": 0,
+    "edits": 0
+  },
+  "correctness_review": [
+    {
+      "area": "Forward and transpose",
+      "source_lines": [
+        55,
+        71
+      ],
+      "finding": "Quota8 and cap<=9 gathers agree with full99 A; transpose has4quota+9cap terms. A disjoint unknown edge cannot coincide with an overlap neighbor, so pair_index never sees a diagonal in transpose."
+    },
+    {
+      "area": "Input and RHS",
+      "source_lines": [
+        174,
+        207,
+        226,
+        239
+      ],
+      "finding": "Strict integer counts, finite X/Y boxes,168distinctcanonicaledges,degree4,allfull99caps and336exactownquotas are checked before launching. RHS is an exact integer in0..2 derived from reconstructed full99 adjacency."
+    },
+    {
+      "area": "Synchronization",
+      "source_lines": [
+        125,
+        132,
+        141,
+        148,
+        156,
+        168
+      ],
+      "finding": "Block barriers separate shared initialization,dual updates,primal/extrapolation updates,and scratch-reduction reuse. Each average element has one owning thread; checkpoint condition is uniform acrossblock. No atomics or crossblock communication are required."
+    },
+    {
+      "area": "Indexing and bounds",
+      "source_lines": [
+        112,
+        120,
+        150,
+        164,
+        267
+      ],
+      "finding": "All arrays include globalcandidate=first+blockIdx.x and use size_t for candidate-stride products. Positive strictlyascending checkpoints ensure no out-of-range checkpoint read after finalincrement. Vector layout xlast,ylast,xavg,yavg matches outputlengths."
+    },
+    {
+      "area": "Best objective semantics",
+      "source_lines": [
+        126,
+        129,
+        151,
+        157
+      ],
+      "finding": "Best upper/lower includeinitial plusrequestedlast/averagecheckpoints. Sparse checkpoint lists intentionally do not report extrema overalliterations."
+    },
+    {
+      "area": "Launch and failures",
+      "source_lines": [
+        243,
+        244,
+        267,
+        272
+      ],
+      "finding": "Dynamicshared capacity checked andopt-in requested; perlaunch CUDAerrors andfinalevent synchronization checked. Invalidinput fails beforeCUDA. Output is not created until compute/copies finish."
+    }
+  ],
+  "compiled_resources": {
+    "architecture": "sm_89",
+    "threads_per_block": 256,
+    "registers_per_thread": 60,
+    "local_bytes": 0,
+    "stack_bytes": 0,
+    "constant_table_bytes": 54516,
+    "other_constant2_bytes": 64,
+    "other_constant0_bytes": 440,
+    "dynamic_shared_bytes": 66150,
+    "static_shared_bytes": 4096,
+    "total_user_shared_bytes_per_block": 70246,
+    "fmad": false
+  },
+  "architecture_derived_limits": {
+    "ada_shared_bytes_per_sm": 102400,
+    "ada_warps_per_sm": 48,
+    "blocks_per_sm_upper_bound_from_shared": 1,
+    "active_warps_per_sm_upper_bound": 8,
+    "theoretical_warp_occupancy_upper_bound": 0.16666666666666666,
+    "is_measured_runtime_occupancy": false
+  },
+  "logical_average_storage": {
+    "bytes_per_candidate": 48048,
+    "minimum_logical_read_plus_write_bytes_per_iteration_candidate": 96096,
+    "example_candidates": 73240,
+    "example_iterations": 500,
+    "allocated_average_bytes_for_example": 3519035520,
+    "logical_average_read_write_bytes_for_example": 3519035520000,
+    "physical_dram_traffic_measured": false,
+    "note": "Logical source-level traffic; cache residency may greatly reduce DRAMtraffic. Do not divide this number by nominalDRAMbandwidth to claim measuredruntime."
+  },
+  "performance_findings": [
+    {
+      "priority": 1,
+      "observation": "54,516bytes of index/label tables are __constant__. Consecutive threads query different row/column entries in everyiteration. NVIDIA documents serialization of distinct constant addresses withinawarp.",
+      "next_bounded_experiment": "Clone frozen source into a newversion; move index tables to readonlyglobal and arrange per-slot rowtables for coalesced warpaccess. Compare all existingvectors, then profile one bounded representativebatch.",
+      "measured_speedup": null,
+      "reference": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#constant-memory"
+    },
+    {
+      "priority": 2,
+      "observation": "70,246bytes/block permits onlyoneblock/SM onAda. Current256thread block supplies8warps of48maximum despitezero compiledlocalspill.",
+      "next_bounded_experiment": "Benchmark separately compiled512/1024thread derivatives afterchecking registers/sharedallocation and fullvectorparity; morethreads are not guaranteedfaster.",
+      "measured_speedup": null,
+      "reference": "https://docs.nvidia.com/cuda/ada-tuning-guide/index.html#occupancy"
+    },
+    {
+      "priority": 3,
+      "observation": "All6006runningaverage doubles are updated in globalmemory everyiteration. Averages are neededonly atrequestedcheckpoints, but the accumulator mustretainallpriorupdates.",
+      "next_bounded_experiment": "Evaluate per-thread register-resident averageaccumulators withfixedunrolling, or carefullyreduced averagestate, while checkingregspills and exactlypreservingaveragingsemantics.",
+      "measured_speedup": null
+    }
+  ],
+  "practical_limits": [
+    "The fivecandidate positiveQA doesnot exercise a tileboundary atindex256. Offsetlogic was reviewed independently; a laterbounded257candidate repeated-controlbatch can test it withoutchangingproducer. No additionalGPUjob wasrun while rootbatchwasactive.",
+    "Candidate tiling boundsblockwaves perlaunch but doesnot bound duration ofonecandidate ataccepted1000000iterations. Parsermaxima are notWindowswatchdog orruntimeguarantees.",
+    "elapsed_seconds excludes parsing,deviceallocation,andJSONserialization; kernel_seconds is the CUDAeventspan across queuedtilelaunches. End-to-endsearchcost must usehostwalltiming.",
+    "Outputcreation is notatomic. Consumers mustrequire successfulprocessexit,completeJSON,expectedcandidate/checkpointcounts,andinput/sourcehashbinding.",
+    "The interface restarts everyinvocation fromonecommon X/Y. Laterstage2000iterations are fresh2000steps unless driver explicitlychangesinputs; this executable cannot resumepercandidate500stepstates fromnormal scalaroutputs."
+  ],
+  "new_gpu_jobs_during_review": 0,
+  "frozen_sources_modified": false,
+  "new_benchmarks_performed": false,
+  "scope": "Bounded engineering review of the frozenCUDAimplementation plus compiledmetadata and existingindependentcontrols. It is not a fullprogramcorrectnessproof, a performancebenchmark, a convergence-ratevalidation, or a graph exclusion. Broadbatch/runtimeaudit remains separate."
+}

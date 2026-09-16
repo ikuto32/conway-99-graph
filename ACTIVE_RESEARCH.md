@@ -1,4 +1,255 @@
-# Conway-99 research resumed, 2026-09-05
+# Conway-99 goal active, 2026-09-16
+
+**Execution stopped at the user's request on 2026-09-16.** Resume only after
+a new user instruction. The mathematical goal remains unsolved. The latest
+completed research checkpoint is `acceleration/results/20260916_star_guided_round3_checkpoint.json`
+(SHA-256 `31fb80b68785901f2ed90f4c301aeac786aa0ae75609872d994f81f6d0b08414`,
+5,791 references). It adds30 exact fixed-K exclusions without improving18481.
+The separate128-case fresh GPU ranking is complete; its shortlist LPs have
+not been run. See `docs/STOP_20260916_FRESH_STAR.md` and the final stop receipt
+`acceleration/results/20260916_user_requested_stop.json` for the restart state.
+The continuation notes below describe the preceding round2 checkpoint.
+
+The user's explicit request to reset the goal has been applied to the active
+goal tracker. The target is a fully independently validated srg(99,14,1,2),
+or an independently verified general nonexistence proof. Finite exclusions,
+numerical solver outcomes, and completed batches do not satisfy that target.
+No valid graph or general proof has been obtained; no submission.txt exists.
+
+Current goal work and replay instructions: `docs/GOAL_20260916_PROGRESS.md`.
+Latest evidence index:
+`acceleration/results/20260916_star_guided_round2_checkpoint.json`
+(5,170 hash-verified files, including the preceding evidence,11 additional
+exact star-simplex exclusions, and the strictly improved star-objective seed18481).
+SHA-256: `7e5ff439fb04330b5654e3ce5e767b0972b9d563e5fe6695f00eef8478e4ed1b`.
+The preceding dual checkpoint57839e and intermediate round1 checkpoint096464
+are preserved unchanged.
+The preceding whole-matching,
+matching, atomic, and global checkpoints remain preserved.
+
+The current research seed is candidate18481, selected with the NEW star-marginal
+objective after the old edge objective reaches numerical zero. Its independently
+verified exact interval is approximately **[5.374367028255648,5.3743670369854]**,
+strictly below the preceding3074 interval. The guaranteed decrease is at least
+approximately0.6645673908297139. All84 complete original star domains (26,250
+choices) and635 pair-domain deletion events are independently checked;
+22,058 choices survive pairAC.
+Seed path: `acceleration/results/20260916_star_guided_round2/search/probes/selection_03_index_18481_candidate.json`.
+The paired old-edge warm file is `selection_03_index_18481_phase1.json` in that
+directory; new-objective evidence is in `acceleration/results/20260916_star_guided_round2/recovered_star_shortlist/index_18481`.
+This K is still excluded by the exact star-simplex certificate and independent
+integer replay. Change K further; do not solve it again as an unresolved candidate.
+See `docs/GOAL_20260916_STAR_MARGINAL.md`. The new merit is not comparable
+numerically with the preceding edge phase-I merit.
+
+The latest same-sign neighborhood contains81,000 independently enumerated
+candidates. The old-edge CUDA ranker selected64 LPs. One original LP failed
+the unchanged1e−7 exact-gap audit; only that LP was solved again with tighter
+solver tolerances, and the new independently checked gap is8.66e−10.
+The original driver remains STOPPED, and its LP, failure receipt and log are
+preserved. Separate recovery artifacts recheck all64 records and evaluate
+all11 near-zero candidates. All11 have exact positive star certificates;
+two strictly improve3074. The new checkpoint explicitly records this recovery
+and has no pending or unselected near-zero cases.
+
+The preceding cross3/4 neighborhood contains8,837 independently enumerated candidates.
+The existing CUDA pipeline selects64 old-edge LPs,14 of which meet the bounded
+near-zero shortlist rule. All14 complete star evaluations have independently
+replayed positive integer bounds;four strictly improve the prior star seed.
+The new `star_dual_batch.rs` scores all8,837 candidates in68.27 seconds with
+exact integer arithmetic. Those scores rank candidates only; their optimized
+star-merit correlation is weak on the14 saved controls. A separate16-candidate
+cohort outside all64 CP records yields14 exact star certificates and2
+independently replayed empty-pair-domain contradictions; no new best.
+Original pending rows are retained in the batch, and their independent
+resolutions are indexed separately; final pending completion work is empty.
+
+The saved14-candidate CPU study completes28 cold/warm runs in161.71seconds.
+Cold500-step dual ranking recovers allfour exact best candidates (Spearman
+.9516), while fixed-dual ranking recovers one (.3011). Cold2000 improves
+Spearman to.9824. This is a retrospective selected-sample diagnostic, not a
+proof or a broad quality guarantee. Cold star-PDHG is now implemented on CUDA:
+all five saved vectors match the canonical CPU reference on tiny and real
+controls, and all14 saved rankings are reproduced. Three alternating process
+comparisons on the same two candidates give a median9.43× speedup, including
+startup, parsing and scalar-output writing (CPU11.40s, GPU1.23s). See
+`acceleration/STAR_PDHG_GPU.md` for scope and limits. The current exporter
+requires independently audited saved LP cases; fresh-neighborhood domain
+export and selection provenance are the next acceleration work. The frozen
+`continue_star_cp_round.py` can also run one bounded audited neighborhood
+from `current_star_marginal_best`; its old-edge GPU ranks only select candidates.
+
+The last adopted positive EDGE-merit seed has rational phase-I bounds approximately
+**[0.06406993901974968, 0.06406993911128354]**. Independent complete-domain/pair
+replay retains18,366 choices from24,239 complete stars, with860 checked deletions.
+The seed is in
+`acceleration/results/20260916_cp_round8_auto/search/adopted_index_52112`.
+Its positive exact bound and separate integer certificate still exclude this
+fixed K. The following cross round finds two numerical-zero candidates (226
+and2700); both pass independent complete-domain/pair closure. Their exact LP
+upper bounds are tiny positive rationals, so exact LP feasibility is not yet
+proved. Both fixed-K SAT contradictions are independently DRAT-verified.
+The226 same-sign neighborhood contributes nine further verified fixed-K
+contradictions. These are finite fixed-configuration exclusions, not graphs
+or a general nonexistence proof.
+See `docs/GOAL_20260916_CP_CONTINUATION.md`.
+
+The layout-v2 CUDA implementation preserves all compared numerical outputs
+and reduces paired512-candidate kernel time by2.745×. The hardened v2 driver
+adds exact input/proof association, pre-clip dual validation and previous-run
+exclusions. Two new complete families contain75,967 and75,615 legal moves;
+their64-LP shortlists have9 and1 independently strict improvements respectively.
+Both best candidates pass independent full-domain/pair closure and fixed-K
+integer-certificate checks. A cross-sign single3/4 extension independently
+enumerates8,899 legal moves at the5.227593 seed. Its64-LP shortlist has38
+strict improvements; the best3.484795 also passes complete independent local
+checks and a fixed-K integer exclusion. Further alternating rounds improve
+the positive merit through2.309255,1.766756,0.471736 to0.064070. The latest
+round9 index binds3,530 files and initially leaves226 pending completion work.
+That pending case is now resolved by an independently verified fixed-K exclusion.
+A separate numerical-zero neighborhood explores same-sign changes from226.
+The frozen one-round orchestrator stops on pending completion work; the
+separate pivot is explicitly recorded and does not claim strict improvement.
+
+At the preceding7.316246 seed, Rust and independent Python enumeration agree
+on73,239 legal same-sign replacements. CUDA CP evaluates all of them for500
+iterations (42.20s kernels), refines2,048 for2,000 iterations, and selects64
+LPs. All64 exact primal/dual intervals and selection stages are independently
+audited;31 strictly improve the old merit. GPU CPU-reference controls compare
+720,720 vector entries, and a257-candidate control checks the tile boundary.
+These are numerical ranking controls, not floating-point exclusion proofs.
+The later rounds use a separate hardened driver and preserve these frozen
+sources and results.
+
+The new Rust generator and independent Python enumerator agree on74,638 legal
+same-sign replacements at the preceding7.332122 seed. CUDA scores the full
+family. An initial129-LP pilot makes no improvement; alternate coordinate-X
+hints select64 additional candidates and find the independently verified
+7.316246 seed. These193 fixed-K probes are not exhaustive LP coverage.
+Their projected primal-dual CPU study provided the controls for the new CUDA
+implementation described above. A lower merit7.256166 candidate in that
+older batch failed an independently replayed pair-domain check.
+
+The preceding continuation directly optimizes the global linear completion
+defect, using Rust trade generation, CUDA fixed-X scoring and an interior-point
+phase-I LP. Coupling this objective with complete-star pair arc consistency
+reduces the defect from about 22.22012043 to 7.33212201. That preceding best has
+independently verified exact bounds [7.3321220135202125, 7.332122013712176]
+and 13,665 choices surviving independently checked pair arc consistency.
+Its positive exact dual bound and separate integer certificate exclude this
+fixed overlap assignment; it is a seed for changing the assignment, not an
+unresolved completion target. The latest 48-iteration trace audit checks all
+9,216 proposals and 176 LPs. One accepted uphill escape is recorded explicitly.
+Two-trade Rust proposals broaden the search beyond single-swap endpoints:
+the first 2,048-proposal pilot accepts one path and reduces 7.60536703 to
+7.33212201. Its final local/linear audits independently pass.
+See `docs/GOAL_20260916_GLOBAL_PHASE1.md` and
+`acceleration/results/20260916_coupled_continue/trace_audit.json`.
+
+The atomic-cycle continuation now implements both three- and four-edge
+matching cycles. Independent complete enumeration verifies 2,940 and 13,359
+legal endpoints respectively at the current best. Three bounded pilots total
+515 actual LP artifacts, with overlap across runs; all have independent exact
+positive dual bounds. Their best remains 7.33212201. One mixed-family run
+accepts a certified uphill move, but no improvement. Complete proposal-family
+coverage is not complete LP optimization coverage. Details and QA are in
+`docs/GOAL_20260916_ATOMIC_CYCLES.md`.
+
+The whole-matching continuation now jointly optimizes one matching and the
+fractional disjoint edges, fixing the other 20 matchings. The root-group-3
+`same_0` family has a fully independent integer exclusion: all 12,648 rows
+are rebuilt from full99 adjacency and their weighted sum requires at least
+1,264,132, whereas the variable boxes allow at most 87,369. This excludes all
+6,040 support-allowed replacements in that coordinate. It is conditional on
+the other matching choices and does not establish a phase-I local minimum.
+The two bounded MIP searches return unchanged overlap graphs. An additional
+all-21-coordinate continuous sweep yields eight independently verified
+same-sign family exclusions and 13 numerical-zero cases. The eight families
+intersect only at the base K, giving an exact union of 48,313 labeled overlap
+patterns before partial-cap filtering. Simultaneous matching changes are
+outside this union; numerical zero is not exact feasibility.
+See `docs/GOAL_20260916_MATCHING_MIP.md` for derivation and exact replay.
+
+- All 101 stored snapshots of the fixed-compression 10,000-step walk now
+  have independently replayed exact integer contradictions. The previous
+  count of 96 unresolved snapshots below is historical. This does not
+  exclude the unsaved intermediate states or the full fixed-compression class.
+- Direct HiGHS infeasibility rays reduce typical certificate production to
+  about 1.2 seconds per snapshot, followed by the independent integer checker.
+  The model mapping and 12 failure/status branches have a separate review.
+- A Rust walk allowing overlap compression to change crossed 1,491 distinct
+  compressions in 2,000 steps. Its 101 snapshots have full Python/Rust/CUDA
+  agreement on 129,280 exact cut scores. Stronger local nonlinear conditions
+  and completion probes are now applied to this wider domain.
+- Complete one-vertex star checks reject 55 of the 100 noninitial wide
+  snapshots; complete star domains and reciprocal-edge propagation exclude
+  the other 45 after independent exhaustive replay. The combined wide101
+  coverage audit also passes, using 55 star exclusions and 46 integer proofs.
+- A new Rust-guided pilot finds an independently verified reciprocal-domain
+  survivor after seven trades and 225 evaluations in 5.76 seconds. This is
+  a countercontrol to reciprocity as a uniform obstruction: an independent
+  integer LP certificate still excludes it (RHS -10,705). This motivated the
+  stronger exact pair common-neighbor compatibility experiment below.
+- The stronger Rust/CUDA guided search evaluated 1,281 states in 35.68 seconds
+  and accepted 37 moves. Every one of its 1,280 proposed partial graphs and all
+  accepted trades have independent full-graph checks. The best assignment has
+  21,224 complete local stars; full exact pair-domain arc consistency retains
+  15,617 choices across all 84 vertices. Independent set-based replay verifies
+  all 922 deletions and the final closure. Nevertheless, a separate exact
+  integer certificate excludes this assignment (RHS -5,404). It is a checked
+  countercontrol showing that pair arc consistency alone is insufficient.
+- Current next step: implement and independently check batched CUDA
+  approximate phase-I reoptimization, using the preserved CPU controls in
+  `acceleration/PHASE1_CHAMBOLLE_POCK_REVIEW.md`. Continue from the new7.316246
+  seed and validate shortlisted candidates with exact LP/domain evidence.
+  Keep deriving uniform constraints and wider moves. The single-matching
+  algebra cannot be applied unchanged when freeing multiple matchings because
+  cross-products return. The old eight family certificates remain tied to
+  their original base K. Every saved best remains exactly excluded; change
+  its overlap assignment before trying a completion.
+- E71-or-lower exhaustive enumeration remains stopped. Existing E72 ledger
+  exclusions and all historical hash-bound artifacts remain preserved.
+
+## Earlier bounded continuation, 2026-09-16
+
+The user explicitly resumed this project and authorized Rust/GPU acceleration.
+All older process/PID statements below are historical: no old project runner
+was live at this restart. No valid SRG or general nonexistence proof exists in
+this project; no submission.txt has been created.
+
+Current continuation artifacts and reproduction commands are in
+`acceleration/README.md`; restart-state audit is
+`docs/RESUME_20260916_CHECKPOINT.md`.
+
+- Added dependency-free Rust candidate generation and exact i64 cut scoring,
+  plus a CUDA scorer tested on the RTX4090. The 3,840 historical control scores
+  agree exactly with Python and each other. Rust completed a seeded10,000-trade
+  walk in3.027 seconds; all trades and101 snapshots have independent audits.
+- Replaced the saved walk's abnormal GLOP outcome with HiGHS plus exact integer
+  dual reconstruction. The independent full99-vertex checker verifies all1,680
+  coefficients nonnegative and RHS=-107,551. This excludes only that complete
+  overlap assignment, without fixing disjoint compression totals.
+- The sixth cut rejects the old640-cut survivor. Among101 saved new snapshots,
+  100 pass all768 sign-conjugate cuts. Four deterministic samples were probed;
+  all four have new independently verified exact contradictions with RHS
+  -136,935 / -147,698 / -113,785 / -124,972. These remain finite fixed-assignment
+  exclusions. Neither a feasible linear completion nor full adjacency was found.
+- The five new certificates are now integrated into10 cuts /1,280 sign
+  conditions. All129,280 scores on101 snapshots agree in Python, Rust and
+  CUDA, with exact source/input hashes checked. Final kernel/evaluation times:
+  Python231.260s, Rust0.567s, CUDA0.0145s (CUDA setup separately0.102s).
+  All5 known excluded snapshots are rejected;96 unprobed snapshots remain.
+  See `acceleration/results/20260916_final_bank/summary.json`. The bounded
+  continuation has finished; no research worker was left running.
+- Latest small5 audit is27/52 shards,212/400 records, UNSAT mass16,384.
+  m33 is independently certified complete (mass8,192) and credited once in
+  `scratch_resume_20260916_e72_complete_coverage_inventory.json`. The separate
+  whole-document delta audit passes; unresolved coverage is442,368, source150
+  open coverage20,480, and exact non-DRAT coverage4,841,472. The old central
+  inventory is preserved byte-for-byte as history. Failed m90 shards are not
+  exclusions and were not restarted. No E71-or-lower enumeration was launched.
+
+## Preserved 2026-09-05 continuation history
 
 The user's new `/goal` instruction explicitly resumes work on construction
 or nonexistence. `STOPPED_BY_USER.md` records the earlier stop and remains

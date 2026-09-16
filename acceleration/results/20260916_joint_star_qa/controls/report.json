@@ -1,0 +1,126 @@
+{
+  "status": "JOINT_STAR_DFS_SYNTHETIC_AND_REAL_AC_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/build/joint_star_dfs.exe": "49439ff07604c2cca566fc43a937bf2e14cc5cc8926f6e9495f04a1e1be6c42e",
+    "acceleration/joint_star_dfs.rs": "87d5b004f5e1baaf806fe3798721c005b515b0e04248e3a4e4218b9ab80ee0e6",
+    "acceleration/run_joint_star_dfs.py": "d238d34cf38680ebcf7c42bdb0ca7ed01c70410b0d714128834dc19ab5c5b852",
+    "acceleration/audit_joint_star_dfs.py": "f59156fb4a4d0e2a6cf3ac2a8906659fc73269ad07cb72f9c84f13b9a2523361",
+    "acceleration/review_joint_star_dfs.py": "09e340964ce167a9ff6de04c8824cbad55004d5f14351212c8e6cb1b26945e0d"
+  },
+  "independent_synthetic_solution_counts": {
+    "2": 0,
+    "3": 6
+  },
+  "synthetic_native": {
+    "status": "JOINT_STAR_SYNTHETIC_BRANCH_CONTROLS_PASS",
+    "controls": [
+      {
+        "colors": 2,
+        "status": "EXHAUSTED_SYNTHETIC_CSP",
+        "nodes": 3,
+        "branches": 2
+      },
+      {
+        "colors": 3,
+        "status": "FOUND_SYNTHETIC_ASSIGNMENT",
+        "nodes": 3,
+        "branches": 2
+      }
+    ],
+    "node_cap_rejected": true,
+    "time_cap_rejected": true,
+    "conway_witness_claim": false
+  },
+  "real_controls": [
+    {
+      "name": "compact_ac",
+      "status": "AC_NONEMPTY_NO_SEARCH",
+      "cap_reason": null,
+      "nodes": 0,
+      "branches": 0,
+      "relation_bytes": 47814056,
+      "domain_pairs": 166284988,
+      "audit_path": "acceleration/results/20260916_joint_star_qa/controls/compact_ac/audit.json",
+      "audit_sha256": "a6e20b875acca2579fbdfedeeeeb42d1ef92ba2eaf72ab86bf2be3eb88296973"
+    },
+    {
+      "name": "pair_cap",
+      "status": "UNKNOWN",
+      "cap_reason": "DOMAIN_PAIR_CAP",
+      "nodes": 0,
+      "branches": 0,
+      "relation_bytes": 0,
+      "domain_pairs": 0,
+      "audit_path": "acceleration/results/20260916_joint_star_qa/controls/pair_cap/audit.json",
+      "audit_sha256": "8f9ab72fdbfbcaa8830688c1a80500ea49e55775f5f50d3a219fc4706ea8aa63"
+    },
+    {
+      "name": "memory_cap",
+      "status": "UNKNOWN",
+      "cap_reason": "RELATION_MEMORY_CAP",
+      "nodes": 0,
+      "branches": 0,
+      "relation_bytes": 1043672,
+      "domain_pairs": 3253022,
+      "audit_path": "acceleration/results/20260916_joint_star_qa/controls/memory_cap/audit.json",
+      "audit_sha256": "4dd12e9cfd914e5b35378998d82f8052110d2814f57ee9922a00e1151cbecd56"
+    },
+    {
+      "name": "time_cap",
+      "status": "UNKNOWN",
+      "cap_reason": "TIME_CAP",
+      "nodes": 0,
+      "branches": 0,
+      "relation_bytes": 0,
+      "domain_pairs": 0,
+      "audit_path": "acceleration/results/20260916_joint_star_qa/controls/time_cap/audit.json",
+      "audit_sha256": "7add65b9173d349feac1d4a991f84eb2556a5bdb0fcfbe379c41324c781f19fb"
+    }
+  ],
+  "negative_controls": [
+    {
+      "name": "nan_seconds",
+      "rejected": true,
+      "error": "invalid mode/budgets"
+    },
+    {
+      "name": "zero_nodes",
+      "rejected": true,
+      "error": "invalid mode/budgets"
+    },
+    {
+      "name": "zero_memory",
+      "rejected": true,
+      "error": "invalid mode/budgets"
+    },
+    {
+      "name": "invalid_mode",
+      "rejected": true,
+      "error": "invalid mode/budgets"
+    },
+    {
+      "name": "duplicate_K",
+      "rejected": true,
+      "error": "duplicate edge"
+    },
+    {
+      "name": "wrong_star_degree",
+      "rejected": true,
+      "error": "vertex 0: star mask must have eight of 84 bits"
+    },
+    {
+      "name": "wrong_star_quota",
+      "rejected": true,
+      "error": "invalid star root-label equation"
+    },
+    {
+      "name": "existing_output_preserved",
+      "rejected": true
+    }
+  ],
+  "all_negative_controls_rejected": true,
+  "research_branch_searches": 0,
+  "conway_witness_created": false,
+  "independent_conway_exclusion_proved": false,
+  "scope": "Tiny synthetic CSP branches verified by exhaustive Python coloring oracle; real fixed-K runs only reproduce audited AC or return caps. No real branching search performed."
+}

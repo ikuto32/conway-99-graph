@@ -1,0 +1,100 @@
+{
+  "status": "ATOMIC_GEOMETRY_AUDITOR_REAL_CONTROL_AND_CORRUPTION_CHECKS_PASS",
+  "real_control_net_move": {
+    "removed": [
+      [
+        28,
+        62
+      ],
+      [
+        31,
+        64
+      ],
+      [
+        65,
+        70
+      ]
+    ],
+    "added": [
+      [
+        28,
+        70
+      ],
+      [
+        31,
+        65
+      ],
+      [
+        62,
+        64
+      ]
+    ],
+    "root_group": 3,
+    "matching_class": "cross",
+    "cycle_size": 3,
+    "alternating_cycle": [
+      28,
+      62,
+      64,
+      31,
+      65,
+      70
+    ]
+  },
+  "real_control_both_full99_partial_graphs_valid": true,
+  "abstract_k4_cycle_structure_pass": true,
+  "abstract_k4_control_is_not_claimed_as_a_valid_K_graph": true,
+  "corruption_rejections": [
+    {
+      "name": "wrong_root_group",
+      "reason": "Atomic edge leaves the recorded root matching"
+    },
+    {
+      "name": "wrong_matching_class",
+      "reason": "Atomic edge changes matching sign class"
+    },
+    {
+      "name": "repeated_cycle_vertex",
+      "reason": "Invalid alternating cycle vertices"
+    },
+    {
+      "name": "wrong_removed_edge",
+      "reason": "Atomic replacement is not a matching on the same endpoints"
+    },
+    {
+      "name": "wrong_added_edge",
+      "reason": "Atomic replacement is not a matching on the same endpoints"
+    },
+    {
+      "name": "noncanonical_edge",
+      "reason": "Invalid atomic edge coordinate"
+    },
+    {
+      "name": "missing_added_edge",
+      "reason": "Wrong atomic edge count or repeated edges"
+    },
+    {
+      "name": "wrong_final_graph",
+      "reason": "Atomic cycle does not produce chosen graph"
+    },
+    {
+      "name": "boolean_root_group",
+      "reason": "Invalid matching root group"
+    },
+    {
+      "name": "disconnected_two4cycles_in_k4",
+      "reason": "Alternating cycle new edges mismatch"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration\\results\\20260916_two_trade_pilot\\summary.json": "0fb00d2693540f40eadc039b8d02064a6d17d537a5226df030a95c1a50a1fadb",
+    "acceleration\\results\\20260916_two_trade_pilot\\probes\\initial_candidate.json": "9f9256e1825209fc15694747b94f2f689204128ce6753d0ab4788286746ebde2",
+    "acceleration\\results\\20260916_two_trade_pilot\\probes\\iteration_0005_choice_0014_candidate.json": "0e287959f428a8a8ee815dfae1fd8e8af452fec8aea181a44fa973f7c6e43f62"
+  },
+  "sources_sha256": {
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\qa_atomic_geometry_auditor.py": "05d67d347f7d42634d49bda890c934ec97589fedb5167952d2af18d31d8c8057",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_atomic_accepted.py": "ab08a97d7afbe797a27d325e6f6e01d4f70834925f97a364a3574346411ba2ba",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d"
+  },
+  "scope": "Tests actual saved legal net3-cycle geometry plus abstract cycle connectivity and ten corruptions. No new candidate search, pair-AC proof, or global exclusion."
+}

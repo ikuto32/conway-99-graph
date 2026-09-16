@@ -1,0 +1,37 @@
+{
+  "status": "GUIDED_PAIR_TRACE_AUDIT_NEGATIVE_CONTROLS_PASS",
+  "checks": [
+    {
+      "case": "stale_proposal_hash",
+      "rejected": true,
+      "reason": "Chosen-record proposal hash mismatch"
+    },
+    {
+      "case": "duplicate_edge_in_sampled_candidate",
+      "rejected": true,
+      "reason": "Invalid or repeated edge"
+    },
+    {
+      "case": "chosen_trade_differs_from_proposal",
+      "rejected": true,
+      "reason": "Chosen trade mismatch"
+    },
+    {
+      "case": "incorrect_evaluation_count",
+      "rejected": true,
+      "reason": "Evaluated-state count differs from persisted proposals"
+    },
+    {
+      "case": "valid_but_wrong_best_graph",
+      "rejected": true,
+      "reason": "Best candidate is not the replayed best accepted state"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/audit_guided_pair_walk.py": "ca261d174267d6cbdc72ce3c85e6f87eff8da78e6fb516566294c58ca5265342",
+    "acceleration/results/20260916_guided_pair_pilot_trace_audit.json": "3864c665b25d4f6abcf59a7cf722515c0aa5beaf024c3353829aff99ebc57541",
+    "acceleration/results/20260916_guided_pair_pilot/summary.json": "0ee6a2027aebbb745d0885300762e15e1b75cf858515b8769c0760a87ecfca3f",
+    "acceleration/results/20260916_guided_pair_pilot/manifest.json": "9f9c4fd33152a44acdb7c4d9f0a1f2deba8433f0761d00dedffae1ce308dc28d"
+  },
+  "scope": "Finite corruption rejection controls for graph/trace/provenance audit; no independent confirmation of heuristic scores or exhaustive search."
+}
