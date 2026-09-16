@@ -1,0 +1,145 @@
+{
+  "status": "BOUNDED_MATCHING_MODEL_CONTROL_SUMMARY",
+  "inputs_sha256": {
+    "acceleration/results/20260916_two_trade_pilot/best_candidate.json": "f17498be5a7d7c07ffa43c49271b99a89aa7028841fc791c45864e512dfacd76",
+    "acceleration/results/20260916_two_trade_pilot/best_phase1.json": "057de7f28d7f0f597320174fa676d78d287583170cefa15f3f84c2eb29c60fde",
+    "acceleration/matching_phase1_mip.py": "8c69da5e7b53dc3987d139a5772dd575e991fd2389e1c8c9d0960f5afd7f0ece",
+    "acceleration/results/20260916_matching_indicator_audit.json": "0a88c55b2ac334e460a7fb1d32b67aa0e90a9576280736777261d905f1360641",
+    "acceleration/results/20260916_matching_mip_fixed_cross3/result.json": "4f626307cf130345f1813f1389f6b464080ce424a4d56078116bc5a2b93c2ebc",
+    "acceleration/results/20260916_matching_mip_fixed_cross3/candidate.json": "f3cadf74f42bac0beb519cd01b9486b0f5f9095a72d518903850e3c0129559ae",
+    "acceleration/results/20260916_matching_mip_cross3/result.json": "51b78d512e90ad84db83e0011edc635fe4d53096f405aec3e3eaaf2e4b54d55f",
+    "acceleration/results/20260916_matching_mip_cross3/candidate.json": "86a2551b0709255f8ff01d3f885f2b93803fb06bd0a61d1ccc9ce6041b8ec715",
+    "acceleration/results/20260916_matching_mip_fixed_same0/result.json": "f592511779b556a1308bac669eb208f881ded72e589539bbe6be6de16fac0727",
+    "acceleration/results/20260916_matching_mip_fixed_same0/candidate.json": "81e2c977ea22a47cd02e9bdf98ddd85a9c5b517ce1061448d32a323dc944785b",
+    "acceleration/results/20260916_matching_mip_same0/result.json": "e85037f2c167d2eb4617bee88ec7e1271963d69439f263e17870e8163c40db0d",
+    "acceleration/results/20260916_matching_mip_same0/candidate.json": "095af7a0147290b3acc369e240d12fc1b98a0d58fc948d4cc915bc8de40b652d"
+  },
+  "controls": [
+    {
+      "root_group": 3,
+      "matching_class": "cross",
+      "fix_initial": true,
+      "numeric_objective": 7.33212201868121,
+      "initial_numeric_objective": 7.332122013712173,
+      "numeric_solver_objective": 7.332122037740404,
+      "matching_unchanged": true,
+      "numerical_optimal": true,
+      "time_limit_reached": false,
+      "mip_nodes": -1,
+      "numeric_mip_dual_bound": null,
+      "numeric_mip_gap": null,
+      "solve_seconds": 0.9303991999913706,
+      "dimensions": {
+        "x_variables": 1680,
+        "matching_variables": 120,
+        "slack_variables": 5166,
+        "total_columns": 6966,
+        "rows": 20826,
+        "nonzeros": 128046,
+        "row_kinds": {
+          "matching_degree": 24,
+          "hard_partial_cap": 2076,
+          "foreign_label_quota": 840,
+          "linear_completion_cap": 2046,
+          "completion_cap_baseline": 1440,
+          "completion_cap_indicator_M1": 14400
+        }
+      }
+    },
+    {
+      "root_group": 3,
+      "matching_class": "cross",
+      "fix_initial": false,
+      "numeric_objective": 7.332122013712173,
+      "initial_numeric_objective": 7.332122013712173,
+      "numeric_solver_objective": 7.332122013712173,
+      "matching_unchanged": true,
+      "numerical_optimal": false,
+      "time_limit_reached": true,
+      "mip_nodes": 0,
+      "numeric_mip_dual_bound": 0.0,
+      "numeric_mip_gap": 1.0,
+      "solve_seconds": 30.511506399998325,
+      "dimensions": {
+        "x_variables": 1680,
+        "matching_variables": 120,
+        "slack_variables": 5166,
+        "total_columns": 6966,
+        "rows": 20826,
+        "nonzeros": 128046,
+        "row_kinds": {
+          "matching_degree": 24,
+          "hard_partial_cap": 2076,
+          "foreign_label_quota": 840,
+          "linear_completion_cap": 2046,
+          "completion_cap_baseline": 1440,
+          "completion_cap_indicator_M1": 14400
+        }
+      }
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_0",
+      "fix_initial": true,
+      "numeric_objective": 7.3321220232968045,
+      "initial_numeric_objective": 7.332122013712173,
+      "numeric_solver_objective": 7.332122060452962,
+      "matching_unchanged": true,
+      "numerical_optimal": true,
+      "time_limit_reached": false,
+      "mip_nodes": -1,
+      "numeric_mip_dual_bound": null,
+      "numeric_mip_gap": null,
+      "solve_seconds": 0.6778784000052838,
+      "dimensions": {
+        "x_variables": 1680,
+        "matching_variables": 60,
+        "slack_variables": 5166,
+        "total_columns": 6906,
+        "rows": 12648,
+        "nonzeros": 77526,
+        "row_kinds": {
+          "matching_degree": 12,
+          "hard_partial_cap": 1110,
+          "foreign_label_quota": 840,
+          "linear_completion_cap": 2766,
+          "completion_cap_baseline": 720,
+          "completion_cap_indicator_M1": 7200
+        }
+      }
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_0",
+      "fix_initial": false,
+      "numeric_objective": 7.332122013613444,
+      "initial_numeric_objective": 7.332122013712173,
+      "numeric_solver_objective": 7.332122013545343,
+      "matching_unchanged": true,
+      "numerical_optimal": false,
+      "time_limit_reached": true,
+      "mip_nodes": 0,
+      "numeric_mip_dual_bound": 1.1769910329667566,
+      "numeric_mip_gap": 0.8394747072140389,
+      "solve_seconds": 30.00739080000494,
+      "dimensions": {
+        "x_variables": 1680,
+        "matching_variables": 60,
+        "slack_variables": 5166,
+        "total_columns": 6906,
+        "rows": 12648,
+        "nonzeros": 77526,
+        "row_kinds": {
+          "matching_degree": 12,
+          "hard_partial_cap": 1110,
+          "foreign_label_quota": 840,
+          "linear_completion_cap": 2766,
+          "completion_cap_baseline": 720,
+          "completion_cap_indicator_M1": 7200
+        }
+      }
+    }
+  ],
+  "new_overlap_assignment_found": false,
+  "scope": "Both fixed-matching numerical optima agree with the saved fixed-K phase-I result within1e-6. Both30s variable runs retain exactly the initial K. Independent indicator mathematics is separately audited; MIP bounds/statuses provide no exclusion or coverage proof."
+}

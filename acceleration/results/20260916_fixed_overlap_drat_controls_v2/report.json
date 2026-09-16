@@ -1,0 +1,282 @@
+{
+  "status": "FIXED_OVERLAP_DRAT_TINY_PROOF_AND_CAP_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/review_fixed_overlap_drat.py": "787301653e6780dd3149993c45e332987c4e459797173c6be21ac21d97c8f1ea",
+    "acceleration/run_fixed_overlap_drat.py": "34467f38986d885eee17febc92df50f3e86c09c022d9aa435b599ca558fb6732",
+    "acceleration/audit_fixed_overlap_drat.py": "b965e6146a5ff6f811e22a16a4ef7fbdedf696c5c692f31dc399a168a89045d5",
+    "acceleration/run_fixed_overlap_sat.py": "68a6bf158e4a1be6e02df521e910ce5385029b932bd6d66245bbabfbb23fc5df",
+    ".deps/pysat/solvers.py": "253654d8efabae650a0d136ad2f2e6d30b57206b1fb70846c714197468a28f7e",
+    ".deps/pysat/formula.py": "aad003a5abe5e66fa91d10e767b3c3122a2c4fb4db682c2a63fc69bfffbe365c",
+    "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+    "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+    ".deps/pysolvers.cp312-win_amd64.pyd": "96b7325a76b78d1509e86bd454cd309d467307fb573fc01ddbfea6dabf8b3104"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/corrupted_empty_clause.drat": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/corrupted_fresh_unit.drat": "b7d379cb3d9c001c9c511b6cdfca9679993e8a2c73bc921014089ead9ac75a18",
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/pigeonhole.cnf": "7e5d017392eaa29f07649ef4d2383bd8472e0979a3c17c46e48c7f9442fe9610",
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny.drat": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_sat.cnf": "0800169e860f9787c06f93fda5b53358492aa00f2ee2ce2e6931e4c6335ded7e",
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/truncated_empty.drat": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260916_fixed_overlap_drat_controls_v2/wrong_sat_formula.drat": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0"
+  },
+  "controls": [
+    {
+      "name": "genuine_unsat",
+      "production": {
+        "solver_result": "UNSAT_PROOF_UNCHECKED",
+        "proof_created": true,
+        "proof_lines": 3,
+        "native_proof_finalized_before_read": true,
+        "terminal_empty_clause_synthesized": false,
+        "declared_variables": 2,
+        "clauses": 4,
+        "stats": {
+          "restarts": 0,
+          "conflicts": 2,
+          "decisions": 1,
+          "propagations": 2
+        },
+        "pysat_version": "1.9.dev15",
+        "parse_seconds": 0.014999999999417923,
+        "load_seconds": 0.0,
+        "solve_seconds": 0.0,
+        "worker_exit_code": 0,
+        "conflict_budget": 100,
+        "wall_limit_seconds": 10,
+        "wall_seconds": 0.07799999999406282
+      },
+      "check": {
+        "status": "DRAT_VERIFIED",
+        "verified": true,
+        "inputs_sha256": {
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny.drat": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+          "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+          "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+          "acceleration/audit_fixed_overlap_drat.py": "b965e6146a5ff6f811e22a16a4ef7fbdedf696c5c692f31dc399a168a89045d5"
+        },
+        "checker_command": [
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\tools\\drat-trim\\drat-trim.exe",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny_unsat.cnf",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny.drat",
+          "-t",
+          "10"
+        ],
+        "return_code": 0,
+        "reason": null,
+        "checker_wall_limit_seconds": 10,
+        "elapsed_seconds": 0.046999999991385266,
+        "transcript": "\nc parsing input formula with 2 variables and 4 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 4 of 4 clauses in core                            \n\nc 2 of 4 lemmas in core using 5 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 0.038 seconds\n",
+        "external_checker_no_solver_imported": true
+      }
+    },
+    {
+      "name": "truncated_empty",
+      "expected": "NOT_VERIFIED",
+      "check": {
+        "status": "DRAT_NOT_VERIFIED",
+        "verified": false,
+        "inputs_sha256": {
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/truncated_empty.drat": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+          "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+          "acceleration/audit_fixed_overlap_drat.py": "b965e6146a5ff6f811e22a16a4ef7fbdedf696c5c692f31dc399a168a89045d5"
+        },
+        "checker_command": [
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\tools\\drat-trim\\drat-trim.exe",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny_unsat.cnf",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\truncated_empty.drat",
+          "-t",
+          "10"
+        ],
+        "return_code": 1,
+        "reason": null,
+        "checker_wall_limit_seconds": 10,
+        "elapsed_seconds": 0.04700000000593718,
+        "transcript": "\nc parsing input formula with 2 variables and 4 clauses\n\nc finished parsing\n\nc ERROR: no conflict\n\ns NOT VERIFIED\n\nc verification time: 0.033 seconds\n",
+        "external_checker_no_solver_imported": true
+      }
+    },
+    {
+      "name": "corrupted_empty_clause",
+      "expected": "NOT_VERIFIED",
+      "check": {
+        "status": "DRAT_NOT_VERIFIED",
+        "verified": false,
+        "inputs_sha256": {
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/corrupted_empty_clause.drat": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+          "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+          "acceleration/audit_fixed_overlap_drat.py": "b965e6146a5ff6f811e22a16a4ef7fbdedf696c5c692f31dc399a168a89045d5"
+        },
+        "checker_command": [
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\tools\\drat-trim\\drat-trim.exe",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny_unsat.cnf",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\corrupted_empty_clause.drat",
+          "-t",
+          "10"
+        ],
+        "return_code": 1,
+        "reason": null,
+        "checker_wall_limit_seconds": 10,
+        "elapsed_seconds": 0.031000000002677552,
+        "transcript": "\nc parsing input formula with 2 variables and 4 clauses\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.032 seconds\n",
+        "external_checker_no_solver_imported": true
+      }
+    },
+    {
+      "name": "corrupted_fresh_unit",
+      "expected": "NOT_VERIFIED",
+      "check": {
+        "status": "DRAT_NOT_VERIFIED",
+        "verified": false,
+        "inputs_sha256": {
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/corrupted_fresh_unit.drat": "b7d379cb3d9c001c9c511b6cdfca9679993e8a2c73bc921014089ead9ac75a18",
+          "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+          "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+          "acceleration/audit_fixed_overlap_drat.py": "b965e6146a5ff6f811e22a16a4ef7fbdedf696c5c692f31dc399a168a89045d5"
+        },
+        "checker_command": [
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\tools\\drat-trim\\drat-trim.exe",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny_unsat.cnf",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\corrupted_fresh_unit.drat",
+          "-t",
+          "10"
+        ],
+        "return_code": 1,
+        "reason": null,
+        "checker_wall_limit_seconds": 10,
+        "elapsed_seconds": 0.046999999991385266,
+        "transcript": "\nc parsing input formula with 2 variables and 4 clauses\n\nc finished parsing\n\nc ERROR: no conflict\n\ns NOT VERIFIED\n\nc verification time: 0.033 seconds\n",
+        "external_checker_no_solver_imported": true
+      }
+    },
+    {
+      "name": "wrong_sat_formula",
+      "expected": "NOT_VERIFIED",
+      "check": {
+        "status": "DRAT_NOT_VERIFIED",
+        "verified": false,
+        "inputs_sha256": {
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_sat.cnf": "0800169e860f9787c06f93fda5b53358492aa00f2ee2ce2e6931e4c6335ded7e",
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/wrong_sat_formula.drat": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+          "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+          "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+          "acceleration/audit_fixed_overlap_drat.py": "b965e6146a5ff6f811e22a16a4ef7fbdedf696c5c692f31dc399a168a89045d5"
+        },
+        "checker_command": [
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\tools\\drat-trim\\drat-trim.exe",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny_sat.cnf",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\wrong_sat_formula.drat",
+          "-t",
+          "10"
+        ],
+        "return_code": 1,
+        "reason": null,
+        "checker_wall_limit_seconds": 10,
+        "elapsed_seconds": 0.04700000000593718,
+        "transcript": "\nc parsing input formula with 2 variables and 1 clauses\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.034 seconds\n",
+        "external_checker_no_solver_imported": true
+      }
+    },
+    {
+      "name": "sat_remains_unvalidated",
+      "production": {
+        "solver_result": "SAT_MODEL_UNVALIDATED",
+        "proof_created": false,
+        "proof_lines": 0,
+        "native_proof_finalized_before_read": false,
+        "terminal_empty_clause_synthesized": false,
+        "declared_variables": 2,
+        "clauses": 1,
+        "stats": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 0
+        },
+        "pysat_version": "1.9.dev15",
+        "parse_seconds": 0.014999999999417923,
+        "load_seconds": 0.0,
+        "solve_seconds": 0.0,
+        "worker_exit_code": 0,
+        "conflict_budget": 100,
+        "wall_limit_seconds": 10,
+        "wall_seconds": 0.09399999999732245
+      }
+    },
+    {
+      "name": "wall_cap_unknown",
+      "production": {
+        "solver_result": "UNKNOWN",
+        "reason": "WALL_TIME_LIMIT_INCLUDING_PARSE_LOAD_PROOF",
+        "worker_exit_code": -15,
+        "conflict_budget": 100,
+        "wall_limit_seconds": 1e-09,
+        "wall_seconds": 0.0
+      }
+    },
+    {
+      "name": "conflict_cap_unknown",
+      "production": {
+        "solver_result": "UNKNOWN",
+        "proof_created": false,
+        "proof_lines": 0,
+        "native_proof_finalized_before_read": false,
+        "terminal_empty_clause_synthesized": false,
+        "declared_variables": 30,
+        "clauses": 81,
+        "stats": {
+          "restarts": 0,
+          "conflicts": 1,
+          "decisions": 4,
+          "propagations": 26
+        },
+        "pysat_version": "1.9.dev15",
+        "parse_seconds": 0.015999999988707714,
+        "load_seconds": 0.0,
+        "solve_seconds": 0.0,
+        "worker_exit_code": 3221226505,
+        "conflict_budget": 1,
+        "wall_limit_seconds": 10,
+        "wall_seconds": 0.28100000000267755
+      }
+    },
+    {
+      "name": "checker_cap_unknown",
+      "check": {
+        "status": "UNKNOWN",
+        "verified": false,
+        "inputs_sha256": {
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+          "acceleration/results/20260916_fixed_overlap_drat_controls_v2/tiny.drat": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+          "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+          "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+          "acceleration/audit_fixed_overlap_drat.py": "b965e6146a5ff6f811e22a16a4ef7fbdedf696c5c692f31dc399a168a89045d5"
+        },
+        "checker_command": [
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\tools\\drat-trim\\drat-trim.exe",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny_unsat.cnf",
+          "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260916_fixed_overlap_drat_controls_v2\\tiny.drat",
+          "-t",
+          "1"
+        ],
+        "return_code": null,
+        "reason": "CHECKER_WALL_TIME_LIMIT",
+        "checker_wall_limit_seconds": 1e-09,
+        "elapsed_seconds": 0.0,
+        "transcript": "",
+        "external_checker_no_solver_imported": true
+      }
+    }
+  ],
+  "research_CNF_solves": 0,
+  "unverified_results_exclude_nothing": true,
+  "graph_witness_created": false,
+  "scope": "Tiny formulas test proof generation/checking and caps; no actual fixed-K conclusion in this report."
+}

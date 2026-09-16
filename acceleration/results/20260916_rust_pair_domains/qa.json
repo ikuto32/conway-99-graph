@@ -1,0 +1,80 @@
+{
+  "status": "RUST_EXACT_PAIR_DOMAIN_PARITY_AND_INDEPENDENT_REPLAY_PASS",
+  "controls": [
+    {
+      "candidate": "pilot",
+      "all_event_and_final_state_fields_equal_python": true,
+      "domain_pairs_evaluated": 673,
+      "relations_built": 6,
+      "events_verified": 7,
+      "empty_vertex": 25,
+      "rust_seconds": 1.22e-05,
+      "python_seconds": 0.0011615999974310398,
+      "independent_used_domains": 6,
+      "independent_set_checks": 180
+    },
+    {
+      "candidate": "wide15",
+      "all_event_and_final_state_fields_equal_python": true,
+      "domain_pairs_evaluated": 5,
+      "relations_built": 1,
+      "events_verified": 1,
+      "empty_vertex": 24,
+      "rust_seconds": 4e-06,
+      "python_seconds": 0.0007956000044941902,
+      "independent_used_domains": 2,
+      "independent_set_checks": 5
+    }
+  ],
+  "cap_checks": [
+    {
+      "case": "pair_cap",
+      "cap_reason": "DOMAIN_PAIR_CAP",
+      "audit_status": "INCOMPLETE_PAIR_SEARCH_NO_EXCLUSION"
+    },
+    {
+      "case": "time_cap",
+      "cap_reason": "TIME_CAP",
+      "audit_status": "INCOMPLETE_PAIR_SEARCH_NO_EXCLUSION"
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "mask_outside_outer_vertices",
+      "message": "error: vertex 0: star mask must have eight of 84 bits"
+    },
+    {
+      "case": "duplicate_mask",
+      "message": "error: domain masks must be strictly sorted and unique"
+    },
+    {
+      "case": "trailing_mask",
+      "message": "error: trailing domain input"
+    },
+    {
+      "case": "empty_input_domain",
+      "message": "error: vertex 0: domain count must be in 1..100000"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/pair_domains.rs": "39fe24d3a87ee4780ad8daff1aeb95cb830fe0877d9ed2b56b0ccdb82e3621ff",
+    "acceleration/build/pair_domains.exe": "7031a0a9d32075fb8f32777149ff5f54466c930726a2777709aa5278779eb976",
+    "acceleration/goal_theory_pair_domains.py": "a16eecd74c726423fdcbc81b441fc58e5a728e1c14603e25e83c250a8629f45f",
+    "acceleration/audit_goal_theory_pairs.py": "9da60c600c45c16274efd05db0cf3c21cab8a61969dd2fe0d372ac9a2e7be75f",
+    "acceleration/results/20260916_goal_theory_pair_pilot.json": "9d47ffc3ee250bee0ba1a99941d13ddee8326cc235e31bfe777a99c8fb473aa0",
+    "acceleration/results/20260916_rust_pair_domains/wide15_python.json": "c60b024036a89c3dce41556e5f3f65f5a2124181260a5784170bbb83f481e16c",
+    "acceleration/results/20260916_rust_pair_domains/pair_cap_audit.json": "62a66ef1344cda415bee5eb2ada9ff53575c8f2151a157be38389ff387d113b4",
+    "acceleration/results/20260916_rust_pair_domains/pair_cap_native.json": "1c999cc65ef50db9218f9db8b6b8fdb67eb46816342615f9f1a9927799f6ff3b",
+    "acceleration/results/20260916_rust_pair_domains/pilot_audit.json": "a286faa9c8d5a414827178d98a0aade31f435998b12da31d2d14568892eb87e3",
+    "acceleration/results/20260916_rust_pair_domains/pilot_native.json": "a35e98ccae79172522d8ec288b5af685ea3ae6e90c38f66a47fc3abf8e402537",
+    "acceleration/results/20260916_rust_pair_domains/time_cap_audit.json": "54ce500740462eaf76df64d57a4db13c3186fa7013528f982fb9f13f8ef6083d",
+    "acceleration/results/20260916_rust_pair_domains/time_cap_native.json": "be70eaeb1b58abe8d4f039fc01949ec48d8b491151ded5ab2823f7c290c2a4a2",
+    "acceleration/results/20260916_rust_pair_domains/wide15_audit.json": "536bda75ddcdb7a7f737a61f445f7f30960cbd0bad4421b7e6e2f4d0ec338da5",
+    "acceleration/results/20260916_rust_pair_domains/wide15_native.json": "dc3ccab4b541ae7e9c89d132735ad8186214096f2deb458232122efea47182e2",
+    "acceleration/results/20260916_rust_pair_domains/pilot_candidate.txt": "78ff56090867e91a8b95e7ece688891f2467e380202bbbce7abf3f98d36c42e8",
+    "acceleration/results/20260916_rust_pair_domains/pilot_domains.txt": "923142338ecab8cbc99089eea672267e29e80c7579b60f522eb7fdc7ab501b2c",
+    "acceleration/results/20260916_rust_pair_domains/wide15_candidate.txt": "8b116d4c01a69c751015a85c0e503ed352b97277c26195afe370161fa87407fa",
+    "acceleration/results/20260916_rust_pair_domains/wide15_domains.txt": "d13273b67f84b3350b6bf518ccd45eb19542781381574530e8c18f958e82ba6d"
+  },
+  "scope": "Finite parity controls. Independent complete used-domain enumeration and set-based neighborhood comparison establish exclusions only for the two fixed overlap assignments. Caps give no exclusion."
+}

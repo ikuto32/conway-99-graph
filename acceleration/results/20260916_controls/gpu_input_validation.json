@@ -1,0 +1,71 @@
+{
+  "status": "CUDA_INPUT_VALIDATION_PASS",
+  "cases": [
+    {
+      "name": "exact_64_bit_constant",
+      "passed": true,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "duplicate_edge",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Duplicate edge"
+    },
+    {
+      "name": "negative_endpoint",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Invalid canonical edge endpoints"
+    },
+    {
+      "name": "out_of_range_endpoint",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Invalid canonical edge endpoints"
+    },
+    {
+      "name": "wrong_overlap_support",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Edge must join supports intersecting once"
+    },
+    {
+      "name": "truncated_edges",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Missing or invalid edge endpoint"
+    },
+    {
+      "name": "trailing_edge_data",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Unexpected trailing input"
+    },
+    {
+      "name": "negative_beta",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Negative beta multiplier"
+    },
+    {
+      "name": "asymmetric_beta",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Beta must be symmetric with zero diagonal"
+    },
+    {
+      "name": "overflow_guard",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Cut coefficients exceed conservative int64 safety bound"
+    },
+    {
+      "name": "non_four_regular",
+      "passed": true,
+      "exit_code": 1,
+      "stderr": "overlap_gpu: Overlap degree exceeds four"
+    }
+  ]
+}

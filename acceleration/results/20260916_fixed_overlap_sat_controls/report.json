@@ -1,0 +1,532 @@
+{
+  "status": "FIXED_OVERLAP_SAT_TINY_ENGINE_AND_SYNTHETIC_VALIDATION_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/results/20260916_fixed_overlap_cnf_control/manifest.json": "0663b6ebf2572c17c37b5ec177c4d82710fa459ad86bae042c06cd496bca7d49",
+    "acceleration/results/20260916_fixed_overlap_cnf_control/independent_audit.json": "d0ba38538d96fbe5baed3418c1964c78e4cb00e2210b6198f4be68aad1c42883",
+    "acceleration/review_fixed_overlap_sat.py": "04152f377297297d98f42c75822a9ad0113715a21873c61ffc903ff6a2cf7c9a",
+    "acceleration/run_fixed_overlap_sat.py": "68a6bf158e4a1be6e02df521e910ce5385029b932bd6d66245bbabfbb23fc5df",
+    "validate_submission.py": "92cb7b04ffd32e70f74b372f8d8578b1a364bbf22c6924c8ad6f80c41a5a21a3",
+    "acceleration/results/20260916_cp_matching_round4/adopted_index_1315/best_candidate.json": "d0b254f9caf5502e55b98fcb196209cdd26cf59aa0f606b299d9a529127507b5",
+    "scratch_general_exact.cnf": "91d22e62625e1221dd46b819e89494db8141dd4ddc9a06f13b9abdb530b83242",
+    "scratch_general_exact_sat.py": "8c21ac331af1569ee526ae4ddbf2553f6252d544a08b14bebb7fe3fd485489cc",
+    "acceleration/fixed_overlap_cnf.py": "e1edda9d43d2a2ea81209946960fae51aef1e7f547654b43569cc6d9a1bf8273",
+    "acceleration/results/20260916_fixed_overlap_cnf_control/fixed.cnf": "c33891da6a3bb88b1703dba36645a6eed3483c32dfaeda3dacb36fca4f231352",
+    "acceleration/audit_fixed_overlap_cnf.py": "2ba50a152f417e8647ccc738d609bcd689e73d8988053cf9d0c64ddfb4a0bc08",
+    ".deps/pysat/__init__.py": "8647cef5101ee1f8c7080a9bebea4002113825c9a45dfe762336bba0a3f5f77a",
+    ".deps/pysat/formula.py": "aad003a5abe5e66fa91d10e767b3c3122a2c4fb4db682c2a63fc69bfffbe365c",
+    ".deps/pysat/solvers.py": "253654d8efabae650a0d136ad2f2e6d30b57206b1fb70846c714197468a28f7e",
+    ".deps/pysolvers.cp312-win_amd64.pyd": "96b7325a76b78d1509e86bd454cd309d467307fb573fc01ddbfea6dabf8b3104"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260916_fixed_overlap_sat_controls/wrong_vertex_mapping_manifest.json": "95130ded146b9599f82559130e9fed68afabe678e0817df2efff1ec6e7650270",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/wrong_vertex_mapping_audit.json": "351074e259606b5ebc881a508217c108a487b5757de19b7df5a054a2a72fec5e",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/wrong_fixed_literal_manifest.json": "d13bf4372d19ebcadff5cc6badeb7850c3299ada74600cee334b113345bc2ce0",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/wrong_fixed_literal_audit.json": "a139e24479ba2e5051f0ed7fcbc3e3d1bd3dc90b2da4d052c027ede006924c92",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/wrong_free_domain_manifest.json": "4b62732ef4236d3a1d13f627166abd47259efc4f46e88cffd85e257ade99bf81",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/wrong_free_domain_audit.json": "0e97a977e40107578ecc3d8b1858398948ff5b2e8fefeebeeec0a4736c6cacf1",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/symmetry_flag_manifest.json": "16f2fa0a4d38a6b56b8fe09b39f90c63d6262646d8a82e4de3bace22ed8b767f",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/symmetry_flag_audit.json": "00afba3ab1b4c0797d3cd9c3a302cb01965b2c2cbe63e0840430ba44e73399f5",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/tiny_sat.cnf": "d2e7e86d723cd34afae141fb737dd570185e0635df84626865543ed53249385e",
+    "acceleration/results/20260916_fixed_overlap_sat_controls/tiny_unsat.cnf": "914bd88ead203d595bff9c2e47ecd20150bea7fd0e1aafccba29abab8d03b488"
+  },
+  "cli_controls": [
+    {
+      "name": "real_audited_adapter_dry",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "name": "zero_conflicts",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Positive bounded budgets required"
+    },
+    {
+      "name": "huge_conflicts",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Positive bounded budgets required"
+    },
+    {
+      "name": "nonfinite_time",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Positive bounded budgets required"
+    },
+    {
+      "name": "zero_time",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Positive bounded budgets required"
+    },
+    {
+      "name": "existing_output",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Preserve prior SAT output; choose a fresh directory"
+    },
+    {
+      "name": "wrong_vertex_mapping",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Adapter/current vertex ordering differs",
+      "manifest_hash_rebound_to_reach_semantic_guard": true
+    },
+    {
+      "name": "wrong_fixed_literal",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Adapter fixed-unit semantics differ",
+      "manifest_hash_rebound_to_reach_semantic_guard": true
+    },
+    {
+      "name": "wrong_free_domain",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Adapter free-edge domain differs",
+      "manifest_hash_rebound_to_reach_semantic_guard": true
+    },
+    {
+      "name": "symmetry_flag",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Unexpected adapter symmetry/edge-variable scope",
+      "manifest_hash_rebound_to_reach_semantic_guard": true
+    }
+  ],
+  "decode_controls": [
+    {
+      "name": "fixed_K_with_all_free_edges_false",
+      "valid": false,
+      "fixed_mismatches": 0,
+      "legacy_check": {
+        "status": "INVALID_GRAPH",
+        "valid": false,
+        "parameters": {
+          "n": 99,
+          "k": 14,
+          "lambda": 1,
+          "mu": 2
+        },
+        "edge_count": 357,
+        "degrees_checked": 99,
+        "degree_range": [
+          6,
+          14
+        ],
+        "degree_mismatch_count": 84,
+        "pairs_checked": 4851,
+        "adjacent_pairs_checked": 357,
+        "nonadjacent_pairs_checked": 4494,
+        "adjacent_pair_mismatch_count": 84,
+        "nonadjacent_pair_mismatch_count": 4146,
+        "degree_errors_shown": [
+          {
+            "vertex": 16,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 17,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 18,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 19,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 20,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 21,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 22,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 23,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 24,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 25,
+            "actual": 6,
+            "expected": 14
+          }
+        ],
+        "pair_errors_shown": [
+          {
+            "vertices": [
+              2,
+              40
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              41
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              42
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              43
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              44
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              45
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              46
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              47
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              48
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              49
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          }
+        ]
+      },
+      "current_check": {
+        "status": "INVALID_GRAPH",
+        "valid": false,
+        "parameters": {
+          "n": 99,
+          "k": 14,
+          "lambda": 1,
+          "mu": 2
+        },
+        "edge_count": 357,
+        "degrees_checked": 99,
+        "degree_range": [
+          6,
+          14
+        ],
+        "degree_mismatch_count": 84,
+        "pairs_checked": 4851,
+        "adjacent_pairs_checked": 357,
+        "nonadjacent_pairs_checked": 4494,
+        "adjacent_pair_mismatch_count": 84,
+        "nonadjacent_pair_mismatch_count": 4146,
+        "degree_errors_shown": [
+          {
+            "vertex": 16,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 17,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 18,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 19,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 20,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 21,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 22,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 23,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 24,
+            "actual": 6,
+            "expected": 14
+          },
+          {
+            "vertex": 25,
+            "actual": 6,
+            "expected": 14
+          }
+        ],
+        "pair_errors_shown": [
+          {
+            "vertices": [
+              2,
+              40
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              41
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              42
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              43
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              44
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              45
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              46
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              47
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              48
+            ],
+            "adjacent": false,
+            "actual": 0,
+            "expected": 2
+          },
+          {
+            "vertices": [
+              2,
+              49
+            ],
+            "adjacent": false,
+            "actual": 1,
+            "expected": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "flipped_fixed_edge",
+      "valid": false,
+      "fixed_mismatches": 1
+    },
+    {
+      "name": "missing_edge_variable",
+      "observed": "REJECT",
+      "reason": "Solver model must explicitly assign all 3486 outer-edge variables"
+    },
+    {
+      "name": "duplicate_edge_variable",
+      "observed": "REJECT",
+      "reason": "Repeated, missing or out-of-range edge variable"
+    },
+    {
+      "name": "zero_literal",
+      "observed": "REJECT",
+      "reason": "Solver model must explicitly assign all 3486 outer-edge variables"
+    },
+    {
+      "name": "boolean_literal",
+      "observed": "REJECT",
+      "reason": "Solver model must explicitly assign all 3486 outer-edge variables"
+    },
+    {
+      "name": "auxiliary_in_edge_model",
+      "observed": "REJECT",
+      "reason": "Repeated, missing or out-of-range edge variable"
+    }
+  ],
+  "engine_controls": [
+    {
+      "name": "tiny_sat",
+      "solver_result": "SAT_MODEL_UNVALIDATED",
+      "edge_model": [
+        1,
+        -2,
+        3
+      ],
+      "declared_variables": 3,
+      "clauses": 3,
+      "pysat_version": "1.9.dev15",
+      "parse_seconds": 0.031000000002677552,
+      "load_seconds": 0.0,
+      "solve_seconds": 0.0,
+      "stats": {
+        "restarts": 0,
+        "conflicts": 0,
+        "decisions": 0,
+        "propagations": 3
+      },
+      "worker_exit_code": 0,
+      "wall_seconds": 0.15700000000651926,
+      "conflict_budget": 100,
+      "wall_limit_seconds": 10
+    },
+    {
+      "name": "tiny_unsat",
+      "solver_result": "UNSAT_UNVERIFIED",
+      "edge_model": null,
+      "declared_variables": 1,
+      "clauses": 2,
+      "pysat_version": "1.9.dev15",
+      "parse_seconds": 0.0,
+      "load_seconds": 0.0,
+      "solve_seconds": 0.0,
+      "stats": {
+        "restarts": 0,
+        "conflicts": 0,
+        "decisions": 0,
+        "propagations": 1
+      },
+      "worker_exit_code": 0,
+      "wall_seconds": 0.125,
+      "conflict_budget": 100,
+      "wall_limit_seconds": 10
+    },
+    {
+      "name": "startup_deadline",
+      "solver_result": "UNKNOWN",
+      "reason": "WALL_TIME_LIMIT_INCLUDING_PARSE_AND_LOAD",
+      "worker_exit_code": -15,
+      "wall_seconds": 0.0,
+      "conflict_budget": 100,
+      "wall_limit_seconds": 1e-09
+    }
+  ],
+  "python_version": "3.12.10 (main, May 30 2025, 05:39:07) [MSC v.1943 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+  "research_CNF_solver_invocations": 0,
+  "tiny_solver_worker_invocations": 3,
+  "validated_99_vertex_SAT_positive_available": false,
+  "graph_witness_created": false,
+  "root_submission_written": false,
+  "elapsed_seconds": 0.9210720999981277,
+  "scope": "Real fixed-CNF inputs only preflighted; tiny formulas exercise CaDiCaL SAT/UNSAT/deadline. Synthetic full99 models and mapping corruptions are rejected. No research-K solve, checked UNSAT proof or valid99 positive witness is claimed."
+}

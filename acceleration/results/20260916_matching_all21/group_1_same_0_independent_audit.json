@@ -1,0 +1,55 @@
+{
+  "status": "INDEPENDENT_WHOLE_MATCHING_MATRIX_AND_INTEGER_FARKAS_AUDIT_PASS",
+  "inputs_sha256": {
+    "acceleration\\results\\20260916_two_trade_pilot\\best_candidate.json": "f17498be5a7d7c07ffa43c49271b99a89aa7028841fc791c45864e512dfacd76",
+    "acceleration\\results\\20260916_matching_all21\\group_1_same_0\\matrix.json": "2781115ae53c598750686b80ba526c0e7fa4d4a0ff820328a1c7c2d806e4bd24",
+    "acceleration\\results\\20260916_matching_all21\\group_1_same_0_certificate.json": "135b63ccb85b0e05ce75c289fc8803acce9c95314c767ff50e8a54a8cf24c561"
+  },
+  "auditor_sha256": "3bf8d8fee271594cfbc3fba8855897cd84eb2cbd889d8857183e3be42120f2e5",
+  "graph_auditor_sha256": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d",
+  "root_group": 1,
+  "matching_class": "same_0",
+  "full_matrix_rows_independently_rebuilt": 12648,
+  "full_matrix_columns": 6906,
+  "csr_nonzeros_checked": 77526,
+  "row_kinds": {
+    "matching_degree": 12,
+    "hard_partial_cap": 1110,
+    "foreign_label_quota": 840,
+    "linear_completion_cap": 2766,
+    "completion_cap_baseline": 720,
+    "completion_cap_indicator_M1": 7200
+  },
+  "all_column_bounds_costs_and_shared_slack_positions_checked": true,
+  "projected_box_variables": 1740,
+  "zero_slack_columns": 5166,
+  "weighted_rows_checked": 1330,
+  "weighted_row_kinds": {
+    "matching_degree": 12,
+    "foreign_label_quota": 840,
+    "completion_cap_baseline": 75,
+    "linear_completion_cap": 378,
+    "completion_cap_indicator_M1": 25
+  },
+  "combined_lower_rhs": 755615,
+  "box_upper_bound": 151438,
+  "contradiction_margin": 604177,
+  "positive_combined_coefficients": 210,
+  "negative_combined_coefficients": 860,
+  "fixed_overlap_edges": 162,
+  "free_matching_edges": 6,
+  "allowed_binary_matchings_before_partial_caps": 6040,
+  "other_matching_coordinates_fixed": 20,
+  "proof": "Every zero-slack solution obeys C*z>=R, but boxedX,Y satisfyC*z<=sum(max(C_j,0)); verified positive integer gap is impossible.",
+  "necessary_system_justification": [
+    "Remove the entire chosen perfect matching from full99 known adjacency to obtainB; all other20matching coordinates remain fixed.",
+    "Binary symmetric degree-one Y has offdiagonalY^2=0, giving affine partial-graph capsB^2+BY+YB+B+Y<=2.",
+    "All840foreign-label common-neighbor equalities are affine inX,Y; preserved own-label categories remain satisfied.",
+    "DiscardedX^2 common-neighbor contributions are nonnegative. Remaining nonlinearY/X pairs use one selectedpartnerg=B_vp+X_vp in[0,1]. Baseline plusM1indicators with one shared zero slack are necessary for every binaryY completion.",
+    "ContinuousX,Y box and degree constraints relax the actual binary completion, so contradiction excludes every admissible binary matching in this fixed coordinate."
+  ],
+  "numerical_solver_status_bound_or_dual_used_as_proof": false,
+  "producer_or_optimizer_imported": false,
+  "elapsed_seconds": 0.09262239999952726,
+  "scope": "Exact exclusion of this entire one-matching coordinate with20other matchings fixed (including all listed support-allowed matchings before partial caps). No global E0 or Conway nonexistence theorem, no independent-family coverage addition, and no graph construction."
+}

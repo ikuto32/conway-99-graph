@@ -1,0 +1,44 @@
+{
+  "status": "ONE_STAR_CP_ROUND_FOLLOWUPS",
+  "steps": [
+    {
+      "stage": "star_evaluation",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration/evaluate_cp_star_shortlist_v2.py",
+        "--run",
+        "acceleration/results/20260916_star_guided_round2/search",
+        "--baseline-star-audit",
+        "acceleration/results/20260916_star_guided_round1/star_shortlist/index_3074/audit.json",
+        "--out",
+        "acceleration/results/20260916_star_guided_round2/star_shortlist",
+        "--max-candidates",
+        "32"
+      ],
+      "result_path": "acceleration/results/20260916_star_guided_round2/star_shortlist/summary.json",
+      "expected_status": "BOUNDED_CP_STAR_SHORTLIST_EVALUATION_FINISHED"
+    },
+    {
+      "stage": "checkpoint",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration/build_star_guided_checkpoint.py",
+        "--previous",
+        "acceleration/results/20260916_star_guided_dual_checkpoint.json",
+        "--previous-sha256",
+        "57839e2aff5190c7087534c21e79a13b644b8797a74b3df3abe54062343cdd6f",
+        "--round",
+        "acceleration/results/20260916_star_guided_round2",
+        "--out",
+        "acceleration/results/20260916_star_guided_round2/checkpoint.json"
+      ],
+      "result_path": "acceleration/results/20260916_star_guided_round2/checkpoint.json",
+      "expected_status": "HASH_VERIFIED_STAR_GUIDED_ROUND_CHECKPOINT"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260916_star_guided_round2/manifest.json": "ddd4281e3ea7fc646db976eb524ee4ec036a1a7b91bc87f8fbedbae4070dfba3"
+  }
+}

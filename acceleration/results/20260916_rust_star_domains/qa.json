@@ -1,0 +1,89 @@
+{
+  "status": "RUST_COMPLETE_STAR_DOMAIN_PARITY_AND_CAP_QA_PASS",
+  "controls": [
+    {
+      "candidate": "wide15",
+      "all_84_complete_domain_sets_match_python": true,
+      "all_recursive_node_counts_match_python": true,
+      "reciprocity_events_match_python": true,
+      "initial_empty_short_circuit": false,
+      "outcome": "COMPLETE_DOMAINS_RECIPROCITY_EMPTY_DOMAIN",
+      "total_domain_values": 6495,
+      "local_empty_count": 0,
+      "minimum_domain_size": 1,
+      "log_domain_mass": 327.0209757688549,
+      "rust_seconds": 0.0029095,
+      "python_seconds": 0.250925800006371,
+      "kernel_speedup": 86.24361574372607,
+      "independent_ordered_subset_nodes": 402282
+    },
+    {
+      "candidate": "wide36",
+      "all_84_complete_domain_sets_match_python": true,
+      "all_recursive_node_counts_match_python": true,
+      "reciprocity_events_match_python": false,
+      "initial_empty_short_circuit": true,
+      "outcome": "COMPLETE_DOMAINS_RECIPROCITY_EMPTY_DOMAIN",
+      "total_domain_values": 5134,
+      "local_empty_count": 2,
+      "minimum_domain_size": 0,
+      "log_domain_mass": 303.36059186734724,
+      "rust_seconds": 0.0021864,
+      "python_seconds": 0.21440690000599716,
+      "kernel_speedup": 98.0638949899365,
+      "independent_ordered_subset_nodes": 344628
+    }
+  ],
+  "cap_checks": [
+    {
+      "case": "node_cap",
+      "status": "INCOMPLETE",
+      "cap_reason": "GLOBAL_NODE_CAP",
+      "propagation_emitted": false,
+      "independent_audit_status": "INCOMPLETE_PRODUCER_NO_EXCLUSION"
+    },
+    {
+      "case": "domain_cap",
+      "status": "INCOMPLETE",
+      "cap_reason": "PER_VERTEX_DOMAIN_CAP",
+      "propagation_emitted": false,
+      "independent_audit_status": "INCOMPLETE_PRODUCER_NO_EXCLUSION"
+    },
+    {
+      "case": "time_cap",
+      "status": "INCOMPLETE",
+      "cap_reason": "TIME_CAP",
+      "propagation_emitted": false,
+      "independent_audit_status": "INCOMPLETE_PRODUCER_NO_EXCLUSION"
+    }
+  ],
+  "rust_build_command": "rustc -O -C target-cpu=native acceleration/star_domains.rs -o acceleration/build/star_domains.exe",
+  "cli": "star_domains INPUT.txt OUTPUT.json [seconds=30] [node_cap=2000000] [domain_cap=20000]",
+  "input_format": "C99OVERLAPS1 with exactly one complete overlap assignment",
+  "inputs_sha256": {
+    "acceleration/star_domains.rs": "b3637615352c0a5372fe7ed2237f34bc2d5c8773a892ee647c05acb772584d80",
+    "acceleration/build/star_domains.exe": "e34d5081e1ce73ef68c47cd9dff2baa41046b7defbea8abe12c2126c5eb95f36",
+    "acceleration/goal_theory_star_domains.py": "02768acfe8558d3aa094d1cddff87febaea91f032c42c4caa08ee041522976a1",
+    "acceleration/audit_goal_theory_domains.py": "150ea838ad370793b6508728a9ce4d88e5121f51e2774d24f9bb37d244b52388",
+    "acceleration/results/20260916_goal_theory_domains_wide15.json": "9ff66ffb40e98cf69faa88b2c9309ae48d88c20c0d873ea0b10b2115f49f7b9e",
+    "acceleration/results/20260916_rust_star_domains/wide36_python.json": "d4a4cc8c52cf772351eea19c36db39dac21c5b0dd6e038b18a35fb6b8a7f89dd",
+    "acceleration/results/20260916_rust_star_domains/domain_cap_audit.json": "6425219ec4e2f8af84a81a774e6d998f94a005375f9289715521abde3fe996e9",
+    "acceleration/results/20260916_rust_star_domains/domain_cap_bound.json": "ec2895bffbbc62decff1da4ffca6d45806e5dcf8843355224e2531e5dafc47c9",
+    "acceleration/results/20260916_rust_star_domains/domain_cap_native.json": "0881de96649c089a39d778adadae9a11a83c32537c2ac10a1938621d918e4a5d",
+    "acceleration/results/20260916_rust_star_domains/node_cap_audit.json": "da2ec2e6cb9ea9daefb699fb9874fb6065f4eaaff37cf418ee83e33e115b64d9",
+    "acceleration/results/20260916_rust_star_domains/node_cap_bound.json": "3cfbd7ab3c060ff01a246a053b0334957b81c80c241cbb3652539d1ebe33d801",
+    "acceleration/results/20260916_rust_star_domains/node_cap_native.json": "421240864a9756f8b2fda4e6fc1d89cf5c171955f5cadf2edb43263be750dd83",
+    "acceleration/results/20260916_rust_star_domains/time_cap_audit.json": "830517da051fbf180048aae49ad03cd5f65fa0a3f26b8d16569cf701a120d0c5",
+    "acceleration/results/20260916_rust_star_domains/time_cap_bound.json": "8d41dc50c1595b61315d23265b8e0c36915180cba787b598e257fe5bbf9e2030",
+    "acceleration/results/20260916_rust_star_domains/time_cap_native.json": "655925eef83a8db35689c13c66a5d03586f3f8f9a2c096792d32ff5dd87f50ba",
+    "acceleration/results/20260916_rust_star_domains/wide15_audit.json": "17428c3caf83eb802be1cd8d01299aa8a4053133b45685089d93f638aa3806a6",
+    "acceleration/results/20260916_rust_star_domains/wide15_bound.json": "1bcea3eb416b3c0967d6527b070491b95673bc3795ec51be354d3be9b3062ce6",
+    "acceleration/results/20260916_rust_star_domains/wide15_native.json": "1bfe8f19f46492bcc8fc1c95d3eb9d7fd0b606d87e79c4b2572157e17ee4fcb7",
+    "acceleration/results/20260916_rust_star_domains/wide36_audit.json": "6467a810cb876c50d5dd0ea3da9940750a3d3cc05ebe098421a6f21e9b63ca7b",
+    "acceleration/results/20260916_rust_star_domains/wide36_bound.json": "5fb6e2afef6f7444ea7ccfeefc3d26d2948ce84ae53355fa3fae6409d6ce7e12",
+    "acceleration/results/20260916_rust_star_domains/wide36_native.json": "9ff4d056acbed6e3c8e2d7315268e6c7f6cd6cadb846d18f86b1a8a5bda4e74c",
+    "acceleration/results/20260916_rust_star_domains/candidate_15.txt": "8b116d4c01a69c751015a85c0e503ed352b97277c26195afe370161fa87407fa",
+    "acceleration/results/20260916_rust_star_domains/candidate_36.txt": "51ae803566cc2877b71395a085e7fbe6e43ce460692ece9d9a4aa9a92e167ead"
+  },
+  "scope": "Finite exact complete-domain equality and independent re-enumeration. Empty-domain outcomes exclude only each fixed overlap assignment; caps never exclude and nonempty arc consistency would not prove a full graph."
+}

@@ -1,0 +1,109 @@
+{
+  "status": "INDEPENDENT_HIGHS_RAY_MODEL_STATUS_AND_EXACT_CERTIFICATE_REVIEW_PASS",
+  "captured_actual_highs_model": true,
+  "model_rows_compared": 4200,
+  "label_equalities": 840,
+  "pair_inequalities": 3360,
+  "all_semantic_coordinates_checked": 4662,
+  "omitted_tautologies": {
+    "label_quota": 336,
+    "linear_pair_cap": 126
+  },
+  "variables": 1680,
+  "variable_bounds": [
+    0,
+    1
+  ],
+  "integrality_requested": false,
+  "actual_highs_version": "1.15.1",
+  "exact_reproduction_audit": {
+    "inputs_sha256": {
+      "acceleration\\results\\20260916_remaining_rays\\candidate_3.json": "8946a5f827e3ef89a9d61872ab28d3c6ef2fdd5230538265ca815802be703c89",
+      "acceleration\\results\\20260916_ray_model_status_review_reproduction.json": "a5a95490cd75520068135796d2f91cae61318d812e0fac790157be0935bfc96f"
+    },
+    "auditor_sha256": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d",
+    "exposed_graph_edges": 357,
+    "partial_pair_caps_checked": 4851,
+    "disjoint_unknowns": 1680,
+    "solver_or_producer_imported": false,
+    "disjoint_block_totals_assumed": false,
+    "status": "INDEPENDENT_INTEGER_FARKAS_AUDIT_PASS",
+    "group_counts": {
+      "label_quota": 748,
+      "linear_pair_cap": 466
+    },
+    "upper_bound_count": 264,
+    "positive_coefficients": 687,
+    "minimum_coefficient": 0,
+    "maximum_coefficient": 1462,
+    "combined_rhs": -11436,
+    "scope": "Exact contradiction for the necessary linear [0,1] disjoint-edge completion system of this complete overlap assignment, with same-fibre edges absent. No global E0 or Conway exclusion."
+  },
+  "status_controls": [
+    {
+      "name": "time_limit",
+      "status": "NO_EXACT_CERTIFICATE"
+    },
+    {
+      "name": "unknown",
+      "status": "NO_EXACT_CERTIFICATE"
+    },
+    {
+      "name": "unbounded_or_infeasible",
+      "status": "NO_EXACT_CERTIFICATE"
+    },
+    {
+      "name": "numeric_optimal_only",
+      "status": "NUMERICAL_LINEAR_FEASIBILITY_ONLY"
+    },
+    {
+      "name": "infeasible_without_ray",
+      "status": "NO_EXACT_CERTIFICATE"
+    },
+    {
+      "name": "ray_error",
+      "status": "NO_EXACT_CERTIFICATE"
+    },
+    {
+      "name": "zero_ray",
+      "status": "NO_EXACT_CERTIFICATE"
+    },
+    {
+      "name": "wrong_sign_ray",
+      "status": "NO_EXACT_CERTIFICATE"
+    },
+    {
+      "name": "wrong_length_ray",
+      "rejected": true,
+      "error": "Invalid infeasibility ray"
+    },
+    {
+      "name": "nonfinite_ray",
+      "rejected": true,
+      "error": "Invalid infeasibility ray"
+    },
+    {
+      "name": "option_error",
+      "rejected": true,
+      "error": "Invalid HiGHS option output_flag"
+    },
+    {
+      "name": "model_error",
+      "rejected": true,
+      "error": "HiGHS rejected model"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260916_remaining_rays/candidate_3.json": "8946a5f827e3ef89a9d61872ab28d3c6ef2fdd5230538265ca815802be703c89",
+    "acceleration/results/20260916_ray_model_status_review_reproduction.json": "a5a95490cd75520068135796d2f91cae61318d812e0fac790157be0935bfc96f",
+    "acceleration/ray_probe.py": "a72bca2b47974b4c6b2bc66e6e5e9fb9a247926bb523584acf2087dcf6ca99c2",
+    "acceleration/review_ray_probe.py": "fad8599f7e7678d349fa2fd9387acc4a2fa726a47becc000fb2a59cfbc34465b",
+    "acceleration/linear_probe.py": "d90fed2c9a2d953dc9fc323f2149975514e107a473bfb860a9d0424d214d68e1",
+    "acceleration/audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d"
+  },
+  "source_references": [
+    "https://ergo-code.github.io/HiGHS/dev/structures/classes/HighsLp/",
+    "https://ergo-code.github.io/HiGHS/dev/interfaces/c_api/"
+  ],
+  "scope": "Producer model and status-flow review on one candidate, plus controlled failure branches. Exact reproduction accepted only by the independent producer-free integer auditor. No global exclusion or numerical feasibility certificate."
+}

@@ -26,8 +26,78 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          files = sorted(Path('.').glob('*.py'))
+          files = sorted(Path('.').glob('*.py')) + sorted(Path('acceleration').glob('*.py'))
           for path in files:
               compile(path.read_bytes(), str(path), 'exec')
           print(f'Compiled {len(files)} Python source files')
           PY
+      - name: Build and verify exact Rust overlap scorer
+        run: |
+          python -B acceleration/prepare.py --out build/controls
+          rustc -O acceleration/overlap_cpu.rs -o build/overlap_cpu
+          build/overlap_cpu score build/controls/cuts.txt build/controls/candidates.txt build/controls/cpu.json 1
+          python -B acceleration/verify_scores.py --candidates build/controls/candidates.txt --cpu build/controls/cpu.json --gpu acceleration/results/20260916_controls/gpu.json --out build/controls/parity.json
+      - name: Replay exact overlap certificate without a solver
+        run: |
+          python -B acceleration/audit_certificate.py --candidate scratch_follow_overlap_walk.json --certificate acceleration/results/20260916_walk_highs.json --out build/certificate_audit.json
+      - name: Check native complete-star domains and cap handling
+        run: |
+          rustc -O acceleration/star_domains.rs -o build/star_domains
+          build/star_domains acceleration/results/20260916_rust_star_domains/candidate_15.txt build/star_domains.json 30 2000000 20000
+          build/star_domains acceleration/results/20260916_rust_star_domains/candidate_15.txt build/star_domains_capped.json 30 1 20000
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          actual = json.loads(Path('build/star_domains.json').read_bytes())
+          reference = json.loads(Path('acceleration/results/20260916_goal_theory_domains_wide15.json').read_bytes())
+          assert actual['complete_domain_enumeration'] is True
+          assert actual['domains'] == reference['domains']
+          assert actual['propagation'] == reference['propagation']
+          capped = json.loads(Path('build/star_domains_capped.json').read_bytes())
+          assert capped['status'] == 'INCOMPLETE'
+          assert not capped['complete_domain_enumeration'] and 'propagation' not in capped
+          print('All 84 complete domain tables and deletion events match the independently audited Python control; cap disables propagation')
+          PY
+      - name: Check atomic matching-cycle enumeration independently
+        run: |
+          mkdir -p acceleration/build
+          rustc -O acceleration/overlap_cycle_neighbors.rs -o acceleration/build/overlap_cycle_neighbors.exe
+          acceleration/build/overlap_cycle_neighbors.exe acceleration/results/20260916_atomic_cycle_qa/input.txt build/atomic_cycles.json both
+          python -B acceleration/audit_atomic_cycle_family.py --candidate acceleration/results/20260916_two_trade_pilot/best_candidate.json --input acceleration/results/20260916_atomic_cycle_qa/input.txt --native build/atomic_cycles.json --out build/atomic_cycles_audit.json
+      - name: Replay an exact whole-matching family exclusion without a solver
+        run: |
+          python -B acceleration/audit_matching_farkas.py --candidate acceleration/results/20260916_two_trade_pilot/best_candidate.json --matrix acceleration/results/20260916_matching_lp_same0/matrix.json --certificate acceleration/results/20260916_matching_lp_same0/integer_certificate.json --out build/matching_farkas_audit.json
+      - name: Check complete same-sign matching generation independently
+        run: |
+          rustc -O acceleration/overlap_matching_neighbors.rs -o acceleration/build/overlap_matching_neighbors.exe
+          acceleration/build/overlap_matching_neighbors.exe acceleration/results/20260916_whole_matching_qa/input.txt build/whole_matchings.json all
+          python -B acceleration/audit_whole_matching_family.py --candidate acceleration/results/20260916_two_trade_pilot/best_candidate.json --input acceleration/results/20260916_whole_matching_qa/input.txt --native build/whole_matchings.json --out build/whole_matching_family_audit.json
+      - name: Check Rust matrix-free products and projected steps independently
+        run: |
+          rustc -O acceleration/overlap_cp_cpu.rs -o acceleration/build/overlap_cp_cpu.exe
+          python -B acceleration/audit_cp_matvec_cpu.py --out build/cp_matvec_audit
+      - name: Check Rust joint-star branching and search limits
+        run: |
+          rustc -O acceleration/joint_star_dfs.rs -o build/joint_star_dfs
+          build/joint_star_dfs --self-test > build/joint_star_selftest.json
+          python - <<'PY'
+          import itertools, json
+          from pathlib import Path
+          report = json.loads(Path('build/joint_star_selftest.json').read_bytes())
+          assert report['status'] == 'JOINT_STAR_SYNTHETIC_BRANCH_CONTROLS_PASS'
+          assert len(report['controls']) == 2 and {r['colors'] for r in report['controls']} == {2, 3}
+          for row in report['controls']:
+              solutions = [x for x in itertools.product(range(row['colors']), repeat=3) if len(set(x)) == 3]
+              expected = 'FOUND_SYNTHETIC_ASSIGNMENT' if solutions else 'EXHAUSTED_SYNTHETIC_CSP'
+              assert len(solutions) == {2: 0, 3: 6}[row['colors']]
+              assert row['status'] == expected and row['branches'] > 0
+          assert report['node_cap_rejected'] and report['time_cap_rejected']
+          assert report['conway_witness_claim'] is False
+          print('Independent tiny coloring oracle, actual branching, and search-limit controls pass')
+          PY
+      - name: Check cross-cycle extraction and colored geometry independently
+        run: |
+          acceleration/build/overlap_cycle_neighbors.exe acceleration/results/20260916_cp_cross_family_qa/input.txt build/cross_atomic.json both
+          python -B acceleration/audit_atomic_cycle_family.py --candidate acceleration/results/20260916_cp_matching_search/adopted_index_59390/best_candidate.json --input acceleration/results/20260916_cp_cross_family_qa/input.txt --native build/cross_atomic.json --out build/cross_atomic_audit.json
+          python -B acceleration/extract_cross_atomic_family.py --candidate acceleration/results/20260916_cp_matching_search/adopted_index_59390/best_candidate.json --native build/cross_atomic.json --family-audit build/cross_atomic_audit.json --out build/cross_subset.json
+          python -B acceleration/audit_cross_atomic_extraction.py --candidate acceleration/results/20260916_cp_matching_search/adopted_index_59390/best_candidate.json --native build/cross_atomic.json --family-audit build/cross_atomic_audit.json --adapted build/cross_subset.json --out build/cross_subset_audit.json

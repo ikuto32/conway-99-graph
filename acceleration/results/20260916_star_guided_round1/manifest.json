@@ -1,0 +1,166 @@
+{
+  "status": "STAR_GUIDED_CP_NEIGHBORHOOD_MANIFEST",
+  "inputs_sha256": {
+    "acceleration\\results\\20260916_cp_completion_checkpoint.json": "c5d384abd4aa905ce7ac728fbb4a28f213a295bbe0255768b53033c7ec15f03d",
+    "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_candidate.json": "893d9161dc8efe52c1b40aa6e4466454bb9a1dd2307daae189264e3d43c0d43c",
+    "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_phase1.json": "0cc0ffc568f127a727b6c938e308030c7c7cc6b1f04e448cfc890eff7c131b8e",
+    "acceleration\\results\\20260916_star_marginal_shortlist\\index_25496\\audit.json": "14864d6d8c7c0f1c09eb27e60fb655c5d37bc976c85f609a97b1322be6e8cae0",
+    "acceleration\\build\\overlap_cycle_neighbors.exe": "812373d00ac43e069bd961ed9b173e9c6a83bdac1a7cb34fbd02f4cfee2e8e56",
+    "acceleration\\audit_atomic_cycle_family.py": "f6878a7c113025382d264e0911f49ca82f2f62cac3237ede1cfcdc5db0138223",
+    "acceleration\\extract_cross_atomic_family.py": "499dbe03dde2f173a2c27d4351fd709a1d9b9a6eae10fd5530f4cb5ca7bbe613",
+    "acceleration\\audit_cross_atomic_extraction.py": "9829d8321f008225e5617fa4c9e62b206e72695b284a1a47b064caf6dbf9f51d",
+    "acceleration\\search_cp_cross.py": "2ac011ccf2ea9e4ee5cc4b07982bd167e2f8eb883e5b361b6acaf469c02ef3f6",
+    "acceleration\\audit_cp_cross_search.py": "60eab84b4eecc07509eb470247e9e8728cdc13530b8f1c1a4f2d2de01c9a84e9"
+  },
+  "parent_checkpoint_path": "acceleration\\results\\20260916_cp_completion_checkpoint.json",
+  "parent_checkpoint_sha256": "c5d384abd4aa905ce7ac728fbb4a28f213a295bbe0255768b53033c7ec15f03d",
+  "initial_candidate_path": "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_candidate.json",
+  "initial_candidate_sha256": "893d9161dc8efe52c1b40aa6e4466454bb9a1dd2307daae189264e3d43c0d43c",
+  "initial_edge_phase1_path": "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_phase1.json",
+  "initial_edge_phase1_sha256": "0cc0ffc568f127a727b6c938e308030c7c7cc6b1f04e448cfc890eff7c131b8e",
+  "baseline_star_audit_path": "acceleration/results/20260916_star_marginal_shortlist/index_25496/audit.json",
+  "baseline_star_audit_sha256": "14864d6d8c7c0f1c09eb27e60fb655c5d37bc976c85f609a97b1322be6e8cae0",
+  "kind": "cross_single_3_4",
+  "previous_summaries": [
+    "acceleration/results/20260916_cp_cross_search/summary.json",
+    "acceleration/results/20260916_cp_matching_round2/summary.json",
+    "acceleration/results/20260916_cp_matching_round3/summary.json",
+    "acceleration/results/20260916_cp_matching_round4/summary.json",
+    "acceleration/results/20260916_cp_matching_search/summary.json",
+    "acceleration/results/20260916_cp_round5_auto/search/summary.json",
+    "acceleration/results/20260916_cp_round6_auto/search/summary.json",
+    "acceleration/results/20260916_cp_round7_auto/search/summary.json",
+    "acceleration/results/20260916_cp_round8_auto/search/summary.json",
+    "acceleration/results/20260916_cp_round9_auto/search/summary.json",
+    "acceleration/results/20260916_cp_zero_neighborhood_226/search/summary.json"
+  ],
+  "steps": [
+    {
+      "stage": "native",
+      "command": [
+        "acceleration\\build\\overlap_cycle_neighbors.exe",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\input.txt",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\all.json",
+        "both"
+      ],
+      "result_path": "acceleration\\results\\20260916_star_guided_round1\\family\\all.json"
+    },
+    {
+      "stage": "atomic_audit",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration\\audit_atomic_cycle_family.py",
+        "--candidate",
+        "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_candidate.json",
+        "--input",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\input.txt",
+        "--native",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\all.json",
+        "--out",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\atomic_audit.json"
+      ],
+      "result_path": "acceleration\\results\\20260916_star_guided_round1\\family\\atomic_audit.json"
+    },
+    {
+      "stage": "extract",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration\\extract_cross_atomic_family.py",
+        "--candidate",
+        "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_candidate.json",
+        "--native",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\all.json",
+        "--family-audit",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\atomic_audit.json",
+        "--out",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\cross.json"
+      ],
+      "result_path": "acceleration\\results\\20260916_star_guided_round1\\family\\cross.json"
+    },
+    {
+      "stage": "cross_audit",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration\\audit_cross_atomic_extraction.py",
+        "--candidate",
+        "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_candidate.json",
+        "--native",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\all.json",
+        "--family-audit",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\atomic_audit.json",
+        "--adapted",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\cross.json",
+        "--out",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\independent_audit.json"
+      ],
+      "result_path": "acceleration\\results\\20260916_star_guided_round1\\family\\independent_audit.json"
+    },
+    {
+      "stage": "search",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration\\search_cp_cross.py",
+        "--native",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\cross.json",
+        "--family-audit",
+        "acceleration\\results\\20260916_star_guided_round1\\family\\independent_audit.json",
+        "--initial",
+        "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_candidate.json",
+        "--initial-phase1",
+        "acceleration\\results\\20260916_cp_zero_neighborhood_226\\search\\probes\\selection_32_index_25496_phase1.json",
+        "--gpu",
+        "acceleration\\build\\overlap_cp_gpu_layout_v2.exe",
+        "--gpu-source",
+        "acceleration\\overlap_cp_gpu_layout_v2.cu",
+        "--gpu-audit",
+        "acceleration\\results\\20260916_cp_gpu_layout_v2_controls\\audit.json",
+        "--out",
+        "acceleration\\results\\20260916_star_guided_round1\\search",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_cross_search/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_matching_round2/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_matching_round3/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_matching_round4/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_matching_search/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_round5_auto/search/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_round6_auto/search/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_round7_auto/search/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_round8_auto/search/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_round9_auto/search/summary.json",
+        "--previous-summary",
+        "acceleration/results/20260916_cp_zero_neighborhood_226/search/summary.json"
+      ],
+      "result_path": "acceleration\\results\\20260916_star_guided_round1\\search\\summary.json"
+    },
+    {
+      "stage": "search_audit",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration\\audit_cp_cross_search.py",
+        "--run",
+        "acceleration\\results\\20260916_star_guided_round1\\search",
+        "--out",
+        "acceleration\\results\\20260916_star_guided_round1\\search\\audit.json"
+      ],
+      "result_path": "acceleration\\results\\20260916_star_guided_round1\\search\\audit.json"
+    }
+  ],
+  "seed_exactly_excluded": true,
+  "old_edge_CP_ranks_only": true,
+  "requires_new_star_objective_evaluation": true,
+  "goal_complete": false
+}

@@ -1,0 +1,119 @@
+{
+  "status": "RUST_EXACT_KERNEL_AND_WALK_QA_PASS",
+  "historical_trade_controls": [
+    {
+      "candidate": 0,
+      "legal_trades": 134,
+      "all_five_counters_match": true
+    },
+    {
+      "candidate": 1,
+      "legal_trades": 129,
+      "all_five_counters_match": true
+    },
+    {
+      "candidate": 2,
+      "legal_trades": 142,
+      "all_five_counters_match": true
+    },
+    {
+      "candidate": 3,
+      "legal_trades": 145,
+      "all_five_counters_match": true
+    },
+    {
+      "candidate": 4,
+      "legal_trades": 127,
+      "all_five_counters_match": true
+    }
+  ],
+  "survivor_legal_trades": 137,
+  "walk_steps_replayed": 20,
+  "walk_steps_full_python_trade_enumeration_checked": 3,
+  "all_walk_block_totals_preserved": true,
+  "seeded_walk_reproduction": "20 steps, seed 99, all state/trace fields matched; elapsed time excluded",
+  "rejected_inputs": [
+    {
+      "case": "out_of_range",
+      "returncode": 1,
+      "message": "error: candidate 0: edge endpoints must satisfy 0 <= u < v < 84"
+    },
+    {
+      "case": "duplicate",
+      "returncode": 1,
+      "message": "error: candidate 0: duplicate edge (0,15)"
+    },
+    {
+      "case": "not_overlap",
+      "returncode": 1,
+      "message": "error: candidate 0: edge (0,1) is not an overlap edge"
+    },
+    {
+      "case": "noncanonical",
+      "returncode": 1,
+      "message": "error: candidate 0: edge endpoints must satisfy 0 <= u < v < 84"
+    },
+    {
+      "case": "trailing",
+      "returncode": 1,
+      "message": "error: unexpected trailing input"
+    },
+    {
+      "case": "truncated",
+      "returncode": 1,
+      "message": "error: missing edge endpoint"
+    },
+    {
+      "case": "empty_candidate_list",
+      "returncode": 1,
+      "message": "error: candidate count must be in 1..100000"
+    },
+    {
+      "case": "asymmetric_beta",
+      "returncode": 1,
+      "message": "error: cut 0: beta must be symmetric and nonnegative"
+    },
+    {
+      "case": "nonzero_diagonal",
+      "returncode": 1,
+      "message": "error: cut 0: beta diagonal must vanish"
+    },
+    {
+      "case": "negative_beta",
+      "returncode": 1,
+      "message": "error: cut 0: beta must be symmetric and nonnegative"
+    },
+    {
+      "case": "overflow_bound",
+      "returncode": 1,
+      "message": "error: cut 0: coefficients exceed safe i64 score bounds"
+    }
+  ],
+  "score_benchmark": {
+    "evaluations": 11520,
+    "repeats": 3,
+    "elapsed_seconds": 0.0546612,
+    "evaluations_per_second": 210752.7825953327
+  },
+  "full_score_parity_report": "acceleration/results/20260916_controls/parity.json",
+  "rust_version": "rustc 1.92.0 (ded5c06cf 2025-12-08)",
+  "build_command": "rustc -O -C target-cpu=native acceleration/overlap_cpu.rs -o acceleration/build/overlap_cpu.exe",
+  "inputs_sha256": {
+    "acceleration\\build\\overlap_cpu.exe": "8c86302a11929e45cb1791ae9a1255c466beaee7fd86d8bfec05cb9d3ba883b2",
+    "acceleration\\overlap_cpu.rs": "76006e2fa2936eae5ff7b70ef6d6c790c081fec5eff542ec6ce4fcf0759cd2c0",
+    "acceleration\\results\\20260916_controls\\cuts.txt": "2fe14e3ee8ce8fbb4701fb743b421699d0da8577fd48881d9c13d414a78e6966",
+    "acceleration\\results\\20260916_controls\\candidates.txt": "dd47029feca7334bca3392ff0d9e304ccfeb982a002eac6afd65411617ff1ecc",
+    "acceleration\\results\\20260916_controls\\cpu_scores.json": "ccad140c46d48f9a81c03b148c3d6e263df54b07c85b3d4440c6486671f09452",
+    "acceleration\\results\\20260916_controls\\cpu_walk_smoke.json": "c6d31c37d5eaaa2c9a05b893bc555749266c5644577a5ec039e7e08a9a7b94cf",
+    "scratch_follow_overlap_trades.json": "5ff35a167b8cc0a24ad48e0d07dc67d7ff758d2745e2b6485b947061509be427",
+    "scratch_follow_overlap_trades.py": "98e3d78d7ef8c8ff70230256b7431b77255bd6c039e8ae15145b40e7905f9792",
+    "acceleration\\results\\20260916_controls\\cpu_trades_0.json": "d43d0db3f7384c4e1aabbb91ebd18e5e4ebb4d9a98702d865bc093a9c7486399",
+    "acceleration\\results\\20260916_controls\\cpu_trades_1.json": "6c174f15447a7ff2e3b9b36c0f922810ad6f778dc97b880ff8d75128e84dca53",
+    "acceleration\\results\\20260916_controls\\cpu_trades_2.json": "5c81e6f0d98ca594c8bf96e4ea43c65fed882b8ec82faf20eb05718bb59f06f7",
+    "acceleration\\results\\20260916_controls\\cpu_trades_3.json": "7bb44cad038daa16d7b68b280c6da925c566dbad7266b4e12bf5016f0f23c12d",
+    "acceleration\\results\\20260916_controls\\cpu_trades_4.json": "48518a6adcf09c3d80a57a91544cc1465559367dfaf4c851c628b7f2026c3a64",
+    "acceleration\\results\\20260916_controls\\cpu_trades_5.json": "7d5c920c2601952a0764414224b00b4a844fd605dca47f8334aa5b64c39f6f86"
+  },
+  "elapsed_seconds": 0.477368399995612,
+  "scope": "Finite correctness and malformed-input checks. No exhaustive graph search or disjoint completion certificate."
+}

@@ -1,0 +1,79 @@
+{
+  "status": "ACCELERATION_PROVENANCE_NEGATIVE_CONTROLS_PASS",
+  "checks": [
+    {
+      "case": "empty_cut_dimension",
+      "rejected": true
+    },
+    {
+      "case": "missing_sign_mask",
+      "rejected": true
+    },
+    {
+      "case": "boolean_score",
+      "rejected": true
+    },
+    {
+      "case": "float_score",
+      "rejected": true
+    },
+    {
+      "case": "negative_reference_candidate_count",
+      "rejected": true
+    },
+    {
+      "case": "unpaired_extra_certificate",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_extra_certificate",
+      "rejected": true
+    },
+    {
+      "case": "matching_hash_wrong_path",
+      "rejected": true
+    },
+    {
+      "case": "stale_cut_manifest",
+      "rejected": true
+    },
+    {
+      "case": "stale_source_manifest",
+      "rejected": true
+    },
+    {
+      "case": "wrong_candidate_manifest",
+      "rejected": true
+    },
+    {
+      "case": "zero_candidates",
+      "rejected": true
+    },
+    {
+      "case": "numerical_audit_cannot_authorize_cut",
+      "rejected": true
+    },
+    {
+      "case": "python_optimized_audit_bypass",
+      "rejected": true
+    },
+    {
+      "case": "reordered_same_length_score_rows",
+      "rejected": true
+    }
+  ],
+  "checks_passed": 15,
+  "source_sha256": {
+    "acceleration\\prepare.py": "f9eaf973bb5530b88f12ad455bffa4a82d17904be0786ee37070bb98ead16417",
+    "acceleration\\verify_scores.py": "2993f02b0650a3939c7c8105ec9788b72f27cddbb870a5f0d954875073943bb5",
+    "acceleration\\probe_walk.py": "90b2b77c52c0f0fc1a69da205690fc3512ad96ef65b608f653980b8454bc9f18",
+    "acceleration\\linear_probe.py": "d90fed2c9a2d953dc9fc323f2149975514e107a473bfb860a9d0424d214d68e1"
+  },
+  "positive_checks": [
+    "strict tensor accepts exact i64 shape",
+    "manifest accepts bound unmodified inputs",
+    "Windows relative paths normalize",
+    "singleton extra certificate independently re-audited"
+  ],
+  "scope": "Finite CLI/provenance negative controls, no new graph search or solver result."
+}

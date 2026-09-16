@@ -1,0 +1,105 @@
+{
+  "status": "ONE_CP_ROUND_READ_ONLY_PREFLIGHT_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/results/20260916_cp_cross_checkpoint.json": "8f800f9c507107822a573a7a27253ea8c29d68ea4dbc178bf1bbb0e871ca9251",
+    "acceleration/continue_cp_round.py": "f8cd98d97f569beae91958ad1da7d803a45004179e7592e43fc8d543f493cb25",
+    "acceleration/review_continue_cp_round.py": "1a0205c6a9d9e10401977988210874c1c55b36bb9b833d64f2d9f1d0e0542bc4",
+    "acceleration/results/20260916_cp_matching_search/summary.json": "34b97b76f8c4ac9ff02622c9969060876931d00195fb55a2ce4bab4d2fba0b6d",
+    "acceleration/results/20260916_cp_matching_round2/summary.json": "d2c9594d6ed7c77d9ea2dd311716e94877a5690613072f30263b00b3dfa30557",
+    "acceleration/results/20260916_cp_matching_round3/summary.json": "58e9254930934c58e76602d4ed2f1d1ab2fc649060d12394bcaf2081036585c8",
+    "acceleration/results/20260916_cp_cross_search/summary.json": "6b02a031b1273a2a0c87f47bc596afd02e841cce09bb285ae909dd0329efef55"
+  },
+  "positive_controls": 2,
+  "negative_controls": 4,
+  "records": [
+    {
+      "name": "bad_sha_same",
+      "kind": "same",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Previous checkpoint SHA256 mismatch",
+      "processes_launched": 0,
+      "output_mutations": 0
+    },
+    {
+      "name": "existing_out_same",
+      "kind": "same",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Output root already exists; never resume or retry it",
+      "processes_launched": 0,
+      "output_mutations": 0
+    },
+    {
+      "name": "valid_plan_same",
+      "kind": "same",
+      "expected": "PASS",
+      "observed": "PASS",
+      "previous_checkpoint_references_verified": 2578,
+      "all_preflight_files_verified": 2581,
+      "initial_candidate": "acceleration/results/20260916_cp_cross_search/adopted_index_2658/best_candidate.json",
+      "initial_phase1": "acceleration/results/20260916_cp_cross_search/adopted_index_2658/best_phase1.json",
+      "initial_numeric_merit": 3.484795091741822,
+      "previous_summary_count": 4,
+      "stages": [
+        "native_family",
+        "family_audit",
+        "search",
+        "search_audit",
+        "adoption",
+        "checkpoint"
+      ],
+      "frozen_tool_count": 42,
+      "processes_launched": 0,
+      "output_mutations": 0
+    },
+    {
+      "name": "bad_sha_cross",
+      "kind": "cross",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Previous checkpoint SHA256 mismatch",
+      "processes_launched": 0,
+      "output_mutations": 0
+    },
+    {
+      "name": "existing_out_cross",
+      "kind": "cross",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "reason": "Output root already exists; never resume or retry it",
+      "processes_launched": 0,
+      "output_mutations": 0
+    },
+    {
+      "name": "valid_plan_cross",
+      "kind": "cross",
+      "expected": "PASS",
+      "observed": "PASS",
+      "previous_checkpoint_references_verified": 2578,
+      "all_preflight_files_verified": 2581,
+      "initial_candidate": "acceleration/results/20260916_cp_cross_search/adopted_index_2658/best_candidate.json",
+      "initial_phase1": "acceleration/results/20260916_cp_cross_search/adopted_index_2658/best_phase1.json",
+      "initial_numeric_merit": 3.484795091741822,
+      "previous_summary_count": 4,
+      "stages": [
+        "native_atomic_family",
+        "atomic_family_audit",
+        "extract_cross",
+        "cross_family_audit",
+        "search",
+        "search_audit",
+        "adoption",
+        "checkpoint"
+      ],
+      "frozen_tool_count": 42,
+      "processes_launched": 0,
+      "output_mutations": 0
+    }
+  ],
+  "processes_launched": 0,
+  "driver_output_mutations": 0,
+  "actual_rounds_run": 0,
+  "elapsed_seconds": 9.544519599992782,
+  "scope": "Both complete command plans are validated from the real cross checkpoint. Wrong SHA and existing-root paths are rejected before mutation. No GPU, native generator, auditor subprocess or LP ran."
+}

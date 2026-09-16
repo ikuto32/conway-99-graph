@@ -1,0 +1,821 @@
+{
+  "status": "CP_CPU_GPU_SHARED_INPUT_NEGATIVE_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/results/20260916_cp_gpu_controls/short_zero_dual_input.txt": "f174b03dbf47ea7de7d4429ef80fb184a55458a15eee5738c72ea6598dd1c518",
+    "acceleration/build/overlap_cp_cpu.exe": "8b81c702ef28c49834b65e831803237e376d9ff667c9ae2b4289ce2fb484f42e",
+    "acceleration/build/overlap_cp_gpu.exe": "6ddc99a1fa55fd3880f3ce6d1a50e63d4144c1915e6bf30eb6c18abf25865e6d",
+    "acceleration/review_cp_cli_controls.py": "0373b7bec71e7e7f15857a96161d5a5348a8648ccead16338862768720fe8667",
+    "acceleration/audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d",
+    "acceleration/overlap_cp_cpu.rs": "2df9c312a8e83ead38be9ea279352f77c12a1a7e8cd1cda104e899b8f9caae16",
+    "acceleration/overlap_cp_gpu.cu": "4ae8a33b53df5176eedfd94f950ee9de2a667bcc850e69069af86049b96344a8",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/wrong_magic.txt": "538ec2e7072047c154db7895ad22d72d65ecb230f1d30958117ae20ec0958ac5",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_candidates.txt": "ae937a5853ccf5e58570be5708194c2840dd8743342c5e88448d4cc8eeb1a474",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_candidates.txt": "f42175f079e08ea0960c4c22be174eae4cccec0132553d6d91bb92062b255499",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_many_candidates.txt": "ec6221e6932c15d8c07cd2f0a84b6f70cd8210563e250d00ce535f735d527d07",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_checkpoints.txt": "636dd4f1b6493e4c90f1d1fd0a927b976a4d038388354987b86d34171e67a218",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_many_checkpoints.txt": "4e50fd596c1e01ecee66f448d303452d5fb4bfa261817397769ad71975af83a6",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_checkpoint.txt": "0e3cc3d97f02703d5fffa26055e4686b9f758623e4128c2f2eedf8a791129c4d",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_large_checkpoint.txt": "772496a5b67f89dcd437bfe092600a09cc24a34a7622f9ddc5158eb7a16d5132",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_checkpoint.txt": "54d6b157aa4f932ba1b68d8aca4a2641f7567ca9819dbf3cf79b164b2a9dec4b",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/duplicate_checkpoint.txt": "f8b21c996d1800166e9480e96bd0c1e62270f27fa6ba6183848105f642ea4dcc",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/noninteger_checkpoint.txt": "554899eddb179e57af7e2d4930445a835234a13be013ff1a341a197d440cb627",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/nan_x.txt": "d23ece49232626abdbb32cb3e7e6b6b43375a0bbe14c48e0d3d01f3cfee367bf",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/inf_x.txt": "2a0fd4ff70f07b170d3d8efb7fd77bde54f6a38f2006dfc6364ef0dadd7ba2f5",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_x.txt": "a3ef0fe709fc3929859272fca1649acf5f53a6cdb65888ca4b670786fe8de73a",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/x_above_one.txt": "49b846d7a20e9ebf9871ef53138eb21d2419e5d578859c37cbb7b200d38bbca7",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/nan_quota_y.txt": "a91da465395643fe07516b004b894aef0304a413f6ff987ddcbf7214a5c99a97",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_inf_y.txt": "4f0b412120216a3ba5833d1a6538855b50d6a352dd04863dd846747934cfea58",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/quota_y_below_minus_one.txt": "ae9b667e9c205564bbff3493f1b46972a253f60c3a8e1798f4c3c42308cb0381",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/quota_y_above_one.txt": "a5d072cc09ffe9ac856fd1e1c63631718afa4f87a56658756679488718958c89",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/cap_y_below_zero.txt": "62a8c6011f5280683cdb269f8b004aee65133ad4365a6e959507d0da14203ec4",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/cap_y_above_one.txt": "8c0b7ea28f0ece3fdad0e3893bcbeb2c4fbf33cbef9a9e0a0bf80ae7bccf5ae3",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/edge_endpoint_out_of_range.txt": "026259cca3f815dc194f1405560eb79b3f494656092a53f7c68295f1f721615e",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_edge_endpoint.txt": "7defa769cb60f98d24f51aa49acec87a8014663542b6e90f5565c0ae78b76e61",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/self_loop.txt": "225bf10cb01cf158f25fe57818b900184a7f10f1996e328aa4f75d4719bd6b39",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/descending_checkpoints.txt": "10dcb27d05dc896a6907e5a2b2a65bc70e3e5f4e2f451873a7e1cce78bedebf7",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/reversed_edge.txt": "184f3621e6afe80aa47eef7f55faf7c87b899d145fd2c0907f9e699f9d424332",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/duplicate_edge.txt": "b9dc5709928296da62abc745dd7d7d0a35b443d2b9aacbdce372d0e3d13d3fb2",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/same_support_edge.txt": "faad37e48abdb53798d7cc23c803bdf9e2e7c10196ecc0ea170a1cd9ab0cc7de",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/degree_preserving_partial_cap_violation.txt": "3fcb7dd0bbe6a06aa699c574cbce35a866d95f836b3a2247891f55353fa38602",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_x.txt": "0c1fcf80b6fcefdaa771afd61ca5ea41a895bd510a8dbb5a2763c3ae7816a681",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_y.txt": "2512976954fc1f34bcc49ded88d146d986cd6072256e35a3d2ddd38f89f0c35a",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_last_edge.txt": "f181207ce93a4b54d03b632d2573bce3feca670d4c5b5740e42286fd7ae26b23",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/trailing_tokens.txt": "c27cde58c4b771380b4d798f4ab9aad8b9343320b25b4398884b44d0440685c1",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/invalid_option.txt": "ab1af95b82b72f63668ba9f047f6f417071f5d3c91a3212d1e95e31f1e5a4aa0",
+    "acceleration/results/20260916_cp_cli_controls/invalid_inputs/vector_candidate_limit.txt": "76e2f30b923d2c1b851b1c7ee441a7e056f893f712bc88d3e6e3524874b3b702"
+  },
+  "tools_checked": [
+    "cpu",
+    "gpu"
+  ],
+  "negative_cases_per_tool": 37,
+  "negative_invocations": 74,
+  "all_rejected": true,
+  "controls": [
+    {
+      "tool": "cpu",
+      "name": "wrong_magic",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/wrong_magic.txt",
+      "input_sha256": "538ec2e7072047c154db7895ad22d72d65ecb230f1d30958117ae20ec0958ac5",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Expected C99CP1"
+    },
+    {
+      "tool": "gpu",
+      "name": "wrong_magic",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/wrong_magic.txt",
+      "input_sha256": "538ec2e7072047c154db7895ad22d72d65ecb230f1d30958117ae20ec0958ac5",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Wrong input header"
+    },
+    {
+      "tool": "cpu",
+      "name": "zero_candidates",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_candidates.txt",
+      "input_sha256": "ae937a5853ccf5e58570be5708194c2840dd8743342c5e88448d4cc8eeb1a474",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Count outside input limits"
+    },
+    {
+      "tool": "gpu",
+      "name": "zero_candidates",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_candidates.txt",
+      "input_sha256": "ae937a5853ccf5e58570be5708194c2840dd8743342c5e88448d4cc8eeb1a474",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid candidate/checkpoint count"
+    },
+    {
+      "tool": "cpu",
+      "name": "negative_candidates",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_candidates.txt",
+      "input_sha256": "f42175f079e08ea0960c4c22be174eae4cccec0132553d6d91bb92062b255499",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid candidate count"
+    },
+    {
+      "tool": "gpu",
+      "name": "negative_candidates",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_candidates.txt",
+      "input_sha256": "f42175f079e08ea0960c4c22be174eae4cccec0132553d6d91bb92062b255499",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid candidate/checkpoint count"
+    },
+    {
+      "tool": "cpu",
+      "name": "too_many_candidates",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_many_candidates.txt",
+      "input_sha256": "ec6221e6932c15d8c07cd2f0a84b6f70cd8210563e250d00ce535f735d527d07",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Count outside input limits"
+    },
+    {
+      "tool": "gpu",
+      "name": "too_many_candidates",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_many_candidates.txt",
+      "input_sha256": "ec6221e6932c15d8c07cd2f0a84b6f70cd8210563e250d00ce535f735d527d07",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid candidate/checkpoint count"
+    },
+    {
+      "tool": "cpu",
+      "name": "zero_checkpoints",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_checkpoints.txt",
+      "input_sha256": "636dd4f1b6493e4c90f1d1fd0a927b976a4d038388354987b86d34171e67a218",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Count outside input limits"
+    },
+    {
+      "tool": "gpu",
+      "name": "zero_checkpoints",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_checkpoints.txt",
+      "input_sha256": "636dd4f1b6493e4c90f1d1fd0a927b976a4d038388354987b86d34171e67a218",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid candidate/checkpoint count"
+    },
+    {
+      "tool": "cpu",
+      "name": "too_many_checkpoints",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_many_checkpoints.txt",
+      "input_sha256": "4e50fd596c1e01ecee66f448d303452d5fb4bfa261817397769ad71975af83a6",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Count outside input limits"
+    },
+    {
+      "tool": "gpu",
+      "name": "too_many_checkpoints",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_many_checkpoints.txt",
+      "input_sha256": "4e50fd596c1e01ecee66f448d303452d5fb4bfa261817397769ad71975af83a6",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid candidate/checkpoint count"
+    },
+    {
+      "tool": "cpu",
+      "name": "zero_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_checkpoint.txt",
+      "input_sha256": "0e3cc3d97f02703d5fffa26055e4686b9f758623e4128c2f2eedf8a791129c4d",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must strictly increase within1..1000000"
+    },
+    {
+      "tool": "gpu",
+      "name": "zero_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/zero_checkpoint.txt",
+      "input_sha256": "0e3cc3d97f02703d5fffa26055e4686b9f758623e4128c2f2eedf8a791129c4d",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must be strictly ascending in1..1000000"
+    },
+    {
+      "tool": "cpu",
+      "name": "too_large_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_large_checkpoint.txt",
+      "input_sha256": "772496a5b67f89dcd437bfe092600a09cc24a34a7622f9ddc5158eb7a16d5132",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must strictly increase within1..1000000"
+    },
+    {
+      "tool": "gpu",
+      "name": "too_large_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/too_large_checkpoint.txt",
+      "input_sha256": "772496a5b67f89dcd437bfe092600a09cc24a34a7622f9ddc5158eb7a16d5132",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must be strictly ascending in1..1000000"
+    },
+    {
+      "tool": "cpu",
+      "name": "negative_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_checkpoint.txt",
+      "input_sha256": "54d6b157aa4f932ba1b68d8aca4a2641f7567ca9819dbf3cf79b164b2a9dec4b",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid checkpoint"
+    },
+    {
+      "tool": "gpu",
+      "name": "negative_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_checkpoint.txt",
+      "input_sha256": "54d6b157aa4f932ba1b68d8aca4a2641f7567ca9819dbf3cf79b164b2a9dec4b",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must be strictly ascending in1..1000000"
+    },
+    {
+      "tool": "cpu",
+      "name": "duplicate_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/duplicate_checkpoint.txt",
+      "input_sha256": "f8b21c996d1800166e9480e96bd0c1e62270f27fa6ba6183848105f642ea4dcc",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must strictly increase within1..1000000"
+    },
+    {
+      "tool": "gpu",
+      "name": "duplicate_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/duplicate_checkpoint.txt",
+      "input_sha256": "f8b21c996d1800166e9480e96bd0c1e62270f27fa6ba6183848105f642ea4dcc",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must be strictly ascending in1..1000000"
+    },
+    {
+      "tool": "cpu",
+      "name": "noninteger_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/noninteger_checkpoint.txt",
+      "input_sha256": "554899eddb179e57af7e2d4930445a835234a13be013ff1a341a197d440cb627",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid checkpoint"
+    },
+    {
+      "tool": "gpu",
+      "name": "noninteger_checkpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/noninteger_checkpoint.txt",
+      "input_sha256": "554899eddb179e57af7e2d4930445a835234a13be013ff1a341a197d440cb627",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid integer checkpoint"
+    },
+    {
+      "tool": "cpu",
+      "name": "nan_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/nan_x.txt",
+      "input_sha256": "d23ece49232626abdbb32cb3e7e6b6b43375a0bbe14c48e0d3d01f3cfee367bf",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "X outside finite[0,1]"
+    },
+    {
+      "tool": "gpu",
+      "name": "nan_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/nan_x.txt",
+      "input_sha256": "d23ece49232626abdbb32cb3e7e6b6b43375a0bbe14c48e0d3d01f3cfee367bf",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Nonfinite/invalid initial X"
+    },
+    {
+      "tool": "cpu",
+      "name": "inf_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/inf_x.txt",
+      "input_sha256": "2a0fd4ff70f07b170d3d8efb7fd77bde54f6a38f2006dfc6364ef0dadd7ba2f5",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "X outside finite[0,1]"
+    },
+    {
+      "tool": "gpu",
+      "name": "inf_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/inf_x.txt",
+      "input_sha256": "2a0fd4ff70f07b170d3d8efb7fd77bde54f6a38f2006dfc6364ef0dadd7ba2f5",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Nonfinite/invalid initial X"
+    },
+    {
+      "tool": "cpu",
+      "name": "negative_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_x.txt",
+      "input_sha256": "a3ef0fe709fc3929859272fca1649acf5f53a6cdb65888ca4b670786fe8de73a",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "X outside finite[0,1]"
+    },
+    {
+      "tool": "gpu",
+      "name": "negative_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_x.txt",
+      "input_sha256": "a3ef0fe709fc3929859272fca1649acf5f53a6cdb65888ca4b670786fe8de73a",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "X outside[0,1]"
+    },
+    {
+      "tool": "cpu",
+      "name": "x_above_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/x_above_one.txt",
+      "input_sha256": "49b846d7a20e9ebf9871ef53138eb21d2419e5d578859c37cbb7b200d38bbca7",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "X outside finite[0,1]"
+    },
+    {
+      "tool": "gpu",
+      "name": "x_above_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/x_above_one.txt",
+      "input_sha256": "49b846d7a20e9ebf9871ef53138eb21d2419e5d578859c37cbb7b200d38bbca7",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "X outside[0,1]"
+    },
+    {
+      "tool": "cpu",
+      "name": "nan_quota_y",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/nan_quota_y.txt",
+      "input_sha256": "a91da465395643fe07516b004b894aef0304a413f6ff987ddcbf7214a5c99a97",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside finite dual box"
+    },
+    {
+      "tool": "gpu",
+      "name": "nan_quota_y",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/nan_quota_y.txt",
+      "input_sha256": "a91da465395643fe07516b004b894aef0304a413f6ff987ddcbf7214a5c99a97",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Nonfinite/invalid initial Y"
+    },
+    {
+      "tool": "cpu",
+      "name": "negative_inf_y",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_inf_y.txt",
+      "input_sha256": "4f0b412120216a3ba5833d1a6538855b50d6a352dd04863dd846747934cfea58",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside finite dual box"
+    },
+    {
+      "tool": "gpu",
+      "name": "negative_inf_y",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_inf_y.txt",
+      "input_sha256": "4f0b412120216a3ba5833d1a6538855b50d6a352dd04863dd846747934cfea58",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Nonfinite/invalid initial Y"
+    },
+    {
+      "tool": "cpu",
+      "name": "quota_y_below_minus_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/quota_y_below_minus_one.txt",
+      "input_sha256": "ae9b667e9c205564bbff3493f1b46972a253f60c3a8e1798f4c3c42308cb0381",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside finite dual box"
+    },
+    {
+      "tool": "gpu",
+      "name": "quota_y_below_minus_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/quota_y_below_minus_one.txt",
+      "input_sha256": "ae9b667e9c205564bbff3493f1b46972a253f60c3a8e1798f4c3c42308cb0381",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside semantic dual box"
+    },
+    {
+      "tool": "cpu",
+      "name": "quota_y_above_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/quota_y_above_one.txt",
+      "input_sha256": "a5d072cc09ffe9ac856fd1e1c63631718afa4f87a56658756679488718958c89",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside finite dual box"
+    },
+    {
+      "tool": "gpu",
+      "name": "quota_y_above_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/quota_y_above_one.txt",
+      "input_sha256": "a5d072cc09ffe9ac856fd1e1c63631718afa4f87a56658756679488718958c89",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside semantic dual box"
+    },
+    {
+      "tool": "cpu",
+      "name": "cap_y_below_zero",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/cap_y_below_zero.txt",
+      "input_sha256": "62a8c6011f5280683cdb269f8b004aee65133ad4365a6e959507d0da14203ec4",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside finite dual box"
+    },
+    {
+      "tool": "gpu",
+      "name": "cap_y_below_zero",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/cap_y_below_zero.txt",
+      "input_sha256": "62a8c6011f5280683cdb269f8b004aee65133ad4365a6e959507d0da14203ec4",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside semantic dual box"
+    },
+    {
+      "tool": "cpu",
+      "name": "cap_y_above_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/cap_y_above_one.txt",
+      "input_sha256": "8c0b7ea28f0ece3fdad0e3893bcbeb2c4fbf33cbef9a9e0a0bf80ae7bccf5ae3",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside finite dual box"
+    },
+    {
+      "tool": "gpu",
+      "name": "cap_y_above_one",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/cap_y_above_one.txt",
+      "input_sha256": "8c0b7ea28f0ece3fdad0e3893bcbeb2c4fbf33cbef9a9e0a0bf80ae7bccf5ae3",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Y outside semantic dual box"
+    },
+    {
+      "tool": "cpu",
+      "name": "edge_endpoint_out_of_range",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/edge_endpoint_out_of_range.txt",
+      "input_sha256": "026259cca3f815dc194f1405560eb79b3f494656092a53f7c68295f1f721615e",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "gpu",
+      "name": "edge_endpoint_out_of_range",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/edge_endpoint_out_of_range.txt",
+      "input_sha256": "026259cca3f815dc194f1405560eb79b3f494656092a53f7c68295f1f721615e",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "cpu",
+      "name": "negative_edge_endpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_edge_endpoint.txt",
+      "input_sha256": "7defa769cb60f98d24f51aa49acec87a8014663542b6e90f5565c0ae78b76e61",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid edge endpoint"
+    },
+    {
+      "tool": "gpu",
+      "name": "negative_edge_endpoint",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/negative_edge_endpoint.txt",
+      "input_sha256": "7defa769cb60f98d24f51aa49acec87a8014663542b6e90f5565c0ae78b76e61",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "cpu",
+      "name": "self_loop",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/self_loop.txt",
+      "input_sha256": "225bf10cb01cf158f25fe57818b900184a7f10f1996e328aa4f75d4719bd6b39",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "gpu",
+      "name": "self_loop",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/self_loop.txt",
+      "input_sha256": "225bf10cb01cf158f25fe57818b900184a7f10f1996e328aa4f75d4719bd6b39",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "cpu",
+      "name": "descending_checkpoints",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/descending_checkpoints.txt",
+      "input_sha256": "10dcb27d05dc896a6907e5a2b2a65bc70e3e5f4e2f451873a7e1cce78bedebf7",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must strictly increase within1..1000000"
+    },
+    {
+      "tool": "gpu",
+      "name": "descending_checkpoints",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/descending_checkpoints.txt",
+      "input_sha256": "10dcb27d05dc896a6907e5a2b2a65bc70e3e5f4e2f451873a7e1cce78bedebf7",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Checkpoints must be strictly ascending in1..1000000"
+    },
+    {
+      "tool": "cpu",
+      "name": "reversed_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/reversed_edge.txt",
+      "input_sha256": "184f3621e6afe80aa47eef7f55faf7c87b899d145fd2c0907f9e699f9d424332",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "gpu",
+      "name": "reversed_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/reversed_edge.txt",
+      "input_sha256": "184f3621e6afe80aa47eef7f55faf7c87b899d145fd2c0907f9e699f9d424332",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "cpu",
+      "name": "duplicate_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/duplicate_edge.txt",
+      "input_sha256": "b9dc5709928296da62abc745dd7d7d0a35b443d2b9aacbdce372d0e3d13d3fb2",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "gpu",
+      "name": "duplicate_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/duplicate_edge.txt",
+      "input_sha256": "b9dc5709928296da62abc745dd7d7d0a35b443d2b9aacbdce372d0e3d13d3fb2",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "cpu",
+      "name": "same_support_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/same_support_edge.txt",
+      "input_sha256": "faad37e48abdb53798d7cc23c803bdf9e2e7c10196ecc0ea170a1cd9ab0cc7de",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "gpu",
+      "name": "same_support_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/same_support_edge.txt",
+      "input_sha256": "faad37e48abdb53798d7cc23c803bdf9e2e7c10196ecc0ea170a1cd9ab0cc7de",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Invalid/duplicate overlap edge"
+    },
+    {
+      "tool": "cpu",
+      "name": "degree_preserving_partial_cap_violation",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/degree_preserving_partial_cap_violation.txt",
+      "input_sha256": "3fcb7dd0bbe6a06aa699c574cbce35a866d95f836b3a2247891f55353fa38602",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Full99 partial pair cap violated"
+    },
+    {
+      "tool": "gpu",
+      "name": "degree_preserving_partial_cap_violation",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/degree_preserving_partial_cap_violation.txt",
+      "input_sha256": "3fcb7dd0bbe6a06aa699c574cbce35a866d95f836b3a2247891f55353fa38602",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Exact own-label quota violated"
+    },
+    {
+      "tool": "cpu",
+      "name": "truncated_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_x.txt",
+      "input_sha256": "0c1fcf80b6fcefdaa771afd61ca5ea41a895bd510a8dbb5a2763c3ae7816a681",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Missing X"
+    },
+    {
+      "tool": "gpu",
+      "name": "truncated_x",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_x.txt",
+      "input_sha256": "0c1fcf80b6fcefdaa771afd61ca5ea41a895bd510a8dbb5a2763c3ae7816a681",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Missing initial X"
+    },
+    {
+      "tool": "cpu",
+      "name": "truncated_y",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_y.txt",
+      "input_sha256": "2512976954fc1f34bcc49ded88d146d986cd6072256e35a3d2ddd38f89f0c35a",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Missing Y"
+    },
+    {
+      "tool": "gpu",
+      "name": "truncated_y",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_y.txt",
+      "input_sha256": "2512976954fc1f34bcc49ded88d146d986cd6072256e35a3d2ddd38f89f0c35a",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Missing initial Y"
+    },
+    {
+      "tool": "cpu",
+      "name": "truncated_last_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_last_edge.txt",
+      "input_sha256": "f181207ce93a4b54d03b632d2573bce3feca670d4c5b5740e42286fd7ae26b23",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Missing edge endpoint"
+    },
+    {
+      "tool": "gpu",
+      "name": "truncated_last_edge",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/truncated_last_edge.txt",
+      "input_sha256": "f181207ce93a4b54d03b632d2573bce3feca670d4c5b5740e42286fd7ae26b23",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Missing edge endpoint"
+    },
+    {
+      "tool": "cpu",
+      "name": "trailing_tokens",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/trailing_tokens.txt",
+      "input_sha256": "c27cde58c4b771380b4d798f4ab9aad8b9343320b25b4398884b44d0440685c1",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Trailing input"
+    },
+    {
+      "tool": "gpu",
+      "name": "trailing_tokens",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/trailing_tokens.txt",
+      "input_sha256": "c27cde58c4b771380b4d798f4ab9aad8b9343320b25b4398884b44d0440685c1",
+      "options": [],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Trailing input token"
+    },
+    {
+      "tool": "cpu",
+      "name": "invalid_option",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/invalid_option.txt",
+      "input_sha256": "ab1af95b82b72f63668ba9f047f6f417071f5d3c91a3212d1e95e31f1e5a4aa0",
+      "options": [
+        "--unknown"
+      ],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Usage: overlap_cp_cpu INPUT OUTPUT [--vectors]"
+    },
+    {
+      "tool": "gpu",
+      "name": "invalid_option",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/invalid_option.txt",
+      "input_sha256": "ab1af95b82b72f63668ba9f047f6f417071f5d3c91a3212d1e95e31f1e5a4aa0",
+      "options": [
+        "--unknown"
+      ],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Usage: overlap_cp_gpu INPUT OUTPUT [--vectors]"
+    },
+    {
+      "tool": "cpu",
+      "name": "vector_candidate_limit",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/vector_candidate_limit.txt",
+      "input_sha256": "76e2f30b923d2c1b851b1c7ee441a7e056f893f712bc88d3e6e3524874b3b702",
+      "options": [
+        "--vectors"
+      ],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Vectors limited to64candidates"
+    },
+    {
+      "tool": "gpu",
+      "name": "vector_candidate_limit",
+      "input_path": "acceleration/results/20260916_cp_cli_controls/invalid_inputs/vector_candidate_limit.txt",
+      "input_sha256": "76e2f30b923d2c1b851b1c7ee441a7e056f893f712bc88d3e6e3524874b3b702",
+      "options": [
+        "--vectors"
+      ],
+      "returncode": 1,
+      "rejected": true,
+      "reason": "--vectors requires candidate count <=64"
+    },
+    {
+      "tool": "cpu",
+      "name": "existing_output",
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Output already exists",
+      "preserved_sha256": "3580442572e377d3be90b6dfc6e7b1fa687ccaea8fc2d480a0f6ddabb2e21ca4"
+    },
+    {
+      "tool": "cpu",
+      "name": "missing_arguments",
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Usage: overlap_cp_cpu INPUT OUTPUT [--vectors]"
+    },
+    {
+      "tool": "gpu",
+      "name": "existing_output",
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Output already exists",
+      "preserved_sha256": "3580442572e377d3be90b6dfc6e7b1fa687ccaea8fc2d480a0f6ddabb2e21ca4"
+    },
+    {
+      "tool": "gpu",
+      "name": "missing_arguments",
+      "returncode": 1,
+      "rejected": true,
+      "reason": "Usage: overlap_cp_gpu INPUT OUTPUT [--vectors]"
+    }
+  ],
+  "degree_preserving_cap_negative": {
+    "removed": [
+      [
+        0,
+        15
+      ],
+      [
+        1,
+        20
+      ]
+    ],
+    "added": [
+      [
+        0,
+        20
+      ],
+      [
+        1,
+        15
+      ]
+    ],
+    "independent_rejection": "Partial common-neighbor cap failed at 1, 15"
+  },
+  "own_label_quota_note": "Under degree4 and one-overlapping-group edges, all four own-label counts sum4 and full99 caps bound each by1, so quota violations also violate a cap. The native parsers separately enforce the exact own-label equalities.",
+  "new_positive_numerical_runs": 0,
+  "elapsed_seconds": 1.1872741999977734,
+  "scope": "Input rejection/immutability controls only. Matvec and numerical iteration agreement have separate positive audits. No convergence, exclusion or completion claim."
+}

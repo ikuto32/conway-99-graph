@@ -1,0 +1,55 @@
+{
+  "status": "RUST_BATCH_STAR_DOMAIN_ORDER_PARITY_AND_CAP_RESET_PASS",
+  "candidate_order": [
+    15,
+    36,
+    15
+  ],
+  "full_payloads_identical_to_audited_single_except_timing": true,
+  "mixed_global_node_cap": 23000,
+  "mixed_complete_flags": [
+    false,
+    true,
+    false
+  ],
+  "mixed_nodes": [
+    23001,
+    22465,
+    23001
+  ],
+  "domain_and_time_caps_independently_reset": true,
+  "batch_elapsed_seconds": 0.0083242,
+  "negative_controls": [
+    {
+      "case": "invalid_second_candidate",
+      "message": "error: candidate 1: endpoints must satisfy 0 <= u < v < 84",
+      "no_output_written": true
+    },
+    {
+      "case": "invalid_seconds_nan",
+      "rejected": true
+    },
+    {
+      "case": "invalid_seconds_-1",
+      "rejected": true
+    },
+    {
+      "case": "invalid_seconds_0",
+      "rejected": true
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/star_domains.rs": "b3637615352c0a5372fe7ed2237f34bc2d5c8773a892ee647c05acb772584d80",
+    "acceleration/star_domains_batch.rs": "84be679f31ae0fc365dc51a2b05a60d0467fa660c9c72a3572b3681da887c482",
+    "acceleration/build/star_domains_batch.exe": "6f14259f98cf47c2ffa11a7ea0b609cc494f710937468ad11ee318f2b35ae3dd",
+    "acceleration/results/20260916_rust_star_domains/batch_15_36_15.txt": "4626a127124831c8b9285eb628a60845950b96a2804eb7909dc413565813729d",
+    "acceleration/results/20260916_rust_star_domains/batch_full.json": "32471fd44b969e843ba6cbb571498d5a2237a913361fd494bb0526815bc4927f",
+    "acceleration/results/20260916_rust_star_domains/batch_mixed_node_caps.json": "94dfa355acb082d925511952fd57392a92e4e40aac644a454024945fa6236ce8",
+    "acceleration/results/20260916_rust_star_domains/batch_domain_caps.json": "0e0ce591bffaf39ff1ab5cbffefdfb18b76239422787f2e9aa1e83d8f64ece54",
+    "acceleration/results/20260916_rust_star_domains/batch_time_caps.json": "5ead34435fce208a86ebe267f98abed7f6a99327dc965df0dc105cb5934ab4fb",
+    "acceleration/results/20260916_rust_star_domains/wide15_native.json": "1bfe8f19f46492bcc8fc1c95d3eb9d7fd0b606d87e79c4b2572157e17ee4fcb7",
+    "acceleration/results/20260916_rust_star_domains/wide36_native.json": "9ff4d056acbed6e3c8e2d7315268e6c7f6cd6cadb846d18f86b1a8a5bda4e74c",
+    "acceleration/results/20260916_rust_star_domains/qa.json": "506b9d2dd1f50d9635c7ceeba15ca7c52125d13a9df3a659d800b9c825a060c6"
+  },
+  "scope": "Three candidate batch controls; exact full payload parity against independently audited single-candidate outputs. Per-candidate caps never imply exclusion."
+}

@@ -1,0 +1,358 @@
+{
+  "status": "INDEPENDENT_COLD_STAR_CUDA_PROJECTION_AND_CLI_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/review_star_pdhg_gpu_controls.py": "a9194be35a9ebfcc22e34179447e221fa400e99615bf8ca5f08438d76a444545",
+    "acceleration/results/20260916_star_cuda_controls/tiny/input.bin": "83885f5786b1092e8fed94aa9911b8b364da9488ca7d3ac6876704e2dd4d8a06",
+    "acceleration/results/20260916_star_cuda_controls/projection_gpu.json": "59165a4db5ab238d9c1e879a878ecc0c847e9d1354b388bf83deb8331713e586",
+    "acceleration/star_pdhg_gpu.cu": "79593e296a4fba29882fb04b7e7dd88091dbc7f218135b6db2ba79c0b49002e8",
+    "acceleration/build/star_pdhg_gpu.exe": "9dc3ea92ca53a6ebc8dd3715f5a0586ef00b18d5c8c8b7bd4e61cb6c2ae11075",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/bad_magic.bin": "14b476645a8d4faae253932d5b31fac5f8a0d51be0d533961a7908c71a95e55c",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/zero_count.bin": "29510c49b9e7990e933632d9d9807786987b6809debaebf9ce253728ed38e671",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/count257.bin": "f1df2b351bfe83634ef8b630a96207ff97672e2eeedda59808ca4685d948ac0d",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/zero_checkpoints.bin": "df9386c5538adc9f44513cab9bbb63f79807a7bdf93885144f5abaa86516d573",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/checkpoints17.bin": "6e30c95b241d77f0a7a825d4ed2557da4715b94af5ce8ca3223589f40e7195a3",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/zero_iteration.bin": "94a792ed0bf411571ce880e56684601f2669a4e5bf663966fa980097a46944fd",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/iteration20001.bin": "222a011075e1326214876d0e955d77bf32b3b735f1365f6d2fee831da0269ec1",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/duplicate_checkpoint.bin": "cc7176719c570f0866018195d24d3ac418e94ae58c5d2b0bcaa7eae7808064fc",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/zero_N.bin": "c0e09707ae173969e83ec0569387433e8c1e066aa5585b1398a77341c650ace3",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/M20001.bin": "acf284fdf2aa887c40d3aafe367e1d39b23b4ed6c5ef2070c3b078c0193ee35e",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/Q_outside_M.bin": "c14319a119827d0aa7255121e797dc2ec04d3d6d93a69b8c850039a489128928",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/zero_blocks.bin": "c2a3c02ab5e5e2c452221a69d7755eea70afbd0c27ade5374142e7f4dd18cf9f",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/oversized_nnz.bin": "c9b1701e1ee09084a0af88f3c22d26950cc92d45cd09cb28d0077bfc431d797e",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/offset_start.bin": "f31e5d3ff5fb07010ae7ebd2796654700d94f80c7b180a892e896db6f676cf30",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/empty_simplex.bin": "5125295a51814037c0c26922e7b835f5af2340c1303dac3a405d5610b4c51964",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/offset_end.bin": "2672d23e330f3e44172ca8045523d9dcf2fc95951029e8c173c9c0779bd0c8ff",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/csr_start.bin": "27013da741eb11022ebbed1ea67c7df3c4544e6570d9e6c021b42f36ab2115cf",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/csr_end.bin": "ff208a66c4117cb0617aa597c8e03f1f45cec1c4b5d545d395912778bf24fa36",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/csr_nonmonotonic.bin": "6f7720ed5d835b2edebae59c1ce5061f855c9547667bdb097226f2653b8b7a94",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/csr_index_range.bin": "c5c1221b6b4151d7110608e877a068b2c0ae6b82c370081a580c60a332d00b40",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/csr_duplicate_index.bin": "6e92b35475b1b58ab5d2128cca9376fb4bcb7557c063ba95faf2914b2f51c803",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/zero_coefficient.bin": "a8bdbf9764b7ba64f83b1ecc6a0c518d015f11f5dbbd5440170960e27e351150",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/nan_coefficient.bin": "b6da8d0a28e820665cb4dac4e3736f3dff83fafff10876d67e897224c0f6bd12",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/inf_coefficient.bin": "01ef63a8ddea34938ef89c08a95e72159de7f8cadb834782a950a6ec642b5172",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/wrong_transpose.bin": "7020a6c7e6fa62f4effff205c4095b4397ecd956f329b1ef722bf1725bcd2873",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/nan_target.bin": "2d968090e655122159a963d4eef867737ad65ef219e1619c2f14830d79fbebb5",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/oversized_target.bin": "02117e80069de72fdcd1f1c5fb1a2a4d340becc0847e4195d661e55853e85eba",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/trailing_bytes.bin": "796e44441aae7648b9b52511eeb0137692d53d815ea637d5a6000aaa4570a554",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/truncated_tail.bin": "6e1812d1213a309fff550633f2a4d8e2a429a2531a047a22376a5faad0581c3d",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/truncated_header.bin": "752e119e7ba9feb07a1577c8e45a439c0067a43117838cf2d57d76f4122ff56e",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/unknown_option.bin": "83885f5786b1092e8fed94aa9911b8b364da9488ca7d3ac6876704e2dd4d8a06",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/vectors_count17.bin": "0217d30926304309520ac031472cab2458256403e4df02fb1c294847a5394104",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/domain8193.bin": "a56821b0461262ff9f306f3f0902a9e44ca47f4222649ad6e0cb4b59c1482c2c",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/csr_unsorted.bin": "059f78c74247d1c9b2c97175dac2a99b0c47c79f15b17958455a9d7eb7ccbf98",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/row_magnitude_cap.bin": "8170af10a2874ecb098b51812ec08dd763bfe84b79d4486cb1d71c0cd7cefdb1",
+    "acceleration/results/20260916_star_cuda_controls/negative_controls/vector_entry_cap.bin": "904c40781905ff2698edc34dd4d637cff678cf6d61260bfa39b3cd2b5df99c3b"
+  },
+  "projection_checks": [
+    {
+      "name": "extreme_negative_tail",
+      "size": 3,
+      "active_count": 1,
+      "KKT_max_error": 0.0,
+      "tiny_exact_oracle_error": 0.0
+    },
+    {
+      "name": "singleton",
+      "size": 1,
+      "active_count": 1,
+      "KKT_max_error": 0.0,
+      "tiny_exact_oracle_error": 0.0
+    },
+    {
+      "name": "equal_negative_pair",
+      "size": 2,
+      "active_count": 2,
+      "KKT_max_error": 0.0,
+      "tiny_exact_oracle_error": 0.0
+    },
+    {
+      "name": "uniform_1053",
+      "size": 1053,
+      "active_count": 1053,
+      "KKT_max_error": 0.0,
+      "tiny_exact_oracle_error": null
+    },
+    {
+      "name": "pattern_2049",
+      "size": 2049,
+      "active_count": 120,
+      "KKT_max_error": 2.6020852139652106e-17,
+      "tiny_exact_oracle_error": null
+    },
+    {
+      "name": "maximum_uniform_8192",
+      "size": 8192,
+      "active_count": 8192,
+      "KKT_max_error": 0.0,
+      "tiny_exact_oracle_error": null
+    }
+  ],
+  "negative_controls": [
+    {
+      "name": "bad_magic",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Bad binary magic"
+    },
+    {
+      "name": "zero_count",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid candidate/checkpoint count"
+    },
+    {
+      "name": "count257",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid candidate/checkpoint count"
+    },
+    {
+      "name": "zero_checkpoints",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid candidate/checkpoint count"
+    },
+    {
+      "name": "checkpoints17",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid candidate/checkpoint count"
+    },
+    {
+      "name": "zero_iteration",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid checkpoint order/range"
+    },
+    {
+      "name": "iteration20001",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid checkpoint order/range"
+    },
+    {
+      "name": "duplicate_checkpoint",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid checkpoint order/range"
+    },
+    {
+      "name": "zero_N",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Unsupported candidate dimensions"
+    },
+    {
+      "name": "M20001",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Unsupported candidate dimensions"
+    },
+    {
+      "name": "Q_outside_M",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Unsupported candidate dimensions"
+    },
+    {
+      "name": "zero_blocks",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Unsupported candidate dimensions"
+    },
+    {
+      "name": "oversized_nnz",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Unsupported candidate dimensions"
+    },
+    {
+      "name": "offset_start",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid domain offsets"
+    },
+    {
+      "name": "empty_simplex",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid/oversized simplex domain"
+    },
+    {
+      "name": "offset_end",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid domain offsets"
+    },
+    {
+      "name": "csr_start",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Bad CSR row pointer endpoints"
+    },
+    {
+      "name": "csr_end",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Bad CSR row pointer endpoints"
+    },
+    {
+      "name": "csr_nonmonotonic",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Bad CSR row pointers"
+    },
+    {
+      "name": "csr_index_range",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: CSR columns must be sorted, unique, in range"
+    },
+    {
+      "name": "csr_duplicate_index",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: CSR columns must be sorted, unique, in range"
+    },
+    {
+      "name": "zero_coefficient",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: CSR values must be finite and nonzero"
+    },
+    {
+      "name": "nan_coefficient",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: CSR values must be finite and nonzero"
+    },
+    {
+      "name": "inf_coefficient",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: CSR values must be finite and nonzero"
+    },
+    {
+      "name": "wrong_transpose",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: AT is not the exact transpose of A"
+    },
+    {
+      "name": "nan_target",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Nonfinite/unsupported row magnitude or target"
+    },
+    {
+      "name": "oversized_target",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Nonfinite/unsupported row magnitude or target"
+    },
+    {
+      "name": "trailing_bytes",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Trailing binary input"
+    },
+    {
+      "name": "truncated_tail",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Truncated candidate geometry"
+    },
+    {
+      "name": "truncated_header",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Truncated binary input"
+    },
+    {
+      "name": "unknown_option",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Usage: star_pdhg_gpu INPUT OUTPUT [--vectors]"
+    },
+    {
+      "name": "vectors_count17",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Vectors require at most16 candidates"
+    },
+    {
+      "name": "domain8193",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Invalid/oversized simplex domain"
+    },
+    {
+      "name": "csr_unsorted",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: CSR columns must be sorted, unique, in range"
+    },
+    {
+      "name": "row_magnitude_cap",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Nonfinite/unsupported row magnitude or target"
+    },
+    {
+      "name": "vector_entry_cap",
+      "rejected": true,
+      "exit_code": 2,
+      "output_created": false,
+      "error": "ERROR: Vector output cap exceeded"
+    },
+    {
+      "name": "existing_output",
+      "rejected": true,
+      "exit_code": 2,
+      "output_preserved": true,
+      "error": "ERROR: Output already exists"
+    }
+  ],
+  "negative_control_count": 37,
+  "all_negative_controls_rejected": true,
+  "untested_large_file_limits": [
+    "2GiB input",
+    "aggregate64million nonzeros"
+  ],
+  "scope": "Independent simplex KKT/exact tiny support checks and CLI rejection/preservation controls. No99graph or infeasibility claim. Invalid cases are parsed before native CUDA initialization by source review."
+}

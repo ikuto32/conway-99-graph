@@ -1,0 +1,264 @@
+{
+  "status": "INDEPENDENT_WHOLE_MATCHING_FARKAS_CORRUPTION_CONTROLS_PASS",
+  "reviewer_sha256": "2f8d2ffd4ee3ecd3d427501b1f3181479d64c9840167ded2ae83706ff5b52d4d",
+  "auditor_sha256": "3bf8d8fee271594cfbc3fba8855897cd84eb2cbd889d8857183e3be42120f2e5",
+  "inputs_sha256": {
+    "acceleration\\results\\20260916_two_trade_pilot\\best_candidate.json": "f17498be5a7d7c07ffa43c49271b99a89aa7028841fc791c45864e512dfacd76",
+    "acceleration\\results\\20260916_matching_lp_same0\\matrix.json": "d26c9800cb67429e07d6d91269aec50f637a8c07c02c1693db4b45687059e7d6",
+    "acceleration\\results\\20260916_matching_lp_same0\\integer_certificate.json": "7c747eb7d587705b8271716782cc294439237b678a963129a35f2f6e03d1461d",
+    "acceleration\\results\\20260916_guided_pair_pilot\\best_candidate.json": "884cb45d945b98404f8037037e044d748fccf4107aeeb48f4e5fa1c46ee42c49",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_matching_farkas.py": "3bf8d8fee271594cfbc3fba8855897cd84eb2cbd889d8857183e3be42120f2e5",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d"
+  },
+  "baseline_status": "INDEPENDENT_WHOLE_MATCHING_MATRIX_AND_INTEGER_FARKAS_AUDIT_PASS",
+  "baseline_contradiction_margin": 1176763,
+  "negative_controls": 25,
+  "all_negative_controls_rejected": true,
+  "additional_positive_controls": 1,
+  "baseline_full_semantic_audit_performed": true,
+  "arbitrary_integer_scale": 1000000000000000000000000000000,
+  "wrong_base_full99_partial_caps_valid": true,
+  "wrong_base_changes_fixed_coordinates": true,
+  "controls": [
+    {
+      "name": "legal_wrong_base_fixed_coordinates_rebound",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "ce4860a1eb145e329505fca8728a969e056d0b6cb1c749f91bffa8debec84bd1",
+      "certificate_sha256": "0e4c5b9d418b67c9f01d0db484b1b278eeede81502bc293d586d82d31c74c050",
+      "matrix_hash_rebound": true,
+      "reason": "Row bound mismatch at27:row_upper"
+    },
+    {
+      "name": "wrong_matching_class",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "f8901694ca85a1e5c835e7342f1f0aa5cd3c6de9725dba36eecefc794f15f2bf",
+      "certificate_sha256": "78f6ac6cea7dbb68141519e301f79cb995ef942dfae107bc7270c8d8bd361d86",
+      "matrix_hash_rebound": true,
+      "reason": "Y column coordinates/order mismatch"
+    },
+    {
+      "name": "wrong_root_group",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "ddbed5eaaf6134d03478d22418a189b432bb5178233306a255b7a419477cc6d6",
+      "certificate_sha256": "64c09492e93cd118d0bd723da4578184d403fd82b4b91c2dd2de3980b0a9c7bb",
+      "matrix_hash_rebound": true,
+      "reason": "Y column coordinates/order mismatch"
+    },
+    {
+      "name": "swapped_edge_variables",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "5ffb429e03d0d21c70b926e768bb5a375c2a63e98468104abc342b627ec2d453",
+      "certificate_sha256": "0f3585e36a0f2a5288287066a377da4b89cd80b43c5687dc36c47345de4397ca",
+      "matrix_hash_rebound": true,
+      "reason": "X column coordinates/order mismatch"
+    },
+    {
+      "name": "swapped_matching_variables",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "f050108c14342fe89afa54137b368856f23685cc2ed47d96e886fb96c12c6557",
+      "certificate_sha256": "56a2475a24e483fce0cabeaba8ec7ad36d23e4b5ad5ad9344c942dd1a5fd6412",
+      "matrix_hash_rebound": true,
+      "reason": "Y column coordinates/order mismatch"
+    },
+    {
+      "name": "weighted_row_coefficient_with_recomputed_proof",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "6f97ebb9ed79339cbfef0893f7238f19e7feaf676664a160e46f7390916e990b",
+      "certificate_sha256": "72602518e457c1e01ae364fcf6b9055265777acd9f2890465234a07e1547bcae",
+      "matrix_hash_rebound": true,
+      "reason": "Independent row coefficient mismatch at0:matching_degree:[23]"
+    },
+    {
+      "name": "unweighted_row_coefficient_with_recomputed_proof",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "e6ca07f235c709c03a5f10b4bdbc227af4de2412de472de069115bb0600c4266",
+      "certificate_sha256": "75ce3f19ba70e695393ebc97de2e39e5b5f505cd1d4b1f076e4c6095a8431768",
+      "matrix_hash_rebound": true,
+      "reason": "Independent row coefficient mismatch at26:hard_partial_cap:[1, 43]"
+    },
+    {
+      "name": "tightened_upper_bound_with_recomputed_proof",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "9b801bfdc9674bc1bf2ddde2de09062df26b2b45d88a894f28a26b78ddbf7ac7",
+      "certificate_sha256": "c85e42fa0dc4190b232970aa93d1f82e42cd398ac9431dd2e195a4ef699071d8",
+      "matrix_hash_rebound": true,
+      "reason": "Row bound mismatch at672:row_upper"
+    },
+    {
+      "name": "col_upper_column_0_value_2",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "2927c0bec969d53642b9e86eb1a18f29bd23c6fdfadc3ae6db593dcf130f1cb5",
+      "certificate_sha256": "9336ef7064ba6076e3caa539fc4861ce5ae03301ccd35821a68ece02599896b5",
+      "matrix_hash_rebound": true,
+      "reason": "Column bounds/cost mismatch: col_upper"
+    },
+    {
+      "name": "col_lower_column_0_value_1",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "5ad1ea543e60da744b212da755051e8a91f7c88215bd39cffe903843325e1260",
+      "certificate_sha256": "5dcdfca87fde81b0464bda229bd0b8f051ede9badc841fb22018704fa10d1a02",
+      "matrix_hash_rebound": true,
+      "reason": "Column bounds/cost mismatch: col_lower"
+    },
+    {
+      "name": "col_cost_column_1740_value_0",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "69468735ecd86fa3e756566a4930837ba8e7fa55ee4253d63ea288dc4c7d782a",
+      "certificate_sha256": "5f5c82390103725f4dacead3eec18121091754767c60387ceb4822d91605e051",
+      "matrix_hash_rebound": true,
+      "reason": "Column bounds/cost mismatch: col_cost"
+    },
+    {
+      "name": "col_upper_column_1740_value_1",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "bf2a964cf321852b815078c2ae34bc8c848ad06d1168c25e1629f9e595670903",
+      "certificate_sha256": "8205c83b3644fe2c977ca3321b8d4ff5e8cb5f0c18b5a88ee0babd738627450b",
+      "matrix_hash_rebound": true,
+      "reason": "Column bounds/cost mismatch: col_upper"
+    },
+    {
+      "name": "missing_unweighted_row_with_consistent_csr_and_proof",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "95f83237e5c8200b1ab6bd5cb8edb0fe5c5e4c2fd7ccb351e1fe3fcaf10fadf0",
+      "certificate_sha256": "98f5d75a624799ac2b29e1b3cbea0e895b8bf00144dc1c402e7718f85efa57c5",
+      "matrix_hash_rebound": true,
+      "reason": "Matrix dimensions mismatch"
+    },
+    {
+      "name": "duplicate_multiplier_row",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "bdb4c5e59af6b783375ad59167df6357f0966f37f25865f201085cab2ec04233",
+      "matrix_hash_rebound": true,
+      "reason": "Duplicate/unsorted/out-of-range/zero weighted row"
+    },
+    {
+      "name": "omitted_multiplier_row",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "f173380f90694278e7688809195453c660dddced18438922a63d79218267990e",
+      "matrix_hash_rebound": true,
+      "reason": "Declared combined coefficients mismatch"
+    },
+    {
+      "name": "wrong_upper_only_multiplier_sign",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "38b3fe5787c2404a7b30a72697ca5354b10699b88d7de59f5e7790c1413f4d79",
+      "matrix_hash_rebound": true,
+      "reason": "Multiplier sign selects an infinite row bound"
+    },
+    {
+      "name": "wrong_combined_coefficient",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "dcc3df490ba3ff67eb2458d79a05784848ecee52f2d68b8334569c87f381c737",
+      "matrix_hash_rebound": true,
+      "reason": "Declared combined coefficients mismatch"
+    },
+    {
+      "name": "wrong_combined_lower_rhs",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "1f4a55ddefac3bda6fee0c251c267cd6fb2753a6f50da0ac4ad14e682bba06b0",
+      "matrix_hash_rebound": true,
+      "reason": "Declared exact proof scalar mismatch: combined_lower_rhs"
+    },
+    {
+      "name": "wrong_box_upper_bound",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "a537c2198e3faf85de0a611a49feaaa6a5d7b3fa6aca2ac80ac3e1c13b83d7b5",
+      "matrix_hash_rebound": true,
+      "reason": "Declared exact proof scalar mismatch: box_upper_bound"
+    },
+    {
+      "name": "wrong_contradiction_margin",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "2298b065fa08dc266eaf85cf476c25e2260b4bbfda4ee6fe7ccad6b25e80265a",
+      "matrix_hash_rebound": true,
+      "reason": "Declared exact proof scalar mismatch: contradiction_margin"
+    },
+    {
+      "name": "float_multiplier",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "3dc491a3598f89a2e77db49f777a0c843f12cdc253f8819bd8677ab138d0c1a6",
+      "matrix_hash_rebound": true,
+      "reason": "Invalid weighted row"
+    },
+    {
+      "name": "boolean_multiplier",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "49ae8d6a163996f93b691ca6659416a4f0f2d1ed5db54da4b52263c88a82b810",
+      "matrix_hash_rebound": true,
+      "reason": "Invalid weighted row"
+    },
+    {
+      "name": "empty_proof",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "1832e46fbb8efd05a8b064192622c0b0d5f13734df246aa26ef0033f470858ef",
+      "matrix_hash_rebound": true,
+      "reason": "No exact zero-slack contradiction"
+    },
+    {
+      "name": "wrong_projected_dimension",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "c794ed4b5c80cff8b674babd3d6f40c7de13bed8b5a20c51781cd5acc895d1f5",
+      "matrix_hash_rebound": true,
+      "reason": "Certificate projected dimensions mismatch"
+    },
+    {
+      "name": "missing_zeroed_slack",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "13055662a05d66ec7be0f03b705e73ba2955c01e73c96420d94144d22e1a9375",
+      "matrix_hash_rebound": true,
+      "reason": "Certificate projected dimensions mismatch"
+    },
+    {
+      "name": "positive_uniform_rescaling_beyond_i64",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "matrix_sha256": "d9d4eb9d7cbeea8fdc0b6eb3ab1761534e1460c95e59fa30a0a4eb23b615aed7",
+      "certificate_sha256": "205f9c1090edc34b1499b67cc89b203968d11f85b83b701698df5d6906dd76c6",
+      "matrix_hash_rebound": true,
+      "reason": null,
+      "audit_status": "INDEPENDENT_WHOLE_MATCHING_MATRIX_AND_INTEGER_FARKAS_AUDIT_PASS",
+      "contradiction_margin": 1176763000000000000000000000000000000
+    }
+  ],
+  "all_mutations_in_memory_only": true,
+  "producer_or_optimizer_imported": false,
+  "elapsed_seconds": 2.456432199993287,
+  "scope": "Regression and adversarial corruption checks of the frozen independent checker; these supplement its exact matrix/proof audit, not a general proof of software correctness or a global Conway exclusion."
+}

@@ -1,0 +1,108 @@
+{
+  "status": "CROSS_ATOMIC_EXTRACTION_REAL_AND_CORRUPTION_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/results/20260916_cp_matching_search/adopted_index_59390/best_candidate.json": "f9a803bc15c1c41ad9aeaa7d5a11aaf0eb91f36e5274e73e0b3a08df630f8b1b",
+    "acceleration/results/20260916_cp_cross_family_qa/atomic_both.json": "79e90f4b79140587810847ca53ab72fc6cc3561937efa7e0ab38c8aaf117d4fc",
+    "acceleration/results/20260916_cp_cross_family_qa/atomic_both_independent_audit.json": "d2050dd814d9655e1d964f3e68a4d10de47e1c5419dc9c27a08dfcf0a8203760",
+    "acceleration/results/20260916_cp_cross_family_qa/cross.json": "145978c4297d913bdd721cb847b5ddb9a41c152d7b61634211b43c55883e5ee6",
+    "acceleration/review_cross_atomic_controls.py": "f5ffdac602e859772acdfc75efe5713b35bf1e10470d9477d8f8743fc206a7d4",
+    "acceleration/extract_cross_atomic_family.py": "499dbe03dde2f173a2c27d4351fd709a1d9b9a6eae10fd5530f4cb5ca7bbe613",
+    "acceleration/audit_cross_atomic_extraction.py": "9829d8321f008225e5617fa4c9e62b206e72695b284a1a47b064caf6dbf9f51d",
+    "acceleration/audit_atomic_trace.py": "83965566c3181020588c94333e2ab7bd0246a49714d491e839a9334468e0d31e",
+    "acceleration/audit_certificate.py": "22d3e334930f734890216f18cfc8335c0a5c046f142a72e5a30beca6be9f1c9d"
+  },
+  "positive_complete_cross_candidates": 8625,
+  "negative_controls": 17,
+  "all_negative_controls_rejected": true,
+  "controls": [
+    {
+      "name": "swap_red_blue_at_same_minimum",
+      "rejected": true,
+      "reason": "Atomic edges are not the declared connected alternating cycle"
+    },
+    {
+      "name": "rotate_valid_colors_away_from_minimum",
+      "rejected": true,
+      "reason": "Noncanonical single cycle"
+    },
+    {
+      "name": "repeated_cycle_vertex",
+      "rejected": true,
+      "reason": "Atomic alternating-cycle vertices"
+    },
+    {
+      "name": "undeclared_second_cycle",
+      "rejected": true,
+      "reason": "Noncanonical single cycle"
+    },
+    {
+      "name": "wrong_root_group",
+      "rejected": true,
+      "reason": "Modified original move field: root_group"
+    },
+    {
+      "name": "wrong_same_sign_class",
+      "rejected": true,
+      "reason": "Modified original move field: matching_class"
+    },
+    {
+      "name": "changed_edge_size_modified",
+      "rejected": true,
+      "reason": "Invalid cross size/class"
+    },
+    {
+      "name": "original_cycle_metadata_lost",
+      "rejected": true,
+      "reason": "Lost original native association"
+    },
+    {
+      "name": "original_native_index_modified",
+      "rejected": true,
+      "reason": "Lost original native association"
+    },
+    {
+      "name": "index_order_changed",
+      "rejected": true,
+      "reason": "Missing/reordered/extra cross native indices"
+    },
+    {
+      "name": "omit_cross_member_with_adjusted_count",
+      "rejected": true,
+      "reason": "Missing/reordered/extra cross native indices"
+    },
+    {
+      "name": "wrong_final_edge",
+      "rejected": true,
+      "reason": "Different selected final graph"
+    },
+    {
+      "name": "source_native_hash_changed",
+      "rejected": true,
+      "reason": "Extraction provenance mismatch: source_native_path"
+    },
+    {
+      "name": "base_candidate_hash_changed",
+      "rejected": true,
+      "reason": "Extraction provenance mismatch: candidate_path"
+    },
+    {
+      "name": "declared_family_hash_changed",
+      "rejected": true,
+      "reason": "Extraction input map differs"
+    },
+    {
+      "name": "raw_count_changed",
+      "rejected": true,
+      "reason": "Cross total count differs"
+    },
+    {
+      "name": "wrong_single_cycle_scope",
+      "rejected": true,
+      "reason": "Wrong cross extraction scope"
+    }
+  ],
+  "original_full_family_enumeration_repeated": false,
+  "abstract_positive_graphs_used": false,
+  "elapsed_seconds": 2.3452607999934116,
+  "scope": "One real independently audited base and its complete cross3/4 subset; negative color/order/hash/index/graph controls. No new numerical optimization or global graph claim."
+}
