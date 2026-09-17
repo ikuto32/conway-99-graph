@@ -1085,6 +1085,335 @@
       "path": "scratch_theory_e71_label_subset_moment_frontier.json",
       "size_bytes": 16380649,
       "sha256": "52b8ab81c76ca2f36cc6fc324d198cbaa981363573b834663931117b2ad24163"
+    },
+    {
+      "path": "acceleration/results/20260917_six_moment_pdhg/run01/six_1000.json",
+      "size_bytes": 19711800,
+      "sha256": "1444147e7c0cfb5003b4a9cc878a75fe229bb338f3e21b4e52c75df8f503da9b",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:48.068078+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_six_moment_pdhg/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_moment_pdhg/run01/six_1000.json.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py",
+        "existing_recovery_report": "acceleration/results/20260917_artifact_replay/six_gpu_checkpoints_gzip.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_six_moment_pdhg/run01/six_10000.json",
+      "size_bytes": 19550656,
+      "sha256": "44e618a95a1d389e3cb958d5c867fe2981a8f8c715e29ccbcb01711bb675faa6",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:48.104535+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_six_moment_pdhg/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_moment_pdhg/run01/six_10000.json.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py",
+        "existing_recovery_report": "acceleration/results/20260917_artifact_replay/six_gpu_checkpoints_gzip.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_six_moment_pdhg/run01/six_5000.json",
+      "size_bytes": 19563324,
+      "sha256": "71ff4ff86910af21edbc5201682bf7b7caff2a6525bd3c9ef736d7d379d43185",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:48.140413+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_six_moment_pdhg/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_moment_pdhg/run01/six_5000.json.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py",
+        "existing_recovery_report": "acceleration/results/20260917_artifact_replay/six_gpu_checkpoints_gzip.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_six_filtered_solve5400/run01/numeric_lp.json",
+      "size_bytes": 14506596,
+      "sha256": "290622fbbb0f224d894fcb4c0b60cbc9b7b2cc02d9e3c0c256522f56878f9eb5",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:48.173560+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260917_six_filtered_solve5400/run01/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/two_coordinate.bin",
+      "size_bytes": 173674112,
+      "sha256": "e646606c73184318afd217607784cfaf93ad1aba7c8b0e2281346ccc11718a35",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:48.411932+00:00",
+      "recovery": {
+        "kind": "DETERMINISTIC_REGENERATION",
+        "source": "acceleration/export_20260917_moment_pdhg.py",
+        "source_sha256": "1da2af63989b19f05cbc3d06fdb12ed6825523c8217af69802f41ee0962391b6",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/export/manifest.json",
+        "command": "UV_PROJECT_ENVIRONMENT=build/research-venv; uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/export_20260917_moment_pdhg.py --out FRESH_WORKSPACE_DIRECTORY",
+        "caveat": "No public binary upload. Requires exact audited two-coordinate matrix and pinned dependencies; compare regenerated binary SHA256. No GPU run needed."
+      }
+    },
+    {
+      "path": "build/research-local/six_moment_pdhg/input.bin",
+      "size_bytes": 1410784136,
+      "sha256": "e9d2f28a3804ffe5473eb6f86bcb6a3a97d492940c413eaa6de5c028c8e34b1b",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.294730+00:00",
+      "recovery": {
+        "kind": "DETERMINISTIC_REGENERATION",
+        "source": "acceleration/export_20260917_six_moment_pdhg.py",
+        "source_sha256": "79b36513b97e0f817fb8c6d88ccde8914b477e3d815ef8ec1590ba6990161678",
+        "manifest": "acceleration/results/20260917_six_moment_pdhg/export/manifest.json",
+        "command": "UV_PROJECT_ENVIRONMENT=build/research-venv; uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/export_20260917_six_moment_pdhg.py --out FRESH_MANIFEST_DIRECTORY --binary FRESH_BINARY_PATH",
+        "caveat": "No public binary upload. First restore six audited NPZ from its chunk manifest. Compare regenerated binary SHA256; no GPU launch."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_00.json",
+      "size_bytes": 14959298,
+      "sha256": "b801cc89aee256628a32c8b26cdbe54e1181c02796a0a83aac63a4176fe972f6",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.323494+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_00.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_00.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_01.json",
+      "size_bytes": 12777719,
+      "sha256": "e66ea373575b626d8bca40a609732b6a14ccd552aca82da56f7d7118373a87fb",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.344764+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_01.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_01.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_02.json",
+      "size_bytes": 11827650,
+      "sha256": "932389e885a4ae3ddc6c93541de778043049d1f9e12557d8e12ec05d69fa53ae",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.364517+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_02.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_02.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_03.json",
+      "size_bytes": 11881189,
+      "sha256": "10b143d356a43b9875a2b3534282987297be912216df5f2c3ef362c2f89f3d33",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.382268+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_03.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_03.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_04.json",
+      "size_bytes": 13034150,
+      "sha256": "fb5ee2c2bfe7c020ea2ceba1a85a641e0c526045a1ec229ef26efdd3ea5a3634",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.403116+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_04.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_04.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_05.json",
+      "size_bytes": 13777927,
+      "sha256": "b9baec75e93c6bec8d1c8cfc21a9f56593640bbf9cf1967876b17ab237bce474",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.427003+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_05.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_05.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_06.json",
+      "size_bytes": 13060197,
+      "sha256": "059efa977010c130abcdfe343086bf62c34129ca363f63dedd83a8ba331f3b9a",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.447842+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_06.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_06.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_24.json",
+      "size_bytes": 16122516,
+      "sha256": "74b796d1bbc4162aeb3ea3a0e17cff256063a65d754daaf1eec25543233c452c",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.472755+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_24.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_24.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_25.json",
+      "size_bytes": 14035896,
+      "sha256": "c1a2f7b5dd6243a647d5264f51be9c39e91eae2f8a01143eb061823e44898e02",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.494622+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_25.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_25.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_26.json",
+      "size_bytes": 14223889,
+      "sha256": "2def809cdf1b3ade6e1f692750ccde76e68afb391e09ba3003002bc3496bf596",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.516049+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_26.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_26.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/recovered/vertex_27.json",
+      "size_bytes": 15582442,
+      "sha256": "671664f5e70271947cfe66ca1fbe3d9477ad6fc77c61e402eb13fd0b4c4ad71f",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.541132+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP_DUPLICATE_RECOVERY",
+        "manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_27.json.gz",
+        "same_bytes_as": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_27.json",
+        "retrieval": "Decode the referenced gzip and verify this SHA256; preserve reviewer directory naming. No matching search or audit rerun required."
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/large_uniform.bin",
+      "size_bytes": 183608,
+      "sha256": "78364ab8d7bac612e65436300037d30cbb72af4e5defb3180d27f6df83886a37",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.619843+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/pilot_binary_compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_moment_pdhg_gpu/export/large_uniform.bin.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/positive_uniform.bin",
+      "size_bytes": 172,
+      "sha256": "0de36b4d6599d5dfb70a34296139ff3216f82cd355bbd17b0234b3375b4ac9c0",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.624051+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/pilot_binary_compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_moment_pdhg_gpu/export/positive_uniform.bin.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/unbounded_hard_dual.bin",
+      "size_bytes": 120,
+      "sha256": "e8d6f4b0363f9e77431b1c83b7b3bf915f09642ca6dc3f0bc45d658becd8a809",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.628045+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/pilot_binary_compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_moment_pdhg_gpu/export/unbounded_hard_dual.bin.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_magic.bin",
+      "size_bytes": 172,
+      "sha256": "b0318c835d56ac3d121a25ea2c5fa722a02738f978a90f33f63dd2e2c4ed9845",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.628045+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/pilot_binary_compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_magic.bin.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_transpose.bin",
+      "size_bytes": 172,
+      "sha256": "ab97542a6c501bb017c8427f79699b058f23fe00fef607593e5990add8a7ed13",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.632196+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/pilot_binary_compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_transpose.bin.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/pilot/domain_out_of_range.bin",
+      "size_bytes": 172,
+      "sha256": "d59d086af4c3ed9a8cbcc358e49ae4c95a92506451f4af7dce58e1b1cd1e0c40",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.635133+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/pilot_binary_compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_moment_pdhg_gpu/pilot/domain_out_of_range.bin.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/pilot/trailing_bytes.bin",
+      "size_bytes": 173,
+      "sha256": "ca503b13f774292a6fb343570fd77e039cbc7db0b5894a1a0e16e6b5f161eca4",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-17T12:22:50.636474+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260917_moment_pdhg_gpu/pilot_binary_compressed_artifacts.json",
+        "companion": "acceleration/results/20260917_moment_pdhg_gpu/pilot/trailing_bytes.bin.gz",
+        "checker": "acceleration/audit_compressed_artifact_manifest.py"
+      }
     }
   ],
   "scope": "Original archive and 2026-09-16 Rust/CUDA continuation, including large ignored work artifacts. Small ignored logs, build outputs, and local environments are not enumerated here.",
@@ -1238,6 +1567,132 @@
           "availability": "LOCAL_ONLY raw; exact byte parts prepared",
           "retrieval_manifest": "acceleration/results/20260917_four_matching_filtered_moments/chunk_manifest.json",
           "retrieval": "Concatenate hash-bound parts in listed order using the manifest; verify fullsize/hash. Raw retained locally; parts publication recorded separately."
+        }
+      ]
+    },
+    {
+      "recorded_date": "2026-09-17",
+      "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+      "availability": "Raw above10MiB preserved locally; exact recovery companions awaiting confirmed publication.",
+      "files": [
+        {
+          "path": "acceleration/results/20260917_four_matching_filtered_solve2400/run01/numeric_lp.json",
+          "size_bytes": 12830534,
+          "sha256": "731736041873e28753bbd5cc32a97f114259c76184c604c91c142d03cda1738f",
+          "availability": "LOCAL_ONLY raw; exact byte parts prepared",
+          "retrieval_manifest": "acceleration/results/20260917_four_matching_filtered_solve2400/run01/chunk_manifest.json",
+          "retrieval": "Use restore_chunked_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_00.json",
+          "size_bytes": 14959298,
+          "sha256": "b801cc89aee256628a32c8b26cdbe54e1181c02796a0a83aac63a4176fe972f6",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_01.json",
+          "size_bytes": 12777719,
+          "sha256": "e66ea373575b626d8bca40a609732b6a14ccd552aca82da56f7d7118373a87fb",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_02.json",
+          "size_bytes": 11827650,
+          "sha256": "932389e885a4ae3ddc6c93541de778043049d1f9e12557d8e12ec05d69fa53ae",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_03.json",
+          "size_bytes": 11881189,
+          "sha256": "10b143d356a43b9875a2b3534282987297be912216df5f2c3ef362c2f89f3d33",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_04.json",
+          "size_bytes": 13034150,
+          "sha256": "fb5ee2c2bfe7c020ea2ceba1a85a641e0c526045a1ec229ef26efdd3ea5a3634",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_05.json",
+          "size_bytes": 13777927,
+          "sha256": "b9baec75e93c6bec8d1c8cfc21a9f56593640bbf9cf1967876b17ab237bce474",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_06.json",
+          "size_bytes": 13060197,
+          "sha256": "059efa977010c130abcdfe343086bf62c34129ca363f63dedd83a8ba331f3b9a",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_24.json",
+          "size_bytes": 16122516,
+          "sha256": "74b796d1bbc4162aeb3ea3a0e17cff256063a65d754daaf1eec25543233c452c",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_25.json",
+          "size_bytes": 14035896,
+          "sha256": "c1a2f7b5dd6243a647d5264f51be9c39e91eae2f8a01143eb061823e44898e02",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_26.json",
+          "size_bytes": 14223889,
+          "sha256": "2def809cdf1b3ade6e1f692750ccde76e68afb391e09ba3003002bc3496bf596",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_coordinate_matching_filter/run01/vertex_27.json",
+          "size_bytes": 15582442,
+          "sha256": "671664f5e70271947cfe66ca1fbe3d9477ad6fc77c61e402eb13fd0b4c4ad71f",
+          "availability": "LOCAL_ONLY raw; exact gzip companion prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_coordinate_matching_filter/run01/compressed_artifacts.json",
+          "retrieval": "Use restore_compressed_artifacts.py with the manifest after publication; raw retained locally."
+        }
+      ]
+    },
+    {
+      "recorded_date": "2026-09-17",
+      "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+      "availability": "Raw above10MiB retained; companions awaiting public commit.",
+      "files": [
+        {
+          "path": "acceleration/results/20260917_six_filtered_moments/integer_augmented_csr.npz",
+          "size_bytes": 85616258,
+          "sha256": "118707aa109ed5195a38b7a0edda7ea6b3514669e50b9493094d8563097e8b55",
+          "availability": "LOCAL_ONLY raw; exact byte parts prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_filtered_moments/chunk_manifest.json",
+          "retrieval": "Use restore_chunked_artifacts.py with this manifest after publication; raw retained locally."
+        },
+        {
+          "path": "acceleration/results/20260917_six_filtered_moments/model.json",
+          "size_bytes": 15477067,
+          "sha256": "22ff4fbce2f9659877fe115483300bedfb603d60bf96d761a90ffd48a2a0d3c7",
+          "availability": "LOCAL_ONLY raw; exact byte parts prepared",
+          "retrieval_manifest": "acceleration/results/20260917_six_filtered_moments/chunk_manifest.json",
+          "retrieval": "Use restore_chunked_artifacts.py with this manifest after publication; raw retained locally."
         }
       ]
     }

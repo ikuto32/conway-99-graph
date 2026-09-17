@@ -1,0 +1,31 @@
+{
+  "status": "PREPARATION_FAILED_BEFORE_WORKTREE_CREATION",
+  "observed_at": "2026-09-17T11:31:42.938302+00:00",
+  "command": [
+    "build/research-venv/Scripts/python.exe",
+    "acceleration\\prepare_two_coordinate_public_worktree.py",
+    "--commit",
+    "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+    "--destination",
+    "build/two-public-replay-7c5e2bb",
+    "--report",
+    "acceleration/results/20260917_two_coordinate_public_replay/extraction.json"
+  ],
+  "failed_subprocess": [
+    "git",
+    "worktree",
+    "add",
+    "--detach",
+    "--no-checkout",
+    "build/two-public-replay-7c5e2bb",
+    "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8"
+  ],
+  "return_code": 128,
+  "stderr": null,
+  "stderr_null_reason": "Initial helper captured child stderr but did not print or retain it; not invented.",
+  "destination_exists": false,
+  "worktree_registered": false,
+  "source_sha256": "36dfb28295887cc33b3febefc1328a5f52f2050a7ddcf704cdfcaa2c259284c7",
+  "mathematical_impact": false,
+  "next_action": "Retry identical authorized preparation with permission to write Git worktree metadata."
+}

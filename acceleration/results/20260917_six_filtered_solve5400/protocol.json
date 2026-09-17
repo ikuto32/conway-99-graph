@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-09-17T11:49:50.061277+00:00",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "status": "PREREGISTERED_NOT_LAUNCHED",
+  "inputs_sha256": {
+    "acceleration/theory_20260917_six_filtered_solve.py": "58717695d43841a30afe7e31f3aee3badf67fd4be31e12d280184113008ff79d",
+    "acceleration/results/20260917_six_filtered_moments/build_manifest.json": "0787ef60f1aafb798463cb2f0a7f813160d08a60d1d9bef2774b1746e69b6877",
+    "acceleration/results/20260917_six_filtered_moments/build_summary.json": "032eb18afb310063a52cb3b2686630783e17c3f5d071a8b41c077425ef567cae",
+    "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/summary.json": "05d4284f04fb5c84491394695c6f56a3e5517302ae95c1885b27592cfed78a7f",
+    "acceleration/results/20260917_resume/six_filtered_resource_preflight.json": "3c1980ae64273680e7f0fc5f8030d4281becaaad1d05e8ac38f0136f1bb6746c",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Does the audited six-coordinate matching-filtered fullmoment relaxation have a strictlypositive exact support bound?",
+  "scope": "132fixedK and prescribedzeros;2040unknownedges;712721survivingstars plus independentlychecked166728removed choices from879449originals",
+  "configuration": {
+    "solver": "HiGHS IPM",
+    "threads": 1,
+    "crossover": "off",
+    "time_limit_seconds": 5400,
+    "automatic_retries": false
+  },
+  "rationale": {
+    "previous_four_solve_seconds": 1432.875,
+    "previous_probability_columns": 230879,
+    "new_probability_columns": 712721,
+    "probability_column_ratio": 3.0869892887616457,
+    "meaning": "These observed inputs motivate a finitecap, not a performanceguarantee or linear-runtime model"
+  },
+  "independent_filter_gate": "PASS",
+  "independent_model_gate": null,
+  "independent_model_gate_null_reason": "Modelreview stillpending; launcher requires exactPASS hashbindings",
+  "resource_gate": "Parentapproved freshrecord; noreservedresources",
+  "success": "Strictlypositive exactinteger support bound, pending freshindependent raw-neighborhood proofcheck. Numericalzero/timeout/errors/incompletevectors do not resolve family.",
+  "preservation": "Allreturnedvectors/logs/failures; immutableactualexec heartbeats plusprocess-local heartbeatthread; largeoutputs split8MiB byteparts withhashmanifest",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--cache-dir",
+    ".uv-cache-20260917",
+    "python",
+    "acceleration/theory_20260917_six_filtered_solve.py",
+    "--out",
+    "acceleration/results/20260917_six_filtered_solve5400/run01",
+    "--filter-review",
+    "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/summary.json",
+    "--model-review",
+    "acceleration/results/20260917_independent_review/six_filtered_moments.json"
+  ],
+  "target_resolution": false
+}

@@ -1,3 +1,46 @@
+# STOPPED by user — 2026-09-17
+
+Research is stopped to preserve the user's token resources. Do not resume until
+explicitly requested. Read [the stop/restart record](docs/STOP_20260917_SIX_COORDINATE.md)
+and `acceleration/results/20260917_user_requested_stop.json` first.
+
+Target resolution: **UNKNOWN**. The latest verified claim is
+`C-PARTIAL-K-SIX-COORDINATE-EXCLUSION` revision 1: exact bound `14157/16384 > 0`
+excludes only the pinned 132-fixed-K family with its prescribed absences.
+All six coefficient attempts were independently checked. This is not general
+nonexistence. Overall search coverage: UNKNOWN; no validated denominator.
+
+CPU and GPU six-coordinate runs have ended. The eight-coordinate pilot was
+interrupted by the user stop: 17 completed centers, 996,947 saved local choices,
+and no completeness claim. Research processes were checked, not inferred from
+historical PIDs. The root ledger and stop receipt are authoritative.
+
+## Preserved eighth milestone
+
+# Latest verified milestone: four-coordinate conditional exclusion
+
+Target resolution remains **UNKNOWN**. The [eighth completed milestone](docs/RESEARCH_20260917_EIGHTH_WAVE.md)
+and authoritative [claim ledger](CLAIMS.yaml) record the independently checked
+bound `68986111/262144 > 0`, excluding the exact 144-fixed-edge four-coordinate
+family with its prescribed absences. This is not unrestricted nonexistence.
+
+Latest verified checkpoint: `acceleration/results/20260917_four_coordinate_exclusion_checkpoint.json`,
+SHA256 `9f6bf0bbc1e7bbb44216a6cbe54feb2971e298e969a57aba0738b04b307fc64c`.
+The six-coordinate extension has 879,449 complete local choices, 166,728 sound
+matching rejections, 712,721 survivors and an independently verified moment LP.
+No six-coordinate exclusion is established by this checkpoint. The next work
+is the capped CPU solve and independently gated GPU weight search; consult
+current process observations and receipts before asserting liveness.
+
+The separate rook-nine representation is conditional and has a compatible
+spectrum. Its source-collision history and fresh independent recheck are
+preserved. No graph automorphism or universal rook containment is assumed.
+
+Review continues in [draft PR2](https://github.com/ikuto32/conway-99-graph/pull/2).
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved seventh milestone
+
 # Latest verified milestone: four-coordinate foundations and simpler evidence
 
 Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
