@@ -1,0 +1,53 @@
+name: Validate current claim registry
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.11.25'
+      - name: Install locked research environment
+        run: uv sync --locked
+      - name: Run positive and adversarial registry controls
+        run: uv run --locked python -B -m unittest discover -s acceleration -p test_validate_claims.py -v
+      - name: Check registry, public hashes, and revision impact
+        env:
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          uv run --locked python - <<'PY'
+          import os
+          from pathlib import Path
+          import subprocess
+          import sys
+          Path('build').mkdir(exist_ok=True)
+          baseline = os.environ.get('PR_BASE') or os.environ.get('PUSH_BEFORE') or 'HEAD^'
+          old = subprocess.run(['git', 'show', f'{baseline}:CLAIMS.yaml'], capture_output=True)
+          cmd = ['uv', 'run', '--locked', 'python', '-B', 'acceleration/validate_claims.py', '--hashes', 'public', '--out', 'build/claims-validation.json']
+          if old.returncode == 0:
+              Path('build/previous-CLAIMS.yaml').write_bytes(old.stdout)
+              cmd += ['--previous', 'build/previous-CLAIMS.yaml']
+          else:
+              print(f'SKIPPED previous-ledger impact review: no root CLAIMS.yaml at {baseline}; initial migration or unavailable base', flush=True)
+          sys.exit(subprocess.call(cmd))
+          PY
+      - name: Preserve validation and explicit skipped-check report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: claims-validation
+          path: build/claims-validation.json
+          if-no-files-found: warn

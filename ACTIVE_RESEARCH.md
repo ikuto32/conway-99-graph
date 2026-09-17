@@ -1,3 +1,33 @@
+# Conway-99 resumed, 2026-09-17
+
+The user's new instruction authorizes continuation. The authoritative current
+claim entry point is [CLAIMS.yaml](CLAIMS.yaml); the pinned external ledger is
+historical and is not silently reverified. Target resolution remains UNKNOWN.
+
+Latest completed milestone: [fresh-star evaluation](docs/RESEARCH_20260917_FRESH_STAR.md).
+All16 selected configurations have independently checked exact exclusions;
+none improves the original-star objective. Current seed remains18481, itself
+excluded as a fixed configuration. The new checkpoint is
+`acceleration/results/20260917_fresh_star_checkpoint.json`, SHA256
+`195d2d008641c3da867933df00e33d81ebdcef252f6712df42db344fb1f9a696`.
+
+The preregistered next whole-same-sign matching wave is in
+`acceleration/results/20260917_same_star_round`; its execution recorder is
+`acceleration/results/20260917_same_execution`. A dated process observation
+is saved in `acceleration/results/20260917_resume/execution_observation.json`.
+Inspect fresh process state before calling it running; these paths are not
+liveness evidence. The separate triangle-matching structural filter is now
+independently verified: claim `C-STAR-TRIANGLE-FILTER-18481` revision1 rejects
+6,756 of the26,250 original local star choices, leaving19,494 and no empty
+vertex domain. This is a stronger local necessary condition, not another
+fixed-K or target exclusion. See [theory update](docs/THEORY_20260917.md).
+
+New Python workflows use the root uv.lock; preserve the historical environments
+and recorded commands. See docs/REPRODUCING.md for the distinct uv environment.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved September16 stop and preceding continuation
+
 # Conway-99 goal active, 2026-09-16
 
 **Execution stopped at the user's request on 2026-09-16.** Resume only after

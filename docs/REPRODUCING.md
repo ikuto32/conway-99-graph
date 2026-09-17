@@ -1,5 +1,32 @@
 # 取得と検証
 
+## 2026-09-17以降のロック済み環境
+
+新しいPythonワークフローはルートの `pyproject.toml` と `uv.lock` を使います。
+過去の `.venv` と実験コマンドを変更せず、別の無視対象ディレクトリへ構築します。
+
+```powershell
+$env:UV_PROJECT_ENVIRONMENT = 'build/research-venv'
+uv sync --locked --python 3.12 --cache-dir .uv-cache-20260917
+uv run --locked --cache-dir .uv-cache-20260917 python -B acceleration/validate_claims.py --hashes available
+uv run --locked --cache-dir .uv-cache-20260917 python -B -m unittest discover -s acceleration -p test_validate_claims.py -v
+```
+
+POSIXでは `export UV_PROJECT_ENVIRONMENT=build/research-venv` を設定します。
+以下の既存pipコマンドと履歴は当時の再現資料として保持しています。
+台帳CIはPUBLIC成果物だけをハッシュ照合し、LOCAL_ONLYや高価な数学的再実行の
+省略を明示します。スキーマ検証やCI成功は数学的証明ではありません。
+
+16候補の新しい独立整数検証は、別の未使用出力先を指定して実行できます。
+
+```powershell
+uv run --locked --cache-dir .uv-cache-20260917 python -B acceleration/audit_20260917_fresh_review.py --run acceleration/results/20260917_fresh_star_shortlist --out build/fresh-star-independent-replay.json
+```
+
+この検証器はLP生成コード・従来の整数検証器・数値ライブラリをimportしません。
+元の全局所領域の完全性は、別実装の列挙監査と保存されたハッシュ付き入力に依存します。
+完全なチェックポイント再開には、後述の大きなローカル成果物も必要です。
+
 ## 最小構成
 
 Python 3.12 と Git を推奨します。提出形式の検証と下記の回帰テストは標準ライブラリだけで動きます。
