@@ -1,0 +1,47 @@
+{
+  "status": "INDEPENDENT_WHOLE_RANKING_MODEL_CONTROLS_PASS",
+  "timestamp": "2026-09-17T09:27:37.701855+00:00",
+  "inputs_sha256": {
+    "acceleration/audit_20260917_ranking_model_controls.py": "4f6f7b632b945ecedf2469efeb8ea33b52d5833c2b7a8631daf5e8799ec116bf",
+    "acceleration/audit_20260917_ranking_model.py": "f910e0a2c0b355a418671416e99ef0f20e44ef8d34d301de2dc714c7aa180759",
+    "acceleration/audit_20260917_whole_fresh_ranking.py": "580e2c4eeba8d50b18c8f207e6985f0ba318914d5d6cd69edc8e439c5569efd2",
+    "acceleration/review_star_pdhg_gpu.py": "555e9595808d2e9045876c895d96845a2baad3d2f0773de65c9f745756ac0786",
+    "acceleration/results/20260916_fresh_star_rank_round3/summary.json": "18b30d743e4d1f4474a594898a0ecab8eafd2bdc0b6772d23309c1d600927cc8",
+    "acceleration/results/20260916_fresh_star_rank_round3/candidates/index_3113.json": "3b0c01ab2543666fcefc510dc013c60804ce1780fd93c4952b0e3a8ed192eac6",
+    "acceleration/results/20260916_fresh_star_rank_round3/domains/index_3113.json": "1c0c7cb4d152c29bc3722a6c4779d3a4ccc49bb0c7b77ae91f2a0226bea1cdca",
+    "acceleration/results/20260916_fresh_star_rank_round3/chunks/chunk_000/input.bin": "eb0c87a9508d51455a36226dea30024ffc85e4d3d7df926301ba19c708483948"
+  },
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260917_ranking_model_controls.py"
+  ],
+  "candidate_index": 3113,
+  "controls": [
+    {
+      "name": "historical_exact_full_serialized_model",
+      "outcome": "PASS",
+      "array_entries": 4452890
+    },
+    {
+      "name": "one_matrix_coefficient",
+      "outcome": "REJECT",
+      "reason": "CSR A/data mismatch"
+    },
+    {
+      "name": "one_rhs",
+      "outcome": "REJECT",
+      "reason": "Model target/offset mismatch"
+    },
+    {
+      "name": "one_offset",
+      "outcome": "REJECT",
+      "reason": "Model target/offset mismatch"
+    },
+    {
+      "name": "zero_domain_mask",
+      "outcome": "REJECT",
+      "reason": "domain mask"
+    }
+  ],
+  "scope": "Independent dense derivative model matches one historical serialized model; three matrix/schema corruptions and malformed domain rejected. No original-domain completeness or new ranking claim."
+}

@@ -1,3 +1,25 @@
+# Latest verified milestone: whole-family shortlist and reusable cuts
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+now records the [third completed milestone](docs/RESEARCH_20260917_THIRD_WAVE.md):
+16 further fixed-configuration exclusions with no original-star improvement;
+16 reusable positive clauses; verified finite applications with no empty domain;
+and an independently derived every-root scaffold normalization. None establishes
+a target graph or general nonexistence proof. No automorphism is assumed.
+
+Latest verified checkpoint: `acceleration/results/20260917_whole_fresh_v2_checkpoint.json`,
+SHA256 `5ad8fd58795a8bf4a37468d8f45b9aad031d41deb22882e53d26703fd200e39d`.
+It preserves incumbent18481 and indexes the completed16-case wave. The separate
+5,000-iteration reranking uses the SAME128 models; see its execution receipt in
+`acceleration/results/20260917_rerank_v3_execution`. Inspect fresh execution state
+before describing a process as running. A partial-coordinate LP pilot remains
+numerical research pending independent model/domain checking; near-zero values
+are not feasibility certificates.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved second milestone
+
 # Latest independently checked continuation, 2026-09-17
 
 Target resolution: **UNKNOWN**. [Root CLAIMS.yaml](CLAIMS.yaml) remains authoritative.
