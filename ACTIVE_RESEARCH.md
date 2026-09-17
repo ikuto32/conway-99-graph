@@ -1,3 +1,25 @@
+# Latest verified milestone: four-coordinate foundations and simpler evidence
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [seventh completed milestone](docs/RESEARCH_20260917_SEVENTH_WAVE.md).
+The two-coordinate exclusion now has independently checked integer evidence
+`204 > 0`, with its scope unchanged. Four-coordinate domains and necessary
+moment models are independently checked: 290,460 original choices, 59,581
+sound matching-test deletions and 230,879 survivors, with no empty domains.
+These foundations alone do not exclude the four-coordinate family.
+
+Latest verified checkpoint: `acceleration/results/20260917_four_coordinate_foundations_checkpoint.json`,
+SHA256 `60fbfb569c8b0ed2b54407f1a7d905d02116ec23ec86b421c719fe9bd6d10c5b`.
+Next is the separately capped four-coordinate filtered LP and independent
+checking of any exact bound; a bounded six-coordinate domain pilot is separate.
+Inspect current execution receipts before making a process-liveness claim.
+
+Review continues in [draft PR2](https://github.com/ikuto32/conway-99-graph/pull/2)
+after PR1 was externally merged at the fifth milestone.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved sixth milestone
+
 # Latest verified milestone: conditional two-coordinate exclusion
 
 Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
