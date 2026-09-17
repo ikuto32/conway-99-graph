@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-09-17T11:11:00.161820+00:00",
+  "status": "INDEPENDENT_GENERIC_GZIP_MANIFEST_RECOVERY_PASS",
+  "source_commit": "d4f4a926ad075afa7309fb17c776e0de2c18bf7a",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_compressed_artifact_manifest.py",
+    "acceleration/results/20260917_two_coordinate_binary_span/compressed_artifacts.json",
+    "--destination",
+    "build/replay_20260917/binary_checkpoint",
+    "--out",
+    "acceleration/results/20260917_artifact_replay/binary_checkpoint_gzip.json"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "zlib_runtime": "1.3.1",
+  "files": 1,
+  "total_recovered_bytes": 28528356,
+  "records": [
+    {
+      "path": "acceleration/results/20260917_two_coordinate_binary_span/checkpoint.json",
+      "compressed_path": "acceleration/results/20260917_two_coordinate_binary_span/checkpoint.json.gz",
+      "compressed_sha256": "b4173022e93b28e5369b60c888f61489bbec428f5738142f2cdd0e0b0fe3e1a0",
+      "recovered_path": "build/replay_20260917/binary_checkpoint/acceleration/results/20260917_two_coordinate_binary_span/checkpoint.json",
+      "recovered_sha256": "da3df4e5bd969db0a1a061a762c6b75b5f16eab021fe31f5e8b8632704dfe2f2",
+      "recovered_size_bytes": 28528356,
+      "outcome": "PASS"
+    }
+  ],
+  "controls": [
+    {
+      "name": "positive_split_stream",
+      "outcome": "PASS"
+    },
+    {
+      "name": "crc",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "truncation",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "size",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "hash",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "trailing",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "second_member",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "path:../escape",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "path:C:/escape",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "path:x:y",
+      "outcome": "REJECT"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260917_two_coordinate_binary_span/compressed_artifacts.json": "48b2b976c918e611ea9a29eb87817569b1fab1b862b14ec6016a50e4102213e5",
+    "acceleration/audit_compressed_artifact_manifest.py": "e908b94d3d70d085607c1ada70bfd9b5e27ce080d11b29635a86019bb3014849",
+    "acceleration/audit_compressed_artifacts.py": "a2967eb2ac3d459e2cd7943579caf3ae780315367416a416ed43aaf94aefe924",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "shared_components": [
+    "Frozen independent streaming zlib decoder and path helper",
+    "Python zlib and hashlib"
+  ],
+  "producer_restore_imported": false,
+  "original_raw_files_consulted": false,
+  "originals_overwritten": false,
+  "limitations": [
+    "Engineering byte-recovery check only",
+    "Local companion bytes checked; networkpublication not tested",
+    "Uses the same frozen decoder as historical independentaudit, so not a new independent decoder"
+  ],
+  "mathematical_claim_promotion": false,
+  "target_resolution": false
+}
