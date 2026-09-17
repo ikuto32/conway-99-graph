@@ -16,6 +16,12 @@
 
 ## 最初に読む資料
 
+2026-09-17 に研究を再開しました。現在の主張台帳は
+[CLAIMS.yaml](CLAIMS.yaml)、最新の完了済み検証は
+[16候補の独立監査](docs/RESEARCH_20260917_FRESH_STAR.md) です。
+16件すべての固定配置を排除しましたが、最良の強化LP値の改善はなく、
+問題全体は未解決です。旧台帳・停止資料は履歴として保持しています。
+
 | 資料 | 内容 |
 | --- | --- |
 | [研究資料の案内](docs/RESEARCH_MAP.md) | ディレクトリ、実験系列、検証資料の読み方 |
@@ -32,7 +38,9 @@
 | [再開時チェックポイント監査](docs/RESUME_20260916_CHECKPOINT.md) | 保存済み E72 と overlap 探索の状態 |
 | [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) | 現在の継続地点と保存された研究履歴 |
 | [既存研究アーカイブ](https://github.com/YesterdaysLemon/conway-99-research/blob/85e705cc6c2a14d123120c93a847e30aaab1789e/README.md) | Wave 205 までの詳細な研究記録 |
-| [証拠・主張の台帳](https://github.com/YesterdaysLemon/conway-99-research/blob/85e705cc6c2a14d123120c93a847e30aaab1789e/CLAIMS.yaml) | 主張の範囲と検証状況 |
+| [現在の主張台帳](CLAIMS.yaml) | 現プロジェクトの主張、厳密な範囲、独立検証、成果物の公開状態 |
+| [台帳のスキーマと移行規則](docs/CLAIMS_SCHEMA.md) | 旧台帳を変更しない移行、CI、検証状態の意味 |
+| [保存された外部台帳](https://github.com/YesterdaysLemon/conway-99-research/blob/85e705cc6c2a14d123120c93a847e30aaab1789e/CLAIMS.yaml) | 固定コミットの歴史資料。現在の再検証ではない |
 
 `ACTIVE_RESEARCH.md` や [STOPPED_BY_USER.md](STOPPED_BY_USER.md) にある「実行中」、PID、停止・再開の記述は保存時点の履歴です。現在のプロセス状態を示すものではありません。文献調査の日付も各記録の時点を示し、現在の世界全体の研究状況についての主張ではありません。
 
