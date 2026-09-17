@@ -1,0 +1,57 @@
+{
+  "status": "INDEPENDENT_SIX_COORDINATE_EXCLUSION_CLAIM_BINDING_PASS",
+  "claim_id": "C-PARTIAL-K-SIX-COORDINATE-EXCLUSION",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "statement": "For every symmetric binary zero-diagonal99-by99 matrix A retaining the fixed189-edge labeled root scaffold and132fixedK edges while respecting all prescribed absences in the pinned six-coordinate manifest, A^2=12I-A+2J fails. Only the360freed support-legal same-sign-coordinate edges at rootgroups0,1,2 and1680disjoint-support edges may vary.",
+  "timestamp": "2026-09-17T12:10:12.999095+00:00",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260917_six_exclusion_binding.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/results/20260917_independent_review/six_gpu_support.json": "0814b6d5e660b876247cf83dc4e37cfaa0e86ec1d1b05b59ab8b6fd63ebbcf80",
+    "acceleration/results/20260917_independent_review/six_matchings/summary.json": "051a57b2fc1b5353a6100b949f86674483cff686c4f797f4f1ad8b037d7f3768",
+    "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/summary.json": "05d4284f04fb5c84491394695c6f56a3e5517302ae95c1885b27592cfed78a7f",
+    "acceleration/results/20260917_independent_review/six_filtered_moments.json": "f27467b03a34fe3ea3adec4e537585e71d5697f4e63562cdd43d7e6822c8f3e7",
+    "acceleration/results/20260917_partial_six_matchings/manifest.json": "7588ed4332c6133ccf7a85b1a89d8da3cd568a90f8cef9cc65953782bc83e9eb",
+    "acceleration/audit_20260917_six_exclusion_binding.py": "af3b0c6d9d8a2130e8db5b7c7ab28226e6966f9fe44ee0ff8641714368e284ea",
+    "acceleration/audit_20260917_partial_matching.py": "051dbc568011cf5c76f41fddf01281d8d8959875ccda88a1491685edd9a6d138",
+    "acceleration/results/20260917_six_moment_pdhg/run01/certificates/10000_last.json": "e4d660b5d3ddb7039f9cdf7fb80e014e1e53e1ce858c6d16cac2b9a3a3509d7f"
+  },
+  "exact_positive_bound": {
+    "numerator": 906048,
+    "denominator": 1048576,
+    "reduced": "14157/16384"
+  },
+  "dependencies": [
+    {
+      "id": "C-PARTIAL-K-SIX-COORDINATE-DOMAINS",
+      "revision": 1,
+      "relation": "coverage"
+    },
+    {
+      "id": "C-PARTIAL-K-SIX-COORDINATE-NEIGHBORHOOD-MATCHING-FILTER",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-PARTIAL-K-SIX-COORDINATE-MATCHING-FILTERED-MOMENT-ENCODING",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "written_review": "Independent complete enumeration covers every local star of every completion in this exact prescribed-zero family. The independently checked necessary neighborhood matching filter rejects166728stars and retains712721, with exact original-ID complements in each of84domains. A hypothetical completion yields a one-hot reciprocal point with zero full-neighborhood moment residual in the necessary filtered model. Arbitrary signed reciprocity weights and clipped moment weights yield the exact support lower bound. Separate raw-neighborhood Pythoninteger checking evaluated every retained star for allsix weight sets, reproduced all84maxima and verified four positive bounds. In particular residualL1>=14157/16384>0 contradicts the completion point. No solver convergence/validity, floating arithmetic certificate, numerical upper bound, or converse equivalence is used.",
+  "verification_kind": "Independent derivation plus independent artifact checking; prior complete-domain/filter/encoding audits explicitly pinned.",
+  "reviewer": "independent_verifier agent; distinct from structural_continuation producer",
+  "artifact_review_outcome": "PASS",
+  "target_resolution": "UNKNOWN",
+  "external_peer_review": false,
+  "limitations": [
+    "Conditional132fixedK/prescribed-zero family exclusion only; not unrestricted nonexistence.",
+    "No matching-configuration cardinality, target-wide coverage denominator, nontrivial automorphism, or universal labeling restriction is assumed.",
+    "The empirical GPU calibration is not a mathematical premise for validity of the independently checked arbitrary integer weights."
+  ]
+}

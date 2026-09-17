@@ -1,0 +1,77 @@
+{
+  "status": "INDEPENDENT_SIX_COORDINATE_GPU_EXPORT_MAPPING_PASS",
+  "timestamp": "2026-09-17T12:00:52.387403+00:00",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260917_six_gpu_export_verifier.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "inputs_sha256": {
+    "acceleration/results/20260917_six_moment_pdhg/export/manifest.json": "da72bd7cdf9f3e3ce4ff5bac63002e84ee356c8a7d929b7857ec2dec6fd23f56",
+    "acceleration/results/20260917_independent_review/six_filtered_moments.json": "f27467b03a34fe3ea3adec4e537585e71d5697f4e63562cdd43d7e6822c8f3e7",
+    "acceleration/results/20260917_independent_review/moment_pdhg_gpu_cpu_parity_v2/summary.json": "c0ae24550c1f33c1d808107f7aaa9bf49d83d968805f2691a26388b777e2aaf2",
+    "acceleration/results/20260917_six_filtered_moments/model.json": "22ff4fbce2f9659877fe115483300bedfb603d60bf96d761a90ffd48a2a0d3c7",
+    "acceleration/results/20260917_six_filtered_moments/integer_augmented_csr.npz": "118707aa109ed5195a38b7a0edda7ea6b3514669e50b9493094d8563097e8b55",
+    "acceleration/export_20260917_six_moment_pdhg.py": "79b36513b97e0f817fb8c6d88ccde8914b477e3d815ef8ec1590ba6990161678",
+    "docs/NEXT_20260917_SIX_MOMENT_PDHG.md": "cacb46919935c04be25527491b4ada05c4179e7f29e0c09e3d73c419df596991",
+    "acceleration/moment_pdhg_gpu.cu": "2840eea3f5abc5e9e669788bb7be460ba879e5b52c93e0d1195cb6cf41fb4319",
+    "acceleration/build/moment_pdhg_gpu.exe": "d9c0f4354f26b7698b1c362883147991684e3c3a71c52c2bed9b041ccca48dfc",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "build/research-local/six_moment_pdhg/input.bin": "e9d2f28a3804ffe5473eb6f86bcb6a3a97d492940c413eaa6de5c028c8e34b1b",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_magic.bin": "b0318c835d56ac3d121a25ea2c5fa722a02738f978a90f33f63dd2e2c4ed9845",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_transpose.bin": "ab97542a6c501bb017c8427f79699b058f23fe00fef607593e5990add8a7ed13",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/domain_out_of_range.bin": "d59d086af4c3ed9a8cbcc358e49ae4c95a92506451f4af7dce58e1b1cd1e0c40",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/trailing_bytes.bin": "ca503b13f774292a6fb343570fd77e039cbc7db0b5894a1a0e16e6b5f161eca4",
+    "acceleration/audit_20260917_six_gpu_export_verifier.py": "029403bd02c8ec2156e7cbf78ae64f7451f9233ca3fa84b6c14922b525df2796",
+    "acceleration/audit_20260917_partial_matching.py": "051dbc568011cf5c76f41fddf01281d8d8959875ccda88a1491685edd9a6d138",
+    "acceleration/audit_20260917_moment_pdhg_gpu_cpu_parity_v2.py": "07104796f181f4be4cfc188c17780c3753c30cdedc5d6ee3f493a0248dff9b32"
+  },
+  "shape": [
+    5526,
+    712721
+  ],
+  "nonzeros": 58661106,
+  "probability_columns": 712721,
+  "soft_rows": 3486,
+  "hard_rows": 2040,
+  "probability_blocks": 84,
+  "all_operator_transpose_offsets_rhs_checked": true,
+  "omitted_simplex_and_slack_identities_checked": true,
+  "checkpoints": [
+    1000,
+    5000,
+    10000
+  ],
+  "binary_path": "build/research-local/six_moment_pdhg/input.bin",
+  "binary_sha256": "e9d2f28a3804ffe5473eb6f86bcb6a3a97d492940c413eaa6de5c028c8e34b1b",
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Run this hash-bound exporter with fresh --out/--binary; restored audited NPZ uses existing chunk_manifest and generic restorer. Compare binary_sha256; JSON manifest timestamps/path may differ.",
+  "controls": [
+    "bad_magic",
+    "bad_transpose",
+    "domain_out_of_range",
+    "trailing_bytes",
+    "A_indices_entry_corruption",
+    "A_values_entry_corruption",
+    "AT_values_entry_corruption",
+    "b_entry_corruption"
+  ],
+  "producer_imported": false,
+  "new_numerical_iteration_replay": false,
+  "GPU_launched": false,
+  "method": "Sequential independent binary layout and memory-mapped arrays; complete exact source row/column extraction and transpose comparison to hash-bound independently reconstructed integer model.",
+  "shared_components": [
+    "Python standard library",
+    "NumPy/SciPy exact sparse operations",
+    "previous independent binary parser for corruption controls",
+    "prior independently audited six moment model and four-case CPU parity"
+  ],
+  "limitations": [
+    "Engineering mapping check only; no new numerical performance, convergence, certificate, or target-level mathematical result.",
+    "Earlier CPU parity applies to its recorded pilot cases; this does not claim CPU parity for six-coordinate iterations."
+  ]
+}
