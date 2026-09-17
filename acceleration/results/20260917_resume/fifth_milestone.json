@@ -1,0 +1,133 @@
+{
+  "as_of": "2026-09-17T10:48:06.520007+00:00",
+  "source_commit": "50eb5ed9da1d5a849aae0677cc129e7d6da76906",
+  "previous_report": "docs/RESEARCH_20260917_FOURTH_WAVE.md",
+  "checkpoint": "acceleration/results/20260917_partial_coordinate_checkpoint.json",
+  "checkpoint_sha256": "8ef4773cd204065495aa3be5f4fa9f2533af5f1874ba578dc1657eb32afb2df2",
+  "target": {
+    "status": "UNKNOWN",
+    "supporting_claims": [],
+    "external_review": "No target-resolution artifact submitted for external review.",
+    "overall_search_coverage": null,
+    "coverage_reason": "Overall search coverage: UNKNOWN; no validated denominator."
+  },
+  "claim_changes": [
+    {
+      "id": "C-PARTIAL-K-NEIGHBORHOOD-MATCHING-FILTER",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Exact frozen 162-fixed-overlap-edge family with same-fibre and other-coordinate prescribed absences, 1740 unknown edges and 54478 original choices. Original center/domain IDs retained.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-PARTIAL-K-ONE-COORDINATE-EXCLUSION",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Only the labeled partial-coordinate family specified by manifest dcc0118cc35993743e94bf7b548e6870526e33f3d4fe4015a48cdacb0c1fc05c: 162 fixed outer K edges, 60 freed matching-coordinate and 1680 disjoint-support unknown edges, and all prescribed absences.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-PARTIAL-K-COORDINATE-MATCHING-UNIVERSE",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "The12vertices/60allowededges and162fixedK edges in the frozen manifest only; no symmetry quotient.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-PARTIAL-K-MATCHING-SUBFAMILY-COVERAGE",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Only the fixed162-edge family and its6040 labeled coordinate assignments, with the same prescribed absences. No union with historical exclusions.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    }
+  ],
+  "counts": {
+    "families_excluded": 1,
+    "original_domain_choices": 54478,
+    "independent_column_checks": 54478,
+    "centers": 84,
+    "moment_equations": 3486,
+    "hard_reciprocity_equations": 1740,
+    "legal_coordinate_assignments": 6040,
+    "original_filter_choices": 54478,
+    "filter_rejections": 13105,
+    "filter_survivors": 41373,
+    "filter_empty_domains": 0
+  },
+  "exact_lower_bound": "9227079/16384",
+  "objective": "PARTIAL_K_FULL_CENTER_STAR_MOMENT_PHASE1_V1",
+  "execution": {
+    "completed600_cap_run": {
+      "timestamp": "2026-09-17T10:30:12.522642+00:00",
+      "status": "CANDIDATE_SAME_MODEL_600S_REPLAY",
+      "model_status": "HighsModelStatus.kOptimal",
+      "value_valid": true,
+      "dual_valid": true,
+      "objective": 563.1764056322008,
+      "objective_null_reason": null,
+      "solve_seconds": 268.68700000000536,
+      "support_bound": {
+        "numerator": 590533056,
+        "denominator": 1048576,
+        "approximate": 563.1762084960938,
+        "strictly_positive": true
+      },
+      "output_sha256": {
+        "exact_support_bound.json": "bbc507e6c6734c056caf6198027541c86e2a8ecb2319788adedc2537369e2008",
+        "highs.log": "5446018c9b2f09d6329d4580d16729cfad14b222528df661ce9b8cda3f9e4e62",
+        "manifest.json": "9f86bae42037b01c239169347c59705ae0fa8b6948603106ddb6c0edcfb62290",
+        "numeric_lp.json": "10f59227ec47a499dfe551585de62835f1df3dce4121db2debcd1acc20ec9b5c"
+      },
+      "independent_bound_check_pending": true,
+      "family_exclusion_verified": false,
+      "target_resolution": false
+    },
+    "other_processes": "UNKNOWN; not inspected by generator"
+  },
+  "input_paths": {
+    "ledger": "acceleration/results/20260917_resume/claims_at_fifth_milestone.yaml",
+    "previous_ledger": "acceleration/results/20260917_resume/claims_at_fourth_milestone.yaml",
+    "validation": "acceleration/results/20260917_resume/coordinate_coverage_ledger_validation_v2.json",
+    "parent": "acceleration/results/20260917_whole_star_rerank_v3_checkpoint.json",
+    "positive": "acceleration/results/20260917_independent_review/moment_positive600.json",
+    "binding": "acceleration/results/20260917_independent_review/moment_positive600_claim_binding.json",
+    "filter": "acceleration/results/20260917_independent_review/partial_matching_filter/summary.json",
+    "universe": "acceleration/results/20260917_independent_review/coordinate_universe.json",
+    "coverage": "acceleration/results/20260917_independent_review/coordinate_coverage.json",
+    "domains": "acceleration/results/20260917_independent_review/partial_matching/summary.json",
+    "model": "acceleration/results/20260917_independent_review/partial_moments.json",
+    "execution": "acceleration/results/20260917_partial_matching_moment_replay600/summary.json"
+  },
+  "input_sha256": {
+    "ledger": "e1198a30590432e0743feb5676ef41d6c7addc79bcc6bfea91e69115b4c3f813",
+    "previous_ledger": "2995692cfd759284cc360431383fa5143d7b5e4d5e7784f0eb4ab49db4802a2e",
+    "validation": "c2a6393526357da7099b1c292d2474ed35bab8d9618dab4fc6135219dcde6abc",
+    "parent": "ce0ebb9f245502724979dcc7e90ac988662609786bc0a9f245774b0b08055442",
+    "positive": "d435c7789bd2f181e3a870b2019ae309cdbf2d9530bc21b2d987d40671444bc8",
+    "binding": "4a46735b46fe9465f836b978359b09f2f822815809543854e0c2725fe71ed21c",
+    "filter": "5559bd5aa51a8e72047a31a4e6050bf337d81860f6c6540d89ca27bb7c9676cf",
+    "universe": "d7284d73e75f3fe49160c1a2f8ba97eb0263424e727661db25ac1cf631ba8c57",
+    "coverage": "e2673661a74c7fec6e8f4cd7c30d7f340f69b7083942b707fcf757b99ccbb8c0",
+    "domains": "ed1d5b464466562cff722e45593095ec89c63bda761cfa7f784994abfc308b17",
+    "model": "1d4d08ecc9e73a00e06d210fa5137e7885e677756dc8f33b016fa3227ddec5e1",
+    "execution": "e4d567d5052176c90d564d3ccd420324e3ad0f4859dd33de2b87c25ed9902233"
+  },
+  "script_sha256": "01b1308d4f9b489c823f18f4031b640d96685566b34f95d42a2b15479132f4bf",
+  "draft_pr": "https://github.com/ikuto32/conway-99-graph/pull/1"
+}

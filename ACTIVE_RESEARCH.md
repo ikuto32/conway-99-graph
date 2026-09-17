@@ -1,3 +1,30 @@
+# Latest verified milestone: conditional one-coordinate exclusion
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [fifth completed milestone](docs/RESEARCH_20260917_FIFTH_WAVE.md).
+A separate raw-neighborhood integer audit proves the exact lower bound
+`9227079/16384 > 0`, excluding the family with162fixed outer edges and the
+recorded prescribed absences. It permits60freed-coordinate and1680disjoint
+unknown edges. This is not general nonexistence; no automorphism is assumed.
+
+Latest verified checkpoint: `acceleration/results/20260917_partial_coordinate_checkpoint.json`,
+SHA256 `8ef4773cd204065495aa3be5f4fa9f2533af5f1874ba578dc1657eb32afb2df2`.
+The previous search checkpoint remains immutable. The6040legal matching
+assignments of this coordinate are all covered, without claiming a union with
+older exclusions or counting them as separately solved LP instances.
+
+Next: the broader two-sign-coordinate family, with156fixed outer edges,
+1800unknown edges and89308complete local stars. Its domains and fullmoment
+encoding have fresh independent audit reports; a transferred certificate is
+nonpositive and a separately bounded solve has its own records. Consult fresh
+process observations and receipts for execution state. The old partial pair-AC
+pilot was prepared but held before launch because the one-coordinate family
+was already excluded by the stronger exact certificate.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved fourth milestone
+
 # Latest verified milestone: reranked shortlist and partial-coordinate moments
 
 Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)

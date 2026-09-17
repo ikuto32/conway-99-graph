@@ -1,0 +1,78 @@
+{
+  "status": "INDEPENDENT_PARTIAL_COORDINATE_MATCHING_UNIVERSE_PASS",
+  "timestamp": "2026-09-17T10:37:19.213557+00:00",
+  "source_commit": "50eb5ed9da1d5a849aae0677cc129e7d6da76906",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260917_coordinate_universe.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "numpy": "2.5.3",
+  "inputs_sha256": {
+    "acceleration/results/20260917_partial_coordinate_matchings/manifest.json": "bb3c8d32a071e5d153e820f2bb11eb588e6f5f0b3a9e59298116116150b7a1b1",
+    "acceleration/results/20260917_partial_coordinate_matchings/matchings.json": "d0a306070044f2885df38d2abab264965e4f067873d8dfc13c8b8d0c41104734",
+    "acceleration/results/20260917_partial_coordinate_matchings/outcomes.json": "39ee4cb24bcbfb255e3acc63730f19b0d72940134449d723c4d409eb883ffb26",
+    "acceleration/results/20260917_partial_coordinate_matchings/summary.json": "4ab8dd1e11e894ba28f8c7ef9dc52f0ced565017911ac1a0fc63f82d4d8de840",
+    "acceleration/results/20260917_partial_matching/manifest.json": "dcc0118cc35993743e94bf7b548e6870526e33f3d4fe4015a48cdacb0c1fc05c",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/audit_20260917_coordinate_universe.py": "b4e3fe67e017e1cdbe72a7ff7ad1def94e80b733ca68a65e9e04ec4b69c84b53",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "claim_id": "C-PARTIAL-K-COORDINATE-MATCHING-UNIVERSE",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "statement": "The frozen one-coordinate allowed matching graph has exactly6040 labeled perfect matchings. The supplied list is complete and duplicate-free; all6040 added to the fixed162-edge partial scaffold satisfy degree<=14 and all pair upper caps common(u,v)<=2-A_uv.",
+  "inclusion_exclusion_terms": [
+    10395,
+    -5670,
+    1575,
+    -300,
+    45,
+    -6,
+    1
+  ],
+  "matching_count": 6040,
+  "accepted_partial_cap_assignments": 6040,
+  "rejected_partial_cap_assignments": 0,
+  "controls": [
+    {
+      "name": "missing_matching",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "duplicated_matching",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "rook9_own_parameters",
+      "outcome": "PASS"
+    },
+    {
+      "name": "asymmetric_corruption",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "loop_corruption",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "extra_edge_corruption",
+      "outcome": "REJECT"
+    }
+  ],
+  "method": "Independent inclusion-exclusion over six disjoint forbidden edges; every listed matching checked legal and unique. Equal exact cardinality proves list coverage. Separate dense NumPy int64 A@A checks each99vertex partial adjacency matrix.",
+  "mathematical_scope": "The12vertices/60allowededges and162fixedK edges in the frozen manifest only; no symmetry quotient.",
+  "count_does_not_describe_graphs_or_target_coverage": true,
+  "producer_imported": false,
+  "shared_components": [
+    "Python standard library",
+    "NumPy integer matrix multiplication",
+    "tqdm"
+  ],
+  "limitations": [
+    "Passing upper caps does not imply a completion or a target graph.",
+    "6040 is a count of labeled coordinate assignments, not graphs; no target-wide fraction is claimed.",
+    "No overlap union with earlier excluded fixed configurations is asserted."
+  ],
+  "elapsed_seconds": 2.3280000000086147
+}

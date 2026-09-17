@@ -1,0 +1,42 @@
+{
+  "status": "INDEPENDENT_ARBITRARY_MOMENT_SUPPORT_BOUND_PASS",
+  "timestamp": "2026-09-17T10:23:38.411509+00:00",
+  "source_commit_observed_after_checks": "2c7e733827ef05c6da445f7787fe676962b9d334",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260917_moment_arbitrary_weights.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260917_partial_matching_moment_arbitrary_weights/certificate.json": "70bcc4f6ab11cb6b5904a9a8b7c2cb5a33bf9d093b66619a755bf1ff76323bd0",
+    "acceleration/results/20260917_partial_matching_moment_arbitrary_weights/manifest.json": "c3e5b6fe78262d8fae843401585bd16d27ea4393e16e1250bf87fd0f2ff58185",
+    "acceleration/results/20260917_partial_matching_moment_arbitrary_weights/summary.json": "4434ea98f7651d0053a33c0b63fff83655e28ae159803b45149cb6bd00346f1d",
+    "acceleration/results/20260917_partial_matching_moments/model.json": "67e554648b6bd786c62dc15fc0da129ee99a62d9837bb02298a4baba3aa503f6",
+    "acceleration/results/20260917_partial_matching_moments/integer_augmented_csr.npz": "16ce675b484ef788f73e10a4769a1891a315dd656fc1857a3c6e5044b9ddaf1b",
+    "acceleration/results/20260917_partial_matching_moments/numeric_lp.json": "be0c6c5c71f9736a3f0044000363ce856ba998924283115d3a78ab8f18a027ee",
+    "acceleration/results/20260917_partial_matching_moments/manifest.json": "cab1b3aafa0e52afd5173703341c06bd6cd695bad276d1f3e383f1e011fc9e84",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/theory_20260917_moment_arbitrary_weights.py": "b9864fe9361e3f215788dcc4f7d29ada0d6cb4a0dfd0597acf4e8a57f3c6244f",
+    "acceleration/results/20260917_independent_review/partial_moments.json": "1d4d08ecc9e73a00e06d210fa5137e7885e677756dc8f33b016fa3227ddec5e1",
+    "acceleration/audit_20260917_moment_arbitrary_weights.py": "83d901e33e3245bbb732f27644f1e39f893d89e265daa32d1b4b19339b97c9d5",
+    "acceleration/audit_20260917_partial_matching.py": "051dbc568011cf5c76f41fddf01281d8d8959875ccda88a1491685edd9a6d138"
+  },
+  "exact_numerator": -3898195488,
+  "exact_denominator": 1048576,
+  "strictly_positive": false,
+  "choices_checked": 54478,
+  "centers_checked": 84,
+  "method": "Python unbounded integers, complete matrix columns; prior independently reconstructed integer model hash-bound",
+  "derivation": "For hard reciprocal simplex z, ||Mz-b||_1 >= y*(b-Mz) = y*b-(M^T*y+R^T*q)*z >= y*b-sum_center max_column, for arbitrary q and |y|<=1. Integer weights divided by denominator.",
+  "producer_imported": false,
+  "shared_components": [
+    "Python standard library",
+    "SciPy sparse NPZ loading",
+    "prior independent model review and artifact helpers"
+  ],
+  "limitations": [
+    "Negative lower bound is weaker than trivial zero; no exclusion or feasibility certificate.",
+    "Weights are arbitrary box-constrained moment weights and unrestricted reciprocity weights; not claimed solver-feasible duals."
+  ]
+}
