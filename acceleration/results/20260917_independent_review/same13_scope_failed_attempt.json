@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_CHECKER_SCHEMA_ASSERTION",
+  "timestamp": "2026-09-17T09:08:18.308077+00:00",
+  "command": ".\\build\\research-venv\\Scripts\\python.exe acceleration\\audit_20260917_same13_scope.py --round acceleration\\results\\20260917_same_star_round --review acceleration\\results\\20260917_independent_review\\same13_raw.json --out acceleration\\results\\20260917_independent_review\\same13_scope.json",
+  "source_path": "acceleration\\results\\20260917_independent_review\\same13_scope_initial_failed.py",
+  "source_sha256": "a4785ba3908b73346a1cc696260a700816cfcf1a4806f880d8690f46df41fe32",
+  "observed_exit_code": 1,
+  "error": "ValueError: edge interval audit status",
+  "diagnosis": "New checker expected all_graph_rows_checked is True; actual prior independent auditor records integer4662. No raw mathematical artifact failed.",
+  "correction": "Require exact integer4662, retaining full graph row coverage requirement."
+}

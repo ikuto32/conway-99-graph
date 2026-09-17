@@ -1,0 +1,109 @@
+{
+  "status": "WHOLE_STAR_RERANK_V3_CHECKPOINT_REVIEW_GATE_CONTROLS_PASS",
+  "timestamp": "2026-09-17T10:07:58.215782+00:00",
+  "inputs_sha256": {
+    "acceleration/qa_whole_star_rerank_v3_checkpoint_review_gate.py": "9415690524007eeae1921d58a9aefc1c2f1d9f0eb7a5ee5ace33cc741a722945",
+    "acceleration/build_whole_star_rerank_v3_checkpoint.py": "d80e7271e4e461683e5e2436054e6a0948abb46c4c8a73452e3b4607e4d1679c"
+  },
+  "positive_controls": 1,
+  "negative_controls": 18,
+  "controls": [
+    {
+      "name": "scope_status",
+      "outcome": "REJECT",
+      "reason": "Memory status association"
+    },
+    {
+      "name": "raw_status",
+      "outcome": "REJECT",
+      "reason": "Memory status association"
+    },
+    {
+      "name": "unfrozen_checker",
+      "outcome": "REJECT",
+      "reason": "Freeze independent scope checker first"
+    },
+    {
+      "name": "scope_missing_summary_binding",
+      "outcome": "REJECT",
+      "reason": "Memory binding absent"
+    },
+    {
+      "name": "scope_missing_raw_binding",
+      "outcome": "REJECT",
+      "reason": "Memory binding absent"
+    },
+    {
+      "name": "scope_missing_checker_binding",
+      "outcome": "REJECT",
+      "reason": "Memory binding absent"
+    },
+    {
+      "name": "raw_missing_summary_binding",
+      "outcome": "REJECT",
+      "reason": "Memory binding absent"
+    },
+    {
+      "name": "wrong_evaluation_path",
+      "outcome": "REJECT",
+      "reason": "Independent review association differs"
+    },
+    {
+      "name": "wrong_evaluation_hash",
+      "outcome": "REJECT",
+      "reason": "Independent review association differs"
+    },
+    {
+      "name": "wrong_raw_path",
+      "outcome": "REJECT",
+      "reason": "Independent review association differs"
+    },
+    {
+      "name": "scope_records_changed",
+      "outcome": "REJECT",
+      "reason": "Independent review association differs"
+    },
+    {
+      "name": "different_selected_order",
+      "outcome": "REJECT",
+      "reason": "Independent scope review covers another selection"
+    },
+    {
+      "name": "producer_imported",
+      "outcome": "REJECT",
+      "reason": "Independent exact inventory/scope differs"
+    },
+    {
+      "name": "filtered_domains",
+      "outcome": "REJECT",
+      "reason": "Independent exact inventory/scope differs"
+    },
+    {
+      "name": "changed_exact_lower",
+      "outcome": "REJECT",
+      "reason": "Independent exact reviewed interval differs"
+    },
+    {
+      "name": "unaudited_producer",
+      "outcome": "REJECT",
+      "reason": "Independent exact reviewed interval differs"
+    },
+    {
+      "name": "wrong_report_best",
+      "outcome": "REJECT",
+      "reason": "Independently reviewed best differs"
+    },
+    {
+      "name": "wrong_summary_best",
+      "outcome": "REJECT",
+      "reason": "Independently reviewed best differs"
+    }
+  ],
+  "semantic_controls_bypass_hash_guards": true,
+  "scientific_fixtures_written": false,
+  "independent_verification": false,
+  "scope": "Producer engineering gate controls only; actual file binding tested by real checkpoint preflight after review",
+  "scientific_reruns": 0,
+  "subprocess_invocations": 0,
+  "checkpoint_created": false
+}

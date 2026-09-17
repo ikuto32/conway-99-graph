@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "WHOLE_STAR_RERANK_V3_EVALUATOR_ACTUAL_PREFLIGHT_RECEIPT",
+  "created_at": "2026-09-17T10:03:47.394250+00:00",
+  "source_commit": "938b32242532723a094b0fcf8729907d423a9951",
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/evaluate_whole_star_rerank_v3.py --ranking acceleration/results/20260917_whole_star_rerank_v3/ranking/summary.json --ranking-audit acceleration/results/20260917_independent_review/rerank_v3_results.json --ranking-auditor acceleration/audit_20260917_rerank_v3_results.py --ranking-auditor-sha256 e4d70026be4cf1407bb01be39fafca75a13e83fb91f3e32113b3ffada05e40ed --baseline-star-audit acceleration/results/20260916_star_guided_round2/recovered_star_shortlist/index_18481/audit.json --out acceleration/results/20260917_whole_star_rerank_v3/shortlist --seconds 30 --audit-seconds 60 --validate-only",
+  "environment": {
+    "UV_PROJECT_ENVIRONMENT": "build/research-venv"
+  },
+  "python_version": "3.12.10 (main, May 30 2025, 05:39:07) [MSC v.1943 64 bit (AMD64)]",
+  "uv_version": "uv 0.11.25 (1fc7de7c4 2026-06-26 x86_64-pc-windows-msvc)",
+  "return_code": 0,
+  "outcome": {
+    "status": "WHOLE_STAR_RERANK_SHORTLIST_V3_READ_ONLY_PREFLIGHT_PASS",
+    "eligible": 112,
+    "selected": 16,
+    "selected_indices": [
+      66083,
+      26550,
+      26032,
+      26520,
+      7820,
+      1403,
+      13933,
+      66377,
+      22772,
+      80772,
+      80275,
+      80477,
+      79845,
+      17877,
+      65244,
+      74337
+    ],
+    "original_complete_domains_used": true,
+    "pair_pruned_domains_used": false,
+    "reranked_existing_candidates": 128,
+    "new_ranked_candidates": 0,
+    "already_LP_tested_excluded": 16,
+    "output_created": false,
+    "processes_launched": 0
+  },
+  "inputs_sha256": {
+    "acceleration/evaluate_whole_star_rerank_v3.py": "6f9d2b3e1eb25dc1dd41640993bc9523ee06722ab45ba730df4affb6c367582f",
+    "acceleration/qa_evaluate_whole_star_rerank_v3.py": "4b6e129b5408c46d69a126eb2d4266c956a21af33d80f2ce11f344754a7e55e6",
+    "acceleration/results/20260917_whole_star_rerank_v3/evaluator_controls.json": "d43cfe638137e686de18d7f9111d9e128069dff5ab55b209c52ea89530552a9f",
+    "acceleration/results/20260917_whole_star_rerank_v3/evaluator_preflight.log": "8fd70afad78da25f39f63976983e9fc853bc19a273747012b02755938d7b4da0",
+    "docs/NEXT_20260917_WHOLE_STAR_RERANK_V3_SHORTLIST.md": "fba728dcb464bb093e6a750b5113c23a85d2a528fcce2f56e070c0494fe69e68",
+    "acceleration/results/20260917_independent_review/rerank_v3_results.json": "be17eb32de607753ca3b7f5972c80a38f58717a235119a78a03e12ccb10a56ed",
+    "acceleration/audit_20260917_rerank_v3_results.py": "e4d70026be4cf1407bb01be39fafca75a13e83fb91f3e32113b3ffada05e40ed",
+    "acceleration/results/20260917_whole_star_rerank_v3/ranking/summary.json": "7b148cbd5057efeffad245c5d2d93fe65e0382f1ee99421ebcae70b3e2f4476d",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "producer_engineering_check": true,
+  "independent_verification": false,
+  "LP_executions": 0,
+  "scope": "Read-only artifact binding, honest reused model scope, whole-family metadata, prior16 exclusions and frozen eligible112 union16 selection",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Workspace paths relative to source repository; publisher must include selected evidence before asserting public replay"
+}

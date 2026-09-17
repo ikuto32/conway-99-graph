@@ -1,0 +1,64 @@
+{
+  "status": "WHOLE_STAR_RERANK_V3_PREPARATION_COMPLETED_NO_GPU",
+  "created_at": "2026-09-17T09:55:31.676725+00:00",
+  "source_commit": "938b32242532723a094b0fcf8729907d423a9951",
+  "current_commit": "938b32242532723a094b0fcf8729907d423a9951",
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10 (main, May 30 2025, 05:39:07) [MSC v.1943 64 bit (AMD64)]",
+  "uv_version": "uv 0.11.25 (1fc7de7c4 2026-06-26 x86_64-pc-windows-msvc)",
+  "environment": {
+    "UV_PROJECT_ENVIRONMENT": "build/research-venv"
+  },
+  "commands": [
+    {
+      "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/qa_refine_whole_star_rank_v3.py --out acceleration/results/20260917_whole_star_rerank_v3_controls_v2",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/refine_whole_star_rank_v3.py --prepare --prepared acceleration/results/20260917_whole_star_rerank_v3/prepared --calibration-review acceleration/results/20260917_independent_review/whole16_scope.json",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/refine_whole_star_rank_v3.py --validate-only --prepared acceleration/results/20260917_whole_star_rerank_v3/prepared --report acceleration/results/20260917_whole_star_rerank_v3/preflight.json",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/qa_refine_whole_star_rank_v3_calibrated.py --out acceleration/results/20260917_whole_star_rerank_v3/calibration_controls.json",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/refine_whole_star_rank_v3_calibrated.py --validate-only --prepared acceleration/results/20260917_whole_star_rerank_v3/prepared --report acceleration/results/20260917_whole_star_rerank_v3/calibrated_preflight.json",
+      "exit_code": 0
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/refine_whole_star_rank_v3.py": "1b103f25edb3f73e2c7b35af474ce9f674ed9dcb3401b8d043dbfec1250e4592",
+    "acceleration/refine_whole_star_rank_v3_calibrated.py": "14794ed43c4f97b4936f0269c5ba94b0ccf8f31bd748486ebb748e45e9b79380",
+    "acceleration/qa_refine_whole_star_rank_v3.py": "a0d5f6623ef670918b33638a097886dd799487eec36e50d2bc365476d1bc7225",
+    "acceleration/qa_refine_whole_star_rank_v3_calibrated.py": "ac9a3a6cd1a91fc274b187f600f7cf78b6da57a2967a631b3fd07405fa30b01f",
+    "docs/NEXT_20260917_WHOLE_STAR_RERANK_V3.md": "9cda9ee65fdd0261edf0a48c9d43fc767fafa236dc216b03a1345c341d516e65",
+    "docs/NEXT_20260917_WHOLE_STAR_RERANK_V3_CALIBRATION.md": "b67a89d3d92d3cd2b3f7e9cb0a89718aff6bd9f08af97f22ad1f94a0d12083fc",
+    "acceleration/results/20260917_whole_star_rerank_v3/prepared/manifest.json": "ed6e92486e2b646a58e98eee65807a409e1e08954a82976c4ee703ff33b06390",
+    "acceleration/results/20260917_whole_star_rerank_v3/preflight.json": "1e66bba09d13795e1bea0ce676d977116140150e2b761ba427d2123e40b2bcec",
+    "acceleration/results/20260917_whole_star_rerank_v3/calibrated_preflight.json": "5877a7f9316da370dc55683717deb8fd8c3602f6d8f0330eae8598a473585c6b",
+    "acceleration/results/20260917_whole_star_rerank_v3/calibration_controls.json": "d47cd2632728fdce7e1a4fc7edc955e2451d636211034810ced70be8adb10754",
+    "acceleration/results/20260917_whole_star_rerank_v3/preparation_failure_record.json": "f69f1861b3135a15abe0251d3fbec4880177981049d8894b11beeea5ccf40329",
+    "acceleration/results/20260917_whole_star_rerank_v3/producer_before_directory_fix.py": "98727f6b40cbfbf77405deb4e173ba9e9936d079daed7329d5ce88e32a40cb61",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/report.json": "01683dfd91bb9ff13488f003fbd9fe0fbaa472e059a8e04dbc4e47c0928e7f4a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "completed_copies": 4,
+  "copied_payload_bytes": 3212989508,
+  "reranking_population": 128,
+  "new_candidates": 0,
+  "LP_calibration_cases": 16,
+  "next_LP_eligible_candidates": 112,
+  "GPU_processes": 0,
+  "LP_runs": 0,
+  "domain_enumeration_processes": 0,
+  "initial_engineering_failure_preserved": true,
+  "mathematical_claim_changed": false,
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Paths relative to shared repository; publish copies or reproducible exact header patch recipe plus original payloads before claiming public replay"
+}

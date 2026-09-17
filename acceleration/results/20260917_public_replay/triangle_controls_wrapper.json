@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-09-17T09:14:29.453806+00:00",
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/replay_published_checker.py",
+    "--root",
+    ".",
+    "--original-root",
+    "C:/Users/ikuto/projects/conway-99-graph",
+    "--checker",
+    "acceleration/audit_20260917_triangle_matching.py",
+    "--relocate",
+    "--controls-only",
+    "--report",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260917_public_replay/triangle_controls_wrapper.json",
+    "--checker-out",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260917_public_replay/triangle_controls_unused.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\public-replay-20260917",
+  "isolated_root": "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\public-replay-20260917",
+  "original_root": "C:/Users/ikuto/projects/conway-99-graph",
+  "explicit_relocation": true,
+  "source_checker_sha256": "4f5e781ba329ad38d90e982a50622346f5d3504cac03fd08f8020260bfd5a3e7",
+  "wrapper_sha256": "950253fac49aefe114479f85ebb92f625f425596bf4dcd9ffb45d5d8795dc105",
+  "uv_lock_sha256": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+  "python": "3.12.10",
+  "path_mapping_controls": [
+    {
+      "name": "original_prefix",
+      "expected": "ACCEPT",
+      "outcome": "PASS"
+    },
+    {
+      "name": "isolated_absolute",
+      "expected": "ACCEPT",
+      "outcome": "PASS"
+    },
+    {
+      "name": "relative",
+      "expected": "ACCEPT",
+      "outcome": "PASS"
+    },
+    {
+      "name": "traversal",
+      "expected": "REJECT",
+      "outcome": "PASS"
+    },
+    {
+      "name": "other_drive_root",
+      "expected": "REJECT",
+      "outcome": "PASS"
+    },
+    {
+      "name": "prefix_collision",
+      "expected": "REJECT",
+      "outcome": "PASS"
+    }
+  ],
+  "limitations": [
+    "This is repeated execution of an existing independent checker, not a new mathematical derivation.",
+    "The explicit wrapper changes only path resolution; raw artifacts and frozen checking functions remain byte-identical.",
+    "Standard library and packages under the interpreter installation remain trusted execution dependencies."
+  ],
+  "outcome": "PASS",
+  "error": null,
+  "mapped_paths": {},
+  "rejected_outside_paths": [],
+  "opened_isolated_inputs_sha256": {
+    "acceleration/audit_20260917_triangle_matching.py": "4f5e781ba329ad38d90e982a50622346f5d3504cac03fd08f8020260bfd5a3e7"
+  },
+  "checker_result_status": null,
+  "checker_case_count": null,
+  "control_results": [
+    {
+      "name": "K4",
+      "expected": 3,
+      "observed": 3,
+      "edge_subsets_checked": 15
+    },
+    {
+      "name": "K6",
+      "expected": 15,
+      "observed": 15,
+      "edge_subsets_checked": 455
+    },
+    {
+      "name": "seven_prescribed_pairs",
+      "expected": 1,
+      "observed": 1,
+      "edge_subsets_checked": 1
+    },
+    {
+      "name": "deleted_prescribed_pair",
+      "expected": 0,
+      "observed": 0,
+      "edge_subsets_checked": 0
+    },
+    {
+      "name": "empty_perfect_matching",
+      "expected": 1,
+      "observed": 1,
+      "edge_subsets_checked": 1
+    },
+    {
+      "name": "windmill_addition_and_corrupt_second_edge",
+      "observed": "PASS"
+    }
+  ],
+  "checker_output_sha256": null,
+  "elapsed_seconds": 0.030999999988125637,
+  "target_resolution": false
+}
