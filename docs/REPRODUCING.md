@@ -1,5 +1,43 @@
 # 取得と検証
 
+## Exact one-coordinate certificate: isolated public replay
+
+The conditional family certificate published at commit
+`d4f4a926ad075afa7309fb17c776e0de2c18bf7a` was replayed from isolated Git files.
+The exact integer result is `590533056/1048576 > 0`. This is repeated execution
+of the independent checker, not a new mathematical review. It excludes only
+the recorded162-fixed-edge family.
+
+From the research branch containing the replay wrapper, create a fresh detached
+worktree at the proof commit and choose new output filenames:
+
+```powershell
+git worktree add --detach build/moment-proof-replay d4f4a926ad075afa7309fb17c776e0de2c18bf7a
+$env:UV_PROJECT_ENVIRONMENT = 'build/research-venv'
+uv run --locked --cache-dir .uv-cache-20260917 python acceleration/replay_positive_moment_checker_v2.py --root build/moment-proof-replay --commit d4f4a926ad075afa7309fb17c776e0de2c18bf7a --out build/moment-proof-check.json --receipt build/moment-proof-receipt.json
+```
+
+The wrapper checks the isolated Git top-level and commit, verifies every frozen
+runtime input against its committed bytes, and redirects only the checker's
+hard-coded report output. Original proof artifacts are not overwritten. It
+permits trusted interpreter packages but rejects other data fallback. All115
+runtime/seed files were checked and used in the recorded successful replay;
+no large LOCAL_ONLY ranking inputs are required for this exact certificate.
+The full-domain and encoding reviews remain explicit proof dependencies; the
+replay checks their recorded input hashes rather than rerunning those entire
+independent derivations.
+
+Recorded evidence: `acceleration/results/20260917_moment_public_replay/`.
+The first partial checkout omitted `.gitattributes` and was rejected for nine
+newline-only byte differences before arithmetic ran. A later wrapper attempt
+rejected Windows' exact-string representation of the Git provenance command;
+that failure and old wrapper were retained. The corrected wrapper accepts only
+that exact command in list or Windows string form, with corruption controls.
+The successful receipt is `replay_receipt_v2.json`; these engineering failures
+are not refutations of the mathematical certificate. For selective checkouts,
+checkout `.gitattributes` first and disable automatic newline conversion.
+
+
 ## 2026-09-17以降のロック済み環境
 
 新しいPythonワークフローはルートの `pyproject.toml` と `uv.lock` を使います。

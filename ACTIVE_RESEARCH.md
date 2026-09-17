@@ -1,3 +1,28 @@
+# Latest verified milestone: conditional two-coordinate exclusion
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [sixth completed milestone](docs/RESEARCH_20260917_SIXTH_WAVE.md).
+A separate raw-neighborhood integer audit proves `469399553/1048576 > 0`,
+excluding the family with 156 fixed outer edges and the recorded prescribed
+absences, with 120 coordinate edges and 1680 disjoint-support edges unknown.
+All 89,308 local choices and the full moment encoding were independently checked.
+This is a conditional exclusion; no automorphism is assumed.
+
+Latest verified checkpoint: `acceleration/results/20260917_two_coordinate_checkpoint.json`,
+SHA256 `89e39b77c2457058e0e3ed6c83de7cbc80fc2ab8fd422ca4b0cea7e90e5e662a`.
+The separate binary affine test has an exact membership witness; it supplies
+neither a graph nor a feasible nonnegative star mixture. The one-coordinate
+certificate also passed replay from the public Git commit using guarded inputs.
+
+Next: four freed same-sign coordinates at rootgroups 0 and 1, retaining 144
+fixed outer edges and 1920 unknown edges. Independent domain, matching-filter
+and filtered-model audits precede the separately recorded 2400-second solve.
+Inspect fresh process observations and receipts for execution state.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved fifth milestone
+
 # Latest verified milestone: conditional one-coordinate exclusion
 
 Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
