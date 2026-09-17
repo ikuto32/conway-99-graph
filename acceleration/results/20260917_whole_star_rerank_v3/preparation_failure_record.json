@@ -1,0 +1,19 @@
+{
+  "status": "PREPARATION_ENGINEERING_FAILURE_PRESERVED",
+  "recorded_at": "2026-09-17T09:50:04.293354+00:00",
+  "attempt_timestamp": null,
+  "attempt_timestamp_null_reason": "Original shell result did not include an absolute timestamp",
+  "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/refine_whole_star_rank_v3.py --prepare --prepared acceleration/results/20260917_whole_star_rerank_v3/prepared --calibration-review acceleration/results/20260917_independent_review/whole16_scope.json",
+  "return_code": 1,
+  "exception_type": "FileNotFoundError",
+  "failed_operation": "out.mkdir() before binary copies; prepared directory parent absent",
+  "raw_stderr_path": null,
+  "raw_stderr_path_null_reason": "Tool output observed; not separately redirected to an artifact",
+  "old_source_snapshot": "acceleration/results/20260917_whole_star_rerank_v3/producer_before_directory_fix.py",
+  "old_source_sha256": "98727f6b40cbfbf77405deb4e173ba9e9936d079daed7329d5ce88e32a40cb61",
+  "original_controls_path": "acceleration/results/20260917_whole_star_rerank_v3_controls/report.json",
+  "correction": "Create parent directories with mkdir(parents=True); scientific protocol unchanged; re-run engineering controls against new source",
+  "GPU_processes": 0,
+  "LP_runs": 0,
+  "old_scientific_artifacts_modified": false
+}

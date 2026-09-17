@@ -1,0 +1,293 @@
+{
+  "status": "PRE_GPU_SELECTION_PROTOCOL_REVISION",
+  "created_at": "2026-09-17T09:21:15.770070+00:00",
+  "reason": "Lead researcher rejected attempt1 lexicographic64strata diversity because it covers only7of14coordinates; replace with outer14-coordinate round-robin and inner cycle-shape rotation before any new GPU scores.",
+  "old_request_path": "acceleration/results/20260917_whole_fresh_v2/request.json",
+  "old_request_sha256": "91fac98fd7fab7b1e040421de4c77e0218afa09d9d104cd9e19d98d8905c8ae5",
+  "old_request_disposition": "SUPERSEDED_PREPARATION; evidence and source preserved; not approved for GPU execution",
+  "new_request_path": "acceleration/results/20260917_whole_fresh_v2_balanced/request.json",
+  "new_request_sha256": "a862f335257ab6bc3c674f9804cfb1eebc0999fa8151dd7fa3005404936b897e",
+  "new_request_disposition": "ACTIVE_PREREGISTERED_CANDIDATE_PENDING_INDEPENDENT_MAPPING_REVIEW",
+  "old_policy": {
+    "name": "64_BEST_REFINED_UPPER_THEN64_ROUND_ROBIN_WHOLE_COORDINATE_CYCLE_SHAPE_V2",
+    "global_count": 64,
+    "stratified_count": 64,
+    "eligible_population": "Distinct whole-family rows with saved2000-iteration refined old-edge upper scores, excluding recorded previous/current LP graph identities",
+    "score_order": "Ascending(refined_upper,zero_based_whole_family_index)",
+    "stratum": "(root_group,matching_class,sorted changed-edge counts of all alternating cycles)",
+    "diverse_order": "After removing global64, sort buckets lexicographically by stratum; each pass takes one lowest-score unused member per nonempty bucket until64 picked",
+    "sampling_is_not_exhaustive": true
+  },
+  "new_policy": {
+    "name": "64_BEST_REFINED_UPPER_THEN64_BALANCED_COORDINATES_ROTATING_CYCLE_SHAPES_V2B",
+    "global_count": 64,
+    "stratified_count": 64,
+    "eligible_population": "Distinct whole-family rows with saved2000-iteration refined old-edge upper scores, excluding recorded previous/current LP graph identities",
+    "score_order": "Ascending(refined_upper,zero_based_whole_family_index)",
+    "stratum": "Outer14 coordinates(root_group,matching_class); inner sorted changed-edge counts of all alternating cycles",
+    "diverse_order": "After removing global64, round-robin all14 sorted(root_group,matching_class) coordinates; each coordinate independently rotates sorted nonempty cycle-shape buckets, taking lowest(score,index) in that bucket; stop at64",
+    "sampling_is_not_exhaustive": true
+  },
+  "global64_unchanged": true,
+  "old_diversity_coordinate_counts": [
+    {
+      "root_group": 0,
+      "matching_class": "same_0",
+      "count": 10
+    },
+    {
+      "root_group": 0,
+      "matching_class": "same_1",
+      "count": 10
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_0",
+      "count": 10
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_1",
+      "count": 9
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_0",
+      "count": 10
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_1",
+      "count": 10
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_0",
+      "count": 5
+    }
+  ],
+  "new_diversity_coordinate_counts": [
+    {
+      "root_group": 0,
+      "matching_class": "same_0",
+      "count": 5
+    },
+    {
+      "root_group": 0,
+      "matching_class": "same_1",
+      "count": 5
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_0",
+      "count": 5
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_1",
+      "count": 5
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_0",
+      "count": 5
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_1",
+      "count": 5
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_0",
+      "count": 5
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_1",
+      "count": 5
+    },
+    {
+      "root_group": 4,
+      "matching_class": "same_0",
+      "count": 4
+    },
+    {
+      "root_group": 4,
+      "matching_class": "same_1",
+      "count": 4
+    },
+    {
+      "root_group": 5,
+      "matching_class": "same_0",
+      "count": 4
+    },
+    {
+      "root_group": 5,
+      "matching_class": "same_1",
+      "count": 4
+    },
+    {
+      "root_group": 6,
+      "matching_class": "same_0",
+      "count": 4
+    },
+    {
+      "root_group": 6,
+      "matching_class": "same_1",
+      "count": 4
+    }
+  ],
+  "old_full_coordinate_counts": [
+    {
+      "root_group": 0,
+      "matching_class": "same_0",
+      "count": 12
+    },
+    {
+      "root_group": 0,
+      "matching_class": "same_1",
+      "count": 11
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_0",
+      "count": 10
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_1",
+      "count": 17
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_0",
+      "count": 16
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_1",
+      "count": 10
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_0",
+      "count": 6
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_1",
+      "count": 2
+    },
+    {
+      "root_group": 4,
+      "matching_class": "same_0",
+      "count": 22
+    },
+    {
+      "root_group": 4,
+      "matching_class": "same_1",
+      "count": 1
+    },
+    {
+      "root_group": 5,
+      "matching_class": "same_1",
+      "count": 7
+    },
+    {
+      "root_group": 6,
+      "matching_class": "same_0",
+      "count": 7
+    },
+    {
+      "root_group": 6,
+      "matching_class": "same_1",
+      "count": 7
+    }
+  ],
+  "new_full_coordinate_counts": [
+    {
+      "root_group": 0,
+      "matching_class": "same_0",
+      "count": 7
+    },
+    {
+      "root_group": 0,
+      "matching_class": "same_1",
+      "count": 6
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_0",
+      "count": 5
+    },
+    {
+      "root_group": 1,
+      "matching_class": "same_1",
+      "count": 13
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_0",
+      "count": 11
+    },
+    {
+      "root_group": 2,
+      "matching_class": "same_1",
+      "count": 5
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_0",
+      "count": 6
+    },
+    {
+      "root_group": 3,
+      "matching_class": "same_1",
+      "count": 7
+    },
+    {
+      "root_group": 4,
+      "matching_class": "same_0",
+      "count": 26
+    },
+    {
+      "root_group": 4,
+      "matching_class": "same_1",
+      "count": 5
+    },
+    {
+      "root_group": 5,
+      "matching_class": "same_0",
+      "count": 4
+    },
+    {
+      "root_group": 5,
+      "matching_class": "same_1",
+      "count": 11
+    },
+    {
+      "root_group": 6,
+      "matching_class": "same_0",
+      "count": 11
+    },
+    {
+      "root_group": 6,
+      "matching_class": "same_1",
+      "count": 11
+    }
+  ],
+  "request_overlap_candidate_count": 99,
+  "native_processes": 0,
+  "GPU_processes": 0,
+  "LP_runs": 0,
+  "old_ranking_directory_exists": false,
+  "new_ranking_directory_exists": false,
+  "thresholds_changed": false,
+  "iterations_unchanged": 500,
+  "source_sha256": {
+    "acceleration/rank_fresh_whole_v2.py": "788e7db3fda0f83241417f524df0783bbccb545ff3fc8c91f9365e9f54f812dd",
+    "acceleration/rank_fresh_whole_v2_balanced.py": "25b53c28c6983fa5f91a0618fe9b891f1e9d8abee990cf99d740c1c1df143797"
+  },
+  "scope": "Selection protocol correction only; neither preparation is a mathematical graph result or search coverage measure."
+}

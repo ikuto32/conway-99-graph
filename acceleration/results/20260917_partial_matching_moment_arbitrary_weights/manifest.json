@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-17T10:18:16.783099+00:00",
+  "source_commit": "2c7e733827ef05c6da445f7787fe676962b9d334",
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260917_moment_arbitrary_weights.py",
+    "--out",
+    "acceleration/results/20260917_partial_matching_moment_arbitrary_weights"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260917_partial_matching_moments/model.json": "67e554648b6bd786c62dc15fc0da129ee99a62d9837bb02298a4baba3aa503f6",
+    "acceleration/results/20260917_partial_matching_moments/integer_augmented_csr.npz": "16ce675b484ef788f73e10a4769a1891a315dd656fc1857a3c6e5044b9ddaf1b",
+    "acceleration/results/20260917_partial_matching_moments/numeric_lp.json": "be0c6c5c71f9736a3f0044000363ce856ba998924283115d3a78ab8f18a027ee",
+    "acceleration/results/20260917_partial_matching_moments/manifest.json": "cab1b3aafa0e52afd5173703341c06bd6cd695bad276d1f3e383f1e011fc9e84",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/theory_20260917_moment_arbitrary_weights.py": "b9864fe9361e3f215788dcc4f7d29ada0d6cb4a0dfd0597acf4e8a57f3c6244f"
+  },
+  "selection": "Preserved raw 60-second moment-run row_dual entries, irrespective of false dual_valid flag; no feasibility assumption",
+  "procedure": "Round reciprocity weights to nearest denominator2^20 integer; clip moment weights to[-1,1] then round; support-bound all54478 choices exactly",
+  "formula": "(y*b - sum_t max_S(M^T*y+R^T*q)_tS)/2^20 with integer q,y and abs(y)<=2^20",
+  "threshold": "Strictly positive exact numerator is candidate conditional exclusion pending independent checking",
+  "scope": "Frozen one-coordinate partial-K family;162K edges and prescribed zeros, no filtering",
+  "solver_rerun": false
+}

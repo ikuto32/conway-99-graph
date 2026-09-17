@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-09-17T09:16:55.004164+00:00",
+  "published_source_commit": "3daebfb05d39aa31afea6fdbb6b80d6b108f1262",
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/finalize_public_replay.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "status": "FROZEN_FRESH16_REPLAY_PASS_WITH_EXPLICIT_RELOCATION",
+  "direct_unrelocated_execution": "FAIL_PORTABILITY_ABSOLUTE_ORIGINAL_PATH",
+  "path_mapping_controls": 6,
+  "mapped_original_paths": 4,
+  "denied_local_fallback_reads_in_successful_replay": 0,
+  "extracted_runtime_inventory": {
+    "fresh16": {
+      "population": "Unique paths in saved checker runtime hash inventory",
+      "required_paths": 129,
+      "missing": [],
+      "mismatched": [],
+      "closure_available": true
+    },
+    "baseline": {
+      "population": "Unique paths in saved checker runtime hash inventory",
+      "required_paths": 17,
+      "missing": [],
+      "mismatched": [],
+      "closure_available": true
+    },
+    "triangle": {
+      "population": "Unique paths in saved checker runtime hash inventory",
+      "required_paths": 99,
+      "missing": [],
+      "mismatched": [],
+      "closure_available": true
+    }
+  },
+  "unique_extracted_runtime_paths": 230,
+  "extracted_runtime_bytes": 67052947,
+  "fresh16": {
+    "selected": 16,
+    "attempted": 16,
+    "completed": 16,
+    "exact_results_identical_to_published_reference": true,
+    "historical_positive_controls": 1,
+    "corrupted_controls_rejected": 6,
+    "actually_opened_isolated_input_files": 129,
+    "elapsed_seconds": 57.42200000002049
+  },
+  "triangle": {
+    "runtime_inventory_missing": [],
+    "runtime_inventory_hash_mismatches": [],
+    "calibration_fixtures_passed": 6,
+    "full_enumeration_rerun": false,
+    "full_enumeration_skip_reason": "Bounded task prioritizes fresh16; saved 99-path runtime inventory verified, 73-million-subset audit not rerun"
+  },
+  "failed_attempts": [
+    {
+      "attempt": 1,
+      "protocol": "protocol.json",
+      "exit_code": 1,
+      "error": "ValueError: Nonrelative dependency path: C:/Users/ikuto/projects/conway-99-graph/acceleration/audit_goal_theory_pairs.py",
+      "disposition": "Preserved protocol and partial Git-only extraction; extraction lookup later maps exact original-root prefix without changing raw bytes",
+      "prior_helper_source_availability": "MISSING",
+      "prior_helper_source_reason": "Initial uncommitted helper revision was revised after failure; its exact hash survives in protocol, but no source snapshot was saved"
+    },
+    {
+      "attempt": 2,
+      "protocol": "retry1/protocol.json",
+      "exit_code": 1,
+      "error": "ValueError: Byte budget reached; extraction incomplete",
+      "declared_byte_limit": 300000000,
+      "observed_partial_files": 1776,
+      "observed_partial_bytes": 299843010,
+      "disposition": "Preserved partial immutable extraction; retry2 scoped to actual saved checker runtime inventories instead of recursively rerunning unrelated producer histories",
+      "prior_helper_source_availability": "MISSING",
+      "prior_helper_source_reason": "Intermediate uncommitted helper revision was revised; its exact hash survives in protocol, but no source snapshot was saved"
+    }
+  ],
+  "preserved_extraction_note": "Isolation directory also retains extra immutable Git files from the capped provenance expansion; successful checker opened-file inventory is independently matched to the final runtime extraction manifest",
+  "inputs_sha256": {
+    "acceleration/results/20260917_public_replay/retry2/extraction_manifest.json": "7eff2486fb9fffcd90be5fee4488b1a850a9f2b51ceb2321d85781b16e8a8432",
+    "acceleration/results/20260917_public_replay/direct_controls_wrapper.json": "d19ff79ac961fa912e8570113d00ff9aaf643f1a480bd218e137b8fb2b034bd0",
+    "acceleration/results/20260917_public_replay/relocated_fresh16_wrapper.json": "d1dd1241e380df14ba60342515bfd7d8f7bcd49c87b3226dedbe0c5a8d02720e",
+    "acceleration/results/20260917_public_replay/triangle_controls_wrapper.json": "7f739e13796ca0defc120b46dd0a87719125b064114eaab72d99790e2ed45b57",
+    "acceleration/results/20260917_public_replay/relocated_fresh16.json": "fe7476c51a420622a6b95e386500751605d9c22309c81761bc54b0f895e7c9b5",
+    "acceleration/finalize_public_replay.py": "a47928852ff5d99b5e4629fe5d0d079dc9a8ae30892f850a0fd810ca013a075e",
+    "acceleration/audit_public_replay.py": "1b014d509c7eb601f555e9efdfc1dd9f4ae51448e77e651e66b3d9cbe99fc84d",
+    "acceleration/replay_published_checker.py": "950253fac49aefe114479f85ebb92f625f425596bf4dcd9ffb45d5d8795dc105",
+    "acceleration/results/20260917_public_replay/protocol.json": "583b98e79b7a6970a4564c830068e0d8627a864b8c47c9c117a62361d5167376",
+    "acceleration/results/20260917_public_replay/retry1/protocol.json": "7e9e4d1b36e0c4e73026d2570be211bcaf4b8d60cbcf3db90e7017bce554ac26",
+    "acceleration/results/20260917_public_replay/retry2/protocol.json": "86ee1cc11ed9b60c9fc866bf2fb66ca19940b78d01d670071da95398bb3c0856"
+  },
+  "mathematical_claim_promotion": false,
+  "target_resolution": false,
+  "limitations": [
+    "Repeated frozen arithmetic checker execution verifies portability and byte availability under the explicit wrapper; it is not a new independent derivation.",
+    "Prior complete local-domain enumeration is still a hash-bound saved dependency; not exhaustively reenumerated in this replay.",
+    "Triangle's full saved runtime input inventory is present and hash-matched, but full triangle mathematical replay was not executed.",
+    "No claim of complete historical producer-history replay; the broader recursive provenance extraction was capped.",
+    "Git objects at the published commit were used; a fresh network clone/package install was not attempted.",
+    "Frozen checker reports retain their historical source_commit and verifier strings; this receipt binds actual published source and classifies this execution as repetition."
+  ]
+}

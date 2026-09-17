@@ -1,3 +1,128 @@
+# Latest verified milestone: conditional one-coordinate exclusion
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [fifth completed milestone](docs/RESEARCH_20260917_FIFTH_WAVE.md).
+A separate raw-neighborhood integer audit proves the exact lower bound
+`9227079/16384 > 0`, excluding the family with162fixed outer edges and the
+recorded prescribed absences. It permits60freed-coordinate and1680disjoint
+unknown edges. This is not general nonexistence; no automorphism is assumed.
+
+Latest verified checkpoint: `acceleration/results/20260917_partial_coordinate_checkpoint.json`,
+SHA256 `8ef4773cd204065495aa3be5f4fa9f2533af5f1874ba578dc1657eb32afb2df2`.
+The previous search checkpoint remains immutable. The6040legal matching
+assignments of this coordinate are all covered, without claiming a union with
+older exclusions or counting them as separately solved LP instances.
+
+Next: the broader two-sign-coordinate family, with156fixed outer edges,
+1800unknown edges and89308complete local stars. Its domains and fullmoment
+encoding have fresh independent audit reports; a transferred certificate is
+nonpositive and a separately bounded solve has its own records. Consult fresh
+process observations and receipts for execution state. The old partial pair-AC
+pilot was prepared but held before launch because the one-coordinate family
+was already excluded by the stronger exact certificate.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved fourth milestone
+
+# Latest verified milestone: reranked shortlist and partial-coordinate moments
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [fourth completed milestone](docs/RESEARCH_20260917_FOURTH_WAVE.md):
+16 further independently checked fixed-configuration exclusions, no incumbent
+improvement, complete partial-coordinate local domains, and a necessary full
+common-neighbor moment encoding. No target graph or general proof is established.
+
+Latest verified checkpoint: `acceleration/results/20260917_whole_star_rerank_v3_checkpoint.json`,
+SHA256 `ce0ebb9f245502724979dcc7e90ac988662609786bc0a9f245774b0b08055442`.
+It preserves incumbent18481 and all previous checkpoint evidence. The 60-second
+moment LP returned no valid solution; its zero objective field is unusable.
+A separately recorded 240-second same-model replay and a local matching filter
+are subsequent experiments. Inspect current receipts/processes before claiming
+that either is running or completed; do not infer liveness from this page.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved third milestone
+
+# Latest verified milestone: whole-family shortlist and reusable cuts
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+now records the [third completed milestone](docs/RESEARCH_20260917_THIRD_WAVE.md):
+16 further fixed-configuration exclusions with no original-star improvement;
+16 reusable positive clauses; verified finite applications with no empty domain;
+and an independently derived every-root scaffold normalization. None establishes
+a target graph or general nonexistence proof. No automorphism is assumed.
+
+Latest verified checkpoint: `acceleration/results/20260917_whole_fresh_v2_checkpoint.json`,
+SHA256 `5ad8fd58795a8bf4a37468d8f45b9aad031d41deb22882e53d26703fd200e39d`.
+It preserves incumbent18481 and indexes the completed16-case wave. The separate
+5,000-iteration reranking uses the SAME128 models; see its execution receipt in
+`acceleration/results/20260917_rerank_v3_execution`. Inspect fresh execution state
+before describing a process as running. A partial-coordinate LP pilot remains
+numerical research pending independent model/domain checking; near-zero values
+are not feasibility certificates.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved second milestone
+
+# Latest independently checked continuation, 2026-09-17
+
+Target resolution: **UNKNOWN**. [Root CLAIMS.yaml](CLAIMS.yaml) remains authoritative.
+The [second completed milestone](docs/RESEARCH_20260917_SECOND_WAVE.md) records13
+further fixed-configuration exclusions, with no original-star objective improvement.
+The matching/pair reduction and separate filtered-domain LP now have independent
+exact audits. They concern the already excluded baseline18481 and do not establish
+unrestricted nonexistence. No automorphism is assumed.
+
+Latest verified computational checkpoint:
+`acceleration/results/20260917_same_star_round/checkpoint.json`, SHA256
+`4319fe3c2b4d33fc24aea779bc70159689d7d688090930ac723cb43da40933a0`.
+The same-sign wave exited0 at2026-09-17T08:58:17.021126+00:00. The next experiment
+is a new128-candidate original-star ranking from unused refined same-sign family
+members; preparation and independent mapping review precede execution. Inspect
+current process state before describing any invocation as running.
+
+[Draft PR1](https://github.com/ikuto32/conway-99-graph/pull/1) holds the research.
+The first published fresh16 package replayed successfully from Git-only inputs
+using explicit guarded relocation of historical absolute paths; see
+[public replay audit](acceleration/results/20260917_public_replay/PUBLIC_REPLAY_AUDIT.md).
+This repeats an existing checker; it is not a new independent derivation.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved first resumed milestone
+
+# Conway-99 resumed, 2026-09-17
+
+The user's new instruction authorizes continuation. The authoritative current
+claim entry point is [CLAIMS.yaml](CLAIMS.yaml); the pinned external ledger is
+historical and is not silently reverified. Target resolution remains UNKNOWN.
+
+Latest completed milestone: [fresh-star evaluation](docs/RESEARCH_20260917_FRESH_STAR.md).
+All16 selected configurations have independently checked exact exclusions;
+none improves the original-star objective. Current seed remains18481, itself
+excluded as a fixed configuration. The new checkpoint is
+`acceleration/results/20260917_fresh_star_checkpoint.json`, SHA256
+`195d2d008641c3da867933df00e33d81ebdcef252f6712df42db344fb1f9a696`.
+
+The preregistered next whole-same-sign matching wave is in
+`acceleration/results/20260917_same_star_round`; its execution recorder is
+`acceleration/results/20260917_same_execution`. A dated process observation
+is saved in `acceleration/results/20260917_resume/execution_observation.json`.
+Inspect fresh process state before calling it running; these paths are not
+liveness evidence. The separate triangle-matching structural filter is now
+independently verified: claim `C-STAR-TRIANGLE-FILTER-18481` revision1 rejects
+6,756 of the26,250 original local star choices, leaving19,494 and no empty
+vertex domain. This is a stronger local necessary condition, not another
+fixed-K or target exclusion. See [theory update](docs/THEORY_20260917.md).
+
+New Python workflows use the root uv.lock; preserve the historical environments
+and recorded commands. See docs/REPRODUCING.md for the distinct uv environment.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved September16 stop and preceding continuation
+
 # Conway-99 goal active, 2026-09-16
 
 **Execution stopped at the user's request on 2026-09-16.** Resume only after

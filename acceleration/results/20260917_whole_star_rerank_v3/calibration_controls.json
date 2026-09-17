@@ -1,0 +1,59 @@
+{
+  "status": "WHOLE_STAR_RERANK_V3_CALIBRATION_CONTROLS_PASS",
+  "created_at": "2026-09-17T09:53:58.199986+00:00",
+  "inputs_sha256": {
+    "acceleration/qa_refine_whole_star_rank_v3_calibrated.py": "ac9a3a6cd1a91fc274b187f600f7cf78b6da57a2967a631b3fd07405fa30b01f",
+    "acceleration/refine_whole_star_rank_v3_calibrated.py": "14794ed43c4f97b4936f0269c5ba94b0ccf8f31bd748486ebb748e45e9b79380",
+    "acceleration/refine_whole_star_rank_v3.py": "1b103f25edb3f73e2c7b35af474ce9f674ed9dcb3401b8d043dbfec1250e4592",
+    "docs/NEXT_20260917_WHOLE_STAR_RERANK_V3_CALIBRATION.md": "b67a89d3d92d3cd2b3f7e9cb0a89718aff6bd9f08af97f22ad1f94a0d12083fc"
+  },
+  "controls": [
+    {
+      "name": "ALL120_REVERSE_TO_CORRECT_MEAN400_TO3",
+      "outcome": "ACCEPT"
+    },
+    {
+      "name": "ALL120_AMBIGUOUS_AND16_ENDPOINT_VIOLATIONS",
+      "outcome": "ACCEPT"
+    },
+    {
+      "name": "ALL120_NUMERICAL_TIES_AND_NO_STRICT_IMPROVEMENT",
+      "outcome": "ACCEPT"
+    },
+    {
+      "name": "TOUCHING_EXACT_INTERVAL_AMBIGUOUS",
+      "outcome": "ACCEPT"
+    },
+    {
+      "name": "missing_case",
+      "outcome": "REJECT",
+      "reason": "Exactly16 calibration cases"
+    },
+    {
+      "name": "duplicate_ID",
+      "outcome": "REJECT",
+      "reason": "Exactly16 calibration cases"
+    },
+    {
+      "name": "inverted_exact",
+      "outcome": "REJECT",
+      "reason": "Invalid exact interval"
+    },
+    {
+      "name": "inverted_numerical",
+      "outcome": "REJECT",
+      "reason": "Inverted numerical calibration bracket"
+    },
+    {
+      "name": "nonfinite_numeric",
+      "outcome": "REJECT",
+      "reason": "cannot convert Infinity to integer ratio"
+    }
+  ],
+  "positive_controls": 4,
+  "negative_controls": 5,
+  "independent_verification": false,
+  "synthetic_fixtures_only": true,
+  "GPU_processes": 0,
+  "LP_runs": 0
+}

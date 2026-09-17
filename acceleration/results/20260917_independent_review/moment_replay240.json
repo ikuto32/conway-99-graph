@@ -1,0 +1,48 @@
+{
+  "status": "INDEPENDENT_MOMENT_REPLAY240_ARBITRARY_BOUND_PASS",
+  "timestamp": "2026-09-17T10:27:03.106446+00:00",
+  "source_commit_observed_after_checks": "50eb5ed9da1d5a849aae0677cc129e7d6da76906",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260917_moment_replay240.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260917_partial_matching_moment_replay240/manifest.json": "ba8542c940eefc554dfd0394dd68df671db1e34471490b606bb3dcc77556dcd6",
+    "acceleration/results/20260917_partial_matching_moment_replay240/summary.json": "6dc67b8eaa2a7a0740cbbbe40d6793bff5192d49f3982411415425764bcf1b1b",
+    "acceleration/results/20260917_partial_matching_moment_replay240/numeric_lp.json": "163931af79d61c2c4e6a105802b2b46c71f3b429ddafde91496d29b1721baa64",
+    "acceleration/results/20260917_partial_matching_moment_replay240/exact_support_bound.json": "6612b6f2b4298aef506c8a0ecfbac24e18fa35602068a03584c736d2c2a5497d",
+    "acceleration/results/20260917_partial_matching_moments/model.json": "67e554648b6bd786c62dc15fc0da129ee99a62d9837bb02298a4baba3aa503f6",
+    "acceleration/results/20260917_partial_matching_moments/integer_augmented_csr.npz": "16ce675b484ef788f73e10a4769a1891a315dd656fc1857a3c6e5044b9ddaf1b",
+    "acceleration/results/20260917_partial_matching_moments/numeric_lp.json": "be0c6c5c71f9736a3f0044000363ce856ba998924283115d3a78ab8f18a027ee",
+    "acceleration/results/20260917_partial_matching_moments/manifest.json": "cab1b3aafa0e52afd5173703341c06bd6cd695bad276d1f3e383f1e011fc9e84",
+    "acceleration/results/20260917_partial_matching_moments/highs.log": "557f870039e9dce982f8eb9dd273a25823f5251c2e1bcd81f57f1ee0541b5e32",
+    "acceleration/results/20260917_independent_review/partial_moments.json": "1d4d08ecc9e73a00e06d210fa5137e7885e677756dc8f33b016fa3227ddec5e1",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/theory_20260917_partial_matching_moments.py": "c841633407717f79d03840752e633e5b8434bc8863ac2c6a351c77e070c9921a",
+    "acceleration/theory_20260917_moment_replay240.py": "f66d72283a19e165994508b25adbd6e6915961499b2a3b11a8253b29747914bf",
+    "acceleration/results/20260917_partial_matching_moment_replay240/highs.log": "5cef8247cf4ccf3f22b8c4c91ed4e9a24db75e602d4ec21042708f288801a9c9",
+    "acceleration/audit_20260917_moment_replay240.py": "9aea93d143d851d396f3bf749794526f28715af947b7a711762117e3454cead2",
+    "acceleration/audit_20260917_partial_matching.py": "051dbc568011cf5c76f41fddf01281d8d8959875ccda88a1491685edd9a6d138"
+  },
+  "numerator": -123695226349,
+  "denominator": 1048576,
+  "strictly_positive": false,
+  "checked_columns": 54478,
+  "checked_centers": 84,
+  "solver_valid_primal": false,
+  "solver_valid_dual": false,
+  "method": "Complete unbounded Python integer dot products and simplex maxima using independently reconstructed hash-bound model.",
+  "derivation": "For arbitrary q and box-constrained y, hard reciprocity Rz=0 and per-center simplices give ||Mz-b||1 >= y*b-(M^T*y+R^T*q)z >= y*b-sum maxima. Solver validity flags are unnecessary for this support inequality.",
+  "shared_components": [
+    "Python standard library",
+    "SciPy sparse loading",
+    "prior independent model review and artifact helpers"
+  ],
+  "producer_imported": false,
+  "limitations": [
+    "Negative bound weaker than trivial zero; no exclusion, primal feasibility or solver dual feasibility.",
+    "No independent solver repetition."
+  ]
+}

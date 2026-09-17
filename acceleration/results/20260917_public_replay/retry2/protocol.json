@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-09-17T09:13:33.352267+00:00",
+  "source_commit": "3daebfb05d39aa31afea6fdbb6b80d6b108f1262",
+  "question": "Can the published fresh16 checker and triangle checker obtain their exact hash-bound input bytes without inherited local caches?",
+  "scope": "Two saved independent checker runtime input inventories, then recursive inputs_sha256 provenance closure; no producer rerun",
+  "selection_rule": "All inputs_sha256 entries of batch_raw_review.json, baseline_and_matrix.json, and triangle_matching/summary.json at the pinned commit",
+  "success": "Every required path is a Git blob at this commit and exactly matches recorded SHA-256; subsequent isolated fresh16 arithmetic replay passes",
+  "falsification": "Any absent Git blob, digest mismatch, unsafe path, or failed isolated checker",
+  "numerical_thresholds": null,
+  "numerical_thresholds_reason": "Exact byte identities and rational arithmetic; no floating-point acceptance threshold",
+  "resource_limits": {
+    "max_files": 2000,
+    "max_bytes": 300000000
+  },
+  "include_unexecuted_transitive_provenance": false,
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_public_replay.py",
+    "--commit",
+    "3daebfb05d39aa31afea6fdbb6b80d6b108f1262",
+    "--destination",
+    "build/public-replay-20260917",
+    "--out",
+    "acceleration/results/20260917_public_replay/retry2",
+    "--resume"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "helper_sha256": "1b014d509c7eb601f555e9efdfc1dd9f4ae51448e77e651e66b3d9cbe99fc84d",
+  "limitations": [
+    "Git object extraction confirms commit contents, not availability of public network retrieval.",
+    "Python interpreter and pinned third-party packages are trusted execution environment, not repository artifacts.",
+    "Saved checker inventories may omit undeclared runtime reads; isolated execution tests that risk only for actually executed commands."
+  ]
+}
