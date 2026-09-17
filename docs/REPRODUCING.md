@@ -1,5 +1,67 @@
 # 取得と検証
 
+## Two-coordinate exact proof: isolated public replay
+
+The frozen independent checker reproduced `469399553/1048576 > 0` using only
+Git-bound inputs from public commit `7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8`.
+This repeats that checker; it is not a new derivation or a general nonexistence
+proof. All 285 required Git blobs were checked. The earlier commit omitted a
+required solver log; that failed availability check remains preserved, and
+the exact log is included in this newer commit.
+
+From the repository root, with the locked environment installed, use fresh
+destination/output paths:
+
+```powershell
+$env:UV_PROJECT_ENVIRONMENT='build/research-venv'
+uv run --locked --offline --cache-dir .uv-cache-20260917 python acceleration/prepare_two_coordinate_public_worktree.py --commit 7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8 --destination build/two-proof-replay --report build/two-proof-extraction.json
+uv run --locked --offline --cache-dir .uv-cache-20260917 python acceleration/replay_two_coordinate_moment_checker.py --root build/two-proof-replay --commit 7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8 --out build/two-proof-check.json --receipt build/two-proof-receipt.json
+```
+
+The extractor creates a real detached worktree and verifies exact Git bytes.
+The wrapper redirects only the frozen checker's report path, confines research
+reads to the checked input closure, and refuses existing output paths. See the
+[saved replay receipt](../acceleration/results/20260917_two_coordinate_public_replay/replay_receipt.json)
+and [original preparation failure](../acceleration/results/20260917_independent_review/two_public_git_closure_preparation.json).
+
+## Exact one-coordinate certificate: isolated public replay
+
+The conditional family certificate published at commit
+`d4f4a926ad075afa7309fb17c776e0de2c18bf7a` was replayed from isolated Git files.
+The exact integer result is `590533056/1048576 > 0`. This is repeated execution
+of the independent checker, not a new mathematical review. It excludes only
+the recorded162-fixed-edge family.
+
+From the research branch containing the replay wrapper, create a fresh detached
+worktree at the proof commit and choose new output filenames:
+
+```powershell
+git worktree add --detach build/moment-proof-replay d4f4a926ad075afa7309fb17c776e0de2c18bf7a
+$env:UV_PROJECT_ENVIRONMENT = 'build/research-venv'
+uv run --locked --cache-dir .uv-cache-20260917 python acceleration/replay_positive_moment_checker_v2.py --root build/moment-proof-replay --commit d4f4a926ad075afa7309fb17c776e0de2c18bf7a --out build/moment-proof-check.json --receipt build/moment-proof-receipt.json
+```
+
+The wrapper checks the isolated Git top-level and commit, verifies every frozen
+runtime input against its committed bytes, and redirects only the checker's
+hard-coded report output. Original proof artifacts are not overwritten. It
+permits trusted interpreter packages but rejects other data fallback. All115
+runtime/seed files were checked and used in the recorded successful replay;
+no large LOCAL_ONLY ranking inputs are required for this exact certificate.
+The full-domain and encoding reviews remain explicit proof dependencies; the
+replay checks their recorded input hashes rather than rerunning those entire
+independent derivations.
+
+Recorded evidence: `acceleration/results/20260917_moment_public_replay/`.
+The first partial checkout omitted `.gitattributes` and was rejected for nine
+newline-only byte differences before arithmetic ran. A later wrapper attempt
+rejected Windows' exact-string representation of the Git provenance command;
+that failure and old wrapper were retained. The corrected wrapper accepts only
+that exact command in list or Windows string form, with corruption controls.
+The successful receipt is `replay_receipt_v2.json`; these engineering failures
+are not refutations of the mathematical certificate. For selective checkouts,
+checkout `.gitattributes` first and disable automatic newline conversion.
+
+
 ## 2026-09-17以降のロック済み環境
 
 新しいPythonワークフローはルートの `pyproject.toml` と `uv.lock` を使います。
@@ -195,3 +257,10 @@ SHA-256 を記録しています。これらの本体は GitHub に含まれず�
 
 既存の研究記録は内容を整形し直していません。`.gitattributes` は研究ファイルの改行変換を
 無効にし、ハッシュで参照されるバイト列を保持します。
+# User stop on 2026-09-17
+
+Research is paused by explicit user instruction. Read
+[the latest stop/restart record](STOP_20260917_SIX_COORDINATE.md) before using
+any historical launch command below. Documentation maintenance or validation
+does not authorize restarting a stopped search. The latest frozen stop
+checkpoint is `acceleration/results/20260917_user_requested_stop.json`.

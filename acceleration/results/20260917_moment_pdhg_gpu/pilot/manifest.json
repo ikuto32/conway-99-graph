@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-09-17T11:51:28.119454+00:00",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/run_20260917_moment_pdhg_pilot.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/run_20260917_moment_pdhg_pilot.py": "d51678677633a75118f9c12eed89bc2be9add54b3ac049ff11dc81336d981dab",
+    "acceleration/build/moment_pdhg_gpu.exe": "d9c0f4354f26b7698b1c362883147991684e3c3a71c52c2bed9b041ccca48dfc",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/manifest.json": "95bb4168be24ee901e7754bcaebd0dc810b138d183725bf8876eabc556bbc807",
+    "acceleration/moment_pdhg_gpu.cu": "2840eea3f5abc5e9e669788bb7be460ba879e5b52c93e0d1195cb6cf41fb4319",
+    "acceleration/build_moment_pdhg_gpu.ps1": "47799a145ff621dfe2aa1c468cf30dc3dd183a2561634fe2ec016430d15d45ee",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/two_coordinate.bin": "e646606c73184318afd217607784cfaf93ad1aba7c8b0e2281346ccc11718a35",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/positive_uniform.bin": "0de36b4d6599d5dfb70a34296139ff3216f82cd355bbd17b0234b3375b4ac9c0",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/unbounded_hard_dual.bin": "e8d6f4b0363f9e77431b1c83b7b3bf915f09642ca6dc3f0bc45d658becd8a809",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/large_uniform.bin": "78364ab8d7bac612e65436300037d30cbb72af4e5defb3180d27f6df83886a37"
+  },
+  "versions": {
+    "nvcc": {
+      "command": [
+        "nvcc",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Thu_Mar_19_22:28:55_Pacific_Daylight_Time_2026\nCuda compilation tools, release 13.2, V13.2.78\nBuild cuda_13.2.r13.2/compiler.37668154_0\n",
+      "stderr": ""
+    },
+    "gpu": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,memory.total",
+        "--format=csv,noheader"
+      ],
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 4090, 616.56, 24564 MiB\n",
+      "stderr": ""
+    }
+  },
+  "build_command": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "acceleration/build_moment_pdhg_gpu.ps1"
+  ],
+  "build_observation": "Previously completed with exit0; nvcc warned about host INFINITY macro narrowing; source initializes a double minimum to positive infinity. Build stdout was visible in tool transcript, not saved as an independent artifact.",
+  "protocol": "3db7a169da5e2f693a4a4ca5c7a84b724a38876ad89d5677b5687c1ccea93fbc",
+  "per_process_timeout_seconds": 120
+}
