@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-09-17T10:58:30.945964+00:00",
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/replay_positive_moment_checker_v2.py",
+    "--root",
+    "build/moment-public-replay-d4f4a92-v2",
+    "--commit",
+    "d4f4a926ad075afa7309fb17c776e0de2c18bf7a",
+    "--out",
+    "acceleration/results/20260917_moment_public_replay/controls_unused.json",
+    "--receipt",
+    "acceleration/results/20260917_moment_public_replay/mapping_controls_v2.json",
+    "--controls-only"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "isolated_root": "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\moment-public-replay-d4f4a92-v2",
+  "requested_source_commit": "d4f4a926ad075afa7309fb17c776e0de2c18bf7a",
+  "wrapper_sha256": "67fe23d0a4e5837f5278f3db8f2fb9d6f26fef2a73598001cb75ef6226f857c2",
+  "python": "3.12.10",
+  "mapping_controls": [
+    {
+      "name": "exact_output_write",
+      "outcome": "PASS"
+    },
+    {
+      "name": "exact_output_final_hash_read",
+      "outcome": "PASS"
+    },
+    {
+      "name": "ordinary_input",
+      "outcome": "PASS"
+    },
+    {
+      "name": "different_write",
+      "outcome": "PASS"
+    },
+    {
+      "name": "output_prefix_collision",
+      "outcome": "PASS"
+    },
+    {
+      "name": "outside_root_read",
+      "outcome": "PASS"
+    },
+    {
+      "name": "strict_provenance_argv",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "name": "strict_provenance_argv",
+      "command": "git rev-parse HEAD",
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "name": "strict_provenance_argv",
+      "command": "git rev-parse HEAD & echo x",
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "name": "strict_provenance_argv",
+      "command": "git rev-parse HEAD; echo x",
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "name": "strict_provenance_argv",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD",
+        "--other"
+      ],
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "name": "strict_provenance_argv",
+      "command": "git status",
+      "expected": false,
+      "outcome": "PASS"
+    }
+  ],
+  "status": "PUBLIC_MOMENT_OUTPUT_MAPPING_CONTROLS_PASS",
+  "scientific_checker_executed": false
+}

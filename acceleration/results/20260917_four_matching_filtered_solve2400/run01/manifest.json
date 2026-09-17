@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-09-17T11:10:40.717920+00:00",
+  "source_commit": "d4f4a926ad075afa7309fb17c776e0de2c18bf7a",
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260917_four_matching_filtered_solve.py",
+    "--out",
+    "acceleration/results/20260917_four_matching_filtered_solve2400/run01",
+    "--filter-review",
+    "acceleration/results/20260917_independent_review/four_coordinate_matching_filter/summary.json",
+    "--model-review",
+    "acceleration/results/20260917_independent_review/four_matching_filtered_moments.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "highs": "1.15.1",
+  "inputs_sha256": {
+    "acceleration/results/20260917_independent_review/four_coordinate_matching_filter/summary.json": "6ee0eea6854f8e82e4067f60225f6c897908d5824f5d71c7d4564e21e86738b3",
+    "acceleration/results/20260917_independent_review/four_matching_filtered_moments.json": "472b7f332a99560fd961d7b6a411edd5db619504c21dd6285470f579e0ba2c51",
+    "acceleration/results/20260917_resume/four_filtered_resource_preflight.json": "cec42c73e32c0072dfca2be753b56394676fa3c2f415331399652200c0e48bab",
+    "acceleration/results/20260917_four_matching_filtered_moments/model.json": "1fae76848f6b65b010e897b4a8b49d8ff870f413177eaefa52507087e2943b34",
+    "acceleration/results/20260917_four_matching_filtered_moments/build_manifest.json": "169ce03942e78e340279a9150f474169ade95be06c292933e4971f3374fce7d2",
+    "acceleration/results/20260917_four_matching_filtered_moments/build_summary.json": "9ece911a3bd77f8c89f66fe6f28e9a60b8eddd9e33f5dc1bc5a64781e4cc837b",
+    "acceleration/results/20260917_four_matching_filtered_moments/integer_augmented_csr.npz": "4ec700a9605d721d4739cd1e79e0ceb950fac56afb2f479d797a84851d76a1db",
+    "acceleration/theory_20260917_four_matching_filtered_solve.py": "178485c7474398e152e3139550051f0ab32e06ac1a5446da9e4dc3f9b5506805",
+    "acceleration/theory_20260917_partial_matching_moments.py": "c841633407717f79d03840752e633e5b8434bc8863ac2c6a351c77e070c9921a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "model": "PARTIAL_K_FOUR_COORDINATE_MATCHING_FILTERED_FULL_MOMENT_PHASE1_V1",
+  "scope": "Retain144baselineK edges including all7cross matchings and10other same-sign matchings; all same-fibre and unlisted other-coordinate absences remain fixed. Unknown240same-sign edges in4root0/1coordinates plus1680disjoint-support edges.",
+  "selection": "Exactly the230879 saved surviving original-domain IDs from complete matching-filter run01;59581 probability columns removed; every5490row and6972slack columns retained unchanged",
+  "configuration": {
+    "time_limit_seconds": 2400,
+    "solver": "ipm",
+    "threads": 1,
+    "crossover": "off",
+    "presolve": "HiGHS defaults; adaptive sublimits disclosed"
+  },
+  "gate_outcomes": {
+    "filter": "INDEPENDENT_FOUR_COORDINATE_NEIGHBORHOOD_MATCHING_FILTER_PASS",
+    "model": "INDEPENDENT_FOUR_COORDINATE_FILTERED_FULL_MOMENT_MODEL_PASS",
+    "resource": "Parent authorized single2400-second attempt after recorded RAM/disk observation; resources notreserved"
+  },
+  "criterion": "Any positive exact support-function bound over all filteredchoices is candidate conditional exclusion only with independently sound removed-choice exclusions and raw-neighborhood bound audit",
+  "single_attempt": true,
+  "automatic_retries": false,
+  "target_resolution": false
+}

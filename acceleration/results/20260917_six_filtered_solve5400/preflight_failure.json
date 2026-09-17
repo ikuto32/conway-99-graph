@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-09-17T11:52:44.608379+00:00",
+  "status": "PRE_SOLVER_LAUNCH_FAILURE_PRESERVED",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "source_path": "acceleration/theory_20260917_six_filtered_solve.py",
+  "source_sha256": "58717695d43841a30afe7e31f3aee3badf67fd4be31e12d280184113008ff79d",
+  "protocol_sha256": "7b1392d5f1ca6d14af00bb8df22d3419a0eafee8c13cf1a2977e5413e2d38fde",
+  "resource_sha256": "3c1980ae64273680e7f0fc5f8030d4281becaaad1d05e8ac38f0136f1bb6746c",
+  "exit_code": 1,
+  "error_type": "KeyError",
+  "error_message": "'free_physical_memory_KiB'",
+  "location": "main resource-field assertion before output directory creation and before solver instantiation",
+  "actual_resource_keys": [
+    "free_memory_kib",
+    "disk_free_bytes"
+  ],
+  "solver_launched": false,
+  "solver_attempts": 0,
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--cache-dir",
+    ".uv-cache-20260917",
+    "python",
+    "acceleration/theory_20260917_six_filtered_solve.py",
+    "--out",
+    "acceleration/results/20260917_six_filtered_solve5400/run01",
+    "--filter-review",
+    "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/summary.json",
+    "--model-review",
+    "acceleration/results/20260917_independent_review/six_filtered_moments.json"
+  ],
+  "correction": "Separate v2 reads existing six-preflight field names; no input/model/configuration edits",
+  "target_resolution": false
+}

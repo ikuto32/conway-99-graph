@@ -1,3 +1,93 @@
+# STOPPED by user — 2026-09-17
+
+Research is stopped to preserve the user's token resources. Do not resume until
+explicitly requested. Read [the stop/restart record](docs/STOP_20260917_SIX_COORDINATE.md)
+and `acceleration/results/20260917_user_requested_stop.json` first.
+
+Target resolution: **UNKNOWN**. The latest verified claim is
+`C-PARTIAL-K-SIX-COORDINATE-EXCLUSION` revision 1: exact bound `14157/16384 > 0`
+excludes only the pinned 132-fixed-K family with its prescribed absences.
+All six coefficient attempts were independently checked. This is not general
+nonexistence. Overall search coverage: UNKNOWN; no validated denominator.
+
+CPU and GPU six-coordinate runs have ended. The eight-coordinate pilot was
+interrupted by the user stop: 17 completed centers, 996,947 saved local choices,
+and no completeness claim. Research processes were checked, not inferred from
+historical PIDs. The root ledger and stop receipt are authoritative.
+
+## Preserved eighth milestone
+
+# Latest verified milestone: four-coordinate conditional exclusion
+
+Target resolution remains **UNKNOWN**. The [eighth completed milestone](docs/RESEARCH_20260917_EIGHTH_WAVE.md)
+and authoritative [claim ledger](CLAIMS.yaml) record the independently checked
+bound `68986111/262144 > 0`, excluding the exact 144-fixed-edge four-coordinate
+family with its prescribed absences. This is not unrestricted nonexistence.
+
+Latest verified checkpoint: `acceleration/results/20260917_four_coordinate_exclusion_checkpoint.json`,
+SHA256 `9f6bf0bbc1e7bbb44216a6cbe54feb2971e298e969a57aba0738b04b307fc64c`.
+The six-coordinate extension has 879,449 complete local choices, 166,728 sound
+matching rejections, 712,721 survivors and an independently verified moment LP.
+No six-coordinate exclusion is established by this checkpoint. The next work
+is the capped CPU solve and independently gated GPU weight search; consult
+current process observations and receipts before asserting liveness.
+
+The separate rook-nine representation is conditional and has a compatible
+spectrum. Its source-collision history and fresh independent recheck are
+preserved. No graph automorphism or universal rook containment is assumed.
+
+Review continues in [draft PR2](https://github.com/ikuto32/conway-99-graph/pull/2).
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved seventh milestone
+
+# Latest verified milestone: four-coordinate foundations and simpler evidence
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [seventh completed milestone](docs/RESEARCH_20260917_SEVENTH_WAVE.md).
+The two-coordinate exclusion now has independently checked integer evidence
+`204 > 0`, with its scope unchanged. Four-coordinate domains and necessary
+moment models are independently checked: 290,460 original choices, 59,581
+sound matching-test deletions and 230,879 survivors, with no empty domains.
+These foundations alone do not exclude the four-coordinate family.
+
+Latest verified checkpoint: `acceleration/results/20260917_four_coordinate_foundations_checkpoint.json`,
+SHA256 `60fbfb569c8b0ed2b54407f1a7d905d02116ec23ec86b421c719fe9bd6d10c5b`.
+Next is the separately capped four-coordinate filtered LP and independent
+checking of any exact bound; a bounded six-coordinate domain pilot is separate.
+Inspect current execution receipts before making a process-liveness claim.
+
+Review continues in [draft PR2](https://github.com/ikuto32/conway-99-graph/pull/2)
+after PR1 was externally merged at the fifth milestone.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved sixth milestone
+
+# Latest verified milestone: conditional two-coordinate exclusion
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [sixth completed milestone](docs/RESEARCH_20260917_SIXTH_WAVE.md).
+A separate raw-neighborhood integer audit proves `469399553/1048576 > 0`,
+excluding the family with 156 fixed outer edges and the recorded prescribed
+absences, with 120 coordinate edges and 1680 disjoint-support edges unknown.
+All 89,308 local choices and the full moment encoding were independently checked.
+This is a conditional exclusion; no automorphism is assumed.
+
+Latest verified checkpoint: `acceleration/results/20260917_two_coordinate_checkpoint.json`,
+SHA256 `89e39b77c2457058e0e3ed6c83de7cbc80fc2ab8fd422ca4b0cea7e90e5e662a`.
+The separate binary affine test has an exact membership witness; it supplies
+neither a graph nor a feasible nonnegative star mixture. The one-coordinate
+certificate also passed replay from the public Git commit using guarded inputs.
+
+Next: four freed same-sign coordinates at rootgroups 0 and 1, retaining 144
+fixed outer edges and 1920 unknown edges. Independent domain, matching-filter
+and filtered-model audits precede the separately recorded 2400-second solve.
+Inspect fresh process observations and receipts for execution state.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved fifth milestone
+
 # Latest verified milestone: conditional one-coordinate exclusion
 
 Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)

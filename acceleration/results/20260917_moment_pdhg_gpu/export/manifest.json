@@ -1,0 +1,253 @@
+{
+  "status": "CANDIDATE_FULL_MOMENT_PDHG_PILOT_EXPORT",
+  "timestamp": "2026-09-17T11:49:51.036849+00:00",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/export_20260917_moment_pdhg.py",
+    "--out",
+    "acceleration/results/20260917_moment_pdhg_gpu/export"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "inputs_sha256": {
+    "acceleration/results/20260917_independent_review/two_matching_moments.json": "5af1f353a70a16fc5f915195b911d782e360ffc0690463936b7a9dea983197ed",
+    "acceleration/results/20260917_independent_review/two_matchings/summary.json": "f3d2ba90be5e8c27bc64c2e4941174d36fc3ddfcbc29ce25da872df652383acb",
+    "acceleration/results/20260917_two_matching_moments/model.json": "a4bd78abc53e9593aa6860168d21be181f98c3def738bb614f3550b578ade199",
+    "acceleration/results/20260917_two_matching_moments/integer_augmented_csr.npz": "da8816b3001b42944a02a3cb35174a6817bb4a12ceac9b2b41e48263008a9b92",
+    "acceleration/export_20260917_moment_pdhg.py": "1da2af63989b19f05cbc3d06fdb12ed6825523c8217af69802f41ee0962391b6",
+    "acceleration/moment_pdhg_gpu.cu": "2840eea3f5abc5e9e669788bb7be460ba879e5b52c93e0d1195cb6cf41fb4319",
+    "acceleration/build_moment_pdhg_gpu.ps1": "47799a145ff621dfe2aa1c468cf30dc3dd183a2561634fe2ec016430d15d45ee",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "docs/NEXT_20260917_MOMENT_PDHG_GPU.md": "3db7a169da5e2f693a4a4ca5c7a84b724a38876ad89d5677b5687c1ccea93fbc"
+  },
+  "records": {
+    "two_coordinate": {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/two_coordinate.bin",
+      "sha256": "e646606c73184318afd217607784cfaf93ad1aba7c8b0e2281346ccc11718a35",
+      "bytes": 173674112,
+      "n": 89308,
+      "m": 5286,
+      "q": 3486,
+      "blocks": 84,
+      "nnz": 7218877,
+      "arrays": {
+        "offsets": {
+          "offset": 52,
+          "bytes": 340,
+          "sha256": "31c749cfbe7bcc220175b1bc605967ecf7ed1330e3d252bce8808d076cf48b17"
+        },
+        "A_rowptr": {
+          "offset": 392,
+          "bytes": 21148,
+          "sha256": "969c4c6c58240f1a34de93fcab7644e430ee2064ea8accf52660fd28ceb08535"
+        },
+        "A_indices": {
+          "offset": 21540,
+          "bytes": 28875508,
+          "sha256": "d14aba9aa2fd0d73ced19282233b7b419b0ec0890c824fb38eb6a67cfd5c4fa4"
+        },
+        "A_values": {
+          "offset": 28897048,
+          "bytes": 57751016,
+          "sha256": "e4a21933fb262d40bd2ffb1f07a8485c9ca49d31dc809f9bc705629fd1845d86"
+        },
+        "AT_rowptr": {
+          "offset": 86648064,
+          "bytes": 357236,
+          "sha256": "872d18512778f83e5115f8e2e0577640e1e11d5bcc0ee452b2a0d9c8e371ae4b"
+        },
+        "AT_indices": {
+          "offset": 87005300,
+          "bytes": 28875508,
+          "sha256": "047a6f9002f92a6be22a31992bcd3a0b5a9062c219c98341c2885ce0603b9ac3"
+        },
+        "AT_values": {
+          "offset": 115880808,
+          "bytes": 57751016,
+          "sha256": "2f1849f034e729454a73c6964c1ecda895875e577e1afaea76dce3d3d724da05"
+        },
+        "b": {
+          "offset": 173631824,
+          "bytes": 42288,
+          "sha256": "88a1b6ebabafd3b2ec17cfa2d8c5613e1f747eafb87472c61e5ebb8c36a3bfb7"
+        }
+      }
+    },
+    "positive_uniform": {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/positive_uniform.bin",
+      "sha256": "0de36b4d6599d5dfb70a34296139ff3216f82cd355bbd17b0234b3375b4ac9c0",
+      "bytes": 172,
+      "n": 2,
+      "m": 2,
+      "q": 1,
+      "blocks": 1,
+      "nnz": 3,
+      "arrays": {
+        "offsets": {
+          "offset": 52,
+          "bytes": 8,
+          "sha256": "2fcd151b8295e8b3bf8ec64ede173523417960a8db6cbc569de9a25a458f9135"
+        },
+        "A_rowptr": {
+          "offset": 60,
+          "bytes": 12,
+          "sha256": "87fa498592c87cce6f973bfd6aeb542c8d045f18160697c2628b158cb4a3a123"
+        },
+        "A_indices": {
+          "offset": 72,
+          "bytes": 12,
+          "sha256": "d05796eb3a889d209cc6e6e6a1429bbd9d218df2b58146a51be1fcafc3164042"
+        },
+        "A_values": {
+          "offset": 84,
+          "bytes": 24,
+          "sha256": "8e458a40ecc2ce8fa52973a89fe5fa70e2a6942f8484a78c4897d7c710968e0d"
+        },
+        "AT_rowptr": {
+          "offset": 108,
+          "bytes": 12,
+          "sha256": "87fa498592c87cce6f973bfd6aeb542c8d045f18160697c2628b158cb4a3a123"
+        },
+        "AT_indices": {
+          "offset": 120,
+          "bytes": 12,
+          "sha256": "d05796eb3a889d209cc6e6e6a1429bbd9d218df2b58146a51be1fcafc3164042"
+        },
+        "AT_values": {
+          "offset": 132,
+          "bytes": 24,
+          "sha256": "12f44ec61c576bce5e9475e4b56a1d337615eb1d0c4ad691152d504bd84bc807"
+        },
+        "b": {
+          "offset": 156,
+          "bytes": 16,
+          "sha256": "3239b05c38b825ebb79f103172438292a22a0951351a6b81be1df5d44776cc65"
+        }
+      }
+    },
+    "unbounded_hard_dual": {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/unbounded_hard_dual.bin",
+      "sha256": "e8d6f4b0363f9e77431b1c83b7b3bf915f09642ca6dc3f0bc45d658becd8a809",
+      "bytes": 120,
+      "n": 1,
+      "m": 2,
+      "q": 1,
+      "blocks": 1,
+      "nnz": 1,
+      "arrays": {
+        "offsets": {
+          "offset": 52,
+          "bytes": 8,
+          "sha256": "01acecb507abfe1a354aa8064f4af5d3f1acd019e37db3c11c97523b71c76e9d"
+        },
+        "A_rowptr": {
+          "offset": 60,
+          "bytes": 12,
+          "sha256": "c3e42245ffdff31c980d63b232de1414ca2461a08c6efccca2af96737ef4d068"
+        },
+        "A_indices": {
+          "offset": 72,
+          "bytes": 4,
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+        },
+        "A_values": {
+          "offset": 76,
+          "bytes": 8,
+          "sha256": "6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712"
+        },
+        "AT_rowptr": {
+          "offset": 84,
+          "bytes": 8,
+          "sha256": "01acecb507abfe1a354aa8064f4af5d3f1acd019e37db3c11c97523b71c76e9d"
+        },
+        "AT_indices": {
+          "offset": 92,
+          "bytes": 4,
+          "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+        },
+        "AT_values": {
+          "offset": 96,
+          "bytes": 8,
+          "sha256": "6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712"
+        },
+        "b": {
+          "offset": 104,
+          "bytes": 16,
+          "sha256": "d88d753d344f4857bb091e2ffd00fc8950d3f1089848b137c60576c4b5fe1a22"
+        }
+      }
+    },
+    "large_uniform": {
+      "path": "acceleration/results/20260917_moment_pdhg_gpu/export/large_uniform.bin",
+      "sha256": "78364ab8d7bac612e65436300037d30cbb72af4e5defb3180d27f6df83886a37",
+      "bytes": 183608,
+      "n": 45882,
+      "m": 1,
+      "q": 1,
+      "blocks": 1,
+      "nnz": 0,
+      "arrays": {
+        "offsets": {
+          "offset": 52,
+          "bytes": 8,
+          "sha256": "435b1dd90a5ef9c5604c3bda26bad6decff54a20b8c1dababf1205dbca5390a6"
+        },
+        "A_rowptr": {
+          "offset": 60,
+          "bytes": 8,
+          "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+        },
+        "A_indices": {
+          "offset": 68,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "A_values": {
+          "offset": 68,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "AT_rowptr": {
+          "offset": 68,
+          "bytes": 183532,
+          "sha256": "8cc63f33a360289a143063f3ea5b0196e6b12f674e03a0261e87bea1cd01f0ee"
+        },
+        "AT_indices": {
+          "offset": 183600,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "AT_values": {
+          "offset": 183600,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "b": {
+          "offset": 183600,
+          "bytes": 8,
+          "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+        }
+      }
+    }
+  },
+  "magic": "C99MHP01",
+  "checkpoints": [
+    1,
+    2,
+    10,
+    100
+  ],
+  "row_order": "3486 soft moments then1800 hard reciprocity;84 simplex rows removed and represented by projection",
+  "objective": "L1 moment residual subject to exact reciprocity and probability simplices",
+  "steps": "eta=.9; sigma=.9/max(1,row_abs_sum); tau per simplex=.9/max(1,maximum column_abs_sum)",
+  "initialization": "uniform per simplex; zero duals; pbar=p; arithmetic running averages of iterates1..k",
+  "projection": "max shift; clamp inactive shifted tails at-1;60 fixed bisections[-1,0];256thread binary-tree sum; no sort",
+  "restrictions": "Only three synthetic cases and existing two-coordinate model100iterations. Six-coordinate launch prohibited pending independent CPU parity.",
+  "numerical_scores_are_proofs": false,
+  "domain_enumerations": 0,
+  "LP_solves": 0,
+  "GPU_launches": 0
+}

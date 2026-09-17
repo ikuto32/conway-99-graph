@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-09-17T11:52:45.395751+00:00",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260917_six_filtered_solve_v2.py",
+    "--out",
+    "acceleration/results/20260917_six_filtered_solve5400/run01",
+    "--filter-review",
+    "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/summary.json",
+    "--model-review",
+    "acceleration/results/20260917_independent_review/six_filtered_moments.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "highs": "1.15.1",
+  "inputs_sha256": {
+    "acceleration/results/20260917_independent_review/six_coordinate_matching_filter/summary.json": "05d4284f04fb5c84491394695c6f56a3e5517302ae95c1885b27592cfed78a7f",
+    "acceleration/results/20260917_independent_review/six_filtered_moments.json": "f27467b03a34fe3ea3adec4e537585e71d5697f4e63562cdd43d7e6822c8f3e7",
+    "acceleration/results/20260917_resume/six_filtered_resource_preflight.json": "3c1980ae64273680e7f0fc5f8030d4281becaaad1d05e8ac38f0136f1bb6746c",
+    "acceleration/results/20260917_six_filtered_moments/model.json": "22ff4fbce2f9659877fe115483300bedfb603d60bf96d761a90ffd48a2a0d3c7",
+    "acceleration/results/20260917_six_filtered_moments/build_manifest.json": "0787ef60f1aafb798463cb2f0a7f813160d08a60d1d9bef2774b1746e69b6877",
+    "acceleration/results/20260917_six_filtered_moments/build_summary.json": "032eb18afb310063a52cb3b2686630783e17c3f5d071a8b41c077425ef567cae",
+    "acceleration/results/20260917_six_filtered_moments/integer_augmented_csr.npz": "118707aa109ed5195a38b7a0edda7ea6b3514669e50b9493094d8563097e8b55",
+    "acceleration/theory_20260917_six_filtered_solve_v2.py": "5dff498a0e4ab27ea4e8d094c23a486104be85c992dbc28c50f873d5ce9a36b1",
+    "acceleration/theory_20260917_partial_matching_moments.py": "c841633407717f79d03840752e633e5b8434bc8863ac2c6a351c77e070c9921a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "model": "PARTIAL_K_SIX_COORDINATE_MATCHING_FILTERED_FULL_MOMENT_PHASE1_V1",
+  "scope": "Retain132baselineK edges including all7cross and8other same-sign matchings; all same-fibre and unlisted other-coordinate absences fixed. Unknown360same-sign edges atrootgroups0,1,2 plus1680disjoint-support edges.",
+  "selection": "All712721 recorded matching-filter survivors from879449 complete localdomains; no additional pruning",
+  "configuration": {
+    "time_limit_seconds": 5400,
+    "solver": "ipm",
+    "threads": 1,
+    "crossover": "off",
+    "presolve": "HiGHS defaults; adaptive sublimits disclosed in log"
+  },
+  "budget_rationale": "Prior four-coordinate filtered run1432.875seconds with230879choices; this model712721choices (ratio defined by these counts).5400second cap is not a speed guarantee; no GPU substitution or automatic retry",
+  "gate_outcomes": {
+    "filter": "INDEPENDENT_SIX_COORDINATE_NEIGHBORHOOD_MATCHING_FILTER_PASS",
+    "model": "INDEPENDENT_SIX_COORDINATE_FILTERED_FULL_MOMENT_MODEL_PASS",
+    "resource": "Parent authorized single5400-second attempt after recorded RAM/disk observation; resources notreserved"
+  },
+  "criterion": "Only strictlypositive exact support-function bound over all712721survivors, with independent removed-choice proofs and raw-neighborhood arithmetic review, is candidate conditional exclusion. Numericalzero/timeout/incompletevectors are not proof",
+  "single_attempt": true,
+  "automatic_retries": false,
+  "target_resolution": false
+}

@@ -1,0 +1,158 @@
+{
+  "status": "INDEPENDENT_CONDITIONAL_ROOK18_ENCODING_AND_SPECTRUM_PASS",
+  "timestamp": "2026-09-17T11:51:48.727642+00:00",
+  "source_commit": "7c5e2bb59580fdae1c0a0eb9beb2513a41ecdad8",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260917_rook_regular_set_recheck.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260917_rook_regular_set/manifest.json": "3b094c772962595b8bf5a315fdd1cdde7ebdb5c4ab826c9bb1959995d5ca3bf7",
+    "acceleration/theory_20260917_rook_regular_set.py": "a324971b7b2b192bbfc56e3571ace852caab2ca2d740d80db8d3f0f0f3c51083",
+    "docs/THEORY_20260917_ROOK_REGULAR_SET.md": "693020e3d413718ce42ac4c0ea3dc3aa6da1f08195d4917584fdedd114cab458",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260917_rook_regular_set/exact_matrices.json": "894d7bce3c4273ebc5c48303f3cbd69e932487f9a4de153711cd3989d8c285c6",
+    "acceleration/results/20260917_rook_regular_set/summary.json": "c77dce98e0ec050e606eee2e1a23200f6b1e4b4cf9493fbea55d7c561f76d5ae",
+    "acceleration/audit_20260917_rook_regular_set_recheck.py": "263efbad4f65923a836a4f89270e939523e7e8beda6061f18e69bc38c1f11233",
+    "acceleration/audit_20260917_partial_matching.py": "051dbc568011cf5c76f41fddf01281d8d8959875ccda88a1491685edd9a6d138"
+  },
+  "independent_derivation": [
+    "A target has degree14 by the diagonal identity. An induced rook9 B has degree4 and already realizes lambda1/mu2 for every pair inside B. Hence any outside vertex has at most one B neighbor. There are exactly9*(14-4)=90 cross edges and90 outside vertices, forcing exactlyone each and ten outside neighbors for each B vertex.",
+    "Order the9 cells by their unique B neighbor: T=I9 tensor1_10^T. Then TT^T=10I9 and J9,90=J9*T. Multiplication of A=[B,T;T^T,H] gives top-left identity automatically, cross identity TH=(2J9-B-I9)T and lower identity H^2=12I-H+2J-T^T*T. Conversely symmetric binary loopless H satisfying these two equations makes A satisfy every target entry. No degree assumption or normalization beyond this explicit labeling is added.",
+    "TH=QT counts neighbors in each cell: Qii=1, Qij=1 for a B edge and2 otherwise. Symmetry gives internal5K2, cross perfect matchings or2-regular bipartite graphs and H degree13.",
+    "The rook adjacency is (J3-I3) tensor I3 + I3 tensor (J3-I3), giving B eigenvalues4^1,1^4,(-2)^4. Q acts as13,-2,1 on those subspaces. Each simultaneous eigenvector produces quotient block[[b,10],[1,q]]. The constant block has roots14,3; the other8blocks have roots3,-4. Thus quotient multiplicities1,9,8.",
+    "The18-dimensional cell-constant subspace is invariant, and since A is symmetric its orthogonal complement is invariant. It is precisely[0;x] with Tx=0, dimension81. The full target has eigenvalues14^1,3^54,(-4)^44 from the identity and trace, so this complement requires3^45,(-4)^36. This is compatible, not a contradiction."
+  ],
+  "known_positive_rook_and_corrupted_edge": true,
+  "exact_determinant_checks": [
+    {
+      "matrix": "Q_characteristic",
+      "degree": 9,
+      "distinct_exact_determinants": 10,
+      "factors": [
+        [
+          13,
+          1
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "corrupted_constant_rejected": true
+    },
+    {
+      "matrix": "quotient_characteristic",
+      "degree": 18,
+      "distinct_exact_determinants": 19,
+      "factors": [
+        [
+          14,
+          1
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          -4,
+          8
+        ]
+      ],
+      "corrupted_constant_rejected": true
+    }
+  ],
+  "independent_set_residual_controls": [
+    {
+      "case": 0,
+      "edges": 0,
+      "full_residual_nonzeros": 9720,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 1,
+      "edges": 210,
+      "full_residual_nonzeros": 9159,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 2,
+      "edges": 567,
+      "full_residual_nonzeros": 8256,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 3,
+      "edges": 875,
+      "full_residual_nonzeros": 8570,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 4,
+      "edges": 1002,
+      "full_residual_nonzeros": 8710,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 5,
+      "edges": 1273,
+      "full_residual_nonzeros": 9299,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 6,
+      "edges": 1344,
+      "full_residual_nonzeros": 9468,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 7,
+      "edges": 1525,
+      "full_residual_nonzeros": 9566,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 8,
+      "edges": 1602,
+      "full_residual_nonzeros": 9546,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    },
+    {
+      "case": 9,
+      "edges": 1730,
+      "full_residual_nonzeros": 9606,
+      "block_identity": true,
+      "corrupted_identity_rejected": true
+    }
+  ],
+  "producer_imported": false,
+  "shared_components": [
+    "Python standard library",
+    "artifact hash helper only; no producer algebra imports"
+  ],
+  "approved_scope": "Exact conditional block-equivalence and quotient-spectrum statements for targets containing an induced labeled rook9, with arbitrary labels inside every10-vertex cell.",
+  "excluded_scope": [
+    "No proof every target contains a rook9.",
+    "No exclusion or target resolution.",
+    "Literature-triage paragraph and historical archive attribution were not independently re-audited; no literature-status promotion.",
+    "Finite calibration cases support implementation checks; universal equivalence rests on the written block derivation."
+  ],
+  "fresh_review_after_source_collision": true,
+  "does_not_depend_on_missing_previous_auditor": true,
+  "statement": "For every symmetric binary hollow90-by90 H and fixed labeled rook B with T=I9 tensor ones10, A=[[B,T],[T^T,H]] satisfies the target identity if and only if TH=(2J-B-I)T and H^2=12I-H+2J-T^T*T. Every target containing an induced rook9 admits this representation; the18cell quotient has spectrum14^1,3^9,(-4)^8, leaving3^45,(-4)^36, with no contradiction."
+}
