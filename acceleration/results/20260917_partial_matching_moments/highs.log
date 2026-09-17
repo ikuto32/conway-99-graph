@@ -1,0 +1,55 @@
+Running HiGHS 1.15.1 (git hash: 04024d7): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+LP has 5310 rows; 61450 cols; 4425506 nonzeros
+Coefficient ranges:
+  Matrix  [1e+00, 1e+00]
+  Cost    [1e+00, 1e+00]
+  Bound   [0e+00, 0e+00]
+  RHS     [1e+00, 2e+00]
+Presolving model
+5028 rows, 61127 cols, 4411191 nonzeros 1s
+Dependent equations search running on 5025 equations with time limit of 1.00s
+Dependent equations search terminated after 0.23s due to expected time exceeding limit
+5025 rows, 61121 cols, 4159752 nonzeros 2s
+Presolve reductions: rows 5025(-285); columns 61121(-329); nonzeros 4159752(-265754) 
+Solving the presolved LP
+IPX model has 5025 rows, 61121 columns and 4159752 nonzeros
+Input
+    Number of variables:                                61121
+    Number of free variables:                           0
+    Number of constraints:                              5025
+    Number of equality constraints:                     5025
+    Number of matrix entries:                           4159752
+    Matrix range:                                       [1e+00, 1e+00]
+    RHS range:                                          [1e+00, 2e+00]
+    Objective range:                                    [1e+00, 1e+00]
+    Bounds range:                                       [0e+00, 0e+00]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.00e+00, 1.00e+00]
+    Scaled cost norm:                                   1
+    Scaled bounds norm:                                 2
+IPX version 1.0
+Interior point solve
+ Iter       primal obj         dual obj       pinf       dinf       gap      time
+   0   -4.63984320e-16   0.00000000e+00   6.47e-01   7.74e-01  4.64e-16       2.7
+   1    3.87567607e+03  -1.28130147e+02   1.40e-01   7.74e-07  2.14e+00       3.0
+   2    1.54826867e+03  -1.21694858e+02   4.77e-02   7.75e-13  2.34e+00       3.5
+   3    5.16269607e+02  -9.46466743e+01   8.48e-03   1.55e-15  2.88e+00       4.1
+   4    2.19574232e+02   2.13798382e+01   2.46e-03   2.66e-15  1.63e+00       5.5
+ Constructing starting basis...
+ Iter       primal obj         dual obj       pinf       dinf       gap      time
+   5    1.66799072e+02   1.65978425e+02   1.43e-03   3.55e-12  4.90e-03      15.8
+   6    1.80275244e+02   2.91266519e+02   1.01e-03   2.56e-12  4.69e-01      30.5
+   7    2.41737533e+02   3.56819445e+02   7.63e-04   2.07e-12  3.83e-01      47.0
+Summary
+    Runtime:                                            62.83s
+    Status interior point solve:                        time limit
+    Status crossover:                                   not run
+WARNING: Ipx: Stopped
+WARNING: Ipx: IPM       reached time limit
+Model status        : Time limit reached
+IPM       iterations: 7
+Objective value     :  0.0000000000e+00
+HiGHS run time      :         62.85

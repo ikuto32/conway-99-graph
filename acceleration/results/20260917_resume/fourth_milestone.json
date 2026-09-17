@@ -1,0 +1,517 @@
+{
+  "as_of": "2026-09-17T10:21:50.216626+00:00",
+  "source_commit": "2c7e733827ef05c6da445f7787fe676962b9d334",
+  "previous_report": "docs/RESEARCH_20260917_THIRD_WAVE.md",
+  "checkpoint": "acceleration/results/20260917_whole_star_rerank_v3_checkpoint.json",
+  "checkpoint_sha256": "ce0ebb9f245502724979dcc7e90ac988662609786bc0a9f245774b0b08055442",
+  "target": {
+    "status": "UNKNOWN",
+    "supporting_claims": [],
+    "external_review": "No target-resolution artifact submitted for external review.",
+    "overall_search_coverage": null,
+    "coverage_reason": "Overall search coverage: UNKNOWN; no validated denominator."
+  },
+  "claim_changes": [
+    {
+      "id": "C-WHOLE-STAR-RERANK-V3-CALIBRATION",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Only16 named saved calibration cases and their120 unordered pairs under ORIGINAL_STAR_SIMPLEX_PDHG_V1, same model payloads/init and the two specified checkpoint budgets; exact statistics of stored floats.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-PARTIAL-K-ONE-COORDINATE-DOMAINS",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Exactly prescribed162positiveKedges and all same-fibre/unlisted-other-coordinate absences; only one60edge matching coordinate and1680disjoint edges unfixed",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-PARTIAL-K-SAVED-POINT-ODDSETS",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Exact rational interpretation and perstar normalization of this saved floating vector; smaller-endpoint matching projection; no numerical tolerance",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-RERANK-V3-STAR-16-EXCLUSIONS",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Exactly these16 labeled fixedK assignments with prescribed absent edges; positive independent exact original-star lower bounds",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-RERANK-V3-STAR-16-NO-IMPROVEMENT",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "All16 exact original-star lower bounds exceed incumbent18481 upper bound",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    },
+    {
+      "id": "C-PARTIAL-K-FULL-MOMENT-ENCODING",
+      "revision": 1,
+      "status": "VERIFIED",
+      "review_state": "CLEAR",
+      "scope": {
+        "description": "Remaining162Kedges fixed, including13other same-sign and7cross matchings; all same-fibre and unlisted other-coordinate absences fixed. Only60freed matching edges+1680disjoint edges unknown.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      }
+    }
+  ],
+  "counts": {
+    "reranked_existing_candidates": 128,
+    "new_candidates": 0,
+    "eligible_untested_candidates": 112,
+    "selected_evaluations": 16,
+    "independently_checked_configurations": 16,
+    "original_star_choices_checked": 404686,
+    "worse_than_incumbent": 16,
+    "better_than_incumbent": 0,
+    "unseparated_intervals": 0,
+    "partial_centers": 84,
+    "partial_domain_choices": 54478,
+    "odd_subsets": 2048,
+    "violated_saved_point_masks": [
+      2047
+    ]
+  },
+  "best_selected": {
+    "proposal_index": 66083,
+    "result": "INDEPENDENT_RAW_CHECK_PASS",
+    "fixed_K_excluded": true,
+    "domain_choices_checked": 25496,
+    "complete_domain_sets_reenumerated_here": false,
+    "domain_completeness_dependency": "Hash-bound prior independent exhaustive audit; source reviewed",
+    "lower_approximate": 8.190622896422129,
+    "upper_approximate": 8.190622973001425
+  },
+  "calibration": {
+    "statistics": {
+      "iterations500": {
+        "mean_gap": {
+          "numerator": "10745676638757410733",
+          "denominator": "576460752303423488",
+          "approximate": 18.64077753050803
+        },
+        "median_gap": {
+          "numerator": "1338087308882577117",
+          "denominator": "72057594037927936",
+          "approximate": 18.569691741001886
+        },
+        "individual_gaps": [
+          {
+            "proposal_index": 51030,
+            "gap": {
+              "numerator": "652703945261635263",
+              "denominator": "36028797018963968",
+              "approximate": 18.11617370732863
+            }
+          },
+          {
+            "proposal_index": 49629,
+            "gap": {
+              "numerator": "5112732538859189",
+              "denominator": "281474976710656",
+              "approximate": 18.164074826853454
+            }
+          },
+          {
+            "proposal_index": 71703,
+            "gap": {
+              "numerator": "660969135116495259",
+              "denominator": "36028797018963968",
+              "approximate": 18.345578809322728
+            }
+          },
+          {
+            "proposal_index": 74803,
+            "gap": {
+              "numerator": "332092893127421541",
+              "denominator": "18014398509481984",
+              "approximate": 18.43485881322224
+            }
+          },
+          {
+            "proposal_index": 50028,
+            "gap": {
+              "numerator": "333541279603144959",
+              "denominator": "18014398509481984",
+              "approximate": 18.51526041391743
+            }
+          },
+          {
+            "proposal_index": 65848,
+            "gap": {
+              "numerator": "667103906125571533",
+              "denominator": "36028797018963968",
+              "approximate": 18.515852909949714
+            }
+          },
+          {
+            "proposal_index": 1736,
+            "gap": {
+              "numerator": "668876510305316049",
+              "denominator": "36028797018963968",
+              "approximate": 18.565052559297193
+            }
+          },
+          {
+            "proposal_index": 55055,
+            "gap": {
+              "numerator": "668564806061319793",
+              "denominator": "36028797018963968",
+              "approximate": 18.55640102858324
+            }
+          },
+          {
+            "proposal_index": 77958,
+            "gap": {
+              "numerator": "336043972405456553",
+              "denominator": "18014398509481984",
+              "approximate": 18.654187772551932
+            }
+          },
+          {
+            "proposal_index": 25999,
+            "gap": {
+              "numerator": "167302699644315267",
+              "denominator": "9007199254740992",
+              "approximate": 18.57433092270658
+            }
+          },
+          {
+            "proposal_index": 10260,
+            "gap": {
+              "numerator": "340507580916085583",
+              "denominator": "18014398509481984",
+              "approximate": 18.901967819622588
+            }
+          },
+          {
+            "proposal_index": 80479,
+            "gap": {
+              "numerator": "680995400711898569",
+              "denominator": "36028797018963968",
+              "approximate": 18.901419338354614
+            }
+          },
+          {
+            "proposal_index": 46130,
+            "gap": {
+              "numerator": "340554645623689517",
+              "denominator": "18014398509481984",
+              "approximate": 18.904580435724046
+            }
+          },
+          {
+            "proposal_index": 47816,
+            "gap": {
+              "numerator": "42638128226837605",
+              "denominator": "2251799813685248",
+              "approximate": 18.935132673741965
+            }
+          },
+          {
+            "proposal_index": 41448,
+            "gap": {
+              "numerator": "685898060175841739",
+              "denominator": "36028797018963968",
+              "approximate": 19.037495473823768
+            }
+          },
+          {
+            "proposal_index": 50849,
+            "gap": {
+              "numerator": "344616758233548641",
+              "denominator": "18014398509481984",
+              "approximate": 19.130072983128336
+            }
+          }
+        ],
+        "lower_endpoint_violations": 0,
+        "upper_endpoint_violations": 0,
+        "total_endpoint_violations": 0,
+        "endpoint_check_count": 32,
+        "cases_with_endpoint_violations": 0,
+        "calibration_case_count": 16,
+        "endpoint_violation_records": [],
+        "exact_separated_pair_denominator": 120,
+        "upper_order_disagreements": 29,
+        "lower_order_disagreements": 24,
+        "upper_score_ties_among_separated_pairs": 0,
+        "lower_score_ties_among_separated_pairs": 0
+      },
+      "iterations5000": {
+        "mean_gap": {
+          "numerator": "169095870021623761",
+          "denominator": "18014398509481984",
+          "approximate": 9.386706413351474
+        },
+        "median_gap": {
+          "numerator": "21100464008006155",
+          "denominator": "2251799813685248",
+          "approximate": 9.37048838878514
+        },
+        "individual_gaps": [
+          {
+            "proposal_index": 51030,
+            "gap": {
+              "numerator": "1331763020044517",
+              "denominator": "140737488355328",
+              "approximate": 9.462745396465643
+            }
+          },
+          {
+            "proposal_index": 49629,
+            "gap": {
+              "numerator": "10411157255297897",
+              "denominator": "1125899906842624",
+              "approximate": 9.246965198259979
+            }
+          },
+          {
+            "proposal_index": 71703,
+            "gap": {
+              "numerator": "10306094679757187",
+              "denominator": "1125899906842624",
+              "approximate": 9.153650885946607
+            }
+          },
+          {
+            "proposal_index": 74803,
+            "gap": {
+              "numerator": "10485324124243555",
+              "denominator": "1125899906842624",
+              "approximate": 9.312838610714241
+            }
+          },
+          {
+            "proposal_index": 50028,
+            "gap": {
+              "numerator": "2607521072729279",
+              "denominator": "281474976710656",
+              "approximate": 9.263775782845865
+            }
+          },
+          {
+            "proposal_index": 65848,
+            "gap": {
+              "numerator": "5415417182462939",
+              "denominator": "562949953421312",
+              "approximate": 9.619713350273676
+            }
+          },
+          {
+            "proposal_index": 1736,
+            "gap": {
+              "numerator": "1304117824546219",
+              "denominator": "140737488355328",
+              "approximate": 9.266314468065808
+            }
+          },
+          {
+            "proposal_index": 55055,
+            "gap": {
+              "numerator": "2689177756536485",
+              "denominator": "281474976710656",
+              "approximate": 9.553878600373213
+            }
+          },
+          {
+            "proposal_index": 77958,
+            "gap": {
+              "numerator": "4924807798489507",
+              "denominator": "562949953421312",
+              "approximate": 8.748216015578526
+            }
+          },
+          {
+            "proposal_index": 25999,
+            "gap": {
+              "numerator": "2644772396689357",
+              "denominator": "281474976710656",
+              "approximate": 9.396119071032263
+            }
+          },
+          {
+            "proposal_index": 10260,
+            "gap": {
+              "numerator": "2706583368980761",
+              "denominator": "281474976710656",
+              "approximate": 9.615715757791893
+            }
+          },
+          {
+            "proposal_index": 80479,
+            "gap": {
+              "numerator": "10521374421248727",
+              "denominator": "1125899906842624",
+              "approximate": 9.344857706538015
+            }
+          },
+          {
+            "proposal_index": 46130,
+            "gap": {
+              "numerator": "5467957502663295",
+              "denominator": "562949953421312",
+              "approximate": 9.713043707405857
+            }
+          },
+          {
+            "proposal_index": 47816,
+            "gap": {
+              "numerator": "10497953298504553",
+              "denominator": "1125899906842624",
+              "approximate": 9.32405557075149
+            }
+          },
+          {
+            "proposal_index": 41448,
+            "gap": {
+              "numerator": "5289972440375125",
+              "denominator": "562949953421312",
+              "approximate": 9.396878724699187
+            }
+          },
+          {
+            "proposal_index": 50849,
+            "gap": {
+              "numerator": "5499195629060347",
+              "denominator": "562949953421312",
+              "approximate": 9.76853376688131
+            }
+          }
+        ],
+        "lower_endpoint_violations": 0,
+        "upper_endpoint_violations": 0,
+        "total_endpoint_violations": 0,
+        "endpoint_check_count": 32,
+        "cases_with_endpoint_violations": 0,
+        "calibration_case_count": 16,
+        "endpoint_violation_records": [],
+        "exact_separated_pair_denominator": 120,
+        "upper_order_disagreements": 14,
+        "lower_order_disagreements": 14,
+        "upper_score_ties_among_separated_pairs": 0,
+        "lower_score_ties_among_separated_pairs": 0
+      }
+    },
+    "strict_empirical_improvement": {
+      "mean_gap": true,
+      "median_gap": true,
+      "upper_order_disagreements": true,
+      "lower_order_disagreements": true,
+      "both_gap_statistics": true
+    },
+    "total_calibration_pairs": 120,
+    "exact_separated_pairs": 120,
+    "ambiguous_exact_pairs": 0,
+    "calibration_cases": 16,
+    "reranked_existing_candidates": 128,
+    "new_candidates": 0,
+    "next_LP_eligible_candidates": 112,
+    "numeric_statistics_certify_GPU_arithmetic": false,
+    "target_resolution": "UNKNOWN",
+    "overall_search_coverage": "UNKNOWN; no validated denominator"
+  },
+  "moment_model": {
+    "shape": [
+      5310,
+      61450
+    ],
+    "nonzeros": 4425506,
+    "probability_columns": 54478,
+    "hard_simplex_rows": 84,
+    "hard_reciprocity_rows": 1740,
+    "soft_moment_equalities": 3486,
+    "solver_outcome": {
+      "model_status": "HighsModelStatus.kTimeLimit",
+      "valid_primal": false,
+      "valid_dual": false,
+      "exact_bound_attempted": false,
+      "raw_objective_not_usable": true
+    }
+  },
+  "execution": {
+    "completed_shortlist_receipt": {
+      "started_at": "2026-09-17T10:03:48.665321+00:00",
+      "finished_at": "2026-09-17T10:10:59.025696+00:00",
+      "command": [
+        "build/research-venv/Scripts/python.exe",
+        "-B",
+        "acceleration/evaluate_whole_star_rerank_v3.py",
+        "--ranking",
+        "acceleration/results/20260917_whole_star_rerank_v3/ranking/summary.json",
+        "--ranking-audit",
+        "acceleration/results/20260917_independent_review/rerank_v3_results.json",
+        "--ranking-auditor",
+        "acceleration/audit_20260917_rerank_v3_results.py",
+        "--ranking-auditor-sha256",
+        "e4d70026be4cf1407bb01be39fafca75a13e83fb91f3e32113b3ffada05e40ed",
+        "--baseline-star-audit",
+        "acceleration/results/20260916_star_guided_round2/recovered_star_shortlist/index_18481/audit.json",
+        "--out",
+        "acceleration/results/20260917_whole_star_rerank_v3/shortlist",
+        "--seconds",
+        "30",
+        "--audit-seconds",
+        "60",
+        "--execute"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "returncode": 0,
+      "console_sha256": "e2fdbba1cf5f29099d3d8b7bca6a82f2a3a4a442b19d91e983bff2fff6fa4728",
+      "inputs_unchanged": true,
+      "mathematical_conclusion_from_exit_code": false
+    },
+    "other_processes": "UNKNOWN; this report generator does not observe live processes"
+  },
+  "input_paths": {
+    "ledger": "acceleration/results/20260917_resume/claims_at_fourth_milestone.yaml",
+    "previous_ledger": "acceleration/results/20260917_resume/claims_at_third_milestone.yaml",
+    "ranking": "acceleration/results/20260917_independent_review/rerank_v3_results.json",
+    "scope": "acceleration/results/20260917_independent_review/rerank_v3_16_scope.json",
+    "execution": "acceleration/results/20260917_rerank_v3_shortlist_execution/receipt.json",
+    "checkpoint": "acceleration/results/20260917_whole_star_rerank_v3_checkpoint.json",
+    "partial": "acceleration/results/20260917_independent_review/partial_matching/summary.json",
+    "oddsets": "acceleration/results/20260917_independent_review/partial_oddsets.json",
+    "moments": "acceleration/results/20260917_independent_review/partial_moments.json",
+    "validation": "acceleration/results/20260917_partial_matching_moments/claims_validation.json"
+  },
+  "input_sha256": {
+    "ledger": "2995692cfd759284cc360431383fa5143d7b5e4d5e7784f0eb4ab49db4802a2e",
+    "previous_ledger": "6c3c81cd3e04a05bdac2a48206d2c79b0c67c92b37ce0e6de8dc06cfa5df6921",
+    "ranking": "be17eb32de607753ca3b7f5972c80a38f58717a235119a78a03e12ccb10a56ed",
+    "scope": "fcb06b8ef67825d8b80e4309b569b8a952ab48026dbed80f1c6ff230bd223a6c",
+    "execution": "e3edc93ea85f99993e7aaca84c64ae1fb098ca20b9021d96cd82ab6cd07a3ac2",
+    "checkpoint": "ce0ebb9f245502724979dcc7e90ac988662609786bc0a9f245774b0b08055442",
+    "partial": "ed1d5b464466562cff722e45593095ec89c63bda761cfa7f784994abfc308b17",
+    "oddsets": "d36ba6b7389b1f98075285ab0182b412d3122255c94a2bf069ade3061865e8ff",
+    "moments": "1d4d08ecc9e73a00e06d210fa5137e7885e677756dc8f33b016fa3227ddec5e1",
+    "validation": "9eba0d2b26593ff71f893c9a1b22bc15146684430c0a239f19e4d108f7451a99"
+  },
+  "script_sha256": "3aab0678e9e876681180ef4abfa66129c9afcac1ca50a36ee71a0a3d49a92f5c",
+  "next_experiment": "Exact support-function extraction and a separately preregistered longer same-model solve if the first extraction is nonpositive.",
+  "draft_pr": "https://github.com/ikuto32/conway-99-graph/pull/1"
+}
