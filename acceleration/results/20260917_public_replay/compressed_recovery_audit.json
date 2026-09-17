@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-09-17T09:19:40.989541+00:00",
+  "source_commit": "3daebfb05d39aa31afea6fdbb6b80d6b108f1262",
+  "source_dirty": true,
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe",
+    "acceleration/audit_compressed_artifacts.py",
+    "acceleration/results/20260917_same_star_round/compressed_artifacts.json",
+    "--destination",
+    "build/compressed-independent-20260917",
+    "--out",
+    "acceleration/results/20260917_public_replay/compressed_recovery_audit.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "zlib_compile_version": "1.3.1",
+  "zlib_runtime_version": "1.3.1",
+  "status": "INDEPENDENT_THREE_GZIP_RECOVERIES_PASS",
+  "compressed_files": 3,
+  "total_compressed_bytes": 8212748,
+  "total_recovered_bytes": 232062143,
+  "inputs_sha256": {
+    "acceleration/results/20260917_same_star_round/compressed_artifacts.json": "ca28c054e74c8d87e835d41844d33339eae478f48db06a389891becca2b314ec",
+    "acceleration/audit_compressed_artifacts.py": "a2967eb2ac3d459e2cd7943579caf3ae780315367416a416ed43aaf94aefe924",
+    "acceleration/restore_compressed_artifacts.py": "e66814ec3ebb3950e55ceb110e560dfb1c630b1810fecd2541c27c8f938c7c5e",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "records": [
+    {
+      "path": "acceleration/results/20260917_same_star_round/family/all.json",
+      "compressed_path": "acceleration/results/20260917_same_star_round/family/all.json.gz",
+      "compressed_sha256": "5ce802b3a870b873a60204a89bb7471f904ed7061f3c3c00dd3814c5a0537410",
+      "compressed_size_bytes": 1582495,
+      "recovered_path": "build/compressed-independent-20260917/acceleration/results/20260917_same_star_round/family/all.json",
+      "recovered_sha256": "593203a4f39822cdbdd52ee9e0ac3c20c09f17c1356f7d56b113eebdaeac9045",
+      "recovered_size_bytes": 124683908,
+      "outcome": "PASS"
+    },
+    {
+      "path": "acceleration/results/20260917_same_star_round/search/coarse_gpu.json",
+      "compressed_path": "acceleration/results/20260917_same_star_round/search/coarse_gpu.json.gz",
+      "compressed_sha256": "afe8d801b9a8dc373eb7fe9b0b9b7ddb6e6c9014e872017375df46939ad0ac41",
+      "compressed_size_bytes": 5885288,
+      "recovered_path": "build/compressed-independent-20260917/acceleration/results/20260917_same_star_round/search/coarse_gpu.json",
+      "recovered_sha256": "f25f898704ce07bd93760030a44305be04d0fe3392b147cca87b402d83557218",
+      "recovered_size_bytes": 28847487,
+      "outcome": "PASS"
+    },
+    {
+      "path": "acceleration/results/20260917_same_star_round/search/coarse_input.txt",
+      "compressed_path": "acceleration/results/20260917_same_star_round/search/coarse_input.txt.gz",
+      "compressed_sha256": "e8b47efa2ecebcc19e16443a9a349cfbb81afbe5aa8c5631b847e574267ff115",
+      "compressed_size_bytes": 744965,
+      "recovered_path": "build/compressed-independent-20260917/acceleration/results/20260917_same_star_round/search/coarse_input.txt",
+      "recovered_sha256": "011445c8d52f6ebe080cb4e6d7be6b866932fa88ba334814a2b31a8e04c4efbc",
+      "recovered_size_bytes": 78530748,
+      "outcome": "PASS"
+    }
+  ],
+  "controls": [
+    {
+      "name": "known_positive",
+      "outcome": "PASS"
+    },
+    {
+      "name": "corrupt_crc",
+      "outcome": "REJECT",
+      "reason": "Error -3 while decompressing data: incorrect data check"
+    },
+    {
+      "name": "truncated_footer",
+      "outcome": "REJECT",
+      "reason": "Require exactly one complete gzip member without trailing bytes"
+    },
+    {
+      "name": "wrong_hash",
+      "outcome": "REJECT",
+      "reason": "Recovered size/hash mismatch"
+    },
+    {
+      "name": "wrong_size",
+      "outcome": "REJECT",
+      "reason": "Recovered size/hash mismatch"
+    },
+    {
+      "name": "trailing_bytes",
+      "outcome": "REJECT",
+      "reason": "Require exactly one complete gzip member without trailing bytes"
+    },
+    {
+      "name": "unsafe_path:../escape",
+      "outcome": "REJECT"
+    },
+    {
+      "name": "unsafe_path:Z:/other/escape",
+      "outcome": "REJECT"
+    }
+  ],
+  "originals_overwritten": false,
+  "code_review": {
+    "producer_imported_or_executed": false,
+    "inspected": "restore_compressed_artifacts.py",
+    "observations": [
+      "Resolves both source/target paths and rejects escape outside repository.",
+      "Checks compressed SHA-256 before gzip decompression, then recovered size/SHA-256 before writing.",
+      "Existing raw file must be byte-identical; differing data is not overwritten. New files use exclusive creation.",
+      "Does not separately check compressed_size_bytes, but compressed SHA-256 binds the entire bytes; this independent audit checks both.",
+      "Producer recovery buffers entire raw object; largest manifest file is 124,683,908 bytes. Independent audit streams output."
+    ]
+  },
+  "shared_trusted_components": [
+    "Python hashlib/SHA-256",
+    "zlib underlying gzip implementation",
+    "same raw manifest and compressed bytes"
+  ],
+  "limitations": [
+    "Engineering byte-recovery check only; no mathematical verification or claim promotion.",
+    "Recovery implementation is separate from producer but shares the underlying zlib decompression library.",
+    "Companions were read from the current workspace and pinned by hash; publication/network retrieval was not tested.",
+    "Original raw files were not consulted or overwritten; agreement is against the manifest's recorded raw hashes."
+  ],
+  "mathematical_claim_promotion": false,
+  "target_resolution": false
+}

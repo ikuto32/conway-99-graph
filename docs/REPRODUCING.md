@@ -27,6 +27,75 @@ uv run --locked --cache-dir .uv-cache-20260917 python -B acceleration/audit_2026
 元の全局所領域の完全性は、別実装の列挙監査と保存されたハッシュ付き入力に依存します。
 完全なチェックポイント再開には、後述の大きなローカル成果物も必要です。
 
+## 公開コミットだけを使う16候補の隔離再実行
+
+上の直接コマンドには移植上の制約があります。履歴成果物の一部が
+`C:/Users/ikuto/projects/conway-99-graph` の絶対パスを入力ハッシュに記録しているため、
+別の場所へのcloneではそのまま実行できません。隔離ガード付きの直接実行でも、この
+元ワークスペースへの読み取り要求を拒否しました。これはパスの問題であり、数学的反証ではありません。
+
+公開済みコミット `3daebfb05d39aa31afea6fdbb6b80d6b108f1262` から必要なGit blobだけを
+抽出し、明示的なパス移送ラッパーで再実行できます。次はリポジトリのルートで実行します。
+出力先には未使用の名前を指定してください。既存の監査結果は上書きしません。
+
+```powershell
+uv run --locked --cache-dir .uv-cache-20260917 python -B acceleration/audit_public_replay.py --commit 3daebfb05d39aa31afea6fdbb6b80d6b108f1262 --destination build/public-replay-new --out acceleration/results/public-replay-new
+uv run --locked --cache-dir .uv-cache-20260917 python -I acceleration/replay_published_checker.py --root build/public-replay-new --original-root C:/Users/ikuto/projects/conway-99-graph --checker acceleration/audit_20260917_fresh_review.py --relocate --run acceleration/results/20260917_fresh_star_shortlist --report acceleration/results/public-replay-new/fresh16-wrapper.json --checker-out acceleration/results/public-replay-new/fresh16.json
+uv run --locked --cache-dir .uv-cache-20260917 python -I acceleration/replay_published_checker.py --root build/public-replay-new --original-root C:/Users/ikuto/projects/conway-99-graph --checker acceleration/audit_20260917_triangle_matching.py --relocate --controls-only --report acceleration/results/public-replay-new/triangle-controls.json --checker-out acceleration/results/public-replay-new/triangle-unused.json
+```
+
+ラッパーは上記の元プロジェクトルートだけを抽出先へ移し、成果物のバイト列と数学的検証関数は
+変更しません。抽出先・明示した出力先・Python実行環境以外からのファイル読み取りを拒否し、
+読み取った入力のSHA-256を記録します。6件のパス移送対照は、正常な移送とパス越境、
+別ルート、似た接頭辞の拒否を検査します。ローカルの未公開キャッシュへフォールバックしません。
+
+実行記録では16件すべての厳密有理数チェックが成功し、保存済みの16結果、正常対照1件、
+破損対照6件と一致しました。所要時間はこの実行で約57.42秒です。これは既存の独立検証器の
+**反復実行**であり、新たな独立数学的導出ではありません。元の全局所領域の列挙完全性は
+ハッシュ付き監査に依存し、この再実行では全領域を再列挙していません。
+
+実行時入力の照合対象はfresh16が129パス、baselineが17パス、triangleが99パスです。
+これらは重複する集合なので合算しません。関連する環境・入力一覧を含む抽出集合は230パス、
+67,052,947バイトで、必要な実行時入力に欠落やハッシュ不一致はありませんでした。
+triangleでは入力一覧のハッシュ照合と6件の較正対照だけを実行し、約7,300万部分集合の
+完全な数学的監査は再実行していません。baselineの完全な行列監査もこの隔離監査では未実行です。
+過去のGPU探索などを含むすべての生成履歴の再現可能性や、新規ネットワークcloneは検証対象外です。
+
+正確な実行済みコマンド、作業ディレクトリ、ソース・出力ハッシュ、失敗した直接実行と
+抽出の資源上限到達は、[隔離再実行監査](../acceleration/results/20260917_public_replay/PUBLIC_REPLAY_AUDIT.md)
+と[監査receipt](../acceleration/results/20260917_public_replay/replay_receipt.json)を参照してください。
+
+## 第2波の圧縮された大きな入力を復元する
+
+`20260917_same_star_round` の次の3入力には、元バイト列を復元できるgzip同梱物があります。
+元JSONやテキストを再整形せず、再実行の前に以下で復元・照合してください。
+
+```powershell
+uv run --locked --cache-dir .uv-cache-20260917 python -B acceleration/restore_compressed_artifacts.py acceleration/results/20260917_same_star_round/compressed_artifacts.json
+```
+
+対象は `family/all.json`、`search/coarse_gpu.json`、`search/coarse_input.txt` の3ファイルです。
+[圧縮manifest](../acceleration/results/20260917_same_star_round/compressed_artifacts.json)が
+圧縮ファイルと復元後のSHA-256・サイズを固定します。圧縮サイズは合計8,212,748バイト、
+復元サイズは合計232,062,143バイトです。復元器は圧縮SHA-256、復元後のサイズとSHA-256を
+確認してから保存します。既存ファイルが同一なら保持し、異なるバイト列なら上書きせず失敗します。
+最大の元ファイルは124,683,908バイトで、復元器はそのバイト列をメモリ上に展開します。
+
+別実装のストリーミングzlib監査でも3件を新しい隔離先へ復元し、元ファイルを参照・上書きせずに
+manifestのサイズとSHA-256を確認しました。正常対照1件と、CRC破損・末尾切断・誤ハッシュ・
+誤サイズ・余分な末尾・危険なパスを含む拒否対照7件が期待どおりに動作しました。
+監査は復元器をimport・実行せず、復元器のソースも別に確認しています。ただし基盤のzlibと
+SHA-256実装は共有します。これは厳密なバイト復元の工学的確認であり、数学的主張の検証ではありません。
+
+```powershell
+uv run --locked --cache-dir .uv-cache-20260917 python -B acceleration/audit_compressed_artifacts.py acceleration/results/20260917_same_star_round/compressed_artifacts.json --destination build/compressed-independent-new --out acceleration/results/compressed-independent-new.json
+```
+
+この独立監査も未使用の出力先を指定してください。
+[実行済み監査receipt](../acceleration/results/20260917_public_replay/compressed_recovery_audit.json)に
+正確なコマンド、Python/zlibのバージョン、全入出力ハッシュ、ソース確認結果を保存しています。
+この3件のgzip復元は、後述する他の大きなローカル成果物の公開・再現可能性を意味しません。
+
 ## 最小構成
 
 Python 3.12 と Git を推奨します。提出形式の検証と下記の回帰テストは標準ライブラリだけで動きます。
