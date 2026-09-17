@@ -1,3 +1,29 @@
+# Latest independently checked continuation, 2026-09-17
+
+Target resolution: **UNKNOWN**. [Root CLAIMS.yaml](CLAIMS.yaml) remains authoritative.
+The [second completed milestone](docs/RESEARCH_20260917_SECOND_WAVE.md) records13
+further fixed-configuration exclusions, with no original-star objective improvement.
+The matching/pair reduction and separate filtered-domain LP now have independent
+exact audits. They concern the already excluded baseline18481 and do not establish
+unrestricted nonexistence. No automorphism is assumed.
+
+Latest verified computational checkpoint:
+`acceleration/results/20260917_same_star_round/checkpoint.json`, SHA256
+`4319fe3c2b4d33fc24aea779bc70159689d7d688090930ac723cb43da40933a0`.
+The same-sign wave exited0 at2026-09-17T08:58:17.021126+00:00. The next experiment
+is a new128-candidate original-star ranking from unused refined same-sign family
+members; preparation and independent mapping review precede execution. Inspect
+current process state before describing any invocation as running.
+
+[Draft PR1](https://github.com/ikuto32/conway-99-graph/pull/1) holds the research.
+The first published fresh16 package replayed successfully from Git-only inputs
+using explicit guarded relocation of historical absolute paths; see
+[public replay audit](acceleration/results/20260917_public_replay/PUBLIC_REPLAY_AUDIT.md).
+This repeats an existing checker; it is not a new independent derivation.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved first resumed milestone
+
 # Conway-99 resumed, 2026-09-17
 
 The user's new instruction authorizes continuation. The authoritative current
