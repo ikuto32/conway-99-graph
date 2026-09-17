@@ -1,0 +1,164 @@
+{
+  "status": "WHOLE_STAR_RERANK_V3_PRODUCER_CONTROLS_PASS",
+  "created_at": "2026-09-17T09:49:15.792807+00:00",
+  "inputs_sha256": {
+    "acceleration/qa_refine_whole_star_rank_v3.py": "a0d5f6623ef670918b33638a097886dd799487eec36e50d2bc365476d1bc7225",
+    "acceleration/refine_whole_star_rank_v3.py": "1b103f25edb3f73e2c7b35af474ce9f674ed9dcb3401b8d043dbfec1250e4592",
+    "acceleration/build/star_pdhg_gpu.exe": "9dc3ea92ca53a6ebc8dd3715f5a0586ef00b18d5c8c8b7bd4e61cb6c2ae11075",
+    "acceleration/star_pdhg_gpu.cu": "79593e296a4fba29882fb04b7e7dd88091dbc7f218135b6db2ba79c0b49002e8",
+    "acceleration/rank_fresh_star_pdhg.py": "0feedea50f90a852d62a659e2e9e3979edf83756c9bd07af1e24db5ae50b8eea"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/bad_magic.bin": "a8ac845ae85841abe129da1bfc93a8b7e8a1fa584675a01d2437c632a2af02b9",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/changed_checkpoint_count.bin": "5d8bb58a6c0b4e99cb0f59ced344a77973fc689cdc5b5bcbf0ebdbc259415a6b",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/changed_count.bin": "9c0f1523e98868052aefb784d7de130ee19468c52c9ab8d54f6a54851b1c366f",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/changed_payload.bin": "6433a35feeee7897d4e059b522d4726198521b609b7e7c959b83f652da1f4ed8",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/TOY_NOT_GPU_MODEL_500.bin": "ab0ea6274cd2b5d5ccbd305450d3f1f401612c2e142ea678d3d1ecf87cfa6aff",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/TOY_NOT_GPU_MODEL_5000.bin": "934bde36a46089449db03c96870ad79fbc0f33bdefcd9d4854487e6beafd1046",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/trailing.bin": "249afcd05196808eca668d1098fb9d27595f7de76bdd49982e495f7a7123633f",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/truncated.bin": "9438fe39006db83c067f8d6a1b74a3eec3422c76d3d42067368b29ccfca8fea7",
+    "acceleration/results/20260917_whole_star_rerank_v3_controls_v2/wrong_iteration.bin": "50d57384b56ad446c2b0b7c0a053680667249318e7c8514074020ff399530858"
+  },
+  "controls": [
+    {
+      "name": "HEADER_ONLY_FULL_PAYLOAD_AND_RECORD_IDENTITIES",
+      "outcome": "ACCEPT"
+    },
+    {
+      "name": "bad_magic",
+      "outcome": "REJECT",
+      "reason": "Wrong20-byte binary header"
+    },
+    {
+      "name": "changed_count",
+      "outcome": "REJECT",
+      "reason": "Frozen32-case single-checkpoint header differs"
+    },
+    {
+      "name": "changed_checkpoint_count",
+      "outcome": "REJECT",
+      "reason": "Frozen32-case single-checkpoint header differs"
+    },
+    {
+      "name": "wrong_iteration",
+      "outcome": "REJECT",
+      "reason": "Frozen32-case single-checkpoint header differs"
+    },
+    {
+      "name": "changed_payload",
+      "outcome": "REJECT",
+      "reason": "Model payload changed"
+    },
+    {
+      "name": "truncated",
+      "outcome": "REJECT",
+      "reason": "Binary size changed"
+    },
+    {
+      "name": "trailing",
+      "outcome": "REJECT",
+      "reason": "Binary size changed"
+    },
+    {
+      "name": "wrong_record_offset",
+      "outcome": "REJECT",
+      "reason": "Model record layout mismatch"
+    },
+    {
+      "name": "wrong_record_hash",
+      "outcome": "REJECT",
+      "reason": "Serialized model record changed"
+    },
+    {
+      "name": "wrong_record_length",
+      "outcome": "REJECT",
+      "reason": "Serialized model record changed"
+    },
+    {
+      "name": "missing_record",
+      "outcome": "REJECT",
+      "reason": "Incomplete model payload coverage"
+    },
+    {
+      "name": "wrong_record_order",
+      "outcome": "REJECT",
+      "reason": "Model record layout mismatch"
+    },
+    {
+      "name": "overwrite_input",
+      "outcome": "REJECT",
+      "reason": "Preserve source/fresh copy"
+    },
+    {
+      "name": "overwrite_output",
+      "outcome": "REJECT",
+      "reason": "Preserve source/fresh copy"
+    },
+    {
+      "name": "UNTESTED112_UNION8_PLUS8",
+      "outcome": "ACCEPT"
+    },
+    {
+      "name": "TIES_AND_OVERLAP_FILL",
+      "outcome": "ACCEPT"
+    },
+    {
+      "name": "duplicate_id",
+      "outcome": "REJECT",
+      "reason": "Exactly128distinct reranked IDs required"
+    },
+    {
+      "name": "bool_id",
+      "outcome": "REJECT",
+      "reason": "Exactly128distinct reranked IDs required"
+    },
+    {
+      "name": "missing_row",
+      "outcome": "REJECT",
+      "reason": "Exactly128distinct reranked IDs required"
+    },
+    {
+      "name": "missing_exclusion",
+      "outcome": "REJECT",
+      "reason": "Exactly16already-evaluated IDs required"
+    },
+    {
+      "name": "duplicate_exclusion",
+      "outcome": "REJECT",
+      "reason": "Exactly16already-evaluated IDs required"
+    },
+    {
+      "name": "unknown_exclusion",
+      "outcome": "REJECT",
+      "reason": "Exactly16already-evaluated IDs required"
+    },
+    {
+      "name": "nan_upper",
+      "outcome": "REJECT",
+      "reason": "Finite reranking values required"
+    },
+    {
+      "name": "infinite_lower",
+      "outcome": "REJECT",
+      "reason": "Finite reranking values required"
+    },
+    {
+      "name": "inverted_bracket",
+      "outcome": "REJECT",
+      "reason": "Inconsistent numerical bracket"
+    },
+    {
+      "name": "bool_score",
+      "outcome": "REJECT",
+      "reason": "Finite reranking values required"
+    }
+  ],
+  "positive_controls": 3,
+  "negative_controls": 24,
+  "source_import_shared_with_producer": true,
+  "independent_verification": false,
+  "scientific_model_fixtures": false,
+  "GPU_processes": 0,
+  "LP_runs": 0,
+  "scope": "Header-only byte and record identity plus deterministic untested112 union policy; no scientific claim"
+}

@@ -1,3 +1,23 @@
+# Latest verified milestone: reranked shortlist and partial-coordinate moments
+
+Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
+records the [fourth completed milestone](docs/RESEARCH_20260917_FOURTH_WAVE.md):
+16 further independently checked fixed-configuration exclusions, no incumbent
+improvement, complete partial-coordinate local domains, and a necessary full
+common-neighbor moment encoding. No target graph or general proof is established.
+
+Latest verified checkpoint: `acceleration/results/20260917_whole_star_rerank_v3_checkpoint.json`,
+SHA256 `ce0ebb9f245502724979dcc7e90ac988662609786bc0a9f245774b0b08055442`.
+It preserves incumbent18481 and all previous checkpoint evidence. The 60-second
+moment LP returned no valid solution; its zero objective field is unusable.
+A separately recorded 240-second same-model replay and a local matching filter
+are subsequent experiments. Inspect current receipts/processes before claiming
+that either is running or completed; do not infer liveness from this page.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved third milestone
+
 # Latest verified milestone: whole-family shortlist and reusable cuts
 
 Target resolution remains **UNKNOWN**. The authoritative [claim ledger](CLAIMS.yaml)
