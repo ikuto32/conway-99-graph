@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-29T19:11:01.493886+00:00",
+  "source_commit": "46807c5a4320f408c3df8ca1d618e1a1e4047fd9",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_rook_offdiagonal.py",
+    "--input",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json",
+    "--out",
+    "acceleration/results/20260930_rook_offdiagonal"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_offdiagonal.py": "365c9fe56dea8c5b1ac720bf295458d88ae91a888f33a82685a7cfbcb8cb7bbd",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Can every adjacent pair of right cells of the frozen one-cell factor witness pass all known length-two path upper bounds?",
+  "scope": "A specific frozen star of four incidence blocks and five internal matchings, with right cells (1,1),(1,2),(2,1),(2,2), respectively. Only each three-cell induced subproblem is tested. This is not all one-cell stars or all rook-containing targets.",
+  "selection_rule": "All four rook-adjacent right-cell pairs in lexicographic order; enumerate all 10! perfect matchings for each, using exact sound partial constraints.",
+  "success_or_falsification": "Empty domain rejects only the frozen star; otherwise raw perfect matchings witness survival of the separate pair tests. Pairwise survival does not establish a joint completion.",
+  "resource_limits": "Four domains, each bounded by 10! permutations. No numerical solver, randomness, or time-based pruning.",
+  "thresholds": null,
+  "thresholds_reason": "Integer exact comparisons only.",
+  "status": "CANDIDATE",
+  "independent_review_pending": true
+}

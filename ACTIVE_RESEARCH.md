@@ -9,10 +9,17 @@ new user request.
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
 The checkpoint-aware eight-coordinate continuation completed with 84 saved
 center domains and 2,290,122 local choices, including all 879,449 prior embedded
-choices. Producer output is **CANDIDATE** pending independent full-domain review:
+choices. Separate full-domain enumeration and every saved leaf passed independent
+checking; `C-PARTIAL-K-EIGHT-COORDINATE-DOMAINS` revision1 is **VERIFIED**.
+Producer output is preserved at:
 `acceleration/results/20260930_eight_domains/run01/summary.json`.
 The frozen protocol is [here](docs/NEXT_20260930_EIGHT_COORDINATE_CONTINUATION.md).
-The next gated computation is the [necessary neighborhood matching filter](docs/NEXT_20260930_EIGHT_COORDINATE_MATCHING_FILTER.md).
+The [necessary neighborhood matching filter](docs/NEXT_20260930_EIGHT_COORDINATE_MATCHING_FILTER.md)
+producer completed with 414,908 rejected choices and 1,875,214 survivors;
+its full independent audit is pending. The next gated computation is the
+[exact moment model](docs/NEXT_20260930_EIGHT_MOMENT_BUILD.md). Separate rook-cell
+results and one frozen-window exclusion are recorded with narrow scopes.
+Review continues in [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
 Consult fresh execution observations for process liveness; this document is
 not a live process monitor. Overall search coverage: UNKNOWN; no validated denominator.
 
