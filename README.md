@@ -21,7 +21,10 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [eighth resumed milestone](docs/RESEARCH_20260930_EIGHTH_WAVE.md) for
+See the [ninth resumed milestone](docs/RESEARCH_20260930_NINTH_WAVE.md) for
+three new fixed-factor exclusions, a short component-balance obstruction,
+and two completed UNKNOWN factor searches. Its broader factor models remain
+conditional on one core. The [eighth milestone](docs/RESEARCH_20260930_EIGHTH_WAVE.md) records
 the exact matching-pair/permutation counts, universal local-test limitations,
 and a small direct row proof. The [seventh milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) records
 two proof-checked fixed triangle/Q1 exclusions, a necessary 36-literal clause
