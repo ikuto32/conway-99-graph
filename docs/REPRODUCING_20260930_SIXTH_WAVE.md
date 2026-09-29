@@ -43,7 +43,8 @@ uv run --locked --offline --cache-dir .uv-cache-20260917 python acceleration/rec
 ```
 
 Use a new output path on each replay. The saved
-[reconstruction receipt](../acceleration/results/20260930_four_branch_strengthened_reconstruction/summary.json).
+[reconstruction receipt](../acceleration/results/20260930_four_branch_strengthened_reconstruction/summary.json)
+records the original exact byte replay.
 Its recipe replaces the base header, copies the whole original body, appends
 the4,662 equality units, then the branch's four literals. All four outputs
 have1,186,500 variables and4,141,120 clauses. Their complete hashes are in
