@@ -1,0 +1,91 @@
+{
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "verifier": "/root/state_literature_audit independent checking agent",
+  "timestamp": "2026-09-29T20:32:20.266266+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_degree_block_gram_bindings.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/degree_block_gram/summary.json": "8030415e025dd175aaba62879acf72dcffdf08076c435efe023a0e3935c9552d",
+    "acceleration/audit_20260930_degree_block_gram_bindings.py": "479188976b852072db67d8e3a9dc7b9050f4672ea5993e8904a0e0e41e7e8f55",
+    "acceleration/audit_20260930_degree_block_gram.md": "ffabcb40651220b7b7365a5e2e85d5c45ba7f7ddf7bbf69dd0b09f0f587de77d",
+    "acceleration/audit_20260930_degree_block_gram.py": "c97f8a832ec19deff6b4a75369f742ac5f4af78cf57dcced380da8201f75695f",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "shared_components": [
+    "Python standard library and exact integer arithmetic",
+    "tqdm for progress",
+    "pinned independent full-window encoding audit as scope premise; its source was not imported"
+  ],
+  "controls": {
+    "calibration": {
+      "known_internal_maximum": 11,
+      "forced_internal_maximum": 8,
+      "known_bipartite_maximum": 8,
+      "forced_bipartite_maximum": 8,
+      "corruptions_rejected": [
+        "DP_value",
+        "primal_degree",
+        "dual_alpha",
+        "negative_capacity",
+        "missing_capacity",
+        "residual_quota",
+        "internal_infeasible_forcing",
+        "bipartite_infeasible_forcing"
+      ]
+    },
+    "model_corruptions_rejected": [
+      "removed_degree",
+      "wrong_endpoint"
+    ],
+    "wrong_clause_sign_rejected": true
+  },
+  "unrestricted_target_resolution": false,
+  "external_review": false,
+  "status": "INDEPENDENT_DEGREE_BLOCK_UPPER_LEMMA_BINDING_PASS",
+  "claim_id": "C-ROOK-DEGREE-BLOCK-GRAM-UPPER-BOUND",
+  "claim_revision": 1,
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "statement": "For every integer vector on the59vertices and every fixed-value pattern admitting a completion of the160degree equations in the pinned780edge model, the exact maximum of its quadratic for27I-9A+J over that degree-only relaxation equals its fixed affine constant plus the ten independent degree-block maxima. A certified strictly negative such upper bound forbids that pattern in every target extension of this fixed scaffold.",
+  "scope": "The precise frozen central-factor scaffold, its780distinct Boolean edges and160degree equations. Four internal10vertex perfect-matching blocks, four10by10 perfect-matching blocks and two10by10 degree-two blocks. No claim of coverage of all rook embeddings or all targets.",
+  "assumptions": [
+    "The fixed pattern is degree-feasible; all31 reviewed patterns have separately checked attaining assignments.",
+    "Each certificate uses exact arithmetic and covers the entire relevant block, including forced values."
+  ],
+  "dependencies": [
+    {
+      "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+      "revision": 1,
+      "relation": "coverage"
+    },
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "verification_type": "Independent written derivation plus exact finite block/degree coverage audit; independent DP and dual-certificate checking calibrate the implementation.",
+  "proof": "acceleration/audit_20260930_degree_block_gram.md",
+  "checked_scope": {
+    "variables": 780,
+    "degree_equations": 160,
+    "block_partition": 10,
+    "raw_vectors": 9,
+    "internal_DP_certificates": 124,
+    "bipartite_primal_dual_certificates": 186
+  },
+  "limitations": [
+    "The common-neighbor constraints are discarded; positive relaxed maxima are not feasible target graphs.",
+    "This theorem gives a sufficient rejection method, not a complete characterization of target extensions.",
+    "No independent external peer review or novelty claim."
+  ]
+}

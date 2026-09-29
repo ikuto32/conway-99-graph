@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-29T20:04:17.059641+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_rook_gram_box_cut.py",
+    "--certificate",
+    "acceleration/results/20260930_rook_lazy_wave01/round_04/minimized/certificate.json",
+    "--prior-audit",
+    "acceleration/results/20260930_rook_lazy_wave01/round_04/independent_nogood.json",
+    "--out",
+    "acceleration/results/20260930_rook_box_batch01/cut_04"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_gram_box_cut.py": "4a491cf7a24a05a116b20bf12ff3a6283ff93ca93a5c792b97027a50bcb612ba",
+    "acceleration/results/20260930_rook_lazy_wave01/round_04/minimized/certificate.json": "de2a18217dc0fd8374271c1aa84b64bcf73ea263b4ada0d3bc65fad4cc3f6821",
+    "acceleration/results/20260930_rook_lazy_wave01/round_04/independent_nogood.json": "0fb0005957dbebb86be6f62887b39fe71aee682daae4aea016e095a3eaf0b8d2",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Can a prior exact negative Gram quadratic remain negative while some supporting Boolean edge values are free?",
+  "scope": "One fixed central-factor model and one independently checked Gram vector. New clause must receive a fresh independent audit before use.",
+  "selection_rule": "For each nonzero variable coefficient c and current value a, freeing that edge raises the box maximum by max(0,c*(1-2a)). Free ascending gains, breaking ties by variable ID, while the new maximum stays strictly negative.",
+  "success_criteria": "Exact global Boolean-box upper bound is negative and the new clause has no more literals than its parent support clause.",
+  "falsification_criteria": "Any nonnegative upper bound or prior-audit/hash mismatch rejects the proposed cut.",
+  "resource_limits": "One finite certificate, at most780variable coefficients; no solver or floating arithmetic.",
+  "status": "CANDIDATE",
+  "independent_review_pending": true,
+  "sat_launch_authorized_by_this_run": false
+}

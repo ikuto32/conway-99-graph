@@ -1,0 +1,42 @@
+# Fourth resumed milestone, 2026-09-30 JST
+
+Fourteen independently checked claims were added since the [third milestone](RESEARCH_20260930_THIRD_WAVE.md). They certify conditional Gram cuts and show why three proposed local tests add no information under their hypotheses. Two specific induced29 patterns have exact extension obstructions. No whole eight-coordinate family or unrestricted target is excluded.
+
+**As of:** 2026-09-29T20:53:11.171247+00:00; source commit `cc5ddc379526873f8d38888f8a2085f3b3123aae`. [Checkpoint](../acceleration/results/20260930_resume/fourth_milestone_checkpoint.json), [ledger snapshot](../acceleration/results/20260930_resume/claims_at_fourth_milestone.yaml). Previous report: [third milestone](RESEARCH_20260930_THIRD_WAVE.md).
+
+**Verdict:** target resolution UNKNOWN. No independently validated target graph or general nonexistence proof; no candidate target resolution is under external review. [Draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3) remains a research review.
+
+**Verified changes:** all revision 1; exact statements and dependencies are in the snapshot.
+
+| Claim | Exact scope and evidence |
+| --- | --- |
+| `C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS` | Universal conditional necessary target-extension rule. Strictly generalizes the complete-nonzero-support cut by allowing some nonzero-coefficient variables to vary. [Audit](../acceleration/results/20260930_independent_review/target_gram_boolean_box_lemma.json). |
+| `C-ROOK-FOUR-FACTOR-INITIAL-GRAM-BOX-NOGOOD` | One exact21value forbidden pattern in one frozen-central-factor family. The excluded pattern is broader than the parent45value pattern; no entire-family or target-level exclusion is asserted. [Audit](../acceleration/results/20260930_independent_review/initial_gram_box_nogood_claim_binding.json). |
+| `C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION01` | The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed. [Audit](../acceleration/results/20260930_independent_review/rook_box_collection01.json). |
+| `C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION02` | The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed. [Audit](../acceleration/results/20260930_independent_review/rook_box_collection02.json). |
+| `C-ROOK-GRAM-BOX-WAVE02` | One finite wave in one frozen780edge family; no target-wide coverage or complete-family exclusion [Audit](../acceleration/results/20260930_independent_review/rook_box_wave02_binding.json). |
+| `C-FIXED-SCAFFOLD-RELABELING-CUT-TRANSPORT` | Universal conditional transport theorem for exact target-extension clauses and specification-preserving permutations; no target automorphism, existence, or nonexistence assertion. [Audit](../acceleration/results/20260930_independent_review/scaffold_cut_transport_lemma.json). |
+| `C-ROOK-FOUR-FACTOR-SCAFFOLD-RELABELINGS32` | The exact32supplied maps in this one frozen family; no census completeness or hypothetical-target automorphism assertion. [Audit](../acceleration/results/20260930_independent_review/rook_scaffold_relabelings32.json). |
+| `C-ROOK-DEGREE-BLOCK-GRAM-UPPER-BOUND` | The precise frozen central-factor scaffold, its780distinct Boolean edges and160degree equations. Four internal10vertex perfect-matching blocks, four10by10 perfect-matching blocks and two10by10 degree-two blocks. No claim of coverage of all rook embeddings or all targets. [Audit](../acceleration/results/20260930_independent_review/degree_block_gram/lemma_claim_binding.json). |
+| `C-ROOK-DEGREE-BLOCK-GRAM-CUT-12` | One12literal conditional pattern in one fixed central-factor scaffold; all780free edge labels use model SHA25626908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e. This does not exclude the whole scaffold or the unrestricted target. [Audit](../acceleration/results/20260930_independent_review/degree_block_gram/cut_claim_binding.json). |
+| `C-ROOK-GRAM-CUT-ORBITS-352` | Conditional target-extension necessities in one frozen central-factor family; no target automorphism assumption, SAT conclusion, full-family exclusion or unrestricted resolution. [Audit](../acceleration/results/20260930_independent_review/rook_cut_orbits/summary.json). |
+| `C-INDEPENDENT-SET-MATCHING-CAP-COMPOSITION` | Universal finite-graph implication under independent-endpoint and matching hypotheses; only common-neighbor upper caps, not graph completion. [Audit](../acceleration/results/20260930_independent_review/local_redundancy_v2/matching_cap_lemma.json). |
+| `C-CLOSED-TWO-NEIGHBORHOOD-GRAM-REDUNDANCY` | A universal necessary-test redundancy theorem for two complete nonadjacent center neighborhoods satisfying the stated local equalities; no target existence conclusion. [Audit](../acceleration/results/20260930_independent_review/local_redundancy_v2/closed_gram_lemma.json). |
+| `C-CLOSED-TWO-NEIGHBORHOOD-LOWER-GRAM-REDUNDANCY` | Universal conditional theorem on two complete nonadjacent neighborhoods with the stated exact center equalities; no additional pair caps assumed. [Audit](../acceleration/results/20260930_independent_review/closed28_lower_lemma/summary.json). |
+| `C-CLOSED29-TWO-SPECIFIC-GRAM-OBSTRUCTIONS` | Only these two specific induced29 patterns; no entire closed28 graph, center-star domain, or eight-coordinate family is excluded. [Audit](../acceleration/results/20260930_independent_review/closed29_specific_gram_v2/summary.json). |
+
+**Work completed:** box wave02 made two solver attempts: one independently checked local59 object, one exact new23literal box clause, and one UNKNOWN result. The final ten-clause list includes its prior nine clauses. Eleven source clauses (those ten plus the degree-constrained12literal clause), under32 supplied checked maps, produce352 distinct necessary clauses. These overlapping stages are not summed. Registry population: 74 claims, 72 VERIFIED/CLEAR and2 CANDIDATE/CLEAR.
+
+The matching-cap composition theorem and two closed-neighborhood Gram theorems are exact conditional results. The Gram fixture checks covered2,688 saved raw28 graphs; that finite population is not all local stars. The proofs, not numerical eigenvalues, establish the general implications.
+
+**Coverage:** Overall search coverage: UNKNOWN; no validated denominator. No excluded-graph union size, fixed-family completion percentage or unrestricted branch fraction is available.
+
+**Best result:** the12literal degree-constrained cut has exact upper bound `-176426969710399200` for its fixed integer vector over the larger degree-only relaxation. This forbids its falsifying pattern in one frozen rook scaffold. Shorter clause length is a syntactic metric; no increase in excluded degree-feasible assignments or solver speed is claimed. The two raw29 quadratics are `-64940` and `-5868` for different vectors and are not ranked against this objective.
+
+**Problems:** of the two raw29 patterns, one already violates a restored full99 partial pair cap, while the other passes all4,851 restored partial caps. Both pass their406 induced29 caps. No sampled or complete star exclusion follows. Producer screen totals remain unapproved by these narrow audits. The local raw-matrix metadata correction, the scaffold checker convention correction and the raw29 checker's handwritten expected-list correction retain their original failures and source versions. No failed check was silently overwritten.
+
+**Execution:** this milestone's named experiments and audits completed. Subsequent orbit-SAT and full99-SAT records are separate; this static checkpoint makes no live-process assertion. Saved solver timeouts are UNKNOWN, and post-model native cleanup errors remain visible.
+
+**Next experiment:** a bounded proof-producing solve of the complete99vertex eight-coordinate encoding, after independent clause reconstruction and calibration, followed by independent full-object or proof checking. It still covers only the prescribed120fixed-K family. Broader normalization requires a separate coverage audit.
+
+**References:** [source base](https://github.com/ikuto32/conway-99-graph/commit/cc5ddc379526873f8d38888f8a2085f3b3123aae), [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), [fourth recovery guide](REPRODUCING_20260930_FOURTH_WAVE.md), [artifact catalog](../acceleration/results/20260930_resume/fourth_artifact_catalog.json). Ledger artifact availability is updated only after an immutable published commit is confirmed.

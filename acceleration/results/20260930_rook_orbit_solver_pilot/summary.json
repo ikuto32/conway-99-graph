@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-09-29T20:45:09.313678+00:00",
+  "solver_attempts": 1,
+  "actual_result": {
+    "solver_answer": "SAT_MODEL_UNCHECKED",
+    "pysat_version": "1.9.dev15",
+    "engine": "cadical195",
+    "variables": 30420,
+    "clauses": 3690172,
+    "stats": {
+      "restarts": 1382,
+      "conflicts": 57882,
+      "decisions": 118045,
+      "propagations": 68423730
+    },
+    "parse_seconds": 0.5309999999590218,
+    "load_seconds": 1.125,
+    "solve_seconds": 10.891000000061467,
+    "worker_exit_code": 3221226505,
+    "worker_observed_stopped": true,
+    "wall_seconds": 12.859000000171363,
+    "wall_limit_seconds": 300,
+    "conflict_limit": 1000000
+  },
+  "independent_checks": [
+    {
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "acceleration/audit_20260930_rook_orbit_sat.py",
+        "check",
+        "--base-cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_free_internal_sat\\instance.cnf",
+        "--augmented-cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_orbit_solver_pilot\\instance.cnf",
+        "--model",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_free_internal_sat\\model.json",
+        "--assignment",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_orbit_solver_pilot\\main\\model.json",
+        "--orbit-audit",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\rook_cut_orbits\\summary.json",
+        "--orbit-audit-sha256",
+        "9abc83c032bc5454c6f05d6cab0146fd39775f9f994d4f4dc3579dfccf6ef6ac",
+        "--encoding-audit",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_free_internal_sat\\independent_cnf_encoding.json",
+        "--encoding-audit-sha256",
+        "a74e821f70680187e0ee14fb956d51928e6aa9517acc1bc0186448b32c985ba0",
+        "--out",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_orbit_solver_pilot\\independent_sat"
+      ],
+      "exit_code": 1,
+      "log_sha256": "b6d8e88c83ee5cb172506fe3613e2bc91e17b5be6763c850cea38e0fb6ae9f6b"
+    }
+  ],
+  "target_resolution": false,
+  "scope": "Frozen780edge family with352Gramcuts only.",
+  "unsat_proof_independent_replay_pending": false,
+  "worker_observed_stopped": true
+}

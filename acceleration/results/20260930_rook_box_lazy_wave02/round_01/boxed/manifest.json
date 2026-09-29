@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-29T20:18:28.891266+00:00",
+  "source_commit": "9c2260a0d6f7c2f1355867ed226b7cc4e2bf05eb",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-sat-venv\\Scripts\\python.exe",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_rook_gram_box_cut.py",
+    "--certificate",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_box_lazy_wave02\\round_01\\minimized\\certificate.json",
+    "--prior-audit",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_box_lazy_wave02\\round_01\\independent_support_nogood.json",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_box_lazy_wave02\\round_01\\boxed"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.12",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_gram_box_cut.py": "4a491cf7a24a05a116b20bf12ff3a6283ff93ca93a5c792b97027a50bcb612ba",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_rook_box_lazy_wave02/round_01/minimized/certificate.json": "5748eb16b97de67951b471d89d1049df6ab0c6c851f634a30093f2730cba298f",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_rook_box_lazy_wave02/round_01/independent_support_nogood.json": "855015c98c807d6e4b89540247f820624c2f101eb170b91df94946074601508c",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Can a prior exact negative Gram quadratic remain negative while some supporting Boolean edge values are free?",
+  "scope": "One fixed central-factor model and one independently checked Gram vector. New clause must receive a fresh independent audit before use.",
+  "selection_rule": "For each nonzero variable coefficient c and current value a, freeing that edge raises the box maximum by max(0,c*(1-2a)). Free ascending gains, breaking ties by variable ID, while the new maximum stays strictly negative.",
+  "success_criteria": "Exact global Boolean-box upper bound is negative and the new clause has no more literals than its parent support clause.",
+  "falsification_criteria": "Any nonnegative upper bound or prior-audit/hash mismatch rejects the proposed cut.",
+  "resource_limits": "One finite certificate, at most780variable coefficients; no solver or floating arithmetic.",
+  "status": "CANDIDATE",
+  "independent_review_pending": true,
+  "sat_launch_authorized_by_this_run": false
+}
