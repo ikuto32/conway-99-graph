@@ -16,9 +16,16 @@ Producer output is preserved at:
 The frozen protocol is [here](docs/NEXT_20260930_EIGHT_COORDINATE_CONTINUATION.md).
 The [necessary neighborhood matching filter](docs/NEXT_20260930_EIGHT_COORDINATE_MATCHING_FILTER.md)
 producer completed with 414,908 rejected choices and 1,875,214 survivors;
-its full independent audit is pending. The next gated computation is the
-[exact moment model](docs/NEXT_20260930_EIGHT_MOMENT_BUILD.md). Separate rook-cell
-results and one frozen-window exclusion are recorded with narrow scopes.
+its full independent audit passed, as did complete reconstruction of the
+[exact moment model](docs/NEXT_20260930_EIGHT_MOMENT_BUILD.md). The
+[second resumed milestone](docs/RESEARCH_20260930_SECOND_WAVE.md) records seven
+additional verified claims, including a proof-checked fixed rook-window UNSAT
+result, a broader valid local 59-vertex witness, and that witness's exact Gram
+extension obstruction. All retain their declared scopes. The
+[third milestone](docs/RESEARCH_20260930_THIRD_WAVE.md) adds all six independently
+checked nonpositive GPU support bounds and eight more checked local Gram
+obstructions. Neither establishes LP feasibility or whole-family exclusion.
+Subsequent SAT-cut waves must be read from their completed audit receipts.
 Review continues in [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
 Consult fresh execution observations for process liveness; this document is
 not a live process monitor. Overall search coverage: UNKNOWN; no validated denominator.

@@ -1,0 +1,92 @@
+{
+  "status": "EXACT_RECOVERY_COMPANIONS_CATALOGUED",
+  "timestamp": "2026-09-29T19:53:49.759327+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/package_20260930_second_milestone.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "records": [
+    {
+      "path": "acceleration/results/20260930_rook_window_sat/instance.cnf",
+      "size_bytes": 15743634,
+      "sha256": "85110f18e5f4bb63c5070c0b5b454e683b292467e5e5173a283bfb56abf66d4e",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:43.259824+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_second_packaging/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_rook_window_sat/instance.cnf.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_free_internal_sat/instance.cnf",
+      "size_bytes": 77931272,
+      "sha256": "ed9d0e102b16481fdbcecef34240b5be2b8a357af8c219606bb688dcb5fe9403",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:43.506654+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_second_packaging/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_rook_free_internal_sat/instance.cnf.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_sat_pilot/main/proof.drat",
+      "size_bytes": 16564274,
+      "sha256": "6378d40355ff016c3ac5a7434c98116b2c835390f0422539471b19322788aaaa",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:43.561991+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_second_packaging/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_rook_sat_pilot/main/proof.drat.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_filtered_moments/run01/integer_augmented_csr.npz",
+      "size_bytes": 225397777,
+      "sha256": "ff7c12cbc24828bf5bf08863dff95f17786563124f79ebf71b53520378f72651",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:44.227653+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260930_eight_filtered_moments/run01/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_filtered_moments/run01/model.json",
+      "size_bytes": 40872783,
+      "sha256": "c654b6e0a6d51270b29f97490c20c7acaeec483ff37bbbbdc1fdb61aee705829",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:44.345601+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260930_eight_filtered_moments/run01/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py"
+      }
+    },
+    {
+      "path": "build/research-local/eight_moment_pdhg/input.bin",
+      "size_bytes": 3714118948,
+      "sha256": "eab22693fbb961fda88bc0401e53f19b3976ecc539b9c1269ad95bfc647b6ea7",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:49.758327+00:00",
+      "recovery": {
+        "kind": "DETERMINISTIC_REGENERATION",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/export/manifest.json",
+        "source": "acceleration/export_20260930_eight_moment_pdhg.py",
+        "command": "uv run --locked python acceleration/export_20260930_eight_moment_pdhg.py --out FRESH_EXPORT_DIRECTORY --binary FRESH_BINARY_PATH",
+        "caveat": "Restore exact model chunks and raw filter gzip first. Compare binary SHA256. Export performs no numerical search. Native binaries require separate documented compilation."
+      }
+    }
+  ],
+  "source_sha256": "b6426c09e94c7e0083a691302f14fb9497f993d9e9b7625b872be259317f623e",
+  "mathematical_verification": false,
+  "originals_preserved": true
+}

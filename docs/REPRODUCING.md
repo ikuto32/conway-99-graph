@@ -1,5 +1,11 @@
 # 取得と検証
 
+## Resumed experiments, 2026-09-30 JST
+
+For current work, read the [third milestone](RESEARCH_20260930_THIRD_WAVE.md)
+and [recovery guide](REPRODUCING_20260930_SECOND_WAVE.md). Historical commands
+below retain their original environment and meaning.
+
 ## Two-coordinate exact proof: isolated public replay
 
 The frozen independent checker reproduced `469399553/1048576 > 0` using only

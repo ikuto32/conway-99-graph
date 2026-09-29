@@ -124,3 +124,25 @@ Array memory estimates are saved before sparse loading; these estimates are
 not claims about measured peak memory. A stopped or failed check does not
 establish complete encoding correctness. Actual result and scope promotion
 must be recorded by a later immutable audit report.
+
+## Completed artifact audit
+
+The planned audit completed successfully at
+`2026-09-29T19:40:28.188781+00:00` from recorded source commit
+`dacbbaa157f30182f877dc38b2017f790ddc5938`. The immutable report is
+`acceleration/results/20260930_independent_review/eight_filtered_moments/summary.json`,
+SHA256 `7a1537ce139db72d48da277deabb7022788cde365bc5ff6c853206ac2dd2ebb5`.
+
+It checked all 1,875,214 retained original star columns, all 6,972 slack
+columns, all 156,321,767 exact integer nonzeros, and the full 5,730-row
+system. The 414,908 removed choices are the independently authenticated
+matching-filter rejections from the original 2,290,122-choice population.
+Every bound, cost, RHS, original-ID map, offset, and distributed byte-part
+identity passed. All 18 independently generated rook9 calibration cases
+and their coefficient/RHS corruptions passed.
+
+The audit recommends **VERIFIED** for
+`C-PARTIAL-K-EIGHT-COORDINATE-MATCHING-FILTERED-MOMENT-ENCODING`, revision 1,
+with the exact conditional necessity statement above. No solver was launched
+by this audit, and no positive bound, family exclusion, target graph, or
+unrestricted nonexistence result follows from this encoding verification.

@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-29T19:55:27.736011+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "records": [
+    {
+      "path": "build/research-local/large_gpu_reader_boundary/zeros_8589934592.bin",
+      "logical_bytes": 8589934592,
+      "allocated_bytes_before": 8589934592,
+      "allocated_bytes_after": 0,
+      "logical_contents": "All-zero recipe; FSCTL_SET_ZERO_DATA over the already-zero full range preserves these logical bytes.",
+      "artifact_availability": "LOCAL_ONLY",
+      "full_sha256": null,
+      "full_sha256_reason": "Boundary audit reads only length and first eight bytes; no full-file identity claim."
+    },
+    {
+      "path": "build/research-local/large_gpu_reader_boundary/zeros_8589934593.bin",
+      "logical_bytes": 8589934593,
+      "allocated_bytes_before": 8589934593,
+      "allocated_bytes_after": 0,
+      "logical_contents": "All-zero recipe; FSCTL_SET_ZERO_DATA over the already-zero full range preserves these logical bytes.",
+      "artifact_availability": "LOCAL_ONLY",
+      "full_sha256": null,
+      "full_sha256_reason": "Boundary audit reads only length and first eight bytes; no full-file identity claim."
+    }
+  ],
+  "correction": "Sparse marking alone did not avoid allocated zero extents under Python truncate on this host. Explicit sparse-zero operation reclaimed allocation while preserving the all-zero fixture recipe and logical lengths. Frozen gate and sources are unchanged.",
+  "mathematical_claim": false
+}

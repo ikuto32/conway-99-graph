@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-09-29T20:01:38.357341+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_second_checkpoint.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "previous_report": "docs/RESEARCH_20260930_FIRST_WAVE.md",
+  "previous_checkpoint_sha256": "4067d19bbb520b163de5ae03bf510485de97b4a2a539eafd012a03deb154ff23",
+  "target_resolution": "UNKNOWN",
+  "external_target_review": null,
+  "external_target_review_reason": "No candidate target resolution exists in this repository.",
+  "claim_population": 55,
+  "claim_status_counts": {
+    "VERIFIED": 53,
+    "CANDIDATE": 2
+  },
+  "claim_review_counts": {
+    "CLEAR": 55
+  },
+  "verified_clear": 53,
+  "new_verified_ids": [
+    "C-ROOK-FIXED-STAR-WINDOW-CNF-ENCODING",
+    "C-ROOK-FIXED-STAR-WINDOW-EXCLUSION",
+    "C-PARTIAL-K-EIGHT-COORDINATE-NEIGHBORHOOD-MATCHING-FILTER",
+    "C-PARTIAL-K-EIGHT-COORDINATE-MATCHING-FILTERED-MOMENT-ENCODING",
+    "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+    "C-ROOK-FOUR-FACTOR-WINDOW-LOCAL-CONSTRUCTION",
+    "C-ROOK-LOCAL59-NEGATIVE-GRAM-EXCLUSION"
+  ],
+  "matching_filter": {
+    "original_count": 2290122,
+    "rejected_count": 414908,
+    "surviving_count": 1875214,
+    "prospective_edges_checked": 34407638,
+    "negative_DP_states_visited": 14776539
+  },
+  "moment_model": {
+    "rows": 5730,
+    "columns": 1882186,
+    "probability_choices": 1875214,
+    "slacks": 6972,
+    "nonzeros": 156321767,
+    "independent_verification": "ALL_ENTRIES"
+  },
+  "rook_fixed_star": {
+    "edge_variables": 600,
+    "clauses": 819840,
+    "result": "UNSAT",
+    "complete_independent_proof_replay": "PASS",
+    "scope": "Exact fixed central star and five internal matchings only"
+  },
+  "rook_free_internal": {
+    "edge_variables": 780,
+    "clauses": 3689820,
+    "result": "SAT_LOCAL59",
+    "complete_independent_clause_and_graph_check": "PASS",
+    "one_graph_target_extension": "EXCLUDED_BY_EXACT_GRAM"
+  },
+  "gpu_first_attempt": {
+    "result": "IMPORT_CAP_ERROR",
+    "native_returncode": 2,
+    "completed_checkpoints": 0,
+    "independently_checked_skips": 6,
+    "exact_bound_evaluations": 0
+  },
+  "live_execution_observation": "acceleration/results/20260930_resume/second_milestone_process_observation.json",
+  "coverage": "Overall search coverage: UNKNOWN; no validated denominator.",
+  "exact_six_family_bound": "14157/16384",
+  "bound_scope": "Earlier 132-fixed-K family; not an eight-family bound or target-wide metric.",
+  "next_experiment": "Complete the larger-input eight-coordinate GPU retry and independently evaluate each of its six recorded exact support attempts.",
+  "evidence_sha256": {
+    "acceleration/results/20260930_resume/claims_at_second_milestone.yaml": "97b81b411488e3470beb1e309dc79b23e85ca2aed2852643ef13d852a04ed82d",
+    "acceleration/results/20260930_resume/second_milestone_process_observation.json": "039b1dcc1383fcb16e99f1d7c169922fb13e6d4197c23cb82fc40379b22bd914",
+    "acceleration/results/20260930_independent_review/eight_matching_filter_claim_binding.json": "e7fda7dc58e5cbf4e7c4a714c6298ab44aebedba809711cd06295abeee80a0de",
+    "acceleration/results/20260930_independent_review/eight_filtered_moments/summary.json": "7a1537ce139db72d48da277deabb7022788cde365bc5ff6c853206ac2dd2ebb5",
+    "acceleration/results/20260930_rook_sat_independent_proof/summary.json": "7cdb6b9fc9e3078ce67db04166e039f04cb93454468a2c8c6f58042350e54b0e",
+    "acceleration/results/20260930_rook_free_internal_independent_certificate/summary.json": "5c0e621742afc7b73b3756cb5743c09e80d9a5072d6a6f7384a8f124212fc53e",
+    "acceleration/results/20260930_independent_review/rook_original_gram.json": "04b6d7463c589fc1a2db6ce15c2ec621c1127ffa8dfc01bec7af760398aa210c",
+    "acceleration/results/20260930_independent_review/eight_gpu_support_run01.json": "65b445b107b79ca571bb9148936a9ea8125b810906452d685ebda2703c987e84",
+    "acceleration/results/20260930_independent_review/large_gpu_cpu_parity/summary.json": "e71cee4a33b855a8986419ad6643e145e5ce4c8ebef083778e21a54700e25e48"
+  }
+}

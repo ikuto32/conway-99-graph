@@ -1,0 +1,384 @@
+{
+  "status": "LARGE_READER_GPU_PILOT_EXECUTION_FINISHED",
+  "timestamp": "2026-09-29T19:54:00.220700+00:00",
+  "results": {
+    "positive_uniform": {
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260917_moment_pdhg_gpu\\export\\positive_uniform.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\positive_uniform"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.1869999999180436,
+      "expected_error": null,
+      "observed_console": "checkpoint=1 elapsed_seconds=0.0020245\ncheckpoint=2 elapsed_seconds=0.0026949\ncheckpoint=10 elapsed_seconds=0.0039315\ncheckpoint=100 elapsed_seconds=0.012271\n"
+    },
+    "unbounded_hard_dual": {
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260917_moment_pdhg_gpu\\export\\unbounded_hard_dual.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\unbounded_hard_dual"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.1410000000614673,
+      "expected_error": null,
+      "observed_console": "checkpoint=1 elapsed_seconds=0.0008852\ncheckpoint=2 elapsed_seconds=0.0014362\ncheckpoint=10 elapsed_seconds=0.0034001\ncheckpoint=100 elapsed_seconds=0.012173\n"
+    },
+    "large_uniform": {
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260917_moment_pdhg_gpu\\export\\large_uniform.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\large_uniform"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.6400000001303852,
+      "expected_error": null,
+      "observed_console": "checkpoint=1 elapsed_seconds=0.0653713\ncheckpoint=2 elapsed_seconds=0.135559\ncheckpoint=10 elapsed_seconds=0.223625\ncheckpoint=100 elapsed_seconds=0.531552\n"
+    },
+    "two_coordinate": {
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260917_moment_pdhg_gpu\\export\\two_coordinate.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\two_coordinate"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 1.077999999979511,
+      "expected_error": null,
+      "observed_console": "checkpoint=1 elapsed_seconds=0.14532\ncheckpoint=2 elapsed_seconds=0.291742\ncheckpoint=10 elapsed_seconds=0.441717\ncheckpoint=100 elapsed_seconds=0.69634\n"
+    }
+  },
+  "controls_passed": true,
+  "guard_controls": [
+    {
+      "name": "bad_magic",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\bad_magic.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\bad_magic"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.06199999991804361,
+      "expected_error": "Bad moment binary magic",
+      "observed_console": "ERROR: Bad moment binary magic\n"
+    },
+    {
+      "name": "bad_transpose",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\bad_transpose.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\bad_transpose"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.01600000006146729,
+      "expected_error": "AT is not the exact transpose of A",
+      "observed_console": "ERROR: AT is not the exact transpose of A\n"
+    },
+    {
+      "name": "trailing_bytes",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\trailing_bytes.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\trailing_bytes"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.01500000013038516,
+      "expected_error": "Trailing bytes",
+      "observed_console": "ERROR: Trailing bytes\n"
+    },
+    {
+      "name": "domain_out_of_range",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\domain_out_of_range.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\domain_out_of_range"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.015999999828636646,
+      "expected_error": "Invalid domain offsets",
+      "observed_console": "ERROR: Invalid domain offsets\n"
+    },
+    {
+      "name": "n_1000001",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_1000001.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_1000001"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.030999999959021807,
+      "expected_error": "Truncated candidate geometry",
+      "observed_console": "ERROR: Truncated candidate geometry\n"
+    },
+    {
+      "name": "n_1999999",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_1999999.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_1999999"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.01600000006146729,
+      "expected_error": "Truncated candidate geometry",
+      "observed_console": "ERROR: Truncated candidate geometry\n"
+    },
+    {
+      "name": "n_2000000",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_2000000.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_2000000"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.01500000013038516,
+      "expected_error": "Truncated candidate geometry",
+      "observed_console": "ERROR: Truncated candidate geometry\n"
+    },
+    {
+      "name": "n_2000001",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_2000001.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\n_2000001"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.015999999828636646,
+      "expected_error": "Unsupported candidate dimensions",
+      "observed_console": "ERROR: Unsupported candidate dimensions\n"
+    },
+    {
+      "name": "nnz_100000001",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_100000001.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_100000001"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.01600000006146729,
+      "expected_error": "Truncated candidate geometry",
+      "observed_console": "ERROR: Truncated candidate geometry\n"
+    },
+    {
+      "name": "nnz_199999999",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_199999999.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_199999999"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.01500000013038516,
+      "expected_error": "Truncated candidate geometry",
+      "observed_console": "ERROR: Truncated candidate geometry\n"
+    },
+    {
+      "name": "nnz_200000000",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_200000000.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_200000000"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.015999999828636646,
+      "expected_error": "Truncated candidate geometry",
+      "observed_console": "ERROR: Truncated candidate geometry\n"
+    },
+    {
+      "name": "nnz_200000001",
+      "header_only": true,
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_200000001.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\nnz_200000001"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.0,
+      "expected_error": "Unsupported candidate dimensions",
+      "observed_console": "ERROR: Unsupported candidate dimensions\n"
+    },
+    {
+      "name": "zeros_8589934592",
+      "path": "build/research-local/large_gpu_reader_boundary/zeros_8589934592.bin",
+      "logical_bytes": 8589934592,
+      "artifact_availability": "LOCAL_ONLY",
+      "retrieval": "Rerun this checker to create a Windows sparse file of the stated logical length containing only zero bytes.",
+      "sha256": null,
+      "sha256_reason": "Only length and eight-byte zero prefix are read by the exercised rejection branch; full 8 GiB hash intentionally not computed.",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-local\\large_gpu_reader_boundary\\zeros_8589934592.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\zeros_8589934592"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.015999999828636646,
+      "expected_error": "Bad moment binary magic",
+      "observed_console": "ERROR: Bad moment binary magic\n"
+    },
+    {
+      "name": "zeros_8589934593",
+      "path": "build/research-local/large_gpu_reader_boundary/zeros_8589934593.bin",
+      "logical_bytes": 8589934593,
+      "artifact_availability": "LOCAL_ONLY",
+      "retrieval": "Rerun this checker to create a Windows sparse file of the stated logical length containing only zero bytes.",
+      "sha256": null,
+      "sha256_reason": "Only length and eight-byte zero prefix are read by the exercised rejection branch; full 8 GiB hash intentionally not computed.",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\build\\moment_pdhg_gpu_large.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-local\\large_gpu_reader_boundary\\zeros_8589934593.bin",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_large_gpu_reader\\pilot\\zeros_8589934593"
+      ],
+      "returncode": 2,
+      "timeout": false,
+      "elapsed_seconds": 0.01600000006146729,
+      "expected_error": "Input exceeds8GiB limit",
+      "observed_console": "ERROR: Input exceeds8GiB limit\n"
+    }
+  ],
+  "source_delta": {
+    "status": "INDEPENDENT_EXACT_GUARD_ONLY_SOURCE_DELTA_PASS",
+    "changes": [
+      {
+        "before": "uint64_t(2)*1024*1024*1024,\"Input exceeds2GiB limit\"",
+        "after": "uint64_t(8)*1024*1024*1024,\"Input exceeds8GiB limit\""
+      },
+      {
+        "before": "g.n<=1000000 ",
+        "after": "g.n<=2000000 "
+      },
+      {
+        "before": "g.nnz<=100000000,",
+        "after": "g.nnz<=200000000,"
+      },
+      {
+        "before": "total_nnz<=100000000,",
+        "after": "total_nnz<=200000000,"
+      }
+    ],
+    "kernels_and_numerics_byte_preserved": true,
+    "source_sha256": "963d4427aeaa24b4ebcae182f981e1662dd8f371621e25eaf4c19ec30a57638a",
+    "binary_sha256": "feb23cfee5bd26abbc37334d3304ee7b5a3e43a386cca9905b8becd58f2df55b",
+    "integer_review": "Reader lengths and aggregate sums are uint64_t; required geometry explicitly widens products. At new caps all unsigned indices and row-pointer values remain below 2^32; n+m+blocks+3 is below 2010131. Windows x64 size_t/streamsize hold 8 GiB, as also exercised by sparse boundary inputs.",
+    "aggregate_guard_scope": "Exactly one model is accepted. Per-model new n and nnz caps imply unchanged aggregate n and changed aggregate nnz caps; multi-model aggregate behavior is unreachable and not dynamically claimed."
+  },
+  "inputs_sha256": {
+    "acceleration/audit_20260930_large_gpu_pilot.py": "14f76419ad0eba87fddcbdadd511763774781ab8206e4c32b79ef6dae4c18198",
+    "acceleration/audit_20260917_partial_matching.py": "051dbc568011cf5c76f41fddf01281d8d8959875ccda88a1491685edd9a6d138",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/build/moment_pdhg_gpu_large.exe": "feb23cfee5bd26abbc37334d3304ee7b5a3e43a386cca9905b8becd58f2df55b",
+    "acceleration/moment_pdhg_gpu_large.cu": "963d4427aeaa24b4ebcae182f981e1662dd8f371621e25eaf4c19ec30a57638a",
+    "acceleration/build_moment_pdhg_gpu_large.ps1": "442357ca39f46c32d82bb7d42ef3930cd7fa176cded209e4c88f171e978c265f",
+    "acceleration/results/20260917_independent_review/moment_pdhg_gpu_cpu_parity_v2/summary.json": "c0ae24550c1f33c1d808107f7aaa9bf49d83d968805f2691a26388b777e2aaf2",
+    "acceleration/moment_pdhg_gpu.cu": "2840eea3f5abc5e9e669788bb7be460ba879e5b52c93e0d1195cb6cf41fb4319",
+    "acceleration/build_moment_pdhg_gpu.ps1": "47799a145ff621dfe2aa1c468cf30dc3dd183a2561634fe2ec016430d15d45ee",
+    "acceleration/results/20260930_large_gpu_build/receipt.json": "1d938c5b81c408711ba477e7c8a7281aed6b5457e6df2be6cc7bd6648fd8d302",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/manifest.json": "95bb4168be24ee901e7754bcaebd0dc810b138d183725bf8876eabc556bbc807",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/two_coordinate.bin": "e646606c73184318afd217607784cfaf93ad1aba7c8b0e2281346ccc11718a35",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/positive_uniform.bin": "0de36b4d6599d5dfb70a34296139ff3216f82cd355bbd17b0234b3375b4ac9c0",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/unbounded_hard_dual.bin": "e8d6f4b0363f9e77431b1c83b7b3bf915f09642ca6dc3f0bc45d658becd8a809",
+    "acceleration/results/20260917_moment_pdhg_gpu/export/large_uniform.bin": "78364ab8d7bac612e65436300037d30cbb72af4e5defb3180d27f6df83886a37",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_magic.bin": "b0318c835d56ac3d121a25ea2c5fa722a02738f978a90f33f63dd2e2c4ed9845",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/bad_transpose.bin": "ab97542a6c501bb017c8427f79699b058f23fe00fef607593e5990add8a7ed13",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/trailing_bytes.bin": "ca503b13f774292a6fb343570fd77e039cbc7db0b5894a1a0e16e6b5f161eca4",
+    "acceleration/results/20260917_moment_pdhg_gpu/pilot/domain_out_of_range.bin": "d59d086af4c3ed9a8cbcc358e49ae4c95a92506451f4af7dce58e1b1cd1e0c40"
+  },
+  "input_hashes_unchanged": true,
+  "output_sha256": {
+    "bad_magic.bin": "b0318c835d56ac3d121a25ea2c5fa722a02738f978a90f33f63dd2e2c4ed9845",
+    "bad_magic.console.txt": "bd9bc28d31f22f3af3c0b8b84de8f7db66d5a7b494ae3670a435e9cca0d6d6b3",
+    "bad_magic.receipt.json": "aa83887f6564b447144b47b6252ad1738211dbd522996fdac606cda087797307",
+    "bad_transpose.bin": "ab97542a6c501bb017c8427f79699b058f23fe00fef607593e5990add8a7ed13",
+    "bad_transpose.console.txt": "1fa917ac0c1cf953a5d9573935b29e70a81cf9ac976d615b4ea5e079ce4c25f9",
+    "bad_transpose.receipt.json": "af1a4bf0deaa3b2a2b709d06af587d7c20a13fdcbe5cc452ee6c8ce2b471adc2",
+    "controls.json": "cb405c6c91e9bcf3d974da202fdf16cb985c8a08012eb6001a975a11162105d1",
+    "domain_out_of_range.bin": "d59d086af4c3ed9a8cbcc358e49ae4c95a92506451f4af7dce58e1b1cd1e0c40",
+    "domain_out_of_range.console.txt": "cb77d4e70922886f3d1297ed73bff44a08983c17f4f6d9d33e8d880b0020984e",
+    "domain_out_of_range.receipt.json": "ea1118ce326446c7fa913ba3862468a2e1a2c4c35d20697ea5c891b977a3614b",
+    "large_uniform.console.txt": "ecfff2c2f3d15e2aeb37b931153485f2dc27f2c1cde4513c9c8052809f1aea41",
+    "large_uniform.receipt.json": "b5fd8d0608b69c9248d70e461e8a1b17d7de4fca21ce841c096c8941991a812c",
+    "large_uniform_1.json": "5f14d154d230cf120c05539d30a1fc7cacf01274e55f491c3a13277d4f7d7d3f",
+    "large_uniform_10.json": "360abf0b0f9f2d1c9a4082a6ba3e0847ea53be91fb3bd04d446cff0571b7fb72",
+    "large_uniform_100.json": "37ff12af7e7be2389dc9cd6c5ed86bc0605dde46b37a99ba667d6250b168eea7",
+    "large_uniform_2.json": "f6265e1a7010b70c61e55bc32d6c0440bb5984ca84d033035f8b08401a1fbe2e",
+    "large_uniform_summary.json": "d5b825121159ea25f8d6557f4e8b0dd572d42f371a0baa3f9889e3fd96a75cb5",
+    "manifest.json": "6b3d1716ed65fd1dcf149493bac905a6d88edb9dca1a3f5170b6f0e0948e5dad",
+    "nnz_100000001.bin": "deb5dce228ab66d9434af004595b872690e1f5b84643fec10cebfcb3fd4e9aab",
+    "nnz_100000001.console.txt": "5e3f55c34263b673bfb298ee986058043a5cfa5ec9a398f97ca2a937e0b83fda",
+    "nnz_100000001.receipt.json": "841543e7452ebf2540d087fcacd3f7857bce4a5b467e4320b11d4b83ab6a36c6",
+    "nnz_199999999.bin": "a4dc1bc831cc593f4ef6d7dadd8b896047406e637ad47320d7824c727974150f",
+    "nnz_199999999.console.txt": "5e3f55c34263b673bfb298ee986058043a5cfa5ec9a398f97ca2a937e0b83fda",
+    "nnz_199999999.receipt.json": "8bef98cea5a03d740bd6b505740063088bec22d40358cc5d3381296498e18161",
+    "nnz_200000000.bin": "804d4f9d2cf0a27cf18a24c0b0ebd486c07d28624b74f6f2e52411142a73fa8d",
+    "nnz_200000000.console.txt": "5e3f55c34263b673bfb298ee986058043a5cfa5ec9a398f97ca2a937e0b83fda",
+    "nnz_200000000.receipt.json": "231a8e1a3711d59eef7a170b7edd71d481e205b00157fa96254c428aa9727985",
+    "nnz_200000001.bin": "074c5094b0f3f97b637667fca724efd54ac6287fd8564b91133297ea09dd3c18",
+    "nnz_200000001.console.txt": "3d4f829a85455bf4ceca70407031b28ab9a7d7cabf2dbd9573fbac086786a698",
+    "nnz_200000001.receipt.json": "5a9b1c9a1a40da8a978c4598216b8f359e72aec7dd040f895548c48d6c3135b9",
+    "n_1000001.bin": "721a695ed1391f44541bfeaea79e3273da383c779e89e87cb1b1e0fd76e6f86e",
+    "n_1000001.console.txt": "5e3f55c34263b673bfb298ee986058043a5cfa5ec9a398f97ca2a937e0b83fda",
+    "n_1000001.receipt.json": "70a0c9e65cc0602e5dacfbb408c9b345afb22cf76e37a0b1eaf90c65179fdc87",
+    "n_1999999.bin": "88de815b78ed59cb167b1450b8774c127b30005d96c8172230d4869e1e961b44",
+    "n_1999999.console.txt": "5e3f55c34263b673bfb298ee986058043a5cfa5ec9a398f97ca2a937e0b83fda",
+    "n_1999999.receipt.json": "0da18a59a6edc8021afcc0880297548f3e8aac80aa39233c388c247bb92fd75b",
+    "n_2000000.bin": "013dc59b4a5e2189980999dc2927e7c847d7fdf9848730e6c3dfbe00657e44d2",
+    "n_2000000.console.txt": "5e3f55c34263b673bfb298ee986058043a5cfa5ec9a398f97ca2a937e0b83fda",
+    "n_2000000.receipt.json": "ed2b6388715937416e2162a9e185c20a0f1a264c38bf8c7080fa564332eac1c7",
+    "n_2000001.bin": "2b91ef85e6c3a6c8f86d4a47d808a09411d0ce3c6e6e4e5cd4b45012bdef4339",
+    "n_2000001.console.txt": "3d4f829a85455bf4ceca70407031b28ab9a7d7cabf2dbd9573fbac086786a698",
+    "n_2000001.receipt.json": "41510af7fbb3dfc0b4c9ca294ddd4a8bfd418531e9cf4e4cee76ee2199813f91",
+    "positive_uniform.console.txt": "608d7d20c8ff403818280881695dbddcf429ed221d8a7e00a65580f11df70b91",
+    "positive_uniform.receipt.json": "923a711359581793cb0629f9f734507a95836b7a1defd43d4c50d3424acf68b5",
+    "positive_uniform_1.json": "ced3b3d7570ed2fb10aafb539841ea42ed3c457cee0711f62d7d608444505715",
+    "positive_uniform_10.json": "ed967a9d06ffc42fb72adaf90d0f0382c447fbb32f088bde9ac19171865ba0b7",
+    "positive_uniform_100.json": "4af0cb1401a6628235860458e7bd2d4ec1b83bbfbd3feb65675926246ca2b0ad",
+    "positive_uniform_2.json": "1a3f281f078f47293ec35855c58bb9a2adc3f5e46ddd15381f29622d6d57387c",
+    "positive_uniform_summary.json": "53e668d424739200d3e04a8d369ed6a8cc741a72c1642e5929c42068a526536f",
+    "preregistration.json": "da5e4940ea2135552062b15564df0f4e57d4a7ca59c72654d8ba179f6340b94d",
+    "source_delta.json": "ecdfd5e5a82afe7b6c2357152617849970c930003a95639fb8acfb838898f348",
+    "trailing_bytes.bin": "ca503b13f774292a6fb343570fd77e039cbc7db0b5894a1a0e16e6b5f161eca4",
+    "trailing_bytes.console.txt": "53666094898074d2b0c7dde4330cf704025ffa2b1576895191171fa872beea36",
+    "trailing_bytes.receipt.json": "12a51eb84ef068342e1e812fc5eba0cbdd5e494f9b494873d297c513bf2864f8",
+    "two_coordinate.console.txt": "9c0c22610dc3b7be3da0d001a14ed3a74c1bf8b10c3ee9a9fe72dcefcc1bc6b7",
+    "two_coordinate.receipt.json": "f52b10af9aac92bec57b271f5b969ffb319bb9dc5fd05e07cbc0009071a2325a",
+    "two_coordinate_1.json": "829b015627861ffa485d2192957b963d30a4a57df4c36abccc1ef76b659f28bc",
+    "two_coordinate_10.json": "090bb33e94ef52b6b7491f40aad9166be9da84510dfb446ed6eb42dba7568987",
+    "two_coordinate_100.json": "61e4c3ead7d84fd49396effa596a9edc9798dbda636203551f761c3c0e8723da",
+    "two_coordinate_2.json": "8de4a59481034360b3826f62cc2b188dfdb5ba85f57bd88a2d6878145efde07d",
+    "two_coordinate_summary.json": "460a59565ee71ebd079644bdb399fd21628414e75b28d344c20158b6ea12c92e",
+    "unbounded_hard_dual.console.txt": "d04a694b94508e348b27ec941e3882894b4d70ceaf8d8adcbd41d9fa8ce7d0eb",
+    "unbounded_hard_dual.receipt.json": "ec44f0f7deb4fed1d7a6f55b4cd8fc35e71d876295459e3f86c0ad8ca02b544e",
+    "unbounded_hard_dual_1.json": "363e316dd024a0a2d9b61c33db9d4049332212de71326d7e2577d939cd343495",
+    "unbounded_hard_dual_10.json": "736973d6a5e43b17fcb70af35b240b21a4cb39dfe09e2646ca2ff9ca76cebd29",
+    "unbounded_hard_dual_100.json": "843c6e76f1342367d23c4fe60a6001d29c45e6f105e9ba340f6126a9021755dc",
+    "unbounded_hard_dual_2.json": "fcac14112dfee290088fe2d1b83b878017bc25422184093d239893346da89dc1",
+    "unbounded_hard_dual_summary.json": "e5c5d79ac2859e5696b95dedbaf185460cde9750822ff509c56a5506e7f3939b",
+    "zeros_8589934592.console.txt": "bd9bc28d31f22f3af3c0b8b84de8f7db66d5a7b494ae3670a435e9cca0d6d6b3",
+    "zeros_8589934592.receipt.json": "b3f837a6073eb390593bfef5a1d5ca5579d57232f08114bda23f8afeb4946847",
+    "zeros_8589934593.console.txt": "080b6653522b809d2a7009ccf74716b078c5b1462f24b67b451b15af5be7013c",
+    "zeros_8589934593.receipt.json": "139b12d7b71637b0a3c41b88c5e9c205c07eef371a8c13a96b011c84f5457269"
+  },
+  "independent_CPU_parity": "PENDING",
+  "mathematical_claim": false,
+  "elapsed_seconds": 83.23400000017136
+}
