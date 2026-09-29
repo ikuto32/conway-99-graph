@@ -12,12 +12,12 @@ matching survivor by original ID. Add positive and negative residual slacks
 only to the common-neighbor equations, with L1 objective equal to their sum.
 The model is a necessary relaxation; zero objective is not a graph certificate.
 
-Use the disclosed frozen direct-column assembler, calibrated on18 exact rook9
-witnesses and36 coefficient/RHS corruptions. Allocate exact int8 coefficients
+Use the disclosed frozen direct-column assembler, calibrated on 18 exact rook9
+witnesses and 36 coefficient/RHS corruptions. Allocate exact int8 coefficients
 and int32 sparse indices. Record the typed-array memory projection first; this
-does not measure peak memory. New build limit900seconds; inherited exception
-labels mention the historical400second cap but actual deadline is900seconds.
-All raw inputs and sources are hashed; output large files have8MiB byte-part
+does not measure peak memory. New build limit 900 seconds; inherited exception
+labels mention the historical 400-second cap but actual deadline is 900 seconds.
+All raw inputs and sources are hashed; output large files have 8 MiB byte-part
 companions. Completed in-memory columns alone are not a resumable matrix.
 
 Success requires a complete matrix/model followed by independent rederivation
