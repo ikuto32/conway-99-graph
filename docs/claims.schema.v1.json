@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ikuto32/conway-99-graph/blob/main/docs/claims.schema.json",
+  "title": "Current Conway-99 claim registry version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "updated_at", "archives", "artifacts", "claims", "target"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "updated_at": {"$ref": "#/$defs/timestamp"},
+    "archives": {"type": "array", "items": {"$ref": "#/$defs/archive"}},
+    "artifacts": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+    "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+    "target": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "supporting_claims", "external_review", "overall_search_coverage", "coverage_reason"],
+      "properties": {
+        "status": {"enum": ["UNKNOWN", "CANDIDATE_POSITIVE", "CANDIDATE_NEGATIVE"]},
+        "supporting_claims": {"$ref": "#/$defs/strings"},
+        "external_review": {"$ref": "#/$defs/text"},
+        "overall_search_coverage": {"type": "null"},
+        "coverage_reason": {"$ref": "#/$defs/text"}
+      }
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "strings": {"type": "array", "items": {"$ref": "#/$defs/text"}, "uniqueItems": true},
+    "timestamp": {"type": "string", "format": "date-time", "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"},
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "archive": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "repository", "commit", "path"],
+      "properties": {
+        "id": {"$ref": "#/$defs/text"}, "repository": {"$ref": "#/$defs/text"},
+        "commit": {"$ref": "#/$defs/commit"}, "path": {"$ref": "#/$defs/text"}
+      }
+    },
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "path", "sha256", "availability", "retrieval", "unavailable_reason"],
+      "properties": {
+        "id": {"$ref": "#/$defs/text"}, "path": {"type": ["string", "null"], "minLength": 1},
+        "sha256": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+        "availability": {"enum": ["PUBLIC", "LOCAL_ONLY", "MISSING"]},
+        "retrieval": {"type": ["string", "null"], "minLength": 1},
+        "unavailable_reason": {"type": ["string", "null"], "minLength": 1}
+      }
+    },
+    "dependency": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "revision", "relation"],
+      "properties": {
+        "id": {"$ref": "#/$defs/text"}, "revision": {"type": "integer", "minimum": 1},
+        "relation": {"enum": ["premise", "uses_result", "derived_from", "encoding_equivalence", "coverage", "normalization", "verification_dependency"]}
+      }
+    },
+    "verification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["claim_revision", "verifier", "method", "command_or_audit", "timestamp", "outcome", "scope", "artifact_hashes", "shared_components", "controls", "limitations"],
+      "properties": {
+        "claim_revision": {"type": "integer", "minimum": 1},
+        "verifier": {"$ref": "#/$defs/text"},
+        "method": {"enum": ["repeated_execution", "independent_artifact_check", "independent_derivation", "external_review"]},
+        "command_or_audit": {"$ref": "#/$defs/text"},
+        "timestamp": {"$ref": "#/$defs/timestamp"},
+        "outcome": {"enum": ["PASS", "FAIL", "INCONCLUSIVE"]},
+        "scope": {"$ref": "#/$defs/text"},
+        "artifact_hashes": {"type": "object", "additionalProperties": {"$ref": "#/$defs/hash"}},
+        "shared_components": {"$ref": "#/$defs/strings"},
+        "controls": {"$ref": "#/$defs/strings"},
+        "limitations": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "revision", "statement", "kind", "basis", "status", "review_state", "scope", "assumptions", "dependencies", "evidence", "verification", "limitations", "created_at", "updated_at", "unknowns", "external_source", "reproducibility"],
+      "properties": {
+        "id": {"$ref": "#/$defs/text"}, "revision": {"type": "integer", "minimum": 1},
+        "statement": {"$ref": "#/$defs/text"},
+        "kind": {"enum": ["mathematical result", "encoding", "exclusion", "construction", "literature finding", "empirical/engineering result"]},
+        "basis": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["CITED", "DERIVED", "COMPUTED"]}},
+        "status": {"enum": ["UNKNOWN", "CANDIDATE", "VERIFIED", "REFUTED"]},
+        "review_state": {"enum": ["CLEAR", "QUARANTINED", "NEEDS_RECHECK"]},
+        "scope": {
+          "type": "object", "additionalProperties": false,
+          "required": ["description", "unrestricted_target", "target_resolution"],
+          "properties": {
+            "description": {"$ref": "#/$defs/text"}, "unrestricted_target": {"type": "boolean"},
+            "target_resolution": {"enum": ["NONE", "POSITIVE", "NEGATIVE"]}
+          }
+        },
+        "assumptions": {"$ref": "#/$defs/strings"},
+        "dependencies": {"type": "array", "items": {"$ref": "#/$defs/dependency"}},
+        "evidence": {"$ref": "#/$defs/strings"},
+        "verification": {"type": "array", "items": {"$ref": "#/$defs/verification"}},
+        "limitations": {"$ref": "#/$defs/strings"},
+        "created_at": {"$ref": "#/$defs/timestamp"}, "updated_at": {"$ref": "#/$defs/timestamp"},
+        "unknowns": {"type": "object", "additionalProperties": {"$ref": "#/$defs/text"}},
+        "external_source": {"anyOf": [{"type": "null"}, {
+          "type": "object", "additionalProperties": false, "required": ["archive_id", "original_claim_id"],
+          "properties": {"archive_id": {"$ref": "#/$defs/text"}, "original_claim_id": {"$ref": "#/$defs/text"}}
+        }]},
+        "reproducibility": {"anyOf": [{"type": "null"}, {
+          "type": "object", "additionalProperties": false, "required": ["manifest"],
+          "properties": {"manifest": {"$ref": "#/$defs/text"}}
+        }]}
+      }
+    }
+  }
+}

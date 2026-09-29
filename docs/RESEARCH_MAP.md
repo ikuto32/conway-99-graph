@@ -4,7 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The [fourth resumed milestone](RESEARCH_20260930_FOURTH_WAVE.md) and its
+The [fifth resumed milestone](RESEARCH_20260930_FIFTH_WAVE.md) records the
+independently checked unrestricted full99 encoding, its exact coverage proof,
+and further scoped Gram clauses. The
+[fourth milestone](RESEARCH_20260930_FOURTH_WAVE.md) and its
 [replay guide](REPRODUCING_20260930_FOURTH_WAVE.md) cover exact Gram clauses,
 checked relabelings and local-test redundancy. The
 [third milestone](RESEARCH_20260930_THIRD_WAVE.md),
@@ -91,3 +94,12 @@ new instruction. No target resolution has been established.
 また、成果物の一部は改行を含むバイト列全体が SHA-256 で固定されています。[既存の .gitattributes](https://github.com/YesterdaysLemon/conway-99-research/blob/85e705cc6c2a14d123120c93a847e30aaab1789e/.gitattributes) はその保護規則を含みます。JSON の再整形、改行の一括変換、ログの書き換えでも一致しなくなるため、検証対象のファイルを一括整形しないでください。
 
 監査スクリプト自身が既存の JSON レポートを上書きする場合もあります。実行前に出力先と必要入力を確認してください。手軽な動作確認には、[ルートの再現手順](REPRODUCING.md) の軽量チェックを使用できます。大きな外部成果物は通常の clone に含まれず、そのハッシュ一覧だけからデータを復元することはできません。
+# Latest continuation: sixth resumed milestone
+
+The [sixth report](RESEARCH_20260930_SIXTH_WAVE.md) and its ledger-derived
+checkpoint supersede earlier continuation pointers. The unrestricted encoding,
+four-branch coverage and4,662 entailed units are independently checked. All four
+bounded strengthened branch attempts remain UNKNOWN; none is a target solution
+or a branch exclusion. Next work tests exact triangle-factor row images and
+compatibility of multiple complete neighborhoods. Overall search coverage:
+UNKNOWN; no validated denominator.

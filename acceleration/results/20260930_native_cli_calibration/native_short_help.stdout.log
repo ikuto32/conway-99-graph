@@ -1,0 +1,17 @@
+usage: cadical [ <option> ... ] [ <input> [ <proof> ] ]
+
+where '<option>' is one of the following common options:
+
+  -h             print this short list of common options
+  --help         print complete list of all options
+  --version      print version
+
+  -n             do not print witness
+  -v             increase verbosity
+  -q             be quiet
+
+  -t <sec>       set wall clock time limit
+
+The input is read from '<input>' assumed to be in DIMACS format.
+Incremental 'p inccnf' files are supported too with cubes at the end.
+If '<proof>' is given then a DRAT proof is written to that file.

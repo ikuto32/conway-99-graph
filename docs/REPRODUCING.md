@@ -2,7 +2,9 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [fourth milestone](RESEARCH_20260930_FOURTH_WAVE.md)
+For current work, read the [fifth milestone](RESEARCH_20260930_FIFTH_WAVE.md)
+and its linked unrestricted input package catalog, plus the
+[fourth milestone](RESEARCH_20260930_FOURTH_WAVE.md)
 and [fourth recovery guide](REPRODUCING_20260930_FOURTH_WAVE.md). The
 [earlier recovery guide](REPRODUCING_20260930_SECOND_WAVE.md) remains applicable. Historical commands
 below retain their original environment and meaning.
@@ -271,3 +273,10 @@ Research is paused by explicit user instruction. Read
 any historical launch command below. Documentation maintenance or validation
 does not authorize restarting a stopped search. The latest frozen stop
 checkpoint is `acceleration/results/20260917_user_requested_stop.json`.
+# Latest resumed evidence
+
+Use the [fifth/sixth reproduction guide](REPRODUCING_20260930_SIXTH_WAVE.md)
+for exact unrestricted CNF recovery, strengthened branch recipes, independent
+object/minor checks, version2 ledger migration, and completed native receipts.
+Historical commands below are preserved as evidence. None of the timed native
+runs is an UNSAT proof or a target graph.

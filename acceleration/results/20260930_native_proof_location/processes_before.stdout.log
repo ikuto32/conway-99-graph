@@ -1,0 +1,31 @@
+    PID    PPID COMMAND         %CPU   RSS COMMAND
+      1       0 systemd          0.0 12288 /sbin/init
+      2       1 init-systemd(Ub  0.0  1536 /init
+      8       2 init             0.0  1792 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+     41       1 systemd-journal  0.0 15112 /usr/lib/systemd/systemd-journald
+     87       1 systemd-udevd    0.0  5888 /usr/lib/systemd/systemd-udevd
+    172       1 systemd-resolve  0.0 12800 /usr/lib/systemd/systemd-resolved
+    173       1 systemd-timesyn  0.0  7424 /usr/lib/systemd/systemd-timesyncd
+    179       1 cron             0.0  2304 /usr/sbin/cron -f -P
+    180       1 dbus-daemon      0.0  4864 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    187       1 systemd-logind   0.0  8192 /usr/lib/systemd/systemd-logind
+    189       1 wsl-pro-service  0.0 12544 /usr/libexec/wsl-pro-service
+    195       1 agetty           0.0  1792 /sbin/agetty -o -p -- \u --noclear --keep-baud - 115200,38400,9600 vt220
+    205       1 agetty           0.0  1536 /sbin/agetty -o -p -- \u --noclear - linux
+    209       1 rsyslogd         0.0  4608 /usr/sbin/rsyslogd -n -iNONE
+    217       1 unattended-upgr  0.0 22528 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+    312       2 SessionLeader    0.0   768 /init
+    313     312 Relay(314)       0.0  1024 /init
+    314     313 timeout          0.0  1792 /usr/bin/timeout --signal=TERM --kill-after=5s 300s /usr/bin/prlimit --as=8589934592:8589934592 --fsize=10737418240:10737418240 --core=0:0 /mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical --no-binary -c 1000000 /mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf /mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_unrestricted_native_pilot/main/proof.drat
+    315       2 login            0.0  4608 /bin/login -f
+    359       1 systemd          0.0 10752 /usr/lib/systemd/systemd --user
+    360     359 (sd-pam)         0.0  3520 (sd-pam)
+    382     315 bash             0.0  4608 -bash
+    404     314 cadical         64.6 688116 /mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical --no-binary -c 1000000 /mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf /mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_unrestricted_native_pilot/main/proof.drat
+    445      87 (udev-worker)    0.0  3648 (udev-worker)
+    446      87 (udev-worker)    0.0  3648 (udev-worker)
+    447      87 (udev-worker)    0.0  3648 (udev-worker)
+    448      87 (udev-worker)    0.0  3648 (udev-worker)
+    449      87 (udev-worker)    0.0  3648 (udev-worker)
+    453     312 Relay(454)       0.0  1024 /init
+    454     453 ps               0.0  3840 /usr/bin/ps -eo pid,ppid,comm,pcpu,rss,args

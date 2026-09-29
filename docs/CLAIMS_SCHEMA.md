@@ -1,4 +1,4 @@
-# Current claim registry (schema version 1)
+# Current claim registry (schema versions 1 and 2)
 
 The root `CLAIMS.yaml` is the authoritative entry point for current project
 claims. It is a claim registry, not an execution log. The historical source is
@@ -10,6 +10,10 @@ An archived VERIFIED label is not a new independent verification.
 The machine schema is [claims.schema.json](claims.schema.json). The separate
 semantic checker is [validate_claims.py](../acceleration/validate_claims.py).
 Schema validation and a green CI badge are not mathematical verification.
+Version 2 adds a narrowly authorized editorial migration record. Version 1
+ledgers remain valid without migration; the unchanged version 1 schema is
+preserved as [claims.schema.v1.json](claims.schema.v1.json), SHA-256
+`3925277499e54e1233097cf4a5c059198f515a5a3335baf258600a9603960a6f`.
 
 ## Locked setup and checks
 
@@ -33,7 +37,8 @@ evidence; this setup does not rewrite them.
 ## Records and references
 
 The top-level fields are `schema_version`, `updated_at`, `archives`, `artifacts`,
-`claims`, and `target`. All timestamps include a timezone. Unknown and inapplicable
+`claims`, and `target`. Version 2 also requires `editorial_migrations` (possibly
+empty); version 1 forbids that field. All timestamps include a timezone. Unknown and inapplicable
 values are explicit nulls with reasons, not invented commands, hashes, or people.
 
 Each artifact has `id`, `path`, SHA-256 `sha256`, `availability`, `retrieval`, and
@@ -99,7 +104,9 @@ Verification records contain `claim_revision`, `verifier`, `method`,
 `command_or_audit`, `timestamp`, `outcome`, `scope`, `artifact_hashes`,
 `shared_components`, `controls`, and `limitations`. Methods distinguish
 `repeated_execution`, `independent_artifact_check`, `independent_derivation`, and
-`external_review`. Outcomes are `PASS`, `FAIL`, or `INCONCLUSIVE`.
+`external_review`. Version 2 also permits `editorial_impact_review`, only when
+authenticated by the exact migration described below. Outcomes are `PASS`,
+`FAIL`, or `INCONCLUSIVE`.
 `artifact_hashes` maps artifact IDs to exact SHA-256 values. Every hashed artifact
 must be registered; preserve older artifact identities when inputs change.
 The verifier identity must be real and recorded, not inferred from agent agreement.
@@ -131,9 +138,10 @@ certificates. Formal proofs disclose admissions and additional axioms.
 ## Impact review and migration
 
 Material changes to statement, scope, assumptions, or kind require a new stable
-ID. Preserve rejected arguments and original evidence. Editorial corrections
-can revise a record, but the conservative `--previous` gate deliberately requires
-manual review/migration rather than automatically judging an edit editorial.
+ID. Preserve rejected arguments and original evidence. The conservative
+`--previous` gate does not decide whether arbitrary edits are editorial. The
+sole assumption-edit exception is the explicit, independently reviewed migration
+below; other assumption edits still require a new stable ID.
 Evidence/dependency changes increment the revision. Retain old verification
 records with their original revision and hashes. An affected VERIFIED claim
 remains out of current totals using NEEDS_RECHECK or QUARANTINED until review.
@@ -156,13 +164,88 @@ Future incompatible schema changes require a new schema version, explicit
 migration documentation, and tests. Keep the old ledger in Git; do not silently
 relabel its historical checks or change archived IDs.
 
+### Version 2 editorial migration
+
+This exception clarifies that no nontrivial target automorphism is **assumed**;
+it does not impose target asymmetry. It authorizes exactly the 17 claim edits
+in the [independent editorial review](../acceleration/results/20260930_independent_review/automorphism_assumption_editorial/summary.json),
+SHA-256 `1584c3c0ef52fdee47c056fec317260d6952fdbd46a9e47e0742ce1f6d711388`.
+Its immutable [reviewed ledger snapshot](../acceleration/results/20260930_independent_review/automorphism_assumption_editorial/CLAIMS.reviewed.yaml)
+has SHA-256 `20b3ee7d9c13c5142205492832a85ba877f35492ab26c0db1fdd5e3b9ba7e168`.
+Those hashes and the exact review identity, status, and population are an explicit
+allowlist in the checker. A reviewer name, PASS label, or replacement report
+with a newly calculated hash cannot authorize another migration. Supporting
+another review requires a separately reviewed checker change.
+
+An operator applies the reviewed correction explicitly; the validator does not
+edit claims or generate reviews. Register both immutable artifacts and add one
+record of this form (the actual record must include all 17 approved members):
+
+```yaml
+schema_version: 2
+editorial_migrations:
+  - id: M-AUTOMORPHISM-ASSUMPTION-CLARIFICATION-20260930
+    version: 1
+    kind: REVIEWED_ASSUMPTION_CLARIFICATION
+    review_artifact:
+      artifact: registered-review-artifact-id
+      sha256: 1584c3c0ef52fdee47c056fec317260d6952fdbd46a9e47e0742ce1f6d711388
+    snapshot_artifact:
+      artifact: registered-snapshot-artifact-id
+      sha256: 20b3ee7d9c13c5142205492832a85ba877f35492ab26c0db1fdd5e3b9ba7e168
+    claims:
+      - claim_id: approved-claim-id
+        from_revision: 1
+        to_revision: 2
+        old_claim_sha256: exact-canonical-old-claim-digest
+        old_assumptions: [exact, original, list]
+        new_assumptions: [exact, approved, list]
+```
+
+`old_claim_sha256` uses UTF-8 JSON with sorted keys and separators `(',', ':')`,
+with Python's default ASCII escaping, as in the immutable review. Authentication
+checks the full old claim against that snapshot and its digest, the exact old
+and approved new assumptions, unchanged statement/scope/kind, and a single
+revision increment. All original evidence and verification records survive.
+The initial correction may otherwise change only `updated_at`, append the two
+migration evidence references and verification, and update existing dependency
+revision pins. It cannot add/remove premises, change their relation, alter
+status/review state, or change unrelated claim fields under this exception.
+The current full old claim must equal the reviewed snapshot at the initial
+transition; a later intervening revision requires new review, not reuse of
+this exception. Migration records themselves cannot later be deleted or rewritten.
+The immutable snapshot comparison and restricted initial-revision field check
+also run without `--previous`, including when a PR base does not contain the
+claim. Later revisions cannot reuse the revision 2 editorial PASS as their
+current-revision verification.
+
+Every migrated claim appends an `editorial_impact_review` PASS bound to revision
+2, the original review's verifier, the exact unchanged scope description, the
+review path as `command_or_audit`, and both registered artifact hashes. The
+validator requires that review's actual bytes and the snapshot bytes locally,
+including under `--hashes none` and `--hashes public`. The review is an impact
+assessment of wording and existing bound audits; it does not rerun mathematics.
+Historical revision 1 records remain revision 1 records. Later evidence revisions
+still require their own current-revision independent checks.
+
+Ordinary dependency impact rules remain in force. Compute the complete affected
+closure, update exact pins, and separately review non-editorial affected claims
+or mark them NEEDS_RECHECK/QUARANTINED. An editorial review cannot establish an
+unreviewed prerequisite, clear a dependent quarantine, or automatically promote
+the whole closure. For example, the changed local-witness claim affects its
+separate dual-Gram exclusion, which is then a prerequisite of the reviewed
+43-literal box-cut claim; that exclusion needs its own dependency impact review
+before the cut can remain CLEAR. The migration only allows the exact wording
+correction to retain the prior mathematical scope and evidence.
+
 ## Public replay and progress
 
 `--hashes public` checks all PUBLIC bytes and explicitly skips LOCAL_ONLY and
 MISSING artifacts. `--hashes available` also checks available local artifacts and
 reports absent local artifacts as skipped. PUBLIC missing bytes and any checked
 hash mismatch are fatal. `--hashes none` is syntax/semantic bookkeeping only and
-explicitly lists skipped hashes. No mode silently downloads artifacts. Retrieve
+explicitly lists skipped hashes, except the mandatory migration review/snapshot
+authentication described above. No mode silently downloads artifacts. Retrieve
 PUBLIC artifacts using their recorded instructions before validating.
 
 JSON output separates errors, checked digests, skipped work, and progress.
@@ -181,7 +264,7 @@ True means the bookkeeping checks passed, not that mathematics was reverified.
 The target object independently records UNKNOWN or an internally verified
 CANDIDATE_POSITIVE/CANDIDATE_NEGATIVE resolution pending external review. It
 cannot be promoted from a finite exclusion. `external_review` states the actual
-review state separately. Version 1 has no justified target-wide denominator:
+review state separately. Neither schema version has a justified target-wide denominator:
 `overall_search_coverage` remains null with `coverage_reason`.
 
 The summary says: "Overall search coverage: UNKNOWN; no validated denominator."

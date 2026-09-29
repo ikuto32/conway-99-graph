@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-09-29T21:40:56.484897+00:00",
+  "branch": "a0",
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "300s",
+    "/usr/bin/prlimit",
+    "--as=4294967296:4294967296",
+    "--fsize=10737418240:10737418240",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "-c",
+    "1000000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_four_branch_strengthened_preparation/a0/instance.cnf",
+    "/tmp/conway99-strengthened-four-irVyuy/a0.drat"
+  ],
+  "independent_byte_gate": {
+    "path": "acceleration/results/20260930_strengthened_four_branch_native_pilot/a0/independent_composed_bytes.json",
+    "sha256": "47c909c6393aad71fabe4f4ce7d962f79298ee00909e3bf00f8607b2e03cce26",
+    "receipt": {
+      "timestamp": "2026-09-29T21:40:56.342325+00:00",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_20260930_strengthened_four_branch_bytes_v1.py",
+        "--base",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_unrestricted_full99_cnf\\instance.cnf",
+        "--branch-cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_four_branch_strengthened_preparation\\a0\\instance.cnf",
+        "--branch",
+        "a0",
+        "--recipe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_unrestricted_four_branches\\branches.json",
+        "--coverage-gate",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\unrestricted_four_branch_cover\\summary.json",
+        "--coverage-gate-sha256",
+        "ae44765cab81327f050b27d3ab75e6b952f44d5387a054a38029516e71516d34",
+        "--equality-suffix",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_unrestricted_pair_equalities\\run01\\pair_equalities.units.cnfpart",
+        "--equality-gate",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\unrestricted_pair_equalities_v2\\summary.json",
+        "--equality-gate-sha256",
+        "1ebbff5e7313a97de6ce86aef3a9047ef856aae7ef0e8b1258eec216f1840237",
+        "--out",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_strengthened_four_branch_native_pilot\\a0\\independent_composed_bytes.json"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 60,
+      "wall_seconds": 0.5629999998491257,
+      "stdout": "acceleration/results/20260930_strengthened_four_branch_native_pilot/a0/independent_byte_checker.stdout.log",
+      "stdout_sha256": "de71100464e10e802b8161a649c72eff3086c211eb291d6026b45da06814838d",
+      "stderr": "acceleration/results/20260930_strengthened_four_branch_native_pilot/a0/independent_byte_checker.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    }
+  },
+  "cnf_sha256": "ec93949153316d4df6c9034180051be2a983cb299ae2b2d5368cbd91ba7567a5",
+  "ext4_proof": "/tmp/conway99-strengthened-four-irVyuy/a0.drat",
+  "limits": {
+    "native_seconds": 300,
+    "conflicts": 1000000,
+    "address_space_bytes": 4294967296,
+    "file_bytes": 10737418240
+  }
+}
