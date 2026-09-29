@@ -2,7 +2,9 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [seventh milestone](RESEARCH_20260930_SEVENTH_WAVE.md)
+For current work, read the [eighth milestone](RESEARCH_20260930_EIGHTH_WAVE.md)
+and [eighth replay guide](REPRODUCING_20260930_EIGHTH_WAVE.md). Also read the
+[seventh milestone](RESEARCH_20260930_SEVENTH_WAVE.md)
 and [seventh recovery/proof replay guide](REPRODUCING_20260930_SEVENTH_WAVE.md).
 The [sixth guide](REPRODUCING_20260930_SIXTH_WAVE.md) preserves the unrestricted
 branch recipes and incomplete timeout artifacts. Also read the

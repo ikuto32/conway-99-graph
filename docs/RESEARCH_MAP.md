@@ -4,6 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [eighth milestone](RESEARCH_20260930_EIGHTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_EIGHTH_WAVE.md) cover the complete finite
+matching-pair/permutation populations, universal local-test limitations and
+direct row29 proof. They do not provide target-wide coverage or new general exclusions.
 The [seventh resumed milestone](RESEARCH_20260930_SEVENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_SEVENTH_WAVE.md) contain complete checked
 proofs for two fixed triangle/Q1 configurations, a36literal local obstruction

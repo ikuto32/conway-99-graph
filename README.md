@@ -21,7 +21,9 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [seventh resumed milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) for
+See the [eighth resumed milestone](docs/RESEARCH_20260930_EIGHTH_WAVE.md) for
+the exact matching-pair/permutation counts, universal local-test limitations,
+and a small direct row proof. The [seventh milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) records
 two proof-checked fixed triangle/Q1 exclusions, a necessary 36-literal clause
 and its 192 checked relabelings, and exact local consistency results. These
 exclude no unrestricted branch. The [sixth milestone](docs/RESEARCH_20260930_SIXTH_WAVE.md)
