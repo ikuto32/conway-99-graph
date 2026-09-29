@@ -4,6 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [tenth milestone](RESEARCH_20260930_TENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_TENTH_WAVE.md) record a verified partial
+factor satisfying component capacities and twelve proofs of its single fixed
+extension exclusion, plus conditional residual-completion equations.
 The [ninth milestone](RESEARCH_20260930_NINTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_NINTH_WAVE.md) cover three new fixed-factor
 exclusions, component-balance obstructions, and two completed UNKNOWN factor

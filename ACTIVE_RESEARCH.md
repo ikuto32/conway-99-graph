@@ -7,7 +7,16 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [ninth milestone](docs/RESEARCH_20260930_NINTH_WAVE.md) records 110
+The latest [tenth milestone](docs/RESEARCH_20260930_TENTH_WAVE.md) records 114
+claims, 112 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. One SAT attempt produced a
+verified capacity-compatible 24x60 partial factor. Twelve complete row proofs
+then excluded that single fixed factor from target completion; other Q1
+factors remain unclassified. The conditional residual-completion equations
+also passed independent review. Next: jointly choose Q1 and one C2 row with
+explicit target-necessary column-pair caps. These are fixed-core results.
+[Tenth replay guide](docs/REPRODUCING_20260930_TENTH_WAVE.md).
+
+The [ninth milestone](docs/RESEARCH_20260930_NINTH_WAVE.md) records 110
 claims, 108 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. It adds three fixed-factor
 exclusions and exact component-balance conditions, plus two independently
 checked binary-factor encodings. Both bounded native attempts ended UNKNOWN;

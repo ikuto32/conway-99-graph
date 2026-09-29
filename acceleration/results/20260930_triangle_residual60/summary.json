@@ -1,0 +1,79 @@
+{
+  "status": "CANDIDATE_TRIANGLE_RESIDUAL60_EQUIVALENCE_AND_SCREEN",
+  "timestamp": "2026-09-29T23:08:19.169817+00:00",
+  "claim_id": "C-TRIANGLE-FACTOR-RESIDUAL60-COMPLETION-EQUIVALENCE",
+  "claim_revision": 1,
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "statement": "For any specified triangle39core and binary36by60 factor F satisfying the exact factor Gram and two-neighbors-per-fiber column conditions, a symmetric binary zero-diagonal60by60 matrix D completes the99-vertex target if and only if FD=2J-F-CF and D^2+F^TF=12I-D+2J. Its degree8 condition is redundant but may be imposed explicitly.",
+  "scope": "Conditional exact block equivalence for a supplied fully validated factor, without assuming a factor exists. No target automorphism or fixed-core containment premise.",
+  "independent_verification": null,
+  "independent_verification_null_reason": "Producer derivation and controls; separate root review required.",
+  "actual_target_factor_available": false,
+  "actual_target_factor_null_reason": "The preceding factor experiment has no validated SAT factor to supply.",
+  "actual_target_residual_search_performed": false,
+  "solver_calls": 0,
+  "controls": {
+    "full_block_identities": [
+      {
+        "m": 2,
+        "b": 1,
+        "vertices": 10,
+        "matrix_entries": 100
+      },
+      {
+        "m": 4,
+        "b": 7,
+        "vertices": 22,
+        "matrix_entries": 484
+      },
+      {
+        "m": 6,
+        "b": 12,
+        "vertices": 33,
+        "matrix_entries": 1089
+      },
+      {
+        "m": 12,
+        "b": 60,
+        "vertices": 99,
+        "matrix_entries": 9801
+      }
+    ],
+    "known_valid_SRG9_triangle_control": true,
+    "generic_rook_residual_star_subsets": 12,
+    "generic_rook_positive_stars": 3,
+    "corruptions_rejected": [
+      "deleted_rook_edge",
+      "mixed_block_sign",
+      "wrong_star_deficit",
+      "missing_allowed_edge",
+      "forbidden_co_neighbor_overlap"
+    ]
+  },
+  "next_cheap_action": "On receipt of an independently validated factor, compute H and F^TF; reject negative deficits, overlaps>2, insufficient symmetric allowed-neighbor degrees or coordinate capacities. Then test each exact8-neighbor domain with forbidden overlap2 co-neighbor pairs, preserving complete certificates if any domain is empty.",
+  "inputs_sha256": {
+    "acceleration/theory_20260930_triangle_residual60.py": "c629b9e3ee2ec86b8dcc1edb2605af108320a8b8a99bb6bf9a5fee2c417de5b7",
+    "docs/DERIVATION_20260930_TRIANGLE_RESIDUAL60.md": "9b1722294910bc041b13701b006bbb76fd96dafba3ca81d1b443b0db595d39e1",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "target_resolution": false,
+  "limitations": [
+    "No factor or residual graph has been constructed or excluded here.",
+    "Nonempty individual row domains do not imply symmetric simultaneous feasibility.",
+    "The row-star relaxation does not include all D^2 equations; the full equivalence requires them.",
+    "Finite controls calibrate implementation, not universal quantification."
+  ],
+  "artifact_hashes": {
+    "acceleration/results/20260930_triangle_residual60/block_control_m02.json": "a088a333852e9c8e6b9f8c9042437d241cc02aa6572cf496adb774eb14253087",
+    "acceleration/results/20260930_triangle_residual60/block_control_m04.json": "3f0e1c3080c61d67b15a7dd87fe22efe95ad3bd75bb6402000054d3cfb608cb3",
+    "acceleration/results/20260930_triangle_residual60/block_control_m06.json": "5ac7d6ac72cee064d546278faddd9f1b82b95e4def009bb6d42a5c25149714c8",
+    "acceleration/results/20260930_triangle_residual60/block_control_m12.json": "824b65975e53d1845f112d8dc7379f3d29addbbc430204d1a2522af4c3ad9122",
+    "acceleration/results/20260930_triangle_residual60/generic_star_controls.json": "a433e2c9192a30935934a81291169e3c4b3570bb12780c7c9bf9cae64be0083c",
+    "acceleration/results/20260930_triangle_residual60/manifest.json": "633b52227bb5c1aab7d9524f25f9873456d340094f85a2af3dc621f983db3f8c"
+  }
+}
