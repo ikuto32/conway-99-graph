@@ -1,0 +1,11 @@
+{
+  "status": "CONTROL_CALIBRATION_FAILED_BEFORE_POPULATION_OR_SEARCH",
+  "recorded_at": "2026-09-29T22:01:25.097069+00:00",
+  "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python acceleration/theory_20260930_joint_two_star_matching.py",
+  "exit_code": 1,
+  "exception": "ValueError: deliberate shared-inner adjacency corruption",
+  "cause": "The intended negative control added only one outer edge sharing one inner neighbor. Its common-plus-adjacency count equals2, so it is permissible. The control expectation was incorrect; no mathematical search result was produced.",
+  "preserved_source": "acceleration/theory_20260930_joint_two_star_matching.py",
+  "preserved_source_sha256": "b4b69c68398283c2dc264fd4298f2957b461bf96cc7c9725fb5a0bc12d6d8dff",
+  "correction": "Version2 in separate source/run02 uses a three-edge triangle that has an exact cap violation; original source and manifest remain unchanged."
+}

@@ -1,0 +1,90 @@
+{
+  "status": "INDEPENDENT_NOGOOD36_ANCHOR_TRANSPORT_PASS",
+  "claim_id": "C-UNRESTRICTED-NOGOOD36-ANCHOR-TRANSPORT192",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "statement": "All 192 specified ordered-anchor-fixing scaffold relabelings transport the verified 36-literal nogood to 192 distinct clauses entailed by every normalized unrestricted target and its exact unrestricted CNF.",
+  "scope": "Exactly group permutations S2 x S2 x S3 and sign flips on groups 4,5,6; ordered anchor vertices15,59 fixed. No target automorphism assumption or full relabeling-group census.",
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TWO-STAR-POSITIVE-EDGE-NOGOOD36",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-FULL99-PREFIX-CNF-ENCODING",
+      "revision": 1,
+      "relation": "encoding_equivalence"
+    }
+  ],
+  "timestamp": "2026-09-29T22:24:04.837899+00:00",
+  "source_commit": "9177adf62f6d27bd41b064c35552ceeea55338c4",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_nogood36_anchor_transport.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/nogood36_anchor_transport"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root independent checker, not transport producer",
+  "verification_type": "complete independent artifact checking and derivation; no producer code imported",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/two_star_empty_domain_cut_v2/summary.json": "e3aae7ba9b776e9382c1790c64f0e76be6f0497912a9e1440e43a7df959ce16c",
+    "acceleration/results/20260930_independent_review/unrestricted_full99_cnf/summary.json": "2d6702d0f60341378fcf6b5b0808e6c34ea6a1025775cfae60500626f199ef58",
+    "acceleration/results/20260930_two_star_empty_domain_cut/run01/certificate.json": "1a0c77282656c61675974f29e31e63af075d48c440f57be622630d6fe64abaa4",
+    "acceleration/audit_20260930_nogood36_anchor_transport.py": "3260e6877bdf01fe1e668494b6b6c7f6607f2dd13736ed665010449900686ef0",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+    "acceleration/results/20260930_two_star_empty_domain_cut/run01/nogood.clause": "510a0ed62662f7d7ea9af420a29be6e52a2c43c1c6632e0f8a366453a40ea3a2",
+    "acceleration/audit_20260930_two_star_empty_domain_cut_v2.py": "7a67fd3ce8ced5af6bd65461c4ec1bbb3368e0f82fd0b3fda703217eda6bac8b",
+    "acceleration/results/20260930_two_star_empty_domain_cut/run01/manifest.json": "6b390d732a5ef2e5922541ee3698678021f856e515cbc3dc414ffce216519147",
+    "acceleration/results/20260930_two_star_empty_domain_cut/run01/summary.json": "6db7caba94a7981c91828eef85cc8d25716fdce01eda2e85b296f17f4008ef45",
+    "acceleration/results/20260930_two_star_nogood36_anchor_transport/run01/clauses.cnfpart": "e52f727564e9cb88afd6107eee7550a106286bee48c74ea05f5d60ae99cc7228",
+    "acceleration/results/20260930_two_star_nogood36_anchor_transport/run01/controls.json": "2173b08b26eae3f3369f90a68de2163cc8692823f82e1cbefda8a4185cf74f92",
+    "acceleration/results/20260930_two_star_nogood36_anchor_transport/run01/manifest.json": "b914380a4123714f283705ce2dab3e3d8789c72c28ef4900bd158780fa28a28a",
+    "acceleration/results/20260930_two_star_nogood36_anchor_transport/run01/maps.json": "d3ba0d1e11902450b02af17f1540d82926bdec04676a9d3072522c6e3cc488c0",
+    "acceleration/results/20260930_two_star_nogood36_anchor_transport/run01/maps.json.gz": "c6582df142fb500d38a28f2243c6ccaaebf7345dc1483956e956d155e31e2b50",
+    "acceleration/results/20260930_two_star_nogood36_anchor_transport/run01/summary.json": "9212d059c50ddf4eb5431df8a3f7d4ccb67610d4ead051ea21b7a614bb42a0ef",
+    "acceleration/results/20260930_two_star_nogood36_anchor_transport/run01/unique_clauses.json": "7ce002946ad7f413cbd8e073f57be116d849c0a01466ed46ef3bc36c68b63655"
+  },
+  "checks": {
+    "specified_maps": 192,
+    "distinct_maps": 192,
+    "unique_clauses": 192,
+    "scaffold_entries_checked": 1881792,
+    "primary_images_checked": 669312,
+    "signed_literals_checked": 6912,
+    "signed_truth_table_assignments": 64,
+    "corruptions_rejected": [
+      "missing_map",
+      "duplicate_symbol_map",
+      "wrong_group_metadata",
+      "wrong_tail_mask",
+      "wrong_root_image",
+      "wrong_outer_image",
+      "wrong_edge_image",
+      "wrong_literal_sign",
+      "omitted_canonical_literal"
+    ],
+    "exact_gzip_recovery": true
+  },
+  "derivation": [
+    "The exhaustive product enumeration has 2!*2!*3!*2^3=192 distinct symbol maps. All records coincide with this set.",
+    "Every map preserves all known/free scaffold entries and bijects all outer primary edges, so relabeling maps the normalized target family bijectively onto itself.",
+    "For any normalized target A, apply the inverse vertex map. The source clause holds there; transporting each signed edge literal forward gives the recorded image clause holding in A.",
+    "The audited unrestricted encoding equivalence therefore entails each clause for every satisfying CNF assignment. No permutation of auxiliary variables is needed."
+  ],
+  "limitations": [
+    "No new target graph, unrestricted exclusion, or search coverage fraction.",
+    "No CNF was augmented or solved in this audit.",
+    "The 192 clause count measures this finite image population, not new independently excluded graph classes."
+  ],
+  "elapsed_seconds": 1.5309999999590218
+}

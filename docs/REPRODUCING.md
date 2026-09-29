@@ -2,7 +2,11 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [fifth milestone](RESEARCH_20260930_FIFTH_WAVE.md)
+For current work, read the [seventh milestone](RESEARCH_20260930_SEVENTH_WAVE.md)
+and [seventh recovery/proof replay guide](REPRODUCING_20260930_SEVENTH_WAVE.md).
+The [sixth guide](REPRODUCING_20260930_SIXTH_WAVE.md) preserves the unrestricted
+branch recipes and incomplete timeout artifacts. Also read the
+[fifth milestone](RESEARCH_20260930_FIFTH_WAVE.md)
 and its linked unrestricted input package catalog, plus the
 [fourth milestone](RESEARCH_20260930_FOURTH_WAVE.md)
 and [fourth recovery guide](REPRODUCING_20260930_FOURTH_WAVE.md). The

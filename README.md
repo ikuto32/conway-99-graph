@@ -21,9 +21,12 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [sixth resumed milestone](docs/RESEARCH_20260930_SIXTH_WAVE.md) for
-the checked four-branch coverage, entailed equality units, exact modular minors,
-and completed UNKNOWN native runs. The [fifth milestone](docs/RESEARCH_20260930_FIFTH_WAVE.md)
+See the [seventh resumed milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) for
+two proof-checked fixed triangle/Q1 exclusions, a necessary 36-literal clause
+and its 192 checked relabelings, and exact local consistency results. These
+exclude no unrestricted branch. The [sixth milestone](docs/RESEARCH_20260930_SIXTH_WAVE.md)
+records the four-branch coverage and completed UNKNOWN native runs.
+The [fifth milestone](docs/RESEARCH_20260930_FIFTH_WAVE.md)
 establishes the unrestricted full99 SAT equivalence. The [fourth milestone](docs/RESEARCH_20260930_FOURTH_WAVE.md) records
 verified conditional Gram clauses and local-test redundancy theorems. The
 [third milestone](docs/RESEARCH_20260930_THIRD_WAVE.md) preserves all six

@@ -1,0 +1,55 @@
+{
+  "status": "CHECKER_LABEL_ORDER_CORRECTION_WITH_PRESERVED_ORIGINAL_SOURCE",
+  "timestamp": "2026-09-29T21:59:12.534045+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_star_audit_order_correction.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "original_command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    ".uv-cache-20260917",
+    "python",
+    "-B",
+    "acceleration/audit_20260930_unrestricted_star_matching.py"
+  ],
+  "original_result": "Exit1: ValueError: independent label order, before any sampled raw graph was checked or a verdict saved",
+  "original_stdout_stderr_artifact": null,
+  "original_stdout_stderr_null_reason": "Original traceback was visible in the tool transcript; no byte-for-byte standalone log was saved",
+  "original_source_preserved": "acceleration/audit_20260930_unrestricted_star_matching.py",
+  "corrected_source": "acceleration/audit_20260930_unrestricted_star_matching_v2.py",
+  "fault": "Checker assigned outer vertices in ordinary symbol-pair lexicographic order; the saved model uses root-coordinate-pair order with its four sign choices.",
+  "first_differing_outer_index": 2,
+  "old_assumed_label": [
+    0,
+    4
+  ],
+  "actual_label": [
+    1,
+    2
+  ],
+  "changed_index_count": 60,
+  "label_sets_equal": true,
+  "correction": "Independently sort the same combinatorial label set by coordinate pair and two endpoint signs; verify every raw fixed/free matrix entry against that derived scaffold before graph checks.",
+  "fresh_falsification_of_old_order": true,
+  "new_order_matches_all84labels": true,
+  "subsequent_status": "INDEPENDENT_UNRESTRICTED_ONE_STAR_MATCHING_REDUNDANCY_PASS",
+  "mathematical_statement_changed": false,
+  "theorem_refuted": false,
+  "inputs_sha256": {
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+    "acceleration/audit_20260930_unrestricted_star_matching.py": "3c607a306a116d55a2290ecb9314a711d060150ce1b8758f2cc85cdd7c853e0f",
+    "acceleration/audit_20260930_unrestricted_star_matching_v2.py": "e9af3a84d3d1de5d13233828da21fe44bfd1a40ff059b2021b00b1b3e98776c9",
+    "acceleration/results/20260930_independent_review/unrestricted_star_matching/summary.json": "f8445dddc7deb5327681ad4a2d00c9c025465d4e903e1da295d19d6b834c76e6",
+    "acceleration/record_20260930_star_audit_order_correction.py": "e09890fe4565eb9431cd512cd352cca3302852ab0ca41fbd9ae44993622b620f"
+  },
+  "limitations": [
+    "This is a checker metadata correction, not a mathematical discovery or independent promotion beyond the separate bound audit."
+  ]
+}

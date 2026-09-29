@@ -7,14 +7,17 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [sixth milestone](docs/RESEARCH_20260930_SIXTH_WAVE.md) records87
-claims,85 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. Four strengthened native branch
-attempts and one unbranched native attempt completed UNKNOWN; none closes a
-branch. Its fresh process snapshot found no CaDiCaL process. Subsequent live
-state requires a new observation. Next: exact triangle-factor modular image
-tests and joint compatibility of complete quota stars. The migration clarified
-17 assumption phrases and separately reviewed2 affected claims; no symmetry or
-asymmetry of a target is assumed. [Replay instructions](docs/REPRODUCING_20260930_SIXTH_WAVE.md).
+The latest [seventh milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) records97
+claims,95 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. Both exact archived Wave151 and
+Wave154 triangle/Q1 configurations now have independently replayed complete
+UNSAT proofs. These exclude only the two fixed configurations; no unrestricted
+branch is closed. A36literal necessary clause and192 specified relabelings,
+one-star redundancy,32 local two-star witnesses and244 individual domains
+also passed independent checks. Individual domains do not imply joint feasibility.
+Both native attempts ended; subsequent process liveness requires a fresh observation.
+Next: direct row-obstruction checking and finite matching-pair census review
+before broader triangle-core work. No nontrivial target automorphism is assumed.
+[Replay instructions](docs/REPRODUCING_20260930_SEVENTH_WAVE.md).
 
 The checkpoint-aware eight-coordinate continuation completed with 84 saved
 center domains and 2,290,122 local choices, including all 879,449 prior embedded

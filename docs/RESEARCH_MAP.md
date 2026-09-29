@@ -4,6 +4,12 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [seventh resumed milestone](RESEARCH_20260930_SEVENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_SEVENTH_WAVE.md) contain complete checked
+proofs for two fixed triangle/Q1 configurations, a36literal local obstruction
+and192 checked clause transports, plus the scoped single/two-star results.
+The [sixth milestone](RESEARCH_20260930_SIXTH_WAVE.md) covers the four-branch
+normalization, equality units and completed UNKNOWN unrestricted attempts.
 The [fifth resumed milestone](RESEARCH_20260930_FIFTH_WAVE.md) records the
 independently checked unrestricted full99 encoding, its exact coverage proof,
 and further scoped Gram clauses. The
