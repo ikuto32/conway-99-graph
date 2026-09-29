@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-09-29T22:40:25.806066+00:00",
+  "source_commit": "32a012be994de5d40568023a460b3a9938da2fcd",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_triangle_core_permutation.py",
+    "theorem",
+    "--out",
+    "acceleration/results/20260930_independent_review/triangle_core_paircap_theorem"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/eight_domain_audit independent core adjacency and exact coefficient checker",
+  "producer_imports": false,
+  "external_review": false,
+  "target_resolution": false,
+  "status": "INDEPENDENT_TRIANGLE_CORE_PAIR_CAP_REDUCTION_PASS",
+  "claim_id": "C-TRIANGLE-CORE-PERMUTATION-PAIR-CAP-REDUCTION",
+  "claim_revision": 1,
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For every positive even n and every three perfect matchings M0,M1,M2 and permutation P, the specified3+3n triangle core satisfies all distinct-vertex common-plus-adjacency caps<=2 if and only if its unary common-M0-edge prohibitions and its n two-row diagonal prohibitions hold. The squarefree product coefficient equals its complete labelled allowed-P count.",
+  "scope": "Exact positive-core local pair-cap feasibility only; at n12 this is the39vertex principal core, not target completion or a canonical core census.",
+  "dependencies": [],
+  "dependency_null_reason": "Direct adjacency-block identity and elementary permutation counting; no prior graph-existence theorem used.",
+  "inputs_sha256": {
+    "acceleration/audit_20260930_triangle_core_permutation.py": "2bab05c438054372171e16cc049e8b5a026351b839b86bb5b3247766c9be9cc9",
+    "docs/AUDIT_20260930_TRIANGLE_CORE_PERMUTATION_CAPS.md": "61f10c390ac00bdbba98f014dfdac1fee4fba620952ce79fed16ac407b2aae77",
+    "acceleration/theory_20260930_triangle_core_permutation_spec.md": "c12b788f588790fa35f6c4f8a005440f4505102414e83b59922be4268c4421f7",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "calibration": {
+    "4": {
+      "matching_pairs": 9,
+      "permutations_per_pair": 24,
+      "triples_tested": 216,
+      "cap_compatible_triples": 123
+    },
+    "6": {
+      "matching_pairs": 225,
+      "permutations_per_pair": 720,
+      "triples_tested": 162000,
+      "cap_compatible_triples": 103319
+    }
+  },
+  "malformed_controls_rejected": [
+    "matching_fixed_point",
+    "matching_not_involution",
+    "odd_dimension",
+    "duplicate_permutation_image",
+    "boolean_not_integer_permutation",
+    "nonzero_diagonal",
+    "asymmetric_adjacency"
+  ],
+  "extra_edge_negative_control": true,
+  "positive_raw39_sha256": "d16896b9d0e16ce052304c80b6c30cac0eeeb3585d0ccc0c824cf9b14cb4244c",
+  "exhaustive_counts_sha256": "34d8fd8ae12cc19d16f4a2852137a85c6ddcec36e58fa4de4d06fc1183dfc50e",
+  "shared_components": [
+    "Python exact integers and bitsets; no producer code or producer DP imported.",
+    "The polynomial-count recurrence is mathematically equivalent to subset DP, independently derived and implemented with reversed row-pair order."
+  ],
+  "limitations": [
+    "Finite controls calibrate code; the written exhaustive pair-type derivation establishes the general reduction.",
+    "No claim of target feasibility, target exclusion, novelty or P-orbit classification."
+  ],
+  "elapsed_seconds": 5.75
+}

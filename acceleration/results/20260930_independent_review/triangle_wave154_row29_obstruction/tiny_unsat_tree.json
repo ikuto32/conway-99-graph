@@ -1,0 +1,73 @@
+{
+  "status": "UNSAT",
+  "assignment": null,
+  "root": 0,
+  "nodes": [
+    {
+      "id": 0,
+      "forces": [],
+      "status": "SPLIT",
+      "variable": 0,
+      "children": [
+        {
+          "value": 0,
+          "node": 1
+        },
+        {
+          "value": 1,
+          "node": 2
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "forces": [
+        {
+          "constraint": 0,
+          "ones_before": 0,
+          "free_before": [
+            1
+          ],
+          "value": 1
+        },
+        {
+          "constraint": 1,
+          "ones_before": 1,
+          "free_before": [
+            2
+          ],
+          "value": 0
+        }
+      ],
+      "status": "CONFLICT",
+      "constraint": 2,
+      "ones": 0,
+      "free": 0
+    },
+    {
+      "id": 2,
+      "forces": [
+        {
+          "constraint": 0,
+          "ones_before": 1,
+          "free_before": [
+            1
+          ],
+          "value": 0
+        },
+        {
+          "constraint": 1,
+          "ones_before": 0,
+          "free_before": [
+            2
+          ],
+          "value": 1
+        }
+      ],
+      "status": "CONFLICT",
+      "constraint": 2,
+      "ones": 2,
+      "free": 0
+    }
+  ]
+}

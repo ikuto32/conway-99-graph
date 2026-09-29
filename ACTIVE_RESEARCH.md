@@ -7,16 +7,23 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [seventh milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) records97
-claims,95 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. Both exact archived Wave151 and
-Wave154 triangle/Q1 configurations now have independently replayed complete
-UNSAT proofs. These exclude only the two fixed configurations; no unrestricted
+The latest [eighth milestone](docs/RESEARCH_20260930_EIGHTH_WAVE.md) records103
+claims,101 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. Its six new claims include
+the complete ordered matching-pair census, exact local permutation counts,
+universal Gram-test redundancy and identity local constructions, and a small
+direct row proof. None closes an unrestricted branch. Next: joint binary
+incidence feasibility for a fixed39core with both unknown blocks free; consult
+fresh receipts for the separate native run. [Replay guide](docs/REPRODUCING_20260930_EIGHTH_WAVE.md).
+
+The [seventh milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) records independently replayed complete
+UNSAT proofs for the exact archived Wave151 and Wave154 triangle/Q1 configurations.
+These exclude only the two fixed configurations; no unrestricted
 branch is closed. A36literal necessary clause and192 specified relabelings,
 one-star redundancy,32 local two-star witnesses and244 individual domains
 also passed independent checks. Individual domains do not imply joint feasibility.
 Both native attempts ended; subsequent process liveness requires a fresh observation.
-Next: direct row-obstruction checking and finite matching-pair census review
-before broader triangle-core work. No nontrivial target automorphism is assumed.
+The subsequent direct row and matching-pair audits appear in the eighth milestone.
+No nontrivial target automorphism is assumed.
 [Replay instructions](docs/REPRODUCING_20260930_SEVENTH_WAVE.md).
 
 The checkpoint-aware eight-coordinate continuation completed with 84 saved
