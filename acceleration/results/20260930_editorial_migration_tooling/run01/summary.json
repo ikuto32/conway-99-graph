@@ -1,0 +1,89 @@
+{
+  "status": "PRODUCER_TOOLING_CHECKS_PASS_PENDING_INDEPENDENT_CODE_REVIEW",
+  "timestamp": "2026-09-29T21:33:24.428275+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "source_dirty": true,
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_editorial_migration_tooling.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "setup": "UV_PROJECT_ENVIRONMENT=build/research-venv; uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/record_20260930_editorial_migration_tooling.py",
+  "versions": {
+    "python": "3.12.10",
+    "PyYAML": "6.0.2",
+    "jsonschema": "4.23.0",
+    "uv": "uv 0.11.25 (1fc7de7c4 2026-06-26 x86_64-pc-windows-msvc)"
+  },
+  "inputs_sha256": {
+    "acceleration/record_20260930_editorial_migration_tooling.py": "ca25c2a8dd115742df897347065eb0fe92a3eff101fd03674579a9aca431d169",
+    "acceleration/validate_claims.py": "48c886bed1a60c63d7e7c2ad0decb29811cfa0f1f0b3b6f38bdecddc9b0c3644",
+    "acceleration/test_validate_claims.py": "14f7991c2ff38ef69b01515f8d56b7652df3454619c767ad8f7c137413c0c5d0",
+    "docs/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "docs/claims.schema.v1.json": "3925277499e54e1233097cf4a5c059198f515a5a3335baf258600a9603960a6f",
+    "docs/CLAIMS_SCHEMA.md": "56d049dffad3ca2840163f46ef1de2d4731cba9fd13e32a54169efc1032fc483",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260930_independent_review/automorphism_assumption_editorial/summary.json": "1584c3c0ef52fdee47c056fec317260d6952fdbd46a9e47e0742ce1f6d711388",
+    "acceleration/results/20260930_independent_review/automorphism_assumption_editorial/CLAIMS.reviewed.yaml": "20b3ee7d9c13c5142205492832a85ba877f35492ab26c0db1fdd5e3b9ba7e168"
+  },
+  "outputs_sha256": {
+    "CLAIMS.unmodified.yaml": "20b3ee7d9c13c5142205492832a85ba877f35492ab26c0db1fdd5e3b9ba7e168",
+    "command_00.stderr.log": "a39f4f6e2400757af363e15ad467015bc6e0bf5c0dd9c4545577c55539fb3d67",
+    "command_00.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command_01.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command_01.stdout.log": "06bb72c73f2c4114d8c9ea5f35e263ac82c89c3c359d80865c44d5d500d94030",
+    "dependency_plan.json": "e868bb645116db33fb48e8975e7aa353c445127afd9909f14597732a56b56e66",
+    "unmodified_ledger_validation.json": "06bb72c73f2c4114d8c9ea5f35e263ac82c89c3c359d80865c44d5d500d94030"
+  },
+  "executions": [
+    {
+      "argv": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "acceleration",
+        "-p",
+        "test_validate_claims.py",
+        "-v"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "returncode": 0,
+      "wall_seconds": 13.943279800005257,
+      "stdout": "command_00.stdout.log",
+      "stderr": "command_00.stderr.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "-B",
+        "acceleration/validate_claims.py",
+        "acceleration/results/20260930_editorial_migration_tooling/run01/CLAIMS.unmodified.yaml",
+        "--hashes",
+        "none",
+        "--out",
+        "acceleration/results/20260930_editorial_migration_tooling/run01/unmodified_ledger_validation.json"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "returncode": 0,
+      "wall_seconds": 0.6491157999262214,
+      "stdout": "command_01.stdout.log",
+      "stderr": "command_01.stderr.log"
+    }
+  ],
+  "development_failures": {
+    "initial_run": "49 tests: three failures. Two authentic migration fixtures lacked the separate dependent prerequisite review; one intended bad basis mutation was identical to the original. Corrected fixtures and strengthened controls. No validator relaxation made for those failures.",
+    "initial_stdout_artifact": null,
+    "unavailable_reason": "Initial exploratory test stdout existed only in tool output; no exact saved log is claimed",
+    "intermediate_results": "50 tests passed, then 53 tests passed after additional controls; final exact captured execution is recorded above"
+  },
+  "limitations": [
+    "Producer test execution is engineering evidence, not independent approval of the new validator",
+    "The root ledger was not edited",
+    "Unmodified current-ledger check intentionally disables ordinary artifact hashing and expensive mathematical checks; skips are explicit",
+    "The positive unit-test fixture's separate dependent impact verification is explicitly SYNTHETIC, not permission to promote a real claim"
+  ]
+}

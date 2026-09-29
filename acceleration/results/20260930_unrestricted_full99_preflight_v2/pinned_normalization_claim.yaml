@@ -1,0 +1,57 @@
+- id: C-ROOT-SCAFFOLD-NORMALIZATION
+  revision: 1
+  statement: For every symmetric binary zero-diagonal 99x99 matrix A satisfying A^2=12I-A+2J, every chosen root
+    and every ordering/orientation of its seven neighborhood matching edges determine a unique labeling of the 84
+    outside vertices by the nonmatched root-neighbor pairs, yielding the 189 positive root-scaffold edges; this
+    normalization imposes no outer adjacency or nonadjacency and assumes no nontrivial automorphism.
+  kind: mathematical result
+  basis:
+  - DERIVED
+  status: VERIFIED
+  review_state: CLEAR
+  scope:
+    description: Necessary normalization for every hypothetical target and every root; all orderings and orientations
+      of its seven neighborhood matching edges are allowed. Outer adjacencies remain unrestricted by normalization.
+    unrestricted_target: true
+    target_resolution: NONE
+  assumptions:
+  - Symmetry, binary entries, zero diagonal, order99, and the exact target matrix equation.
+  dependencies: []
+  evidence:
+  - root-scaffold-audit
+  - root-scaffold-derivation
+  - root-scaffold-manifest
+  - root-scaffold-calibration
+  verification:
+  - claim_revision: 1
+    verifier: independent_verifier agent
+    method: independent_derivation
+    command_or_audit: acceleration/results/20260917_independent_review/ROOT_SCAFFOLD_DERIVATION.md and acceleration/results/20260917_independent_review/root_scaffold.json
+    timestamp: '2026-09-17T09:53:18.471773+00:00'
+    outcome: PASS
+    scope: Necessary normalization for every hypothetical target and every root; all orderings and orientations
+      of its seven neighborhood matching edges are allowed. Outer adjacencies remain unrestricted by normalization.
+    artifact_hashes:
+      root-scaffold-audit: e96941c2bc050aad65b67a4f22a8968d588ae4dbe3cd7b7f22bfe84972a963a8
+      root-scaffold-derivation: a45fa5c52f3b348e8fb41b347925a363bb79e4d6389f60f760ec85e6cfe8f077
+      root-scaffold-manifest: ae3d13619864342e22574bedcfdb5286dfbb7e843011fd198b2bc15c2bd1b742
+      root-scaffold-calibration: 984c0f0ef215d9885f9d46b27317ad699ec38ee2a44e0666acea51977e03ea1d
+    shared_components:
+    - Python standard library for finite calibration
+    - Explicit target equation and root-label convention
+    controls:
+    - 'Known rook9 graph: all9 roots and72 labeled maps checked using its own srg(9,4,1,2) equation.'
+    - 42 corrupted matrix/label controls rejected.
+    limitations:
+    - The universal implication follows from the written proof, not from finite rook9 calibration.
+  limitations:
+  - No target existence or nonexistence conclusion.
+  - No novelty or external peer-review claim.
+  - No outer-edge restrictions used by later computational experiments follow merely from this normalization.
+  created_at: '2026-09-17T09:54:37.714958+00:00'
+  updated_at: '2026-09-17T09:54:37.714958+00:00'
+  unknowns:
+    external_source: Fresh self-contained audit of a standard normalization; no novelty claim.
+  external_source: null
+  reproducibility:
+    manifest: root-scaffold-manifest

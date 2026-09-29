@@ -1,0 +1,78 @@
+{
+  "status": "PRODUCER_CORRECTION_TESTED_PENDING_INDEPENDENT_REVIEW",
+  "timestamp": "2026-09-29T21:44:57.142932+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_editorial_migration_correction.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "previous_independent_verdict": "VETO_UNAPPROVED_FIELD_ACCEPTED",
+  "defect": "At the approved migration revision, standalone mode accepted unrelated limitations changes because the restricted old/new field comparison ran only through --previous impact checking.",
+  "correction": "check_editorial_migrations now invokes the same strict field/evidence/dependency-relation check against the immutable old snapshot whenever current revision equals the approved migration revision, regardless of --previous.",
+  "schema_version_changed_again": false,
+  "schema_reason": "The correction tightens semantic enforcement of the existing exact version2 migration; schema bytes remain unchanged.",
+  "history_preserved": "Original source/schema/tests/docs and recorder bytes are preserved in rejected_v1; original run01 and the independent veto report remain untouched.",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/editorial_migration_veto/summary.json": "62d2246a8ec141bf41c4e0f7e41b9a9cc113501ed5d8412e7bd521befc1bba7c",
+    "acceleration/results/20260930_editorial_migration_tooling/run01/summary.json": "a92ed38877a7660ad9c3f96ef38440fab6015fc04c623a5a7d60cddc27435eee",
+    "acceleration/results/20260930_editorial_migration_tooling/run02/summary.json": "ee37cc8af5b73dbec616a36f8a803aba08c8e6deea3e69ccafc41a5ab6f86262",
+    "acceleration/results/20260930_editorial_migration_tooling/rejected_v1/validate_claims.py": "48c886bed1a60c63d7e7c2ad0decb29811cfa0f1f0b3b6f38bdecddc9b0c3644",
+    "acceleration/results/20260930_editorial_migration_tooling/rejected_v1/test_validate_claims.py": "14f7991c2ff38ef69b01515f8d56b7652df3454619c767ad8f7c137413c0c5d0",
+    "acceleration/results/20260930_editorial_migration_tooling/rejected_v1/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "acceleration/results/20260930_editorial_migration_tooling/rejected_v1/CLAIMS_SCHEMA.md": "56d049dffad3ca2840163f46ef1de2d4731cba9fd13e32a54169efc1032fc483",
+    "acceleration/record_20260930_editorial_migration_tooling.py": "ca25c2a8dd115742df897347065eb0fe92a3eff101fd03674579a9aca431d169",
+    "acceleration/validate_claims.py": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265",
+    "acceleration/test_validate_claims.py": "2d42a332eb48471b766db975e2aa4b9c2700fcacdfa36349dec0de843e7b56df",
+    "docs/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "docs/claims.schema.v1.json": "3925277499e54e1233097cf4a5c059198f515a5a3335baf258600a9603960a6f",
+    "docs/CLAIMS_SCHEMA.md": "55af995252f10f7660049d2993d64a1ea21948031310274ec525c1e753a1e58e",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260930_independent_review/automorphism_assumption_editorial/summary.json": "1584c3c0ef52fdee47c056fec317260d6952fdbd46a9e47e0742ce1f6d711388",
+    "acceleration/results/20260930_independent_review/automorphism_assumption_editorial/CLAIMS.reviewed.yaml": "20b3ee7d9c13c5142205492832a85ba877f35492ab26c0db1fdd5e3b9ba7e168",
+    "acceleration/results/20260930_editorial_migration_tooling/run02/command_00.stderr.log": "36c3be0b4c0072459d32ac9d13c85f2708ba85f40d58189f5f5e9e5bfca4b7c2",
+    "acceleration/record_20260930_editorial_migration_correction.py": "e0a9609bb0611e18fa56296efd5acc159851ba3420e0bc64cd31ab76bc1a0abe"
+  },
+  "standalone_reproduction": {
+    "positive_valid": true,
+    "original_corruption_valid": false,
+    "original_corruption_errors": [
+      "editorial M-EDITORIAL-FIXTURE: C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS: unapproved initial editorial fields requires new stable id or separate review",
+      "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-FOUR-FACTOR-INITIAL-GRAM-BOX-NOGOOD: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION01: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION02: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-GRAM-BOX-WAVE02: editorial verification lacks exact authenticated migration approval",
+      "C-FIXED-SCAFFOLD-RELABELING-CUT-TRANSPORT: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-FOUR-FACTOR-SCAFFOLD-RELABELINGS32: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-DEGREE-BLOCK-GRAM-UPPER-BOUND: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-DEGREE-BLOCK-GRAM-CUT-12: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-GRAM-CUT-ORBITS-352: editorial verification lacks exact authenticated migration approval",
+      "C-INDEPENDENT-SET-MATCHING-CAP-COMPOSITION: editorial verification lacks exact authenticated migration approval",
+      "C-CLOSED-TWO-NEIGHBORHOOD-GRAM-REDUNDANCY: editorial verification lacks exact authenticated migration approval",
+      "C-CLOSED-TWO-NEIGHBORHOOD-LOWER-GRAM-REDUNDANCY: editorial verification lacks exact authenticated migration approval",
+      "C-CLOSED29-TWO-SPECIFIC-GRAM-OBSTRUCTIONS: editorial verification lacks exact authenticated migration approval",
+      "C-PARTIAL-K-EIGHT-COORDINATE-FULL99-SAT-ENCODING: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-ORBIT-AUGMENTED-LOCAL59-WITNESS: editorial verification lacks exact authenticated migration approval",
+      "C-ROOK-ORBIT-LOCAL59-GRAM-BOX-CUT43: editorial verification lacks exact authenticated migration approval"
+    ]
+  },
+  "captured_test_count": 56,
+  "additional_controls": [
+    "Eight unrelated claim-field changes without previous ledger",
+    "Premise relation change, premise addition/deletion, unrelated evidence addition without previous ledger",
+    "Later revision cannot use stale editorial PASS, and changing the editorial record to that later revision is rejected"
+  ],
+  "ledger_changed": false,
+  "mathematical_claim_changed": false,
+  "shared_components": [
+    "Positive fixture and validator are producer implementations; this replay is not independent review",
+    "Root's separate original failing audit is authenticated and preserved"
+  ],
+  "limitations": [
+    "New engineering test pass does not approve mathematics or application of the ledger migration",
+    "Independent root re-review remains required before ledger application"
+  ]
+}

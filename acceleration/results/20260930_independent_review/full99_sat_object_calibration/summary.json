@@ -1,0 +1,419 @@
+{
+  "timestamp": "2026-09-29T20:48:05.955304+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_full99_sat_object.py",
+    "calibrate",
+    "--out",
+    "acceleration/results/20260930_independent_review/full99_sat_object_calibration"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/state_literature_audit independent checking agent",
+  "producer_imported": false,
+  "shared_components": [
+    "Python standard library; exact arbitrary-precision integer arithmetic"
+  ],
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "status": "INDEPENDENT_FULL99_SAT_OBJECT_CHECKER_CALIBRATION_PASS",
+  "controls": {
+    "valid_srg_fixtures": [
+      {
+        "name": "cycle5",
+        "path": "acceleration/results/20260930_independent_review/full99_sat_object_calibration/cycle5.json",
+        "sha256": "93824a76c28be6f83c411781e771e7b2ca0b1f4a91845ef076139b978c06bcc5",
+        "result": {
+          "parameters": [
+            5,
+            2,
+            0,
+            1
+          ],
+          "strict_binary_entries": 25,
+          "degree_rows_checked": 5,
+          "exact_integer_matrix_entries_checked": 25,
+          "unordered_edges": 5,
+          "identity_coefficients": {
+            "I": 1,
+            "A": -1,
+            "J": 1
+          },
+          "valid": true
+        }
+      },
+      {
+        "name": "paley13",
+        "path": "acceleration/results/20260930_independent_review/full99_sat_object_calibration/paley13.json",
+        "sha256": "aa4080fd7678f672ccd5b545c6bdac972562a0111f3ca03f5eb31edcc0253608",
+        "result": {
+          "parameters": [
+            13,
+            6,
+            2,
+            3
+          ],
+          "strict_binary_entries": 169,
+          "degree_rows_checked": 13,
+          "exact_integer_matrix_entries_checked": 169,
+          "unordered_edges": 39,
+          "identity_coefficients": {
+            "I": 3,
+            "A": -1,
+            "J": 3
+          },
+          "valid": true
+        }
+      },
+      {
+        "name": "petersen10",
+        "path": "acceleration/results/20260930_independent_review/full99_sat_object_calibration/petersen10.json",
+        "sha256": "93435eb580c3ede945d2ef0080555b3441beefa0b0499d7a71b12245ef211ae6",
+        "result": {
+          "parameters": [
+            10,
+            3,
+            0,
+            1
+          ],
+          "strict_binary_entries": 100,
+          "degree_rows_checked": 10,
+          "exact_integer_matrix_entries_checked": 100,
+          "unordered_edges": 15,
+          "identity_coefficients": {
+            "I": 2,
+            "A": -1,
+            "J": 1
+          },
+          "valid": true
+        }
+      },
+      {
+        "name": "petersen_complement10",
+        "path": "acceleration/results/20260930_independent_review/full99_sat_object_calibration/petersen_complement10.json",
+        "sha256": "86e971beff787fc4c372b35bacec94f86835dc0795980935655f6430c530e583",
+        "result": {
+          "parameters": [
+            10,
+            6,
+            3,
+            4
+          ],
+          "strict_binary_entries": 100,
+          "degree_rows_checked": 10,
+          "exact_integer_matrix_entries_checked": 100,
+          "unordered_edges": 30,
+          "identity_coefficients": {
+            "I": 2,
+            "A": -1,
+            "J": 4
+          },
+          "valid": true
+        }
+      },
+      {
+        "name": "rook4",
+        "path": "acceleration/results/20260930_independent_review/full99_sat_object_calibration/rook4.json",
+        "sha256": "1b5e83edddbf4e129f4ccd15a45a213c50578d8abefb43ff7ef1289b7458ed19",
+        "result": {
+          "parameters": [
+            16,
+            6,
+            2,
+            2
+          ],
+          "strict_binary_entries": 256,
+          "degree_rows_checked": 16,
+          "exact_integer_matrix_entries_checked": 256,
+          "unordered_edges": 48,
+          "identity_coefficients": {
+            "I": 4,
+            "A": 0,
+            "J": 2
+          },
+          "valid": true
+        }
+      },
+      {
+        "name": "triangular8",
+        "path": "acceleration/results/20260930_independent_review/full99_sat_object_calibration/triangular8.json",
+        "sha256": "59b30ddfb109413ef5d8724ffd911194bc6aeaac642e28395414e3f9d63398a4",
+        "result": {
+          "parameters": [
+            28,
+            12,
+            6,
+            4
+          ],
+          "strict_binary_entries": 784,
+          "degree_rows_checked": 28,
+          "exact_integer_matrix_entries_checked": 784,
+          "unordered_edges": 168,
+          "identity_coefficients": {
+            "I": 8,
+            "A": 2,
+            "J": 4
+          },
+          "valid": true
+        }
+      }
+    ],
+    "valid_srg_fixture_count": 6,
+    "corruptions_rejected": [
+      {
+        "case": "cycle5/loop",
+        "error": "zero diagonal"
+      },
+      {
+        "case": "cycle5/asymmetry",
+        "error": "symmetry"
+      },
+      {
+        "case": "cycle5/symmetric_flip",
+        "error": "degree requirement"
+      },
+      {
+        "case": "cycle5/nonbinary",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "cycle5/float_entry",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "cycle5/wrong_shape",
+        "error": "matrix square dimensions"
+      },
+      {
+        "case": "cycle5/wrong_lambda",
+        "error": "integer matrix identity fails at (0,1): 0 != 1"
+      },
+      {
+        "case": "paley13/loop",
+        "error": "zero diagonal"
+      },
+      {
+        "case": "paley13/asymmetry",
+        "error": "symmetry"
+      },
+      {
+        "case": "paley13/symmetric_flip",
+        "error": "degree requirement"
+      },
+      {
+        "case": "paley13/nonbinary",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "paley13/float_entry",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "paley13/wrong_shape",
+        "error": "matrix square dimensions"
+      },
+      {
+        "case": "paley13/wrong_lambda",
+        "error": "integer matrix identity fails at (0,1): 2 != 3"
+      },
+      {
+        "case": "petersen10/loop",
+        "error": "zero diagonal"
+      },
+      {
+        "case": "petersen10/asymmetry",
+        "error": "symmetry"
+      },
+      {
+        "case": "petersen10/symmetric_flip",
+        "error": "degree requirement"
+      },
+      {
+        "case": "petersen10/nonbinary",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "petersen10/float_entry",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "petersen10/wrong_shape",
+        "error": "matrix square dimensions"
+      },
+      {
+        "case": "petersen10/wrong_lambda",
+        "error": "integer matrix identity fails at (0,7): 0 != 1"
+      },
+      {
+        "case": "petersen_complement10/loop",
+        "error": "zero diagonal"
+      },
+      {
+        "case": "petersen_complement10/asymmetry",
+        "error": "symmetry"
+      },
+      {
+        "case": "petersen_complement10/symmetric_flip",
+        "error": "degree requirement"
+      },
+      {
+        "case": "petersen_complement10/nonbinary",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "petersen_complement10/float_entry",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "petersen_complement10/wrong_shape",
+        "error": "matrix square dimensions"
+      },
+      {
+        "case": "petersen_complement10/wrong_lambda",
+        "error": "integer matrix identity fails at (0,1): 3 != 4"
+      },
+      {
+        "case": "rook4/loop",
+        "error": "zero diagonal"
+      },
+      {
+        "case": "rook4/asymmetry",
+        "error": "symmetry"
+      },
+      {
+        "case": "rook4/symmetric_flip",
+        "error": "degree requirement"
+      },
+      {
+        "case": "rook4/nonbinary",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "rook4/float_entry",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "rook4/wrong_shape",
+        "error": "matrix square dimensions"
+      },
+      {
+        "case": "rook4/wrong_lambda",
+        "error": "integer matrix identity fails at (0,1): 2 != 3"
+      },
+      {
+        "case": "triangular8/loop",
+        "error": "zero diagonal"
+      },
+      {
+        "case": "triangular8/asymmetry",
+        "error": "symmetry"
+      },
+      {
+        "case": "triangular8/symmetric_flip",
+        "error": "degree requirement"
+      },
+      {
+        "case": "triangular8/nonbinary",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "triangular8/float_entry",
+        "error": "strict integer binary entries"
+      },
+      {
+        "case": "triangular8/wrong_shape",
+        "error": "matrix square dimensions"
+      },
+      {
+        "case": "triangular8/wrong_lambda",
+        "error": "integer matrix identity fails at (0,1): 6 != 7"
+      },
+      {
+        "case": "99vertex_degree14_wrong_common_counts",
+        "error": "integer matrix identity fails at (0,1): 12 != 1"
+      },
+      {
+        "case": "cnf_wrong_assignment",
+        "error": "unsatisfied raw clause 1"
+      },
+      {
+        "case": "cnf_changed_header",
+        "error": "exact DIMACS header"
+      },
+      {
+        "case": "cnf_truncated_clause_set",
+        "error": "exact raw clause count"
+      },
+      {
+        "case": "cnf_extra_clause",
+        "error": "exact raw clause count"
+      },
+      {
+        "case": "cnf_variable_out_of_range",
+        "error": "one complete canonical-range clause per row"
+      },
+      {
+        "case": "assignment_missing",
+        "error": "complete assignment length"
+      },
+      {
+        "case": "assignment_duplicate",
+        "error": "duplicate assigned variable"
+      },
+      {
+        "case": "assignment_noninteger",
+        "error": "signed integer variable range"
+      },
+      {
+        "case": "json_duplicate_key",
+        "error": "duplicate JSON key: x"
+      }
+    ],
+    "degree_preserving_corruption_rejected": true,
+    "degree_preserving_corruption_sha256": "2592585a38ca9e975223168feba59928a6b85bd426d57100279db8c69c319b76",
+    "complete99_degree14_invalid_target_rejected": true,
+    "known_tiny_sat": {
+      "clauses_checked": 3,
+      "literals_evaluated": 6
+    },
+    "valid99_target_fixture": null,
+    "valid99_target_fixture_null_reason": "No known target graph is available; none is fabricated."
+  },
+  "scope_check": {
+    "fixed_scaffold_edges": 189,
+    "fixed_outer_K_edges": 120,
+    "variable_outer_edges": 2160,
+    "fixed_unordered_pair_entries": 2691,
+    "fixed_absent_unordered_pairs": 2382,
+    "full_matrix_entries_checked": 9801
+  },
+  "scope_corruptions_rejected": [
+    {
+      "case": "wrong_fixed_entry",
+      "error": "all9801 fixed/free adjacency entries"
+    },
+    {
+      "case": "wrong_edge_id",
+      "error": "all2160 edge variable labels and endpoints"
+    },
+    {
+      "case": "wrong_outer_label",
+      "error": "outer label order"
+    }
+  ],
+  "all_free_zero_target_rejection": "degree requirement",
+  "inputs_sha256": {
+    "acceleration/results/20260917_partial_eight_matchings/manifest.json": "a389f457280212fbafcaa556dfe2064c9b1659045475fe4f93a0becb400cb7a2",
+    "acceleration/results/20260930_eight_full99_cnf/model.json": "f2b7a649e74aa476380e14066239a188a2d2122d2ba1cc6e330e9a094d2cc0ee",
+    "acceleration/audit_20260930_full99_sat_object.py": "65d90a85be5fe67c510e561839901e9b8b7c3b9fc1ab7439af0e6bd3746a380c",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "solver_launched": false,
+  "target_resolution": false,
+  "scope": "Independent checker calibration and exact raw eight-family decode mapping; no satisfiable research CNF or target graph is asserted.",
+  "limitations": [
+    "Small known-valid graphs calibrate the generic checker; no valid99 target positive control is available.",
+    "Calibration does not prove CNF equivalence or solve any research instance."
+  ]
+}

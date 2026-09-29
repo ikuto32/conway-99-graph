@@ -1,0 +1,197 @@
+{
+  "status": "INDEPENDENT_ORBIT_LOCAL59_DUAL_GRAM_EXCLUSION_PASS",
+  "claim_id": "C-ROOK-ORBIT-LOCAL59-DUAL-GRAM-EXCLUSION",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "timestamp": "2026-09-29T20:53:20.450048+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_orbit_gram.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/state_literature_audit independent checking agent",
+  "verification_type": "Raw literal integer double sums and separate edge sums; independent target polynomial sum-of-squares derivation",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/independent_full59.json": "989cb3d10e7985cfa11958b579f0ede4ffa8e3d94fc8ed73c43ffbde26effbdc",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/summary.json": "511aa9b61eb913b84d3e6d8be1adc71d889897a28538669bcf41e8521b1cb8a8",
+    "acceleration/results/20260930_rook_orbit_gram01/result.json": "abd8639305927e009d9d29de10e918a70727282861ee4623c42b1f70f6bddc6c",
+    "acceleration/results/20260930_rook_orbit_gram01/manifest.json": "452f977e3a7a7f08ea2d35e7ed4d22a80447e9f504e638c2fe842526c14faf15",
+    "acceleration/audit_20260930_rook_orbit_gram.py": "5c66e7c81c4bdddebe92cf0cabd552f096e6932959449e982acaf8e7ed44b5db",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_gram_falsifier.py": "b2d6581c9b458307198d84344233c18748df75b8b0a2b97f8cdbcc6e6cd20b3b",
+    "acceleration/theory_20260930_rook_gram_falsifier.md": "bbeb81ff4ca6f79f27ef471089b503c12147f0a6a0478f142b7b269e1b7a716e"
+  },
+  "graph_sha256": "989cb3d10e7985cfa11958b579f0ede4ffa8e3d94fc8ed73c43ffbde26effbdc",
+  "certificate_sha256": "abd8639305927e009d9d29de10e918a70727282861ee4623c42b1f70f6bddc6c",
+  "results": [
+    {
+      "matrix": "27I-9A+J",
+      "quadratic_value": -54863666507944387440,
+      "vector_length": 59,
+      "support_size": 37,
+      "literal_ordered_entries_checked": 3481,
+      "undirected_pairs_checked": 1711,
+      "independent_integer_formulas_agree": true
+    },
+    {
+      "matrix": "A+4I",
+      "quadratic_value": -1610023113841692364211758903740,
+      "vector_length": 59,
+      "support_size": 53,
+      "literal_ordered_entries_checked": 3481,
+      "undirected_pairs_checked": 1711,
+      "independent_integer_formulas_agree": true
+    }
+  ],
+  "controls": {
+    "known_negative_certificates": [
+      {
+        "matrix": "27I-9A+J",
+        "quadratic_value": -20,
+        "vector_length": 5,
+        "support_size": 5,
+        "literal_ordered_entries_checked": 25,
+        "undirected_pairs_checked": 10,
+        "independent_integer_formulas_agree": true
+      },
+      {
+        "matrix": "A+4I",
+        "quadratic_value": -50,
+        "vector_length": 26,
+        "support_size": 26,
+        "literal_ordered_entries_checked": 676,
+        "undirected_pairs_checked": 325,
+        "independent_integer_formulas_agree": true
+      }
+    ],
+    "corruptions_rejected": [
+      {
+        "matrix": "27I-9A+J",
+        "case": "wrong_value",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "27I-9A+J",
+        "case": "truncated_vector",
+        "error": "exact vector shape/type"
+      },
+      {
+        "matrix": "27I-9A+J",
+        "case": "zero_direction",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "27I-9A+J",
+        "case": "asymmetric_graph",
+        "error": "simple binary symmetric graph"
+      },
+      {
+        "matrix": "27I-9A+J",
+        "case": "nonnegative_is_not_certificate",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "27I-9A+J",
+        "case": "PSD_rook9_constant_direction",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "27I-9A+J",
+        "case": "PSD_rook9_difference_direction",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "A+4I",
+        "case": "wrong_value",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "A+4I",
+        "case": "truncated_vector",
+        "error": "exact vector shape/type"
+      },
+      {
+        "matrix": "A+4I",
+        "case": "zero_direction",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "A+4I",
+        "case": "asymmetric_graph",
+        "error": "simple binary symmetric graph"
+      },
+      {
+        "matrix": "A+4I",
+        "case": "nonnegative_is_not_certificate",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "A+4I",
+        "case": "PSD_rook9_constant_direction",
+        "error": "strictly negative exact matching quadratic"
+      },
+      {
+        "matrix": "A+4I",
+        "case": "PSD_rook9_difference_direction",
+        "error": "strictly negative exact matching quadratic"
+      }
+    ]
+  },
+  "statement": "The single exact labelled59vertex graph with SHA256989cb3d10e7985cfa11958b579f0ede4ffa8e3d94fc8ed73c43ffbde26effbdc cannot be an induced subgraph of any srg(99,14,1,2); both saved integer vectors separately contradict necessary principal positive semidefiniteness.",
+  "scope": "One exact local59 witness surviving352 prior target cuts. No family-wide or unrestricted nonexistence claim; no graph automorphism assumption.",
+  "assumptions": [
+    "A hypothetical target is symmetric binary zero-diagonal and satisfies A^2=12I-A+2J.",
+    "The candidate is asserted to occur as the exact induced graph on these59 designated vertices."
+  ],
+  "mathematical_derivation": [
+    "The diagonal target identity gives degree14, so AJ=JA=14J; J^2=99J.",
+    "For G=27I-9A+J, direct multiplication gives G^2=63G, hence x^TGx=||Gx||^2/63>=0.",
+    "For P=11A+44I-2J, direct multiplication gives P^2=77P. Since11(A+4I)=P+2J, x^T(A+4I)x=||Px||^2/847+(2/11)(sum x)^2>=0.",
+    "Every induced principal submatrix inherits positive semidefiniteness by zero-padding a vector outside its vertex set. Each recorded strict negative integer contradicts that requirement."
+  ],
+  "polynomial_identities": {
+    "G_squared": [
+      1701,
+      -567,
+      63
+    ],
+    "sixtythree_G": [
+      1701,
+      -567,
+      63
+    ],
+    "P_squared": [
+      3388,
+      847,
+      -154
+    ],
+    "seventyseven_P": [
+      3388,
+      847,
+      -154
+    ]
+  },
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "kind": "exclusion",
+  "dependencies": [],
+  "dependency_null_reason": "The exact exclusion follows directly from the raw graph, integer directions and the defining target identity; prior local-SAT validity is independently pinned provenance but is not a logical premise of nonextendibility.",
+  "producer_imported": false,
+  "shared_components": [
+    "Python standard library and exact integers",
+    "Raw graph from independently authored SAT checking path"
+  ],
+  "limitations": [
+    "No target graph, full frozen-scaffold exclusion, unrestricted nonexistence or external review.",
+    "No rank or full inertia of either local matrix is asserted.",
+    "The earlier local SAT construction remains valid for its weaker encoded constraints."
+  ],
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY"
+}

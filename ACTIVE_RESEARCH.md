@@ -7,6 +7,15 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
+The latest [sixth milestone](docs/RESEARCH_20260930_SIXTH_WAVE.md) records87
+claims,85 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. Four strengthened native branch
+attempts and one unbranched native attempt completed UNKNOWN; none closes a
+branch. Its fresh process snapshot found no CaDiCaL process. Subsequent live
+state requires a new observation. Next: exact triangle-factor modular image
+tests and joint compatibility of complete quota stars. The migration clarified
+17 assumption phrases and separately reviewed2 affected claims; no symmetry or
+asymmetry of a target is assumed. [Replay instructions](docs/REPRODUCING_20260930_SIXTH_WAVE.md).
+
 The checkpoint-aware eight-coordinate continuation completed with 84 saved
 center domains and 2,290,122 local choices, including all 879,449 prior embedded
 choices. Separate full-domain enumeration and every saved leaf passed independent
@@ -30,8 +39,14 @@ additional independently checked claims: necessary Gram clauses and their352
 relabelings, a12literal degree-bound cut, three local-test redundancy theorems,
 and two specific induced29 obstructions. Its ledger snapshot has74 claims,
 72 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. No entire new family is excluded.
-Subsequent orbit-SAT and complete99vertex encoding/solver work must be read
-from their completed audit receipts; they are not promoted by that snapshot.
+The [fifth milestone](docs/RESEARCH_20260930_FIFTH_WAVE.md) adds six verified
+claims, including the complete unrestricted full99 encoding equivalence and
+coverage proof. All3,486 outer pairs remain free. This is not a resolution:
+the conditional eight-family solve returned UNKNOWN, and its encoding is
+distinct from the unrestricted one. The snapshot has80 claims,
+78 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. A native Linux solver and separate
+object-checking path are prepared for a gated unrestricted pilot; read actual
+subsequent run receipts for its execution state or result.
 Review continues in [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
 Consult fresh execution observations for process liveness; this document is
 not a live process monitor. Overall search coverage: UNKNOWN; no validated denominator.

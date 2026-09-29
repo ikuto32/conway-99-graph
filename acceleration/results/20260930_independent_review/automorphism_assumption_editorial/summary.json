@@ -1,0 +1,1310 @@
+{
+  "status": "INDEPENDENT_AUTOMORPHISM_ASSUMPTION_EDITORIAL_IMPACT_PASS",
+  "timestamp": "2026-09-29T21:16:42.863891+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_automorphism_assumption_editorial.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "yaml_version": "6.0.2",
+  "verifier": "/root/state_literature_audit independent editorial impact reviewer",
+  "verification_type": "Exact claim-by-claim comparison with pinned original audit hypotheses and proof mechanisms; no mathematical experiment replay",
+  "reviewed_ledger_sha256": "20b3ee7d9c13c5142205492832a85ba877f35492ab26c0db1fdd5e3b9ba7e168",
+  "reviewed_ledger_snapshot": "acceleration/results/20260930_independent_review/automorphism_assumption_editorial/CLAIMS.reviewed.yaml",
+  "reviewed_total_claims": 80,
+  "affected_claims": 17,
+  "phrase_occurrences": {
+    "No nontrivial target automorphism.": 3,
+    "No automorphism of a hypothetical target and no universal rook-containment assumption.": 14
+  },
+  "approved_replacements": {
+    "No nontrivial target automorphism.": "No nontrivial target automorphism is assumed.",
+    "No automorphism of a hypothetical target and no universal rook-containment assumption.": "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+  },
+  "records": [
+    {
+      "claim_id": "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "1fa9a4c361bb9777d0cea5dd435c75f2a21cc908c04dfcce0624e2840400bd14",
+      "statement": "For every target adjacency A, every principal vertex set with fixed edges and distinct Boolean free-edge variables, every exact integer vector w and every prescribed variable subset F, its quadratic q=c+sum(d_e*t_e), d_e=-18*w_u*w_v, has exact Boolean-box maximum U=c+sum_F(d_e*a_e)+sum_notF(max(0,d_e)). If U<0, every target extension preserving the fixed scaffold must change at least one prescribed value in F.",
+      "scope": {
+        "description": "Universal conditional necessary target-extension rule. Strictly generalizes the complete-nonzero-support cut by allowing some nonzero-coefficient variables to vary.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "independent_editorial_reason": "The original audit explicitly lists the target matrix identity, a principal fixed/free edge specification and exact Boolean maximization as its hypotheses. The written affine maximum argument quantifies over every Boolean completion and uses no graph automorphism or rook containment premise.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/target_gram_boolean_box_lemma.json",
+          "audit_sha256": "72f8dd8a34fdb8dfaef3722fce173e0061c9c21a0b21ef7da7dc979d1668e6b1",
+          "original_status": "INDEPENDENT_TARGET_GRAM_BOOLEAN_BOX_LEMMA_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_derivation",
+            "command_or_audit": "acceleration/results/20260930_independent_review/target_gram_boolean_box_lemma.json",
+            "timestamp": "2026-09-29T20:09:50.411685+00:00",
+            "outcome": "PASS",
+            "scope": "Universal conditional necessary target-extension rule. Strictly generalizes the complete-nonzero-support cut by allowing some nonzero-coefficient variables to vary.",
+            "artifact_hashes": {
+              "box-rule-audit": "72f8dd8a34fdb8dfaef3722fce173e0061c9c21a0b21ef7da7dc979d1668e6b1",
+              "box-rule-manifest": "bff4c85b4183c3bcc326bf136a0bf166b2553f8668b9549b332ff410fbeb1d1c"
+            },
+            "shared_components": [],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "A nonnegative box maximum does not establish feasibility or invalidate other possible cuts.",
+              "A box corner need not obey local graph constraints; the unrestricted box is a safe superset.",
+              "This implication proves neither target existence nor general nonexistence."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "For every target adjacency A, every principal vertex set with fixed edges and distinct Boolean free-edge variables, every exact integer vector w and every prescribed variable subset F, its quadratic q=c+sum(d_e*t_e), d_e=-18*w_u*w_v, has exact Boolean-box maximum U=c+sum_F(d_e*a_e)+sum_notF(max(0,d_e)). If U<0, every target extension preserving the fixed scaffold must change at least one prescribed value in F.",
+            "scope": "Universal conditional necessary target-extension rule. Strictly generalizes the complete-nonzero-support cut by allowing some nonzero-coefficient variables to vary.",
+            "assumptions": [
+              "A is symmetric binary99by99 with zero diagonal and satisfies the exact target identity A\u00b2=12I-A+2J.",
+              "Every unordered principal pair is fixed or mapped to one distinct Boolean variable; fixed entries agree with any claimed extension.",
+              "All coefficients, assignments and the strictly negative bound are exact; all variables outside F are maximized, including omitted variables."
+            ],
+            "written_audit": "docs/DERIVATION_20260930_TARGET_GRAM_BOX_NOGOODS.md"
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-FOUR-FACTOR-INITIAL-GRAM-BOX-NOGOOD",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "d7faadffa8b5bfbbd58972e1d4f11a8ef55c3c87d57f990b91766605d6d64132",
+      "statement": "Every Conway99target extension of the recorded780edge frozen-central-factor family satisfies the21literal clause in acceleration/results/20260930_rook_gram_box_cut_initial/nogood.clause. Preserving those21edge values forces its exact principal quadratic to be at most -176426969710399200 for every assignment of the other759free edges and every choice of the40outside vertices.",
+      "scope": {
+        "description": "One exact21value forbidden pattern in one frozen-central-factor family. The excluded pattern is broader than the parent45value pattern; no entire-family or target-level exclusion is asserted.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-MINIMIZED-GRAM-NOGOOD",
+          "revision": 1,
+          "relation": "derived_from"
+        }
+      ],
+      "independent_editorial_reason": "The original binding requires exactly the fixed principal scaffold and preservation of that scaffold by an extension. Its strict negative Boolean maximum applies to all completions of the declared fixed values; neither symmetry nor asymmetry is required.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/initial_gram_box_nogood_claim_binding.json",
+          "audit_sha256": "dd176290c727a0aa5a3ad098bf085d0627e40d1eb8e3b5ca6db58f417eff5e01",
+          "original_status": "INDEPENDENT_INITIAL_GRAM_BOX_NOGOOD_CLAIM_BINDING_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/initial_gram_box_nogood_claim_binding.json",
+            "timestamp": "2026-09-29T20:09:50.411685+00:00",
+            "outcome": "PASS",
+            "scope": "One exact21value forbidden pattern in one frozen-central-factor family. The excluded pattern is broader than the parent45value pattern; no entire-family or target-level exclusion is asserted.",
+            "artifact_hashes": {
+              "box-initial-audit": "dd176290c727a0aa5a3ad098bf085d0627e40d1eb8e3b5ca6db58f417eff5e01",
+              "box-initial-manifest": "57af796826c6c21daea53b51ddf06f2415a742b503efbd53f32b8988b74d2fc8"
+            },
+            "shared_components": [],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "The21literal clause is a strict subset of the45literal parent, but global minimality is not established.",
+              "The clause is target-extension-valid, not a consequence of the weaker local CNF.",
+              "No graph, complete-family UNSAT proof, unrestricted coverage argument, or external review is supplied."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "Every Conway99target extension of the recorded780edge frozen-central-factor family satisfies the21literal clause in acceleration/results/20260930_rook_gram_box_cut_initial/nogood.clause. Preserving those21edge values forces its exact principal quadratic to be at most -176426969710399200 for every assignment of the other759free edges and every choice of the40outside vertices.",
+            "scope": "One exact21value forbidden pattern in one frozen-central-factor family. The excluded pattern is broader than the parent45value pattern; no entire-family or target-level exclusion is asserted.",
+            "assumptions": [
+              "The exact fixed principal59scaffold and edge-variable labels from the audited780edge encoding.",
+              "Target extensions preserve this fixed scaffold."
+            ],
+            "written_audit": "docs/DERIVATION_20260930_TARGET_GRAM_BOX_NOGOODS.md"
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION01",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "94199fc79e88432c4bba1630521d84a1f4bd54a6a750a65a6f237c307d3221f2",
+      "statement": "Every listed clause in this finite frozen ordered collection is necessary for any target extension preserving this exact frozen central-factor scaffold. Each clause individually has a checked strictly negative exact Boolean-box Gram maximum.",
+      "scope": {
+        "description": "The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "independent_editorial_reason": "The original collection audit authenticates each source clause and its exact Boolean-box bound in the same fixed scaffold. Taking their conjunction requires no target automorphism and asserts no universal occurrence of that scaffold.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/rook_box_collection01.json",
+          "audit_sha256": "b5a8ab884c157f40b32a4ebacf747e0d12596b0fb0ca01d3203fafd9dcf21cfd",
+          "original_status": "INDEPENDENT_TARGET_GRAM_BOX_COLLECTION_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/rook_box_collection01.json",
+            "timestamp": "2026-09-29T20:11:57.679261+00:00",
+            "outcome": "PASS",
+            "scope": "The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed.",
+            "artifact_hashes": {
+              "box-nine-audit": "b5a8ab884c157f40b32a4ebacf747e0d12596b0fb0ca01d3203fafd9dcf21cfd",
+              "box-nine-manifest": "b500b490696ad97a06dd76afea11bc955c2c5b0800e167915c8bd6f51a653bae"
+            },
+            "shared_components": [
+              "Frozen independent box/support Gram checkers and raw59 validator",
+              "Python exact integer arithmetic"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "No unrestricted or complete fixed-family exclusion; a solver is not run by this checker.",
+              "No disjointness, union size, graph coverage, or global minimality of clauses is claimed.",
+              "Collection evidence alone does not establish a future augmented SAT/UNSAT result."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "Every listed clause in this finite frozen ordered collection is necessary for any target extension preserving this exact frozen central-factor scaffold. Each clause individually has a checked strictly negative exact Boolean-box Gram maximum.",
+            "scope": "The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION02",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "62d6a9b4c3b01ad3ed34f8fc29f73d6f37af3ad9c63553525e3a5f8510e94d17",
+      "statement": "Every listed clause in this finite frozen ordered collection is necessary for any target extension preserving this exact frozen central-factor scaffold. Each clause individually has a checked strictly negative exact Boolean-box Gram maximum.",
+      "scope": {
+        "description": "The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "independent_editorial_reason": "The original collection audit authenticates each source clause and its exact Boolean-box bound in the same fixed scaffold. Taking their conjunction requires no target automorphism and asserts no universal occurrence of that scaffold.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/rook_box_collection02.json",
+          "audit_sha256": "ee79e1eb396c5ffd9dc47c3b32a76221e30a514a885e5c472fa4e39af3a5ca67",
+          "original_status": "INDEPENDENT_TARGET_GRAM_BOX_COLLECTION_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/rook_box_collection02.json",
+            "timestamp": "2026-09-29T20:24:02.803742+00:00",
+            "outcome": "PASS",
+            "scope": "The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed.",
+            "artifact_hashes": {
+              "box-ten-audit": "ee79e1eb396c5ffd9dc47c3b32a76221e30a514a885e5c472fa4e39af3a5ca67",
+              "box-ten-manifest": "8cc2dcc6c3795422ecae529df0f0b06f73a275120b8ee0cbcbee11e1c3e0a9ff"
+            },
+            "shared_components": [
+              "Frozen independent box/support Gram checkers and raw59 validator",
+              "Python exact integer arithmetic"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "No unrestricted or complete fixed-family exclusion; a solver is not run by this checker.",
+              "No disjointness, union size, graph coverage, or global minimality of clauses is claimed.",
+              "Collection evidence alone does not establish a future augmented SAT/UNSAT result."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "Every listed clause in this finite frozen ordered collection is necessary for any target extension preserving this exact frozen central-factor scaffold. Each clause individually has a checked strictly negative exact Boolean-box Gram maximum.",
+            "scope": "The exact listed clauses only, in the single780edge family. The conjunction follows from their individual necessity; excluded populations are not summed."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-GRAM-BOX-WAVE02",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "2ee06303e43baed6c1bbcd2a0efab2d44669984c86853b44252156eae7fe2713",
+      "statement": "The exact recorded second boxed-Gram SAT wave on the frozen 780-edge family made two solver attempts: one produced a complete independently checked local59 assignment with a checked negative Gram direction and one new valid23literal box clause; the other returned UNKNOWN. The final ordered collection has ten clauses, and no UNSAT proof or whole-family exclusion was produced.",
+      "scope": {
+        "description": "One finite wave in one frozen780edge family; no target-wide coverage or complete-family exclusion",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION01",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION02",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "independent_editorial_reason": "This is a finite artifact/execution claim: saved solver outcomes, checked local assignment, checked negative direction and source clauses. Its scope is the recorded fixed family. An assumption about the automorphism group of a hypothetical target cannot enter those recorded artifact facts.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/rook_box_wave02_binding.json",
+          "audit_sha256": "d30e2a18841339864e7698f8905696366f15afe13293ea1efcce14b5d2b2669a",
+          "original_status": "INDEPENDENT_ROOK_BOX_WAVE_ARTIFACT_BINDING_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/rook_box_wave02_binding.json",
+            "timestamp": "2026-09-29T20:24:20.484427+00:00",
+            "outcome": "PASS",
+            "scope": "One finite wave in one frozen780edge family; no target-wide coverage or complete-family exclusion",
+            "artifact_hashes": {
+              "box-wave2-audit": "d30e2a18841339864e7698f8905696366f15afe13293ea1efcce14b5d2b2669a",
+              "box-wave2-manifest": "e9d0d5bbb5a346e51578a6af3d088fe0299d53107e531f53338b1c4dd1fbb24c"
+            },
+            "shared_components": [
+              "Earlier independent box collection and raw59 graph checkers",
+              "Original complete raw CNF checks are authenticated, not repeated in this binding pass"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "UNKNOWN carries no SAT/UNSAT conclusion.",
+              "No unrestricted resolution, external review, performance guarantee, or summed excluded population."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "The recorded finite box-cut wave has the independently reconstructed attempt/outcome counts and exact artifact chain. Each completed SAT assignment and new cut has the specified independent artifact checks.",
+            "scope": "One finite wave in one frozen780edge family; no target-wide coverage or complete-family exclusion"
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-FIXED-SCAFFOLD-RELABELING-CUT-TRANSPORT",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "945df047833c9ab0b9e2a58cc89ec446b2934a98ea37e34a4222a4fb81e084b5",
+      "statement": "For every fixed/free59vertex adjacency specification S with distinct edge variables, every59vertex permutation p preserving S, and every edge-variable clause necessary for all99vertex target extensions of S, replacing each edge variable by its same-sign image under p gives another clause necessary for all target extensions of S.",
+      "scope": {
+        "description": "Universal conditional transport theorem for exact target-extension clauses and specification-preserving permutations; no target automorphism, existence, or nonexistence assertion.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [],
+      "independent_editorial_reason": "The original proof explicitly defines B[i,j]=A[p(i),p(j)] for arbitrary target A and never asserts A=B. It expressly states that no step requires an automorphism of a hypothetical target. A specification-preserving relabeling is not asserted to preserve an unknown target adjacency.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/scaffold_cut_transport_lemma.json",
+          "audit_sha256": "113ae8bce4db859eb64916e5e1ce5a341eb71fd4a320cc49c9ccc570f3726014",
+          "original_status": "INDEPENDENT_FIXED_SCAFFOLD_CUT_TRANSPORT_LEMMA_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_derivation",
+            "command_or_audit": "acceleration/results/20260930_independent_review/scaffold_cut_transport_lemma.json",
+            "timestamp": "2026-09-29T20:29:35.460702+00:00",
+            "outcome": "PASS",
+            "scope": "Universal conditional transport theorem for exact target-extension clauses and specification-preserving permutations; no target automorphism, existence, or nonexistence assertion.",
+            "artifact_hashes": {
+              "transport-audit": "113ae8bce4db859eb64916e5e1ce5a341eb71fd4a320cc49c9ccc570f3726014",
+              "transport-manifest": "0910d3e49dd0f2b4560a8c3a91335dc8d0f16d4b9c869a114d00a158ef1163a2"
+            },
+            "shared_components": [],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "This does not validate an unproved source clause.",
+              "The32map audit does not independently establish census completeness or all scaffold automorphisms.",
+              "Transported-clause deduplication does not count excluded graphs or justify target-wide coverage.",
+              "No auxiliary SAT-variable map, unrestricted solution, or external review is established."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "For every fixed/free59vertex adjacency specification S with distinct edge variables, every59vertex permutation p preserving S, and every edge-variable clause necessary for all99vertex target extensions of S, replacing each edge variable by its same-sign image under p gives another clause necessary for all target extensions of S.",
+            "scope": "Universal conditional transport theorem for exact target-extension clauses and specification-preserving permutations; no target automorphism, existence, or nonexistence assertion.",
+            "assumptions": [
+              "The target is a symmetric binary99by99zero-diagonal adjacency satisfying A\u00b2=12I-A+2J.",
+              "The map is a genuine permutation of the designated59vertices preserving every fixed0/fixed1/free pair and the edge-variable bijection.",
+              "The source clause has an independent valid proof for every target extension of exactly this specification.",
+              "Only edge variables are transported; degree-group preservation is additionally required when claiming invariance of a specific local relaxation."
+            ],
+            "derivation": [
+              "Extend p to99vertices by fixing the other40labels. Given any target extension A of S, let B[i,j]=A[p(i),p(j)].",
+              "Simultaneous row/column permutation preserves symmetry, binary entries, zero diagonal and the target identity because it preserves I and J.",
+              "Specification preservation makes B another target extension of the same S. Apply the source necessary clause to B.",
+              "Each source edge literal in B equals its same-sign p-image edge literal in A. Since A was arbitrary, the transported clause is universally necessary for this family.",
+              "No step asserts A=B or requires an automorphism of a hypothetical target."
+            ],
+            "written_audit": "docs/DERIVATION_20260930_SCAFFOLD_CUT_TRANSPORT.md"
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-FOUR-FACTOR-SCAFFOLD-RELABELINGS32",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "1a33588edcd261ddc1647cc3ccabb3ec0134fde11b35919e129a5723b35a28c4",
+      "statement": "Each of the32explicit saved permutations preserves the designated root/core/central cell and the complete raw59fixed/free scaffold, induces the recorded780edge-variable bijection, and preserves all160degree rows and core common-neighbor contributions. Each can therefore transport any independently established edge clause valid for every target extension of this scaffold.",
+      "scope": {
+        "description": "The exact32supplied maps in this one frozen family; no census completeness or hypothetical-target automorphism assertion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-FIXED-SCAFFOLD-RELABELING-CUT-TRANSPORT",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "independent_editorial_reason": "The audit compares complete fixed/free specifications, edge-variable images and degree rows for supplied permutations. Its limitations expressly say no nontrivial automorphism of any hypothetical target is assumed or deduced; the maps act on the family of completions.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/rook_scaffold_relabelings32.json",
+          "audit_sha256": "897188e21828d946149dbeee503c1fd61b6946197810a11970b92f2a6bf1b282",
+          "original_status": "INDEPENDENT_ROOK_SCAFFOLD_RELABELINGS32_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/rook_scaffold_relabelings32.json",
+            "timestamp": "2026-09-29T20:28:23.847066+00:00",
+            "outcome": "PASS",
+            "scope": "The exact32supplied maps in this one frozen family; no census completeness or hypothetical-target automorphism assertion.",
+            "artifact_hashes": {
+              "maps32-audit": "897188e21828d946149dbeee503c1fd61b6946197810a11970b92f2a6bf1b282",
+              "maps32-manifest": "026d223aff6341bdefe8a9cb2c4401cfd644e5c6a59420a334d8c1e75363400b"
+            },
+            "shared_components": [
+              "Python standard library; raw pinned model and star artifacts only"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "Producer30,720pair census completeness is not independently checked here; no claim that these are every scaffold automorphism.",
+              "Only780edge variables are mapped; no auxiliary AND-variable or rawCNF clause permutation is asserted.",
+              "Source clauses require their own independent validity evidence before transport.",
+              "No nontrivial automorphism of any hypothetical target is assumed or deduced."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "Each of the32explicit saved permutations preserves the designated root/core/central cell and the complete raw59fixed/free scaffold, induces the recorded780edge-variable bijection, and preserves all160degree rows and core common-neighbor contributions. Each can therefore transport any independently established edge clause valid for every target extension of this scaffold.",
+            "scope": "The exact32supplied maps in this one frozen family; no census completeness or hypothetical-target automorphism assertion."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-DEGREE-BLOCK-GRAM-UPPER-BOUND",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "1ad8edf5e9a52cfe00f02c194cfcbc5e6e961543550a5680fdaae748287bc5e9",
+      "statement": "For every integer vector on the59vertices and every fixed-value pattern admitting a completion of the160degree equations in the pinned780edge model, the exact maximum of its quadratic for27I-9A+J over that degree-only relaxation equals its fixed affine constant plus the ten independent degree-block maxima. A certified strictly negative such upper bound forbids that pattern in every target extension of this fixed scaffold.",
+      "scope": {
+        "description": "The precise frozen central-factor scaffold, its780distinct Boolean edges and160degree equations. Four internal10vertex perfect-matching blocks, four10by10 perfect-matching blocks and two10by10 degree-two blocks. No claim of coverage of all rook embeddings or all targets.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "independent_editorial_reason": "The independently written proof partitions the780 variables and160 degree equations and maximizes an affine Gram quadratic over their Cartesian degree relaxation. It explicitly states that neither an automorphism nor universal rook containment is assumed.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/degree_block_gram/lemma_claim_binding.json",
+          "audit_sha256": "75cd5f5d3297889cf1a7603dc0b60a083e0443166187484c709c0b53b2b28158",
+          "original_status": "INDEPENDENT_DEGREE_BLOCK_UPPER_LEMMA_BINDING_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/state_literature_audit independent checking agent",
+            "method": "independent_derivation",
+            "command_or_audit": "acceleration/results/20260930_independent_review/degree_block_gram/lemma_claim_binding.json",
+            "timestamp": "2026-09-29T20:32:20.266266+00:00",
+            "outcome": "PASS",
+            "scope": "The precise frozen central-factor scaffold, its780distinct Boolean edges and160degree equations. Four internal10vertex perfect-matching blocks, four10by10 perfect-matching blocks and two10by10 degree-two blocks. No claim of coverage of all rook embeddings or all targets.",
+            "artifact_hashes": {
+              "degree-rule-audit": "75cd5f5d3297889cf1a7603dc0b60a083e0443166187484c709c0b53b2b28158",
+              "degree-rule-manifest": "9b5e8e975323a24c68698f0df6659b106c65f3ea977c991ee42ee290c396f17f"
+            },
+            "shared_components": [
+              "Python standard library and exact integer arithmetic",
+              "tqdm for progress",
+              "pinned independent full-window encoding audit as scope premise; its source was not imported"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "The common-neighbor constraints are discarded; positive relaxed maxima are not feasible target graphs.",
+              "This theorem gives a sufficient rejection method, not a complete characterization of target extensions.",
+              "No independent external peer review or novelty claim."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "For every integer vector on the59vertices and every fixed-value pattern admitting a completion of the160degree equations in the pinned780edge model, the exact maximum of its quadratic for27I-9A+J over that degree-only relaxation equals its fixed affine constant plus the ten independent degree-block maxima. A certified strictly negative such upper bound forbids that pattern in every target extension of this fixed scaffold.",
+            "scope": "The precise frozen central-factor scaffold, its780distinct Boolean edges and160degree equations. Four internal10vertex perfect-matching blocks, four10by10 perfect-matching blocks and two10by10 degree-two blocks. No claim of coverage of all rook embeddings or all targets.",
+            "assumptions": [
+              "The fixed pattern is degree-feasible; all31 reviewed patterns have separately checked attaining assignments.",
+              "Each certificate uses exact arithmetic and covers the entire relevant block, including forced values."
+            ],
+            "proof": "acceleration/audit_20260930_degree_block_gram.md"
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-DEGREE-BLOCK-GRAM-CUT-12",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "d5c1bdc50beee66a59bac1f86c9bdcfaad6e1e4ed18d41c420c72d9fa2e81285",
+      "statement": "Every Conway99target extension of the exact pinned780edge frozen-central-factor scaffold satisfies the clause[7,45,82,-151,-158,-193,255,-272,-347,362,417,443]. Its falsifying fixed-value pattern has exact maximum Gram quadratic -176426969710399200 over the larger degree-only relaxation, so no target extension realizes that pattern.",
+      "scope": {
+        "description": "One12literal conditional pattern in one fixed central-factor scaffold; all780free edge labels use model SHA25626908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e. This does not exclude the whole scaffold or the unrestricted target.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-ROOK-DEGREE-BLOCK-GRAM-UPPER-BOUND",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "independent_editorial_reason": "The original binding assumes only the target identity and induction of this particular fixed scaffold. The checked strict negative degree-relaxation maximum holds for all assignments in its declared scope, regardless of any automorphism group.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/degree_block_gram/cut_claim_binding.json",
+          "audit_sha256": "c548e9bcfa8dd506b1696c9ffdce7e141786c7980acd8c62038a417c7323ae1a",
+          "original_status": "INDEPENDENT_DEGREE_BLOCK12_CUT_BINDING_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/state_literature_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/degree_block_gram/cut_claim_binding.json",
+            "timestamp": "2026-09-29T20:32:20.266266+00:00",
+            "outcome": "PASS",
+            "scope": "One12literal conditional pattern in one fixed central-factor scaffold; all780free edge labels use model SHA25626908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e. This does not exclude the whole scaffold or the unrestricted target.",
+            "artifact_hashes": {
+              "degree-cut12-audit": "c548e9bcfa8dd506b1696c9ffdce7e141786c7980acd8c62038a417c7323ae1a",
+              "degree-cut12-manifest": "0307b96985b44b1038eac5ed63e5f332ac6a6b5ea66506cfe14d2760e8feee7e"
+            },
+            "shared_components": [
+              "Python standard library and exact integer arithmetic",
+              "tqdm for progress",
+              "pinned independent full-window encoding audit as scope premise; its source was not imported"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "Conditional12literal cut only; does not exclude the whole fixed family or unrestricted target.",
+              "All nine unfixed maxima are positive; that proves neither local graph feasibility nor existence of the target.",
+              "Greedy irredundancy concerns this one fixed-vector degree-relaxation test, not global clause minimality or other vectors.",
+              "No new SAT search, UNSAT conclusion, or external review.",
+              "The clause is shorter syntactically than its21literal ancestor; no separate increase in excluded degree-feasible assignments or solver performance is claimed.",
+              "No percentage of the unrestricted target search is defined."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "Every Conway99target extension of the exact pinned780edge frozen-central-factor scaffold satisfies the clause[7,45,82,-151,-158,-193,255,-272,-347,362,417,443]. Its falsifying fixed-value pattern has exact maximum Gram quadratic -176426969710399200 over the larger degree-only relaxation, so no target extension realizes that pattern.",
+            "scope": "One12literal conditional pattern in one fixed central-factor scaffold; all780free edge labels use model SHA25626908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e. This does not exclude the whole scaffold or the unrestricted target.",
+            "assumptions": [
+              "Target adjacency satisfies the exact99vertex identity.",
+              "The target induces this particular fixed scaffold with the pinned variable labeling."
+            ]
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-GRAM-CUT-ORBITS-352",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "1c04b0e098934a23e5fc6d23d9608efe11a275a9a309629b34f9db54d0774a72",
+      "statement": "Every target extension of the exact pinned780edge scaffold satisfies all352 distinct clauses obtained from the exact11 source clauses under all32 supplied checked specification-preserving permutations.",
+      "scope": {
+        "description": "Conditional target-extension necessities in one frozen central-factor family; no target automorphism assumption, SAT conclusion, full-family exclusion or unrestricted resolution.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-FIXED-SCAFFOLD-RELABELING-CUT-TRANSPORT",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-SCAFFOLD-RELABELINGS32",
+          "revision": 1,
+          "relation": "normalization"
+        },
+        {
+          "id": "C-ROOK-DEGREE-BLOCK-GRAM-CUT-12",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-BOX-CUT-COLLECTION02",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "independent_editorial_reason": "The original audit proves forward signed clause transport on an arbitrary target extension via a different relabeled adjacency B and expressly states that A=B is not asserted. Its fixed-scaffold and source-clause premises impose no target symmetry or asymmetry.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/rook_cut_orbits/summary.json",
+          "audit_sha256": "9abc83c032bc5454c6f05d6cab0146fd39775f9f994d4f4dc3579dfccf6ef6ac",
+          "original_status": "INDEPENDENT_ROOK_GRAM_CUT_ORBITS_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/state_literature_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/rook_cut_orbits/summary.json",
+            "timestamp": "2026-09-29T20:39:26.399410+00:00",
+            "outcome": "PASS",
+            "scope": "Conditional target-extension necessities in one frozen central-factor family; no target automorphism assumption, SAT conclusion, full-family exclusion or unrestricted resolution.",
+            "artifact_hashes": {
+              "orbits352-audit": "9abc83c032bc5454c6f05d6cab0146fd39775f9f994d4f4dc3579dfccf6ef6ac",
+              "orbits352-manifest": "ab2ed0e7a2f1c6f1840c03b44d6e5086703535fa6da690ed408b5e96198b479b"
+            },
+            "shared_components": [
+              "Python exact integers and standard library",
+              "Pinned independently authored source gates; degree optimization proof is reused, not rerun"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "No exhaustive census of all possible scaffold maps or valid cuts.",
+              "Distinct clauses are not disjoint excluded assignment sets. No graph union size or target-wide coverage is claimed.",
+              "Degree optimization uses the fully checked prior raw certificate as a pinned premise."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "Every target extension of the exact pinned780edge scaffold satisfies all352 distinct clauses obtained from the exact11 source clauses under all32 supplied checked specification-preserving permutations.",
+            "scope": "Conditional target-extension necessities in one frozen central-factor family; no target automorphism assumption, SAT conclusion, full-family exclusion or unrestricted resolution.",
+            "derivation": [
+              "For arbitrary target extension A and old-to-new permutation p, B[i,j]=A[p(i),p(j)] is another target extension of the same specification.",
+              "Applying the source clause to B gives its same-sign forward edge-image clause on A; no assertion A=B is made.",
+              "Pushing a vector by w_new[p(i)]=w_old[i] preserves the constant and maps every coefficient c_j to c_image(j).",
+              "The degree equation system is permuted bijectively, so its exact maximum is unchanged by the transported fixed pattern."
+            ]
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-INDEPENDENT-SET-MATCHING-CAP-COMPOSITION",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "1ed9c183bdaf65babafef97f1986b7a0cd87036605e748dba911cff31fadc69c",
+      "statement": "For every finite simple graph G, independent set R and matching M with endpoints in R, if G and every single-edge extension G+e for e in M have common-neighbor counts at most 2-adjacency for all distinct pairs, then G+M has the same caps.",
+      "scope": {
+        "description": "Universal finite-graph implication under independent-endpoint and matching hypotheses; only common-neighbor upper caps, not graph completion.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [],
+      "independent_editorial_reason": "The universal proof expands (A+M)^2 and handles all pair cases using only matching endpoints and independence. It applies to arbitrary finite simple graphs satisfying those explicit hypotheses, with no target or rook graph premise.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/local_redundancy_v2/matching_cap_lemma.json",
+          "audit_sha256": "1e9c0840638a1554d25d67900f2c14ea4d2ca0cab22d8893441a71457ec2d4f5",
+          "original_status": "INDEPENDENT_MATCHING_CAP_COMPOSITION_LEMMA_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root independent written and exact raw-matrix review",
+            "method": "independent_derivation",
+            "command_or_audit": "acceleration/results/20260930_independent_review/local_redundancy_v2/matching_cap_lemma.json",
+            "timestamp": "2026-09-29T20:25:51.909834+00:00",
+            "outcome": "PASS",
+            "scope": "Universal finite-graph implication under independent-endpoint and matching hypotheses; only common-neighbor upper caps, not graph completion.",
+            "artifact_hashes": {
+              "matching-cap-audit": "1e9c0840638a1554d25d67900f2c14ea4d2ca0cab22d8893441a71457ec2d4f5",
+              "matching-cap-manifest": "fa21974d2b403d004d5c781f5cf21e1af01116b20c739bc2d06ea948c885794c"
+            },
+            "shared_components": [
+              "Python exact integers and standard library"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "The producer 21,504-star sample is not independently replayed by this report and is not a premise for this general proof.",
+              "No claim that different centers can choose their matchings consistently.",
+              "No degree completion, SRG construction, or exclusion is established."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "For every finite simple graph G, independent set R and matching M with endpoints in R, if G and every single-edge extension G+e for e in M have common-neighbor counts at most 2-adjacency for all distinct pairs, then G+M has the same caps.",
+            "scope": "Universal finite-graph implication under independent-endpoint and matching hypotheses; only common-neighbor upper caps, not graph completion.",
+            "derivation": "With adjacency matrices A and matching M, the off-diagonal change in (A+M)^2 is AM+MA because M^2 is diagonal. For two matched endpoints both cross terms vanish by independence of R. For exactly one matched endpoint the rows/count are the same as its single-edge extension; for no matched endpoint nothing changes. The changed adjacency cap occurs only on a matching edge and is covered by its single-edge hypothesis. These cases exhaust every distinct pair."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-CLOSED-TWO-NEIGHBORHOOD-GRAM-REDUNDANCY",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "d3ce7b6c198973d2b720a8004188a6f158a9c4064f2d5a8002c7187e37b9d196",
+      "statement": "For every finite simple graph H on N[v] union N[u], where v and u are nonadjacent vertices of degree 14 and each center c satisfies |N(c) intersection N(x)|=2-adjacency(c,x) for every x distinct from c, the integer matrix 27I-9A(H)+J is positive semidefinite.",
+      "scope": {
+        "description": "A universal necessary-test redundancy theorem for two complete nonadjacent center neighborhoods satisfying the stated local equalities; no target existence conclusion.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [],
+      "independent_editorial_reason": "The original sum-of-squares proof uses the two center neighborhood equalities, kernels and residual degree at most3. Its statement quantifies over every finite simple graph satisfying those local hypotheses; no symmetry or rook condition enters.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/local_redundancy_v2/closed_gram_lemma.json",
+          "audit_sha256": "463c7af9414d051290347b77b0aeca60da1bda958ec113405cc26a2ed5036f4b",
+          "original_status": "INDEPENDENT_CLOSED_TWO_NEIGHBORHOOD_GRAM_REDUNDANCY_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root independent written and exact raw-matrix review",
+            "method": "independent_derivation",
+            "command_or_audit": "acceleration/results/20260930_independent_review/local_redundancy_v2/closed_gram_lemma.json",
+            "timestamp": "2026-09-29T20:25:51.909834+00:00",
+            "outcome": "PASS",
+            "scope": "A universal necessary-test redundancy theorem for two complete nonadjacent center neighborhoods satisfying the stated local equalities; no target existence conclusion.",
+            "artifact_hashes": {
+              "closed-upper-audit": "463c7af9414d051290347b77b0aeca60da1bda958ec113405cc26a2ed5036f4b",
+              "closed-upper-manifest": "7e925f56b520e6b06aa028b252aa7d4137b41071730ae5e0dbc873dcf97e7407"
+            },
+            "shared_components": [
+              "NumPy int64 exact small matrix multiplication with explicit overflow bound",
+              "Python standard library and integer set intersections"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "Raw matrix hypotheses and every SOS coefficient were independently checked, not the producer floating eigenvalues.",
+              "Original domain-to-raw graph generation is not independently rerun here; this theorem is conditional on the displayed local graph hypotheses.",
+              "Fixture completeness is exactly the 84 saved files and 32 cases each, not all domain stars or matchings.",
+              "No assertion that adding more vertices or other constraints remains redundant.",
+              "No target graph, general exclusion, or external peer review."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "For every finite simple graph H on N[v] union N[u], where v and u are nonadjacent vertices of degree 14 and each center c satisfies |N(c) intersection N(x)|=2-adjacency(c,x) for every x distinct from c, the integer matrix 27I-9A(H)+J is positive semidefinite.",
+            "scope": "A universal necessary-test redundancy theorem for two complete nonadjacent center neighborhoods satisfying the stated local equalities; no target existence conclusion.",
+            "derivation": "Deleting the two centers leaves R of size 26. Every vertex lies in at least one center neighborhood, so its degree in R is at most the sum of its two center-common-neighbor counts, hence at most 3. Both vectors 4e_c+1_N(c) are in the kernel of G by direct substitution. Their center-coordinate matrix is 4I, so subtracting kernel multiples eliminates any test vector at both centers. On R, 3I-A is the graph Laplacian plus diagonal 3-degree; therefore G_R is PSD. The written factor identity with z_i=4x_i-x_v*1_N(v)(i)-x_u*1_N(u)(i) explicitly gives 16*x^T*G*x as a sum of integer-weighted squares."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-CLOSED-TWO-NEIGHBORHOOD-LOWER-GRAM-REDUNDANCY",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "e92b4934808dd00d96da78ca9bd0ad32a04d27184bb6ebdd0f9754821ef59776",
+      "statement": "For every finite simple graph H with vertex set N[v] union N[u], where v and u are nonadjacent of degree 14 and each center c has common-neighbor count 2-adjacency(c,x) with every other vertex x, A(H)+4I is positive semidefinite of rank 27, with kernel spanned by 1_N(v)-1_N(u)-3(e_v-e_u).",
+      "scope": {
+        "description": "Universal conditional theorem on two complete nonadjacent neighborhoods with the stated exact center equalities; no additional pair caps assumed.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [],
+      "independent_editorial_reason": "The original written Schur-complement proof uses exact center equalities, residual degree bounds and integer/rational matrix identities. Its universal conditional statement and rank/kernel calculation require no automorphism or universal rook containment.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/closed28_lower_lemma/summary.json",
+          "audit_sha256": "e9b6e11971e1dab9c618372d08dd45a2f5f0b380440bc77e7f655a374933e95c",
+          "original_status": "INDEPENDENT_CLOSED28_LOWER_GRAM_LEMMA_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root independent algebraic review, separate exact Python Fraction checking path",
+            "method": "independent_derivation",
+            "command_or_audit": "acceleration/results/20260930_independent_review/closed28_lower_lemma/summary.json",
+            "timestamp": "2026-09-29T20:43:03.252214+00:00",
+            "outcome": "PASS",
+            "scope": "Universal conditional theorem on two complete nonadjacent neighborhoods with the stated exact center equalities; no additional pair caps assumed.",
+            "artifact_hashes": {
+              "closed-lower-audit": "e9b6e11971e1dab9c618372d08dd45a2f5f0b380440bc77e7f655a374933e95c",
+              "closed-lower-manifest": "2b998ef3fbdc32c4b53ddf705f36ad65c46b8645ef5773c0dca6bf1673f5acd6"
+            },
+            "shared_components": [
+              "Python standard library exact integers and Fraction; raw fixtures shared with producer. No producer imports."
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "The theorem proves redundancy of this necessary PSD test under its hypotheses, not graph extendability.",
+              "Only 2688 saved raw examples were computationally checked; universality rests on the reviewed proof.",
+              "Original domain generation and floating-point spectra are not independently replayed here.",
+              "No target resolution or external peer review."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "For every finite simple graph H with vertex set N[v] union N[u], where v and u are nonadjacent of degree 14 and each center c has common-neighbor count 2-adjacency(c,x) with every other vertex x, A(H)+4I is positive semidefinite of rank 27, with kernel spanned by 1_N(v)-1_N(u)-3(e_v-e_u).",
+            "scope": "Universal conditional theorem on two complete nonadjacent neighborhoods with the stated exact center equalities; no additional pair caps assumed.",
+            "written_audit": "The center equalities give Bn=2j-n and Bm=2j-m on 26 residual vertices. With t=n+m>=j, B has degree at most 3. Therefore M=B+4I>=I by its signless-Laplacian identity. With c=t-j, Mt=7t-4c and c.c=2 imply r=c^T M^-1 c<=2 and t^T M^-1 t=(240+16r)/49<=272/49<8. In the 2x2 Schur complement 4I-C^T M^-1 C, the difference direction is zero since M(n-m)=3(n-m), n.(n-m)=12 and m.(n-m)=-12. The sum direction has eigenvalue 4-t^T M^-1 t/2>=60/49>0. Congruence with positive definite M proves PSD and rank 27. Solving the difference direction yields exactly the stated nonzero kernel. All steps use exact identities; no sampled eigenvalue premise."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-CLOSED29-TWO-SPECIFIC-GRAM-OBSTRUCTIONS",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "59dadb6a9b616eef9304294555daab0cfec61b132e149e39b723001b8c1a6509",
+      "statement": "For each of the two exact raw29 adjacency matrices in the hash-bound negative_candidates.json, no symmetric binary99by99zero-diagonal target A with A^2=12I-A+2J has that matrix as the indicated induced principal submatrix.",
+      "scope": {
+        "description": "Only these two specific induced29 patterns; no entire closed28 graph, center-star domain, or eight-coordinate family is excluded.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No automorphism of a hypothetical target and no universal rook-containment assumption."
+      ],
+      "recommended_assumptions": [
+        "Exactly the hypotheses and pinned fixed configurations in the statement and bound independent audit.",
+        "No nontrivial automorphism of a hypothetical target is assumed, and no universal rook-containment assumption is made."
+      ],
+      "dependencies": [
+        {
+          "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "independent_editorial_reason": "The bound audit checks strict negative integer principal Gram directions for two exact raw29 matrices. Principal positive semidefiniteness follows from the target identity for every target, regardless of symmetry; no larger family or universal containment is asserted.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/closed29_specific_gram_v2/summary.json",
+          "audit_sha256": "a4481e0969c17a302ae5d8812c98dd42608178a8daaa5f5a92b12b14a63bf879",
+          "original_status": "INDEPENDENT_TWO_SPECIFIC_CLOSED29_GRAM_OBSTRUCTIONS_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/structural_attack independent checker of /root/eight_domain_audit discovery artifacts",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/closed29_specific_gram_v2/summary.json",
+            "timestamp": "2026-09-29T20:46:32.024335+00:00",
+            "outcome": "PASS",
+            "scope": "Only these two specific induced29 patterns; no entire closed28 graph, center-star domain, or eight-coordinate family is excluded.",
+            "artifact_hashes": {
+              "closed29-two-audit": "a4481e0969c17a302ae5d8812c98dd42608178a8daaa5f5a92b12b14a63bf879",
+              "closed29-two-manifest": "6f8655fdd8770770eab6571600414ffe1dbbc8ef72e06151067d6b5d480f8d1a"
+            },
+            "shared_components": [
+              "Python standard-library integer arithmetic",
+              "previous independently reviewed universal Gram lemma"
+            ],
+            "controls": [
+              "See exact positive and corrupted controls and scope of replay in the bound independent audit."
+            ],
+            "limitations": [
+              "No screen population or completeness count was independently reproduced; historical surviving-assignment counts are not approved.",
+              "No claim that both patterns survive restored full99 caps; exactly one does.",
+              "No assumption of automorphisms, universal rook containment, or unrestricted family coverage."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "For each of the two exact raw29 adjacency matrices in the hash-bound negative_candidates.json, no symmetric binary99by99zero-diagonal target A with A^2=12I-A+2J has that matrix as the indicated induced principal submatrix.",
+            "scope": "Only these two specific induced29 patterns; no entire closed28 graph, center-star domain, or eight-coordinate family is excluded.",
+            "written_derivation": "A target's diagonal forces degree14. Hence AJ=JA=14J and J^2=99J. For G=27I-9A+J, exact expansion gives coefficients (1701,-567,63)=63(27,-9,1), so G^2=63G. Symmetry implies x^TGx=||Gx||^2/63>=0. Extend each recorded integer29vector by zero to99coordinates. Its directly checked negative quadratic contradicts this necessary PSD identity."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-PARTIAL-K-EIGHT-COORDINATE-FULL99-SAT-ENCODING",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "101c52d0bbf269bbb67e4aea1eef5213f24ad49fb997d69f5c7f786a6db5cfd4",
+      "statement": "The exact saved CNF is satisfiable if and only if there is a99vertex symmetric binary zero-diagonal adjacency satisfying A\u00b2=12I-A+2J and every fixed present/absent entry of this exact eight-coordinate family. Every auxiliary product and threshold has full Boolean equivalence.",
+      "scope": {
+        "description": "Only the pinned189scaffold/120fixedK/2160unknown family; not unrestricted target coverage.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the frozen model or graph and the declared hypotheses in the statement and independent report.",
+        "No nontrivial target automorphism."
+      ],
+      "recommended_assumptions": [
+        "Exactly the frozen model or graph and the declared hypotheses in the statement and independent report.",
+        "No nontrivial target automorphism is assumed."
+      ],
+      "dependencies": [
+        {
+          "id": "C-PARTIAL-K-EIGHT-COORDINATE-DOMAINS",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "independent_editorial_reason": "The original complete encoding audit quantifies over every adjacency satisfying the recorded fixed present/absent entries. The proof uses99 degree equations, all4851 pair caps, a global equality-of-sums argument and exact Boolean gates. It has no asymmetry condition or target automorphism requirement.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/eight_full99_cnf/summary.json",
+          "audit_sha256": "ecd4adb354a0c8c03589b1446ab511014ea47c7b5bf9ff1d529d34a2d1c79667",
+          "original_status": "INDEPENDENT_EIGHT_FULL99_CNF_ENCODING_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/eight_domain_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/eight_full99_cnf/summary.json",
+            "timestamp": "2026-09-29T20:49:43.316004+00:00",
+            "outcome": "PASS",
+            "scope": "Only the pinned189scaffold/120fixedK/2160unknown family; not unrestricted target coverage.",
+            "artifact_hashes": {
+              "eight-sat-audit": "ecd4adb354a0c8c03589b1446ab511014ea47c7b5bf9ff1d529d34a2d1c79667",
+              "eight-sat-manifest": "8a4bd72919dcab206a5b743a219e9f0239569fdd87cd519244f4b196b220b619",
+              "eight-sat-artifact": "242a1b917bcb4cce7a352c44c10036fcbc07098b9e11503029c29d0f8045af59"
+            },
+            "shared_components": [
+              "Raw authenticated domain/model/CNF artifacts",
+              "Python exact integers; no producer or third-party cardinality code imported"
+            ],
+            "controls": [
+              "Full positive and adversarial controls and shared trusted components are enumerated in the bound audit."
+            ],
+            "limitations": [
+              "This is encoding verification, not a SAT result, graph witness, or UNSAT proof.",
+              "Any positive solver assignment still needs complete raw-clause checking and a separate independent99graph validator.",
+              "UNSAT requires a complete independently replayed proof and excludes only this family.",
+              "No hypothetical graph automorphism, target-wide coverage denominator, or external review."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "The exact saved CNF is satisfiable if and only if there is a99vertex symmetric binary zero-diagonal adjacency satisfying A\u00b2=12I-A+2J and every fixed present/absent entry of this exact eight-coordinate family. Every auxiliary product and threshold has full Boolean equivalence.",
+            "scope": "Only the pinned189scaffold/120fixedK/2160unknown family; not unrestricted target coverage.",
+            "written_derivation": "docs/AUDIT_20260930_EIGHT_FULL99_ENCODING_DERIVATION.md"
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-ORBIT-AUGMENTED-LOCAL59-WITNESS",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "34a40834b6dab861dfa1d708dbc2036e983f76df0431497b155e93d7944156d2",
+      "statement": "The complete saved assignment satisfies the exact base CNF and every independently certified transported clause, and decodes to the saved locally valid59vertex window.",
+      "scope": {
+        "description": "Only central10vertex matching and four exact incidence blocks fixed. All780pairs among the40right vertices independently variable, constrained by their stated labelled block degrees; no nontrivial automorphism assumed.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the frozen model or graph and the declared hypotheses in the statement and independent report.",
+        "No nontrivial target automorphism."
+      ],
+      "recommended_assumptions": [
+        "Exactly the frozen model or graph and the declared hypotheses in the statement and independent report.",
+        "No nontrivial target automorphism is assumed."
+      ],
+      "dependencies": [
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        },
+        {
+          "id": "C-ROOK-GRAM-CUT-ORBITS-352",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "independent_editorial_reason": "The original SAT replay checks all3690172 clauses, the complete assignment and its raw59 graph under the fixed model. Its scope explicitly says no nontrivial automorphism is assumed. Existence of this local assignment makes no claim about any target automorphism group.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/summary.json",
+          "audit_sha256": "511aa9b61eb913b84d3e6d8be1adc71d889897a28538669bcf41e8521b1cb8a8",
+          "original_status": "INDEPENDENT_ORBIT_AUGMENTED_ROOK_WINDOW_SAT_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "/root/state_literature_audit independent checking agent",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/summary.json",
+            "timestamp": "2026-09-29T20:49:33.934080+00:00",
+            "outcome": "PASS",
+            "scope": "Only central10vertex matching and four exact incidence blocks fixed. All780pairs among the40right vertices independently variable, constrained by their stated labelled block degrees; no nontrivial automorphism assumed.",
+            "artifact_hashes": {
+              "orbit-witness-audit": "511aa9b61eb913b84d3e6d8be1adc71d889897a28538669bcf41e8521b1cb8a8",
+              "orbit-witness-manifest": "d1c09fa63423c984e01e46c4ee2d8b4417865ca5d00066e9073e1d33db93a172",
+              "orbit-witness-artifact": "989cb3d10e7985cfa11958b579f0ede4ffa8e3d94fc8ed73c43ffbde26effbdc"
+            },
+            "shared_components": [
+              "Frozen independently authored exact SAT stream checker and raw59 graph validator",
+              "Python exact arithmetic"
+            ],
+            "controls": [
+              "Full positive and adversarial controls and shared trusted components are enumerated in the bound audit."
+            ],
+            "limitations": [
+              "A local59vertex SAT witness is not a complete99vertex target or proof of extension.",
+              "No UNSAT claim is checked by this program.",
+              "Mathematical cut soundness uses the hash-bound independent orbit/source proof gates; optimization proofs are not rerun here."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "The complete saved assignment satisfies the exact base CNF and every independently certified transported clause, and decodes to the saved locally valid59vertex window.",
+            "scope": "Only central10vertex matching and four exact incidence blocks fixed. All780pairs among the40right vertices independently variable, constrained by their stated labelled block degrees; no nontrivial automorphism assumed."
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    },
+    {
+      "claim_id": "C-ROOK-ORBIT-LOCAL59-GRAM-BOX-CUT43",
+      "reviewed_revision": 1,
+      "reviewed_claim_sha256": "2bff0aaedb42b60e83d79d263bbcf20474916496765cd535434461dd35f33343",
+      "statement": "Every target extension of this exact frozen central-factor family satisfies the listed clause: fixing only its listed values makes the principal Gram quadratic strictly negative even at its exact maximum over every other Boolean edge.",
+      "scope": {
+        "description": "One explicit43literal forbidden Boolean edge pattern in the pinned780edge central-factor family; not a full-family exclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_assumptions": [
+        "Exactly the frozen model or graph and the declared hypotheses in the statement and independent report.",
+        "No nontrivial target automorphism."
+      ],
+      "recommended_assumptions": [
+        "Exactly the frozen model or graph and the declared hypotheses in the statement and independent report.",
+        "No nontrivial target automorphism is assumed."
+      ],
+      "dependencies": [
+        {
+          "id": "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-ROOK-FOUR-FACTOR-WINDOW-CNF-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        },
+        {
+          "id": "C-ROOK-ORBIT-LOCAL59-DUAL-GRAM-EXCLUSION",
+          "revision": 1,
+          "relation": "derived_from"
+        }
+      ],
+      "independent_editorial_reason": "The original independent audit constructs the exact maximizing Boolean corner for all780 edge variables and proves its quadratic negative. The rule applies to every target extension of the fixed scaffold and uses no symmetry or asymmetry restriction.",
+      "bound_original_verifications": [
+        {
+          "audit_path": "acceleration/results/20260930_rook_orbit_gram_box01/independent_box_nogood.json",
+          "audit_sha256": "a0248d9dcb88006eb624b1ebedef1ef27bfffb3ebd70cb98e3d12fdeb266a03d",
+          "original_status": "INDEPENDENT_TARGET_GRAM_BOX_NOGOOD_PASS",
+          "original_verification": {
+            "claim_revision": 1,
+            "verifier": "Independent checker authored by /root/eight_domain_audit; invocation provenance is the recorded command",
+            "method": "independent_artifact_check",
+            "command_or_audit": "acceleration/results/20260930_rook_orbit_gram_box01/independent_box_nogood.json",
+            "timestamp": "2026-09-29T20:59:05.511088+00:00",
+            "outcome": "PASS",
+            "scope": "One explicit43literal forbidden Boolean edge pattern in the pinned780edge central-factor family; not a full-family exclusion.",
+            "artifact_hashes": {
+              "orbit-cut43-audit": "a0248d9dcb88006eb624b1ebedef1ef27bfffb3ebd70cb98e3d12fdeb266a03d",
+              "orbit-cut43-manifest": "6c52f7e98060cb20cb73e1515ccc3987b6e72843bb9ec8e4d7c29b01a07085d0",
+              "orbit-cut43-artifact": "97e8fea3c6365f52668709dfb67b59da06d0aedbdb041ac4360177cd1daed2e2"
+            },
+            "shared_components": [
+              "Earlier independent support Gram checker and raw59 validator",
+              "Python exact integers"
+            ],
+            "controls": [
+              "Full positive and adversarial controls and shared trusted components are enumerated in the bound audit."
+            ],
+            "limitations": [
+              "The box maximizes over a superset of locally feasible assignments, so it is safe but may be weak.",
+              "No globally shortest-clause or minimum-support assertion.",
+              "No full fixed-star, unrestricted nonexistence, target construction, or external review.",
+              "The cut is necessary for target extensions, not implied by the weaker local CNF."
+            ]
+          },
+          "actual_hypotheses_and_argument": {
+            "statement": "Every target extension of this exact frozen central-factor family satisfies the listed clause: fixing only its listed values makes the principal Gram quadratic strictly negative even at its exact maximum over every other Boolean edge.",
+            "derivation": [
+              "The already independently derived target matrix G=27I-9A+J is positive semidefinite.",
+              "On a fixed principal graph its quadratic is c+sum(d_e*t_e), with d_e=-18*w_u*w_v.",
+              "For fixed edge-value subset F, the maximum over all remaining independent bits is c+sum_F(d_e*a_e)+sum_notF(max(0,d_e)).",
+              "This maximum is attained at the explicitly checked Boolean corner. A strictly negative maximum rules out every target completion preserving F, so their opposite-value clause is necessary."
+            ]
+          }
+        }
+      ],
+      "finding": "The bound original verification establishes its stated scope without any target symmetry or asymmetry premise.",
+      "retain_prior_verification_for_exact_editorial_change": true,
+      "permitted_change": "Only the indicated assumption wording; statement, mathematical scope, artifacts and hypotheses remain fixed."
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/target_gram_boolean_box_lemma.json": "72f8dd8a34fdb8dfaef3722fce173e0061c9c21a0b21ef7da7dc979d1668e6b1",
+    "docs/DERIVATION_20260930_TARGET_GRAM_BOX_NOGOODS.md": "bff4c85b4183c3bcc326bf136a0bf166b2553f8668b9549b332ff410fbeb1d1c",
+    "acceleration/results/20260930_independent_review/initial_gram_box_nogood_claim_binding.json": "dd176290c727a0aa5a3ad098bf085d0627e40d1eb8e3b5ca6db58f417eff5e01",
+    "acceleration/results/20260930_rook_gram_box_cut_initial/manifest.json": "57af796826c6c21daea53b51ddf06f2415a742b503efbd53f32b8988b74d2fc8",
+    "acceleration/results/20260930_independent_review/rook_box_collection01.json": "b5a8ab884c157f40b32a4ebacf747e0d12596b0fb0ca01d3203fafd9dcf21cfd",
+    "acceleration/results/20260930_rook_box_batch01/accepted_checkpoint.json": "b500b490696ad97a06dd76afea11bc955c2c5b0800e167915c8bd6f51a653bae",
+    "acceleration/results/20260930_independent_review/rook_box_collection02.json": "ee79e1eb396c5ffd9dc47c3b32a76221e30a514a885e5c472fa4e39af3a5ca67",
+    "acceleration/results/20260930_rook_box_lazy_wave02/final_checkpoint.json": "8cc2dcc6c3795422ecae529df0f0b06f73a275120b8ee0cbcbee11e1c3e0a9ff",
+    "acceleration/results/20260930_independent_review/rook_box_wave02_binding.json": "d30e2a18841339864e7698f8905696366f15afe13293ea1efcce14b5d2b2669a",
+    "acceleration/results/20260930_rook_box_lazy_wave02/manifest.json": "e9d0d5bbb5a346e51578a6af3d088fe0299d53107e531f53338b1c4dd1fbb24c",
+    "acceleration/results/20260930_independent_review/scaffold_cut_transport_lemma.json": "113ae8bce4db859eb64916e5e1ce5a341eb71fd4a320cc49c9ccc570f3726014",
+    "docs/DERIVATION_20260930_SCAFFOLD_CUT_TRANSPORT.md": "0910d3e49dd0f2b4560a8c3a91335dc8d0f16d4b9c869a114d00a158ef1163a2",
+    "acceleration/results/20260930_independent_review/rook_scaffold_relabelings32.json": "897188e21828d946149dbeee503c1fd61b6946197810a11970b92f2a6bf1b282",
+    "acceleration/results/20260930_rook_scaffold_relabeling/accepted_relabelings.json": "026d223aff6341bdefe8a9cb2c4401cfd644e5c6a59420a334d8c1e75363400b",
+    "acceleration/results/20260930_independent_review/degree_block_gram/lemma_claim_binding.json": "75cd5f5d3297889cf1a7603dc0b60a083e0443166187484c709c0b53b2b28158",
+    "acceleration/results/20260930_degree_block_gram_bounds/run01/manifest.json": "9b5e8e975323a24c68698f0df6659b106c65f3ea977c991ee42ee290c396f17f",
+    "acceleration/audit_20260930_degree_block_gram.md": "ffabcb40651220b7b7365a5e2e85d5c45ba7f7ddf7bbf69dd0b09f0f587de77d",
+    "acceleration/results/20260930_independent_review/degree_block_gram/cut_claim_binding.json": "c548e9bcfa8dd506b1696c9ffdce7e141786c7980acd8c62038a417c7323ae1a",
+    "acceleration/results/20260930_degree_block_gram_bounds/run01/final_cut_certificate.json": "0307b96985b44b1038eac5ed63e5f332ac6a6b5ea66506cfe14d2760e8feee7e",
+    "acceleration/results/20260930_independent_review/rook_cut_orbits/summary.json": "9abc83c032bc5454c6f05d6cab0146fd39775f9f994d4f4dc3579dfccf6ef6ac",
+    "acceleration/results/20260930_rook_cut_orbits01/manifest.json": "ab2ed0e7a2f1c6f1840c03b44d6e5086703535fa6da690ed408b5e96198b479b",
+    "acceleration/results/20260930_independent_review/local_redundancy_v2/matching_cap_lemma.json": "1e9c0840638a1554d25d67900f2c14ea4d2ca0cab22d8893441a71457ec2d4f5",
+    "acceleration/theory_20260930_matching_cap_composition.md": "fa21974d2b403d004d5c781f5cf21e1af01116b20c739bc2d06ea948c885794c",
+    "acceleration/results/20260930_independent_review/local_redundancy_v2/closed_gram_lemma.json": "463c7af9414d051290347b77b0aeca60da1bda958ec113405cc26a2ed5036f4b",
+    "acceleration/theory_20260930_closed28_gram_redundancy.md": "7e925f56b520e6b06aa028b252aa7d4137b41071730ae5e0dbc873dcf97e7407",
+    "acceleration/results/20260930_independent_review/closed28_lower_lemma/summary.json": "e9b6e11971e1dab9c618372d08dd45a2f5f0b380440bc77e7f655a374933e95c",
+    "acceleration/theory_20260930_closed28_lower_gram_redundancy.md": "2b998ef3fbdc32c4b53ddf705f36ad65c46b8645ef5773c0dca6bf1673f5acd6",
+    "acceleration/results/20260930_independent_review/closed29_specific_gram_v2/summary.json": "a4481e0969c17a302ae5d8812c98dd42608178a8daaa5f5a92b12b14a63bf879",
+    "acceleration/results/20260930_closed29_extension_screen/run01/negative_candidates.json": "6f8655fdd8770770eab6571600414ffe1dbbc8ef72e06151067d6b5d480f8d1a",
+    "acceleration/results/20260930_independent_review/eight_full99_cnf/summary.json": "ecd4adb354a0c8c03589b1446ab511014ea47c7b5bf9ff1d529d34a2d1c79667",
+    "acceleration/results/20260930_eight_full99_cnf/manifest.json": "8a4bd72919dcab206a5b743a219e9f0239569fdd87cd519244f4b196b220b619",
+    "acceleration/results/20260930_eight_full99_cnf/artifact_packages.json": "242a1b917bcb4cce7a352c44c10036fcbc07098b9e11503029c29d0f8045af59",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/summary.json": "511aa9b61eb913b84d3e6d8be1adc71d889897a28538669bcf41e8521b1cb8a8",
+    "acceleration/results/20260930_rook_orbit_solver_pilot/manifest.json": "d1c09fa63423c984e01e46c4ee2d8b4417865ca5d00066e9073e1d33db93a172",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/independent_full59.json": "989cb3d10e7985cfa11958b579f0ede4ffa8e3d94fc8ed73c43ffbde26effbdc",
+    "acceleration/results/20260930_rook_orbit_gram_box01/independent_box_nogood.json": "a0248d9dcb88006eb624b1ebedef1ef27bfffb3ebd70cb98e3d12fdeb266a03d",
+    "acceleration/results/20260930_rook_orbit_gram_box01/manifest.json": "6c52f7e98060cb20cb73e1515ccc3987b6e72843bb9ec8e4d7c29b01a07085d0",
+    "acceleration/results/20260930_rook_orbit_gram_box01/certificate.json": "97e8fea3c6365f52668709dfb67b59da06d0aedbdb041ac4360177cd1daed2e2",
+    "acceleration/audit_20260930_automorphism_assumption_editorial.py": "e6abf231ac2d32454659095a6a844b505a444b79f6bce41b64f0380d52a3b0d3",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "authorization": "The exact replacements are supported as editorial clarifications by the original independently checked statements. They do not remove any mathematical premise used in those audits, add a symmetry premise, or assume targets are asymmetric.",
+  "impact": "Original verification records may be retained for these exact corrected statements after attaching this review. A new ledger revision, if created, must be explicitly bound to this editorial review and the preserved original revision/evidence; dependency-revision bookkeeping must remain explicit.",
+  "rejected_interpretation": "Neither ambiguous phrase may be interpreted as asserting that a hypothetical target has trivial automorphism group or lacks nontrivial automorphisms.",
+  "no_universal_rook_containment": "The longer replacement also preserves that a fixed rook scaffold is conditional, never assumed to occur in every target.",
+  "limitations": [
+    "Only these17exact current claim revisions were reviewed.",
+    "No producer or audit artifact was rewritten, and no expensive experiment or proof was rerun.",
+    "Any broader statement, changed artifact, changed mathematical hypothesis or changed dependency requires a new impact review.",
+    "This is an editorial evidence review, not a new resolution or fresh validation of every underlying computation."
+  ],
+  "ledger_modified": false,
+  "solver_launched": false,
+  "mathematical_claim_changed": false,
+  "target_resolution": false,
+  "external_review": false
+}

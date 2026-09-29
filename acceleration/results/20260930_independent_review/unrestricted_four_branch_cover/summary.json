@@ -1,0 +1,336 @@
+{
+  "status": "INDEPENDENT_UNRESTRICTED_FOUR_BRANCH_COVER_PASS",
+  "claim_id": "C-UNRESTRICTED-FOUR-BRANCH-COVER",
+  "claim_revision": 1,
+  "timestamp": "2026-09-29T21:16:15.362041+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_unrestricted_four_branches_v1.py",
+    "--run",
+    "acceleration/results/20260930_unrestricted_four_branches",
+    "--out",
+    "acceleration/results/20260930_independent_review/unrestricted_four_branch_cover"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/eight_domain_audit independent checking agent",
+  "verification_type": "Independent written coverage proof, all336quotas, all3360anchor relabelings, complete scaffold swap/variable mapping, and raw suffix recipe hashing",
+  "recommendation": "VERIFIED",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "statement": "A target exists if and only if at least one of the four exact recorded unrestricted full99 branch CNFs is satisfiable. Every target admits a root/edge labeling with anchor variable44 true and xyz variables1,2,3 respectively000,001,100,or110; the recorded suffixes implement exactly these cases.",
+  "scope": "Complete unrestricted-target coverage up to proved vertex relabeling, using the exactnew unrestrictedbaseCNF; no graph automorphism assumption.",
+  "assumptions": [
+    "The exact target identity and current root-normalization/encoding premises.",
+    "Future branch files must reproduce the checked base-body/header/four-unit recipe hashes."
+  ],
+  "dependencies": [
+    {
+      "id": "C-ROOT-SCAFFOLD-NORMALIZATION",
+      "revision": 1,
+      "relation": "normalization"
+    },
+    {
+      "id": "C-UNRESTRICTED-FULL99-PREFIX-CNF-ENCODING",
+      "revision": 1,
+      "relation": "encoding_equivalence"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/unrestricted_full99_cnf/summary.json": "2d6702d0f60341378fcf6b5b0808e6c34ea6a1025775cfae60500626f199ef58",
+    "acceleration/results/20260917_independent_review/root_scaffold.json": "e96941c2bc050aad65b67a4f22a8968d588ae4dbe3cd7b7f22bfe84972a963a8",
+    "acceleration/audit_20260930_eight_full99_cnf_v1.py": "c956504752a937ffa6aa1ad84d4aa30d95db8723287970e76cbfd262b74ecf4c",
+    "acceleration/audit_20260917_root_scaffold.py": "f47c96f5737cda0cd276293e0d3ffcc220ff55b8cff1542b409837cce12cd948",
+    "acceleration/results/20260917_independent_review/ROOT_SCAFFOLD_DERIVATION.md": "a45fa5c52f3b348e8fb41b347925a363bb79e4d6389f60f760ec85e6cfe8f077",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260917_root_scaffold/manifest.json": "ae3d13619864342e22574bedcfdb5286dfbb7e843011fd198b2bc15c2bd1b742",
+    "acceleration/theory_20260917_root_scaffold.py": "fa679bd412e9d42ce33ccbc74b90e4deee599331d70d7f919c403622aa11019b",
+    "docs/THEORY_20260917_ROOT_SCAFFOLD.md": "76dc3e50fdcd8edcb1a5560ee8e2753b50e9c1a21c1d5cf16326a88d453c53f1",
+    "acceleration/results/20260917_root_scaffold/summary.json": "984c0f0ef215d9885f9d46b27317ad699ec38ee2a44e0666acea51977e03ea1d",
+    "acceleration/results/20260917_root_scaffold/rook9_adjacency.json": "56c792fff5e1fd8130b71d151680c1d84e184773d82cb47d1f1ead2e1cc22713",
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+    "acceleration/results/20260930_unrestricted_full99_cnf/manifest.json": "5533534acbddb6e7a848b91045b125c7038bd55883e4f3676ae8bbf2746bb5aa",
+    "acceleration/results/20260930_unrestricted_full99_cnf/summary.json": "5e1341d4eb27f77fab3d73b92e749c4fb647e888ddebbe605e3193186c5d543b",
+    "acceleration/theory_20260930_unrestricted_full99_cnf.py": "4a14834ef79fd597c3f3a96f25c510bbcf802872373e1ec0e4d90b5ca38e4a4d",
+    "acceleration/theory_20260930_unrestricted_full99_cnf_spec.md": "223948ec501460372845f8a01cd19d1127421a24995bae2fd6f07a881ee8b170",
+    "acceleration/results/20260930_unrestricted_full99_preflight_v2/scope.json": "2359c7389b4bb23475cf9607a99c07060119976abff8bc70bbdb5d131ab1921d",
+    "acceleration/results/20260930_unrestricted_full99_preflight_v2/summary.json": "530981cddd6c483a14d062171e4a0800f7026d2b6106565b5f60c65d61918ea5",
+    "acceleration/theory_20260930_eight_full99_cnf.py": "21c357543c9397456a911175b277da6e6caa769be31d18c12e034cc76d99074c",
+    "acceleration/theory_20260930_full_srg_validator.py": "c0e070aa1ac39e8860b52a7f5e086b3e8da5e01f83d0f4fe76ab1e91c077279b",
+    "acceleration/results/20260930_independent_review/eight_full99_cnf/summary.json": "ecd4adb354a0c8c03589b1446ab511014ea47c7b5bf9ff1d529d34a2d1c79667",
+    "acceleration/environments/rook-sat/uv.lock": "a38ec6c1bb56c33eb5fba0e1fbc770f7d479d8d5dc380a3e013c4f09fbf419e2",
+    "acceleration/environments/rook-sat/pyproject.toml": "193413ec708aaaa81f121d94af20747e013696b677e8f8b3202cb1a02e490aee",
+    "acceleration/audit_20260930_unrestricted_full99_cnf_v1.py": "8de1d8d0cfbab38962f59f4073d0cd3ae33ab7b175b8b3db16427fd66fd65f54",
+    "docs/AUDIT_20260930_UNRESTRICTED_FULL99_ENCODING_DERIVATION.md": "533103f57c4c44a35f50288a4e07894c7746fcada926f27de624453cba3a5254",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_unrestricted_full99_cnf/artifact_packages.json": "38ded32e7935f15c6e03dcfb16dcce62caacb7c9fe82c2e3d9908d939c95b1f2",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf.gz.part000": "75c54ad3aac89820c4fde19300d85d67780975517a81903f768aaf13b4301fdc",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf.gz.part001": "419b96e9088c3d83b6363fbf2f2246aa15180f09f6494965060a3b26fef69c51",
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json.gz.part000": "ec2d869283ea14d8e45c30a2eb49a4cd51fecbdf7548aa4a8f2ffb6f32b35e95",
+    "acceleration/results/20260930_unrestricted_four_branches/manifest.json": "de83a48f8fc53f530372a5a874dab46d97d83be052746505cffcf0c43a502791",
+    "acceleration/theory_20260930_unrestricted_four_branches.py": "623b5e7adcd9894580ea5346db0a9c5f1095182c5d8c975549364fc4c392c5c7",
+    "docs/DERIVATION_20260930_UNRESTRICTED_FOUR_BRANCH_COVER.md": "fe48612bd964e69241e23557319821b523f7d3492168a7fa5e17f3433570cab6",
+    "acceleration/results/20260930_unrestricted_four_branches/branches.json": "2520f51a2a5452f53caa64fe41a17fb2dedf29df989f7af7ceef0d55b2ce318c",
+    "acceleration/results/20260930_unrestricted_four_branches/a0.units.cnfpart": "a1f1a84015d361d666911308926c16c12cbcf14f0a094a0448bbe6f99433d527",
+    "acceleration/results/20260930_unrestricted_four_branches/a1_complement.units.cnfpart": "fbdb5cb3d67b3d47bee427f2e1262e62cc0df00b9786088f78c50acd45bc2b39",
+    "acceleration/results/20260930_unrestricted_four_branches/a1_cross.units.cnfpart": "f62db981cd675bf3fb97c11792e9749de6674b42ed46173e86dc5b199f33454f",
+    "acceleration/results/20260930_unrestricted_four_branches/a2_crosses.units.cnfpart": "2615eff691df4af462e411af9b5171a9d0f9b494fbc60a578116d0c5a207f0d2",
+    "scratch_general_exact_sat.py": "8c21ac331af1569ee526ae4ddbf2553f6252d544a08b14bebb7fe3fd485489cc",
+    "acceleration/audit_20260930_unrestricted_four_branches_v1.py": "3aeaf870ad4f2e2d6a4ae9a9fbd959bcebbc077040a2173be10900e40fa48476",
+    "docs/AUDIT_20260930_UNRESTRICTED_FOUR_BRANCH_COVER.md": "5ef1b22737f1c0d59a6bb823f925205d73e59e1e168b0e1b77ce803f9cbbc1b5"
+  },
+  "controls": {
+    "positive_recipe_passed": true,
+    "all_boolean_patterns_checked": 8,
+    "nonnegative_aggregate_triples": [
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        1,
+        2,
+        9
+      ],
+      [
+        2,
+        0,
+        10
+      ]
+    ],
+    "deliberately_corrupted_recipes_rejected": [
+      "wrong_anchor_variable",
+      "wrong_anchor_vertex",
+      "wrong_xyz_variable",
+      "missing_branch",
+      "wrong_unit_sign",
+      "impossible_mixed_pattern",
+      "wrong_exchange",
+      "duplicate_exchange_vertex"
+    ],
+    "positive_control_scope": "Exact pattern/quota/recipe checks, not a fabricated valid99graph"
+  },
+  "written_derivation": "docs/AUDIT_20260930_UNRESTRICTED_FOUR_BRANCH_COVER.md",
+  "anchor_edge_variable": 44,
+  "xyz_edge_variables": [
+    1,
+    2,
+    3
+  ],
+  "anchor_full99_vertices": [
+    15,
+    59
+  ],
+  "checked_exchange_fixed_free_entries": 9801,
+  "exchange_variable_images_checked": 3486,
+  "allowed_patterns": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "canonical_patterns": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "pattern_coverage_witnesses": [
+    {
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "use_exchange": false,
+      "canonical": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "use_exchange": false,
+      "canonical": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "use_exchange": true,
+      "canonical": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "use_exchange": false,
+      "canonical": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "use_exchange": false,
+      "canonical": [
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "exact_own_mate_quota_rows": 336,
+  "ordered_disjoint_support_normalizations_checked": 3360,
+  "normalization_fixed_free_entries_checked": 32931360,
+  "outer_degree": 12,
+  "disjoint_neighbor_identity": "d=8+a",
+  "disjoint_neighbor_lower_bound": 8,
+  "quota_artifact": {
+    "path": "acceleration/results/20260930_independent_review/unrestricted_four_branch_cover/independent_quota_rows.json",
+    "sha256": "691242b7ed1a7c9c5bce0a8331f92228688fcfa672d80251bcb6f87ff263d217"
+  },
+  "anchor_map_artifact": {
+    "path": "acceleration/results/20260930_independent_review/unrestricted_four_branch_cover/independent_anchor_maps.json",
+    "sha256": "29c04ed797964fd373b811ada163f41ee567b221f230f07b90beb52b78fd8329"
+  },
+  "checked_branch_recipes": [
+    {
+      "branch": "a0",
+      "units": [
+        44,
+        -1,
+        -2,
+        -3
+      ],
+      "suffix_sha256": "a1f1a84015d361d666911308926c16c12cbcf14f0a094a0448bbe6f99433d527",
+      "future_cnf_sha256": "3f4b97be0870db90a05ae430866305b95faa993a943b922196813880dffee302",
+      "variables": 1186500,
+      "clauses": 4136458
+    },
+    {
+      "branch": "a1_complement",
+      "units": [
+        44,
+        -1,
+        -2,
+        3
+      ],
+      "suffix_sha256": "fbdb5cb3d67b3d47bee427f2e1262e62cc0df00b9786088f78c50acd45bc2b39",
+      "future_cnf_sha256": "d64f84e5def51472ddd2972d46c4c9c9ee62c4638fbc2ac06750d5b6d4384e11",
+      "variables": 1186500,
+      "clauses": 4136458
+    },
+    {
+      "branch": "a1_cross",
+      "units": [
+        44,
+        1,
+        -2,
+        -3
+      ],
+      "suffix_sha256": "f62db981cd675bf3fb97c11792e9749de6674b42ed46173e86dc5b199f33454f",
+      "future_cnf_sha256": "990d766dde4d00a35a92b76ce320f4825ef5e7252b79b981e9d367dd6dabbc1f",
+      "variables": 1186500,
+      "clauses": 4136458
+    },
+    {
+      "branch": "a2_crosses",
+      "units": [
+        44,
+        1,
+        2,
+        -3
+      ],
+      "suffix_sha256": "2615eff691df4af462e411af9b5171a9d0f9b494fbc60a578116d0c5a207f0d2",
+      "future_cnf_sha256": "ca41f217e9f8561a2e98a8a2546f5b48fccb84e9ba354ebd6d08c74fd029461f",
+      "variables": 1186500,
+      "clauses": 4136458
+    }
+  ],
+  "base_cnf_sha256": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+  "base_model_sha256": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+  "encoding_gate_sha256": "2d6702d0f60341378fcf6b5b0808e6c34ea6a1025775cfae60500626f199ef58",
+  "historical_relationship": "Same four viable cases already appeared in the historical five-case portfolio; the nominala2_mixed101case violatesx+z<=1. No historical solver status is used as a proof premise, and no novelty is claimed.",
+  "producer_imported": false,
+  "shared_components": [
+    "Python standard library exact integers, hash streams, and JSON",
+    "Hash-bound prior independent unrestricted encoding and root-normalization audits are reused; the new coverage derivation and literal mapping are checked separately"
+  ],
+  "limitations": [
+    "No branch was solved and no branch UNSAT proof is asserted.",
+    "Relabeling coverage does not imply every fixed-label base assignment satisfies these units.",
+    "Target isomorphism classes may occur in multiple branches; branch counts are not equal graph/runtime fractions.",
+    "Full branch CNFs are currently recipes; this checker did not create large CNF copies or mutate the base.",
+    "General nonexistence still needs complete independently replayed proofs for every exact branch."
+  ],
+  "solver_calls": 0,
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY"
+}
