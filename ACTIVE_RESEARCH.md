@@ -7,7 +7,16 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [eighth milestone](docs/RESEARCH_20260930_EIGHTH_WAVE.md) records103
+The latest [ninth milestone](docs/RESEARCH_20260930_NINTH_WAVE.md) records 110
+claims, 108 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. It adds three fixed-factor
+exclusions and exact component-balance conditions, plus two independently
+checked binary-factor encodings. Both bounded native attempts ended UNKNOWN;
+no complete proof or full factor was obtained by those attempts. Next: the
+Q1-only projection with component-capacity inequalities, followed by exact
+extension checks. Subsequent results require fresh saved receipts.
+[Ninth replay guide](docs/REPRODUCING_20260930_NINTH_WAVE.md).
+
+The [eighth milestone](docs/RESEARCH_20260930_EIGHTH_WAVE.md) records103
 claims,101 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. Its six new claims include
 the complete ordered matching-pair census, exact local permutation counts,
 universal Gram-test redundancy and identity local constructions, and a small
