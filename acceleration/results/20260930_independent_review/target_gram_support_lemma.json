@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-09-29T19:55:03.333972+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_gram_claim_binding_v1.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/eight_domain_audit independent checking agent",
+  "verification_type": "Independent exact derivation and artifact revision binding",
+  "producer_imported": false,
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "status": "INDEPENDENT_TARGET_GRAM_PSD_SUPPORT_LEMMA_PASS",
+  "claim_id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "statement": "For every symmetric binary99by99zero-diagonal A satisfying A\u00b2=12I-A+2J, G=27I-9A+J satisfies G\u00b2=63G and is positive semidefinite. For any principal vertex set, fixed/free distinct Boolean edge parameterization, integer vector w, and evaluated negative quadratic, the clause requiring at least one current value of a free edge with nonzero coefficient -18w_uw_v to change is necessary for every target extension.",
+  "basis": [
+    "DERIVED"
+  ],
+  "scope": "A universal necessary target identity plus a conditional cut theorem; no existence or nonexistence conclusion.",
+  "assumptions": [
+    "Exactly99vertices, symmetric binary zero-diagonal adjacency, and the exact integer target identity.",
+    "The principal graph lists every pair as fixed or a distinct free Boolean edge; the fixed entries agree with any claimed extension.",
+    "The vector and all quadratic coefficients are exact; the evaluated quadratic is strictly negative; every nonzero free-edge coefficient is included."
+  ],
+  "dependencies": [],
+  "inputs_sha256": {
+    "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153",
+    "acceleration/audit_20260930_gram_nogood_v1.py": "020daac8a0340f74af5a0cd588efc292cba0283b2f8d1b6bd9efd458ac0ca6d9",
+    "acceleration/results/20260930_rook_gram_minimized/independent_nogood.json": "d0bdbc27029a4c6bf38199fc186afd031affefd2b4531413d83108c967d55ad8",
+    "acceleration/audit_20260930_gram_claim_binding_v1.py": "156b8985ad5e3131d77d0ccad3428950d48b363df5a9c3ae12d8e29ed92362fb",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "written_audit": "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md",
+  "exact_expansion": {
+    "G": [
+      27,
+      -9,
+      1
+    ],
+    "G_squared": [
+      1701,
+      -567,
+      63
+    ],
+    "identity_multiplier": 63,
+    "basis": [
+      "I",
+      "A",
+      "J"
+    ]
+  },
+  "proof": "Diagonal entries force degree14 and hence AJ=JA=14J. Expanding G\u00b2 gives63G. Symmetry gives x^TGx=||Gx||\u00b2/63>=0. Zero extension proves principal PSD. The affine edge expansion fixes the same negative value whenever every nonzero-coefficient edge value is preserved, so every target extension must falsify that preserved pattern.",
+  "controls": {
+    "known_rook_projector_passed": true,
+    "corrupted_rook_rejected": true,
+    "exact_target_basis_identity": [
+      1701,
+      -567,
+      63
+    ],
+    "wrong_target_identity_rejected": true,
+    "positive_certificate_accepted": true,
+    "corruptions_rejected": [
+      "nonnegative_vector",
+      "wrong_quadratic",
+      "wrong_constant",
+      "wrong_edge_mapping",
+      "wrong_coefficient",
+      "wrong_current_value",
+      "omitted_nonzero_coefficient",
+      "omitted_clause_literal",
+      "flipped_clause_literal"
+    ]
+  },
+  "limitations": [
+    "No target graph, unrestricted exclusion, or universal rook containment.",
+    "No minimization claim for vector support or clause length.",
+    "Cut validity is a target-extension consequence; it is not generally a consequence of a weaker local CNF."
+  ]
+}

@@ -1558,6 +1558,281 @@
       "size_bytes": 20965055,
       "sha256": "bbef8a7a0c997c1e88c45c53c893f9d06d698bd8c09cc8d1f9da512db46baf10",
       "recovery_manifest": "acceleration/results/20260930_eight_matching_filter/run01/compressed_artifacts.json"
+    },
+    {
+      "path": "acceleration/results/20260930_rook_window_sat/instance.cnf",
+      "size_bytes": 15743634,
+      "sha256": "85110f18e5f4bb63c5070c0b5b454e683b292467e5e5173a283bfb56abf66d4e",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:43.259824+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_second_packaging/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_rook_window_sat/instance.cnf.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_free_internal_sat/instance.cnf",
+      "size_bytes": 77931272,
+      "sha256": "ed9d0e102b16481fdbcecef34240b5be2b8a357af8c219606bb688dcb5fe9403",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:43.506654+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_second_packaging/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_rook_free_internal_sat/instance.cnf.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_sat_pilot/main/proof.drat",
+      "size_bytes": 16564274,
+      "sha256": "6378d40355ff016c3ac5a7434c98116b2c835390f0422539471b19322788aaaa",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:43.561991+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_second_packaging/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_rook_sat_pilot/main/proof.drat.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_filtered_moments/run01/integer_augmented_csr.npz",
+      "size_bytes": 225397777,
+      "sha256": "ff7c12cbc24828bf5bf08863dff95f17786563124f79ebf71b53520378f72651",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:44.227653+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260930_eight_filtered_moments/run01/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_filtered_moments/run01/model.json",
+      "size_bytes": 40872783,
+      "sha256": "c654b6e0a6d51270b29f97490c20c7acaeec483ff37bbbbdc1fdb61aee705829",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:44.345601+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260930_eight_filtered_moments/run01/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py"
+      }
+    },
+    {
+      "path": "build/research-local/eight_moment_pdhg/input.bin",
+      "size_bytes": 3714118948,
+      "sha256": "eab22693fbb961fda88bc0401e53f19b3976ecc539b9c1269ad95bfc647b6ea7",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T19:53:49.758327+00:00",
+      "recovery": {
+        "kind": "DETERMINISTIC_REGENERATION",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/export/manifest.json",
+        "source": "acceleration/export_20260930_eight_moment_pdhg.py",
+        "command": "uv run --locked python acceleration/export_20260930_eight_moment_pdhg.py --out FRESH_EXPORT_DIRECTORY --binary FRESH_BINARY_PATH",
+        "caveat": "Restore exact model chunks and raw filter gzip first. Compare binary SHA256. Export performs no numerical search. Native binaries require separate documented compilation."
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_1000.json",
+      "size_bytes": 51781507,
+      "sha256": "b33ebb491d1b0de804ce91008baa753c3b55f9eaaaa2be43da2d94c48dd06f07",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:32.442333+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/run02/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_1000.json.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py",
+        "independent_recovery_audit": "acceleration/results/20260930_independent_review/eight_gpu_support_run02.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_1000.json.gz",
+      "size_bytes": 18937155,
+      "sha256": "73932136106443ee885cc902fd93bdb6e77d5179bcfcfa487207fc12ad4b65e1",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:32.456345+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/run02/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py",
+        "independent_recovery_audit": "acceleration/results/20260930_independent_review/eight_gpu_support_run02.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_10000.json",
+      "size_bytes": 128975130,
+      "sha256": "caec6f1f0f34d9a6b4d6a6eb6a446022ec5e6df77641a273846255208e3e6572",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:32.689435+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/run02/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_10000.json.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py",
+        "independent_recovery_audit": "acceleration/results/20260930_independent_review/eight_gpu_support_run02.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_10000.json.gz",
+      "size_bytes": 53978186,
+      "sha256": "72d9cbfd556cca1b0b3896ea9f0d8176e3a97521663f9b0ebede8da19cfa3994",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:32.731394+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/run02/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py",
+        "independent_recovery_audit": "acceleration/results/20260930_independent_review/eight_gpu_support_run02.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_5000.json",
+      "size_bytes": 128965485,
+      "sha256": "cc3c5267437b2fc7f43de8ef8b9eba83a5c3fd554ab3233a0bde80146f53be7b",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:32.955973+00:00",
+      "recovery": {
+        "kind": "EXACT_GZIP",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/run02/compressed_artifacts.json",
+        "companion": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_5000.json.gz",
+        "restorer": "acceleration/restore_compressed_artifacts.py",
+        "independent_recovery_audit": "acceleration/results/20260930_independent_review/eight_gpu_support_run02.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_eight_moment_pdhg/run02/eight_5000.json.gz",
+      "size_bytes": 53997587,
+      "sha256": "fcaa1ef10ad7d355884ea40ce7e872917aa0f0ccdbcdbdbd31e23f853c14dec1",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:32.998651+00:00",
+      "recovery": {
+        "kind": "EXACT_RAW_BYTE_PARTS",
+        "manifest": "acceleration/results/20260930_eight_moment_pdhg/run02/chunk_manifest.json",
+        "restorer": "acceleration/restore_chunked_artifacts.py",
+        "independent_recovery_audit": "acceleration/results/20260930_independent_review/eight_gpu_support_run02.json"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_01/instance.cnf",
+      "size_bytes": 77931431,
+      "sha256": "b459b0bd59758c6d7a3d3d124c5fc6c2e96ecd452fcf52f463c579cfe5abcc01",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:33.230325+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_01/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_01 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_02/instance.cnf",
+      "size_bytes": 77931556,
+      "sha256": "0a5558e9a32a036161ae17874a69c0cb09a08193b9cff4b5cb632acf45ec0d70",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:33.453008+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_02/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_02 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_03/instance.cnf",
+      "size_bytes": 77931839,
+      "sha256": "644a32bc1f1c237836f8eb9ce804267e05fe7399f546660388f2548a752672b5",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:33.682014+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_03/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_03 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_04/instance.cnf",
+      "size_bytes": 77932226,
+      "sha256": "83c51a29b44caf12ace1943389755f6c984914894c8e00289fcad8ba9b622f5a",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:33.907707+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_04/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_04 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_05/instance.cnf",
+      "size_bytes": 77932391,
+      "sha256": "dc15921074877f56ca68e54d0abff159c67cc02009dc37d24487a9a6fbc9682c",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:34.130240+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_05/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_05 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_06/instance.cnf",
+      "size_bytes": 77932530,
+      "sha256": "b337cb6e6ea87f423bc71342f2d0e44b8a5cd085e47daa175291f97a5ddfdb64",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:34.348100+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_06/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_06 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_07/instance.cnf",
+      "size_bytes": 77932824,
+      "sha256": "395083f3e94c95d19e51859f95be319e916659d17b61ffd6f19750e1889c5480",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:34.571892+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_07/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_07 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_08/instance.cnf",
+      "size_bytes": 77933211,
+      "sha256": "28f3b9af426c85e7a504428cfd6ac07f10457043f3766969eb50bedcc4ebaf1b",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:34.795141+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_08/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_08 --out FRESH_OUTPUT_PATH"
+      }
+    },
+    {
+      "path": "acceleration/results/20260930_rook_lazy_wave01/round_09/instance.cnf",
+      "size_bytes": 77933494,
+      "sha256": "4fb1378841fa8be4f16d9e9b445652c9e830e496330776ba9346b18f7f2a07b9",
+      "artifact_availability": "LOCAL_ONLY",
+      "recorded_at": "2026-09-29T20:09:35.019855+00:00",
+      "recovery": {
+        "kind": "EXACT_BASE_AND_ORDERED_CLAUSES",
+        "record": "acceleration/results/20260930_rook_lazy_wave01/round_09/instance_record.json",
+        "restorer": "acceleration/restore_20260930_rook_cnf.py",
+        "command": "uv run --locked python acceleration/restore_20260930_rook_cnf.py --round acceleration/results/20260930_rook_lazy_wave01/round_09 --out FRESH_OUTPUT_PATH"
+      }
     }
   ],
   "scope": "Original archive and 2026-09-16 Rust/CUDA continuation, including large ignored work artifacts. Small ignored logs, build outputs, and local environments are not enumerated here.",

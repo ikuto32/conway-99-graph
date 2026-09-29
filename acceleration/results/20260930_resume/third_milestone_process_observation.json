@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-09-29T20:10:23.547932+00:00",
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "Get-CimInstance Win32_Process | Where-Object { ($_.Name -like '*python*' -or $_.Name -like 'moment_pdhg_gpu*') -and $_.CommandLine -like '*conway-99-graph*' } | Select-Object Name,ProcessId,CreationDate,CommandLine | ConvertTo-Json -Depth 3"
+  ],
+  "processes": [
+    {
+      "Name": "python.exe",
+      "ProcessId": 53272,
+      "CreationDate": "/Date(1790708582134)/",
+      "CommandLine": "c:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe c:\\Users\\ikuto\\.vscode\\extensions\\ms-python.flake8-2026.6.0\\bundled\\tool\\lsp_server.py"
+    },
+    {
+      "Name": "python.exe",
+      "ProcessId": 20820,
+      "CreationDate": "/Date(1790709863627)/",
+      "CommandLine": "c:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe c:\\Users\\ikuto\\.vscode\\extensions\\ms-python.isort-2026.6.0\\bundled\\tool\\lsp_server.py"
+    },
+    {
+      "Name": "python.exe",
+      "ProcessId": 58040,
+      "CreationDate": "/Date(1790709863637)/",
+      "CommandLine": "c:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe c:\\Users\\ikuto\\.vscode\\extensions\\ms-python.pylint-2026.6.0\\bundled\\tool\\lsp_server.py"
+    },
+    {
+      "Name": "python.exe",
+      "ProcessId": 59512,
+      "CreationDate": "/Date(1790709863647)/",
+      "CommandLine": "c:\\Users\\ikuto\\projects\\conway-99-graph\\.venv\\Scripts\\python.exe c:\\Users\\ikuto\\.vscode\\extensions\\ms-python.black-formatter-2026.6.0\\bundled\\tool\\lsp_server.py"
+    },
+    {
+      "Name": "python.exe",
+      "ProcessId": 42540,
+      "CreationDate": "/Date(1790712622708)/",
+      "CommandLine": "\"C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe\" acceleration/record_20260930_third_checkpoint.py"
+    }
+  ],
+  "limitation": "Time-specific matching local processes only; no persistent liveness claim."
+}

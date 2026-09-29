@@ -1,0 +1,73 @@
+{
+  "status": "INDEPENDENT_RAW59_NEGATIVE_GRAM_PASS",
+  "recommendation": "VERIFIED",
+  "timestamp": "2026-09-29T19:46:17.454110+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_gram_original_v1.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root independent raw-matrix checking path",
+  "method": "Literal integer double sum and separate undirected edge sum; no producer imports",
+  "inputs_sha256": {
+    "acceleration/results/20260930_rook_free_internal_independent_certificate/independent_full59.json": "dd3167d5b609e716283ba80aaffacffdbbc6e04f9524e895eb26f1ff04a4974e",
+    "acceleration/results/20260930_rook_free_internal_gram/result.json": "40bba02e170e584ff37778032c40ca8a1ea8bbbdf6acccfb88d19c4994b3eaf3",
+    "acceleration/audit_20260930_rook_gram_original_v1.py": "943c1105448de8eba2ea85e3a7eb940546790330d3d28c225ba8f243234fd9a7",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "claim_id": "C-ROOK-LOCAL59-NEGATIVE-GRAM-EXCLUSION",
+  "claim_revision": 1,
+  "statement": "The exact labelled 59-vertex graph bound by this report cannot be an induced subgraph of any srg(99,14,1,2).",
+  "scope": "One exact induced graph; no other local witness, rook-containing graph, or unrestricted target is excluded.",
+  "quadratic_value": -30571152163483770,
+  "support_size": 31,
+  "matrix": "27I-9A+J",
+  "polynomial_square_coefficients_I_A_J": [
+    1701,
+    -567,
+    63
+  ],
+  "mathematical_derivation": "The target diagonal gives degree 14, hence AJ=JA=14J. With J^2=99J, exact expansion gives G^2=63G. Symmetry implies 63*x^T*G*x=||G*x||^2>=0. Restriction to any induced principal submatrix is PSD. The displayed negative integer direction contradicts that necessity for this one graph.",
+  "rank_derivation": "trace(G)=99*28=2772 and G^2=63G imply rank(G)=2772/63=44; rank is not used for this exclusion.",
+  "controls": [
+    {
+      "case": "known_negative_K5_direction",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "case": "wrong_quadratic_value",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "truncated_vector",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "zero_direction",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "asymmetric_graph",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "PSD_rook9_constant_direction",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "PSD_rook9_difference_direction",
+      "outcome": "REJECTED"
+    }
+  ],
+  "shared_components": [
+    "Python integer arithmetic and standard library; input raw graph produced by a separate independent SAT decoder"
+  ],
+  "limitations": [
+    "No claim about the second A+4I producer certificate.",
+    "No graph automorphism or universal induced-rook assumption.",
+    "Internal review only; no external peer review.",
+    "The local SAT construction remains valid for its weaker constraints."
+  ]
+}

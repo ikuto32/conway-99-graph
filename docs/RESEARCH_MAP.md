@@ -4,6 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [third resumed milestone](RESEARCH_20260930_THIRD_WAVE.md),
+[second milestone](RESEARCH_20260930_SECOND_WAVE.md), and its
+[reproduction guide](REPRODUCING_20260930_SECOND_WAVE.md) collect the new
+matching/moment audits, proof-checked fixed-window exclusion and local Gram obstruction.
 The following stop directions are historical and have been superseded by that
 new instruction. No target resolution has been established.
 

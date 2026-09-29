@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-09-29T19:30:52.598628+00:00",
+  "source_commit": "148c50e087da09f558c0e57f1a23154063caf11b",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_drat_build_v1.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "question": "Build a source-authenticated independent DRAT checker without using dirty working-tree source",
+  "upstream_repository": "https://github.com/marijnheule/drat-trim",
+  "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "upstream_blob_command": [
+    "git",
+    "-C",
+    "tools/drat-trim",
+    "show",
+    "2e3b2dc0ecf938addbd779d42877b6ed69d9a985:drat-trim.c"
+  ],
+  "upstream_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+  "patch_source_commit": "148c50e087da09f558c0e57f1a23154063caf11b",
+  "patch_source_path": "tools/patches/drat-trim-windows.patch",
+  "patch_sha256": "2050f0b7ce9d4878944eecf6d94c414d8d60941a3e9f2df353ad30cd5316676c",
+  "patched_source_sha256": "82835512d4eda7dee1e0e3f610a0672fa1d216ea91246bcb576022020fe18f4c",
+  "compiler_path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+  "compiler_sha256": "7a154e5136cc538b42e6944997fc5e3bb49112894e41dd88a70940aaff9aa831",
+  "environment_script_path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat",
+  "environment_script_sha256": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209",
+  "build_script": "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\build.cmd",
+  "build_script_sha256": "c83b60af88ebbd92ef4fe554c851be35d8dfa4bea798b75941e6524c2597f456",
+  "build_command": [
+    "cmd.exe",
+    "/d",
+    "/c",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\build.cmd"
+  ],
+  "build_seconds_limit": 120,
+  "portability_change": "Only Windows headers, getc_unlocked-to-getc alias, macro conflict undefinitions, and gettimeofday shim. Original checking logic outside exact patch hunk unchanged.",
+  "dirty_submodule_source_consulted": false,
+  "dirty_submodule_mutated": false,
+  "limitations": [
+    "Windows portability patch remains a trusted reviewed source change.",
+    "MSVC compilation and runtime are trusted components; this is not diverse compiler verification."
+  ]
+}
