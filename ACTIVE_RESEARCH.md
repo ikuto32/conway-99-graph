@@ -1,3 +1,23 @@
+# Resumed by user — 2026-09-30 JST
+
+The user explicitly authorized continued research. Remote `main` was checked at
+`90f1a32de21faea3519c3635677d5739f86ad734`; PR2 was externally merged. Work now
+uses `codex/eight-coordinate-continuation-20260930`. Historical stop records
+below remain unchanged evidence and are superseded as instructions by this
+new user request.
+
+Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
+The checkpoint-aware eight-coordinate continuation completed with 84 saved
+center domains and 2,290,122 local choices, including all 879,449 prior embedded
+choices. Producer output is **CANDIDATE** pending independent full-domain review:
+`acceleration/results/20260930_eight_domains/run01/summary.json`.
+The frozen protocol is [here](docs/NEXT_20260930_EIGHT_COORDINATE_CONTINUATION.md).
+The next gated computation is the [necessary neighborhood matching filter](docs/NEXT_20260930_EIGHT_COORDINATE_MATCHING_FILTER.md).
+Consult fresh execution observations for process liveness; this document is
+not a live process monitor. Overall search coverage: UNKNOWN; no validated denominator.
+
+## Preserved September 17 stop
+
 # STOPPED by user — 2026-09-17
 
 Research is stopped to preserve the user's token resources. Do not resume until
