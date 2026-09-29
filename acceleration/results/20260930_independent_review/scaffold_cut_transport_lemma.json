@@ -1,0 +1,78 @@
+{
+  "status": "INDEPENDENT_FIXED_SCAFFOLD_CUT_TRANSPORT_LEMMA_PASS",
+  "claim_id": "C-FIXED-SCAFFOLD-RELABELING-CUT-TRANSPORT",
+  "claim_revision": 1,
+  "timestamp": "2026-09-29T20:29:35.460702+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_scaffold_transport_claim_binding_v1.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/eight_domain_audit independent checking agent",
+  "verification_type": "Independent exact change-of-labels proof and raw map artifact revision binding",
+  "basis": [
+    "DERIVED"
+  ],
+  "kind": "mathematical result",
+  "statement": "For every fixed/free59vertex adjacency specification S with distinct edge variables, every59vertex permutation p preserving S, and every edge-variable clause necessary for all99vertex target extensions of S, replacing each edge variable by its same-sign image under p gives another clause necessary for all target extensions of S.",
+  "scope": "Universal conditional transport theorem for exact target-extension clauses and specification-preserving permutations; no target automorphism, existence, or nonexistence assertion.",
+  "assumptions": [
+    "The target is a symmetric binary99by99zero-diagonal adjacency satisfying A\u00b2=12I-A+2J.",
+    "The map is a genuine permutation of the designated59vertices preserving every fixed0/fixed1/free pair and the edge-variable bijection.",
+    "The source clause has an independent valid proof for every target extension of exactly this specification.",
+    "Only edge variables are transported; degree-group preservation is additionally required when claiming invariance of a specific local relaxation."
+  ],
+  "dependencies": [],
+  "dependency_null_reason": "The proof uses only the explicit target identity and elementary simultaneous row/column permutation; no prior project result is needed.",
+  "derivation": [
+    "Extend p to99vertices by fixing the other40labels. Given any target extension A of S, let B[i,j]=A[p(i),p(j)].",
+    "Simultaneous row/column permutation preserves symmetry, binary entries, zero diagonal and the target identity because it preserves I and J.",
+    "Specification preservation makes B another target extension of the same S. Apply the source necessary clause to B.",
+    "Each source edge literal in B equals its same-sign p-image edge literal in A. Since A was arbitrary, the transported clause is universally necessary for this family.",
+    "No step asserts A=B or requires an automorphism of a hypothetical target."
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_rook_free_internal_sat/independent_cnf_encoding.json": "a74e821f70680187e0ee14fb956d51928e6aa9517acc1bc0186448b32c985ba0",
+    "acceleration/results/20260930_rook_free_internal_sat/model.json": "26908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration/results/20260930_rook_scaffold_relabeling/accepted_relabelings.json": "026d223aff6341bdefe8a9cb2c4401cfd644e5c6a59420a334d8c1e75363400b",
+    "acceleration/audit_20260930_scaffold_relabelings_v1.py": "1d7f4436c11f4a6d0ac271fab5e469ce29dae6ec0df60dfc4bf21345f4f4e002",
+    "docs/DERIVATION_20260930_SCAFFOLD_CUT_TRANSPORT.md": "0910d3e49dd0f2b4560a8c3a91335dc8d0f16d4b9c869a114d00a158ef1163a2",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/audit_20260930_scaffold_transport_claim_binding_v1.py": "9b24e670d597106f410f890afed3d450923d2cb7d1ac6219821e9a62ca0bc820",
+    "acceleration/results/20260930_independent_review/rook_scaffold_relabelings32.json": "897188e21828d946149dbeee503c1fd61b6946197810a11970b92f2a6bf1b282"
+  },
+  "written_audit": "docs/DERIVATION_20260930_SCAFFOLD_CUT_TRANSPORT.md",
+  "calibrated_instantiation": {
+    "report": "acceleration/results/20260930_independent_review/rook_scaffold_relabelings32.json",
+    "sha256": "897188e21828d946149dbeee503c1fd61b6946197810a11970b92f2a6bf1b282",
+    "supplied_maps_checked": 32,
+    "controls": {
+      "identity_permutation_accepted": true,
+      "corruptions_rejected": [
+        "duplicate_vertex",
+        "move_root",
+        "wrong_central_swap",
+        "wrong_right_swap",
+        "wrong_edge_variable_map",
+        "wrong_core_metadata",
+        "move_free_to_fixed",
+        "wrong_degree_value"
+      ]
+    },
+    "role": "Tests the concrete map implementation; these finite controls are not the proof of the universal conditional theorem"
+  },
+  "limitations": [
+    "This does not validate an unproved source clause.",
+    "The32map audit does not independently establish census completeness or all scaffold automorphisms.",
+    "Transported-clause deduplication does not count excluded graphs or justify target-wide coverage.",
+    "No auxiliary SAT-variable map, unrestricted solution, or external review is established."
+  ],
+  "producer_imported": false,
+  "recommendation": "VERIFIED",
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY"
+}

@@ -21,8 +21,10 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [third resumed milestone](docs/RESEARCH_20260930_THIRD_WAVE.md) for
-all six exact GPU support attempts and the scoped SAT and Gram results.
+See the [fourth resumed milestone](docs/RESEARCH_20260930_FOURTH_WAVE.md) for
+verified conditional Gram clauses and local-test redundancy theorems. The
+[third milestone](docs/RESEARCH_20260930_THIRD_WAVE.md) preserves all six
+exact GPU support attempts and the earlier scoped SAT results.
 The unrestricted target remains **UNKNOWN**. The September 17 stop below is
 historical; new execution status comes from fresh run receipts.
 

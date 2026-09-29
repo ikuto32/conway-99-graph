@@ -25,7 +25,13 @@ extension obstruction. All retain their declared scopes. The
 [third milestone](docs/RESEARCH_20260930_THIRD_WAVE.md) adds all six independently
 checked nonpositive GPU support bounds and eight more checked local Gram
 obstructions. Neither establishes LP feasibility or whole-family exclusion.
-Subsequent SAT-cut waves must be read from their completed audit receipts.
+The [fourth milestone](docs/RESEARCH_20260930_FOURTH_WAVE.md) records fourteen
+additional independently checked claims: necessary Gram clauses and their352
+relabelings, a12literal degree-bound cut, three local-test redundancy theorems,
+and two specific induced29 obstructions. Its ledger snapshot has74 claims,
+72 VERIFIED/CLEAR and2 CANDIDATE/CLEAR. No entire new family is excluded.
+Subsequent orbit-SAT and complete99vertex encoding/solver work must be read
+from their completed audit receipts; they are not promoted by that snapshot.
 Review continues in [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
 Consult fresh execution observations for process liveness; this document is
 not a live process monitor. Overall search coverage: UNKNOWN; no validated denominator.

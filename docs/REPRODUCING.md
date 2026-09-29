@@ -2,8 +2,9 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [third milestone](RESEARCH_20260930_THIRD_WAVE.md)
-and [recovery guide](REPRODUCING_20260930_SECOND_WAVE.md). Historical commands
+For current work, read the [fourth milestone](RESEARCH_20260930_FOURTH_WAVE.md)
+and [fourth recovery guide](REPRODUCING_20260930_FOURTH_WAVE.md). The
+[earlier recovery guide](REPRODUCING_20260930_SECOND_WAVE.md) remains applicable. Historical commands
 below retain their original environment and meaning.
 
 ## Two-coordinate exact proof: isolated public replay

@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-09-29T20:09:50.411685+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_gram_box_claim_binding_v1.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/eight_domain_audit independent checking agent",
+  "verification_type": "Independent exact written derivation, explicit maximizing-corner audit, and claim revision binding",
+  "inputs_sha256": {
+    "acceleration/results/20260930_rook_free_internal_sat/independent_cnf_encoding.json": "a74e821f70680187e0ee14fb956d51928e6aa9517acc1bc0186448b32c985ba0",
+    "acceleration/results/20260930_rook_free_internal_sat/model.json": "26908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e",
+    "acceleration/results/20260930_rook_free_internal_sat/instance.cnf": "ed9d0e102b16481fdbcecef34240b5be2b8a357af8c219606bb688dcb5fe9403",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration/results/20260930_rook_free_internal_independent_certificate/independent_full59.json": "dd3167d5b609e716283ba80aaffacffdbbc6e04f9524e895eb26f1ff04a4974e",
+    "acceleration/results/20260930_rook_gram_box_cut_initial/certificate.json": "b67531fc95c55136d083924d33f1ac8244e6c0527f37c5e458fdacb715e2f2c0",
+    "acceleration/results/20260930_rook_gram_minimized/certificate.json": "255560186ad410e57582ab34c1b7cb90b899b4d9656ce37285bc06ce98b1145a",
+    "acceleration/results/20260930_rook_gram_minimized/independent_nogood.json": "d0bdbc27029a4c6bf38199fc186afd031affefd2b4531413d83108c967d55ad8",
+    "acceleration/results/20260930_rook_gram_minimized/nogood.clause": "df5718ddcb9b1ab88e854f7ab20a2a18afcd519267a6c7236d07bccfdd2e810a",
+    "acceleration/audit_20260930_gram_nogood_v1.py": "020daac8a0340f74af5a0cd588efc292cba0283b2f8d1b6bd9efd458ac0ca6d9",
+    "acceleration/audit_20260930_rook_free_internal_cnf_v1.py": "676e6c9be00fdf677e74a1c3a1f6317b64c7011996692e07ee4f379933914666",
+    "acceleration/audit_20260930_rook_window_cnf_v1.py": "bab0c88e4feab56e7d454c01aaefba2565e1d4e71a7228b163fdb50d9655b088",
+    "acceleration/audit_20260930_rook_window_graph_v1.py": "e42e6189115977b0b8cb337d6b1302f0572d324e6376f0759068d860f4b43d8d",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260930_rook_gram_box_cut_initial/nogood.clause": "8175930660dc6fcd2c997ab854c5bc7d8f9473349360424eb4d9be0341c716ab",
+    "acceleration/audit_20260930_gram_box_nogood_v1.py": "5ca79413b1b4ab9d43189a7d4c54a2d93b79790cb42af4d807442539523b282b",
+    "acceleration/audit_20260930_gram_box_claim_binding_v1.py": "534d3d0d822121d608df0b5ca8e8f02d6d767bab35a042cf023d18df56f10d60",
+    "docs/DERIVATION_20260930_TARGET_GRAM_BOX_NOGOODS.md": "bff4c85b4183c3bcc326bf136a0bf166b2553f8668b9549b332ff410fbeb1d1c",
+    "acceleration/results/20260930_independent_review/target_gram_support_lemma.json": "e194ca054dfe0596ae2b9ff1070ef59289c7c0401497a63c77eb62e217bd1ac6",
+    "acceleration/results/20260930_rook_gram_box_cut_initial/independent_box_nogood.json": "d336249f1ccdd91d9f5b8399faee56a8a589ac98d3ab9eb445e22b5ae1e09251"
+  },
+  "producer_imported": false,
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "controls": {
+    "exhaustive_three_bit_boxes": 1728,
+    "known_certificate_passed": true,
+    "corruption_cases_rejected": [
+      "wrong_bound",
+      "nonnegative_bound",
+      "wrong_constant",
+      "wrong_coefficient",
+      "wrong_gain",
+      "wrong_fixed_value",
+      "wrong_edge",
+      "missing_nonzero_coefficient",
+      "wrong_free_flag",
+      "removed_fixed_literal",
+      "wrong_literal_sign",
+      "wrong_parent_value"
+    ],
+    "zero_boundary_not_a_cut": true
+  },
+  "written_audit": "docs/DERIVATION_20260930_TARGET_GRAM_BOX_NOGOODS.md",
+  "recommendation": "VERIFIED",
+  "status": "INDEPENDENT_TARGET_GRAM_BOOLEAN_BOX_LEMMA_PASS",
+  "claim_id": "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS",
+  "claim_revision": 1,
+  "basis": [
+    "DERIVED"
+  ],
+  "kind": "mathematical result",
+  "statement": "For every target adjacency A, every principal vertex set with fixed edges and distinct Boolean free-edge variables, every exact integer vector w and every prescribed variable subset F, its quadratic q=c+sum(d_e*t_e), d_e=-18*w_u*w_v, has exact Boolean-box maximum U=c+sum_F(d_e*a_e)+sum_notF(max(0,d_e)). If U<0, every target extension preserving the fixed scaffold must change at least one prescribed value in F.",
+  "scope": "Universal conditional necessary target-extension rule. Strictly generalizes the complete-nonzero-support cut by allowing some nonzero-coefficient variables to vary.",
+  "assumptions": [
+    "A is symmetric binary99by99 with zero diagonal and satisfies the exact target identity A\u00b2=12I-A+2J.",
+    "Every unordered principal pair is fixed or mapped to one distinct Boolean variable; fixed entries agree with any claimed extension.",
+    "All coefficients, assignments and the strictly negative bound are exact; all variables outside F are maximized, including omitted variables."
+  ],
+  "dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "relationship_to_prior_claim": "Uses the already independently established universal PSD identity. It is a new broader cut theorem; no previous claim statement or evidence is replaced.",
+  "limitations": [
+    "A nonnegative box maximum does not establish feasibility or invalidate other possible cuts.",
+    "A box corner need not obey local graph constraints; the unrestricted box is a safe superset.",
+    "This implication proves neither target existence nor general nonexistence."
+  ]
+}
