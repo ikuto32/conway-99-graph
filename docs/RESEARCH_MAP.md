@@ -1,5 +1,12 @@
 # 研究資料の案内
 
+2026-09-30 JST: the user explicitly resumed research on
+`codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
+Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
+and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The following stop directions are historical and have been superseded by that
+new instruction. No target resolution has been established.
+
 最新の入口は [2026-09-17の停止・再開記録](STOP_20260917_SIX_COORDINATE.md) です。
 ユーザー指示により探索は停止済みです。132本の K 辺などを固定した配置族の除外を
 独立検証しましたが、一般問題は未解決です。過去の実行予定を自動再開しないでください。

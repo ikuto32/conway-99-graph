@@ -16,6 +16,16 @@
 
 ## 最初に読む資料
 
+Research resumed by explicit user instruction on 2026-09-30 JST. The current
+continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
+[draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
+remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
+rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
+The unrestricted target remains **UNKNOWN**. The September 17 stop below is
+historical; new execution status comes from fresh run receipts.
+
+### Preserved September 17 stopping point
+
 2026-09-17、トークン資源のためユーザー指示で研究を停止しました。
 [最新の保存状態・再開手順](docs/STOP_20260917_SIX_COORDINATE.md) を最初に読んでください。
 132本の K 辺などを固定した配置族の除外を独立検証しましたが、問題全体は未解決です。
