@@ -1,0 +1,89 @@
+{
+  "status": "INDEPENDENT_COARSE60_ALL_BITS_DISJOINT_COVER_REDUNDANCY_PASS",
+  "created_at": "2026-09-30T02:42:38.050467+00:00",
+  "updated_at": "2026-09-30T02:42:38.207249+00:00",
+  "source_commit": "ca7797c192f92d657ab893018f5d60e01545f1f1",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_coarse60_cyclic_cover.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/coarse60_cyclic_cover"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_coarse60_cyclic_cover/summary.json": "49872a955a8738c5611323ff7e66bae37f0bab67a3cef423a905aae3b44211b0",
+    "acceleration/results/20260930_coarse60_cyclic_cover/certificate.json": "e0c4d47d3933434c56a25073947325b540d692468d2fc1fb87eb7549d6457275",
+    "acceleration/results/20260930_prism_coarse60_bitlift/scope.json": "3237da2a02c60fc3f0c61e562788582b7ce25946afb523a84dc6634912ed98e9",
+    "acceleration/results/20260930_independent_review/prism_coarse60_bitlift_cnf/summary.json": "b82eb3d3c999ae8bdcdbfd246dd28ea9cd6a9dd8d1ce811abc82ee0f3e38d88d",
+    "acceleration/results/20260930_prism_coarse60_triangle_cover/all_triples.json": "fd6c1a24ba39005702ac61742119ed643540285ef5775cdc4555f678e66f8ce3",
+    "acceleration/results/20260930_independent_review/prism_coarse60_triangle_cover/summary.json": "50add6b76aea5bade3d74cf56be71941aeed3587974efae2af8ebaf7db36754c",
+    "acceleration/theory_20260930_coarse60_cyclic_cover.py": "d7a241185688e5a62e246275a85df0560b20eadebf1961fa07ba36207d3eef16",
+    "acceleration/theory_20260930_coarse60_cyclic_cover_spec.md": "655710262f1ea4e9a96c3fd8206a228ddd0db641829aafa584b76b9e5f3525c8",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_coarse60_cyclic_cover/controls.json": "e6955865d0260bd25ae26b4723f86d9afe210fe88079813dee5c5a22e729cc10",
+    "acceleration/results/20260930_coarse60_cyclic_cover/manifest.json": "8dd875b34fcb879ac44b6a8315723336ef5a72a2d6339bdce05d0e260e422df6",
+    "acceleration/results/20260930_coarse60_cyclic_cover/proof.txt": "b759bc2596c686756e5e430e5c2a3ae759acbb448ae3e94d24b646c8d5940592",
+    "acceleration/audit_20260930_coarse60_cyclic_cover.py": "9f045283ee12e7a3bfe22dbae230015d3095cfe68c61771c0cc4e90e3766c978",
+    "docs/AUDIT_20260930_COARSE60_CYCLIC_COVER.md": "7263fbe3a03968e709b155c5b283b5e7a8d3094c39c9eb9046e3da106025f3b4"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/coarse60_cyclic_cover/controls.json": "ac5fe49fd4152a0e790bf3c9be24818cea90e208841725ef9db4313fffc3f15a",
+    "acceleration/results/20260930_independent_review/coarse60_cyclic_cover/independent_classes.json": "48a2a760f09c782a0a10846cb72b35f539b61001badf28f16ac5dfa07fab035b"
+  },
+  "claim_id": "C-SIX-PRISM-COARSE60-UNIVERSAL-DISJOINT-COVER-REDUNDANCY",
+  "claim_revision": 1,
+  "statement": "For every assignment of all360 raw coordinate bits of the fixed60coarse columns, the recorded20 classes under uniform fibre rotation partition the columns into pairwise-disjoint incidence triples; consequently adding only existential exact-cover selectors and conditional opposite-bit requirements removes no raw-bit assignment in this template.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Universal over all2^360rawbit assignments of one exact labelled60-column template, with no Gram, margin or residual-graph premise.",
+  "dependencies": [
+    {
+      "id": "C-SIX-PRISM-COARSE60-EXACT-BITLIFT-CNF",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-SIX-PRISM-COARSE60-DISJOINT-TRIPLE-CENSUS-AND-COVER",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "assumptions": [
+    "The fixed60coarse-word template is explicit.",
+    "No hypothetical graph automorphism is assumed."
+  ],
+  "verifier": "/root/eight_domain_audit",
+  "method": "independent_derivation_and_exact_artifact_check",
+  "shared_components": [
+    "Frozen raw template and separate independently checked encoding/census premises.",
+    "Only Python standard-library imports; no producer or earlier checker code."
+  ],
+  "counts": {
+    "classes": 20,
+    "columns": 60,
+    "component_fibre_checks": 120,
+    "column_pairs": 60,
+    "universal_local_collision_checks": 8640,
+    "calibration_truth_cases": 1296,
+    "corruptions": 8,
+    "raw_bit_assignments_exact": "2348542582773833227889480596789337027375682548908319870707290971532209025114608443463698998384768703031934976"
+  },
+  "limitations": [
+    "No complete Gram factor, degree8 residual graph or target graph is provided.",
+    "This establishes redundancy of the specified semantic existential cover condition; no new CNF implementation was built or audited.",
+    "The actual residual mixed/quadratic equations and which triples are residual triangles are not redundant consequences.",
+    "No other coarse templates covered; no novelty or target-wide coverage claim."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Exact report input/output paths are saved; immutable publication remains unconfirmed.",
+  "target_resolution": false,
+  "external_review": false,
+  "overall_search_coverage": "UNKNOWN; no validated denominator."
+}

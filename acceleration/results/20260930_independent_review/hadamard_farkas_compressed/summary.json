@@ -1,0 +1,66 @@
+{
+  "status": "INDEPENDENT_COMPRESSED_CONNECTED01_FARKAS_CERTIFICATE_PASS",
+  "timestamp": "2026-09-30T03:00:20.729969+00:00",
+  "source_commit": "ca7797c192f92d657ab893018f5d60e01545f1f1",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_hadamard_farkas_compressed.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/hadamard_farkas_compressed"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_support_farkas/summary.json": "d5a5d63c81a099f49c635ad84861c72ca6aa0c96bea9415dfce188557a5196c1",
+    "acceleration/audit_20260930_hadamard_support_farkas.py": "80e5a3aca3b59aa77346d86eeb73d9b470004eac1b205ef3aeaf39b422421e89",
+    "acceleration/results/20260930_farkas_compress/summary.json": "e32bd98d563960cff732707603a80dbd847aebed6240ba21546b2e20d785d3e3",
+    "acceleration/results/20260930_hadamard_support_lp/exact_model.json": "5caeedf8c5e5277f387d1c978a20bb34e07b56d0197ea27c67cc3c535e5986d6",
+    "acceleration/results/20260930_hadamard_support_lp_dual_repair/certificate.json": "7b873f41300280025176729a8c4710ef65fc056aabf561e3d6fe927b850a9d1e",
+    "acceleration/theory_20260930_farkas_compress.py": "9248c4f438b3b1f5826c77dbc8ad1ebc2d996af8ae9ec676a51a44542f317e27",
+    "acceleration/theory_20260930_farkas_compress_spec.md": "187cd72d3ea268dc01357640addeea197e61d86516cdd590a40d22420bdefd2b",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_farkas_compress/certificate.json": "8cdedec1978193c28bf52617c21f82873fee7cc4d0f5258c2466f6ed1156c9eb",
+    "acceleration/results/20260930_farkas_compress/controls.json": "38126611076e277f698172bb4195861c60b857cb3c071c43026d6165521f5b6c",
+    "acceleration/results/20260930_farkas_compress/explanation.md": "8c2788c711e8a150c9b639a37e40de7af80c1ec8d4f7c92fbac15d10bf3b4896",
+    "acceleration/results/20260930_farkas_compress/manifest.json": "cc74cfef6c805ee9482a7d564052506f734f28d078916700103e2c564b0939d9",
+    "acceleration/results/20260930_farkas_compress/trials.json": "8a9f8161fbd8d69d3f5cf26e1fb225c6ab59f941f3a40ad6fe09e807019c869c",
+    "acceleration/results/20260930_farkas_compress/weighted_Gram_rows.json": "c417b1caf1f278077ba66347ecff87eac7b6b91065f6bd7f8a6c88a2f16feede",
+    "acceleration/results/20260930_hadamard20_support/connected_01.json": "2e839fda408da18e3689ffef00de647644375a000d308f4ea306b2cbdfa37e49",
+    "acceleration/audit_20260930_hadamard_farkas_compressed.py": "4eed3287abed2552969053ec261700868b61a72b9c8249bed6a5b6237e041571"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_farkas_compressed/all_integer_products.json": "d16e102aa46c54c5c156d585c960691d92596d45da6ff7d945ff87beab416f55"
+  },
+  "claim_id": "C-FIXED-HADAMARD-CONNECTED01-SUPPORT-EXCLUSION",
+  "claim_revision": 1,
+  "existing_statement_and_scope_unchanged": true,
+  "mathematical_result": "All4067 integer column products are nonnegative and the integer RHS product is -1.",
+  "weights": 726,
+  "columns": 4067,
+  "minimum_column_dot": 0,
+  "rhs_dot": -1,
+  "coefficient_stats": {
+    "maximum_absolute_weight": 50,
+    "nonzero_onehot_weights": 59,
+    "nonzero_Gram_weights": 382
+  },
+  "verifier": "/root/state_literature_audit",
+  "method": "independent_integer_artifact_check_using_prior_independent_domain_reconstruction",
+  "shared_components": [
+    "Frozen independently authored domain/matrix/Farkas checker; no producer repair/compression imports."
+  ],
+  "fresh_corruptions_rejected": [
+    "zero_dual",
+    "opposite_sign",
+    "underweight_onehot",
+    "altered_rhs_claim"
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "limitations": [
+    "Same one saved connected01 coordinate support only; not a core exclusion.",
+    "Compression trial search and minimality were not audited or asserted.",
+    "Adds alternative exact evidence, no broader claim and no ledger edit."
+  ]
+}

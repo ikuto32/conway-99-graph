@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-09-30T02:41:19.281057+00:00",
+  "status": "INDEPENDENT_IDENTITY_P_CLAIM_BINDING_SCOPE_CLARIFICATION_PASS",
+  "original_path": "acceleration/results/20260930_independent_review/identity_p_triangle_partition/claim_bindings.json",
+  "original_sha256": "88b8834d2d21189f8d6d8d2b705487491dc9da69b0681c7fa8ccbe3d0a25441e",
+  "verifier": "/root/state_literature_audit",
+  "scope_review": "The already approved statement establishes partition existence conditional on an actual target completion. The old scope sentence meant absence of unconditional target existence, not absence of the conditional conclusion. The exact mathematical statements and revisions remain unchanged.",
+  "dependency_review": "The first lemma uses the normalized triangle-core Gram definition and margins from C-UNRESTRICTED-TRIANGLE-CORE-FACTOR-NORMALIZATION r1. Its independent written proof already checks the relevant Gram entries; this added explicit uses_result reference documents the definition rather than adds a target automorphism or coverage premise.",
+  "definition_evidence": {
+    "path": "acceleration/results/20260930_independent_review/unrestricted_triangle_factor/summary.json",
+    "sha256": "a7d470ccf10df7dff77884c8bd1fe4784234ac80bc4e1b684e0050c3e33a4acd"
+  },
+  "exact_corrected_claims": [
+    {
+      "id": "C-IDENTITY-P-FACTOR-DISTINCT-COORDINATES-MIXED-CAP-REDUNDANCY",
+      "revision": 1,
+      "statement": "For any three perfect matchings on12coordinates and identity cross matchings, each column of every binary36x60 exact prescribed-Gram factor uses at most one vertex per coordinate triangle, hence every entry of (I+C)F is at most2; with two entries per fibre its six chosen vertices are independent.",
+      "scope": "All internal matching triples with identity cross matchings; conditional factor lemma only.",
+      "dependencies": [
+        {
+          "id": "C-UNRESTRICTED-TRIANGLE-CORE-FACTOR-NORMALIZATION",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "kind": "mathematical result",
+      "basis": [
+        "DERIVED"
+      ],
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "assumptions": [
+        "No nontrivial target automorphism is assumed.",
+        "The recorded identity-cross premise is explicit."
+      ],
+      "verifier": "/root/state_literature_audit",
+      "method": "independent_derivation_and_exact_artifact_check",
+      "evidence": [
+        {
+          "path": "acceleration/results/20260930_independent_review/identity_p_triangle_partition/summary.json",
+          "sha256": "15a32c8e4fb4928f78a6e931e09054ddcfd90c027717e8c0d0828c6f5406a516",
+          "availability": "LOCAL_ONLY"
+        }
+      ],
+      "limitations": [
+        "Identity cross matchings are a conditional restriction, not unrestricted normalization.",
+        "No actual full36factor, residual completion or target graph is provided.",
+        "No uniqueness of the full99 triangle partition and no novelty claim.",
+        "The finite controls are separate from the universal written proof."
+      ],
+      "created_at": "2026-09-30T02:23:13.449809+00:00",
+      "updated_at": "2026-09-30T02:23:13.449809+00:00"
+    },
+    {
+      "id": "C-IDENTITY-P-COMPLETION-THIRTYTHREE-TRIANGLE-PARTITION",
+      "revision": 1,
+      "statement": "Every SRG(99,14,1,2) completion of a triangle-root core whose three cross matchings are identity has an outside8-regular60vertex graph in which each vertex belongs to exactly one triangle, so its20disjoint triangles together with the root and12coordinate triangles partition all99vertices into33triangles.",
+      "scope": "Conditional identity-cross family only; no unconditional existence of a target completion and no uniqueness of its global partition are asserted.",
+      "dependencies": [
+        {
+          "id": "C-IDENTITY-P-FACTOR-DISTINCT-COORDINATES-MIXED-CAP-REDUNDANCY",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-UNRESTRICTED-TRIANGLE-CORE-FACTOR-NORMALIZATION",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "kind": "mathematical result",
+      "basis": [
+        "DERIVED"
+      ],
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "assumptions": [
+        "No nontrivial target automorphism is assumed.",
+        "The recorded identity-cross premise is explicit."
+      ],
+      "verifier": "/root/state_literature_audit",
+      "method": "independent_derivation_and_exact_artifact_check",
+      "evidence": [
+        {
+          "path": "acceleration/results/20260930_independent_review/identity_p_triangle_partition/summary.json",
+          "sha256": "15a32c8e4fb4928f78a6e931e09054ddcfd90c027717e8c0d0828c6f5406a516",
+          "availability": "LOCAL_ONLY"
+        }
+      ],
+      "limitations": [
+        "Identity cross matchings are a conditional restriction, not unrestricted normalization.",
+        "No actual full36factor, residual completion or target graph is provided.",
+        "No uniqueness of the full99 triangle partition and no novelty claim.",
+        "The finite controls are separate from the universal written proof."
+      ],
+      "created_at": "2026-09-30T02:23:13.449809+00:00",
+      "updated_at": "2026-09-30T02:23:13.449809+00:00"
+    }
+  ],
+  "original_preserved": true,
+  "statement_changed": false,
+  "claim_revision_changed": false,
+  "ledger_changed": false,
+  "artifact_availability": "LOCAL_ONLY"
+}

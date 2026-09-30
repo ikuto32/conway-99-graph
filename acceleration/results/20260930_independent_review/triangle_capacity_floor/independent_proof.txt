@@ -1,0 +1,9 @@
+For an arbitrary binary36x20 matrix T with row sum10 and column sum18, fix p.
+The sum over q != p of T_p dot T_q equals sum_r T_rp*(10-T_rp)=18*9=162.
+Each dot product is between0 and18. Set a_q=18-T_p dot T_q. There are19
+nonnegative integer a_q with sum180. Euclidean division gives a_q=5b_q+r_q,
+0<=r_q<=4, hence 5*sum b_q=180-sum r_q>=180-76=104.
+The left side is a multiple of5, therefore it is at least105 and sum b_q>=21.
+In particular the separate test sum capacities>=18 is always passed. This
+does not exhibit a simultaneous symmetric bounded-degree matrix, a factor,
+a residual graph or a Conway99 graph; no tightness over actual matrices is claimed.

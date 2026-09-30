@@ -1,0 +1,178 @@
+{
+  "component_truth_cases": 216,
+  "admissible_fibre_triples": 24,
+  "cover_fixtures": [
+    {
+      "name": "cover_positive",
+      "n": 6,
+      "triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          4
+        ]
+      ],
+      "expected": "SAT",
+      "complete_bruteforce_covers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "result": {
+        "status": "SAT",
+        "root_node": 0,
+        "cover_triple_ids": [
+          0,
+          1
+        ],
+        "nodes": [
+          {
+            "id": 0,
+            "remaining_mask_hex": "3f",
+            "status": "SAT",
+            "branch_vertex": 1,
+            "available_triple_ids": [
+              0
+            ],
+            "children": [
+              {
+                "triple_id": 0,
+                "child": 1,
+                "status": "SAT"
+              }
+            ],
+            "cover_triple_ids": [
+              0,
+              1
+            ]
+          },
+          {
+            "id": 1,
+            "remaining_mask_hex": "38",
+            "status": "SAT",
+            "branch_vertex": 3,
+            "available_triple_ids": [
+              1
+            ],
+            "children": [
+              {
+                "triple_id": 1,
+                "child": 2,
+                "status": "SAT"
+              }
+            ],
+            "cover_triple_ids": [
+              1
+            ]
+          },
+          {
+            "id": 2,
+            "remaining_mask_hex": "0",
+            "status": "SAT",
+            "cover_triple_ids": []
+          }
+        ],
+        "stopped_by_resource_limit": false,
+        "max_nodes": 1000
+      }
+    },
+    {
+      "name": "overlap_only_negative",
+      "n": 6,
+      "triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ]
+      ],
+      "expected": "UNSAT",
+      "complete_bruteforce_covers": [],
+      "result": {
+        "status": "UNSAT",
+        "root_node": 0,
+        "cover_triple_ids": null,
+        "nodes": [
+          {
+            "id": 0,
+            "remaining_mask_hex": "3f",
+            "status": "UNSAT",
+            "branch_vertex": 1,
+            "available_triple_ids": [
+              0
+            ],
+            "children": [
+              {
+                "triple_id": 0,
+                "child": 1,
+                "status": "UNSAT"
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "remaining_mask_hex": "38",
+            "status": "UNSAT",
+            "branch_vertex": 3,
+            "available_triple_ids": [],
+            "children": []
+          }
+        ],
+        "stopped_by_resource_limit": false,
+        "max_nodes": 1000
+      }
+    }
+  ],
+  "corrupted_cover_witnesses": [
+    {
+      "witness": [
+        0,
+        0
+      ],
+      "rejected": true
+    },
+    {
+      "witness": [
+        0
+      ],
+      "rejected": true
+    },
+    {
+      "witness": [
+        0,
+        999
+      ],
+      "rejected": true
+    },
+    {
+      "witness": [
+        0,
+        2
+      ],
+      "rejected": true
+    }
+  ],
+  "research_factor_positive": null,
+  "research_factor_positive_reason": "No global research factor or Gram-satisfying cover-bit assignment known."
+}
