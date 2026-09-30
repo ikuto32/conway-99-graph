@@ -7,7 +7,16 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [eleventh milestone](docs/RESEARCH_20260930_ELEVENTH_WAVE.md) records
+The latest [twelfth milestone](docs/RESEARCH_20260930_TWELFTH_WAVE.md) records
+126 claims, 124 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Universal triangle
+normalization and its arbitrary-core necessary encoding passed independent
+review. The separate six-prism encoding includes all column patterns for that
+fixed core. Both native pilots ended UNKNOWN; no factor or proof was obtained.
+Rational and modular witnesses establish feasibility only for three specified
+linear relaxations. Next: independently check coordinate relabelling reductions
+for both models. [Twelfth replay guide](docs/REPRODUCING_20260930_TWELFTH_WAVE.md).
+
+The [eleventh milestone](docs/RESEARCH_20260930_ELEVENTH_WAVE.md) records
 122 claims, 120 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. A verified 25-row partial
 factor was excluded from extension by eleven complete row proofs. Separate
 exact arguments exclude restricted prism designs; they do not exclude every

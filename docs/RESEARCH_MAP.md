@@ -4,6 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [twelfth milestone](RESEARCH_20260930_TWELFTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_TWELFTH_WAVE.md) cover universal triangle
+normalization, an arbitrary-core necessary encoding, the complete fixed
+six-prism column model, exact linear-relaxation witnesses and two UNKNOWN runs.
 The [eleventh milestone](RESEARCH_20260930_ELEVENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_ELEVENTH_WAVE.md) cover a verified 25-row
 partial factor, its exact fixed extension exclusion, restricted prism-design
