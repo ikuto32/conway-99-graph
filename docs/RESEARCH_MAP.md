@@ -4,6 +4,13 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [nineteenth milestone](RESEARCH_20260930_NINETEENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_NINETEENTH_WAVE.md) preserve ten checked
+claims: exact selected-phase exclusions, overlapping pattern reductions,
+matrix algebra and complete finite phase enumeration. The sampler stopped
+after three SAT projections and one UNKNOWN attempt. Missing learned traces
+are recorded separately; mathematical certificates remain checkable. No full
+factor or target resolution follows.
 The [eighteenth milestone](RESEARCH_20260930_EIGHTEENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_EIGHTEENTH_WAVE.md) preserve seven checked
 claims: direct MIP and parity encodings, two parity witnesses, an exact

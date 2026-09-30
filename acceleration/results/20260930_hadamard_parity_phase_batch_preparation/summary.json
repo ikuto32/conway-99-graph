@@ -1,0 +1,37 @@
+{
+  "schema": "HADAMARD_PARITY_PHASE_BATCH_SOURCE_PREPARATION_V1",
+  "status": "SOURCE_ONLY_PREPARATION_COMPLETE_PENDING_INDEPENDENT_CALIBRATION",
+  "timestamp": "2026-09-30T04:59:18+00:00",
+  "source_commit": "75243dc84ee6c37852a62f0935e45562094fe3ca",
+  "sources_sha256": {
+    "acceleration/theory_20260930_hadamard_general_f3_system.py": "77877e34ca6a6f73f98546d0221faef375e091e54ba4c9b4f8b8a2e23b0d0162",
+    "acceleration/theory_20260930_hadamard_parity_phase_batch.py": "9a3e0a717e5295881ef8b65bb6bc638c242d5abb2ea045b85f62b3e349bf96b5",
+    "acceleration/theory_20260930_hadamard_parity_phase_batch_spec.md": "ab01cc76cac92189cfc1879fbfb7b869bc303a58cd4165f8d200853cdf23c314"
+  },
+  "static_syntax_check": {
+    "method": "Python ast.parse on both raw source texts; neither project module imported or executed.",
+    "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B -c \"import ast,pathlib; names=['acceleration/theory_20260930_hadamard_general_f3_system.py','acceleration/theory_20260930_hadamard_parity_phase_batch.py']; [ast.parse(pathlib.Path(name).read_text(),filename=name) for name in names]; print('STATIC_AST_PARSE_PASS; no project source imported or executed')\"",
+    "environment": {"UV_PROJECT_ENVIRONMENT": "build/research-venv"},
+    "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+    "exit_code": 0,
+    "actual_stdout": "STATIC_AST_PARSE_PASS; no project source imported or executed"
+  },
+  "native_calls": 0,
+  "research_calls": 0,
+  "producer_phase_executions": 0,
+  "preflight_executions": 0,
+  "independent_approval": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "scope": "Prepared bounded sampling workflow, not an executed research result. General necessity is separately reviewed; this new implementation still needs independent calibration and parent engineering review.",
+  "required_gate_statuses": [
+    "INDEPENDENT_HADAMARD_PARITY_SUPPORT_CUT_ENCODING_PASS",
+    "INDEPENDENT_GENERAL_BALANCED_GF3_PHASE_NECESSITY_PASS",
+    "INDEPENDENT_HADAMARD_PARITY_PHASE_BATCH_OBJECT_CALIBRATION_PASS"
+  ],
+  "limitations": [
+    "At most 16 fresh SAT projections; the already checked second witness is blocked before case_00 and is not counted among these cases.",
+    "Full 20-selector blocking clauses are distinct-sampling bookkeeping. No shortened nogoods or automatic mathematical promotion.",
+    "The 180-second research allocation is cooperative, with explicit actual overrun reporting; trace archival is separate.",
+    "No complete factor, target graph, general nonexistence result, or target-wide coverage fraction is established."
+  ]
+}
