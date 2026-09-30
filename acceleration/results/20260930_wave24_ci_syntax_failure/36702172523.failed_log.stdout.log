@@ -1,0 +1,24 @@
+validators	Check root Python syntax without running experiments	﻿2026-09-30T10:25:44.6789964Z ##[group]Run python - <<'PY'
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6790287Z ^[[36;1mpython - <<'PY'^[[0m
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6790551Z ^[[36;1mfrom pathlib import Path^[[0m
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6790963Z ^[[36;1mfiles = sorted(Path('.').glob('*.py')) + sorted(Path('acceleration').glob('*.py'))^[[0m
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6791638Z ^[[36;1mfor path in files:^[[0m
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6791933Z ^[[36;1m    compile(path.read_bytes(), str(path), 'exec')^[[0m
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6792312Z ^[[36;1mprint(f'Compiled {len(files)} Python source files')^[[0m
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6792629Z ^[[36;1mPY^[[0m
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6862485Z shell: /usr/bin/bash -e {0}
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6862755Z env:
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6863027Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6863465Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6863902Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6864271Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6864705Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6865076Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:44.6865397Z ##[endgroup]
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:48.7293709Z Traceback (most recent call last):
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:48.7300042Z   File "<stdin>", line 4, in <module>
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:48.7300560Z   File "acceleration/theory_20260930_count_interval_frechet.py", line 21
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:48.7301125Z     n,m=sig['counts'][3*x+f],sig['counts'][3*y+g];lo=max(0,n+m-3);hi=min(n,m,1 if f==g else2);checked+=1
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:48.7302251Z                                                                              ^^^^^^^^^
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:48.7302633Z SyntaxError: expected 'else' after 'if' expression
+validators	Check root Python syntax without running experiments	2026-09-30T10:25:48.7390086Z ##[error]Process completed with exit code 1.
