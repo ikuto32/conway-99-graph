@@ -1,0 +1,364 @@
+{
+  "registration_chain": [
+    {
+      "name": "pilot_registration",
+      "before": 278,
+      "after": 281,
+      "summary_sha256": "f92d5aa51f655bc957ecfa51fede156ccdf9a9703c081252579f8014e60f37bd",
+      "source": "acceleration/register_20260930_twentyseventh_pilot_claims.py",
+      "new_ids": [
+        "C-FIXED-HADAMARD-NEXT-EXACT-EIGHT-LITERAL-GRAM-ENCODING",
+        "C-FIXED-HADAMARD-NEXT-EXACT-EIGHT-LITERAL-PROFILE-EXCLUSION",
+        "C-FIXED-HADAMARD-THREE-COUNT-PSD-KERNEL-OPTION-REDUNDANCY"
+      ]
+    },
+    {
+      "name": "psd_candidate_registration",
+      "before": 281,
+      "after": 282,
+      "summary_sha256": "18c1480ba066bfb4155ed837dc141fe08aebec35f9fab4f5f89ea7329e78e9e8",
+      "source": "acceleration/register_20260930_twentyseventh_psd_candidate.py",
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-SURVIVOR-PSD-SCREEN"
+      ]
+    },
+    {
+      "name": "campaign_gates_registration",
+      "before": 282,
+      "after": 284,
+      "summary_sha256": "e7d96df000952b2455c655ac98dada5f407dc1cc280d55f314c0f94df2ed5153",
+      "source": "acceleration/register_20260930_twentyseventh_campaign_gates.py",
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIRST12-GRAM-ENCODINGS",
+        "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIBRE-COVERAGE"
+      ]
+    },
+    {
+      "name": "psd_promotion",
+      "before": 284,
+      "after": 284,
+      "summary_sha256": "18d60efefeb65e1ca853170b22f477fb1e422fc5ef2dc5000d297b75f0031671",
+      "source": "acceleration/promote_20260930_twentyseventh_psd_claim.py",
+      "new_ids": []
+    },
+    {
+      "name": "first12_proof_registration",
+      "before": 284,
+      "after": 285,
+      "summary_sha256": "6d383ca55d167d085fac9f70628302dccfe4b482acc4c3c90a8c8fa289f27869",
+      "source": "acceleration/register_20260930_twentyseventh_first12_proofs.py",
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-LITERAL-PROFILE-EXCLUSIONS"
+      ]
+    },
+    {
+      "name": "inventory_registration",
+      "before": 285,
+      "after": 286,
+      "summary_sha256": "0084c2279267e6edb321445a1d6b087e41f2d15bcfdb140f818a38861e42f0fe",
+      "source": "acceleration/register_20260930_twentyseventh_inventory.py",
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-DOMAIN-INVENTORY"
+      ]
+    }
+  ],
+  "promotion": {
+    "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SURVIVOR-PSD-SCREEN",
+    "from_revision": 1,
+    "to_revision": 2,
+    "statement_unchanged": true,
+    "before_sha256": "d7c54c69bc4b629fa9617a48b69fde5a883b432159138aa65a78b522bb09cf41",
+    "after_sha256": "c1150d97d4b5a357a8943ce469c0d6766f24b2aefc51ded36137860f911f3d8f"
+  },
+  "claims": [
+    {
+      "id": "C-FIXED-HADAMARD-NEXT-EXACT-EIGHT-LITERAL-GRAM-ENCODING",
+      "revision": 1,
+      "statement": "The complete 9748-variable, 167416-clause CNF is satisfiable iff the fixed six-prism Hadamard support admits a binary 36 by 60 factor with full prescribed integer Gram, literal full-count digest a2a3d60e21811916cde9269f08221000990e8235629bcc67d880ae472b6a18f9 and within-triplicate column caps, modulo independent equal-support column permutations. All 2184 primary options are the complete initial count classes; auxiliary assignments are unique.",
+      "scope": {
+        "description": "One literal eight-exception profile selected by the frozen complete-block-survivor rule. Cross-group caps and residual D omitted; no other-profile exclusion or target automorphism.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "verification_dependency"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_next_lift/summary.json": "395a7396168bd0ec5faf1413f12b14d6e630d3c961723d1b68f0d6c07c96402e",
+        "acceleration/results/20260930_independent_review/exact_eight_next_lift/claim_binding.json": "8265c980596ff14aa73085b785274d75346a895ee59b0afd1af8c2a1cc6d4c80"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-NEXT-EXACT-EIGHT-LITERAL-PROFILE-EXCLUSION",
+      "revision": 1,
+      "statement": "No binary 36x60 factor on the frozen six-prism Hadamard support has the prescribed integer Gram, within-triple column caps, and literal eight-exception profile exact_eight_first_block_survivor_outside_three_historical_orbits (digest 40c141a31c059e2d413e99e8f20ccb8d149b25599139a64258c5259d9b649cb9), with exceptional groups 0, 1, 2, 5, 9, 10, 12, 14. The exact equivalent formula with 9,748 variables and 167,416 clauses is UNSAT by complete independently replayed DRAT proof.",
+      "scope": {
+        "description": "Only the literal exact_eight_first_block_survivor_outside_three_historical_orbits count profile on this fixed support; no orbit transfer, other profile or whole-support conclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-NEXT-EXACT-EIGHT-LITERAL-GRAM-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_next_lift_unsat/summary.json": "a21cd5fc95f1fb1dcd7eb849b620584fbde489cdcf4819e392ddf935d621c037",
+        "acceleration/results/20260930_independent_review/exact_eight_next_lift_unsat/claim_binding.json": "4cc9d7b6ac5e9b2b42eedfd4e38df4237764fa2cda9fa3fde83d9d689a5f9b66"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-THREE-COUNT-PSD-KERNEL-OPTION-REDUNDANCY",
+      "revision": 1,
+      "statement": "The triplicate residual Gram matrices of the first, second and third pinned count profiles all have the same14-dimensional kernel as the balanced-count baseline. Every vector in this kernel has constant projection on all90 balanced colour words of each of the20 supports; consequently the necessary real-SOS kernel test retains all6444 original local options (2184,2076,2184) and removes none.",
+      "scope": {
+        "description": "Three exact profiles have the balanced-baseline kernel; its local necessary projection test removes zero of6444 complete initial options. No arbitrary-profile kernel equality or factor/target feasibility follows.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-THREE-COUNT-PROFILES-PSD-NECESSITY-PASS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/triplicate_psd_kernel_options/summary.json": "8e1c37fd59bd3993f11f3faef3b514724a17759a208b2173401bbf1434d60f60",
+        "acceleration/results/20260930_independent_review/triplicate_psd_kernel_options/claim_binding.json": "ba7be68613d9bd3d83eb1cf7fd5f0049fe67f0e7feda5b53b76d1e53968d418c"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SURVIVOR-PSD-SCREEN",
+      "revision": 2,
+      "statement": "For every one of the792 canonical count tables in authenticated scalar/block survivor population, N[f*12+a,g]=counts[a][g][f] and fixedintegerG give R=3G-NN^T positive semidefinite overQ, with rank22.",
+      "scope": {
+        "description": "Complete finite PSD diagnostic on792 canonical exactly-eight count tables of the literal six-prism support; no simultaneous factor feasibility or exclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_exact_eight_psd_screen/summary_001.json": "7f60e486053bfe4b824b277691445e73ed3c468ab3ccdc4676db622b7d674207",
+        "acceleration/results/20260930_exact_eight_psd_screen/manifest.json": "48fd21f10efff49b28a5ff499b63ebb3aaa125fb3c46c3318574771cdf24a8d8",
+        "acceleration/results/20260930_exact_eight_psd_screen/attempt_001.json": "b0f2658986f4f014b5d87744c5e744de2cd6f2fc1a1aa6e3f3a5dc5d8ae5e93e",
+        "acceleration/results/20260930_independent_review/exact_eight_psd_screen/summary.json": "94f6313cbd0bdc6ddef5930a53bb09f22742abe6a3cfe42fccf0cd9416bf259a",
+        "acceleration/results/20260930_independent_review/exact_eight_psd_screen/claim_binding.json": "0b7a8c808badd90812291f835cdafb5991bec8d3d4ca845f853c8a96c032572e"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIRST12-GRAM-ENCODINGS",
+      "revision": 1,
+      "statement": "For each of the exact twelve first-batch cases in the authenticated all792 manifest, its complete CNF is satisfiable iff the fixed six-prism Hadamard support admits a binary36x60 factor with that literal count table, full prescribed integer Gram and within-triplicate column caps, modulo independent equal-support column relabelling. Every original local option is retained and auxiliary assignments are unique.",
+      "scope": {
+        "description": "Exactly twelve literal formulas. The complete792 manifest determines case identities and selection; this gate does not approve unbuilt formulas, supply factors, exclude any case or establish fibre-orbit coverage. Cross-group caps and D are omitted.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "verification_dependency"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_campaign/summary.json": "e334293416c1048cf3a6e7c4bd8242892dc84e7f7d773bd388b506fdde77ea27",
+        "acceleration/results/20260930_independent_review/exact_eight_campaign/claim_binding.json": "24340b872988cf3bf2840db0fea31d1f1a37f870e83582552e29fd63cccf7c26"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIBRE-COVERAGE",
+      "revision": 1,
+      "statement": "The frozen all792 campaign manifest is exactly the complete canonical count-table population surviving the authenticated scalar and separate-block screens, without historical subtraction. Explicit global S3 fibre relabellings give4752 distinct labelled census tables and bijections of every complete initial local domain. With equal-support column re-normalization they preserve the fixed core, prescribed Gram and conditional residual completion. This supplies conditional transport of future separately verified literal results, not an exclusion or approval of any formula.",
+      "scope": {
+        "description": "Literal six-prism Hadamard support, exactly-eight count population with within-triplicate caps; complete792-to4752 count/domain coverage and conditional full-factor/completion relabelling only.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-COMPLETE-EIGHT-COUNT-PROFILE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_campaign_coverage_v2/summary.json": "f6b468e80410caaedbbb88ce02cef79e0a693168df0eb9134d8d4d8e62b96223",
+        "acceleration/results/20260930_independent_review/exact_eight_campaign_coverage_v2/claim_binding.json": "8ff5ec8a91cada98a03c2ce63f192aef0e1d63ad8be2861c1c5fc164265d006d"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-LITERAL-PROFILE-EXCLUSIONS",
+      "revision": 1,
+      "statement": "Each of the twelve literal count-profile formulas in the independently authenticated first batch is UNSAT by complete independently replayed DRAT proof. Consequently no binary36x60 factor on the fixed six-prism Hadamard support has any of those literal count tables, full prescribed integer Gram and within-triplicate column caps.",
+      "scope": {
+        "description": "Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIRST12-GRAM-ENCODINGS",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_first12_proofs/summary.json": "a47da7d0e2e70d61c51679477de5257c676a201e59cc8977b250ed75e8c05ef9",
+        "acceleration/results/20260930_independent_review/exact_eight_first12_proofs/claim_binding.json": "c45d918208521189f2c9b4dba5c05c080513e8e89a41fd60cc49d6698eeeec1b"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-DOMAIN-INVENTORY",
+      "revision": 1,
+      "statement": "The authenticated complete792 canonical exactly-eight count tables have the complete initial local domains recorded in the frozen inventory, with16 selector-size classes S from1978 to2184. For the frozen weighted-threshold recipe their formula dimensions are V=2S+5380 and C=49S+60400; the12 saved campaign formulas and four named historical builds match the independently derived dimensions and complete initial domains.",
+      "scope": {
+        "description": "Finite complete domain inventory and conditional recipe dimensions on the literal fixed support; actual saved formula measurements are distinguished from unbuilt estimates. No performance or feasibility claim.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIBRE-COVERAGE",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_campaign_inventory/summary.json": "555ef430f8a84b8b995c98566decf2c6cb92f9e8de6db1645955c0e48dd0f9ea",
+        "acceleration/results/20260930_independent_review/exact_eight_campaign_inventory/claim_binding.json": "da20857a4141a31900fdb6622fdacd1a87715734889eaa59408ddb46ae9a6bae"
+      },
+      "scientific_reverification": false
+    }
+  ],
+  "previous_publication_only_artifacts": [
+    "twentysixth-profile-0-evidence0",
+    "twentysixth-profile-0-evidence1",
+    "twentysixth-profile-1-evidence0",
+    "twentysixth-profile-1-evidence1",
+    "twentysixth-profile-2-evidence0",
+    "twentysixth-profile-2-evidence1",
+    "twentysixth-upper-0-evidence0",
+    "twentysixth-upper-0-evidence1",
+    "twentysixth-block-0-evidence0",
+    "twentysixth-block-0-evidence1",
+    "twentysixth-eight-reduction-0-evidence0",
+    "twentysixth-eight-reduction-0-evidence1",
+    "twentysixth-census-algebra-0-evidence0",
+    "twentysixth-census-algebra-0-evidence1",
+    "twentysixth-census-algebra-1-evidence0",
+    "twentysixth-census-algebra-1-evidence1",
+    "twentysixth-psd-0-evidence0",
+    "twentysixth-psd-0-evidence1",
+    "twentysixth-scalar-0-evidence0",
+    "twentysixth-scalar-0-evidence1",
+    "twentysixth-block-screen-0-evidence0",
+    "twentysixth-block-screen-0-evidence1"
+  ],
+  "preserved_failures": [
+    {
+      "path": "acceleration/results/20260930_independent_review/exact_eight_campaign_coverage/failure.json",
+      "sha256": "e0476e491a81e9948fdb10de2c4f26e2061ea4c7c431b8f325de0ca001a995a4",
+      "error": "ValueError('complete raw local catalogue')"
+    },
+    {
+      "path": "acceleration/results/20260930_exact_eight_population_inventory/failure.json",
+      "sha256": "e482e4e80e8f4c440918839e24ca18fb8ee5dedd491cbdba077178f46994896d",
+      "error": "ValueError('all31110 local triples')"
+    },
+    {
+      "path": "acceleration/results/20260930_exact_eight_campaign_native_preparation/failure.json",
+      "sha256": "4160d4f76d94c55e93498f02ad6a4dd4970eed6e539246012481c697e4cc0f7e",
+      "error": "AssertionError at isolated outcome-parser expectation in prepare_20260930_exact_eight_campaign_native.py line16"
+    },
+    {
+      "path": "acceleration/results/20260930_exact_eight_campaign_native_preparation/correction_setup_failure.json",
+      "sha256": "b142ba277f0bf7203691bfff7fa698424383b10f1b0105618ffdee0c7dcb9f4f",
+      "error": "UnicodeDecodeError: cp932 cannot decode UTF-8 spec at position40"
+    }
+  ],
+  "controls_rejected": [
+    "claim count",
+    "status",
+    "target",
+    "support exclusion",
+    "double-count pilot",
+    "missed overlap",
+    "PSD population",
+    "PSD rank",
+    "inventory actuals",
+    "PSD promotion revision",
+    "claim statement",
+    "claim dependency",
+    "claim revision",
+    "report all792 kernel extension",
+    "report thirteen instances"
+  ],
+  "process_observation_scope": "Saved timestamp only; no current process assertion.",
+  "catalog_approval": false
+}

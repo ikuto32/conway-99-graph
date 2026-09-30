@@ -21,7 +21,15 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [corrected twenty-sixth milestone](docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+See the latest [twenty-seventh milestone](docs/RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md).
+Eight new scoped claims are verified. All twelve first-batch literal Gram
+instances have complete independently checked UNSAT proofs; one repeats the
+preceding single pilot. All 792 count survivors pass exact PSD screening at
+rank 22, which excludes none. Coverage and domain inventories retain their
+conditional scopes. The checkpoint freezes 286 claims; no whole-support or
+target resolution follows. Next32 work and later union arguments are separate.
+See the previous [corrected twenty-sixth milestone](docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
 and [replay guide](docs/REPRODUCING_20260930_TWENTYSIXTH_WAVE.md).
 Eleven verified additions include the complete fixed-support exactly-eight
 count census: 1,548 fibre classes, 756 scalar exclusions and 792 survivors.

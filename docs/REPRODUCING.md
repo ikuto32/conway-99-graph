@@ -2,7 +2,13 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [corrected twenty-sixth milestone](RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+For current work, read the [twenty-seventh milestone](RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+and [twenty-seventh replay guide](REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md).
+The guide separates complete literal proofs, the complete792 exact PSD screen,
+fibre coverage, domains and conditional formula-size estimates. Fourteen large
+originals have exact gzip recovery; ten frozen audits have an actual fresh replay.
+Next32 and later union work are outside this checkpoint.
+Also read the [corrected twenty-sixth milestone](RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
 and [twenty-sixth replay guide](REPRODUCING_20260930_TWENTYSIXTH_WAVE.md).
 The guide separates the complete count census and necessary screens, one
 literal-profile proof replay, encoding checks and algebraic criteria.

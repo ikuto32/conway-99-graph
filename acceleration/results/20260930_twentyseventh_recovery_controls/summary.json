@@ -1,0 +1,95 @@
+{
+  "status": "TWENTYSEVENTH_RECOVERY_ENGINEERING_CONTROLS_PASS",
+  "inputs_sha256": {
+    "acceleration/recover_20260930_twentyseventh_raw_artifacts.py": "6d0721e1c25411e0d661e782fff19719a9a887bea8e019f5ec55536f373c4183",
+    "acceleration/results/20260930_twentyseventh_raw_recovery/manifest.json": "d6d5e3933cd8294b4f4119c6ba495780a77cf19833ecb056598a863bbef11958",
+    "acceleration/check_20260930_twentyseventh_recovery_controls.py": "14b674d45279605c3b1b4a16120979574b9c3236a52145c17285eadd35b904ff"
+  },
+  "fresh_recovery_receipt": {
+    "path": "acceleration/results/20260930_twentyseventh_recovery_controls/fresh_recovery.json",
+    "sha256": "c848dc35d396721d620a24d358f8e2be892199fe49cbf8c83a6294c1cfd5cd54"
+  },
+  "controls": [
+    {
+      "case": "manifest_hash",
+      "rejected": true,
+      "exit_code": 1,
+      "fixture_path": "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/manifest_hash.fixture",
+      "fixture_sha256": "63b2d465dde3eaceaa82d4f283c9316d7e96e275d63e9e8ae81bb4a7d23978d6",
+      "no_success_receipt": true
+    },
+    {
+      "case": "raw_length",
+      "rejected": true,
+      "exit_code": 1,
+      "fixture_path": "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/raw_length.fixture",
+      "fixture_sha256": "38a2155c6c09b00ac6fa46ad1f082413be63fb78861885d4174f19701e80b152",
+      "no_success_receipt": true
+    },
+    {
+      "case": "part_hash",
+      "rejected": true,
+      "exit_code": 1,
+      "fixture_path": "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_hash.fixture",
+      "fixture_sha256": "b4c7ff394bd49e2c7043462bb0dd263f03d02991336e4ebd11ad5df94bd35344",
+      "no_success_receipt": true
+    },
+    {
+      "case": "part_gap",
+      "rejected": true,
+      "exit_code": 1,
+      "fixture_path": "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_gap.fixture",
+      "fixture_sha256": "582fe701702d78a1eca46b4054d6cfcb9fb210f9520985f0bedf6aedc213d32f",
+      "no_success_receipt": true
+    },
+    {
+      "case": "duplicate_part",
+      "rejected": true,
+      "exit_code": 1,
+      "fixture_path": "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/duplicate_part.fixture",
+      "fixture_sha256": "2370cc6097ad574592c317715a8e3cfa6efe124adbef68ad7342e18a622590d8",
+      "no_success_receipt": true
+    },
+    {
+      "case": "path_escape",
+      "rejected": true,
+      "exit_code": 1,
+      "fixture_path": "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/path_escape.fixture",
+      "fixture_sha256": "ecdb0f104f94338f57a3962bb7d67d9a42faeb2292f3e52cd57b937eef3879ec",
+      "no_success_receipt": true
+    },
+    {
+      "case": "existing_raw_conflict",
+      "rejected": true,
+      "exit_code": 1,
+      "fixture_path": "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/existing_raw_conflict.fixture",
+      "fixture_sha256": "63b2d465dde3eaceaa82d4f283c9316d7e96e275d63e9e8ae81bb4a7d23978d6",
+      "no_success_receipt": true
+    }
+  ],
+  "outputs_sha256": {
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/duplicate_part.fixture": "2370cc6097ad574592c317715a8e3cfa6efe124adbef68ad7342e18a622590d8",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/duplicate_part.stderr.log": "a0034f0998a0d2c43fc1243c6ea27d7b5dcde1cc793ef40b989ead94a3c4c5fb",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/duplicate_part.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/existing_raw_conflict.fixture": "63b2d465dde3eaceaa82d4f283c9316d7e96e275d63e9e8ae81bb4a7d23978d6",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/existing_raw_conflict.stderr.log": "2d633daee42cea15dc32e05f4d7aa6dec0013451be50a0e0bb9bf88bc139f9b8",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/existing_raw_conflict.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/manifest_hash.fixture": "63b2d465dde3eaceaa82d4f283c9316d7e96e275d63e9e8ae81bb4a7d23978d6",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/manifest_hash.stderr.log": "3c4c1dea38f34b90e775e11bfbd29e950582afc4999f118cc9ce991923db25d1",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/manifest_hash.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_gap.fixture": "582fe701702d78a1eca46b4054d6cfcb9fb210f9520985f0bedf6aedc213d32f",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_gap.stderr.log": "a0034f0998a0d2c43fc1243c6ea27d7b5dcde1cc793ef40b989ead94a3c4c5fb",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_gap.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_hash.fixture": "b4c7ff394bd49e2c7043462bb0dd263f03d02991336e4ebd11ad5df94bd35344",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_hash.stderr.log": "a1fbd811c1ec61950910b00e6e2e9c8f3047d74b508be4ec085a991fed923d12",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/part_hash.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/path_escape.fixture": "ecdb0f104f94338f57a3962bb7d67d9a42faeb2292f3e52cd57b937eef3879ec",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/path_escape.stderr.log": "b398857424c3d0531d42b3ad69aaf0e74c456e5c1a3d3e7480ab4f4d8078317b",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/path_escape.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/raw_length.fixture": "38a2155c6c09b00ac6fa46ad1f082413be63fb78861885d4174f19701e80b152",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/raw_length.stderr.log": "ada48d25691b02d307c710e919ba9d176a664b4387d0874db8127bfdf7819dd6",
+    "acceleration/results/20260930_twentyseventh_recovery_controls/corruptions/raw_length.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Seven malformed manifest/part/path/existing-file controls plus complete fresh fourteen-artifact restoration. No mathematical promotion.",
+  "native_calls": 0
+}

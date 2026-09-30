@@ -1,0 +1,38 @@
+# Twenty-seventh research milestone, 2026-09-30
+
+Eight scoped claims are newly VERIFIED/CLEAR since the [corrected twenty-sixth report](RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md). The first12 literal campaign instances have complete independently replayed UNSAT proofs. All792 canonical count survivors pass the exact PSD test, so that test supplies no further exclusion.
+
+**As of:** 2026-09-30T13:39:40.963401+00:00; source commit a800835459a99a3d062b75292fca309e51bbcd30; [checkpoint](../acceleration/results/20260930_resume/twentyseventh_milestone_checkpoint.json), [frozen ledger](../acceleration/results/20260930_resume/claims_at_twentyseventh_milestone.yaml). Actual commands, environment and source hashes remain in each run record.
+
+**Verdict:** target resolution UNKNOWN. This repository has no independently validated99-vertex target graph or general nonexistence proof. No target-resolution artifact is under external review. This is not a worldwide literature verdict. PR3 remains draft and unmerged.
+
+**Verified changes:** PSD screening was first registered CANDIDATE at revision1 and promoted only after independent checking at revision2. The seven other new claims are revision1.
+
+| Claim | Exact scope and evidence |
+| --- | --- |
+| C-FIXED-HADAMARD-NEXT-EXACT-EIGHT-LITERAL-GRAM-ENCODING r1 | One literal eight-exception profile selected by the frozen complete-block-survivor rule. Cross-group caps and residual D omitted; no other-profile exclusion or target automorphism. [Evidence](../acceleration/results/20260930_independent_review/exact_eight_next_lift/summary.json). |
+| C-FIXED-HADAMARD-NEXT-EXACT-EIGHT-LITERAL-PROFILE-EXCLUSION r1 | Only the literal exact_eight_first_block_survivor_outside_three_historical_orbits count profile on this fixed support; no orbit transfer, other profile or whole-support conclusion. [Evidence](../acceleration/results/20260930_independent_review/exact_eight_next_lift_unsat/summary.json). |
+| C-FIXED-HADAMARD-THREE-COUNT-PSD-KERNEL-OPTION-REDUNDANCY r1 | Three exact profiles have the balanced-baseline kernel; its local necessary projection test removes zero of6444 complete initial options. No arbitrary-profile kernel equality or factor/target feasibility follows. [Evidence](../acceleration/results/20260930_independent_review/triplicate_psd_kernel_options/summary.json). |
+| C-FIXED-HADAMARD-EXACT-EIGHT-SURVIVOR-PSD-SCREEN r2 | Complete finite PSD diagnostic on792 canonical exactly-eight count tables of the literal six-prism support; no simultaneous factor feasibility or exclusion. [Evidence](../acceleration/results/20260930_exact_eight_psd_screen/summary_001.json). |
+| C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIRST12-GRAM-ENCODINGS r1 | Exactly twelve literal formulas. The complete792 manifest determines case identities and selection; this gate does not approve unbuilt formulas, supply factors, exclude any case or establish fibre-orbit coverage. Cross-group caps and D are omitted. [Evidence](../acceleration/results/20260930_independent_review/exact_eight_campaign/summary.json). |
+| C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIBRE-COVERAGE r1 | Literal six-prism Hadamard support, exactly-eight count population with within-triplicate caps; complete792-to4752 count/domain coverage and conditional full-factor/completion relabelling only. [Evidence](../acceleration/results/20260930_independent_review/exact_eight_campaign_coverage_v2/summary.json). |
+| C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-LITERAL-PROFILE-EXCLUSIONS r1 | Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate. [Evidence](../acceleration/results/20260930_independent_review/exact_eight_first12_proofs/summary.json). |
+| C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-DOMAIN-INVENTORY r1 | Finite complete domain inventory and conditional recipe dimensions on the literal fixed support; actual saved formula measurements are distinguished from unbuilt estimates. No performance or feasibility claim. [Evidence](../acceleration/results/20260930_independent_review/exact_eight_campaign_inventory/summary.json). |
+
+**Work completed:** the first12 campaign selected12 distinct canonical count tables and completed12 native attempts:12 UNSAT, zero SAT, UNKNOWN or errors. All56,815,018 proof bytes are retained and all12 complete proofs passed independent replay. Case0 repeats the preceding single literal pilot, yielding11 additional distinct exclusions beyond that pilot. No historical orbit exclusions are added without a checked union. The preceding single pilot and the batch overlap and must not be summed as13 distinct cases.
+
+Independent exact PSD checking covers all792 canonical scalar/block survivors. Every matrix R=3G-NN^T is positive semidefinite of rank22 over the rationals; no profile is excluded and no factor is established. This expands the previous three-profile PSD test to the complete792 survivor population. The separately checked kernel-option redundancy concerns only three historical profiles: it removes zero of their6,444 initial options and is not promoted to all792 profiles.
+
+The full campaign coverage audit checks792 canonical tables and4,752 distinct global-fibre images, including complete local-domain transport. It supplies a conditional relabelling argument, not an exclusion by itself. The independent inventory checks15,840 initial domains across all792 profiles and identifies16 selector-size classes. Formula dimensions for unbuilt cases are conditional recipe estimates. The12 saved campaign formulas and four historical controls have actual measured dimensions; these populations overlap other experiments and are not added as new scientific cases.
+
+**Coverage:**286 ledger claims:281 VERIFIED/CLEAR, three CANDIDATE/CLEAR, two REFUTED/CLEAR. Overall search coverage: UNKNOWN; no validated denominator. No whole-support or unrestricted exclusion was added.
+
+**Best result:** the prior fixed-support lower bound of eight unbalanced groups is unchanged. Twelve literal canonical cases in the frozen792-case Gram campaign are excluded. This is a count of instances, not equal fractions of graphs, difficulty or time remaining.
+
+**Problems:** PSD positivity and the three-profile kernel test provide no additional obstruction. Initial inventory and fibre-coverage checker preparations omitted the local Gram bound in a reconstructed catalogue; both failed before approval. Their original sources/failures remain, and fresh corrected versions use the full predicate and reject cap-only extras. A native driver control exposed a status-label problem; the failed preparation, correction setup failure and fresh v2 are preserved. No failed attempt is a nonexistence proof. Earlier unavailable artifacts and privacy omissions remain as previously recorded.
+
+**Execution:** the single pilot, first12 batch and all audits counted here completed. Targeted native observation at 2026-09-30T13:39:40.981393+00:00: NO_CADICAL_PROCESS_OBSERVED. Next32 preparation and the first12 orbit-union audit are later-wave work, outside these counts. This milestone does not stop research.
+
+**Next experiment:** Build and independently reconstruct the next32 explicitly selected unresolved literal Gram instances, then run the gated bounded native batch and independently check every outcome.
+
+**References:** [source commit](https://github.com/ikuto32/conway-99-graph/commit/a800835459a99a3d062b75292fca309e51bbcd30), [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3). Evidence links above lead to full reports and bound artifacts; immutable publication and replay instructions follow packaging.

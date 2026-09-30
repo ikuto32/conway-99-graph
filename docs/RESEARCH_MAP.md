@@ -4,7 +4,14 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The [corrected twenty-sixth milestone](RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+The latest [twenty-seventh milestone](RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+and [replay guide](REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md) preserve eight
+verified additions. Twelve literal campaign instances have complete checked
+UNSAT proofs, with one overlapping the preceding pilot. All 792 canonical
+survivors pass exact PSD screening at rank 22; this excludes none. The domain
+inventory and fibre coverage are complete within their fixed-support scopes.
+No whole-support or unrestricted target resolution follows.
+The previous [corrected twenty-sixth milestone](RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
 and [replay guide](REPRODUCING_20260930_TWENTYSIXTH_WAVE.md) preserve eleven
 verified additions. The complete exactly-eight count census on the literal
 support has 1,548 fibre classes; scalar bounds exclude 756 and all 792 survivors
