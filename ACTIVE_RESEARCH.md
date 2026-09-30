@@ -7,7 +7,22 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-eighth milestone](docs/RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+The latest [twenty-ninth milestone](docs/RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+freezes 300 claims: 293 VERIFIED/CLEAR, three CANDIDATE/CLEAR and four REFUTED/CLEAR.
+Its [replay guide](docs/REPRODUCING_20261001_TWENTYNINTH_WAVE.md) records exact
+raw recovery and the eight independent audit command interfaces.
+Six new verified claims include two 64-case formula batches and their 128 complete
+proof replays, 16 GF(3) affine witnesses and 792 uniform-mixture counterexamples.
+The checked disjoint literal union contains 188 of the frozen 792 cases;
+604 remain unresolved. The two algebraic diagnostics add no exclusions, and
+the checked labelled-image union remains limited to the earlier first 12 cases.
+Next: evaluate the explicitly allocated batch03 through independent selection,
+encoding, object and proof gates. Its work is outside this frozen checkpoint.
+No whole-support or unrestricted resolution follows.
+Overall search coverage: UNKNOWN; no validated denominator.
+This file is not a live process observation and does not stop resumed work.
+
+The previous [twenty-eighth milestone](docs/RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
 freezes294 claims:287 VERIFIED/CLEAR,3 CANDIDATE/CLEAR and4 REFUTED/CLEAR.
 Six new verified claims include exact next32 and sizeclass16 formulas and their
 48 complete proof replays, a first12-only72-image union and the common-kernel

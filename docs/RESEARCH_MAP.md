@@ -4,7 +4,15 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The latest [twenty-eighth milestone](RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+The latest [twenty-ninth milestone](RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+and [replay guide](REPRODUCING_20261001_TWENTYNINTH_WAVE.md) preserve six new
+verified claims. Two 64-case batches add 128 complete proof
+replays, giving 188 distinct literal exclusions and 604 unresolved cases in the
+frozen 792-case campaign. Separate checks establish GF(3) affine witnesses for
+16 profiles and uniform-mixture counterexamples for all 792; neither adds an
+integral exclusion. The ledger cutoff is 300 claims. Batch03 and later work are
+outside this checkpoint. No whole-support or target resolution follows.
+The previous [twenty-eighth milestone](RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
 and [replay guide](REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md) preserve six new
 verified claims and two unused-launcher refutations. Complete next32 and
 sizeclass16 proof replays bring the literal792-case campaign to60 excluded

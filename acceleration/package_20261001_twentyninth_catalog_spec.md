@@ -1,0 +1,5 @@
+# Wave29 explicit evidence closure
+
+Consume the exact candidate inventory, frozen300-claim ledger and normalized raw recovery manifest through explicit CLI SHA256s. Require the two continuous registration transitions with six new VERIFIED/CLEAR claims and unchanged prior records. Include only inventory paths and explicit metadata supplements; the reproduction guide is supplemental after recovery is frozen. Exclude protected paths and batch03/later work.
+
+Check every reachable recorded identity, complete compressed recovery byte stream and Git filter byte identity. Preserve historical CLAIMS.yaml identities by exact immutable before/after snapshots only for declared registration/preparation origins, recording every alias; do not rewrite original receipts. The current ledger identity resolves to the frozen milestone snapshot. Unknown identities fail. Public research files are at most10MiB; only explicitly named metadata wrappers may reach32MiB, with references split into deterministic gzip parts of25000 records. No native search, ledger/index edit or mathematical approval. Independent publication review is still required before staging.

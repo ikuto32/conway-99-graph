@@ -2,7 +2,14 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [twenty-eighth milestone](RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+For current work, read the [twenty-ninth milestone](RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+and [replay guide](REPRODUCING_20261001_TWENTYNINTH_WAVE.md).
+Its [authenticated replay plan](../acceleration/results/20261001_resume/twentyninth_replay_plan.json)
+derives eight exact audit commands: encoding, object calibration and complete
+proof replay for each of two 64-case batches, plus the GF(3) witness and uniform
+counterexample checks. The original audits completed successfully; publication
+preparation does not repeat those mathematical runs. Batch03 is outside this cutoff.
+Also read the [twenty-eighth milestone](RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
 and [twenty-eighth replay guide](REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md).
 The guide separates48 new literal complete proofs, the first12-only image union,
 the complete792 kernel diagnostic and two source-scoped launcher refutations.
