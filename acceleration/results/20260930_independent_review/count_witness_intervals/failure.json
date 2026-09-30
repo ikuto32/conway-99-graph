@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-09-30T09:22:26.614693+00:00",
+  "source_sha256": "b50d4ca8d78ba521d698217255a18345cc08481c5b8b5bbc80736ee96e2706be",
+  "observed_error": "KeyError: 'minimum_witnesses' at selected_local_extrema comparison",
+  "actual_outcome": "CHECKER_FAILED_AFTER_COMPLETE540_RECORD_COMPARISON",
+  "reason": "Selected class membership/extrema artifact contains minimum and maximum arrays only; attaining witnesses already compared in all540_intervals.json.",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    ".uv-cache-20260917",
+    "python",
+    "-B",
+    "acceleration\\audit_20260930_count_witness_intervals.py",
+    "--out",
+    "acceleration\\results\\20260930_independent_review\\count_witness_intervals"
+  ],
+  "correction": "New v2 compares minimum/maximum fields present in selected artifact; original source preserved.",
+  "mathematical_refutation": false
+}

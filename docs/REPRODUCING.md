@@ -2,7 +2,11 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [twenty-third milestone](RESEARCH_20260930_TWENTYTHIRD_WAVE.md)
+For current work, read the [twenty-fourth milestone](RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
+and [twenty-fourth replay guide](REPRODUCING_20260930_TWENTYFOURTH_WAVE.md).
+The latter binds 443 raw artifacts to their compressed public recovery streams
+and separates artifact recovery, proof replay, encoding and coverage checks.
+Also read the [twenty-third milestone](RESEARCH_20260930_TWENTYTHIRD_WAVE.md)
 and [corrected twenty-third replay guide](REPRODUCING_20260930_TWENTYTHIRD_WAVE_V2.md).
 The preserved initial guide has two documented CLI omissions; use the corrected version.
 Also read the [twenty-second milestone](RESEARCH_20260930_TWENTYSECOND_WAVE.md)

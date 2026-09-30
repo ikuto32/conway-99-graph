@@ -4,7 +4,14 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The [twenty-third milestone](RESEARCH_20260930_TWENTYTHIRD_WAVE.md) and
+The [twenty-fourth milestone](RESEARCH_20260930_TWENTYFOURTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_TWENTYFOURTH_WAVE.md) preserve eighteen
+verified additions and one refuted formula. Complete seven-profile proof
+coverage raises the fixed-support, full-Gram-plus-column-cap lower bound to
+eight unbalanced groups. Count and interval witnesses, separate block witnesses
+and affine consistency do not establish a factor. No whole-support or target
+resolution follows.
+The previous [twenty-third milestone](RESEARCH_20260930_TWENTYTHIRD_WAVE.md) and
 [corrected replay guide](REPRODUCING_20260930_TWENTYTHIRD_WAVE_V2.md) preserve
 thirteen checked claims, 55 complete representative proofs and exact
 six-exception coverage. The literal fixed-support Gram-plus-column-cap family

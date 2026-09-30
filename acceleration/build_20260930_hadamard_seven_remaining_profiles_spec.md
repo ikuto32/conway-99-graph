@@ -1,0 +1,7 @@
+# Bounded remaining215 build launcher
+
+Use the exact selection, limits and scope frozen by `select_20260930_hadamard_seven_remaining_profiles_spec.md`. This launcher is adapted from the preserved remaining54 six-profile build launcher, with a new parameterized seven-profile child producer and a distinct output prefix. It executes no SAT solver. It creates one fresh subprocess per selected literal profile and performs its own complete gzip/hash/output identity check before recording a completed formula.
+
+Single invocation: 180 wall seconds including setup, minimum five seconds remaining to launch another child, child timeout equals remaining wall allocation, 3GiB host reserve, zero automatic retries/resumes. The timeout can leave an incomplete child directory; preserve it and do not count it as a completed formula. Checkpoints are immutable increasing completed prefixes, retaining all attempt receipts. An explicit future resume requires the precise checkpoint SHA256 and unchanged sources, selection and limits. Every prior completed result is revalidated first; any partial failed child remains in its old invocation directory.
+
+The result is only a candidate collection of equivalent literal-profile encodings; it is not a native outcome, proof, whole-support exclusion or target claim. Independent full encoding/selection and decoded-object gates are required before any later research solve. Raw models remain retained with deterministic public-size gzip companions. Existing sources/results are never modified.

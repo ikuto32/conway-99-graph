@@ -1,0 +1,7 @@
+# Wave24 catalog v2: exact path-resolution cache
+
+This separate source preserves the full frozen wave24 catalog protocol and explicit cohort of the v1 source/spec. V1 and its first preparation outputs remain unchanged. No mathematical criterion, package recipe, reference ordering, chunk serialization, file-size policy, ledger expectation, hash check, private omission or publication boundary changes.
+
+The sole algorithmic change caches a successful reference resolution only when the normalized resolved path equals the original repository-relative name and the reference is not an archive reference. Such names always resolve through ROOT/name, independent of the referring file. Ambiguous short names and archived paths still use the original resolver. Every reference retains its original hash check and original origin record; all cached file bytes are rehashed at the end. The cache avoids millions of identical filesystem existence checks. It does not approve missing or altered files.
+
+The v2 source and this spec are explicitly added to FILES. Final invocation must additionally name the completed restorer, receipt, replay guide, checkpoint/report and entry documents. No v2 catalog execution before those inputs are frozen. The v1 source is still selected, and any v1 failure or corrections must be preserved as explicit extra artifacts. V2 writes only its fresh authorized output directory, never the v1 preparation directory.
