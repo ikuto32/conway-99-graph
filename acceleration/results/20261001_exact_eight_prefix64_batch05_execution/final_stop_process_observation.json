@@ -1,0 +1,30 @@
+{
+  "timestamp_start_utc": "2026-09-30T17:29:37.3832578Z",
+  "timestamp_end_utc": "2026-09-30T17:29:40.8016942Z",
+  "purpose": "Read-only final user-stop process observation; no solver launch",
+  "wsl_command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/ps",
+    "-C",
+    "cadical,drat-trim",
+    "-o",
+    "pid,ppid,comm,pcpu,rss,args"
+  ],
+  "wsl_actual_exit_code": 1,
+  "wsl_stdout_sha256": "266e9b4bf5552ca62bca2570eeae80ae7ce23b8a831e8513c3aaa3e1f7c4840f",
+  "wsl_stderr_sha256": "dbaa9329a60b031e02513d5a9b2cc3c0efbc7656c21ef5c6ff54198f1a451d98",
+  "windows_query": "Name='python.exe' OR Name='pythonw.exe' OR Name='uv.exe'",
+  "windows_commandline_match_regex": "(?:native_20260930_exact_eight_explicit_batch|run_20260930_exact_eight_four_builds_v2|build_20260930_exact_eight_explicit_batch_v2|select_20260930_exact_eight_prefix64|continue_20261001_exact_eight_batch04|audit_20260930_exact_eight_explicit_batch_v3|audit_20261001_exact_eight_explicit_batch_v4|audit_20260930_exact_eight_explicit_batch_proofs_v2)\\.py",
+  "matching_windows_processes": [],
+  "own_active_exec_sessions": [],
+  "structural_terminal_session": {
+    "id": 19178,
+    "exit_code": 0,
+    "report": "Peer reported no remaining active exec session"
+  },
+  "termination_actions": [],
+  "scope": "Targeted observation only; completed builders already have reaped and Job-active-zero receipts."
+}

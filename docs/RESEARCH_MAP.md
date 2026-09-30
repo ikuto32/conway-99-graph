@@ -1,10 +1,17 @@
 # 研究資料の案内
 
+**Current entry point: [user stop, 2026-10-01 JST](STOP_20261001_EIGHT_COORDINATE.md).**
+Research is stopped; no automatic resume. The ledger has 308 claims, including
+301 VERIFIED/CLEAR. The fixed 792-case campaign has 316 checked exclusions and
+476 unresolved cases. Batch05 is encoding-checked only, with no solver attempt.
+The target remains UNKNOWN. The new complete evidence package is LOCAL_ONLY.
+Earlier continuation statements below are historical and do not authorize work.
+
 2026-09-30 JST: the user explicitly resumed research on
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The latest [twenty-ninth milestone](RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+The previous [twenty-ninth milestone](RESEARCH_20261001_TWENTYNINTH_WAVE.md)
 and [replay guide](REPRODUCING_20261001_TWENTYNINTH_WAVE.md) preserve six new
 verified claims. Two 64-case batches add 128 complete proof
 replays, giving 188 distinct literal exclusions and 604 unresolved cases in the
