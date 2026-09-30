@@ -1,0 +1,3 @@
+# Source-only v3 registrar assessment
+
+Freeze source/spec before bounded read-only review. Authenticate exact v2/v3 and prior findings; compare complete module AST after replacing only the outer failure-handler body with a marker. Verify the actual observed-hash classifier and recovery-required expression as AST, without evaluating or importing any registrar code. Independently check all16 before/after/other/unavailable and flag decision states and three malformed classifier alternatives. Preserve no-execution scope and pending04/05 prerequisites. Do not mutate ledger/Git or approve mathematics. Single-writer and local atomic-replace semantics remain trusted; no power-loss or universal failure-delivery guarantee.

@@ -1,4 +1,23 @@
-# Resumed by user — 2026-09-30 JST
+# Stopped by user — 2026-10-01 JST
+
+**Research is stopped. A new explicit user instruction is required to resume.**
+Read [the current stop/restart record](docs/STOP_20261001_EIGHT_COORDINATE.md)
+and its [machine-readable checkpoint](acceleration/results/20261001_user_stop/checkpoint.json).
+The root ledger has 308 claims: 301 VERIFIED/CLEAR, three CANDIDATE/CLEAR and
+four REFUTED/CLEAR. Eight scoped additions follow the published wave29 cutoff.
+The fixed 792-case campaign has 316 independently checked literal exclusions
+and 476 unresolved cases. Batch05's 64 formulas and object calibration are
+complete; its native preflight, solver and proof replay were never started.
+Target resolution remains UNKNOWN. New complete evidence remains LOCAL_ONLY;
+the stop package does not establish full public replay.
+Overall search coverage: UNKNOWN; no validated denominator.
+The saved process observation found no campaign workers or proof checkers.
+This is a dated stop record, not a live process monitor.
+
+All continuation statements below are preserved historical records and are
+superseded as instructions by this user stop.
+
+# Historical resume — 2026-09-30 JST
 
 The user explicitly authorized continued research. Remote `main` was checked at
 `90f1a32de21faea3519c3635677d5739f86ad734`; PR2 was externally merged. Work now
@@ -7,7 +26,16 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-ninth milestone](docs/RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+Unpublished continuation: the [initial wave30 record](acceleration/results/20261001_resume/thirtieth_initial_checkpoint.json)
+derives 303 current claims: 296 VERIFIED/CLEAR, three CANDIDATE/CLEAR and four
+REFUTED/CLEAR. Batch03 adds 64 complete independently replayed literal exclusions,
+bringing the frozen 792-case campaign to 252 checked cases and 540 unresolved.
+A separately checked case0 proof-core footprint adds no exclusions. Batch04's
+original builds stopped at their deadlines; its explicit checkpoint continuation
+must pass complete encoding, object and proof gates before any exclusion is counted.
+The record is a dated metadata checkpoint, not a live process observation.
+
+The latest published [twenty-ninth milestone](docs/RESEARCH_20261001_TWENTYNINTH_WAVE.md)
 freezes 300 claims: 293 VERIFIED/CLEAR, three CANDIDATE/CLEAR and four REFUTED/CLEAR.
 Its [replay guide](docs/REPRODUCING_20261001_TWENTYNINTH_WAVE.md) records exact
 raw recovery and the eight independent audit command interfaces.

@@ -1,8 +1,18 @@
 # 取得と検証
 
+## User stop, 2026-10-01 JST
+
+Read the [current stop/restart record](STOP_20261001_EIGHT_COORDINATE.md) first.
+Research is stopped. The [saved exact resume commands](../acceleration/results/20261001_user_stop/resume_plan.json)
+are unexecuted instructions for a future explicit resume, not authorization to
+launch work. Batch05 formulas and independent encoding/object gates are saved;
+native preflight and research are unstarted. New complete evidence remains
+LOCAL_ONLY, so full public replay of the stop package is not yet established.
+The earlier replay guides below remain historical reproducibility records.
+
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [twenty-ninth milestone](RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+For the preceding published work, read the [twenty-ninth milestone](RESEARCH_20261001_TWENTYNINTH_WAVE.md)
 and [replay guide](REPRODUCING_20261001_TWENTYNINTH_WAVE.md).
 Its [authenticated replay plan](../acceleration/results/20261001_resume/twentyninth_replay_plan.json)
 derives eight exact audit commands: encoding, object calibration and complete

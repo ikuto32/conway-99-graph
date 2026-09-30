@@ -16,12 +16,19 @@
 
 ## 最初に読む資料
 
-Research resumed by explicit user instruction on 2026-09-30 JST. The current
+**2026-10-01 JST: ユーザー指示により研究を正常に停止しました。**
+最新の入口は [停止状態・再開手順](docs/STOP_20261001_EIGHT_COORDINATE.md) です。
+台帳は308件（VERIFIED/CLEAR 301件）。固定792ケース中316件を独立検証で排除し、
+476件は未解決です。次の64件は式の検査まで完了し、探索は未実施です。
+新しい証拠一式はLOCAL_ONLYで、完全な公開再現パッケージは未作成です。
+以下の記録は過去のマイルストーンです。新しい再開指示までは探索しません。
+
+Research previously resumed by explicit user instruction on 2026-09-30 JST. The historical
 continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the latest [twenty-ninth milestone](docs/RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+See the previous [twenty-ninth milestone](docs/RESEARCH_20261001_TWENTYNINTH_WAVE.md)
 and [replay guide](docs/REPRODUCING_20261001_TWENTYNINTH_WAVE.md).
 Six new scoped claims are verified. Two 64-case batches add 128 complete
 independently replayed literal exclusions: the frozen 792-case campaign now has
