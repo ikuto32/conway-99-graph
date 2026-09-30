@@ -4,7 +4,14 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The [twenty-fourth milestone](RESEARCH_20260930_TWENTYFOURTH_WAVE.md) and
+The [twenty-fifth milestone](RESEARCH_20260930_TWENTYFIFTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_TWENTYFIFTH_WAVE.md) preserve eighteen
+verified additions and one candidate design inventory. A second literal
+eight-count profile is excluded; six partial scalar cuts yield a third verified
+count witness. Four direct-cell attempts remain UNKNOWN. Independent GF(2)
+completion and block-rank results retain their precise algebraic assumptions.
+No full factor, whole-support exclusion or target resolution follows.
+The previous [twenty-fourth milestone](RESEARCH_20260930_TWENTYFOURTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_TWENTYFOURTH_WAVE.md) preserve eighteen
 verified additions and one refuted formula. Complete seven-profile proof
 coverage raises the fixed-support, full-Gram-plus-column-cap lower bound to

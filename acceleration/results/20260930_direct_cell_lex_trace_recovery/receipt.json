@@ -1,0 +1,76 @@
+{
+  "status": "CANDIDATE_LEX_UNKNOWN_TRACE_STANDALONE_RECOVERY_COMPLETE",
+  "inputs_sha256": {
+    "acceleration/replay_20260930_direct_cell_lex_trace_recovery.py": "6fec9a47b8da2328b523a31914f05d06acf2cbf61fb03bbac3041a6666406aa4",
+    "acceleration/recover_20260930_direct_cell_lex_unknown_traces.py": "83bef77829d2534119dc92cea6619420c735454160d0dbf31040bc1849913f8b",
+    "acceleration/results/20260930_direct_cell_lex_unknown_trace_package/package_manifest.json": "f4ab5f151b82bb57f621de549c6e3b7bb0eedbaa92148a7a3fcf89b65831b028",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "attempts": [
+    {
+      "label": "verify",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\recover_20260930_direct_cell_lex_unknown_traces.py",
+        "--manifest",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_direct_cell_lex_unknown_trace_package\\package_manifest.json",
+        "--manifest-sha256",
+        "f4ab5f151b82bb57f621de549c6e3b7bb0eedbaa92148a7a3fcf89b65831b028",
+        "--verify-only"
+      ],
+      "exit_code": 0,
+      "seconds": 2.328999999910593,
+      "timeout_seconds": 60,
+      "stdout_path": "acceleration/results/20260930_direct_cell_lex_trace_recovery/verify.stdout.log",
+      "stdout_sha256": "235df2c5e1853b06f41dd9839d5f3541e112a4e35a08ca0f472cd684e8c89d45",
+      "stderr_path": "acceleration/results/20260930_direct_cell_lex_trace_recovery/verify.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "restore",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\recover_20260930_direct_cell_lex_unknown_traces.py",
+        "--manifest",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_direct_cell_lex_unknown_trace_package\\package_manifest.json",
+        "--manifest-sha256",
+        "f4ab5f151b82bb57f621de549c6e3b7bb0eedbaa92148a7a3fcf89b65831b028",
+        "--out",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-local\\direct-cell-lex-trace-recovery"
+      ],
+      "exit_code": 0,
+      "seconds": 2.5,
+      "timeout_seconds": 60,
+      "stdout_path": "acceleration/results/20260930_direct_cell_lex_trace_recovery/restore.stdout.log",
+      "stdout_sha256": "235df2c5e1853b06f41dd9839d5f3541e112a4e35a08ca0f472cd684e8c89d45",
+      "stderr_path": "acceleration/results/20260930_direct_cell_lex_trace_recovery/restore.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "recovered": [
+    {
+      "variant": "standalone",
+      "restored_path": "build/research-local/direct-cell-lex-trace-recovery/standalone.saved_unknown_trace.drat",
+      "raw_sha256": "7ac7f9fcee5ee4de44ffa76b8888ad42977a703103156c8e266ec4dfc915edb7",
+      "raw_bytes": 284049408,
+      "retained_original_path": "acceleration/results/20260930_direct_cell_lex_standalone_native_pilot/main/proof.drat",
+      "literal_equal": true
+    },
+    {
+      "variant": "at_least_seven",
+      "restored_path": "build/research-local/direct-cell-lex-trace-recovery/at_least_seven.saved_unknown_trace.drat",
+      "raw_sha256": "e7bd9443aaa76951c37986bd250b732e909fe2313597782362941e7d25a87112",
+      "raw_bytes": 415830016,
+      "retained_original_path": "acceleration/results/20260930_direct_cell_lex_coupled_native_pilot/main/proof.drat",
+      "literal_equal": true
+    }
+  ],
+  "seconds": 6.078999999910593,
+  "complete_unsat_proof": false,
+  "native_calls": 0,
+  "proof_validity_checked": false,
+  "independent_approval": false
+}
