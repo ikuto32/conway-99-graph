@@ -4,7 +4,14 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The latest [twenty-seventh milestone](RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+The latest [twenty-eighth milestone](RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+and [replay guide](REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md) preserve six new
+verified claims and two unused-launcher refutations. Complete next32 and
+sizeclass16 proof replays bring the literal792-case campaign to60 excluded
+cases and732 unresolved. The checked72-image union concerns first12 only;
+the complete792 common-kernel diagnostic excludes no option. No whole-support
+or target resolution follows. Next64 preparation is outside this checkpoint.
+The previous [twenty-seventh milestone](RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
 and [replay guide](REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md) preserve eight
 verified additions. Twelve literal campaign instances have complete checked
 UNSAT proofs, with one overlapping the preceding pilot. All 792 canonical

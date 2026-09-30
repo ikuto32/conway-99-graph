@@ -7,7 +7,22 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-seventh milestone](docs/RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+The latest [twenty-eighth milestone](docs/RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+freezes294 claims:287 VERIFIED/CLEAR,3 CANDIDATE/CLEAR and4 REFUTED/CLEAR.
+Six new verified claims include exact next32 and sizeclass16 formulas and their
+48 complete proof replays, a first12-only72-image union and the common-kernel
+diagnostic for all792 count survivors. The literal campaign has60 disjoint
+excluded cases and732 unresolved. The kernel test removes no local options.
+Two guarantees of the unused v1 launcher are refuted; no historical mathematical
+result is invalidated. No whole-support or unrestricted resolution follows.
+Next: build the frozen next64 cases with the independently calibrated replacement
+launcher, reconstruct every formula, then run and independently check the batch.
+Next64 and replacement-launcher work are outside this frozen checkpoint.
+Overall search coverage: UNKNOWN; no validated denominator.
+This file is not a live process observation and does not stop resumed work.
+[Twenty-eighth replay guide](docs/REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md).
+
+The previous [twenty-seventh milestone](docs/RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
 freezes 286 claims: 281 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
 Eight new scoped claims include complete proof replay for twelve literal
 campaign instances, one overlapping the preceding single pilot. Exact PSD

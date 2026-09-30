@@ -1,0 +1,1493 @@
+{
+  "chain": [
+    {
+      "path": "acceleration/results/20260930_twentyeighth_initial_registration/",
+      "before": 286,
+      "after": 289,
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-NEXT32-GRAM-ENCODINGS",
+        "C-FIXED-HADAMARD-EXACT-EIGHT-NEXT32-LITERAL-PROFILE-EXCLUSIONS",
+        "C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-FIBRE-IMAGE-EXCLUSIONS"
+      ],
+      "source": "acceleration/register_20260930_twentyeighth_initial_claims_v2.py",
+      "summary_sha256": "dd33f8f694b9f7d64b0553c8bf5f2dbdaeeebc1554fbb03168b22f9ee87fe425"
+    },
+    {
+      "path": "acceleration/results/20260930_twentyeighth_kernel_sizeclass_registration/",
+      "before": 289,
+      "after": 291,
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-SIZECLASS16-GRAM-ENCODINGS",
+        "C-FIXED-HADAMARD-EXACT-EIGHT-COMMON-KERNEL-OPTION-REDUNDANCY"
+      ],
+      "source": "acceleration/register_20260930_twentyeighth_kernel_sizeclass_claims.py",
+      "summary_sha256": "8ec929bd04876d9c9d9ba44215f5fded85ace60b77908ea0123ae21320e7b224"
+    },
+    {
+      "path": "acceleration/results/20260930_twentyeighth_sizeclass_proof_registration/",
+      "before": 291,
+      "after": 292,
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-SIZECLASS16-LITERAL-PROFILE-EXCLUSIONS"
+      ],
+      "source": "acceleration/register_20260930_twentyeighth_sizeclass_proofs.py",
+      "summary_sha256": "2f5446134630d3ed6b8d4cbe3a7eea91442eeb299290c2fc2df5eaaf6afd1228"
+    },
+    {
+      "path": "acceleration/results/20260930_twentyeighth_launcher_refutation_registration/",
+      "before": 292,
+      "after": 294,
+      "new_ids": [
+        "C-EXACT-EIGHT-PARALLEL-BUILD-V1-HARD-WORK-DEADLINE",
+        "C-EXACT-EIGHT-PARALLEL-BUILD-V1-UNCONDITIONAL-TREE-CONTAINMENT"
+      ],
+      "source": "acceleration/register_20260930_twentyeighth_launcher_refutations.py",
+      "summary_sha256": "caa58edfe03a507ed77825a69cc7111eeb4ba0c72c29ba7de63462791d93f2e6"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-NEXT32-GRAM-ENCODINGS",
+      "status": "VERIFIED",
+      "statement": "For each of the exact next32 selected literal count profiles, its complete CNF is satisfiable iff the fixed six-prism Hadamard support admits a binary36x60 factor with that count table, full prescribed integer Gram and within-triplicate caps, modulo independent equal-support column relabellings. All initial domains are complete and auxiliary assignments unique.",
+      "scope": {
+        "description": "Only32 actual formulas. Selection skips exactly the twelve authenticated complete first-batch exclusions from the unchanged792 manifest. No native result, cross-group cap, residualD or wider profile exclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "verification_dependency"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-LITERAL-PROFILE-EXCLUSIONS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/structural_attack",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/exact_eight_next32_cnfs/summary.json",
+        "timestamp": "2026-09-30T13:45:57.774223+00:00",
+        "outcome": "PASS",
+        "scope": "Only32 actual formulas. Selection skips exactly the twelve authenticated complete first-batch exclusions from the unchanged792 manifest. No native result, cross-group cap, residualD or wider profile exclusion.",
+        "artifact_hashes": {
+          "twentyeighth-initial-0-evidence0": "92c101caade4529dfccc5e0f9315608e8c953ee9faab024b1a4dea55b331d347",
+          "twentyeighth-initial-0-evidence1": "67f7f257e00ca94c86c80be0ca7766c0be80ad558ddd7fe41e788f117a214d17"
+        },
+        "shared_components": [
+          "Frozen independent campaign checking functions and generic raw-count core; no producer/native imports."
+        ],
+        "controls": [
+          "Independent manifest-order/proof-bound skip audit and literal reconstruction of every initial domain, Gram coefficient, auxiliary relation and actual clause in all32 formulas; generic and corruption controls.",
+          "Exact controls and corruption outcomes are preserved in the bound independent report; no solver or proof replay repeated by registrar."
+        ],
+        "limitations": [
+          "Only32 actual formulas. Selection skips exactly the twelve authenticated complete first-batch exclusions from the unchanged792 manifest. No native result, cross-group cap, residualD or wider profile exclusion."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_next32_cnfs/summary.json": "92c101caade4529dfccc5e0f9315608e8c953ee9faab024b1a4dea55b331d347",
+        "acceleration/results/20260930_independent_review/exact_eight_next32_cnfs/claim_binding.json": "67f7f257e00ca94c86c80be0ca7766c0be80ad558ddd7fe41e788f117a214d17"
+      }
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-NEXT32-LITERAL-PROFILE-EXCLUSIONS",
+      "status": "VERIFIED",
+      "statement": "Each of the thirty-two literal count-profile formulas in the independently authenticated next batch is UNSAT by complete independently replayed DRAT proof. Consequently no binary36x60 factor on the fixed six-prism Hadamard support has any of those literal count tables, full prescribed integer Gram and within-triplicate column caps.",
+      "scope": {
+        "description": "Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-NEXT32-GRAM-ENCODINGS",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/structural_attack",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/exact_eight_next32_proofs/summary.json",
+        "timestamp": "2026-09-30T13:53:08.455310+00:00",
+        "outcome": "PASS",
+        "scope": "Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate.",
+        "artifact_hashes": {
+          "twentyeighth-initial-1-evidence0": "21ee1b189c8b250eabcaedad43a79b9025978d540a1480f1c03eaeb446acee4c",
+          "twentyeighth-initial-1-evidence1": "3970fcb4be7144cfd087bc5677fa99d21116a5ad7f3eb2e6a435c1c5f2a08857"
+        },
+        "shared_components": [
+          "Fresh specialization of the first12 complete-proof auditor; frozen independent balanced-proof authentication/replay helper and its exact DRAT-trim binary.",
+          "SAT uses the separately calibrated independent next32 raw-clause/factor checker. No producer or native Python imports; no solver calls."
+        ],
+        "controls": [
+          "Authenticate all exact inputs/receipts/tool sources and all complete host proof bytes, replay every DRAT proof, and reject positive/negative fixture and receipt corruptions.",
+          "Exact controls and corruption outcomes are preserved in the bound independent report; no solver or proof replay repeated by registrar."
+        ],
+        "limitations": [
+          "Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate.",
+          "Within-triplicate caps and full integer Gram; cross-triplicate caps and residualD are omitted.",
+          "The twelve prior campaign exclusions are skipped and never counted as new attempts here. Other historical-profile overlaps require a separate union review.",
+          "Same authenticated DRAT-trim/Windows shim/compiler/runtime and independent authentication/replay helper; no second prover or formal verification claim.",
+          "SAT factors are independently validated but supply no residualD; UNKNOWN gives no exclusion. Current ext4 availability was not inspected or inferred."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_next32_proofs/summary.json": "21ee1b189c8b250eabcaedad43a79b9025978d540a1480f1c03eaeb446acee4c",
+        "acceleration/results/20260930_independent_review/exact_eight_next32_proofs/claim_binding.json": "3970fcb4be7144cfd087bc5677fa99d21116a5ad7f3eb2e6a435c1c5f2a08857"
+      }
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-FIBRE-IMAGE-EXCLUSIONS",
+      "status": "VERIFIED",
+      "statement": "No binary36x60 factor on the fixed six-prism Hadamard support with full prescribed integer Gram and within-triplicate column caps has any of the72 distinct labelled count tables explicitly obtained by global fibre relabelling of the twelve independently proved first-batch canonical profiles. These72 tables form exactly twelve disjoint six-element orbits; the prior single-pilot orbit is one of these twelve.",
+      "scope": {
+        "description": "Exactly the explicitly enumerated72 labelled count tables of12 canonical profiles, on the fixed support with full prescribed Gram and within-triplicate caps. No other count-profile or target exclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-LITERAL-PROFILE-EXCLUSIONS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIBRE-COVERAGE",
+          "revision": 1,
+          "relation": "normalization"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-FIRST12-GRAM-ENCODINGS",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/state_literature_audit",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/exact_eight_first12_union_v2/summary.json",
+        "timestamp": "2026-09-30T13:42:29.763048+00:00",
+        "outcome": "PASS",
+        "scope": "Exactly the explicitly enumerated72 labelled count tables of12 canonical profiles, on the fixed support with full prescribed Gram and within-triplicate caps. No other count-profile or target exclusion.",
+        "artifact_hashes": {
+          "twentyeighth-initial-2-evidence0": "9ce71dea74e323a4f06d20cdf50c80ca75ce0b26d0c7feb18d54f928eb116726",
+          "twentyeighth-initial-2-evidence1": "6efcd6b3bf204d947576f3e2aca84d5b44047b9395af8f9f4768ec14dc816af7"
+        },
+        "shared_components": [
+          "Python standard library and raw fixed-support/count inputs; no repository producer imports.",
+          "Previously independently verified literal-proof, encoding and fibre-transport gates are premises; this composition performs no new DRAT replay."
+        ],
+        "controls": [
+          "Compose separately authenticated complete literal proof/encoding gates with literal fibre actions, inverse maps, complete initial-domain transports and exact raw-table set comparisons; no producer imports.",
+          "Exact controls and corruption outcomes are preserved in the bound independent report; no solver or proof replay repeated by registrar."
+        ],
+        "limitations": [
+          "No complete792 exclusion.",
+          "Historical comparisons do not add exclusions or assume their scopes.",
+          "No cross-group caps or residualD premise is needed for this already weaker factor exclusion.",
+          "No new solver or DRAT replay; prior independently verified proof gate is a premise."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_first12_union_v2/summary.json": "9ce71dea74e323a4f06d20cdf50c80ca75ce0b26d0c7feb18d54f928eb116726",
+        "acceleration/results/20260930_independent_review/exact_eight_first12_union_v2/claim_binding.json": "6efcd6b3bf204d947576f3e2aca84d5b44047b9395af8f9f4768ec14dc816af7"
+      }
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SIZECLASS16-GRAM-ENCODINGS",
+      "status": "VERIFIED",
+      "statement": "For each of the exact 16 selected literal count profiles, its complete CNF is satisfiable iff the fixed six-prism Hadamard support admits a binary36x60 factor with that count table, full prescribed integer Gram and within-triplicate caps, modulo independent equal-support column relabellings. Every initial local domain is complete and auxiliary assignments unique.",
+      "scope": {
+        "description": "Only the actual formulas explicitly listed in checked_cases. Selection authenticates prior literal proof skips and the first remaining member per selector-size class; no class-wide or universe-wide exclusion follows. No native outcome, cross-group cap or residualD claim.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "verification_dependency"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-DOMAIN-INVENTORY",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-FIRST12-LITERAL-PROFILE-EXCLUSIONS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-NEXT32-LITERAL-PROFILE-EXCLUSIONS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/structural_attack",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/exact_eight_sizeclass16_cnfs_v2/summary.json",
+        "timestamp": "2026-09-30T14:09:44.217560+00:00",
+        "outcome": "PASS",
+        "scope": "Only the actual formulas explicitly listed in checked_cases. Selection authenticates prior literal proof skips and the first remaining member per selector-size class; no class-wide or universe-wide exclusion follows. No native outcome, cross-group cap or residualD claim.",
+        "artifact_hashes": {
+          "twentyeighth-kernel-sizeclass-0-evidence0": "b5e5a90ecc9a52996200e3e8cc4988fd04a85122be22b7355de73678ddcb2b0a",
+          "twentyeighth-kernel-sizeclass-0-evidence1": "8285bd8da4b8ec10d786ca5b85f2b6616bf307a801d34124f61dd2c030c6778a"
+        },
+        "shared_components": [
+          "Frozen independent campaign/core functions; frozen next32 invocation-receipt function only. No producer/native imports."
+        ],
+        "controls": [
+          "Complete independent allocation/proof-identity/inventory review, initial-domain and raw coefficient reconstruction, literal full-clause comparison, all actual dimensions and genuine243/synthetic/corruption controls.",
+          "Exact controls and corruption outcomes are preserved in the bound independent report; no solver or proof replay repeated by registrar."
+        ],
+        "limitations": [
+          "Only the actual formulas explicitly listed in checked_cases. Selection authenticates prior literal proof skips and the first remaining member per selector-size class; no class-wide or universe-wide exclusion follows. No native outcome, cross-group cap or residualD claim."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_sizeclass16_cnfs_v2/summary.json": "b5e5a90ecc9a52996200e3e8cc4988fd04a85122be22b7355de73678ddcb2b0a",
+        "acceleration/results/20260930_independent_review/exact_eight_sizeclass16_cnfs_v2/claim_binding.json": "8285bd8da4b8ec10d786ca5b85f2b6616bf307a801d34124f61dd2c030c6778a"
+      }
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-COMMON-KERNEL-OPTION-REDUNDANCY",
+      "status": "VERIFIED",
+      "statement": "For every one of the792 authenticated canonical exactly-eight scalar/block survivor count tables on the literal six-prism support, the kernel of R=3G-NN^T is precisely the14-dimensional space v[f,a]=alpha[a]+beta[f], with beta[0]=0. Every vector in this space has constant projection on all90 balanced colour words of each of the20 supports. Consequently the necessary triplicate PSD-kernel projection test removes zero of the1,687,356 complete initial local options.",
+      "scope": {
+        "description": "Only the exact792 canonical count tables and literal support. This is a redundancy result for one necessary local projection test, not simultaneous factor feasibility or target exclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SURVIVOR-PSD-SCREEN",
+          "revision": 2,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-CAMPAIGN-DOMAIN-INVENTORY",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/state_literature_audit",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/exact_eight_kernel_redundancy/summary.json",
+        "timestamp": "2026-09-30T14:11:05.230461+00:00",
+        "outcome": "PASS",
+        "scope": "Only the exact792 canonical count tables and literal support. This is a redundancy result for one necessary local projection test, not simultaneous factor feasibility or target exclusion.",
+        "artifact_hashes": {
+          "twentyeighth-kernel-sizeclass-1-evidence0": "6e12ed8b6147d2db20691fe93ec9f45be3f08ef68d541c617e1ffcae505a2a55",
+          "twentyeighth-kernel-sizeclass-1-evidence1": "1ce8659935147855c369ed0637c7b0437a46a46bda6268431048f77bd0d65092"
+        },
+        "shared_components": [
+          "Python standard library; no producer or prior checker imports.",
+          "Previously independently verified exact792 rank22 certificates and complete local-domain inventory are explicit mathematical dependencies, authenticated down to literal matrix hashes."
+        ],
+        "controls": [
+          "Independent set-intersection core/Gram, literal full residual matrices and coordinate/fibre row sums; exact matrix binding to prior rank22 certificates; explicit left inverse and disjoint-pair enumeration of all90 local words.",
+          "Exact controls and corruption outcomes are preserved in the bound independent report; no solver or proof replay repeated by registrar."
+        ],
+        "limitations": [
+          "No new rank recomputation is claimed.",
+          "No conclusion for count tables outside these792; no factor existence or exclusion.",
+          "The three-profile kernel result is historical context only, not extrapolated as the new claim premise."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_kernel_redundancy/summary.json": "6e12ed8b6147d2db20691fe93ec9f45be3f08ef68d541c617e1ffcae505a2a55",
+        "acceleration/results/20260930_independent_review/exact_eight_kernel_redundancy/claim_binding.json": "1ce8659935147855c369ed0637c7b0437a46a46bda6268431048f77bd0d65092"
+      }
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SIZECLASS16-LITERAL-PROFILE-EXCLUSIONS",
+      "status": "VERIFIED",
+      "statement": "Each of the exact 16 literal count-profile formulas in this independently authenticated explicit batch is UNSAT by complete independently replayed DRAT proof. Consequently no binary36x60 factor on the fixed six-prism Hadamard support has any of those literal count tables, full prescribed integer Gram and within-triplicate column caps.",
+      "scope": {
+        "description": "Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SIZECLASS16-GRAM-ENCODINGS",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/structural_attack",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/exact_eight_sizeclass16_proofs/summary.json",
+        "timestamp": "2026-09-30T14:18:01.304633+00:00",
+        "outcome": "PASS",
+        "scope": "Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate.",
+        "artifact_hashes": {
+          "twentyeighth-sizeclass-proof-0-evidence0": "04d47a627081f42def048826f08bdf2574eff67479275d46112033bf994e4494",
+          "twentyeighth-sizeclass-proof-0-evidence1": "3c4dbc6cdfbb3f0ecc436526533d6389260cccf79a7bab49e346d524f3740339"
+        },
+        "shared_components": [
+          "Fresh parameterization of the previously checked first12/next32 complete-proof auditors; frozen independent balanced-proof authentication/replay helper and exact DRAT-trim binary.",
+          "SAT uses the separately calibrated independent explicit-batch raw-clause/factor checker. No producer or native Python imports; no solver calls."
+        ],
+        "controls": [
+          "Authenticate all exact inputs/receipts/tool sources and all complete host proof bytes, replay every DRAT proof, and reject positive/negative fixture and receipt corruptions.",
+          "Exact controls and corruption outcomes are preserved in the bound independent report; no solver or proof replay repeated by registrar."
+        ],
+        "limitations": [
+          "Only the explicitly replayed literal fixed-support count profiles are excluded. The792 coverage/fibre transports and whole-eight union remain separate.",
+          "Within-triplicate caps and full integer Gram; cross-triplicate caps and residualD are omitted.",
+          "Previously proved skipped cases are never counted as new attempts here. Other historical-profile overlaps require a separate union review.",
+          "Same authenticated DRAT-trim/Windows shim/compiler/runtime and independent authentication/replay helper; no second prover or formal verification claim.",
+          "SAT factors are independently validated but supply no residualD; UNKNOWN gives no exclusion. Current ext4 availability was not inspected or inferred."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_sizeclass16_proofs/summary.json": "04d47a627081f42def048826f08bdf2574eff67479275d46112033bf994e4494",
+        "acceleration/results/20260930_independent_review/exact_eight_sizeclass16_proofs/claim_binding.json": "3c4dbc6cdfbb3f0ecc436526533d6389260cccf79a7bab49e346d524f3740339"
+      }
+    },
+    {
+      "id": "C-EXACT-EIGHT-PARALLEL-BUILD-V1-HARD-WORK-DEADLINE",
+      "status": "REFUTED",
+      "statement": "The frozen v1 exact-eight parallel supervisor enforces one absolute build-work deadline on all active children even when finishing another already-exited child incurs a permitted blocking cleanup delay.",
+      "scope": {
+        "description": "Only build_20260930_exact_eight_parallel_batch.py SHA6b1b4c4f80a24e6851643032689df37a5a9641ee4c465ae04aab3f008ae8ec44 and its hard-work-deadline guarantee under the admitted blocking finish semantics. No mathematical encoding or research result is implicated.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/state_literature_audit",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/parallel_build_deadline_binding/claim_binding.json",
+        "timestamp": "2026-09-30T14:22:46.705230+00:00",
+        "outcome": "FAIL",
+        "scope": "Only build_20260930_exact_eight_parallel_batch.py SHA6b1b4c4f80a24e6851643032689df37a5a9641ee4c465ae04aab3f008ae8ec44 and its hard-work-deadline guarantee under the admitted blocking finish semantics. No mathematical encoding or research result is implicated.",
+        "artifact_hashes": {
+          "twentyeighth-launcher-refutation-0-evidence0": "2218dc272bd1738693b8bbdbf6f3086cf543c19cc2a43e682fab992f3273936a",
+          "twentyeighth-launcher-refutation-0-evidence1": "8ab768a0a6b77fb27da69399b50e12e270254afaaf5e64cdd4e15f77e6d7a490"
+        },
+        "shared_components": [
+          "The actual frozen supervise function is the tested object. The clock and child lifecycle implementation are independently authored."
+        ],
+        "controls": [
+          "Independent deterministic clock/two-child countercontrol invoking the exact frozen supervisor; paired zero-delay positive. No production or Windows timing inference.",
+          "Paired zero-delay positive and permitted delayed-cleanup counterexample, as recorded in the exact bound report."
+        ],
+        "limitations": [
+          "Simulation counterexample under an explicitly supported blocking-cleanup schedule; not an observed Windows runtime or performance benchmark.",
+          "No formula build, native solver, ledger or Git mutation occurred.",
+          "The shared-deadline guarantee is refuted; separate finite Job Object containment controls can still pass.",
+          "The metadata binding does not assert any user-facing scientific claim is invalid."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/parallel_build_deadline_binding/claim_binding.json": "2218dc272bd1738693b8bbdbf6f3086cf543c19cc2a43e682fab992f3273936a",
+        "acceleration/results/20260930_independent_review/parallel_build_deadline/summary.json": "8ab768a0a6b77fb27da69399b50e12e270254afaaf5e64cdd4e15f77e6d7a490"
+      }
+    },
+    {
+      "id": "C-EXACT-EIGHT-PARALLEL-BUILD-V1-UNCONDITIONAL-TREE-CONTAINMENT",
+      "status": "REFUTED",
+      "statement": "The frozen v1 Windows launch protocol, consisting of Popen of the locked virtual-environment Python followed by assigning only its root PID to a Job Object before releasing a stdin RUN barrier, guarantees containment of every worker interpreter and descendant under every permitted scheduling interleaving.",
+      "scope": {
+        "description": "Only the unconditional containment guarantee of build_20260930_exact_eight_parallel_batch.py SHA6b1b4c4f80a24e6851643032689df37a5a9641ee4c465ae04aab3f008ae8ec44 on the observed Windows virtual-environment interpreter launch path. A live harmless pre-assignment scheduling countercontrol refutes universality; historical research-run containment is not adjudicated.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [],
+      "verification": {
+        "claim_revision": 1,
+        "verifier": "/root/state_literature_audit",
+        "method": "independent_artifact_check",
+        "command_or_audit": "acceleration/results/20260930_independent_review/windows_job_assignment_race_binding/claim_binding.json",
+        "timestamp": "2026-09-30T14:32:24.753564+00:00",
+        "outcome": "FAIL",
+        "scope": "Only the unconditional containment guarantee of build_20260930_exact_eight_parallel_batch.py SHA6b1b4c4f80a24e6851643032689df37a5a9641ee4c465ae04aab3f008ae8ec44 on the observed Windows virtual-environment interpreter launch path. A live harmless pre-assignment scheduling countercontrol refutes universality; historical research-run containment is not adjudicated.",
+        "artifact_hashes": {
+          "twentyeighth-launcher-refutation-1-evidence0": "ff51ff68c79f75e530d4f4c31ee7a8ee347cd4ff4e29bc662bdda905cdca2a53",
+          "twentyeighth-launcher-refutation-1-evidence1": "758e611699d893f831c4071c59093864e5f33dcd570e6c75eea719d10a25516f"
+        },
+        "shared_components": [
+          "Exact frozen WindowsJob class under test; independent canary and observation code."
+        ],
+        "controls": [
+          "Positive membership of the explicitly assigned Popen root.",
+          "Exact owned runtime chain reconstructed from application/child Popen records.",
+          "No application RUN work before job assignment.",
+          "Complete Job active-zero observation followed by still-live external handles and continued descendant writes.",
+          "All known owned handles terminated and signalled after observation.",
+          "Earlier immediate-assignment finite component successes retained separately."
+        ],
+        "limitations": [
+          "A concrete possible launch interleaving, not a race-frequency estimate.",
+          "No assertion that any historical formula builder or native solver escaped containment.",
+          "Earlier finite backend successes remain true but do not imply a universal guarantee.",
+          "No formula, native research, ledger or Git operation executed."
+        ]
+      },
+      "evidence": {
+        "acceleration/results/20260930_independent_review/windows_job_assignment_race_binding/claim_binding.json": "ff51ff68c79f75e530d4f4c31ee7a8ee347cd4ff4e29bc662bdda905cdca2a53",
+        "acceleration/results/20260930_independent_review/windows_job_assignment_race/summary.json": "758e611699d893f831c4071c59093864e5f33dcd570e6c75eea719d10a25516f"
+      }
+    }
+  ],
+  "prior_publication_artifacts": [
+    "twentyseventh-pilot-0-evidence0",
+    "twentyseventh-pilot-0-evidence1",
+    "twentyseventh-pilot-1-evidence0",
+    "twentyseventh-pilot-1-evidence1",
+    "twentyseventh-pilot-2-evidence0",
+    "twentyseventh-pilot-2-evidence1",
+    "twentyseventh-psd-candidate-evidence0",
+    "twentyseventh-psd-candidate-evidence1",
+    "twentyseventh-psd-candidate-evidence2",
+    "twentyseventh-campaign-gates-0-evidence0",
+    "twentyseventh-campaign-gates-0-evidence1",
+    "twentyseventh-campaign-gates-1-evidence0",
+    "twentyseventh-campaign-gates-1-evidence1",
+    "twentyseventh-psd-review-evidence0",
+    "twentyseventh-psd-review-evidence1",
+    "twentyseventh-first12-proof-0-evidence0",
+    "twentyseventh-first12-proof-0-evidence1",
+    "twentyseventh-inventory-0-evidence0",
+    "twentyseventh-inventory-0-evidence1"
+  ],
+  "literal_records": [
+    {
+      "case_id": "exact_eight_a2a3d60e21811916cde9269f08221000990e8235629bcc67d880ae472b6a18f9",
+      "count_sha256": "a2a3d60e21811916cde9269f08221000990e8235629bcc67d880ae472b6a18f9",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0000/main/proof.drat",
+        "sha256": "6c86215effc21b7e9f0415b6de28e19f09c1f9b8d0d155c00f1f7bb9c9c9e31e",
+        "bytes": 7346479,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0000-wsRo7N/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "6c86215effc21b7e9f0415b6de28e19f09c1f9b8d0d155c00f1f7bb9c9c9e31e"
+    },
+    {
+      "case_id": "exact_eight_9d8345bfd45099c8ab67fa0122cb89666af651a42e5d01a5d40cd90b46cc6827",
+      "count_sha256": "9d8345bfd45099c8ab67fa0122cb89666af651a42e5d01a5d40cd90b46cc6827",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0002/main/proof.drat",
+        "sha256": "d9490f03b7174fe9a54068f4f0490fbb87ae651fc1911e35a93a4930c8c47dd1",
+        "bytes": 7627824,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0002-R7wkAI/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "d9490f03b7174fe9a54068f4f0490fbb87ae651fc1911e35a93a4930c8c47dd1"
+    },
+    {
+      "case_id": "exact_eight_52971291558ea48c5305db122e1700ddf0a80f3485d80faf7625acf81a3df85b",
+      "count_sha256": "52971291558ea48c5305db122e1700ddf0a80f3485d80faf7625acf81a3df85b",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0003/main/proof.drat",
+        "sha256": "d4d9fa98ad7f4f84a06540febb53dc053ff850df8ee7c10233c2b2c007dc0662",
+        "bytes": 2879694,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0003-B7GATA/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "d4d9fa98ad7f4f84a06540febb53dc053ff850df8ee7c10233c2b2c007dc0662"
+    },
+    {
+      "case_id": "exact_eight_20ed5071a830aef9916b73b34c92716a75630c0e5313a57f8cf05f07de55d216",
+      "count_sha256": "20ed5071a830aef9916b73b34c92716a75630c0e5313a57f8cf05f07de55d216",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0009/main/proof.drat",
+        "sha256": "829307c041169db191e6db6c6cd068c604d71f6c7e8c5051b72149e726c90382",
+        "bytes": 2907023,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0009-tl6pNz/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "829307c041169db191e6db6c6cd068c604d71f6c7e8c5051b72149e726c90382"
+    },
+    {
+      "case_id": "exact_eight_0786fa6ca992d817c3d74c9c3d577b4265f77b675ddb7d3e113d5e68cc461e00",
+      "count_sha256": "0786fa6ca992d817c3d74c9c3d577b4265f77b675ddb7d3e113d5e68cc461e00",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0015/main/proof.drat",
+        "sha256": "fb5525b67bb0905800bd3abb9cf0e331a40eb7f04813452e5108ac35c72b018a",
+        "bytes": 2222553,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0015-5fUlFf/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "fb5525b67bb0905800bd3abb9cf0e331a40eb7f04813452e5108ac35c72b018a"
+    },
+    {
+      "case_id": "exact_eight_26b9b96bcd6ba66d9f184bc65ebadb77365110e29faf65f5be26b32d0407b951",
+      "count_sha256": "26b9b96bcd6ba66d9f184bc65ebadb77365110e29faf65f5be26b32d0407b951",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0021/main/proof.drat",
+        "sha256": "9046b882f7c43146160ba57c838dd7863cbf0110e25c7d49852f8515e43187a2",
+        "bytes": 1642432,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0021-fae6We/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "9046b882f7c43146160ba57c838dd7863cbf0110e25c7d49852f8515e43187a2"
+    },
+    {
+      "case_id": "exact_eight_7b8b77e174fcce24b6fbc9acd636ffc5cc58aa27889ae27b6831c4290c87ad29",
+      "count_sha256": "7b8b77e174fcce24b6fbc9acd636ffc5cc58aa27889ae27b6831c4290c87ad29",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0027/main/proof.drat",
+        "sha256": "680d318905481af5209369def7c0200dc45244ad3b5494a0f2a76807fcbadf99",
+        "bytes": 5447636,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0027-y1Na6i/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "680d318905481af5209369def7c0200dc45244ad3b5494a0f2a76807fcbadf99"
+    },
+    {
+      "case_id": "exact_eight_1a06d69ebb6479df1b5aaa820c5b4b7909d867f6f5988fad376f3a0998b6a883",
+      "count_sha256": "1a06d69ebb6479df1b5aaa820c5b4b7909d867f6f5988fad376f3a0998b6a883",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0033/main/proof.drat",
+        "sha256": "cb534704f17edc9f17faa3c1eeb72d9866b459444fd556c8ecf3dd4154f19c67",
+        "bytes": 1692799,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0033-SZjezw/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "cb534704f17edc9f17faa3c1eeb72d9866b459444fd556c8ecf3dd4154f19c67"
+    },
+    {
+      "case_id": "exact_eight_5196229b2db077b1b1c1a96ef6cd6b45f12d01603d96037010ea2a659d962a76",
+      "count_sha256": "5196229b2db077b1b1c1a96ef6cd6b45f12d01603d96037010ea2a659d962a76",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0039/main/proof.drat",
+        "sha256": "d6c7418d7a981db1819562e4b2f5bb148092ab6833d9105a6dbaf7d46b58345f",
+        "bytes": 5326356,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0039-bSMKSS/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "d6c7418d7a981db1819562e4b2f5bb148092ab6833d9105a6dbaf7d46b58345f"
+    },
+    {
+      "case_id": "exact_eight_3ce774d92b079b532153f1ee11c3adaab852e77c13ae2ab877989c24641fe9f4",
+      "count_sha256": "3ce774d92b079b532153f1ee11c3adaab852e77c13ae2ab877989c24641fe9f4",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0045/main/proof.drat",
+        "sha256": "d915d153a9dd72f476b7b9a6a9cf798797081c8c05bc4689723d33bfa97b3ac4",
+        "bytes": 6839779,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0045-wTLOkY/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "d915d153a9dd72f476b7b9a6a9cf798797081c8c05bc4689723d33bfa97b3ac4"
+    },
+    {
+      "case_id": "exact_eight_1f42e6c0a0063f7fa4fdf7c511adec70cfda050e1f3b443c8b2ec18d95624620",
+      "count_sha256": "1f42e6c0a0063f7fa4fdf7c511adec70cfda050e1f3b443c8b2ec18d95624620",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0046/main/proof.drat",
+        "sha256": "78e9cbdaeca264f28ef23acd9a4c5027f2b3792a4b48938c47909534fd7e2301",
+        "bytes": 8275759,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0046-UzxyqJ/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "78e9cbdaeca264f28ef23acd9a4c5027f2b3792a4b48938c47909534fd7e2301"
+    },
+    {
+      "case_id": "exact_eight_2db36179ccba32e970eb485f661103fc4301cafb5d72381537cd07c9971e2e50",
+      "count_sha256": "2db36179ccba32e970eb485f661103fc4301cafb5d72381537cd07c9971e2e50",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_first12_native_pilot/case_0047/main/proof.drat",
+        "sha256": "285ff8cd39074ba8630f033cdb41b3efce2e1a89c0c8cd7bd5c47b4402f85bba",
+        "bytes": 4606684,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0047-dsogmq/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "285ff8cd39074ba8630f033cdb41b3efce2e1a89c0c8cd7bd5c47b4402f85bba"
+    },
+    {
+      "case_id": "exact_eight_d0ad0babc9aa3c81e8d42ac248bd796196957ea60cd13f9209d39e692524a7f5",
+      "count_sha256": "d0ad0babc9aa3c81e8d42ac248bd796196957ea60cd13f9209d39e692524a7f5",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0001/main/proof.drat",
+        "sha256": "5b06646192778ffb00bddba6bdbc015cfd2a6e3c9adcc91b42dca85ae22be588",
+        "bytes": 7789307,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0001-P37pN5/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "5b06646192778ffb00bddba6bdbc015cfd2a6e3c9adcc91b42dca85ae22be588"
+    },
+    {
+      "case_id": "exact_eight_565922b9934ba30d4e1edaf63bff3884312a708b6ede5c8b09048c5089ad80c6",
+      "count_sha256": "565922b9934ba30d4e1edaf63bff3884312a708b6ede5c8b09048c5089ad80c6",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0004/main/proof.drat",
+        "sha256": "7731633d08ec67196d5f75a1c4ef00cc7eebb6165edc1e5a69c012322b67f0b8",
+        "bytes": 2528537,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0004-WDsSlC/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "7731633d08ec67196d5f75a1c4ef00cc7eebb6165edc1e5a69c012322b67f0b8"
+    },
+    {
+      "case_id": "exact_eight_9a52ba495b961693e726178253ed364b44b01c655d88d2c821059ee3ac419717",
+      "count_sha256": "9a52ba495b961693e726178253ed364b44b01c655d88d2c821059ee3ac419717",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0005/main/proof.drat",
+        "sha256": "df8d629e3910af94682295615e83cc4c2975146566bdd0a14f8bc5c49df221e8",
+        "bytes": 1571470,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0005-ntqx06/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "df8d629e3910af94682295615e83cc4c2975146566bdd0a14f8bc5c49df221e8"
+    },
+    {
+      "case_id": "exact_eight_cc4868b4713ee059438426acf6b6a361e866144daa3914fb4f1354bd84b81047",
+      "count_sha256": "cc4868b4713ee059438426acf6b6a361e866144daa3914fb4f1354bd84b81047",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0006/main/proof.drat",
+        "sha256": "a020261af2a234becb40a1d137d23e2cbbc1d706ed9cb8f3a50132cbb219893a",
+        "bytes": 3460231,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0006-CafugW/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "a020261af2a234becb40a1d137d23e2cbbc1d706ed9cb8f3a50132cbb219893a"
+    },
+    {
+      "case_id": "exact_eight_d4df4094a686142f5e236679ae26c29607a64e15b3afde527bc5486325f15fd4",
+      "count_sha256": "d4df4094a686142f5e236679ae26c29607a64e15b3afde527bc5486325f15fd4",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0007/main/proof.drat",
+        "sha256": "ecb566935be778fcfbb8d92139f32094c3426a5239400077f324c2d299559191",
+        "bytes": 5469583,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0007-pGJy3Q/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "ecb566935be778fcfbb8d92139f32094c3426a5239400077f324c2d299559191"
+    },
+    {
+      "case_id": "exact_eight_ef8546203bfa8d0e2c1c972ef9eaa6360c91bc558232de12bdad2f75a28a8d43",
+      "count_sha256": "ef8546203bfa8d0e2c1c972ef9eaa6360c91bc558232de12bdad2f75a28a8d43",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0008/main/proof.drat",
+        "sha256": "48698dfe576509800625f0b127cfefd2f8d5943c38a30d13f7551289a4d65af1",
+        "bytes": 2640825,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0008-HtVS3s/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "48698dfe576509800625f0b127cfefd2f8d5943c38a30d13f7551289a4d65af1"
+    },
+    {
+      "case_id": "exact_eight_38d0670ce17948f2cdf6745b22e9555d3410485a303aee5acf258ff9ddfee875",
+      "count_sha256": "38d0670ce17948f2cdf6745b22e9555d3410485a303aee5acf258ff9ddfee875",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0010/main/proof.drat",
+        "sha256": "f51008d1ddbfe638e34d4bb4298e369342cfe909f8a0505a57839d9b575b5de0",
+        "bytes": 1687175,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0010-X2ulX0/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "f51008d1ddbfe638e34d4bb4298e369342cfe909f8a0505a57839d9b575b5de0"
+    },
+    {
+      "case_id": "exact_eight_826926f6c82dc9667625f1223bf8dfc76188b33a017cc0febfec2349c1f534b8",
+      "count_sha256": "826926f6c82dc9667625f1223bf8dfc76188b33a017cc0febfec2349c1f534b8",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0011/main/proof.drat",
+        "sha256": "ec7bfeff1239008505b738db0bd7a1fcefd002e40938d6dc0fc79b8c6ce3e3c2",
+        "bytes": 2684419,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0011-FWqrkX/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "ec7bfeff1239008505b738db0bd7a1fcefd002e40938d6dc0fc79b8c6ce3e3c2"
+    },
+    {
+      "case_id": "exact_eight_87fde7cd214d76d74b4f7ac665581ce8ecb7ba19afc3d3db51efca5859ceae9a",
+      "count_sha256": "87fde7cd214d76d74b4f7ac665581ce8ecb7ba19afc3d3db51efca5859ceae9a",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0012/main/proof.drat",
+        "sha256": "54c554bd6f7b82841a42d3feecd85e0a78a877839739f8b50c1c3d774a1a9e92",
+        "bytes": 2966395,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0012-KFGvvJ/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "54c554bd6f7b82841a42d3feecd85e0a78a877839739f8b50c1c3d774a1a9e92"
+    },
+    {
+      "case_id": "exact_eight_bf0fd82f407c2b31be36901ac7d96419831390a6b89d54571e04df3beb85d98d",
+      "count_sha256": "bf0fd82f407c2b31be36901ac7d96419831390a6b89d54571e04df3beb85d98d",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0013/main/proof.drat",
+        "sha256": "c0392cd2807d2dab5358ee285fbafab94c35c268b9d1f5126cb79ff64d45a1e7",
+        "bytes": 2823713,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0013-zxezOc/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "c0392cd2807d2dab5358ee285fbafab94c35c268b9d1f5126cb79ff64d45a1e7"
+    },
+    {
+      "case_id": "exact_eight_d373708a423c74750d3d601bc79ba5d69b6f46b5afbc15290f11be3bf170cbfc",
+      "count_sha256": "d373708a423c74750d3d601bc79ba5d69b6f46b5afbc15290f11be3bf170cbfc",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0014/main/proof.drat",
+        "sha256": "a76fd6ae622355d4ce6783ec96d0e24dec651ea1dfd6b6a489fec5f58789d69d",
+        "bytes": 3175297,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0014-tSrDM7/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "a76fd6ae622355d4ce6783ec96d0e24dec651ea1dfd6b6a489fec5f58789d69d"
+    },
+    {
+      "case_id": "exact_eight_2b0227a670819ffeedbf17654c0ee23e4ba57189d85f9322b1756d494bab5aa9",
+      "count_sha256": "2b0227a670819ffeedbf17654c0ee23e4ba57189d85f9322b1756d494bab5aa9",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0016/main/proof.drat",
+        "sha256": "b196e426524303172e55f5671fea05fddd8c9419b72037e258221cc6c7dbe89b",
+        "bytes": 1801968,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0016-i76eM7/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "b196e426524303172e55f5671fea05fddd8c9419b72037e258221cc6c7dbe89b"
+    },
+    {
+      "case_id": "exact_eight_41c87661d8f034ed71d3042c31e378f942680b68413fb6db7b42710da5831c10",
+      "count_sha256": "41c87661d8f034ed71d3042c31e378f942680b68413fb6db7b42710da5831c10",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0017/main/proof.drat",
+        "sha256": "9f2b91c8fc57f8440f8a2cd18fab62e390407b18d51f988096f5c281e7725403",
+        "bytes": 1861787,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0017-8DapVK/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "9f2b91c8fc57f8440f8a2cd18fab62e390407b18d51f988096f5c281e7725403"
+    },
+    {
+      "case_id": "exact_eight_7c2e7a0d049c397253eca1cc9612ef1b59f50f31f5f8e407e6f847375f49112f",
+      "count_sha256": "7c2e7a0d049c397253eca1cc9612ef1b59f50f31f5f8e407e6f847375f49112f",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0018/main/proof.drat",
+        "sha256": "608c0ef1ebdb3d7ac97c506669fd50b4616dcb2403e06b1a6b9176a2f3cf12e4",
+        "bytes": 3826313,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0018-5jz7kg/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "608c0ef1ebdb3d7ac97c506669fd50b4616dcb2403e06b1a6b9176a2f3cf12e4"
+    },
+    {
+      "case_id": "exact_eight_7cdb5ed0f188d2bcf840dc01505429880cc60ffb9a523917bbcb673a3061ec66",
+      "count_sha256": "7cdb5ed0f188d2bcf840dc01505429880cc60ffb9a523917bbcb673a3061ec66",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0019/main/proof.drat",
+        "sha256": "520fb335c4da202f5ad31d85628ddefb9d4bad9c42ced4fc456f77dca7b7d62e",
+        "bytes": 1711639,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0019-s8gRq4/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "520fb335c4da202f5ad31d85628ddefb9d4bad9c42ced4fc456f77dca7b7d62e"
+    },
+    {
+      "case_id": "exact_eight_e6aad903188e8123dde1fa153002518600795e270130b9350f50e9539e3bd171",
+      "count_sha256": "e6aad903188e8123dde1fa153002518600795e270130b9350f50e9539e3bd171",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0020/main/proof.drat",
+        "sha256": "7c46272efbc89127d6e1477afeeeabd1c10ee7d5190de06ab1436ea449f82409",
+        "bytes": 1369346,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0020-VpHxQf/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "7c46272efbc89127d6e1477afeeeabd1c10ee7d5190de06ab1436ea449f82409"
+    },
+    {
+      "case_id": "exact_eight_2a80bc73793a90d32eb55b90a15e1a3f59215faf2af4dcc84ebc44b7673123ab",
+      "count_sha256": "2a80bc73793a90d32eb55b90a15e1a3f59215faf2af4dcc84ebc44b7673123ab",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0022/main/proof.drat",
+        "sha256": "4473d79890b92a11329a857b0212717e0a89567dcf25295d5deafe49243104a2",
+        "bytes": 1715642,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0022-bcobUi/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "4473d79890b92a11329a857b0212717e0a89567dcf25295d5deafe49243104a2"
+    },
+    {
+      "case_id": "exact_eight_4acfa7810fe56dcf58058ff18cba45fb2bd867734032ffd96837c8cb69e75236",
+      "count_sha256": "4acfa7810fe56dcf58058ff18cba45fb2bd867734032ffd96837c8cb69e75236",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0023/main/proof.drat",
+        "sha256": "5b22e303235e7bf94cb4bc93f99c0447ae45b1deed658484b922421a7ffecf27",
+        "bytes": 1545946,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0023-D8uUFS/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "5b22e303235e7bf94cb4bc93f99c0447ae45b1deed658484b922421a7ffecf27"
+    },
+    {
+      "case_id": "exact_eight_4da52673946708d7944e2dc64c184eae0d453efdd0964a63a0bd467eb6aa0515",
+      "count_sha256": "4da52673946708d7944e2dc64c184eae0d453efdd0964a63a0bd467eb6aa0515",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0024/main/proof.drat",
+        "sha256": "16ff84e1efc53eeb05520e95382242708e35b4f870dd248d836497f330e28e3b",
+        "bytes": 1662038,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0024-KRZDIv/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "16ff84e1efc53eeb05520e95382242708e35b4f870dd248d836497f330e28e3b"
+    },
+    {
+      "case_id": "exact_eight_cf7207441ff08b6ce3a2a2b900b54884ea6787d2aae0cce9dc6925af6ab858e3",
+      "count_sha256": "cf7207441ff08b6ce3a2a2b900b54884ea6787d2aae0cce9dc6925af6ab858e3",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0025/main/proof.drat",
+        "sha256": "87f43abb449d1d8cebc41a695af397e7284e8c253f2300aafa1f64bacbc8caf8",
+        "bytes": 3001460,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0025-1FhDM6/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "87f43abb449d1d8cebc41a695af397e7284e8c253f2300aafa1f64bacbc8caf8"
+    },
+    {
+      "case_id": "exact_eight_e5c73f26ecc354de0aa9e36ecb3d38e6aad578278d69d9bb56d35ca4838fcb63",
+      "count_sha256": "e5c73f26ecc354de0aa9e36ecb3d38e6aad578278d69d9bb56d35ca4838fcb63",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0026/main/proof.drat",
+        "sha256": "217ab2f0d299f325e329d4069e6474d3b200091a4e4723a1b364223c8168d95b",
+        "bytes": 3511251,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0026-vHhN7w/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "217ab2f0d299f325e329d4069e6474d3b200091a4e4723a1b364223c8168d95b"
+    },
+    {
+      "case_id": "exact_eight_93aa1ce338cd0cbc96a7dfbb50fcaee435346fcc183e3d05d531077cdc1b0baf",
+      "count_sha256": "93aa1ce338cd0cbc96a7dfbb50fcaee435346fcc183e3d05d531077cdc1b0baf",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0028/main/proof.drat",
+        "sha256": "6d3b7e8d70eeda08b0f478384096df20f8ae9ac1eeb08c27f24b9b7995b78372",
+        "bytes": 5400184,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0028-XutFc8/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "6d3b7e8d70eeda08b0f478384096df20f8ae9ac1eeb08c27f24b9b7995b78372"
+    },
+    {
+      "case_id": "exact_eight_9eaa166dcbfa95fa208ede9adb066add3bb31b257e8cc231af04033a7faca260",
+      "count_sha256": "9eaa166dcbfa95fa208ede9adb066add3bb31b257e8cc231af04033a7faca260",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0029/main/proof.drat",
+        "sha256": "b7d6ff0b73ea243524d0554d268347d28246e024bae641d88a8fc8f542b05c8a",
+        "bytes": 8137820,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0029-6Kq0XH/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "b7d6ff0b73ea243524d0554d268347d28246e024bae641d88a8fc8f542b05c8a"
+    },
+    {
+      "case_id": "exact_eight_b7fbe1cf05d9a400c031c8759c57d0be65b279dcf0e58233cc9b7c69afdf9a8e",
+      "count_sha256": "b7fbe1cf05d9a400c031c8759c57d0be65b279dcf0e58233cc9b7c69afdf9a8e",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0030/main/proof.drat",
+        "sha256": "6ebbcb1201041a9079715b5e3b9c732b7c2668ac5a43c1c0a2092160a32d4d60",
+        "bytes": 8424446,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0030-Qoxqiz/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "6ebbcb1201041a9079715b5e3b9c732b7c2668ac5a43c1c0a2092160a32d4d60"
+    },
+    {
+      "case_id": "exact_eight_bcb1abb372b11b9316f3f376f1e93417b7928472ca8bd9ea890f7511da3ab89a",
+      "count_sha256": "bcb1abb372b11b9316f3f376f1e93417b7928472ca8bd9ea890f7511da3ab89a",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0031/main/proof.drat",
+        "sha256": "46f2bde037abde5cdee68a3fa4a51c208532f703f304ed579842d0ae388dd0ab",
+        "bytes": 4831047,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0031-P8r52f/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "46f2bde037abde5cdee68a3fa4a51c208532f703f304ed579842d0ae388dd0ab"
+    },
+    {
+      "case_id": "exact_eight_fbc44810dc2461a5546b5a6394b51ebfded76b28fd6b17fe852cf219105709a1",
+      "count_sha256": "fbc44810dc2461a5546b5a6394b51ebfded76b28fd6b17fe852cf219105709a1",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0032/main/proof.drat",
+        "sha256": "665778ca4bb2dfea4c64d3a09965451eb5b6070768ed1c799d84403aed8994c8",
+        "bytes": 7645483,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0032-MVkpt5/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "665778ca4bb2dfea4c64d3a09965451eb5b6070768ed1c799d84403aed8994c8"
+    },
+    {
+      "case_id": "exact_eight_37b9a30dd3ba202d874230e2a43168bc1a3065bd86209b283193b167cacc0b21",
+      "count_sha256": "37b9a30dd3ba202d874230e2a43168bc1a3065bd86209b283193b167cacc0b21",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0034/main/proof.drat",
+        "sha256": "88a084adb1ec0d6325a8a8e500a280d6e27b929ff67caeeb2250b87a050e6381",
+        "bytes": 1524866,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0034-z0FRcn/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "88a084adb1ec0d6325a8a8e500a280d6e27b929ff67caeeb2250b87a050e6381"
+    },
+    {
+      "case_id": "exact_eight_645b11807c9026a2fb8f798c02057e8ed098aa9aab83746b82033401193af550",
+      "count_sha256": "645b11807c9026a2fb8f798c02057e8ed098aa9aab83746b82033401193af550",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0035/main/proof.drat",
+        "sha256": "bc5894895dfc3d4baf37112d866704978089e472b86960e0cf8c7fc620640fc8",
+        "bytes": 1730357,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0035-UWQ8Fn/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "bc5894895dfc3d4baf37112d866704978089e472b86960e0cf8c7fc620640fc8"
+    },
+    {
+      "case_id": "exact_eight_b2ca63ae93e2d28f5dc1895ef1db6d790a0eb436cf33e417397c1b43fd8e7138",
+      "count_sha256": "b2ca63ae93e2d28f5dc1895ef1db6d790a0eb436cf33e417397c1b43fd8e7138",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0036/main/proof.drat",
+        "sha256": "c321108a09a96b0c8af94383bfcc3c4910cd136fcd1a288e7ccfe3e4f4d40248",
+        "bytes": 1705549,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0036-gd5kN5/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "c321108a09a96b0c8af94383bfcc3c4910cd136fcd1a288e7ccfe3e4f4d40248"
+    },
+    {
+      "case_id": "exact_eight_cba68b82dcd2675d9e96835a48247b668a4e773a7e9665ff86c5a2e94598c9d5",
+      "count_sha256": "cba68b82dcd2675d9e96835a48247b668a4e773a7e9665ff86c5a2e94598c9d5",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0037/main/proof.drat",
+        "sha256": "53c8ee0adb49fcd99d23487c56d6ee055690e564925edace7fcda1a74a566b2e",
+        "bytes": 2611247,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0037-x63C7b/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "53c8ee0adb49fcd99d23487c56d6ee055690e564925edace7fcda1a74a566b2e"
+    },
+    {
+      "case_id": "exact_eight_f7fc7da58417655a8d7809814969816b2ce0a20c5bb9bc3902caf262fe47534e",
+      "count_sha256": "f7fc7da58417655a8d7809814969816b2ce0a20c5bb9bc3902caf262fe47534e",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0038/main/proof.drat",
+        "sha256": "dfe73be803a176dd5467dce2a0c62c097f5a5d8232d8181950f83688e7c6da9c",
+        "bytes": 1834283,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0038-EkxfQE/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "dfe73be803a176dd5467dce2a0c62c097f5a5d8232d8181950f83688e7c6da9c"
+    },
+    {
+      "case_id": "exact_eight_63110e8f82546562e2a4f4c4e4097f502de392436725794ae4ff378df175c974",
+      "count_sha256": "63110e8f82546562e2a4f4c4e4097f502de392436725794ae4ff378df175c974",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_next32_native_pilot/case_0040/main/proof.drat",
+        "sha256": "8e6ab8e0257f76accc9f0c1a9b03d34ad5817ea681c18441a845a55e2b6a4e3a",
+        "bytes": 2381975,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0040-ygIWKV/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "8e6ab8e0257f76accc9f0c1a9b03d34ad5817ea681c18441a845a55e2b6a4e3a"
+    },
+    {
+      "case_id": "exact_eight_2f829529ba4d019f6e9e4f72272ac53124ce1cf19342fc56f2a0be157b658455",
+      "count_sha256": "2f829529ba4d019f6e9e4f72272ac53124ce1cf19342fc56f2a0be157b658455",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0380/main/proof.drat",
+        "sha256": "39865c2329ebc085b5cfb4bebba2d9f69bd7206c0b7c9409fa7ddc37d96dbf41",
+        "bytes": 1295169,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0380-USe16X/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "39865c2329ebc085b5cfb4bebba2d9f69bd7206c0b7c9409fa7ddc37d96dbf41"
+    },
+    {
+      "case_id": "exact_eight_5cea4e6fe3451b4736809acba958398128516bbbba7a3a1a4ef003122da39295",
+      "count_sha256": "5cea4e6fe3451b4736809acba958398128516bbbba7a3a1a4ef003122da39295",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0407/main/proof.drat",
+        "sha256": "8028c37dd9c8943d95ac0005a0bd58541c4401878b4aba56d61325e086cee7af",
+        "bytes": 1277708,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0407-KqOMAQ/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "8028c37dd9c8943d95ac0005a0bd58541c4401878b4aba56d61325e086cee7af"
+    },
+    {
+      "case_id": "exact_eight_6ebccc33e0f228ef650d274657ca8dfd492257a8d77e0064ac530a97fdd190f5",
+      "count_sha256": "6ebccc33e0f228ef650d274657ca8dfd492257a8d77e0064ac530a97fdd190f5",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0418/main/proof.drat",
+        "sha256": "7fb9782f1205f839656f23471fdfd41da493bdb261b90eafd7c3a4fe52361ff0",
+        "bytes": 1281127,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0418-IGI2I7/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "7fb9782f1205f839656f23471fdfd41da493bdb261b90eafd7c3a4fe52361ff0"
+    },
+    {
+      "case_id": "exact_eight_0bd1ec4006f0ee09fb3ff50eb52304e76035f5929103d2f77d952b77e5ada852",
+      "count_sha256": "0bd1ec4006f0ee09fb3ff50eb52304e76035f5929103d2f77d952b77e5ada852",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0198/main/proof.drat",
+        "sha256": "320ff294b3606ab7603fc004f07bee56dd89bb73be1fc5bf3b22ec00293f38ae",
+        "bytes": 1355092,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0198-NsvGEi/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "320ff294b3606ab7603fc004f07bee56dd89bb73be1fc5bf3b22ec00293f38ae"
+    },
+    {
+      "case_id": "exact_eight_4a84ab564db48b8d349689bfd687dc61e100a3efa9fb2c7063b05740b4cc2289",
+      "count_sha256": "4a84ab564db48b8d349689bfd687dc61e100a3efa9fb2c7063b05740b4cc2289",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0230/main/proof.drat",
+        "sha256": "a702064ea7113e13963c29f0a8c6cb2f165b23c7273b7e01b50abd64042d8182",
+        "bytes": 1748905,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0230-yXXRU0/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "a702064ea7113e13963c29f0a8c6cb2f165b23c7273b7e01b50abd64042d8182"
+    },
+    {
+      "case_id": "exact_eight_110542bcd377c7ba398ad97013ea456b83a1571340e24ecac3f6453dac178e32",
+      "count_sha256": "110542bcd377c7ba398ad97013ea456b83a1571340e24ecac3f6453dac178e32",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0204/main/proof.drat",
+        "sha256": "af5909eaa14f0c8b820e29dbc0f13c790160aa0a89b6c0b2cf7464bb7c673db5",
+        "bytes": 1272580,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0204-l1Mtu5/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "af5909eaa14f0c8b820e29dbc0f13c790160aa0a89b6c0b2cf7464bb7c673db5"
+    },
+    {
+      "case_id": "exact_eight_0bd4d86ac25f50044e83a24e933bb18328aa04637630c8f8b820085dbf828ea0",
+      "count_sha256": "0bd4d86ac25f50044e83a24e933bb18328aa04637630c8f8b820085dbf828ea0",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0199/main/proof.drat",
+        "sha256": "a97e5b844553f33b8e0134650edd4270aebc99c4a6f68634e7f79fd646cf4ec0",
+        "bytes": 1278835,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0199-DShTX1/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "a97e5b844553f33b8e0134650edd4270aebc99c4a6f68634e7f79fd646cf4ec0"
+    },
+    {
+      "case_id": "exact_eight_0fc824b4fa68529008d2f8156cba81316a4ead61e36abfc792d6ccaf5dce9377",
+      "count_sha256": "0fc824b4fa68529008d2f8156cba81316a4ead61e36abfc792d6ccaf5dce9377",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0203/main/proof.drat",
+        "sha256": "0cf51560b2e7185612518ba5752d031de1dc03b85b3cca6618ff567cfffe1dae",
+        "bytes": 2951500,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0203-bEBwCM/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "0cf51560b2e7185612518ba5752d031de1dc03b85b3cca6618ff567cfffe1dae"
+    },
+    {
+      "case_id": "exact_eight_04d7ac26abc0c9b64760ef0efb3e83015218ddd9b38532d4985cac3868dae9d6",
+      "count_sha256": "04d7ac26abc0c9b64760ef0efb3e83015218ddd9b38532d4985cac3868dae9d6",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0193/main/proof.drat",
+        "sha256": "6a15db999f6c4b505390b8b601c590edc61137ab44d2ee9ecac8c364f5809899",
+        "bytes": 1302605,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0193-vl8IE0/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "6a15db999f6c4b505390b8b601c590edc61137ab44d2ee9ecac8c364f5809899"
+    },
+    {
+      "case_id": "exact_eight_0d90682e2f5a94f931bdf7eb879cfb0619d436387dc74367f15def9e4c42e46e",
+      "count_sha256": "0d90682e2f5a94f931bdf7eb879cfb0619d436387dc74367f15def9e4c42e46e",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0584/main/proof.drat",
+        "sha256": "d06476c87d38b63abb33db91c666d077e2d25346eb110b2616f849a9e5a2d9d1",
+        "bytes": 6143380,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0584-a24Xy1/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "d06476c87d38b63abb33db91c666d077e2d25346eb110b2616f849a9e5a2d9d1"
+    },
+    {
+      "case_id": "exact_eight_02ddefb41a7f4c93409442bfab53e138e83a4c69690bb2b666bb8b582d5964c7",
+      "count_sha256": "02ddefb41a7f4c93409442bfab53e138e83a4c69690bb2b666bb8b582d5964c7",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0192/main/proof.drat",
+        "sha256": "5b653e04644c40c80ba7d231c291759399bd2cb1e0fc2e15dea8c7801ab5cf96",
+        "bytes": 1444868,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0192-VE7lBZ/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "5b653e04644c40c80ba7d231c291759399bd2cb1e0fc2e15dea8c7801ab5cf96"
+    },
+    {
+      "case_id": "exact_eight_09033e5a24aca606a3350aedfdad680208214386ef6af9fee64136f08c662d2d",
+      "count_sha256": "09033e5a24aca606a3350aedfdad680208214386ef6af9fee64136f08c662d2d",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0197/main/proof.drat",
+        "sha256": "0f94193533cea4da8c6de94120c7b0804e19331d73b7ca64bfea0e1b31bd8261",
+        "bytes": 1721639,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0197-AGYJyL/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "0f94193533cea4da8c6de94120c7b0804e19331d73b7ca64bfea0e1b31bd8261"
+    },
+    {
+      "case_id": "exact_eight_06bcaa194a5300eb497ac46f04f941e8958fc57fcd1ecc97cf9821ed88c60398",
+      "count_sha256": "06bcaa194a5300eb497ac46f04f941e8958fc57fcd1ecc97cf9821ed88c60398",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0581/main/proof.drat",
+        "sha256": "2786ad8eafda58d1024bd275468780ab48acbc0c74fab4cc0a717278f6e3201d",
+        "bytes": 7070615,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0581-dh1dWj/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "2786ad8eafda58d1024bd275468780ab48acbc0c74fab4cc0a717278f6e3201d"
+    },
+    {
+      "case_id": "exact_eight_06722d0b3e90cb0daf2ce85d6293eb314bcce2b0c01222feecb80bebe5c84dea",
+      "count_sha256": "06722d0b3e90cb0daf2ce85d6293eb314bcce2b0c01222feecb80bebe5c84dea",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0196/main/proof.drat",
+        "sha256": "3eab841c8b528dce063bef616ab3da56564470e925e3863fdbb57a8b548e34ec",
+        "bytes": 1758045,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0196-4ngjyr/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "3eab841c8b528dce063bef616ab3da56564470e925e3863fdbb57a8b548e34ec"
+    },
+    {
+      "case_id": "exact_eight_6786c748958468cf21cb5c7e33155ab3c4899adc4c20f9757fe0bdff5df15f53",
+      "count_sha256": "6786c748958468cf21cb5c7e33155ab3c4899adc4c20f9757fe0bdff5df15f53",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0617/main/proof.drat",
+        "sha256": "e85e5d3baf2b16a760be66680544f1e6a0b36403ccccdb76b288fd17652d2e31",
+        "bytes": 3186070,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0617-CDrqHt/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "e85e5d3baf2b16a760be66680544f1e6a0b36403ccccdb76b288fd17652d2e31"
+    },
+    {
+      "case_id": "exact_eight_9f1dcfa3088c55e9e50f9f84954c03ce0629afe83c3839bd3c454acc0f16bdb8",
+      "count_sha256": "9f1dcfa3088c55e9e50f9f84954c03ce0629afe83c3839bd3c454acc0f16bdb8",
+      "proof": {
+        "path": "acceleration/results/20260930_exact_eight_sizeclass16_native_pilot/case_0041/main/proof.drat",
+        "sha256": "a328d79f2a2313d7f3042e0b7862375978088a74dd14ae4ea9899aa3309b40f3",
+        "bytes": 2414082,
+        "historical_ext4_path": "/tmp/conway99-exact-eight-0041-pJ831E/proof.drat",
+        "historical_full_transfer_checked": true,
+        "current_ext4_availability": "NOT_OBSERVED",
+        "availability": "LOCAL_ONLY",
+        "complete_proof": true
+      },
+      "replay_sha256": "a328d79f2a2313d7f3042e0b7862375978088a74dd14ae4ea9899aa3309b40f3"
+    }
+  ],
+  "first12_image_hashes": [
+    "00288ac527493edd22e4614cace8d38f5b807a09f4896c2142b69dec759417af",
+    "0212b79741a08aa33549e15c766d748ed2b571261979c23cb492a5c072322e80",
+    "02a7c2a7e1778e958d122917f72bd5e5c1551b95a28352f8e0c4eb9c5bfea361",
+    "0786fa6ca992d817c3d74c9c3d577b4265f77b675ddb7d3e113d5e68cc461e00",
+    "090056ff24eaec21e641d716baabb7a22e2cce29ba0663f7fd0b27d06d633387",
+    "0aa99628b030f5b7a82d0ef48b28334b545709e8fd62365bc895ebc1a52c3467",
+    "130405aedb9c01ac8779b77088bdea749cedb9178568a090158c616c6b058ca7",
+    "17e7aa7a7a6fb7995abf7ee0ed66e7a9f6a0fff4fff4a6c825ba06a8df05a4cd",
+    "1a06d69ebb6479df1b5aaa820c5b4b7909d867f6f5988fad376f3a0998b6a883",
+    "1a706f13fc989f51999e410d072f51d45f3c4fb0c545b3879a546f60eeeda22b",
+    "1b85c47b00924d00bf2404208725a83945c612615f1f9458e8567645bd8f4d0c",
+    "1b8dff8189f7fdd1de2ae9d577876c4db3f8e385a7d03af9926cf87f24c23666",
+    "1e42f6ac871f12bccbbf357593a7170c99c15439edbb9d5d112d4fac12d80503",
+    "1f42e6c0a0063f7fa4fdf7c511adec70cfda050e1f3b443c8b2ec18d95624620",
+    "20ed5071a830aef9916b73b34c92716a75630c0e5313a57f8cf05f07de55d216",
+    "26b9b96bcd6ba66d9f184bc65ebadb77365110e29faf65f5be26b32d0407b951",
+    "2a2a3e06fbc00caa890f750626b3e2fb2feb90b40f27623f0cfce3d2a4a164f5",
+    "2b3fe932b6275ddaae8c8d4f1a789969b72d0a8f86f70626ffe0438f02715246",
+    "2db36179ccba32e970eb485f661103fc4301cafb5d72381537cd07c9971e2e50",
+    "2f99aaa385b26885ea1666e4a0b03bd31b8943a53eba21173334e619f55470e1",
+    "2fcd97364ff865bce774c9418e8a1c66491ac1c8bab64286eb901113a5e8b0b5",
+    "361538f088053e47f20c9765180380b4bec231022683eeaeeee0b5df88c381a9",
+    "3ce774d92b079b532153f1ee11c3adaab852e77c13ae2ab877989c24641fe9f4",
+    "3e43c8f4e7fc9885c9c9c80b9004bb5463dd22896629aa413f04c25a5ebb8a5a",
+    "41ccd02f7e77459c9c10787b227122ed9ef703863b55224afbe8863d0391a015",
+    "47b9ff4ba501927c1c3c7a77de2f2ac04c3b2a306ba959fd915874f68388d564",
+    "4b7694d60b11d7b39b0ebebddc21b1da6c776b4a61d9c46666b1ff2b42ea3d5c",
+    "4f4f1f9f6bce92323133396b41c7a17b21398f8e653a85108bf15e0e80e1e8f7",
+    "4fb4d025f8631578da0be7fc7fb421d7d96247f0656cfb84b9f09b57d3ffa5ca",
+    "50b7e7cf6b185be4306b2347039e577374504006f33a9e1bf55b584095a85b77",
+    "5196229b2db077b1b1c1a96ef6cd6b45f12d01603d96037010ea2a659d962a76",
+    "52971291558ea48c5305db122e1700ddf0a80f3485d80faf7625acf81a3df85b",
+    "53ddb101b92809b168b4286a6089a7a190ea915fcab3f4f3533e15f993b5763d",
+    "64ab3ab9e5769a619ad563142e79948d0bafbfbe6efe69ecd8e38ab10a27c0a3",
+    "68ea0b646a537ab6adcf47cbfa92fc4298918ea2a02b00befc44ce4a6b7c0804",
+    "748c449e3cdddec4ffd284c8986ea55d60dd52abebfd981de25add3ab99d5a17",
+    "75b0b436331e56e7f4619c9455d1bec1b8fbd7e4810e3ba326bb7026eaef697f",
+    "7b8b77e174fcce24b6fbc9acd636ffc5cc58aa27889ae27b6831c4290c87ad29",
+    "7bfeb9040d9ab71ea594991d690a69e67405a320fc70ef397cfd1c1bb181ec2f",
+    "7c18794698f14220a8dcd47301a4da35de094e53387b594fd365dff673e428ee",
+    "850491431ad372bd02b188e384bf6167e275c3e39a61f68d101bd0b2f6aacef0",
+    "86245e840411223dcdac77ace72ccb5ea039ee4f97ddc2d2763b054f0072e7c3",
+    "8e58a1248cc6e1d2cff915a1302392f17ec52f9eff0529b385b03b912f9a4ea9",
+    "92c21aeb5f2566cc5790f325024b2955b9a9ce77804b3bf8270a0236da6dcb02",
+    "94590cd3067a24b44e0e55bf666e514bf7997682a43bddc1f84604cb44f7e587",
+    "99ab56db2e3685941f6b5fab4833ea884956f4ef367ff2a710726e34c79a3819",
+    "9d8345bfd45099c8ab67fa0122cb89666af651a42e5d01a5d40cd90b46cc6827",
+    "9e548869208ba1f6cde9f9b9c10d875e950b8bc195f36fc595acef72dc84f176",
+    "a2a3d60e21811916cde9269f08221000990e8235629bcc67d880ae472b6a18f9",
+    "af654a13431af4ae72dfd2fdeb5ed9f42cc2ef4999cd9c077c282af91f5a5999",
+    "b66d9c32c83ac79c0e415950321ab29223069b1bc7027302db7935b67e30452a",
+    "b73a25a464a4644d039cd2072a8f14bfd81b0438816c7bca63724917722b99ed",
+    "b7f19918647aabfbe2dc4a6bb0decdfb45de62f034ac5e86c4fcd93317b02f62",
+    "b8df40f9636662ad16a226ea2a56f7a37e08a2d7590f3debcd7e2629cda5b757",
+    "b9ea4402351b1a8e3ddc68e633b64644ae62ea597ae682e2d292a957ffc9d4f2",
+    "ba6cd5a864b7bc2ef4c4452a4a638b85706549f72321eab7f3b7b6ade12f1cf0",
+    "c0a3cc6f176252d14ff0714b0ca80f003be8fd1987cb7120a1f0b2a9daae0cb6",
+    "c4e179c025e7e112dcfaa22e18fabcbdbab373b6d778b6243fdcb932932b44df",
+    "c6ad5e6750394773c9d5f3b70eae773ddbee846aa66202affd7b214e5fa696ff",
+    "c8bd3531e3ff206398acbcb1274977b8fcafc6372145ad10ef01f114f96b6f55",
+    "c93db2956698b728ea56349da974b883886d0a97752221989d7623384335ffab",
+    "cd8497818f44529204d531a3ce5e084ed19a9d984659888dfff8c56bfd3e7432",
+    "d804047e8d3064b2f31f829ba1a3f41c3ef8e96cf500b32e8a842ad841e5b4b7",
+    "d9df67cd96e1fbab49c1cf88e883ad7828a55bd19de20289cf6fffbd3484dd8d",
+    "e101d65f756ba05cd94f04f0b2b6715d94b29cd43b8ce9031f95c81e386a534b",
+    "e31dcd107dee006787cd1ed67a0dcd529b2ae1f4c531f76c23671753fbb33b2c",
+    "e51ac9b1bbc9db538b0497e0f60f87eae4d719b2cfacdfa7c876fea201139f6b",
+    "ed84fba7ab8196c009dc979417bf922b793eb4073ab89bf5042ac50a75fd6387",
+    "efd2b302f5234882fc4cb79fe6d70bca853b56787da364158224d1fa32c0508e",
+    "f261dc72dc8727ca1f9036b3b107d849b124d0aeb98a467dadff7b7d92d2cf40",
+    "f38c9c0014fa292c5a764c7a5f31652917cbf729ef5e27be97e656f7c26ef5bb",
+    "fc066ff00d023ebd657a392284ac4f9b179b023bbc295cf4570f62d0902fea72"
+  ],
+  "controls_rejected": [
+    "wrong JSON serialization digest",
+    "population",
+    "verified count",
+    "refuted count",
+    "target",
+    "whole support",
+    "literal multiplicity",
+    "unresolved",
+    "unreviewed images",
+    "kernel pruning",
+    "cross-batch duplicate",
+    "binding statement",
+    "binding status",
+    "binding revision",
+    "report implied broader union",
+    "report mathematical invalidation"
+  ],
+  "process_observation": "Saved timestamp only; no current process assertion."
+}

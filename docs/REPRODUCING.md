@@ -2,7 +2,13 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [twenty-seventh milestone](RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+For current work, read the [twenty-eighth milestone](RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+and [twenty-eighth replay guide](REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md).
+The guide separates48 new literal complete proofs, the first12-only image union,
+the complete792 kernel diagnostic and two source-scoped launcher refutations.
+Eight exact replay commands are authenticated; no fresh duplicate mathematical
+audit was run for publication preparation. Next64 is outside this checkpoint.
+Also read the [twenty-seventh milestone](RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
 and [twenty-seventh replay guide](REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md).
 The guide separates complete literal proofs, the complete792 exact PSD screen,
 fibre coverage, domains and conditional formula-size estimates. Fourteen large

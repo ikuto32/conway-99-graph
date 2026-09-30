@@ -1,0 +1,106 @@
+{
+  "status": "CANDIDATE_EXPLICIT_BUILD_BATCH_SOURCE_PREPARATION_PASS",
+  "inputs_sha256": {
+    "acceleration/build_20260930_exact_eight_explicit_batch_v2.py": "c5acba24df4c224dce98510a6a77b4ca490ed0cd632f56d674fccffc0d0d7c2b",
+    "acceleration/build_20260930_exact_eight_explicit_batch_v2_spec.md": "17ed516985ab44ad1301b5c20020eb89fc9834b8147fe679d7294484531397be",
+    "acceleration/results/20260930_exact_eight_campaign_preparation/campaign_manifest.json": "e7b07ea2f7c6b9f6738641afc22779a503841d5ac3da58d3873ebb0fa4b784ba",
+    "acceleration/prepare_20260930_exact_eight_explicit_batch_v2.py": "d36f10100fc24a166aaf7c3766d7793e9a819e78473ddd36eb49238bcd987585",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "controls": [
+    {
+      "name": "literal caller order preserved",
+      "passed": true
+    },
+    {
+      "name": "reversed caller order preserved",
+      "passed": true
+    },
+    {
+      "name": "reject malformed schema",
+      "value": "wrong",
+      "rejected": true
+    },
+    {
+      "name": "reject malformed campaign_manifest_path",
+      "value": "wrong",
+      "rejected": true
+    },
+    {
+      "name": "reject malformed campaign_manifest_sha256",
+      "value": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rejected": true
+    },
+    {
+      "name": "reject malformed ordered_case_ids",
+      "value": [],
+      "rejected": true
+    },
+    {
+      "name": "reject malformed ordered_case_ids",
+      "value": [
+        "exact_eight_d779b1e3ec6b805c99bb1559f13200d57d5e01028c7dfd2a2b2058a654af0213",
+        "exact_eight_d779b1e3ec6b805c99bb1559f13200d57d5e01028c7dfd2a2b2058a654af0213"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "reject malformed ordered_case_ids",
+      "value": [
+        "exact_eight_0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "rejected": true
+    },
+    {
+      "name": "reject malformed ordered_case_ids",
+      "value": "exact_eight_d779b1e3ec6b805c99bb1559f13200d57d5e01028c7dfd2a2b2058a654af0213",
+      "rejected": true
+    },
+    {
+      "name": "reject malformed selection_reason",
+      "value": " ",
+      "rejected": true
+    },
+    {
+      "name": "reject path escape/noncanonical",
+      "value": "../uv.lock",
+      "rejected": true
+    },
+    {
+      "name": "reject path escape/noncanonical",
+      "value": "acceleration/../uv.lock",
+      "rejected": true
+    },
+    {
+      "name": "reject path escape/noncanonical",
+      "value": "C:/Windows/not-authorized.txt",
+      "rejected": true
+    },
+    {
+      "name": "reject path escape/noncanonical",
+      "value": "acceleration\\bad.json",
+      "rejected": true
+    },
+    {
+      "name": "reject path escape/noncanonical",
+      "value": "/tmp/bad",
+      "rejected": true
+    }
+  ],
+  "AST_compile_only": true,
+  "isolated_function_controls": true,
+  "runtime_repository_imports": 0,
+  "wrapper_plan_calls": 0,
+  "wrapper_build_calls": 0,
+  "producer_calls": 0,
+  "native_calls": 0,
+  "new_selection_artifacts": 0,
+  "new_formula_builds": 0,
+  "independent_approval": false,
+  "limitations": [
+    "No wrapper entrypoint was called.",
+    "Future root supplies a separately hash-bound literal ordered selection.",
+    "Source-only checks do not independently approve future formulas or campaign coverage."
+  ]
+}
