@@ -21,7 +21,15 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the latest [twenty-seventh milestone](docs/RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+See the latest [twenty-eighth milestone](docs/RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md).
+Six new scoped claims are verified and two unused-launcher guarantees are refuted.
+The next32 and sizeclass16 batches add48 complete independently replayed literal
+exclusions, bringing this frozen792-case campaign to60 excluded and732 unresolved.
+Only the first12 have a checked72-image union. The complete792 common-kernel test
+removes no local options. The checkpoint freezes294 claims; no whole-support or
+target resolution follows. Next64 and replacement-launcher work are separate.
+See the previous [twenty-seventh milestone](docs/RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
 and [replay guide](docs/REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md).
 Eight new scoped claims are verified. All twelve first-batch literal Gram
 instances have complete independently checked UNSAT proofs; one repeats the
