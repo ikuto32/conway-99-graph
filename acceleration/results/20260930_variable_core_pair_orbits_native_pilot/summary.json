@@ -1,0 +1,131 @@
+{
+  "actual_exit_code": 0,
+  "receipt": {
+    "timestamp": "2026-09-30T01:11:19.988915+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "900s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "5000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_variable_core_pair_orbits/instance.cnf",
+      "/tmp/conway99-variable-core-pair-orbits-J4ugHk/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 0,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 920,
+    "wall_seconds": 872.5470000000205,
+    "stdout": "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "620cee2256e595efd8ce13a1e976f3dc5ab1d5ebcccc69d908a3d7b2716e924d",
+    "stderr": "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "status": "PAIR_ORBIT_FACTOR_ARTIFACTS_PENDING_INDEPENDENT_REVIEW",
+  "target_resolution": false,
+  "scope": "Normalized universally necessary core/factor only; no complete target graph.",
+  "automatic_retry": false,
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-variable-core-pair-orbits-J4ugHk/proof.drat",
+    "sha256": "8076ece031d0ff1588d33337197810a6ac5d55199bcd3ed545b95aef7754f931",
+    "bytes": 5621796493,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T01:11:23.814304+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-variable-core-pair-orbits-J4ugHk/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 3.8130000000819564,
+      "stdout": "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "b39cc4c868228cac694b1ab14de4f443e224fb8548bd5bee73a344cf459e9ab8",
+      "stderr": "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T01:12:06.165266+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-variable-core-pair-orbits-J4ugHk/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 42.34400000004098,
+      "stdout": "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 4.297000000020489
+  },
+  "interpreted_result": "UNKNOWN_NATIVE_OR_RESOURCE_OUTCOME",
+  "outputs_sha256": {
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/launch.json": "84442d0d8c79cc985076b77258dcd350f3c3b4a4bcec322bd659ae627bec9749",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/proof.drat": "8076ece031d0ff1588d33337197810a6ac5d55199bcd3ed545b95aef7754f931",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/solver.receipt.json": "2ba65eab527f0494df732877469bd8eda1f8c5662014590adadb9ba3697b5674",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/solver.stdout.log": "620cee2256e595efd8ce13a1e976f3dc5ab1d5ebcccc69d908a3d7b2716e924d",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_copy.receipt.json": "2c148e8ba16e58035f698bf12c80b78d0cdf4c8a83efe1fc9608e7bb173eb382",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_hash.receipt.json": "635d25e20030bfc4b09fc2459d850a8e9379ed07ef825fe8940d9d922dd4db9a",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_variable_core_pair_orbits_native_pilot/main/transfer_hash.stdout.log": "b39cc4c868228cac694b1ab14de4f443e224fb8548bd5bee73a344cf459e9ab8"
+  },
+  "limitations": [
+    "SAT requires complete independent clause/object checks and still supplies no residual D.",
+    "UNSAT requires complete proof replay; encoding and coverage gates alone are not a resolution.",
+    "Incomplete traces and native/resource UNKNOWN outcomes establish no mathematical exclusion."
+  ]
+}

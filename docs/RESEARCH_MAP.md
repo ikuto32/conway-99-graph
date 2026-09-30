@@ -4,6 +4,11 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [fourteenth milestone](RESEARCH_20260930_FOURTEENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_FOURTEENTH_WAVE.md) cover finite GPU
+calibration/saved states, checkpoint repair, ordered-pair normalization,
+the fixed six-prism column-cap encoding, a finite failed modular route,
+and two completed UNKNOWN native searches. No target resolution is claimed.
 The [thirteenth milestone](RESEARCH_20260930_THIRTEENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_THIRTEENTH_WAVE.md) cover two verified
 relabelling reductions, a nonempty different-parameter validation fixture,

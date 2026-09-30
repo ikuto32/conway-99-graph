@@ -1,0 +1,27 @@
+{
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py",
+    "run",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\guard_research_without_gate",
+    "--core",
+    "shift6",
+    "--seed",
+    "20260930",
+    "--chains",
+    "2",
+    "--chunks",
+    "1",
+    "--steps",
+    "23",
+    "--seconds",
+    "30",
+    "--temperature",
+    "3.25"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 302, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 296, in main\n    result=resume_regression(out) if args.mode=='resume-calibrate' else run_chunks(args,out,calibration_only=args.mode=='calibration-chunk')\n                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 209, in run_chunks\n    need(args.independent_gate and args.independent_gate_sha256,'independent audit gate required before research chunks')\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 37, in need\n    if not b: raise ValueError(s)\n              ^^^^^^^^^^^^^^^^^^^\nValueError: independent audit gate required before research chunks\n"
+}

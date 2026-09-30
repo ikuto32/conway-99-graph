@@ -7,7 +7,17 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [thirteenth milestone](docs/RESEARCH_20260930_THIRTEENTH_WAVE.md)
+The latest [fourteenth milestone](docs/RESEARCH_20260930_FOURTEENTH_WAVE.md)
+records 138 claims, 136 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Eight new claims
+cover finite GPU calibration/saved states, a checkpoint repair and diagnosed
+failure, ordered-pair normalization, a finite failed modular route, and the
+fixed six-prism column-cap encoding. Both native attempts ended UNKNOWN.
+No target factor, graph or general proof was obtained. Next: independently
+gated SAT attempts on four selected connected identity-P cores. Later runs
+require their own receipts; this file is not a live process observation.
+[Fourteenth replay guide](docs/REPRODUCING_20260930_FOURTEENTH_WAVE.md).
+
+The [thirteenth milestone](docs/RESEARCH_20260930_THIRTEENTH_WAVE.md)
 records 130 claims, 128 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Two relabelling
 reductions preserve their declared model coverage, a 243-vertex raw fixture
 provides a nonempty positive control, and a dynamic necessary residual screen

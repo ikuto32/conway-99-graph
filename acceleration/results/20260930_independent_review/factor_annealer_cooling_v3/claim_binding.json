@@ -1,0 +1,80 @@
+{
+  "status": "INDEPENDENT_COOLING_CLAIM_BINDING_PASS",
+  "claim_id": "C-FACTOR-PERMUTATION-ANNEALER-COOLING-SAVED-STATES",
+  "claim_revision": 1,
+  "statement": "All64 saved chunk-best and64 stage-final-current plus64 stage-final-best factors from the frozen four-stage cooling run satisfy their two declared permutation domains and exact recorded integer scores, with verified checkpoint continuation of32 prior chains and minima164 to134 to124 for shift6 and184 to146 to142 for six-prism; none of these saved states has score zero.",
+  "kind": "empirical/engineering result",
+  "basis": [
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Saved-state scores/domain and actual checkpoint carry across four cooling stages in two fixed cores, not a factor construction or target exclusion.",
+  "dependencies": [
+    {
+      "id": "C-FACTOR-PERMUTATION-PUBLIC-JSON-RESUME-CALIBRATION",
+      "revision": 1,
+      "relation": "verification_dependency"
+    },
+    {
+      "id": "C-FACTOR-PERMUTATION-ANNEALER-PILOT-SAVED-STATES",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-SRG243-NONEMPTY-RESIDUAL-POSITIVE-CONTROL",
+      "revision": 1,
+      "relation": "verification_dependency"
+    },
+    {
+      "id": "C-FIXED-TRIANGLE-JOINT-BINARY-FACTOR-CNF-ENCODING",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-SIX-PRISM-COMPLETE-COLUMN-FACTOR-CNF",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "assumptions": [
+    "No nontrivial target automorphism is assumed.",
+    "Exact frozen artifacts and stated integer objective."
+  ],
+  "evidence": [
+    {
+      "path": "acceleration/results/20260930_independent_review/factor_annealer_cooling_v3/summary.json",
+      "sha256": "763d770272bdf6b40a7db70be82e330ac85611d626c8f6f48f15b38eead858f3",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "verification": [
+    {
+      "claim_revision": 1,
+      "verifier": "/root/state_literature_audit independent raw-state and checkpoint checker",
+      "method": "independent_artifact_check",
+      "command_or_audit": "acceleration/results/20260930_independent_review/factor_annealer_cooling_v3/summary.json",
+      "timestamp": "2026-09-30T01:15:20.401289+00:00",
+      "outcome": "PASS",
+      "scope": "Saved-state scores/domain and actual checkpoint carry across four cooling stages in two fixed cores, not a factor construction or target exclusion.",
+      "artifact_hashes": {
+        "acceleration/results/20260930_independent_review/factor_annealer_cooling_v3/summary.json": "763d770272bdf6b40a7db70be82e330ac85611d626c8f6f48f15b38eead858f3"
+      },
+      "shared_components": [
+        "Frozen independent full columnwise objective and separately authored bitset raw-factor validator.",
+        "Python standard library; no producer imports."
+      ]
+    }
+  ],
+  "limitations": [
+    "All 1048576 records were counted; individual campaign transition deltas, acceptance and RNG progression were not replayed.",
+    "Checkpoint input RNG/current/best/counters match the preceding saved state exactly; this does not claim the wrapper never computes an unused seeded temporary before loading its checkpoint.",
+    "Stage-chain populations overlap:64 per-stage endpoints represent32 continuing chain identities.",
+    "Positive scores and observed improvements are not mathematical bounds or exclusions; caps are checked only as diagnostics.",
+    "No performance or target-wide coverage conclusion."
+  ],
+  "created_at": "2026-09-30T01:15:20.401289+00:00",
+  "updated_at": "2026-09-30T01:15:20.401289+00:00",
+  "artifact_availability": "LOCAL_ONLY",
+  "ledger_changed": false
+}
