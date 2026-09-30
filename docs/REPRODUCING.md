@@ -2,7 +2,13 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [twenty-fourth milestone](RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
+For current work, read the [twenty-fifth milestone](RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
+and [twenty-fifth replay guide](REPRODUCING_20260930_TWENTYFIFTH_WAVE.md).
+Its eight large originals have exact recovery from 231 gzip parts. Four of
+those originals are UNKNOWN partial traces, not contradiction proofs. The guide
+separates count witnesses, literal-profile proof replay, normalization and
+conditional algebraic results. Later third-lift work is outside that checkpoint.
+Also read the [twenty-fourth milestone](RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
 and [twenty-fourth replay guide](REPRODUCING_20260930_TWENTYFOURTH_WAVE.md).
 The latter binds 443 raw artifacts to their compressed public recovery streams
 and separates artifact recovery, proof replay, encoding and coverage checks.

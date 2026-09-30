@@ -1,0 +1,29 @@
+# Independent alternating-completion and block-rank review
+
+All statements below are algebraic. The finite controls are calibration, not proofs of their universal quantifiers. The checking source imports no discovery or prior checker implementation. It uses coordinate-list elimination with reverse pivot order, direct equations in the unknown off-diagonal entries of D for the finite completion tests, literal integer graph identities, and direct neighbour intersections. Shared components are the raw matrices, authenticated prior reports, standard-library arithmetic, and the explicitly disclosed deterministic random generator used to authenticate the saved sample labels.
+
+## Alternating completion over GF(2)
+
+Let F,H have a rows and m columns. An m by m symmetric zero-diagonal D satisfying FD=H exists if and only if the left kernels obey `ker(F^T) subset ker(H^T)` and `FH^T` is alternating. The first condition is essential: it defines a linear map T on W=im(F^T) by T(F^T x)=H^T x. On V by W, where V=GF(2)^m, prescribe b(v,w)=v^T T(w). On W by W this prescription is symmetric and alternating exactly when FH^T is. Choose a basis of W and extend it to V. The prescribed columns and their transposed rows agree on the W block; choose an arbitrary alternating complementary block. In the standard basis the resulting alternating form has matrix D with DF^T=H^T. Symmetry gives FD=H. This argument neither requires full rank nor assumes any particular complement or graph interpretation.
+
+To also require Dj=0 for the all-ones outside vector, the exact extra conditions are Hj=0 and, if j belongs to W, T(j)=0. In the latter case any solution x to F^T x=j must have H^T x=0; the left-kernel condition makes the value independent of x. If j is outside W, extend T by T(j)=0. The only new cross consistency is j^T T(w)=0, which is Hj=0. The extended form construction proves sufficiency. These are conditions for a linear binary mixed equation only; no residual quadratic identity, integer degree or entrywise common-neighbour equality follows.
+
+The saved generic example F=H with rows1100 and0011 separates alternating completion from even-degree alternating completion. Alternating solutions exist, but j is the sum of the two F rows and T(j)=j rather than0. This is not a triangle-factor example.
+
+## Triangle specialization
+
+Let n be even. Assume C is symmetric, binary, zero-diagonal, on three n-cells, with exactly one neighbour in each cell for each vertex. Thus C is cubic. Put U=diag(J_n,J_n,J_n). Directly CU=UC=J. For a genuine integer factor with `FF^T=nI-C-C^2+2J-U`, reduction modulo2 gives G=C+C^2+U and H=(I+C)F. The matrix C commutes with G, hence `FH^T=G(I+C)` is symmetric. Its diagonal is zero: diag(G)=0, while `GC=C^2+C^3+J` has diagonal1+0+1=0. The diagonal of C^3 is zero because every triangle through a vertex contributes twice. Therefore symmetry and zero diagonal introduce no further obstruction beyond the already necessary mixed-equation kernel condition for this stated factor scope.
+
+Integer row sums n-2 imply Fj=0 and Hj=0 modulo2. The remaining even-degree condition is still the prescribed image of j when j is in the row space. This review does not assert it is automatic for every valid factor, nor claim a newly excluded target or construct a residual graph.
+
+## Independent symmetric block-rank bound
+
+Over any field, for symmetric B,D and rectangular E, write r=rank(B), s=rank([B,E]), q=s-r. A congruence change of basis splits B into a nonsingular r-dimensional block and its radical. Eliminating the part of E adjoining the nonsingular block leaves a residual block with zero radical-by-radical corner and an off-diagonal matrix of rank q. Row/column basis changes reduce that matrix to an identity on q coordinates. The resulting 2q-square principal block is `[[0,I],[I,X]]`, which is nonsingular: its first block equation forces the second vector to vanish, then the second forces the first to vanish. The already split r-block contributes separately. Hence `rank([[B,E],[E^T,D]]) >= 2s-r`. No alternating or characteristic-two assumption is needed for this general bound.
+
+For a triangle scaffold B and E=[0;F], the three vectors (j3,r_i) belong to both ker(B) and ker(E^T), provided n is even and each F column meets each cell evenly. They are independent, so s<=3n. For n=12 the prior target rank54 condition therefore yields no obstruction from this bound whenever r>=18. That is a conditional statement. No universal rank(B)>=18 is proved here; the six-K3,3 diagnostic has rank16 and fails local pair caps, so it is not a counterexample among admissible cores. All other finite ranks remain measurements of the named saved inputs.
+
+## Artifact and control scope
+
+The audit reconstructs all4,096 ordered F,H pairs of size2 by3, all eight alternating3 by3 completions, the optional even-degree classification, all512 saved B/E block-bound cases, and all64 saved rank controls. It additionally checks the block inequality for all32,768 symmetric B3/E3by2/D2 triples, including diagonal entries, to calibrate the more general statement. It verifies saved rank certificates by independent rank/row-space/kernel checks rather than assuming the producer's pivots.
+
+The genuine243 graph is checked as an exact integer SRG(243,22,1,2), including all59,049 ordered identity entries, its raw triangle relabelling and the supplied nonempty residual. Its binary ranks are control data for those parameters. All seventy saved core diagnostics and the two annealer objects are recomputed; the latter fail full integer Gram and remain nonfactor diagnostics. Negative controls cover malformed matrices, incompatible kernel/form/even-degree conditions, corrupted certificates, and changed genuine graph/factor entries. No native solver, graph search, ledger edit, or new universal rank lower bound is involved. Archive overlap is retained explicitly and no novelty is asserted.

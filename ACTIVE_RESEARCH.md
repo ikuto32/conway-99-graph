@@ -7,7 +7,22 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-fourth milestone](docs/RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
+The latest [twenty-fifth milestone](docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
+freezes 267 claims: 262 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
+Eighteen verified additions include one further literal eight-count exclusion,
+six necessary scalar cuts, a third checked count witness, direct-cell encoding
+and normalization audits, and two scoped algebraic results. An unbuilt design
+inventory is CANDIDATE. Four direct-cell attempts completed UNKNOWN.
+The third count witness satisfies all 705,845 clauses and 540 universal upper
+bounds; this is not a full Gram factor. The prior conditional at-least-eight
+bound is unchanged. Overall search coverage: UNKNOWN; no validated denominator.
+Next: test the third count profile's exact local domains and simultaneous Gram
+lift, independently checking any complete proof. Later third-lift and shared
+upper-envelope work belong to the next wave, outside this frozen milestone.
+This file is not a live process observation and does not stop the resumed work.
+[Twenty-fifth replay guide](docs/REPRODUCING_20260930_TWENTYFIFTH_WAVE.md).
+
+The previous [twenty-fourth milestone](docs/RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
 records 248 claims: 244 VERIFIED/CLEAR, 2 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
 Eighteen new checked claims and one refuted exact-extrema formula include
 complete replay of 216 seven-profile proofs and exact coverage of all 1,608

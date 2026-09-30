@@ -21,7 +21,15 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [twenty-fourth resumed milestone](docs/RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
+See the [twenty-fifth milestone](docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYFIFTH_WAVE.md).
+Eighteen verified additions exclude one further literal eight-count profile,
+establish six necessary scalar cuts, and verify a third count witness.
+Four direct-cell attempts ended UNKNOWN. Two general algebraic results retain
+their explicit field and conditional triangle assumptions. One unbuilt design
+inventory remains CANDIDATE. No complete factor or target resolution follows.
+The milestone freezes 267 claims; subsequent third-profile Gram work is separate.
+See the previous [twenty-fourth resumed milestone](docs/RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
 and [replay guide](docs/REPRODUCING_20260930_TWENTYFOURTH_WAVE.md)
 for eighteen new verified claims and one refuted formula claim. Complete proof
 replay and exact coverage exclude seven unbalanced groups on the literal
