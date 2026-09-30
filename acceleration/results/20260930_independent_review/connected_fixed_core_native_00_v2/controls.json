@@ -1,0 +1,119 @@
+{
+  "positive_synthetic_cases": [
+    {
+      "label": "SYNTHETIC outcome parser only",
+      "stdout": "c Version 1.9.5 146207318796f094dcded87349a64f0c6927309e\nc found 'p cnf 110904 518184' header\nc setting conflict limit to 2000000 conflicts (due to '2000000')\nc UNKNOWN\nc conflicts: 2000001 0.0 per second\nc total real time since initialization: 100.00 seconds\nc total process time since initialization: 99.00 seconds\nc exit 0\n",
+      "receipt": {
+        "actual_exit_code": 0,
+        "outer_windows_guard_expired": false,
+        "wall_seconds": 100.1
+      },
+      "checked": {
+        "recorded_outcome": "UNKNOWN_NATIVE_CONFLICT_CAP",
+        "wrapper_exit_code": 0,
+        "native_exit_code": 0,
+        "native_exit_code_null_reason": null,
+        "observed_final_conflicts": 2000001,
+        "configured_conflict_limit": 2000000,
+        "conflict_cap_reached": true,
+        "native_real_seconds": 100.0,
+        "native_process_seconds": 99.0,
+        "wrapper_wall_seconds": 100.1
+      }
+    },
+    {
+      "label": "SYNTHETIC outcome parser only",
+      "stdout": "c Version 1.9.5 146207318796f094dcded87349a64f0c6927309e\nc found 'p cnf 110904 518184' header\nc setting conflict limit to 2000000 conflicts\nc UNKNOWN\nc caught signal 15 (SIGTERM)\nc conflicts: 42 0.0 per second\nc total real time since initialization: 100.00 seconds\nc total process time since initialization: 99.00 seconds\nc raising signal 15 (SIGTERM)\n",
+      "receipt": {
+        "actual_exit_code": 124,
+        "outer_windows_guard_expired": false,
+        "wall_seconds": 300.1
+      },
+      "checked": {
+        "recorded_outcome": "UNKNOWN_GNU_TIMEOUT_SIGTERM",
+        "wrapper_exit_code": 124,
+        "native_exit_code": null,
+        "native_exit_code_null_reason": "GNU timeout wrapper exit124; native received SIGTERM.",
+        "observed_final_conflicts": 42,
+        "configured_conflict_limit": 2000000,
+        "conflict_cap_reached": false,
+        "native_real_seconds": 100.0,
+        "native_process_seconds": 99.0,
+        "wrapper_wall_seconds": 300.1
+      }
+    },
+    {
+      "label": "SYNTHETIC outcome parser only",
+      "stdout": "c Version 1.9.5 146207318796f094dcded87349a64f0c6927309e\nc found 'p cnf 110904 518184' header\nc setting conflict limit to 2000000 conflicts\ns SATISFIABLE\nc conflicts: 42 0.0 per second\nc total real time since initialization: 100.00 seconds\nc total process time since initialization: 99.00 seconds\nc exit 10\n",
+      "receipt": {
+        "actual_exit_code": 10,
+        "outer_windows_guard_expired": false,
+        "wall_seconds": 100.1
+      },
+      "checked": {
+        "recorded_outcome": "SAT_RAW_OBJECT_REQUIRES_SEPARATE_CHECK",
+        "wrapper_exit_code": 10,
+        "native_exit_code": 10,
+        "native_exit_code_null_reason": null,
+        "observed_final_conflicts": 42,
+        "configured_conflict_limit": 2000000,
+        "conflict_cap_reached": false,
+        "native_real_seconds": 100.0,
+        "native_process_seconds": 99.0,
+        "wrapper_wall_seconds": 100.1
+      }
+    },
+    {
+      "label": "SYNTHETIC outcome parser only",
+      "stdout": "c Version 1.9.5 146207318796f094dcded87349a64f0c6927309e\nc found 'p cnf 110904 518184' header\nc setting conflict limit to 2000000 conflicts\ns UNSATISFIABLE\nc conflicts: 42 0.0 per second\nc total real time since initialization: 100.00 seconds\nc total process time since initialization: 99.00 seconds\nc exit 20\n",
+      "receipt": {
+        "actual_exit_code": 20,
+        "outer_windows_guard_expired": false,
+        "wall_seconds": 100.1
+      },
+      "checked": {
+        "recorded_outcome": "UNSAT_RAW_TRACE_REQUIRES_INDEPENDENT_REPLAY",
+        "wrapper_exit_code": 20,
+        "native_exit_code": 20,
+        "native_exit_code_null_reason": null,
+        "observed_final_conflicts": 42,
+        "configured_conflict_limit": 2000000,
+        "conflict_cap_reached": false,
+        "native_real_seconds": 100.0,
+        "native_process_seconds": 99.0,
+        "wrapper_wall_seconds": 100.1
+      }
+    }
+  ],
+  "corruptions_rejected": [
+    "0_wrong_dimensions",
+    "0_wrong_limit",
+    "0_wrong_argument_annotation",
+    "0_duplicate_status",
+    "0_outer_guard",
+    "0_missing_termination",
+    "0_wrong_exit",
+    "124_wrong_dimensions",
+    "124_wrong_limit",
+    "124_wrong_argument_annotation",
+    "124_duplicate_status",
+    "124_outer_guard",
+    "124_missing_termination",
+    "124_wrong_exit",
+    "10_wrong_dimensions",
+    "10_wrong_limit",
+    "10_wrong_argument_annotation",
+    "10_duplicate_status",
+    "10_outer_guard",
+    "10_missing_termination",
+    "10_wrong_exit",
+    "20_wrong_dimensions",
+    "20_wrong_limit",
+    "20_wrong_argument_annotation",
+    "20_duplicate_status",
+    "20_outer_guard",
+    "20_missing_termination",
+    "20_wrong_exit"
+  ],
+  "research_claim": false
+}
