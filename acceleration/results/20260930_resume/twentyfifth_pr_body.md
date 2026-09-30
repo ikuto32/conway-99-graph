@@ -1,0 +1,15 @@
+A second literal eight-count profile on the fixed six-prism Hadamard support is excluded by both a complete independently checked UNSAT proof and an exact scalar obstruction. Six necessary partial scalar cuts then produce a third independently checked count witness. These results do not produce a full Gram factor.
+
+Conway-99 remains unresolved. No validated 99-vertex target graph, whole-support exclusion or general nonexistence proof exists in this repository. No target-resolution artifact is under external review. No nontrivial target automorphism is assumed. This PR remains draft and must not be automatically merged.
+
+- Since the previous milestone: 18 VERIFIED/CLEAR claims and one CANDIDATE inventory; frozen ledger totals are 267 claims: 262 VERIFIED/CLEAR, three CANDIDATE/CLEAR and two REFUTED/CLEAR.
+- Two count instances were each attempted once and independently decoded. The second literal profile's full-Gram lift has a complete 1,269,209-byte proof. Its scalar obstruction is an overlapping exclusion, not another disjoint case.
+- Four direct-cell attempts completed UNKNOWN: standalone and count-coupled formulas, each with and without equal-support lex normalization. The encodings and existence-preserving relabelling were independently checked. All four partial traces are preserved but are not UNSAT proofs.
+- General alternating-completion and block-rank criteria were independently derived and checked with explicit field and conditional triangle assumptions. They do not exclude the target.
+- Publication metadata independently checked all 15,995 reference bindings, eight recovered originals and 231 gzip members. Local registry validation and all 56 registry tests passed. Full graph-validator self-tests and Python syntax controls passed locally; CI is recorded separately after observation.
+
+Overall search coverage: UNKNOWN; no validated denominator.
+
+Evidence commit: [9125c523190464b147f67ec1eb58887ad8bb9295](https://github.com/ikuto32/conway-99-graph/commit/9125c523190464b147f67ec1eb58887ad8bb9295). [Milestone](https://github.com/ikuto32/conway-99-graph/blob/9125c523190464b147f67ec1eb58887ad8bb9295/docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md) · [Replay guide](https://github.com/ikuto32/conway-99-graph/blob/9125c523190464b147f67ec1eb58887ad8bb9295/docs/REPRODUCING_20260930_TWENTYFIFTH_WAVE.md) · [Frozen ledger](https://github.com/ikuto32/conway-99-graph/blob/9125c523190464b147f67ec1eb58887ad8bb9295/CLAIMS.yaml) · [Catalog](https://github.com/ikuto32/conway-99-graph/blob/9125c523190464b147f67ec1eb58887ad8bb9295/acceleration/results/20260930_twentyfifth_artifact_packaging_v2/catalog.json) · [Independent publication audit](https://github.com/ikuto32/conway-99-graph/blob/9125c523190464b147f67ec1eb58887ad8bb9295/acceleration/results/20260930_independent_review/twentyfifth_publication_metadata/summary.json).
+
+The milestone's frozen next experiment is the third profile's simultaneous Gram lift. Subsequent third-lift and upper-envelope experiments belong to the next wave and are excluded from these counts. The earlier conditional lower bound of eight unbalanced groups remains unchanged.
