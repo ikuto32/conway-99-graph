@@ -21,7 +21,16 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [twenty-fifth milestone](docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
+See the [corrected twenty-sixth milestone](docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYSIXTH_WAVE.md).
+Eleven verified additions include the complete fixed-support exactly-eight
+count census: 1,548 fibre classes, 756 scalar exclusions and 792 survivors.
+All survivors pass separate block tests; these do not establish a joint factor.
+A third literal profile has a completely checked UNSAT proof. A GF(3) mixed
+completion criterion and three exact PSD diagnostics retain their stated scopes.
+The milestone freezes 278 claims. No whole-support or target resolution follows.
+Later next-profile and PSD-kernel work is separate.
+See the previous [twenty-fifth milestone](docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
 and [replay guide](docs/REPRODUCING_20260930_TWENTYFIFTH_WAVE.md).
 Eighteen verified additions exclude one further literal eight-count profile,
 establish six necessary scalar cuts, and verify a third count witness.

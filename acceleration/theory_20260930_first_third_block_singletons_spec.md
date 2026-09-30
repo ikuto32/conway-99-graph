@@ -1,0 +1,7 @@
+# Six-way singleton follow-up
+
+The completed core/block scout is immutable. Its two exact block fixed points both restrict group16 to option indices54,55,56,90,91,92. This follow-up tests exactly these six singleton cases for each of the two original literal profiles, first then third, ascending option order. It does not test arbitrary new profiles or run SAT.
+
+Start from the saved necessary-domain fixed point and restrict only group16 to the selected option. Reapply the same literal nine-cell block support rule, with complete forward/backward vector-sum evidence. The six singleton cases partition the necessary remaining group16 domain. If all six empty, they form a complete conditional block obstruction, pending separate independent review. Any nonempty fixed point is unresolved. No additional branching, retries or hidden selection. Maximum60seconds cooperative for all12 cases, save partial boundaries and raw removal evidence. Reuse frozen scout source and its calibrated support kernel explicitly; this is producer evidence, not independent approval.
+
+The potential reusable rule is singleton generalized arc consistency: a local option is impossible when conditioning on it makes exact necessary Gram-block propagation contradictory. Scope remains initial within-triplicate-cap local domains; no cross-group caps or residualD. Originals, prior source and publication files remain unchanged.

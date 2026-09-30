@@ -1,0 +1,582 @@
+{
+  "id": "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-EXCLUSION",
+  "revision": 1,
+  "kind": "exclusion",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "No binary 36x60 factor on the frozen six-prism Hadamard support has the prescribed integer Gram, within-triple column caps, and literal eight-exception profile count_master_third_native_sat_after_six_scalar_cuts (digest 3bc6ebf9444e7a2f15af1ac85c6164119333244ced5d6dbe83a6c6b367e533d5), with exceptional groups 1, 3, 5, 11, 13, 15, 18, 19. The exact equivalent formula with 9,748 variables and 167,416 clauses is UNSAT by complete independently replayed DRAT proof.",
+  "scope": "Only the literal count_master_third_native_sat_after_six_scalar_cuts count profile on this fixed support; no orbit transfer, other profile or whole-support conclusion.",
+  "assumptions": [
+    "Pinned fixed support and literal count_master_third_native_sat_after_six_scalar_cuts count profile.",
+    "Within-triple column caps.",
+    "No target automorphism assumption."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+      "revision": 1,
+      "relation": "encoding_equivalence"
+    }
+  ],
+  "verifier": "/root/structural_attack",
+  "producer": "/root/eight_domain_audit (encoding), /root (native execution)",
+  "method": "Complete raw DRAT replay against exact independently checked CNF, authenticated checker source/binary, positive/corrupt proof controls and native receipt validation.",
+  "shared_components": [
+    "Specialized from the frozen second-eight-profile proof audit (which specialized the first-eight-profile audit), with optional absent conflict counter and independent raw unit-propagation calibration; that source specialized the frozen independent seven-profile receipt/control audit, itself adapted from the six-profile and case0 audits; reuses only independently authored checker-authentication and subprocess replay helpers from the balanced proof review.",
+    "Same source-authenticated DRAT-trim binary and compiler/runtime as earlier checks; no producer Python imports."
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_eight_count_profile_lift_third/instance.cnf": "0f82ec4239be19f6ba3311b26a5d0f10b093c4aee0aff682dc68debe55d160a9",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/summary.json": "73dd66bb97da7b9da731586230d24bf56200512f755a81f0e01b7b844e412e1f",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/proof.drat": "17d87b5ef8724d70d7809d8f9cb581afe720272a1633fde261767f90b035340c",
+    "acceleration/results/20260930_independent_review/eight_count_profile_lift_third/summary.json": "306e86ff14f7be929cd1f0f345b127b8cdf7341ae1e016b51499f2773654aab6",
+    "acceleration/results/20260930_independent_review/eight_count_profile_lift_third_object_calibration/summary.json": "6a1f00d783976bfa63a0f63f9b479829f73bb967731784b355a1e2b0caed0039",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_gram_unsat_v2/summary.json": "edbbda720ea38ca5c565837bc39b5083eb145a64386c9e070fe89dfe5d6cebc5",
+    "acceleration/audit_20260930_second_eight_count_profile_unsat.py": "15ffaea4289fecf289e321bc2645f98b9587a2ffa42cf84198907999033a1e6e",
+    "acceleration/audit_20260930_hadamard_balanced_gram_unsat_v2.py": "93e6426fb5a8503e541a692d6c3d2b3e6210be43c16b2a9ff9772aba56085459",
+    "build/rook-drat-checker/drat-trim.exe": "23d1613cb0b1ed491f4e723ff82492a8be6c349c2426d440412842c5246b90ac",
+    "build/rook-drat-checker/build_manifest.json": "219e14aeb9efb7df5629cb45405b08d45b2613133207e92bd4f7c09a5b2211b7",
+    "build/rook-drat-checker/build_receipt.json": "4862b4cc61fe2832943c988c5418cd85ae795924fd83a40482c0da4fb03b7e4b",
+    "build/rook-drat-checker/upstream-drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "build/rook-drat-checker/windows-portability.patch": "2050f0b7ce9d4878944eecf6d94c414d8d60941a3e9f2df353ad30cd5316676c",
+    "build/rook-drat-checker/drat-trim.c": "82835512d4eda7dee1e0e3f610a0672fa1d216ea91246bcb576022020fe18f4c",
+    "build/rook-drat-checker/build.cmd": "c83b60af88ebbd92ef4fe554c851be35d8dfa4bea798b75941e6524c2597f456",
+    "build/rook-drat-checker/build_stdout.log": "9bca6aac2d4ec4663c7e7533a2a7804ae60aa9f6b6cbca8573746fd2195c7b17",
+    "build/rook-drat-checker/build_stderr.log": "9873a037014a27afc0ff96a6133e89a78294c6e2790e9c4a358ff12ebcb72e8a",
+    "acceleration/audit_20260930_rook_drat_build_v1.py": "9e7b1fac0db299b35014ea4c74a90dfe606d2e72bab2044c4e61cfdf54a82371",
+    "acceleration/results/20260930_eight_count_profile_lift_third/summary.json": "69eb50b0cb780b58df71283195a84fcf50a5b9ea627d3e879aa5131abc4404b6",
+    "acceleration/results/20260930_eight_count_profile_lift_third/model.json": "0a821d08532ece7d99bc5917a61af8dd0338379ab73a83c3687cbdf5ea480634",
+    "acceleration/results/20260930_eight_count_profile_lift_third/scope.json": "4f5eedcd74eb2c5d44a6955f80b9d8cfb8899949bcfeb31a5aafd56adc8260e2",
+    "acceleration/results/20260930_independent_review/count_master_partial_cut_sat_outcome/independent_count_profile.json": "03d68bdfff62aa6f73dd44d72eab80acfdb8d001bb1b504df7aa36707b8d695e",
+    "acceleration/results/20260930_independent_review/count_master_partial_cut_sat_outcome/summary.json": "736ccbcda81ee34c21ede2a80253d5b224fabb96a2e83d0a2c1c76dba435d071",
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_hadamard_triplicate_counts/local_triples.json": "9e2cc28f419241755a9c7380fbe217ff04bff0bb4bcd3708be104a40295d9776",
+    "acceleration/results/20260930_srg243_residual_fixture/triangle_blocks.json": "3f8dfa3803d6a5db8146dd24a0857477e1aa061ab10dac0f9e6e564aabc86439",
+    "acceleration/audit_20260930_hadamard_seven_profile.py": "7e60ee6823912af75cec5d43e6dd440fac7a419c2576f9258148463a60865729",
+    "acceleration/audit_20260930_hadamard_balanced_gram_v2.py": "cfddc6521887d6d44904ee7f2b92b0f189cfe5675b4f8d12d6df96ffe830e35c",
+    "acceleration/audit_20260930_hadamard_oriented_triples.py": "f572c91dc43f7208d34976b165c621c1b314e6963e437eaa475520ae1eb0add3",
+    "acceleration/theory_20260930_eight_count_profile_lift_third.py": "59cf7df0013dc62b79812b784a15a7e9b42ee101510f5a94db0dcfa998812767",
+    "acceleration/theory_20260930_eight_count_profile_lift_third_spec.md": "b6386f66bb570df301a766ce4e59f389850e3adcbf11cb959c614fcd0a5b221f",
+    "acceleration/audit_20260930_eight_count_profile_lift_second.py": "5f1f67ef6e6c189f3ad8d66edf83387270c2d6f0515b12a38524c38ee91c390b",
+    "acceleration/theory_20260930_eight_count_profile_lift_second.py": "b51b99d69bb48440ff145680f3c77ff58814605b4f01178375c7d041fbc14fe6",
+    "acceleration/results/20260930_independent_review/hadamard_triplicate_counts_v2/summary.json": "cb9f1c7f8cfe0db557f554ded5427a9cba46dda10dcd9b5df9968e1d3b776f88",
+    "acceleration/theory_20260930_hadamard_four_profile_cnf.py": "0b4b737486974a499026bee4146cc7b461b654aeeb5af46e0553e908fa012f2f",
+    "acceleration/theory_20260930_hadamard_four_profile_cnf_spec.md": "929c19abc9d0cdd8292148c71d0b0b4b7addf79ddb1618a886b0994b86159113",
+    "acceleration/theory_20260930_hadamard_balanced_gram_cnf.py": "ffb5c842b29d0268073656ce948561af0557c24d067bf0260a9cc8f65ab07016",
+    "acceleration/results/20260930_independent_review/srg243_residual_fixture/summary.json": "28bbd97b8e69515c3eb0345e5aa2db12debfaa8a44e83b2e3487342104c5d50e",
+    "acceleration/theory_20260930_eight_count_profile_lift_second_spec.md": "0788df034b607e644b61fffb76e18ca9f70fff459c78247e9e3c868f34443427",
+    "acceleration/results/20260930_third_count_profile_gram_diagnostic/summary.json": "9264bdf9bb8dcb4a930637c558a4188157ba1adff7c5fa12aebd5149a195ccce",
+    "acceleration/results/20260930_independent_review/third_count_profile_gram_diagnostic/summary.json": "a071c94808f828d84685d3fc799a8730a16d3a68738ec368591a3830aa18a5a4",
+    "acceleration/theory_20260930_hadamard_balanced_gram_cnf_spec.md": "937e9ae29f4818822b0516cc61f35060cc8352b5cfca9abda2ba2648c53d6a6d",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_eight_count_profile_lift_third/gadget_controls.json": "43b5ace70fb9680d5072d5ae27850dc511c7f860f09f1d4487b23e350fd5bda5",
+    "acceleration/results/20260930_eight_count_profile_lift_third/initial_domains.json": "3755c635bcfc602d85a981f179c9b3bb4760362d843c15251213e2458146141c",
+    "acceleration/results/20260930_eight_count_profile_lift_third/manifest.json": "dfa5582438fe0c7273284f5f060093afd5809e23d20c2848f42cc2973e14340d",
+    "acceleration/results/20260930_eight_count_profile_lift_third/model.json.gz": "b1b3b7ebe282d39ce02d8ea8ee2b51bf37b02f4c7b8361a523e3c43b1e77c82b",
+    "acceleration/results/20260930_eight_count_profile_lift_third/model_package.json": "8cc1cb61e2c3d476c1c892165ef72584128ba21a27b3a654f9065a246753372f",
+    "acceleration/results/20260930_eight_count_profile_lift_third/profile_controls.json": "1c4036c0ca248b1b3fe7f8f133514300b1b440a1e1491ccd4afbc5d719fc8faf",
+    "acceleration/results/20260930_eight_count_profile_lift_third/selected_profile.json": "03d68bdfff62aa6f73dd44d72eab80acfdb8d001bb1b504df7aa36707b8d695e",
+    "acceleration/audit_20260930_eight_count_profile_lift_third.py": "076a6ae8a731bede8075334b8c40e9df480aaed52cc8214aa68bb70ccbda78a1",
+    "docs/AUDIT_20260930_EIGHT_COUNT_PROFILE_LIFT_THIRD.md": "6666a5d9820994471ed9790b60e1d08cb3515b817b1cf9149486b3a32a0377ae",
+    "acceleration/native_20260930_eight_count_profile_lift_third.py": "e73f44028b13dbeac8710f98826439b22a30504956f3a6a4d127d35469928a59",
+    "acceleration/native_20260930_eight_count_profile_lift_third_spec.md": "b566790256cacc66758dd51c5eee1f1846c9499d0d5c1a1eb9a92df467fcf94d",
+    "acceleration/native_20260930_unrestricted_full99.py": "da7ee9c03d454bd5ad0af0d82bead3520f3f270c70e71d4355161d036fd8ef22",
+    "acceleration/native_20260930_proof_location.py": "ff7fd55658b7cb63e9586bd862f8f182269f2978a3b873ba9afccfa41a345854",
+    "acceleration/results/20260930_independent_review/eight_count_profile_lift_third/claim_binding.json": "dd232ed6def7366be5ff19a5fb97eeb6de3e4b0f3fa285796eb53fb5c27064d7",
+    "build/research-cadical195/source/build/cadical": "021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7",
+    "acceleration/native_20260930_eight_count_profile_lift_second.py": "35ab36f43c526ea3a787ee11c2cf07113c931ac79244a9d14766c178360c24ef",
+    "acceleration/native_20260930_eight_count_profile_lift_second_spec.md": "7274f084995451fb495fccc96e4dda2e905eb2f7646ff4dbfcd572c042e48c88",
+    "acceleration/results/20260930_native_cli_calibration/summary.json": "f5ff562aff2ec550a97685c7012b302e760314a6f3829d80d022e2a669e680eb",
+    "acceleration/results/20260930_native_proof_location/summary.json": "d1036cfcbe9b24e0f7ea6e0a3799968a5d9232e8167fb31b224211e5c845c619",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/disk_before_launch.receipt.json": "643886019c561bd43fd7629374ac22cfbc21543e449c5bc05e2f99816812bde1",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/disk_before_launch.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/disk_before_launch.stdout.log": "aeb19183ba15a033369820a8f334fdd1b2dac7b360502f01e67b36980224fe8c",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/disk_free.receipt.json": "42ac031971447ff24c349c6c5c557b1232ae3a0a34e9332500848556e7c16065",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/disk_free.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/disk_free.stdout.log": "6d44a16dc2d6ef9cd344b8000464c28242a945bac0bcf8a87d9d7ae7f592aeb0",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/filesystem.receipt.json": "c64007cdf6d78d9bf9b59281948f894a89be23f74f19187230629596adec18a9",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/filesystem.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/filesystem.stdout.log": "0354fc7aa1f64b4daa70f95321de5c8a76bf0d15680e29c0f6c930edd55e023c",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/manifest.json": "e17c84028a82cf2b6658ba6a023ce0ca2b7974fc811b5d4399b865b58f4ad1c9",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/mktemp.receipt.json": "82725479d0b02cf4465d7e34a25f702cf289873d17d7170235e6c08102cacacc",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/mktemp.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/mktemp.stdout.log": "8455ab8246063a2adc9d0de8ac33b93cd43dd2f697248be4236b595e4af9a42c",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/processes_after.receipt.json": "642254028a37e164460afae697f982c02cbac950017426066fe529f4c4d67e05",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/processes_after.stderr.log": "b9295050338450e1f2fe7f4bd4411764002b46d9dfe5fea0bc86c964e426bc8c",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/processes_after.stdout.log": "266e9b4bf5552ca62bca2570eeae80ae7ce23b8a831e8513c3aaa3e1f7c4840f",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/processes_before.receipt.json": "45c4e44c4e7edbd70d3163b53bfb75b513bc969ad56f64beef611555614293d0",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/processes_before.stderr.log": "b9295050338450e1f2fe7f4bd4411764002b46d9dfe5fea0bc86c964e426bc8c",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/processes_before.stdout.log": "266e9b4bf5552ca62bca2570eeae80ae7ce23b8a831e8513c3aaa3e1f7c4840f",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/workspace.json": "ce57e2bddafb5a6380ef919b0e80d0bccc43a74588dda1f858704a16d86d9eb4",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/launch.json": "0d61d1fbe5cd1d97eeeec24b396dd533c91051240a726e5c23d46bf6ea513408",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/solver.receipt.json": "05cd10dd1a23371a207a06c3ee7a51770dcddca0b98e586c1b28abab98b279d5",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/solver.stdout.log": "e7ba3f83ced40f0d87d7ebb5331467808a11595bc5b550597070a29ae43ed34c",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/transfer_copy.receipt.json": "665156c0f4ad05d8daade63e22bc24fec7cb8df1f2df42e52e96714f19867fa9",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/transfer_hash.receipt.json": "dd1a9d7f03591baaa3fb8b8d622770714b3cd742d926fbfff662318f82498bbe",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/transfer_hash.stdout.log": "7e75e1ca81f9bc19cb3f139e73dd242b9f751265ff7ffd0748ec7ebeec3fda07",
+    "acceleration/audit_20260930_hadamard_seven_profile_unsat.py": "0fe8a566d32b30aff4cd7030901d80f490757e2fd9c76c26b5eb4b5762b83f95",
+    "acceleration/audit_20260930_eight_count_profile_unsat.py": "136ac31432df596de62352df874215e7200d9198a3f5253824a8cf9f207614bf",
+    "acceleration/audit_20260930_third_eight_count_profile_unsat.py": "f0f405d4377e1a906570c90da75d1daaa1e2fdef438ed491e2f9553c52457f55",
+    "docs/AUDIT_20260930_THIRD_EIGHT_COUNT_PROFILE_UNSAT.md": "aef091dacca3ee4ba255ec2583bcad76e476741eb4fc41ae80b8ddd3be31017f"
+  },
+  "evidence_sha256": {
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/actual_input_empty_only.receipt.json": "49c0e688cb879dcb9c8f7ba12e20037c107bb9f7a0541219d1148dcb0d1cea80",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/actual_input_empty_only.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/actual_input_empty_only.stdout.log": "d6db6cf38ee74063e53040d577513687260cc036cdb3c2f6afddab04f6fd77db",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/changed_SAT_input.receipt.json": "6af2e1f96ea7bd0de0fd911dc39ba7e37e3320bba1f48ea1fce1836bd4a37e69",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/changed_SAT_input.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/changed_SAT_input.stdout.log": "0fb46a1f199cd45b5135224598da8c124af5007f1a5d5021042f440848891a6f",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/complete_eight_count_profile_proof.receipt.json": "a521b37816e0756a73362ac82a5b04262fceda85a3b0daf37dd0b792f1bfc45c",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/complete_eight_count_profile_proof.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/complete_eight_count_profile_proof.stdout.log": "b3df429bfa824dfb25c93a63c781eb50be21a1441d4b03d31051b7715273d200",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/empty_only.drat": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/fresh_unit.drat": "b7d379cb3d9c001c9c511b6cdfca9679993e8a2c73bc921014089ead9ac75a18",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/fresh_unit.receipt.json": "f104dd452a4ed18cfe960ac081b31bbf50983b927eefb51b15924a8b59c77ca9",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/fresh_unit.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/fresh_unit.stdout.log": "73dd8f2ab83210fe7dbe79289a2401131b7c13efbbb0aa1fd96cd5ad9c27476e",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/missing_reasoning.receipt.json": "0f8cf9ec7341537fa21cb013f58144f5cdff37e958eeec084aa92aa96164d7e7",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/missing_reasoning.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/missing_reasoning.stdout.log": "06601b69d68813e641e8cc5306df43898336cdca73396c96d9dd165b4e4aa495",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/positive_reasoning.receipt.json": "6ee014df5b14db5db5728b5c74880e3d11d139cdfca57d9fb40972c6fd4d9345",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/positive_reasoning.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/positive_reasoning.stdout.log": "77c39087f2284f49d8a9ba0fcc6b7a8e3ff01f5228876af8ebea836e9dbf4b54",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/process.stderr.log": "dbaa9329a60b031e02513d5a9b2cc3c0efbc7656c21ef5c6ff54198f1a451d98",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/process.stdout.log": "f1e133023aa232d709fd4b0340f1facb9ca7c81760f4287d364107e7ba436fb2",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/process_observation.json": "b0808987a72d75d6006568b14a10ba9f33ecd21decfe6475b9f1016d2251a259",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/tiny_sat.cnf": "cbff19c5ea74c8fc8e307afe9fe1ce08682bb98ec3b10983068b10376f847534",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/tiny_valid.drat": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+    "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/unit_propagation.json": "b192737f326a10ef466271c4ebdeb70b9c8312ea49e425da17a9693af0a27c6e"
+  },
+  "proof": {
+    "path": "acceleration/results/20260930_eight_count_profile_lift_third_native_pilot/main/proof.drat",
+    "sha256": "17d87b5ef8724d70d7809d8f9cb581afe720272a1633fde261767f90b035340c",
+    "bytes": 5549451,
+    "complete_independent_replay": true,
+    "availability": "LOCAL_ONLY",
+    "availability_reason": "Complete raw artifact is below10MiB and ready for parent publication; current local presence is not a public availability claim."
+  },
+  "literal_profile": {
+    "selected_profile_id": "count_master_third_native_sat_after_six_scalar_cuts",
+    "selected_profile_sha256": "3bc6ebf9444e7a2f15af1ac85c6164119333244ced5d6dbe83a6c6b367e533d5",
+    "exceptional_groups": [
+      1,
+      3,
+      5,
+      11,
+      13,
+      15,
+      18,
+      19
+    ],
+    "coordinate_fibre_deviations": [
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0,
+          1,
+          -1,
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          1
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    ]
+  },
+  "limitations": [
+    "Only the literal count_master_third_native_sat_after_six_scalar_cuts count profile on this fixed support; no orbit transfer, other profile or whole-support conclusion.",
+    "Within-group column caps are premises of the encoded domains. Cross-group caps and residualD are omitted.",
+    "The exact proof checker, reviewed Windows portability shim, compiler and runtime remain trusted; no diverse or formal checker claim.",
+    "Solver correctness is not a premise of the proof result.",
+    "Any saved unit-propagation trail is a diagnostic generated here, not a separately approved exclusion certificate.",
+    "Previously verified count-master, all540 exact scalar intervals and all60 separate block witnesses remain valid for their weaker necessary models."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "availability_reason": "Awaiting parent publication.",
+  "external_review": null,
+  "external_review_reason": "No external peer review asserted.",
+  "created_at": "2026-09-30T11:40:28.406102+00:00",
+  "updated_at": "2026-09-30T11:40:28.406102+00:00"
+}

@@ -4,7 +4,14 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The [twenty-fifth milestone](RESEARCH_20260930_TWENTYFIFTH_WAVE.md) and
+The [corrected twenty-sixth milestone](RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+and [replay guide](REPRODUCING_20260930_TWENTYSIXTH_WAVE.md) preserve eleven
+verified additions. The complete exactly-eight count census on the literal
+support has 1,548 fibre classes; scalar bounds exclude 756 and all 792 survivors
+pass separate block tests. A third literal profile is excluded by complete
+proof replay. The GF(3) algebraic criterion and three-profile PSD diagnostics
+retain their precise scopes. No joint factor or target resolution follows.
+The previous [twenty-fifth milestone](RESEARCH_20260930_TWENTYFIFTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_TWENTYFIFTH_WAVE.md) preserve eighteen
 verified additions and one candidate design inventory. A second literal
 eight-count profile is excluded; six partial scalar cuts yield a third verified

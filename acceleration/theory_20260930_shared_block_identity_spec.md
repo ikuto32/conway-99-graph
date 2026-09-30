@@ -1,0 +1,5 @@
+# Exact small block rule after first/third scout
+
+Freeze a finite explanation of the shared coordinates(1,5) block before execution. Its five contributing groups are3,11,13,15,16. The four exceptional domains project onto two options each, of alternating typesA/B; the balanced domain projects onto the six permutation matrices. Independently read these sets from the immutable scout and regenerate all matrices from the raw colour words, without trusting the stored projected sets. Enumerate all2^4*6=96 combinations; save every sum and successful tuple. Corrupt a projected set and the target as negative controls.
+
+This is a candidate reusable necessary implication, not an exclusion: whenever a Gram block has two A-type populations, two B-type populations and one permutation population, and target2J-I, the latter is forced toI and all four former contributions are forced to their first options. Applies after simultaneous fibre relabelling as well. Both literal profiles instantiate the same rule. No factor is constructed and no profile is excluded by this finite rule alone. Separate independent review is required for any new claim.
