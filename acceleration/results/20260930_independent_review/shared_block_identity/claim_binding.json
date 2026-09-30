@@ -1,0 +1,61 @@
+{
+  "id": "C-FIXED-HADAMARD-FIRST-THIRD-FORCED-BLOCK-IDENTITY",
+  "revision": 1,
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For the five literal matrix populations A,B,A,B,S3 specified by the frozen shared_block_identity certificate (populations SHA256 bound through summary0983223571fb4d513917695c46b79b95ef93b04272308e10dad9f1c182bd858f), the sum equals2J-I iff all four exceptional matrices are their first listed choices and the permutation is I. At coordinate pair(1,5), the complete domains of the first and third eight-count profiles instantiate this implication, retaining36 of48 choices in each of groups3,11,13,15 and6 of150 choices in group16, in each profile.",
+  "scope": "Conditional five-population integer matrix identity and two literal raw-domain instantiations; six common fibre relabellings. No profile exclusion or joint feasibility follows.",
+  "assumptions": [
+    "Exact two-vector A and B populations and the six permutation matrices in the pinned certificate.",
+    "Previously checked complete local domains for the first and third literal profiles on this fixed support."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+      "revision": 1,
+      "relation": "coverage"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+      "revision": 1,
+      "relation": "coverage"
+    }
+  ],
+  "verifier": "/root",
+  "producer": "/root/structural_attack",
+  "method": "Separate integer entry proof, all96 tuples, all684 raw domain projections, six common fibre maps and changed-artifact controls.",
+  "shared_components": [
+    "Uses the prior independently checked domain coverage and raw model artifacts, without producer imports.",
+    "Python integer arithmetic, JSON, hashing; PyYAML only to resolve earlier registered evidence."
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_shared_block_identity/summary.json": "0983223571fb4d513917695c46b79b95ef93b04272308e10dad9f1c182bd858f",
+    "acceleration/results/20260930_eight_count_profile_lift/model.json": "a7bd6776b6a5e54857a703bbbdc95fe433a1274e5c592484c0d990fdf4adefa4",
+    "acceleration/results/20260930_eight_count_profile_lift_third/model.json": "0a821d08532ece7d99bc5917a61af8dd0338379ab73a83c3687cbdf5ea480634",
+    "acceleration/results/20260930_independent_review/eight_count_profile_lift_third/summary.json": "306e86ff14f7be929cd1f0f345b127b8cdf7341ae1e016b51499f2773654aab6",
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_first_third_proof_obstructions/summary.json": "018b134a4f6682e177ba4c95cb98a77036e4a05c42735608cd07dc53af2f1951",
+    "acceleration/theory_20260930_shared_block_identity.py": "46e8e5a7b13847f1a1381c11919e34050f0db08efa25a81f3370484b17b82dab",
+    "acceleration/theory_20260930_shared_block_identity_spec.md": "cdf6a0631ee09d68d2d93e160f3697eb2fc8f0ee712bd427867ba489823869f7",
+    "acceleration/results/20260930_shared_block_identity/all96.json": "5a2ed13d3bee490574852504d77875dec7af1b9f4820dc6d44054cf330885968",
+    "acceleration/results/20260930_shared_block_identity/controls.json": "457c71040f23011fa3dbeb1b96164a7feb5247bc332c5e62478de40263be6863",
+    "acceleration/results/20260930_shared_block_identity/raw_instances.json": "857a23c8c3a08442d81d7cd3317819b21235a069880485ad3b238efc7d794190",
+    "acceleration/audit_20260930_shared_block_identity.py": "0a1cef3e93690401876295996be70b46029305e7662517f1a9e97c9d06a6d3f6",
+    "docs/AUDIT_20260930_SHARED_BLOCK_IDENTITY.md": "bc0f16bf89c79a703e7ee0d42b8b48c1ba474b8fc41df4060f3ae430e668a5b0",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_independent_review/eight_count_profile_lift/summary.json": "270d6c53406887c328f4ccbcdc670da5a0e3de156733a2dbd9145582f0cb1802",
+    "acceleration/results/20260930_independent_review/eight_count_profile_lift/claim_binding.json": "c0fcc464e8627d1a0676dd704aeae1f986f2efd112fc9ff9144fdc42e36c174b"
+  },
+  "limitations": [
+    "Only this necessary block implication is approved; broader proof-core, propagation and LP diagnostics remain outside this review.",
+    "No whole-support or target exclusion; target automorphism is not assumed."
+  ],
+  "created_at": "2026-09-30T12:00:01.531174+00:00",
+  "updated_at": "2026-09-30T12:00:01.531174+00:00"
+}

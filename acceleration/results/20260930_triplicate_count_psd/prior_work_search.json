@@ -1,0 +1,42 @@
+{
+  "archive_commit": "85e705cc6c2a14d123120c93a847e30aaab1789e",
+  "records": [
+    {
+      "command": [
+        "git",
+        "-C",
+        "external_conway99_research",
+        "grep",
+        "-n",
+        "-i",
+        "-E",
+        "triplic.*(positive|psd)|count.*schur|3g.*nn|centered.*trip|group.*count.*gram",
+        "--",
+        "*.md",
+        "*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "rg",
+        "-n",
+        "--max-columns",
+        "220",
+        "triplic.*(PSD|psd)|(?:PSD|psd).*triplic|N\\s*@\\s*N\\.T|counts\\s*@\\s*counts\\.T",
+        "acceleration",
+        "docs",
+        "-g",
+        "*.py",
+        "-g",
+        "*.md",
+        "-g",
+        "!acceleration/results/**",
+        "-g",
+        "!*triplicate_count_psd*"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "conclusion": "No exact-profile triplicate-count PSD test found by these searches. Related Gram/Schur/partial-residual methods exist; this is not an exhaustive novelty claim."
+}

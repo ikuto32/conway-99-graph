@@ -2,7 +2,13 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [twenty-fifth milestone](RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
+For current work, read the [corrected twenty-sixth milestone](RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+and [twenty-sixth replay guide](REPRODUCING_20260930_TWENTYSIXTH_WAVE.md).
+The guide separates the complete count census and necessary screens, one
+literal-profile proof replay, encoding checks and algebraic criteria.
+The preserved initial report has one corrected PSD-population sentence.
+Later next-profile and PSD-kernel work is outside that checkpoint.
+Also read the [twenty-fifth milestone](RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
 and [twenty-fifth replay guide](REPRODUCING_20260930_TWENTYFIFTH_WAVE.md).
 Its eight large originals have exact recovery from 231 gzip parts. Four of
 those originals are UNKNOWN partial traces, not contradiction proofs. The guide

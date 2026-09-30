@@ -7,7 +7,22 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-fifth milestone](docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
+The latest [corrected twenty-sixth milestone](docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+freezes 278 claims: 273 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
+Eleven verified additions include the complete fixed-support exactly-eight
+count census: 9,288 labelled profiles in 1,548 global fibre classes. Scalar
+bounds exclude 756 classes; all 792 survivors pass separate block tests.
+One third literal profile is excluded by complete independent proof replay.
+The GF(3) criterion, upper-envelope encoding and three-profile PSD diagnostics
+retain their exact assumptions. No simultaneous factor or target resolution follows.
+Next: test the first eligible surviving count class with a full-Gram literal
+lift and independently check the resulting factor or complete proof. The
+next-profile pilot and PSD-kernel work belong to the following wave.
+Overall search coverage: UNKNOWN; no validated denominator.
+This file is not a live process observation and does not stop resumed work.
+[Twenty-sixth replay guide](docs/REPRODUCING_20260930_TWENTYSIXTH_WAVE.md).
+
+The previous [twenty-fifth milestone](docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
 freezes 267 claims: 262 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
 Eighteen verified additions include one further literal eight-count exclusion,
 six necessary scalar cuts, a third checked count witness, direct-cell encoding

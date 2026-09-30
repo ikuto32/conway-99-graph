@@ -1,0 +1,34 @@
+{
+  "id": "C-FIXED-HADAMARD-THIRD-COUNT-SEPARATE-GRAM-PROJECTIONS",
+  "revision": 1,
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "finite_check",
+  "basis": [
+    "COMPUTED"
+  ],
+  "statement": "The exact third count profile has 0 failed scalar cells among540 and 0 failed separate Gram blocks among60 in its complete within-triplicate-cap local domains. These are independent necessary projections, not simultaneous factor choices.",
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-PARTIAL-CUT-COUNT-CSP-WITNESS",
+      "revision": 1,
+      "relation": "premise"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+      "revision": 1,
+      "relation": "coverage"
+    }
+  ],
+  "verifier": "/root/structural_attack",
+  "producer": "/root/eight_domain_audit",
+  "report": "acceleration/results/20260930_independent_review/third_count_profile_gram_diagnostic/summary.json",
+  "report_sha256": "a071c94808f828d84685d3fc799a8730a16d3a68738ec368591a3830aa18a5a4",
+  "shared_components": [
+    "Frozen separately authored second-profile checker literal catalogue/Cartesian-product/positive-control functions are reused and hash-pinned. No producer code or merged-state DP is imported.",
+    "The count-CSP witness and complete catalogue are exact pinned premises; all profile-specific ranks, contributions, intervals, state sets and witnesses are rechecked."
+  ],
+  "limitations": [
+    "Literal third count profile only. Passing separate blocks does not imply joint choices, full Gram, cross-group column caps, residual D or target graph."
+  ]
+}

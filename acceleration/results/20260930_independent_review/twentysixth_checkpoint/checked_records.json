@@ -1,0 +1,464 @@
+{
+  "registration_chain": [
+    {
+      "name": "profile",
+      "before": 267,
+      "after": 270,
+      "new_ids": [
+        "C-FIXED-HADAMARD-THIRD-COUNT-SEPARATE-GRAM-PROJECTIONS",
+        "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+        "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-EXCLUSION"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_profile_claims.py",
+      "summary_sha256": "2e30cd02fda543acc9482c10bcd1dc68072a2f0f2507b74b49bada815b7de219"
+    },
+    {
+      "name": "upper",
+      "before": 270,
+      "after": 271,
+      "new_ids": [
+        "C-FIXED-HADAMARD-ALL-SCALAR-UPPER-COUNT-ENCODING"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_upper_claim.py",
+      "summary_sha256": "3e86b329209704f380bab5eaeb241279be70a2b4a677007031c5c03bdef869c3"
+    },
+    {
+      "name": "block",
+      "before": 271,
+      "after": 272,
+      "new_ids": [
+        "C-FIXED-HADAMARD-FIRST-THIRD-FORCED-BLOCK-IDENTITY"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_block_claim.py",
+      "summary_sha256": "d5c1b6b3f533652f727649f276bbd74f7e0ffc0b5e712af8e2dc62ed727b57eb"
+    },
+    {
+      "name": "eight_reduction",
+      "before": 272,
+      "after": 273,
+      "new_ids": [
+        "C-FIXED-HADAMARD-EIGHT-COUNT-TABLE-SUBSET-REDUCTION"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_eight_reduction_claim.py",
+      "summary_sha256": "f311174b5bb16facb5fdecfdc48ce25ea76daf7d32baf152e352728431cd9aae"
+    },
+    {
+      "name": "census_algebra",
+      "before": 273,
+      "after": 275,
+      "new_ids": [
+        "C-FIXED-HADAMARD-COMPLETE-EIGHT-COUNT-PROFILE-CENSUS",
+        "C-GF3-SYMMETRIC-HOLLOW-MIXED-COMPLETION"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_census_algebra_claims_v2.py",
+      "summary_sha256": "0f09359f79f78fd47907a3b9ff7132dfe449f02e03379c73a55dbaf1e36728ac"
+    },
+    {
+      "name": "psd",
+      "before": 275,
+      "after": 276,
+      "new_ids": [
+        "C-FIXED-HADAMARD-THREE-COUNT-PROFILES-PSD-NECESSITY-PASS"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_psd_claim.py",
+      "summary_sha256": "72c95f0ea3711cc2125704a071668750752bcae0dde06982630434f05dc3a2b3"
+    },
+    {
+      "name": "scalar",
+      "before": 276,
+      "after": 277,
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-SCALAR-EXCLUSIONS"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_scalar_claim.py",
+      "summary_sha256": "5ec016dcc6817f77ffa987c0364f320c587cd24c11b86bfd7608b0728a56e8bd"
+    },
+    {
+      "name": "block_screen",
+      "before": 277,
+      "after": 278,
+      "new_ids": [
+        "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN"
+      ],
+      "source": "acceleration/register_20260930_twentysixth_block_screen_claim.py",
+      "summary_sha256": "cb388946a6b7eff5fea6612d2ab181cdff0c6adda4b9ffe1287d9fa7e1525eda"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C-FIXED-HADAMARD-THIRD-COUNT-SEPARATE-GRAM-PROJECTIONS",
+      "statement": "The exact third count profile has 0 failed scalar cells among540 and 0 failed separate Gram blocks among60 in its complete within-triplicate-cap local domains. These are independent necessary projections, not simultaneous factor choices.",
+      "scope": {
+        "description": "Literal third count profile only; 540 scalar intervals and 60 separate Gram blocks in complete within-triplicate-cap domains, not joint choices.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-PARTIAL-CUT-COUNT-CSP-WITNESS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/third_count_profile_gram_diagnostic/summary.json": "a071c94808f828d84685d3fc799a8730a16d3a68738ec368591a3830aa18a5a4",
+        "acceleration/results/20260930_independent_review/third_count_profile_gram_diagnostic/claim_binding.json": "06d5ecea773601c9d0f4a18b695d3db8a1d99149c6ed826e49d1fe55ad82cd46"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+      "statement": "The complete9748-variable167416-clause CNF is satisfiable iff the pinned six-prism Hadamard support admits a binary36x60 factor with the full prescribed integer Gram, literal count-profile digest 3bc6ebf9444e7a2f15af1ac85c6164119333244ced5d6dbe83a6c6b367e533d5 and within-triplicate column caps, modulo independent permutations of each identical-support column triple. The eight exceptional domains retain48,48,48,48,48,48,48,48 options respectively and all twelve balanced domains retain150, with unique auxiliary assignments.",
+      "scope": {
+        "description": "One literal eight-exception count profile. Cross-group caps and residualD omitted; no orbit coverage or unrestricted conclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-PARTIAL-CUT-COUNT-CSP-WITNESS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "verification_dependency"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/eight_count_profile_lift_third/summary.json": "306e86ff14f7be929cd1f0f345b127b8cdf7341ae1e016b51499f2773654aab6",
+        "acceleration/results/20260930_independent_review/eight_count_profile_lift_third/claim_binding.json": "dd232ed6def7366be5ff19a5fb97eeb6de3e4b0f3fa285796eb53fb5c27064d7"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-EXCLUSION",
+      "statement": "No binary 36x60 factor on the frozen six-prism Hadamard support has the prescribed integer Gram, within-triple column caps, and literal eight-exception profile count_master_third_native_sat_after_six_scalar_cuts (digest 3bc6ebf9444e7a2f15af1ac85c6164119333244ced5d6dbe83a6c6b367e533d5), with exceptional groups 1, 3, 5, 11, 13, 15, 18, 19. The exact equivalent formula with 9,748 variables and 167,416 clauses is UNSAT by complete independently replayed DRAT proof.",
+      "scope": {
+        "description": "Only the literal count_master_third_native_sat_after_six_scalar_cuts count profile on this fixed support; no orbit transfer, other profile or whole-support conclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/summary.json": "b7a7c19c59e456ce574fb6b8aa89cff55b5943e0a29ddcd7e49ba53c6c61a49c",
+        "acceleration/results/20260930_independent_review/third_eight_count_profile_unsat/claim_binding.json": "e454e1c7cf4f2524264791334581c9e34699eb5f6c7fda608dd575acab9c8e46"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-ALL-SCALAR-UPPER-COUNT-ENCODING",
+      "statement": "The exact161159-variable726485-clause formula is satisfiable iff the frozen twelve-cut count relaxation has a count assignment satisfying all540 inequalities sum_g min(n[a,g,f],n[b,g,h]) >= G[12f+a,12h+b], for all60 nonmatching coordinate pairs and nine ordered fibre pairs. It adds5220 uniquely determined Boolean auxiliaries and20640 clauses. The previously checked third count assignment has a checked auxiliary extension satisfying every clause.",
+      "scope": {
+        "description": "Literal six-prism Hadamard support and inherited >=7 count relaxation only. Universal scalar upper bounds are necessary but do not assert exact local extrema or simultaneous Gram realization.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PROFILE-SIX-SCALAR-CUT-COUNT-ENCODING",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-PARTIAL-CUT-COUNT-CSP-WITNESS",
+          "revision": 1,
+          "relation": "verification_dependency"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/count_min_upper_cnf/summary.json": "65624096b816cccec2f497f99b3ea099a03b7f9235862c86c2f480ca7909942f",
+        "acceleration/results/20260930_independent_review/count_min_upper_cnf/claim_binding.json": "06300a5b1916d2226c0bcc6fc31a18b970061a97ab434f706831dfa9ee0f55d9"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-FIRST-THIRD-FORCED-BLOCK-IDENTITY",
+      "statement": "For the five literal matrix populations A,B,A,B,S3 specified by the frozen shared_block_identity certificate (populations SHA256 bound through summary0983223571fb4d513917695c46b79b95ef93b04272308e10dad9f1c182bd858f), the sum equals2J-I iff all four exceptional matrices are their first listed choices and the permutation is I. At coordinate pair(1,5), the complete domains of the first and third eight-count profiles instantiate this implication, retaining36 of48 choices in each of groups3,11,13,15 and6 of150 choices in group16, in each profile.",
+      "scope": {
+        "description": "Conditional five-population integer matrix identity and two literal raw-domain instantiations; six common fibre relabellings. No profile exclusion or joint feasibility follows.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-THIRD-EIGHT-COUNT-PROFILE-GRAM-ENCODING",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/shared_block_identity/summary.json": "7f37f3baff254ae09fe9301fd572bb91f90462da276712a6e2e943e452296895",
+        "acceleration/results/20260930_independent_review/shared_block_identity/claim_binding.json": "d9102c4acafd9b4992a2b815c64c9d3ba083b91fd0aab9cc46eac6466b70bb83"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EIGHT-COUNT-TABLE-SUBSET-REDUCTION",
+      "statement": "Among the frozen4184 kernel-retained eight-subsets,3847 cannot cover all eight exceptional groups using the complete coordinate marginal domains, and270 additional subsets have an empty exact local count-table propagation fixed point. Every count profile satisfying those domains and local triple membership lies in one of the remaining67 subsets with the exact saved coordinate domains. The sum of their Cartesian sizes is7122626. Complete separate Cartesian checks recover24,24,6 profiles in the three declared pilot subsets.",
+      "scope": {
+        "description": "Exactly eight unbalanced groups on the literal six-prism Hadamard support, under complete prior kernel-census, coordinate-marginal and within-triplicate-cap catalogue premises. This reduces a necessary count relaxation, not all target graphs.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EIGHT-EXCEPTION-KERNEL-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-COMPLETE-COORDINATE-MARGINAL-DOMAINS",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_profile_preflight/summary.json": "1a120763c8d97677e0339828abf14cba2394e71f5d6459f153e29f42c534541f",
+        "acceleration/results/20260930_independent_review/exact_eight_profile_preflight/claim_binding.json": "db7c85ea49bf140da9de23b933846e7e6ab192a650bfb66fc5437688423cc579"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-COMPLETE-EIGHT-COUNT-PROFILE-CENSUS",
+      "statement": "The complete exactly-eight count-table CSP remaining after the verified4184-subset reduction has9288 distinct labelled count profiles across67 subsets. Their simultaneous global fibre relabellings form1548 disjoint complete orbits, each of size6 as individually checked. All7122626 Cartesian assignments were independently evaluated, and every saved raw count table, local signature and orbit member was checked. No earlier literal exclusion is subtracted.",
+      "scope": {
+        "description": "Complete finite necessary count relaxation on the frozen six-prism Hadamard support with exactly eight unbalanced groups and inherited within-triplicate-cap catalogue. No Gram factor, cross-group cap, residualD or target graph is asserted.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EIGHT-COUNT-TABLE-SUBSET-REDUCTION",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-COMPLETE-COORDINATE-MARGINAL-DOMAINS",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "premise"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_profile_join/summary.json": "2538bf724a3938b14ffd1856fc4e9a8a6a294a6905ddc7000d19cf72f93b217c",
+        "acceleration/results/20260930_independent_review/exact_eight_profile_join/claim_binding.json": "24bac349d86f766e1220d20a5ea87be6c17bf4d08737e005cab42fd51bac8e23"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-GF3-SYMMETRIC-HOLLOW-MIXED-COMPLETION",
+      "statement": "Over GF(3), symmetric FD=H is solvable exactly when ker(F^T) is contained in ker(H^T) and FH^T is symmetric. Given a symmetric solution D0 and a complete kernel basis K, a symmetric zero-diagonal solution exists exactly when diag(D0) belongs to span{Ki entrywise Kj:i<=j}. Under the stated triangle Gram and margins, symmetry of FH^T and the row-degree congruence n-4 are automatic. The genuine243 fixture has rankF47, kernel dimension133 and full180-dimensional product span; all7290 small F/H systems and729 finite rank controls were independently checked.",
+      "scope": {
+        "description": "Arbitrary finite GF3 matrices with the stated consistency hypotheses; conditional triangle consequences and explicitly finite controls.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-UNRESTRICTED-TRIANGLE-CORE-FACTOR-NORMALIZATION",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-SRG243-NONEMPTY-RESIDUAL-POSITIVE-CONTROL",
+          "revision": 1,
+          "relation": "verification_dependency"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/gf3_hollow_residual/summary.json": "5f234e9d726ce39555ff6649f0050481ee5c445a627aa2c27e7c730c7b8de220",
+        "acceleration/results/20260930_independent_review/gf3_hollow_residual/claim_binding.json": "7afb9f11ed8b62232ece3dc86f0f4591b9642ad95a1f0ad030157d454772d5d8"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-THREE-COUNT-PROFILES-PSD-NECESSITY-PASS",
+      "statement": "For the first, second and third pinned count-CSP profiles on the literal six-prism Hadamard support, each independently reconstructed matrix 3G-NN^T is positive semidefinite of exact rational rank22 (nullity14). This is a necessary real Gram-factor test because 3FF^T-NN^T is the sum of the within-triplicate pair-difference outer products.",
+      "scope": {
+        "description": "Three exact count profiles pass the necessary real triplicate Gram PSD test at rank22. No factor feasibility, target exclusion, novelty or universal sufficiency claim.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-AT-LEAST-SEVEN-COUNT-CSP-WITNESS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-CUT-COUNT-CSP-WITNESS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-PARTIAL-CUT-COUNT-CSP-WITNESS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/triplicate_count_psd/summary.json": "1217ea22d037c24be3039c29687e8e0b126f3fe122186687ecaee8065351a4f4",
+        "acceleration/results/20260930_independent_review/triplicate_count_psd/claim_binding.json": "971673a36e97910cc6c16ee89461252b7ebc1b1ce18f946cbc687c2582342b19"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SCALAR-EXCLUSIONS",
+      "statement": "All1548 global-fibre representatives of the independently complete9288 labelled exactly-eight count profiles were checked against all540 exact five-group scalar Gram intervals. Exactly756 representatives and their4536 labelled images violate at least one interval and cannot realize the prescribed Gram in the complete within-triplicate-cap domains. The remaining792 representatives/4752 labelled images survive only these necessary scalar tests. Historical literal profiles are included without additive exclusion counting.",
+      "scope": {
+        "description": "The complete fixed-support exactly-eight count population with full local within-triplicate caps/Gram domains; scalar bounds only. No simultaneous factor conclusion for survivors.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-COMPLETE-EIGHT-COUNT-PROFILE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_scalar_screen/summary.json": "52b2818cdad6a3e90d7685442ad9f1cb717eba7fe81ce07338a1bcc0bd8adf11",
+        "acceleration/results/20260930_independent_review/exact_eight_scalar_screen/claim_binding.json": "af9666c9f99e704c691a56791d49ebc088d9c6653a511095c9fde700da85ad8b"
+      },
+      "scientific_reverification": false
+    },
+    {
+      "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SEPARATE-GRAM-BLOCK-SCREEN",
+      "statement": "Among all792 canonical exact-eight count profiles surviving the authenticated scalar screen, complete exact feasibility checks of all60 separate3x3 Gram blocks exclude0 representatives and retain792. Each exclusion and surviving block witness is independently checked; all labelled members inherit the corresponding result under the explicit global fibre relabelling.",
+      "scope": {
+        "description": "Complete separate necessary3x3 block screen of the scalar-surviving exact-eight count profiles on the literal fixed support, inheriting within-triplicate caps. No joint factor, cross-group caps, residualD or target conclusion.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-EXACT-EIGHT-SCALAR-EXCLUSIONS",
+          "revision": 1,
+          "relation": "uses_result"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-LOCAL-TRIPLE-CENSUS",
+          "revision": 1,
+          "relation": "coverage"
+        }
+      ],
+      "evidence": {
+        "acceleration/results/20260930_independent_review/exact_eight_block_screen/summary.json": "6c21ef6951f72fbeabab8be0a649f178ca8b17eb91edcc35c3291d6790f6256a",
+        "acceleration/results/20260930_independent_review/exact_eight_block_screen/claim_binding.json": "5dca3da7a9000752f44b86e46d1dc8aa7b6a5d94a7736eef9e01bb75c8adf962"
+      },
+      "scientific_reverification": false
+    }
+  ],
+  "previous_publication_only_changes": [
+    "twentyfifth-profile-0-evidence0",
+    "twentyfifth-profile-0-evidence1",
+    "twentyfifth-profile-1-evidence0",
+    "twentyfifth-profile-1-evidence1",
+    "twentyfifth-profile-2-evidence0",
+    "twentyfifth-profile-2-evidence1",
+    "twentyfifth-scalar-0-evidence0",
+    "twentyfifth-scalar-0-evidence1",
+    "twentyfifth-direct-encoding-review-0",
+    "twentyfifth-direct-encoding-review-1",
+    "twentyfifth-unknown-0-evidence0",
+    "twentyfifth-unknown-0-evidence1",
+    "twentyfifth-unknown-0-evidence2",
+    "twentyfifth-unknown-1-evidence0",
+    "twentyfifth-unknown-1-evidence1",
+    "twentyfifth-unknown-1-evidence2",
+    "twentyfifth-lex-cuts-0-evidence0",
+    "twentyfifth-lex-cuts-0-evidence1",
+    "twentyfifth-lex-cuts-1-evidence0",
+    "twentyfifth-lex-cuts-1-evidence1",
+    "twentyfifth-lex-cuts-2-evidence0",
+    "twentyfifth-lex-cuts-2-evidence1",
+    "twentyfifth-lex-cuts-3-evidence0",
+    "twentyfifth-lex-cuts-3-evidence1",
+    "twentyfifth-lex-cuts-4-evidence0",
+    "twentyfifth-lex-cuts-4-evidence1",
+    "twentyfifth-final-0-evidence0",
+    "twentyfifth-final-0-evidence1",
+    "twentyfifth-final-1-evidence0",
+    "twentyfifth-final-1-evidence1",
+    "twentyfifth-final-2-evidence0",
+    "twentyfifth-final-2-evidence1",
+    "twentyfifth-final-2-evidence2",
+    "twentyfifth-final-3-evidence0",
+    "twentyfifth-final-3-evidence1",
+    "twentyfifth-final-inventory-evidence0",
+    "twentyfifth-final-inventory-evidence1"
+  ],
+  "controls_rejected": [
+    "population",
+    "status",
+    "target",
+    "factor",
+    "scope_union",
+    "proof_bytes",
+    "block_excluded",
+    "PSD_792",
+    "DP_claim",
+    "statement",
+    "dependency",
+    "claim_revision",
+    "report_PSD_scope"
+  ],
+  "report_correction": {
+    "timestamp": "2026-09-30T12:45:02.953378+00:00",
+    "reason": "Independent reviewer veto: original Problems sentence could imply a complete792-profile PSD test. Only three named historical literal profiles were tested.",
+    "reviewer": "/root/state_literature_audit",
+    "original_path": "docs/RESEARCH_20260930_TWENTYSIXTH_WAVE.md",
+    "original_sha256": "7954cef87b2b7b890f692692e07b9bf3cd9d294726ceb854fe4f9cea2b7a27e1",
+    "corrected_path": "docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md",
+    "corrected_sha256": "fb394a08d95c3cdc41e446393c155a9df8456c2795c9b8f9159fe938038febc6",
+    "old_sentence": "**Problems:** separate block feasibility and PSD positivity did not exclude the remaining classes.",
+    "new_sentence": "**Problems:** separate block tests exclude none of the 792 scalar survivors. The PSD test was applied only to the three historical literal profiles, including the scalar-rejected second profile; all three pass. No PSD census of the 792 survivors is claimed.",
+    "checkpoint_changed": false,
+    "ledger_changed": false,
+    "mathematical_claim_changed": false
+  },
+  "process_observation_scope": "Saved timestamp only; no fresh process assertion."
+}
