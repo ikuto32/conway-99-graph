@@ -21,7 +21,15 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the latest [twenty-eighth milestone](docs/RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+See the latest [twenty-ninth milestone](docs/RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20261001_TWENTYNINTH_WAVE.md).
+Six new scoped claims are verified. Two 64-case batches add 128 complete
+independently replayed literal exclusions: the frozen 792-case campaign now has
+188 distinct exclusions and 604 unresolved cases. GF(3) affine witnesses for
+16 profiles and uniform-mixture counterexamples for all 792 add no exclusions.
+The checkpoint freezes 300 claims. No whole-support or unrestricted resolution
+follows; batch03 and later work are outside this milestone.
+See the previous [twenty-eighth milestone](docs/RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
 and [replay guide](docs/REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md).
 Six new scoped claims are verified and two unused-launcher guarantees are refuted.
 The next32 and sizeclass16 batches add48 complete independently replayed literal

@@ -1,0 +1,421 @@
+{
+  "status": "INDEPENDENT_FOUR_SERIAL_BUILD_ENGINEERING_PASS",
+  "created_at": "2026-09-30T14:45:11.456642+00:00",
+  "inputs_sha256": {
+    "acceleration/build_20260930_exact_eight_explicit_batch_v2.py": "c5acba24df4c224dce98510a6a77b4ca490ed0cd632f56d674fccffc0d0d7c2b",
+    "acceleration/build_20260930_exact_eight_parallel_batch.py": "6b1b4c4f80a24e6851643032689df37a5a9641ee4c465ae04aab3f008ae8ec44",
+    "acceleration/theory_20260930_exact_eight_campaign.py": "9ebd87fea886f45fc916ad8afb9dc212fa089f760d4b96e55082926baef02c57",
+    "acceleration/theory_20260930_exact_eight_campaign_spec.md": "76d89e652dc0d90084863e4478b9d887658daac21aedfa20ffc72bf7bf48bf69",
+    "acceleration/results/20260930_exact_eight_campaign_preparation/campaign_manifest.json": "e7b07ea2f7c6b9f6738641afc22779a503841d5ac3da58d3873ebb0fa4b784ba",
+    "acceleration/results/20260930_independent_review/exact_eight_campaign/summary.json": "e334293416c1048cf3a6e7c4bd8242892dc84e7f7d773bd388b506fdde77ea27",
+    "acceleration/theory_20260930_hadamard_four_profile_cnf.py": "0b4b737486974a499026bee4146cc7b461b654aeeb5af46e0553e908fa012f2f",
+    "acceleration/theory_20260930_hadamard_balanced_gram_cnf.py": "ffb5c842b29d0268073656ce948561af0557c24d067bf0260a9cc8f65ab07016",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/run_20260930_exact_eight_four_builds_v2.py": "11715c9438dc8749a80f62b5ee69646dbccee194c53a1a56ded1bff83a5601e8",
+    "acceleration/run_20260930_exact_eight_four_builds_v2_spec.md": "63941c78d5e60dd124b1ceb2a4ff6cb4ab1292712f7f312bb0f4ce2d82fbdc24",
+    "acceleration/run_20260930_exact_eight_four_builds.py": "642877179e0f9c99d53f90997b3cf57398e843dfa9371b71cb0366a9ca864df2",
+    "acceleration/run_20260930_exact_eight_four_builds_spec.md": "1f57dbba1a3f0f4cb50b99eb442843ae2041f6a9c967b65e7b04599ac821298a",
+    "acceleration/calibrate_20260930_suspended_tree_canary.py": "8c06c6733d989fcfee3904c7751609aca83485ad038f078fab998ed5e47d5216",
+    "acceleration/audit_20260930_four_serial_build_engineering.py": "079b77971d920e3576ac7214f9a1c586662db2ee10971b91f9666db3d244f6fd",
+    "acceleration/audit_20260930_four_serial_build_engineering_spec.md": "6d6677738c490b2169413847c560bf590302d87df84536fdb6d8b56ea3c51793",
+    "acceleration/build_20260930_exact_eight_explicit_batch_v2_spec.md": "17ed516985ab44ad1301b5c20020eb89fc9834b8147fe679d7294484531397be",
+    "acceleration/build_20260930_exact_eight_parallel_batch_spec.md": "52d82fcbe56600b68d6e85d62bed983dad4859f1ad370a8a1899f9a139a95928",
+    "acceleration/theory_20260930_hadamard_four_profile_cnf_spec.md": "929c19abc9d0cdd8292148c71d0b0b4b7addf79ddb1618a886b0994b86159113",
+    "acceleration/theory_20260930_hadamard_balanced_gram_cnf_spec.md": "937e9ae29f4818822b0516cc61f35060cc8352b5cfca9abda2ba2648c53d6a6d",
+    "acceleration/results/20260930_independent_review/parallel_build_deadline/summary.json": "8ab768a0a6b77fb27da69399b50e12e270254afaaf5e64cdd4e15f77e6d7a490",
+    "acceleration/results/20260930_independent_review/windows_job_assignment_race/summary.json": "758e611699d893f831c4071c59093864e5f33dcd570e6c75eea719d10a25516f",
+    "acceleration/results/20260930_independent_review/parallel_windows_job_v2/summary.json": "e92568166a0022544ff2eeeae46bb883ac520195f228e506bdef2fcf94abc5b7"
+  },
+  "scope": "Exact v2 launcher: source/API-order review and finite harmless Windows lifecycle calibration. Four separately budgeted120-second sequential builders,480s allocation; tested slow cleanup cannot delay peer stop requests. No formula/selection/solver approval or speedup claim.",
+  "limitations": [
+    "Live timing is a finite sample; OS scheduling and API failures are not assumed absent.",
+    "Kill-on-close fallback reaps owned processes but fails the active-zero receipt.",
+    "Scientific producer/helper sources authenticated but not imported or executed.",
+    "Future formula outputs require separate independent checks."
+  ],
+  "mock_scenarios": 6,
+  "plan_corruptions": 12,
+  "live_results": [
+    {
+      "label": "delayed_resume",
+      "receipt": {
+        "pid": 37840,
+        "resumed": true,
+        "started_monotonic": 1340248.468,
+        "deadline_monotonic": 1340368.468,
+        "stop_requested": true,
+        "stop_reason": "CALIBRATION_DONE",
+        "actual_exit_code": 1223,
+        "reaped": true,
+        "job_active_zero_observed": true,
+        "cleanup_errors": [],
+        "created_suspended": true,
+        "suspended_job_active": 1
+      },
+      "logical_generations": 3,
+      "pre_resume_seconds": 0.15,
+      "pre_resume_active": 1
+    },
+    {
+      "label": "four_concurrent_normal_roots",
+      "result": {
+        "events": [
+          {
+            "kind": "resumed",
+            "chunk": 0,
+            "time": 1340248.75,
+            "deadline": 1340368.75
+          },
+          {
+            "kind": "resumed",
+            "chunk": 1,
+            "time": 1340248.75,
+            "deadline": 1340368.75
+          },
+          {
+            "kind": "resumed",
+            "chunk": 2,
+            "time": 1340248.75,
+            "deadline": 1340368.75
+          },
+          {
+            "kind": "resumed",
+            "chunk": 3,
+            "time": 1340248.75,
+            "deadline": 1340368.75
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 0,
+            "time": 1340249.484,
+            "reason": "SERIAL_ROOT_EXIT",
+            "exit_code": 0
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 1,
+            "time": 1340249.64,
+            "reason": "SERIAL_ROOT_EXIT",
+            "exit_code": 0
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 2,
+            "time": 1340249.781,
+            "reason": "SERIAL_ROOT_EXIT",
+            "exit_code": 0
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 3,
+            "time": 1340249.937,
+            "reason": "SERIAL_ROOT_EXIT",
+            "exit_code": 0
+          }
+        ],
+        "stop_phase_finished": 1340249.937,
+        "cleanup_finished": 1340249.937,
+        "failure": null,
+        "stop_errors": [],
+        "receipts": [
+          {
+            "chunk": 0,
+            "pid": 63500,
+            "resumed": true,
+            "started_monotonic": 1340248.75,
+            "deadline_monotonic": 1340368.75,
+            "stop_requested": true,
+            "stop_reason": "SERIAL_ROOT_EXIT",
+            "actual_exit_code": 0,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          },
+          {
+            "chunk": 1,
+            "pid": 64692,
+            "resumed": true,
+            "started_monotonic": 1340248.75,
+            "deadline_monotonic": 1340368.75,
+            "stop_requested": true,
+            "stop_reason": "SERIAL_ROOT_EXIT",
+            "actual_exit_code": 0,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          },
+          {
+            "chunk": 2,
+            "pid": 20060,
+            "resumed": true,
+            "started_monotonic": 1340248.75,
+            "deadline_monotonic": 1340368.75,
+            "stop_requested": true,
+            "stop_reason": "SERIAL_ROOT_EXIT",
+            "actual_exit_code": 0,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          },
+          {
+            "chunk": 3,
+            "pid": 51508,
+            "resumed": true,
+            "started_monotonic": 1340248.75,
+            "deadline_monotonic": 1340368.75,
+            "stop_requested": true,
+            "stop_reason": "SERIAL_ROOT_EXIT",
+            "actual_exit_code": 0,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          }
+        ]
+      },
+      "logical_generations": 12
+    },
+    {
+      "label": "assignment_failure",
+      "owned_root_signalled": true,
+      "application_activity": false
+    },
+    {
+      "label": "resume_failure",
+      "result": {
+        "events": [
+          {
+            "kind": "resumed",
+            "chunk": 0,
+            "time": 1340250.265,
+            "deadline": 1340370.265
+          },
+          {
+            "kind": "resumed",
+            "chunk": 1,
+            "time": 1340250.265,
+            "deadline": 1340370.265
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 0,
+            "time": 1340250.265,
+            "reason": "PEER_FAILURE_OR_FINAL_STOP"
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 1,
+            "time": 1340250.265,
+            "reason": "PEER_FAILURE_OR_FINAL_STOP"
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 2,
+            "time": 1340250.265,
+            "reason": "PEER_FAILURE_OR_FINAL_STOP"
+          },
+          {
+            "kind": "stop_requested",
+            "chunk": 3,
+            "time": 1340250.265,
+            "reason": "PEER_FAILURE_OR_FINAL_STOP"
+          }
+        ],
+        "stop_phase_finished": 1340250.265,
+        "cleanup_finished": 1340250.265,
+        "failure": "OSError(22, '\u3053\u306e\u64cd\u4f5c\u3092\u6b63\u3057\u304f\u7d42\u4e86\u3057\u307e\u3057\u305f\u3002', None, 0)",
+        "stop_errors": [],
+        "receipts": [
+          {
+            "chunk": 0,
+            "pid": 32480,
+            "resumed": true,
+            "started_monotonic": 1340250.265,
+            "deadline_monotonic": 1340370.265,
+            "stop_requested": true,
+            "stop_reason": "PEER_FAILURE_OR_FINAL_STOP",
+            "actual_exit_code": 1223,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          },
+          {
+            "chunk": 1,
+            "pid": 29536,
+            "resumed": true,
+            "started_monotonic": 1340250.265,
+            "deadline_monotonic": 1340370.265,
+            "stop_requested": true,
+            "stop_reason": "PEER_FAILURE_OR_FINAL_STOP",
+            "actual_exit_code": 1223,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          },
+          {
+            "chunk": 2,
+            "pid": 61248,
+            "resumed": false,
+            "started_monotonic": 1340250.265,
+            "deadline_monotonic": 1340370.265,
+            "stop_requested": true,
+            "stop_reason": "PEER_FAILURE_OR_FINAL_STOP",
+            "actual_exit_code": 1223,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          },
+          {
+            "chunk": 3,
+            "pid": 58560,
+            "resumed": false,
+            "started_monotonic": null,
+            "deadline_monotonic": null,
+            "stop_requested": true,
+            "stop_reason": "PEER_FAILURE_OR_FINAL_STOP",
+            "actual_exit_code": 1223,
+            "reaped": true,
+            "job_active_zero_observed": true,
+            "cleanup_errors": [],
+            "created_suspended": true,
+            "suspended_job_active": 1
+          }
+        ]
+      }
+    },
+    {
+      "label": "kill_on_close_failure_receipt",
+      "receipt": {
+        "pid": 64712,
+        "resumed": true,
+        "started_monotonic": 1340250.265,
+        "deadline_monotonic": 1340370.265,
+        "stop_requested": true,
+        "stop_reason": "CALIBRATION_FALLBACK",
+        "actual_exit_code": 0,
+        "reaped": true,
+        "job_active_zero_observed": false,
+        "cleanup_errors": [
+          "ValueError('job handle unavailable after kill-on-close fallback')"
+        ],
+        "created_suspended": true,
+        "suspended_job_active": 1
+      },
+      "owned_handles_signalled": true
+    }
+  ],
+  "formula_builds": 0,
+  "native_calls": 0,
+  "elapsed_seconds": 2.859999999869615,
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/live_results.json": "47668d2f583665235907654ee145273ae8fa251f28184ed9f7aecef4d0ea18a7",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/manifest.json": "4715b79b92c6ebae647827be2b226bf85d0d52605ac88677574b035b202ed8d0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/mock_controls.json": "1dd26ef7c91a063d954050869d0f129239cc4ac4cddcafdffaa5ffea1e0c0e18",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/assignment_failure/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/assignment_failure/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/command.json": "5760db0c61182b1abfa1e92d56a17bbc6f2848f1b079c73d961639321db3cbd8",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level0.heartbeat": "095a3e32f2239e579df5fc641e994cc09d528003da2e2df0c146a8b342abf069",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level0.json": "34f3e1e4584fed376ddf65406a1d355d20700faa8879b5ba970ca30be3030f6f",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level0.spawn.json": "1f71e2835c121f955cfbd4fbcdcf38c2da670b07471e51a2cf43a4a1fbdc4192",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level1.heartbeat": "dfa3476846ce31adf8b1496b34595fb3f5ca2adf22b6df8ca2264c718b985cd9",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level1.json": "571aff045a14b09a1e980ec7b0cb15af1902915b858613f2cdfe6656b2a019b6",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level1.spawn.json": "697fc4745871f5808cad4cb939703082676734f124148c5deec4a5399a97c781",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level2.heartbeat": "5ec1f7e700f37c3d0b2981d04855fc34b94aaa15457b05ca571817442d228f81",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/level2.json": "b3527cca016e48f9bcedca55698c0ea3e37eab50752955bd0524a4f59c716a34",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/membership.json": "dfbdc3cb1799ba207727f9c740d40bcf1bdacde98c0806726ed5106b95002ea8",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/delayed_resume/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/command.json": "d6e625566718c9271be663a3a230ec54ed1298ec79ce1a95beb9aff7a9b05a07",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level0.heartbeat": "2fc0f883e6c3bf1e4b68c6b5990efc5bd8be65bfac1442f8a0a7e2463fc51c4d",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level0.json": "45fea062aeccee56f521884761a5d8b93a5a5125211f59d5b4e96322fd1edc93",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level0.spawn.json": "3389126496da228f634129d1f61923d3b3de49c26dd80b6e9dd2bcea03124294",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level1.heartbeat": "5c817da1476384508afff7f702ec511d3cc8d9166d33ee7ab5cc23a7438be175",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level1.json": "f8eb45df9f38244ce4b7fcdeecf1ea7aeaa42f36bdbfd484349dd323fe2ad086",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level1.spawn.json": "46ff60a0e5eee694ea21b3a4324ac7bda6d5aef9801dd17caa3b551311bf1661",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level2.heartbeat": "f8f2427665aa516d47807570735aeddcbc4f4ce465a7b2a9eb2e9b97018189d2",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/level2.json": "0124593dd841fa60e7492d0712689ec797be0422d3434be242541b3e6bdf821b",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/membership.json": "e47cf1a2935e3bb123355834f56e9ca64a036b04703249af23384269bdb48e03",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_0/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/command.json": "429ae28a46926fe7a3dce9b6a4a39c76a7ec445b89aa93522a1017a2a518a109",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level0.heartbeat": "eec2e7703b7ff3ca60b810115a76a777a4e532d537fc0f6aa3aa29c7be9a06d8",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level0.json": "e551a3eb00270bc84f0e117e9bc1af206d97ccfff3791a5483e2ddbc5e12c231",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level0.spawn.json": "e11a0af37b224f13700d0ffc260c28181cd844a02fcf8147498ba25ffe351805",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level1.heartbeat": "bdc237769f2950435dc8f95f3adfd17319300a99254dbfc65b881a8951f7afc1",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level1.json": "8fc227b93ed446f26a066ff3c1087ec3f8bd2db3b34388cdfb5239169dcf359b",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level1.spawn.json": "42d2828df4841eaa309d847e2a35842cc1b4480893df7a85d9a7fe0a76cb9ce9",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level2.heartbeat": "9f0707ba107af619603372ef773671c5359f83cd8582f1addd288e6b8eec3db7",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/level2.json": "a115b8d139944812ac85000aa73cc420403e63bbda2b321d42c076ed1a30a41d",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/membership.json": "14bc5ea471fff2c64a26943094bce9f6ff40eaa969ac3defe3b5d0273f1c317b",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_1/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/command.json": "535898165f20906e8f74f6991e42ae9a8471048aaaa81ae9807b381ab5032fe1",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level0.heartbeat": "8971f6d844af0a99a9e1f183395a631f6b962091bccd29785a84a2c18f28253d",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level0.json": "3b353ace2f4e2ef56294f547fa53c8e548c02bc865537ba471346ac35c61abe0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level0.spawn.json": "048fb1bcfd2dfea9b0d58becaa429b924d574c566f8d4395d78c0e6bb478f2b0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level1.heartbeat": "90d1dd74cc6998e93ce835696cb76694431c92b521d78ddc66ea39954d735642",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level1.json": "534fb3c661f9c535134e232437f6cc679684f0ef119dda97bab516e308e412e0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level1.spawn.json": "fcbaa61fb2e16e8d58593cc5c23a38da665a4688ea13d2220ba893ca40108197",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level2.heartbeat": "6d0ab613d0bf996dbdba20bd3abf90694a212b6f0df3c93fbab771ef0c98cd97",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/level2.json": "3d4ea18c673f01be85ffe3015d6fb14840bcc3ec51f70d5a5f9762b62304575c",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/membership.json": "b364b72e7bc8efff4b8b4fd4d8bcffa4ec25fa8c46d9d9d04e27361b65a1e9d4",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_2/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/command.json": "9a2174fad5c853cd2984ddafd984f4316175ca49e361f812140d33e3ee7e85c7",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level0.heartbeat": "1c5abadef0e2ea467f081bf269ec2f0c2116c7dd47bffa07613e53a5e2e30035",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level0.json": "82e4fa5c6119c0f34d8d9f866c3af50cd39a679f0bdc7d2576907c8ffae8454e",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level0.spawn.json": "2ad6f7623b806a4cc6978a08644d0085b606e6c7282fa57adea9984a6a938419",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level1.heartbeat": "24a2715f404d82792c9c128b274741e44a630bf82d50d40437eaca42325f8a0a",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level1.json": "7959b764d9763727f5d784b66900c7281f95a6d77807b5fdad5fde2449bfe54a",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level1.spawn.json": "18ccc3b242b3e1b776539698880a3e7dc0eca90d03af5d1d3298e34671d18bd9",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level2.heartbeat": "dd89800342a2addec342ca19569ffac89df7946b38145f98f63937b588fc1727",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/level2.json": "93014651c7350427e354b3372c1ad6dc1c7ef097051244a0160d739ca91d6087",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/membership.json": "05eb0d51717f7f06defb66e2c7796f3bb73d1af234d358b697365e548f56ebe6",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/four_tree_3/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/command.json": "16e3613b2ddfc2e568485e44ae0242d02468b96637a610395f9589c7c0c41c0e",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level0.heartbeat": "095a3e32f2239e579df5fc641e994cc09d528003da2e2df0c146a8b342abf069",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level0.json": "84399ee4f11db850b31ccb8290928d0e06dc7900e3dde28c123e8cb521b8e4c0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level0.spawn.json": "f59a453b94eba31ba522b583eb9a790653b983871d81e0848781d7bd8e8c270b",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level1.heartbeat": "dfa3476846ce31adf8b1496b34595fb3f5ca2adf22b6df8ca2264c718b985cd9",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level1.json": "b59ef184aec5a38f2438f3c842e0ef802223dd8d955d93dbc6f65a2a8dfd2bf9",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level1.spawn.json": "ee815efe840f2b2ed30eb0bf6e416417a8ed14ed50832b3ad908a733c38e2ab2",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level2.heartbeat": "5ec1f7e700f37c3d0b2981d04855fc34b94aaa15457b05ca571817442d228f81",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/level2.json": "ecd6b2b6ef42fc8ed07e0531a8227b6c5a6eba26b218d1e5b1f433bf348cbbcb",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/membership.json": "437bd9d55fd4309a06ebb2ea6e56feaba669a012b02fcc641954be8cbbb583b0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/kill_on_close_failure_receipt/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/plan_controls/parent.json": "14bcfe2552911fd722d8d10232b58489dc977dfad343e11bb57bc92d428460ee",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/plan_controls/part0.json": "00b52b3ed5f191631d56552b185af1063b5f59502a7c61c48580431ecd7fefb7",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/plan_controls/part1.json": "87955057b6231d5761f2d7967a27227b346b35fda9ed4131e7499f25bffea8a0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/plan_controls/part2.json": "ec5fbaeec44867a8ada8aec98783473197e9daf38c9bfdd3e91c1ed02f109fbf",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/plan_controls/part3.json": "a085bca133bd55a9f880a2110d3e7178db9b926ede0aed4e726c7f15e1527d6a",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/plan_controls/result.json": "dcf315e4ee08192a25c2cb909215546be0f144295d43d6110835936953394303",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_0/command.json": "4d62e35eb5d398c8e1ca15e7ddf666b3000768c0c43fadd149042a0d5760872c",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_0/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_1/command.json": "778072735fd7128e15bb31160bfb165aba6ffc3dfbf50cbe348a2ee49565f0a0",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_1/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_2/command.json": "95e545a66fa3c5a594a402ef965fe7d0868286958abbe2ba062711ae939ee679",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_2/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_3/command.json": "c88c7e801ab146083f0fedaf18e59fbfbb0453c746a0d638303e5f45ef737426",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_3/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/four_serial_build_engineering/resume_failure_3/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
