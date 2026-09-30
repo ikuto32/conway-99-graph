@@ -7,7 +7,15 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [tenth milestone](docs/RESEARCH_20260930_TENTH_WAVE.md) records 114
+The latest [eleventh milestone](docs/RESEARCH_20260930_ELEVENTH_WAVE.md) records
+122 claims, 120 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. A verified 25-row partial
+factor was excluded from extension by eleven complete row proofs. Separate
+exact arguments exclude restricted prism designs; they do not exclude every
+factor for that core. The strengthened full36 run ended UNKNOWN at its
+conflict limit. Next: the arbitrary-core factor formulation, independently
+gated before native search. [Eleventh replay guide](docs/REPRODUCING_20260930_ELEVENTH_WAVE.md).
+
+The [tenth milestone](docs/RESEARCH_20260930_TENTH_WAVE.md) records 114
 claims, 112 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. One SAT attempt produced a
 verified capacity-compatible 24x60 partial factor. Twelve complete row proofs
 then excluded that single fixed factor from target completion; other Q1

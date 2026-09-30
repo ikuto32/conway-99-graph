@@ -21,7 +21,10 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [tenth resumed milestone](docs/RESEARCH_20260930_TENTH_WAVE.md) for
+See the [eleventh resumed milestone](docs/RESEARCH_20260930_ELEVENTH_WAVE.md) for
+a verified 25-row partial factor and its fixed extension exclusion, restricted
+prism-design obstructions, and a completed UNKNOWN full-factor search.
+The [tenth resumed milestone](docs/RESEARCH_20260930_TENTH_WAVE.md) records
 a verified capacity-compatible partial factor, its exact extension obstruction,
 and conditional residual-completion equations. The [ninth milestone](docs/RESEARCH_20260930_NINTH_WAVE.md) records
 three new fixed-factor exclusions, a short component-balance obstruction,
