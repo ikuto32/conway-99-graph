@@ -7,7 +7,21 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [corrected twenty-sixth milestone](docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+The latest [twenty-seventh milestone](docs/RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+freezes 286 claims: 281 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
+Eight new scoped claims include complete proof replay for twelve literal
+campaign instances, one overlapping the preceding single pilot. Exact PSD
+screening checks all 792 canonical count survivors at rank 22 and excludes none.
+The three-profile kernel test, full fibre coverage and complete domain inventory
+retain their recorded scopes; unbuilt formula dimensions remain estimates.
+Next: independently check and solve the next32 explicitly selected literal
+Gram instances, preserving every complete proof or independently decoded factor.
+Next32 and later union work are outside this frozen checkpoint.
+Overall search coverage: UNKNOWN; no validated denominator.
+This file is not a live process observation and does not stop resumed work.
+[Twenty-seventh replay guide](docs/REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md).
+
+The previous [corrected twenty-sixth milestone](docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
 freezes 278 claims: 273 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
 Eleven verified additions include the complete fixed-support exactly-eight
 count census: 9,288 labelled profiles in 1,548 global fibre classes. Scalar

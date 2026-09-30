@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-30T12:42:51.812291+00:00",
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "60s",
+    "/usr/bin/prlimit",
+    "--as=4294967296:4294967296",
+    "--fsize=10737418240:10737418240",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "-c",
+    "1000000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_exact_eight_next_lift/instance.cnf",
+    "/tmp/conway99-exact-eight-next-lift-HU769h/proof.drat"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "actual_exit_code": 20,
+  "outer_windows_guard_expired": false,
+  "outer_windows_guard_seconds": 70,
+  "wall_seconds": 1.3900000001303852,
+  "stdout": "acceleration/results/20260930_exact_eight_next_lift_native_pilot/main/solver.stdout.log",
+  "stdout_sha256": "22a3746dedafae6abd3c1ca2d587805e0ef053b3c6da58c3afac237ba45b3579",
+  "stderr": "acceleration/results/20260930_exact_eight_next_lift_native_pilot/main/solver.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+  "exit_interpretation": {
+    "10": "native SAT",
+    "20": "native UNSAT",
+    "0": "native UNKNOWN or non-solver success",
+    "124": "GNU timeout deadline",
+    "137": "forced kill; inspect stderr and receipt"
+  }
+}
