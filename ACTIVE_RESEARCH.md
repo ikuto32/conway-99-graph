@@ -7,7 +7,18 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [nineteenth milestone](docs/RESEARCH_20260930_NINETEENTH_WAVE.md)
+The latest [twentieth milestone](docs/RESEARCH_20260930_TWENTIETH_WAVE.md)
+records194 claims:191 VERIFIED/CLEAR,2 CANDIDATE/CLEAR and1 REFUTED/CLEAR.
+Five verified claims and one refuted claim were added. A complete independently
+replayed proof excludes the balanced family on the literal six-prism support.
+The separate oriented projection ended UNKNOWN. The capped extension was built
+but never independently approved or searched; its cancellation is recorded.
+No whole-support, core or target exclusion follows. Next: full-Gram marginal
+identities and exact local profiles for four unbalanced groups. That work has
+separate wave21 records. This file is not a live process observation.
+[Twentieth replay guide](docs/REPRODUCING_20260930_TWENTIETH_WAVE.md).
+
+The previous [nineteenth milestone](docs/RESEARCH_20260930_NINETEENTH_WAVE.md)
 records 188 claims, 186 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Ten new claims
 include exact phase exclusions of four specified balanced parity assignments,
 eleven overlapping reduced-pattern exclusions, and conditional matrix algebra.

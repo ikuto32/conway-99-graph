@@ -21,7 +21,13 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [nineteenth resumed milestone](docs/RESEARCH_20260930_NINETEENTH_WAVE.md)
+See the [twentieth resumed milestone](docs/RESEARCH_20260930_TWENTIETH_WAVE.md)
+for five new verified claims and one refuted claim. A complete independently
+replayed proof excludes every balanced factor on the fixed six-prism support.
+Its six-part public proof package and replay guide preserve exact evidence.
+Unbalanced factors, the whole support and the target remain unresolved.
+The next work examines full-Gram marginals and four-unbalanced-group profiles.
+The [nineteenth resumed milestone](docs/RESEARCH_20260930_NINETEENTH_WAVE.md)
 for ten new checked claims, exact phase exclusions of four specified parity
 assignments, reduced-pattern exclusions and a completely checked finite phase
 enumeration. No full factor or target resolution follows. Four deferred learned

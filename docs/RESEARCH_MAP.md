@@ -4,6 +4,13 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [twentieth milestone](RESEARCH_20260930_TWENTIETH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_TWENTIETH_WAVE.md) preserve five new verified
+claims, one refuted intersection guess, and the complete balanced-family UNSAT
+proof with independent recovery from six compressed parts. Balance and the
+literal support are restrictions; no whole-support or target resolution follows.
+The separate oriented native call ended UNKNOWN. Four-group continuation belongs
+to the next cohort.
 The [nineteenth milestone](RESEARCH_20260930_NINETEENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_NINETEENTH_WAVE.md) preserve ten checked
 claims: exact selected-phase exclusions, overlapping pattern reductions,
