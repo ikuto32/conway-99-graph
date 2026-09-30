@@ -1,0 +1,26 @@
+# Independent review of the arbitrary-exception count master
+
+The proposed master is an exact coupling of necessary count tables on the one literal fixed six-prism Hadamard support. It is not a full factor model. This review authenticates and reconstructs the preflight inventory and proves the proposed generic selector semantics. No actual CNF has been audited or approved here.
+
+For coordinate a, choose one of its complete ordered three-fibre count profiles. Its ten incident groups have counts in0..3, sum3 across fibres, and deviations from1 in the exact marginal kernel. Counts at absent groups are zero. Completeness is an explicit premise from the root review of all12 times4^10 bounded integer vectors, every ordered pair, and the exact projection certificates. This audit does not approve the coordinate producer's own results; it relies on that separate gate.
+
+For each of20 identical-support groups, choose a count signature of some triple in the complete31110 local catalogue. A signature records18 labelled counts, six coordinates times three fibres. Each coordinate total is3 and each fibre total across the group is6. The catalogue already requires local Gram upper bounds and within-group outside-column caps. The signature can represent multiple actual triples; deduplicating by all18 counts is exact for this count projection and deliberately forgets their cross-group correlations.
+
+Every fixed-support factor with full Gram and all column caps induces these choices: the necessary coordinate marginals hold; the actual triple gives a catalogue signature; and both sides give the same count triple at each coordinate/group incidence. Conversely, agreement of these tables produces exactly a joint count solution. It does not give a consistent set of full Gram entries between all groups, all outside-column caps, or a residual graph. Local realizations exist separately for each group signature, but their arbitrary combination need not satisfy those omitted conditions.
+
+For each incidence (a,g), create exactly-one value-channel variables for every count triple appearing in coordinate a's domain at group g. A chosen coordinate profile implies its ten channel values. A chosen group signature implies its six values. Because exactly one coordinate selector, group selector and channel value is true, these implications force the two counts to agree. Reverse implications are unnecessary. Conversely every joint count solution selects exactly the appropriate selectors and channels; standard sequential at-most-one auxiliaries can extend it. Removing a group signature with a missing channel value is therefore safe: it cannot participate in any coupled table solution. The audit reconstructs every such first mismatch and every retained signature.
+
+The proposed sequential one-hot gadget uses n selectors and n-1 prefix auxiliaries for n>=2, with3n-4 at-most-one clauses and one at-least-one clause. A singleton uses one unit. The independent controls exhaustively existentially project auxiliary assignments for n=1..6 and compare with exactly-one semantics; intentionally missing an at-least-one, final exclusion or channel implication gives a detected false positive. A tiny two-table channel system checks the consistency direction directly.
+
+The complete inventory is6061 distinct local signatures,74798 retained group/signature choices,2226 coordinate choices and927 channel values at120 incidences. The32 table domains plus120 channel domains give the proposed155750 variables and704454 clauses. These are preflight estimates conditional on the stated gadget and ordering conventions, not a checked output formula.
+
+An immediate limitation is decisive for search planning: the all-balanced count table is a literal satisfying count solution, independently checked here. The frozen six-exception profile0000 is another table solution. Both corresponding full-factor families have been excluded by stronger previously checked constraints, which is compatible with this relaxation. Thus an unrestricted native SAT attempt on precisely this master need not discover anything new. The master can organize necessary profiles, or a separately specified later model can add already proved necessary exclusions, such as the at-least-seven exception condition. Such changes require their own scope and encoding gates.
+
+Positive tables are saved with all counts and exact selected indices; neither is called a full-factor witness. Corrupt controls alter integer type, bounds, a marginal, absent-support counts, shape, coordinate membership or local signature membership. The actual future CNF audit must additionally reconstruct every variable/selector/channel/auxiliary mapping and every clause; corrupt CNF/header/literal and native assignment controls belong to that later gate.
+
+```powershell
+$env:UV_PROJECT_ENVIRONMENT='build/research-venv'
+uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/audit_20260930_hadamard_count_master_preflight.py --out acceleration/results/20260930_independent_review/hadamard_count_master_preflight
+```
+
+Use a new output directory per replay. No producer imports, native solver, ledger change or publication operation occurs.

@@ -7,7 +7,21 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-third milestone](docs/RESEARCH_20260930_TWENTYTHIRD_WAVE.md)
+The latest [twenty-fourth milestone](docs/RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
+records 248 claims: 244 VERIFIED/CLEAR, 2 CANDIDATE/CLEAR and 2 REFUTED/CLEAR.
+Eighteen new checked claims and one refuted exact-extrema formula include
+complete replay of 216 seven-profile proofs and exact coverage of all 1,608
+necessary profiles. A factor on this literal support satisfying the full Gram
+and all outside-column overlap caps requires at least eight unbalanced groups.
+The checked eight-group count witness satisfies weaker interval and separate
+block constraints, while its full-Gram lift is excluded. Six exact fibre images
+are also excluded. No full factor or whole-support exclusion follows.
+Next: independently check the next count witness and its full-Gram lift, and
+inventory a joint formulation. Later continuation is outside this frozen report.
+This file is not a live process observation.
+[Twenty-fourth replay guide](docs/REPRODUCING_20260930_TWENTYFOURTH_WAVE.md).
+
+The previous [twenty-third milestone](docs/RESEARCH_20260930_TWENTYTHIRD_WAVE.md)
 records 229 claims: 226 VERIFIED/CLEAR, 2 CANDIDATE/CLEAR and 1 REFUTED/CLEAR.
 Thirteen new checked claims include 55 representative proof replays and exact
 coverage of all 984 necessary six-exception profiles. Any factor on this

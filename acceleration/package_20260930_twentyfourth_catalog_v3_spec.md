@@ -1,0 +1,5 @@
+# Wave24 catalog v3: gate the registrar-only path lookup
+
+This source preserves unexecuted v2 and completed v1. It retains every acceptance test and the v2 exact-resolution cache. The only further change reverses the order of a conjunction: first check that the origin is one of the four registrar validation.json files, then resolve the name to determine whether it is CLAIMS.yaml. The old code performed this read-only resolution for every reference before testing the origin. Both boolean outcomes and all selected names are identical; non-registrar references do not need this extra filesystem operation.
+
+No reference is removed or reordered, and all raw/package/hash/ledger/index/private-boundary checks remain. V1 source, spec and preparation are preserved; v2 source/spec remain preserved and unexecuted. V3 source/spec join the explicit file whitelist. Final execution waits for root's frozen extras and uses only a fresh final output path. The original wave24 protocol and bounded chunked-reference schema remain authoritative.

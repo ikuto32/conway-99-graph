@@ -1,0 +1,7 @@
+# Literal eight-count-profile native pilot
+
+Question: can the first independently checked count-master witness d2b0c89bb1d8f0d75b47f541603e952618cebe9b7ecccd8e1b2c23a279ac8dd9 lift to the complete fixed-support Gram equation? Freeze its eight groups [1,3,5,11,13,15,18,19], all48 initial options per exceptional group and12 balanced groups with150 options each. There is no AC pruning, orbit coverage or target automorphism assumption. Cross-group caps and residual D are omitted.
+
+Exactly one research call after independent complete encoding and calibrated object gates: CaDiCaL1.9.5,60wall seconds,1000000conflicts,4GiB address space,10GiB proof cap,5second kill grace,70second outer guard. Require21GiB host and11GiB ext4 free. Separate preflight performs zero research calls. No automatic retry. Retain raw ext4 trace, exact host copy, all receipt identities and frozen source closure.
+
+SAT requires separate checking of every literal/clause and complete raw36x60 integer factor. Even a valid factor is not a99vertex graph. UNSAT excludes only this exact literal profile after independent complete DRAT replay; UNKNOWN excludes nothing. Exact integer acceptance only; no floating-point threshold. Preserve command, versions, source commit, hashes and deviations. Prepared using the frozen first-seven native wrapper; reused driver/decoder checks are producer paths, not independent verification.

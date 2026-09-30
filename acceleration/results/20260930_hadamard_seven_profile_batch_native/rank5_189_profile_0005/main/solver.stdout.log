@@ -1,0 +1,122 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2023 A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt
+c 
+c Version 1.9.5 146207318796f094dcded87349a64f0c6927309e
+c g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 -Wall -Wextra -O3 -DNDEBUG
+c Wed Sep 30 06:02:32 JST 2026 Linux ikutoPC 6.6.87.2-microsoft-standard-WSL2 x86_64
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting conflict limit to 1000000 conflicts (due to '1000000')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/tmp/conway99-seven-profile-rank5_189_profile_0005-Trl4jH/proof.drat'
+c writing non-binary proof trace to '/tmp/conway99-seven-profile-rank5_189_profile_0005-Trl4jH/proof.drat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_seven_remaining_cnfs/run02/rank5_189_profile_0005/instance.cnf'
+c opening file to read '/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_seven_remaining_cnfs/run02/rank5_189_profile_0005/instance.cnf'
+c found 'p cnf 9880 170650' header
+c parsed 170650 clauses in 0.07 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail      variables
+c          level   conflicts       glue        remaining
+c 
+c *  0.07 18  0 0   0    0    0  0% 0 120722 6954 70%
+c {  0.07 19  0 0   0    0    0  0% 0 120722 6954 70%
+c i  0.08 19 80 0   0   76   55 54% 30 120722 6953 70%
+c i  0.08 19 78 0   1   79   57 53% 29 120722 6952 70%
+c i  0.08 19 77 0   2   80   57 53% 29 120722 6951 70%
+c i  0.08 19 72 0   4   91   66 51% 26 120722 6950 70%
+c i  0.08 19 72 0   4   92   66 51% 26 120722 6947 70%
+c i  0.08 19 65 0   4  107   74 50% 24 120722 6946 70%
+c i  0.08 19 59 0   4  125   82 49% 22 120722 6944 70%
+c i  0.08 19 55 0   4  147   96 50% 19 120722 6943 70%
+c i  0.08 19 46 0   4  231  162 51% 15 120722 6940 70%
+c -  0.09 19 40 1   4  300  203 51% 13 120090 6940 70%
+c i  0.09 19 35 1   4  405  278 52% 12 120090 5961 60%
+c i  0.09 19 34 1   4  408  280 52% 11 120090 5960 60%
+c i  0.09 19 34 1   4  409  280 52% 11 120090 5876 59%
+c i  0.09 19 34 1   4  410  280 52% 11 120090 5875 59%
+c i  0.09 19 34 1   4  411  280 52% 11 120090 5874 59%
+c i  0.09 19 34 1   4  412  280 52% 11 120090 5873 59%
+c i  0.09 19 34 1   4  414  281 52% 11 120090 5872 59%
+c i  0.09 19 34 1   4  415  281 52% 11 120090 5859 59%
+c 
+c  seconds  reductions  redundant   irredundant
+c         MB    restarts       trail       variables
+c          level   conflicts       glue         remaining
+c 
+c i  0.09 19 34 1   4  418  283 52% 11 120090 5854 59%
+c }  0.09 19 33 1   4  425  284 52% 11 120090 4493 45%
+c 0  0.10 19 33 1   4  425  284 52% 11 120090 4493 45%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c DRAT proof file '/tmp/conway99-seven-profile-rank5_189_profile_0005-Trl4jH/proof.drat' closed
+c DRAT 6780 added clauses 11.60%
+c DRAT 51668 deleted clauses 88.40%
+c DRAT 1416357 bytes (1.35 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.07  264.40% parse
+c         0.03   97.11% search
+c         0.02   89.13% unstable
+c         0.00    7.86% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.03   27.11% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:               199        46.82 %  of conflicts
+c conflicts:                   425     16464.57    per second
+c decisions:                  1068     41374.50    per second
+c fixed:                      5387        54.52 %  of all variables
+c learned:                     361        84.94 %  per conflict
+c learned_lits:              23701       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                   5893        24.86 %  learned literals
+c minishrunken:               3098        13.07 %  learned literals
+c otfs:                         14         3.29 %  of conflict
+c propagations:             233071         9.03 M  per second
+c restarts:                      4       106.25    interval
+c subsumed:                     53         0.04 %  of all clauses
+c strengthened:                 11         0.01 %  of all clauses
+c trail reuses:                  0         0.00 %  of incremental calls
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.10    seconds
+c total real time since initialization:            0.76    seconds
+c maximum resident set size of process:           20.26    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20
