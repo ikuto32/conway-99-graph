@@ -1,0 +1,87 @@
+{
+  "status": "INDEPENDENT_HADAMARD_SIX_PRISM_IDENTICAL_SUPPORT_ORDER_PASS",
+  "created_at": "2026-09-30T03:01:15.969588+00:00",
+  "updated_at": "2026-09-30T03:01:17.011357+00:00",
+  "claim": {
+    "id": "C-FIXED-HADAMARD-SIX-PRISM-IDENTICAL-SUPPORT-ORDER-NORMALIZATION",
+    "revision": 1,
+    "kind": "mathematical result",
+    "basis": [
+      "DERIVED",
+      "COMPUTED"
+    ],
+    "statement": "Every binary exact prescribed-Gram factor on the fixed six-prism Hadamard aggregate support can be relabelled within each of its20 identical-support size3column groups so that its three saved lexicographic option indices strictly increase; this preserves the full factor Gram, all outside paircaps and existence of any residual target completion.",
+    "scope": "Integral factor solutions in this one exact fixed-support family, modulo outside-vertex relabelling; no graph automorphism, fixed bit or additional chosen column is assumed.",
+    "dependencies": [
+      {
+        "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+        "revision": 1,
+        "relation": "premise"
+      }
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "assumptions": [
+      "The exact fixed support and its90-option domains are the stated scope.",
+      "No nontrivial automorphism of a hypothetical solution is assumed."
+    ],
+    "limitations": [
+      "No integer factor, residualD or target graph is constructed.",
+      "Fractional feasibility and integral normalization are separate claims; the uniform witness does not certify the ordered relaxation."
+    ],
+    "created_at": "2026-09-30T03:01:15.969588+00:00",
+    "updated_at": "2026-09-30T03:01:17.011357+00:00",
+    "verifier": "/root/eight_domain_audit"
+  },
+  "verifier": "/root/eight_domain_audit",
+  "method": "independent_derivation_and_exact_artifact_check",
+  "source_commit": "ca7797c192f92d657ab893018f5d60e01545f1f1",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_hadamard_prism_relaxation_and_order.py",
+    "--mode",
+    "order",
+    "--out",
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_column_order"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_independent_review/hadamard20_support_v2/summary.json": "a8477256446e3e402a2a21241dc383a515162dc9c8c07a9a8e26326c07b0f58f",
+    "acceleration/audit_20260930_hadamard_prism_relaxation_and_order.py": "54a2d555909f20956a98a61c73153c18436e3e76b2fad1d7ba4749564a247279",
+    "docs/AUDIT_20260930_HADAMARD_PRISM_RELAXATION_AND_ORDER.md": "38a725aaf35a4ee9729c2687b1a172a412ea9616dc27051e2a7a7611658ce20c",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_column_order/calibration.json": "88e3ed2a8006ef7c983c25cb46f5be1410b0b5d9538a4bf9b40b6b259e8c5a2c",
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_column_order/corruptions.json": "8c951ce6b3aa8c711b53c64368891691cb514b2deb739688afda1fa3f832f91e",
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_column_order/duplicate_option_obstructions.json": "59619c41a203223c613b6ef5fb28accab3e23edda8624680d8a63f6ab3b3dba8",
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_column_order/groups.json": "a3d8366a607bfd10787d4e879f8971c84ba5835b2b22c71ebfd081f55352f404"
+  },
+  "counts": {
+    "groups": 20,
+    "columns": 60,
+    "options_per_column": 90,
+    "adjacent_order_pairs": 40,
+    "duplicate_option_obstructions": 1800,
+    "ordered_distinct_option_triples": 704880,
+    "duplicate_option_triples": 24120,
+    "all_option_triples": 729000,
+    "normalized_increasing_triples": 117480,
+    "small_matrix_permutations": 6,
+    "positive_scope": "Generic permutation controls only; no full research factor asserted."
+  },
+  "corruptions": 5,
+  "shared_components": [
+    "The two modes share this independently authored raw-domain checker.",
+    "Only Python standard library; no producer LP, solver, sparse-builder or Hadamard code is imported."
+  ],
+  "mathematical_review": "Written proof is bound in inputs_sha256; group sorting is legitimate relabelling, not an assumed graph automorphism.",
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Exact raw sources and saved checking receipts are bound; immutable publication is not yet confirmed.",
+  "target_resolution": false,
+  "external_review": false,
+  "overall_search_coverage": "UNKNOWN; no validated denominator."
+}

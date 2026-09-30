@@ -1,0 +1,83 @@
+{
+  "status": "INDEPENDENT_HADAMARD_SIX_PRISM_UNIFORM_RATIONAL_LP_PASS",
+  "created_at": "2026-09-30T03:01:15.969588+00:00",
+  "updated_at": "2026-09-30T03:01:16.457998+00:00",
+  "claim": {
+    "id": "C-FIXED-HADAMARD-SIX-PRISM-UNIFORM-RATIONAL-PRIMAL",
+    "revision": 1,
+    "kind": "construction",
+    "basis": [
+      "COMPUTED",
+      "DERIVED"
+    ],
+    "statement": "The exact fixed six-prism Hadamard support nonnegative selector relaxation has5400variables and726equalities, and assigning every selector the rational value1/90 satisfies every equation exactly with nonnegative weights.",
+    "scope": "Only the saved continuous Gram-selector relaxation; all pairwise Ycaps, integrality, column-order constraints and residualD equations are omitted.",
+    "dependencies": [
+      {
+        "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+        "revision": 1,
+        "relation": "premise"
+      }
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "assumptions": [
+      "The exact fixed support and its90-option domains are the stated scope.",
+      "No nontrivial automorphism of a hypothetical solution is assumed."
+    ],
+    "limitations": [
+      "No integer factor, residualD or target graph is constructed.",
+      "Fractional feasibility and integral normalization are separate claims; the uniform witness does not certify the ordered relaxation."
+    ],
+    "created_at": "2026-09-30T03:01:15.969588+00:00",
+    "updated_at": "2026-09-30T03:01:16.457998+00:00",
+    "verifier": "/root/eight_domain_audit"
+  },
+  "verifier": "/root/eight_domain_audit",
+  "method": "independent_derivation_and_exact_artifact_check",
+  "source_commit": "ca7797c192f92d657ab893018f5d60e01545f1f1",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_hadamard_prism_relaxation_and_order.py",
+    "--mode",
+    "lp",
+    "--out",
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_uniform_lp"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_independent_review/hadamard20_support_v2/summary.json": "a8477256446e3e402a2a21241dc383a515162dc9c8c07a9a8e26326c07b0f58f",
+    "acceleration/results/20260930_hadamard_support_remaining_lp/six_prism/exact_model.json": "f5ac7adc289d6ca3cc7ce77394565919813138f6322e5ae2dc1856684eef6ae2",
+    "acceleration/results/20260930_hadamard_prism_uniform_lp/certificate.json": "e908ccc22b2706e947f00b7cf00d505d184934d6bf89cae2397d24e510ad83cd",
+    "acceleration/results/20260930_hadamard_prism_uniform_lp/summary.json": "193f9162b69212fccbc0714a8b9491d23ce9d90cf115a23748a8fd958ee392ca",
+    "acceleration/theory_20260930_hadamard_prism_uniform_lp.py": "648a6f68257596a3edb1e2ef96b1a18747518d1fff178054fd826128284d6b26",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260930_hadamard_prism_uniform_lp/manifest.json": "54a8b69ff66aed8a39b063c0f157ade032437e65619972a07a7641806824d699",
+    "acceleration/audit_20260930_hadamard_prism_relaxation_and_order.py": "54a2d555909f20956a98a61c73153c18436e3e76b2fad1d7ba4749564a247279",
+    "docs/AUDIT_20260930_HADAMARD_PRISM_RELAXATION_AND_ORDER.md": "38a725aaf35a4ee9729c2687b1a172a412ea9616dc27051e2a7a7611658ce20c",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_uniform_lp/corruptions.json": "87b059062f171c01cbd40f77bc8b2a4d2503fca1106201dfc6de159d8c86df25",
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_uniform_lp/literal_rational_check.json": "ec8af04d8230581659a911d6be3914d354beb15d2420d109c8f2b7f4d0d1255f"
+  },
+  "counts": {
+    "variables": 5400,
+    "equations": 726,
+    "denominator": 90,
+    "raw_rational_checks": 726
+  },
+  "corruptions": 8,
+  "shared_components": [
+    "The two modes share this independently authored raw-domain checker.",
+    "Only Python standard library; no producer LP, solver, sparse-builder or Hadamard code is imported."
+  ],
+  "mathematical_review": "Written proof is bound in inputs_sha256; group sorting is legitimate relabelling, not an assumed graph automorphism.",
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Exact raw sources and saved checking receipts are bound; immutable publication is not yet confirmed.",
+  "target_resolution": false,
+  "external_review": false,
+  "overall_search_coverage": "UNKNOWN; no validated denominator."
+}

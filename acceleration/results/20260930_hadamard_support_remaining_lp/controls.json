@@ -1,0 +1,105 @@
+[
+  {
+    "name": "feasible",
+    "result": {
+      "run_status": "HighsStatus.kOk",
+      "model_status": "HighsModelStatus.kOptimal",
+      "wall_seconds": 0.0,
+      "options": {
+        "solver": "simplex",
+        "presolve": "off",
+        "threads": 1,
+        "random_seed": 0,
+        "time_limit": 3,
+        "primal_feasibility_tolerance": 1e-07,
+        "dual_feasibility_tolerance": 1e-07,
+        "log_to_console": false,
+        "output_flag": true,
+        "log_file": "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_hadamard_support_remaining_lp\\control_feasible.log"
+      },
+      "solution_value_valid": true,
+      "solution_dual_valid": true,
+      "primal": [
+        0.0,
+        1.0
+      ],
+      "row_dual": [
+        -0.0
+      ],
+      "dual_ray": null
+    },
+    "certificate": {
+      "kind": "EXACT_RATIONAL_PRIMAL_CANDIDATE",
+      "values": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "interpretation": "Only the continuous nonnegative Gram-selector relaxation is feasible."
+    }
+  },
+  {
+    "name": "infeasible",
+    "result": {
+      "run_status": "HighsStatus.kOk",
+      "model_status": "HighsModelStatus.kInfeasible",
+      "wall_seconds": 0.0,
+      "options": {
+        "solver": "simplex",
+        "presolve": "off",
+        "threads": 1,
+        "random_seed": 0,
+        "time_limit": 3,
+        "primal_feasibility_tolerance": 1e-07,
+        "dual_feasibility_tolerance": 1e-07,
+        "log_to_console": false,
+        "output_flag": true,
+        "log_file": "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_hadamard_support_remaining_lp\\control_infeasible.log"
+      },
+      "solution_value_valid": true,
+      "solution_dual_valid": true,
+      "primal": [
+        1.0
+      ],
+      "row_dual": [
+        -0.0,
+        7.268478615836857e-07
+      ],
+      "dual_ray": {
+        "status": "HighsStatus.kOk",
+        "exists": true,
+        "values": [
+          -1.0,
+          1.0
+        ]
+      }
+    },
+    "certificate": {
+      "kind": "EXACT_RATIONAL_FARKAS_CANDIDATE",
+      "values": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "minimum_column_dot": [
+        0,
+        1
+      ],
+      "rhs_dot": [
+        -1,
+        1
+      ],
+      "interpretation": "Only this exact fixed-support continuous relaxation is infeasible."
+    }
+  }
+]

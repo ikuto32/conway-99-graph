@@ -7,7 +7,18 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [fifteenth milestone](docs/RESEARCH_20260930_FIFTEENTH_WAVE_CORRECTED.md)
+The latest [sixteenth milestone](docs/RESEARCH_20260930_SIXTEENTH_WAVE.md)
+records 165 claims, 163 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Seventeen new
+claims include exact exclusions of four of five selected Hadamard supports,
+an exact fractional witness for the remaining support, conditional triangle
+structure, and scoped normalization and propagation results. The one native
+attempt ended UNKNOWN. No core family, full factor or target graph was found
+or excluded. Next: independently audit and test the broader ordered coloring
+model for the remaining fixed support. Later work has separate receipts;
+this file is not a live process observation.
+[Sixteenth replay guide](docs/REPRODUCING_20260930_SIXTEENTH_WAVE.md).
+
+The [fifteenth milestone](docs/RESEARCH_20260930_FIFTEENTH_WAVE_CORRECTED.md)
 records 148 claims, 146 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Ten new claims
 cover four selected connected-core domains, finite GPU calibration and saved
 states, conditional modular consistency, and a distinct 60-pattern six-prism

@@ -4,6 +4,11 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [sixteenth milestone](RESEARCH_20260930_SIXTEENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_SIXTEENTH_WAVE.md) cover conditional triangle
+structure, four exact exclusions among five selected Hadamard supports,
+a fractional witness, and one completed UNKNOWN native attempt. No full
+factor or target resolution is claimed.
 The [fifteenth milestone](RESEARCH_20260930_FIFTEENTH_WAVE_CORRECTED.md) and
 [replay guide](REPRODUCING_20260930_FIFTEENTH_WAVE.md) cover four selected
 connected-core domains, finite GPU calibration and saved states, conditional
