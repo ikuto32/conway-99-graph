@@ -7,7 +7,20 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-second milestone](docs/RESEARCH_20260930_TWENTYSECOND_WAVE.md)
+The latest [twenty-third milestone](docs/RESEARCH_20260930_TWENTYTHIRD_WAVE.md)
+records 229 claims: 226 VERIFIED/CLEAR, 2 CANDIDATE/CLEAR and 1 REFUTED/CLEAR.
+Thirteen new checked claims include 55 representative proof replays and exact
+coverage of all 984 necessary six-exception profiles. Any factor on this
+literal support satisfying the full Gram and outside-column overlap caps
+requires at least seven unbalanced groups. Seven-profile propagation leaves
+1,296 labelled profiles in 216 relabelling classes. Independent coordinate
+enumeration confirms 2,226 ordered marginal profiles without joint feasibility.
+Next: independently build and check the joint count model with the verified
+seven-group lower bound, then test its necessary feasibility. Later count-master
+work is outside this frozen milestone. This file is not a live process observation.
+[Corrected twenty-third replay guide](docs/REPRODUCING_20260930_TWENTYTHIRD_WAVE_V2.md).
+
+The previous [twenty-second milestone](docs/RESEARCH_20260930_TWENTYSECOND_WAVE.md)
 records216 claims:213 VERIFIED/CLEAR,2 CANDIDATE/CLEAR and1 REFUTED/CLEAR.
 Ten new checked claims include complete replay of fifteen literal-profile
 proofs and exact coverage of all108 necessary four-exception profiles.

@@ -1,0 +1,20 @@
+# One literal six-exception whole-Gram formula
+
+Build only; no native solver call. The generic CLI selects an explicit raw profile ID from the pinned 984-profile universe. The initial experiment selects `rank4_00_profile_0000`, the lexicographically first survivor in the new candidate fibre census. Neither AC pruning nor orbit coverage is used in the encoded domain. The formula retains all initial exceptional local options: six domains of 48 choices for this profile, together with all 150 normalized balanced triples in each of the other fourteen groups.
+
+Freeze the full raw deviation profile, its canonical hash, all six domain paths/hashes/rank lists, the fixed six-prism `C`, prescribed `G`, support `L`, and the twenty three-column groups. Rebuild each exceptional domain from the entire 31,110 initial local catalogue using its literal count signature. Exceptional triples are sorted by the 90-word catalogue; balanced triples use the first-coordinate permutation gauge. Both are only column relabellings within an identical-support triple. No target automorphism or general balance assumption is introduced.
+
+The formula chooses exactly one local triple in every group. For each of the sixty nonmatched coordinate pairs and each of the nine fibre cells, a chosen group contributes an integer in `{0,1,2}`. Two exact OR channels record contribution at least one and at least two. The sum of the ten channels over the five incident groups is exactly one for equal fibres and two for distinct fibres. Use the frozen, previously audited exact-one prefix, OR and ten-input cardinality clause constructors without altering them. Save all selectors, local row words, raw lifted columns, count vectors, threshold populations and clause ranges.
+
+These 540 weighted cell equations enforce all nonzero off-diagonal Gram entries. Every zero Gram entry is checked to vanish in every domain choice; row diagonals ten follow from the exact profile margins and are checked independently during build. Thus a complete satisfying assignment decodes to the full integer 36-by-60 Gram factor in this literal profile; conversely every such factor can be locally column-normalized and assigned the exact auxiliaries. Within-group column caps belong to the initial local domains. Cross-group column caps and residual `D` are omitted and diagnosed only after decoding. This equivalence is producer CANDIDATE until an independent clause/domain/object audit.
+
+The generic clause formulas are derived from the actual selector count `S`: variables `2S+5380`, clauses `49S+60400`. These are consistency checks, not hardcoded domain selection. Expected initial case: `S=2388`, 10,156 variables, 177,412 clauses. Preserve any deviation or failed build rather than replacing it silently.
+
+Controls precede clause generation: reuse the explicitly disclosed frozen producer gadget controls, including known SRG243 factor validation and corrupted inputs; test exact profile margin/zero-cell checks and a deliberately changed fibre count. Independent calibration and a native gate remain separate requirements. Cooperative build limit120 seconds; stop/failure preserves new artifacts. Save source commit, actual command, dependencies, hashes and recoverable gzip of any large model. No ledger/Git/historical edits.
+
+```powershell
+$env:UV_PROJECT_ENVIRONMENT='build/research-venv'
+uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/theory_20260930_hadamard_six_profile_cnf.py --profile-id rank4_00_profile_0000 --out acceleration/results/20260930_hadamard_six_profile_cnf/profile_0000
+```
+
+Decoder contract: `decode(assignment, model_path, scope_path, cnf_path)` checks the complete signed assignment and all actual clauses; returns raw `factor`, literal `actual_group_profiles`, complete Gram and all1770 column-overlap diagnostics, canonical C0 column permutation and factor, fixed `L/core/Gram`, `profile_is_additional_assumption:true`, `target_graph:false`, and `residual_D:null`. Cap failures are retained; a Gram factor alone is not a target graph.

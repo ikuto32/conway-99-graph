@@ -4,7 +4,14 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
-The [twenty-second milestone](RESEARCH_20260930_TWENTYSECOND_WAVE.md) and
+The [twenty-third milestone](RESEARCH_20260930_TWENTYTHIRD_WAVE.md) and
+[corrected replay guide](REPRODUCING_20260930_TWENTYTHIRD_WAVE_V2.md) preserve
+thirteen checked claims, 55 complete representative proofs and exact
+six-exception coverage. The literal fixed-support Gram-plus-column-cap family
+requires at least seven unbalanced groups. Seven-group screens, an eight-group
+kernel census and complete coordinate domains remain necessary relaxations.
+No whole-support or target resolution follows.
+The previous [twenty-second milestone](RESEARCH_20260930_TWENTYSECOND_WAVE.md) and
 [replay guide](REPRODUCING_20260930_TWENTYSECOND_WAVE.md) preserve ten checked
 claims, fifteen complete proof replays and exact four-exception coverage.
 The literal fixed-support Gram-plus-column-cap family requires at least six
