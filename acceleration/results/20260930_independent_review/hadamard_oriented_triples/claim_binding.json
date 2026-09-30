@@ -1,0 +1,78 @@
+{
+  "id": "C-FIXED-HADAMARD-ALL-MIXED-ORIENTED-TRIPLE-ENCODING",
+  "revision": 1,
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "The frozen800-variable109340-clause CNF is equivalent to choosing one oriented pair of sign triples in each of20fixed support groups and covering all120directed nonmatching arcs exactly once. This is equivalent, modulo independent negative-triple phase offsets, to the all-mixed local and even-relative-phase screen. Every balanced full-Gram factor in this fixed-support all-mixed family projects to it.",
+  "scope": "Only the fixed six-prism Hadamard support and all-mixed balanced subfamily; no odd-phase, outside-cap or residual-D equivalence.",
+  "assumptions": [
+    "Pinned fixed support/core.",
+    "Additional balanced triples and all20groups mixed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+      "revision": 1,
+      "relation": "premise"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-GENERAL-BALANCED-GF3-PHASE-NECESSITY",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-BALANCED-PHASE-MATRIX-FORM",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "verifier": "/root/structural_attack",
+  "producer": "/root/state_literature_audit",
+  "method": "Independent local phase enumeration, full raw scope/domain/row and byte reconstruction, exact derivation and corruption controls.",
+  "shared_components": [
+    "Pinned raw support and independently reviewed mathematical statements.",
+    "Python standard-library exact arithmetic/JSON; no producer/helper source imports."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "availability_reason": "Workspace artifacts pending parent publication.",
+  "external_review": null,
+  "external_review_reason": "No external review asserted.",
+  "limitations": [
+    "No actual SAT/UNSAT outcome in this gate.",
+    "No full factor or target graph.",
+    "Constant-containing balanced branches are not covered."
+  ],
+  "created_at": "2026-09-30T05:19:24.831162+00:00",
+  "updated_at": "2026-09-30T05:19:24.831162+00:00",
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_hadamard_oriented_triples/instance.cnf": "7501790d51166b0b62719c2db274cb2581c57ef584c282e333377e4b72060999",
+    "acceleration/results/20260930_hadamard_oriented_triples/model.json": "81065b50b0caf2d8a5226570e321738faf47dabee7688f5cad96a17d1e72e5ee",
+    "acceleration/results/20260930_hadamard_oriented_triples/scope.json": "88ef7bf36dfd86a749ae84ea045e9707e6c27deff9c21e861d25d80c3de7d2e4",
+    "acceleration/theory_20260930_hadamard_oriented_triples.py": "1decce90cd18105430dd102a9739f08f46690e2424a6d3837f8ae8d6173c7eac",
+    "acceleration/theory_20260930_hadamard_oriented_triples_spec.md": "830f2da205da633b547b1ae62bca3103c5f3ac01bcf3301dd23954723450034b",
+    "acceleration/results/20260930_independent_review/hadamard20_support_v2/summary.json": "a8477256446e3e402a2a21241dc383a515162dc9c8c07a9a8e26326c07b0f58f",
+    "acceleration/results/20260930_independent_review/hadamard_general_f3_phase_necessity/summary.json": "30dd4e571140a139f7e36baf47f62a4428b752c79bbddd164ec6e54f3b232d67",
+    "acceleration/results/20260930_independent_review/balanced_phase_matrix_form_v2/summary.json": "c20758ad6c8cdb264a28aae97242efdc70ed8cfc582a914cad624bf83cc60c0b",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_hadamard_oriented_triples/summary.json": "6c4206132abde0b3d2144937d37a7b65fe2219d5f1a043f58f0dc82877427cac",
+    "acceleration/results/20260930_hadamard_oriented_triples/controls.json": "a7e746ca5341d642e1f0fbe7d810fd82b16bf6360627123fce76620c4fee3756",
+    "acceleration/results/20260930_hadamard_oriented_triples/manifest.json": "3a84c8e68b018ddbc0d140018c0b6c518decfe9718a9af6d3c5d8fd866065da1",
+    "acceleration/audit_20260930_hadamard_oriented_triples.py": "f572c91dc43f7208d34976b165c621c1b314e6963e437eaa475520ae1eb0add3",
+    "docs/AUDIT_20260930_HADAMARD_ORIENTED_TRIPLES.md": "88c2b81af376ae11f67d0bf64b106597006e7bc221d0de99bc2da3ba6fe333ab",
+    "acceleration/native_20260930_hadamard_oriented_triples.py": "a68889732e48f87889b5adfd81f893964b638970f83f4fcc4cce1271d37d74b7",
+    "acceleration/native_20260930_hadamard_oriented_triples.md": "eed1599dfdeccfd15ff39b85846ece5bb7447288a6a3721faf02d281cbb17e14"
+  },
+  "evidence_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_oriented_triples/controls.json": "72805e2ac49e3aa1b4348f562c5478b653fd71afca5362676e77fb8b3d99b39f",
+    "acceleration/results/20260930_independent_review/hadamard_oriented_triples/manifest.json": "f3ec4f6e2dbd9a64fce5660cee8d7b0692923d2db95dd9006895a08df5713f12",
+    "acceleration/results/20260930_independent_review/hadamard_oriented_triples/synthetic.cnf": "e5d4eeb0e44feab98e944a1bf49252450febf7d8512fd4faa13f44f2f996f636",
+    "acceleration/results/20260930_independent_review/hadamard_oriented_triples/synthetic_native.log": "3e2c5e67e8877771a06fb5a3d9fd6e8f5b03885d7d6e710ebc2b635c2c4f069c"
+  }
+}
