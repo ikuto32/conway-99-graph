@@ -7,7 +7,19 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twentieth milestone](docs/RESEARCH_20260930_TWENTIETH_WAVE.md)
+The latest [twenty-first milestone](docs/RESEARCH_20260930_TWENTYFIRST_WAVE.md)
+records206 claims:203 VERIFIED/CLEAR,2 CANDIDATE/CLEAR and1 REFUTED/CLEAR.
+Twelve new checked claims restrict the fixed support's unbalanced groups,
+verify complete saved partial-enumeration intervals and marginal certificates,
+and exclude literal case0 by a complete independently replayed proof.
+Exactly-five exceptions are impossible; six-group marginals leave six subsets
+with984 labelled profiles. None is a full factor. Next: independently gate
+and run the fifteen remaining four-group representative formulas.
+That campaign and later diagnostics have separate wave22 records.
+This file is not a live process observation.
+[Twenty-first replay guide](docs/REPRODUCING_20260930_TWENTYFIRST_WAVE.md).
+
+The previous [twentieth milestone](docs/RESEARCH_20260930_TWENTIETH_WAVE.md)
 records194 claims:191 VERIFIED/CLEAR,2 CANDIDATE/CLEAR and1 REFUTED/CLEAR.
 Five verified claims and one refuted claim were added. A complete independently
 replayed proof excludes the balanced family on the literal six-prism support.

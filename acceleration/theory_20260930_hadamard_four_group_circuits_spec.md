@@ -1,0 +1,18 @@
+# Four exceptional support groups: exact circuit census
+
+This protocol is frozen before execution. No native or numerical solver, ledger update, or automatic verification promotion is authorized. Allocation:120 seconds, all4,845 four-element subsets of the20 actual fixed supports and all190 pair sums. Use the literal twelve-coordinate support incidence columns, not an assumed intersection pattern.
+
+The previously recorded candidate marginal argument says every nonzero coordinate/fibre deviation needs at least four groups. For exactly four globally unbalanced groups, a nonzero deviation at coordinate a requires all four supports to contain a. The relevant11-row marginal matrix has the same column relations as the13-row matrix consisting of a leading one and all twelve incidence rows: the two omitted rows are constant one at a and constant zero at its mate. Thus the four global support columns must be affinely dependent. This implication uses full prescribed Gram marginals, not row margins alone.
+
+Any four distinct binary cube vertices are either affinely independent or form a parallelogram. Here is the precise small-circuit argument. Three distinct binary vertices are affinely independent. A relation on four therefore has all four coefficients nonzero. A singleton against three is impossible because a cube vertex is extreme. In a two-against-two relation, every nonconstant binary coordinate is a zero-sum proper subset of coefficients and hence a pair of opposite equal coefficients. If the four coefficient magnitudes were not all equal, only one complementary partition into opposite pairs could occur, making two columns identical. Distinctness rules this out. Thus the relation is proportional to a permutation of(1,1,-1,-1), and two unordered pair sums coincide. This written argument remains CANDIDATE until separate review.
+
+The executable saves all190 exact pair sums, each collision's distinct four groups, the primitive relation, common-support intersection and union, and independently within the producer computes Fraction ranks of all4,845 four-column matrices. Every independent quartet gets a literal nonzero4x4 integer minor; every dependent quartet gets a direct integer null vector. The exact dependent quartet population must agree with pair-sum collisions. Also enumerate every four-column subset of each of the12 ten-column coordinate marginal matrices (2,520 cases), with its coordinate and global group IDs, checking equality with the global classification and saving nonzero minors or relations.
+
+For a circuit, deviations can only occur in its common support. Local two-per-fibre column margins also give sum_a delta[g,a,f]=0. Since the circuit kernel is one-dimensional, delta[g,a,f]=c_g z[a,f], so sum_a z[a,f]=0. A circuit whose common support has size0 or1 cannot sustain nonzero deviations. Record this as a separate candidate corollary and retain all circuits with larger common support as unresolved necessary possibilities. No claim about simultaneous realizability of their local triples, full Gram, or outside-column caps is made.
+
+Controls: all subsets of four vertices of the3-dimensional binary cube, an explicit square relation, a tetrahedron independent minor, corrupted relation/minor detection, duplicate columns rejected as outside the theorem domain. No complete research factor is invented.
+
+```powershell
+$env:UV_PROJECT_ENVIRONMENT='build/research-venv'
+uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/theory_20260930_hadamard_four_group_circuits.py --out acceleration/results/20260930_hadamard_four_group_circuits
+```
