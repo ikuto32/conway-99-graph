@@ -21,7 +21,13 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [twenty-first resumed milestone](docs/RESEARCH_20260930_TWENTYFIRST_WAVE.md)
+See the [twenty-second resumed milestone](docs/RESEARCH_20260930_TWENTYSECOND_WAVE.md)
+for ten new verified claims. Complete proof replay and exact profile coverage
+exclude exactly four unbalanced groups on the literal fixed support. With the
+earlier exclusions, this Gram-plus-column-cap family requires at least six
+unbalanced groups. Six- and seven-group screens leave necessary candidates;
+no full factor, whole-support exclusion or target resolution follows.
+The [twenty-first resumed milestone](docs/RESEARCH_20260930_TWENTYFIRST_WAVE.md)
 for twelve new verified claims: sparse unbalanced-group restrictions, exact
 profile/marginal censuses, checked partial objects and a complete proof excluding
 literal case0. The first proof leaves fifteen four-group representatives for

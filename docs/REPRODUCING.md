@@ -2,7 +2,9 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [twenty-first milestone](RESEARCH_20260930_TWENTYFIRST_WAVE.md)
+For current work, read the [twenty-second milestone](RESEARCH_20260930_TWENTYSECOND_WAVE.md)
+and [twenty-second replay guide](REPRODUCING_20260930_TWENTYSECOND_WAVE.md). Also read the
+[twenty-first milestone](RESEARCH_20260930_TWENTYFIRST_WAVE.md)
 and [twenty-first replay guide](REPRODUCING_20260930_TWENTYFIRST_WAVE.md). Also read the
 [twentieth milestone](RESEARCH_20260930_TWENTIETH_WAVE.md)
 and [twentieth replay guide](REPRODUCING_20260930_TWENTIETH_WAVE.md). Also read the

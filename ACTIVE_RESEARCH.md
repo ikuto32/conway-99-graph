@@ -7,7 +7,21 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twenty-first milestone](docs/RESEARCH_20260930_TWENTYFIRST_WAVE.md)
+The latest [twenty-second milestone](docs/RESEARCH_20260930_TWENTYSECOND_WAVE.md)
+records216 claims:213 VERIFIED/CLEAR,2 CANDIDATE/CLEAR and1 REFUTED/CLEAR.
+Ten new checked claims include complete replay of fifteen literal-profile
+proofs and exact coverage of all108 necessary four-exception profiles.
+Together with earlier results, a factor on this literal support satisfying
+the full Gram and outside-column overlap caps requires at least six unbalanced
+groups. Six-profile pairwise screening leaves330 labelled nonempty fixed points
+in55 relabelling classes; seven-group marginal enumeration leaves38 subsets
+with1608 profiles. These necessary candidates are not full factors.
+Next: independently gate and evaluate the remaining54 six-exception formulas.
+The separately checked first literal profile and later heuristic work belong
+to wave23. This file is not a live process observation.
+[Twenty-second replay guide](docs/REPRODUCING_20260930_TWENTYSECOND_WAVE.md).
+
+The previous [twenty-first milestone](docs/RESEARCH_20260930_TWENTYFIRST_WAVE.md)
 records206 claims:203 VERIFIED/CLEAR,2 CANDIDATE/CLEAR and1 REFUTED/CLEAR.
 Twelve new checked claims restrict the fixed support's unbalanced groups,
 verify complete saved partial-enumeration intervals and marginal certificates,
