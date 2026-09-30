@@ -1,0 +1,78 @@
+{
+  "status": "CI_SYNTAX_SELECTION_CORRECTION_LOCAL_PASS",
+  "source_commit": "05f87c6e14105610f8335718675a4e09ff7cf92b",
+  "diagnosis": "Both reported runs compile an intentionally preserved, byte-pinned parse-failure source. The new step verifies its exact SyntaxError and original receipt; every other source remains compiled without execution.",
+  "changes": [
+    ".github/workflows/validate.yml",
+    "check_python_syntax.py",
+    "test_python_syntax.py"
+  ],
+  "commands": [
+    {
+      "name": "regression",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "test_python_syntax",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.15600000019185245
+    },
+    {
+      "name": "syntax",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+        "-B",
+        "check_python_syntax.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.7659999998286366
+    },
+    {
+      "name": "workflow_diff_check",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        ".github/workflows/validate.yml"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.030999999959021807
+    }
+  ],
+  "protected_failure_source_sha256": "df9cb31a836e8dada21d5e4eb425cfa2fca7b7f40ae62efded76d3f259234850",
+  "inputs_sha256": {
+    ".github/workflows/validate.yml": "9a698d6c51eba826612a611c2c905a4ea50586cc39af589d4488c092484561f8",
+    "check_python_syntax.py": "2bc8fb9c9d66936dba638d7bb34ad3d455831e80eccb21c162e37bd25fe09d05",
+    "test_python_syntax.py": "361bb37c3a00721f132f8af0845612781fb159d1bbd8da9bf28253de6f56534d"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702154667.failed_log.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702154667.failed_log.stdout.log": "820ff2d865ba41c73452aa33539e4854e5be1cc78170d36462af2ff840be4db3",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702154667.metadata.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702154667.metadata.stdout.log": "ee59808a1308dbe3bb05a3388af8488978f78661a60e5f0b67a4344ed8e35e1b",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702172523.failed_log.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702172523.failed_log.stdout.log": "f2a162547bb1be47ffad45e38137a671a62f780736d64786efd2d2eaff7e0fbf",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702172523.metadata.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/36702172523.metadata.stdout.log": "31f7f0d3b7f2c952133448ac1ef927c6471046c995eace40b05a344b2819bf73",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/diagnosis.json": "1ef467ba0585483776674be5259968b1fdbf6434c817f1fc4fe2b96943420d92",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/regression.stderr.log": "487250fc8cb484d51eba94813299b79d97fa7cfb92563b68de1d69d09b34992d",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/regression.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/syntax.stderr.log": "5779a75b40b75e0e5ee9cdb663166e33440121f3267f7af2a93169e6437dfe5c",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/syntax.stdout.log": "2a4b2469496000f01bb7612b1dd041fb0255e8b3614b5bee6a42817ce33d4f6e",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/validate.before.yml": "f0e0060a727941ce19f6fb20ea44e8bf7642590f007bddcd6979e503984c1222",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/workflow.patch": "1a72b1d7c870961517225bba5fc84a33775e936624ef6806df9db882b3a9b47b",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/workflow_diff_check.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_wave24_ci_syntax_failure/workflow_diff_check.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "historical_source_or_receipt_modified": false,
+  "ledger_modified": false,
+  "index_modified": false,
+  "commit_created": false,
+  "remote_CI_rerun": false,
+  "mathematical_approval": false
+}
