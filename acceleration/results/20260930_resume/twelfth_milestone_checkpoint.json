@@ -1,0 +1,136 @@
+{
+  "timestamp": "2026-09-30T00:27:50.973454+00:00",
+  "source_commit": "415a8702cf27e1166ddf14ddd7289db3eaadde2e",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_twelfth_checkpoint.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "previous_report": "docs/RESEARCH_20260930_ELEVENTH_WAVE.md",
+  "previous_checkpoint_sha256": "98d6b8348cd9e80d70ee774f5d67a984a0a9c407cf6f47854cb191823cc410ae",
+  "target_resolution": "UNKNOWN",
+  "external_review": null,
+  "external_review_reason": "No validated target graph or general nonexistence proof in this repository.",
+  "claim_population": 126,
+  "verified_clear": 124,
+  "claim_status_counts": {
+    "VERIFIED": 124,
+    "CANDIDATE": 2
+  },
+  "claim_review_counts": {
+    "CLEAR": 126
+  },
+  "new_verified_ids": [
+    "C-UNRESTRICTED-TRIANGLE-CORE-FACTOR-NORMALIZATION",
+    "C-UNRESTRICTED-TRIANGLE-NECESSARY-FACTOR-CNF-ENCODING",
+    "C-SIX-PRISM-COMPLETE-COLUMN-FACTOR-CNF",
+    "C-SIX-PRISM-COLUMN-LINEAR-RELAXATION-WITNESSES"
+  ],
+  "completed_native_attempts": 2,
+  "native_runs": [
+    {
+      "name": "variable_core_factor",
+      "result": "UNKNOWN_CONFLICT_LIMIT",
+      "native_exit_code": 0,
+      "attempts": 1,
+      "summary": "acceleration/results/20260930_variable_core_factor_native_pilot/summary.json",
+      "summary_sha256": "638f0a85b1d5d5a5f3c2d0ffa67da3a1313bb1d793806d573ff403fb3e2b7ec5",
+      "wrapper_wall_seconds": 146.07800000021234,
+      "configured_conflicts": 1000000,
+      "configured_seconds": 300,
+      "observed_conflicts": 1000000,
+      "observed_conflicts_null_reason": null,
+      "incomplete_trace_bytes": 1073110358,
+      "incomplete_trace_sha256": "3446bd48a22d12a7910225daaeae17a360b2397131853fd72bb6fe565e8b5622"
+    },
+    {
+      "name": "prism_all_columns",
+      "result": "UNKNOWN_TIMEOUT",
+      "native_exit_code": 124,
+      "attempts": 1,
+      "summary": "acceleration/results/20260930_prism_all_columns_native_pilot/summary.json",
+      "summary_sha256": "c38e623722896f64682c162d351287a555d5a4c49c460ef77684ee134662e167",
+      "wrapper_wall_seconds": 300.0470000000205,
+      "configured_conflicts": 1000000,
+      "configured_seconds": 300,
+      "observed_conflicts": 817260,
+      "observed_conflicts_null_reason": null,
+      "incomplete_trace_bytes": 720744448,
+      "incomplete_trace_sha256": "c00ce180a9a0e6e9a2ad9e3ed4fe63f98641e7538fbe71cdf612ac059733c37b"
+    }
+  ],
+  "native_SAT_results": 0,
+  "native_UNSAT_results": 0,
+  "native_UNKNOWN_results": 2,
+  "independently_validated_new_factors": 0,
+  "complete99_graphs": 0,
+  "new_complete_unsat_traces": 0,
+  "newly_closed_unrestricted_branches": 0,
+  "column_model_population": {
+    "canonical_columns": 60,
+    "choices_per_column": 96,
+    "distinct_choices": 5760,
+    "exact_equations": 540,
+    "primary_equation_incidence_entries": 80640
+  },
+  "linear_relaxation_witnesses": {
+    "rational": 1,
+    "modulo2": 1,
+    "modulo3": 1,
+    "independent_equations_per_witness": 540,
+    "same_binary_solution_implied": false,
+    "rank_claim": null,
+    "rank_claim_null_reason": "Producer modular-rank telemetry is not promoted."
+  },
+  "coverage": "Overall search coverage: UNKNOWN; no validated denominator.",
+  "execution": {
+    "observed_at": "2026-09-30T00:27:51.345676+00:00",
+    "command": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu-24.04",
+      "--",
+      "ps",
+      "-C",
+      "cadical",
+      "-o",
+      "pid,etime,pcpu,rss,args"
+    ],
+    "exit_code": 1,
+    "state": "NO_CADICAL_PROCESS_OBSERVED",
+    "stdout_sha256": "52e94ae4c71741e9e6f749bfbb0f2f1a20db92a5d22ac2c8d4fe85dd54cc250d",
+    "stderr_sha256": "b9295050338450e1f2fe7f4bd4411764002b46d9dfe5fea0bc86c964e426bc8c",
+    "scope": "The two named attempts have completed; any observed process belongs to a later experiment."
+  },
+  "next_experiment": "Independently audit and test coordinate relabelling reductions: first-column choice for the six-prism model and eleven M1 orbit representatives for the arbitrary-core model.",
+  "evidence_sha256": {
+    "acceleration/results/20260930_independent_review/prism_all_columns_cnf/summary.json": "07c589160e930205bc7e42f9524846280b4a8f0573ca9e5dfa06b627a6d115c3",
+    "acceleration/results/20260930_independent_review/prism_all_columns_object_calibration/summary.json": "433816d402860b3f1a0cda328a9930952077c113ef1b4c50af097529ed5a9078",
+    "acceleration/results/20260930_independent_review/prism_column_modular/summary.json": "8c80a0c151e7362b4045e3527a072fddf60dfd5f7f7d87698cdb45c5dafbe9e1",
+    "acceleration/results/20260930_independent_review/unrestricted_triangle_factor/summary.json": "a7d470ccf10df7dff77884c8bd1fe4784234ac80bc4e1b684e0050c3e33a4acd",
+    "acceleration/results/20260930_independent_review/variable_core_factor_cnf_v2/summary.json": "ecc6c2ee488e68826e790360f3d47d6b029ac33953806bdab530ba50394a6ea0",
+    "acceleration/results/20260930_independent_review/variable_core_factor_corruption_addendum/summary.json": "be406b263514dbd947d37453ad28e2b2f693857a1cafce5cc2582a4c46ce3ebc",
+    "acceleration/results/20260930_independent_review/variable_core_factor_object_calibration/summary.json": "7577bbb79dfa5b334badc71cac820364d169edfe11f0eeaccd7eedbca9b1d40a",
+    "acceleration/results/20260930_prism_all_columns/instance.cnf": "d45b7e9837ed02b669f3681aaa8a63af78ff46487e968c59cf47cd7a49e53d6f",
+    "acceleration/results/20260930_prism_all_columns/manifest.json": "55fd62248450463e7cbd19e3bbc6d5cfe4233b9d9cca2106d3525fbc90db57d5",
+    "acceleration/results/20260930_prism_all_columns/model.json": "a801e721a4c03d18e2fa9711a60f053895a4bfb8898b264f5174bcc36265f038",
+    "acceleration/results/20260930_prism_all_columns_native_pilot/summary.json": "c38e623722896f64682c162d351287a555d5a4c49c460ef77684ee134662e167",
+    "acceleration/results/20260930_prism_all_columns_registration/summary.json": "e0a8d45ae38ca78e009f9477d550395e182c260bcd84fed88a40013cfbd4bce8",
+    "acceleration/results/20260930_prism_column_modular/manifest.json": "07d002f2ec2cab294642fee6329ff1e806fb3389bd985a897ee94136713b3d9f",
+    "acceleration/results/20260930_prism_column_modular/mod_2.json": "8e65ce18419d4669c53d6131486ee015e87deb09ef885a21481c03c05c05ae48",
+    "acceleration/results/20260930_prism_column_modular/mod_3.json": "67b9b1013db7d2c56177c90482181d27f469e728ba5c680990497f4731e82853",
+    "acceleration/results/20260930_prism_column_modular/uniform_rational_witness.json": "22a08691e9073307b06b321fe1ff4981f8164c8dbfca4c81269ef9cc632a1914",
+    "acceleration/results/20260930_prism_linear_witness_registration/summary.json": "a43833d8a113f542c9bc8cfed33d6b30f585853640e5b556a772e11f31408a02",
+    "acceleration/results/20260930_resume/claims_at_twelfth_milestone.yaml": "2aaaf2159b7b12dafd38a75e73aae410e35dd87d2cb441c310363e4f20282090",
+    "acceleration/results/20260930_twelfth_artifact_packaging/catalog.json": "aa8f84d053ac58c6ca6d58bd78e61a6ad6025d6089f7d39296db438b857f2d5e",
+    "acceleration/results/20260930_twelfth_preparation_registration/summary.json": "ef2c717cd2f7bb6dcad9be1bce5944b3e2939e659eeb117ea0901b3a44f9b5d2",
+    "acceleration/results/20260930_unrestricted_triangle_factor/manifest.json": "c667e2208a1826a24bc9e563506a92653222cf6a890ab892a7564880736fc74c",
+    "acceleration/results/20260930_unrestricted_triangle_factor/summary.json": "fecb50f01e6548c79e486068eeea3ca41dd6922ed4cf74686d9757ae0061b2eb",
+    "acceleration/results/20260930_variable_core_factor_cnf/instance.cnf": "21b2cd8067971da66317afb3814e2b4f9232528fc8b1daceda4ff80594425684",
+    "acceleration/results/20260930_variable_core_factor_cnf/manifest.json": "4fc8c9cd60e7fee700aac7abfdd7f7a65a9c2f2e2e21a8d4e2e276e5258daf23",
+    "acceleration/results/20260930_variable_core_factor_cnf/model.json": "42071b881973450db0f1813356133688b7532dd7d0495d37962acc5fa8c071f2",
+    "acceleration/results/20260930_variable_core_factor_native_pilot/summary.json": "638f0a85b1d5d5a5f3c2d0ffa67da3a1313bb1d793806d573ff403fb3e2b7ec5",
+    "docs/AUDIT_20260930_PRISM_ALL_COLUMNS.md": "57686cdcbfb8e6888b408752efc5400a0257f807f63fe57aca3ab53d5ffbd167",
+    "docs/AUDIT_20260930_UNRESTRICTED_TRIANGLE_FACTOR.md": "7edd773a07b5cf344711307e6ff9807ee0c619a334e41badfb319754550c0cba"
+  }
+}
