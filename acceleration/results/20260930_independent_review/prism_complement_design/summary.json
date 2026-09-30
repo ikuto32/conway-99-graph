@@ -1,0 +1,319 @@
+{
+  "status": "INDEPENDENT_PRISM_RESTRICTED_DESIGN_AND_COMPLEMENT_PARITY_PASS",
+  "timestamp": "2026-09-29T23:33:23.337292+00:00",
+  "source_commit": "b2842b933366c68ee42bbd5669717550d5227f08",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_prism_complement_design.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/prism_complement_design"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "claims": [
+    {
+      "claim_revision": 1,
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "kind": "exclusion",
+      "basis": [
+        "DERIVED",
+        "COMPUTED"
+      ],
+      "verifier": "/root/state_literature_audit",
+      "method": "independent_derivation_and_artifact_check",
+      "target_resolution": false,
+      "external_review": false,
+      "claim_id": "C-SIX-PRISM-FIVE-MATCHING-COMPLEMENT-DESIGN-EXCLUSION",
+      "statement": "No binary36x60 incidence factor with the fixed six-prism Gram and margins is represented by the specified five round-robin matchings, all six cell-label assignments per matching, and30globally complementary column pairs. Its exact450variable2010clause Boolean encoding is UNSAT.",
+      "scope": "Only the explicit frozen restricted construction design.",
+      "dependencies": [],
+      "evidence": [
+        "encoding_check.json",
+        "complete_main_proof.receipt.json"
+      ],
+      "limitations": [
+        "No exclusion of arbitrary incidence factors, the whole six-prism core, or the unrestricted target."
+      ]
+    },
+    {
+      "claim_revision": 1,
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "kind": "exclusion",
+      "basis": [
+        "DERIVED",
+        "COMPUTED"
+      ],
+      "verifier": "/root/state_literature_audit",
+      "method": "independent_derivation_and_artifact_check",
+      "target_resolution": false,
+      "external_review": false,
+      "claim_id": "C-SIX-PRISM-GLOBAL-COMPLEMENT-PAIRING-EXCLUSION",
+      "statement": "For the fixed standard-matchings/identity-cross-matching six-prism core, no binary36x60 incidence factor satisfying FF^T=12I-C-C^2+2J-diag(J12,J12,J12), row sums10 and fibre-column sums2 admits a partition of its60columns into30pairs that preserve all six component cell labels while complementing all six component bits.",
+      "scope": "All cell-pattern choices under this explicit global complement-pairing restriction; not limited to the five matching patterns.",
+      "dependencies": [],
+      "evidence": [
+        "docs/AUDIT_20260930_PRISM_COMPLEMENT_DESIGN.md",
+        "parity_derivation_checks.json"
+      ],
+      "limitations": [
+        "This restricts a proposed factor construction; no target automorphism is assumed.",
+        "No unrestricted factor/core/target exclusion or existence result.",
+        "The samples calibrate exact count checks; universal contradiction is the written Hamming-distance parity proof."
+      ]
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_prism_factor_design_pilot/instance.cnf": "4fcda92fda7b82b2225448f744293d0fedd3f0a4786025603d1aeecc6edeaeaf",
+    "acceleration/results/20260930_prism_factor_design_pilot/proof.drat": "5a1f7c0dd73e5f416ea01b93400db7b6e645b45d45cc3c78cea63d89497d38e6",
+    "acceleration/results/20260930_prism_factor_design_pilot/model.json": "a64b2b1bb1f3a0580ef0eb94354069fe617d37103cb55ae10965126cc6891c12",
+    "acceleration/audit_20260930_triangle_wave154_unsat.py": "b7b98d9da7986fac7c005fb9a6d4e5b9cd2811ea46a8ea75a6e7e34933e4b649",
+    "acceleration/results/20260930_prism_factor_design_pilot/summary.json": "3ffe56a77656ce20b336c74ecc118d3762c21b4f3f6ab52a740462f11b2694d7",
+    "acceleration/results/20260930_prism_factor_design_pilot/controls.json": "6191b57c3e23e871aa96d701efe6bb456266f2f4c099d79588f1e4fa255789f2",
+    "acceleration/results/20260930_prism_factor_design_pilot/manifest.json": "c5da7c5f6f5985d99038a558a61a3ccce145c67e0fe682e575e5a90099762d1e",
+    "acceleration/results/20260930_prism_factor_design_pilot/solver.receipt.json": "6adb48ff73e2049e213b3d17fe16ee6f7ccd32b9ed123558e26d4b2da012eed8",
+    "acceleration/results/20260930_prism_factor_design_pilot/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_prism_factor_design_pilot/solver.stdout.log": "d3cd36ea2cc4280af0d09e26484644d92db85aea61abb11c601f42cdae0f3681",
+    "acceleration/theory_20260930_prism_factor_design.py": "2136380469ba49010c7dc751fea94d044a2d21fdedf611b11ffbf7d793f1e7b1",
+    "acceleration/theory_20260930_prism_factor_design_spec.md": "712c0e4078c681e591431491bbd0c6f4f7477c7f6e02f330e8c173f6341f76d4",
+    "acceleration/native_20260930_unrestricted_full99.py": "da7ee9c03d454bd5ad0af0d82bead3520f3f270c70e71d4355161d036fd8ef22",
+    "build/research-cadical195/source/build/cadical": "021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7",
+    "acceleration/results/20260930_native_cli_calibration/summary.json": "f5ff562aff2ec550a97685c7012b302e760314a6f3829d80d022e2a669e680eb",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "build/rook-drat-checker/drat-trim.exe": "23d1613cb0b1ed491f4e723ff82492a8be6c349c2426d440412842c5246b90ac",
+    "build/rook-drat-checker/build_manifest.json": "219e14aeb9efb7df5629cb45405b08d45b2613133207e92bd4f7c09a5b2211b7",
+    "build/rook-drat-checker/build_receipt.json": "4862b4cc61fe2832943c988c5418cd85ae795924fd83a40482c0da4fb03b7e4b",
+    "build/rook-drat-checker/upstream-drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "build/rook-drat-checker/windows-portability.patch": "2050f0b7ce9d4878944eecf6d94c414d8d60941a3e9f2df353ad30cd5316676c",
+    "build/rook-drat-checker/drat-trim.c": "82835512d4eda7dee1e0e3f610a0672fa1d216ea91246bcb576022020fe18f4c",
+    "build/rook-drat-checker/build.cmd": "c83b60af88ebbd92ef4fe554c851be35d8dfa4bea798b75941e6524c2597f456",
+    "build/rook-drat-checker/build_stdout.log": "9bca6aac2d4ec4663c7e7533a2a7804ae60aa9f6b6cbca8573746fd2195c7b17",
+    "build/rook-drat-checker/build_stderr.log": "9873a037014a27afc0ff96a6133e89a78294c6e2790e9c4a358ff12ebcb72e8a",
+    "acceleration/audit_20260930_rook_drat_build_v1.py": "9e7b1fac0db299b35014ea4c74a90dfe606d2e72bab2044c4e61cfdf54a82371",
+    "acceleration/audit_20260930_prism_complement_design.py": "164e6472227e956ffa1115dd28dcf6c0749817fe241e5504f3a59fe5654a0904",
+    "docs/AUDIT_20260930_PRISM_COMPLEMENT_DESIGN.md": "1a7836d6971bdde66be02a1ae7fbb17c5d900ccdf2447ca5f386f752cd02ad4b"
+  },
+  "producer_imports": false,
+  "shared_components": [
+    "Frozen independent build-authentication/native-proof-replay helper, configured only for its checker build pins.",
+    "Authenticated drat-trim proof checker and its historical compiler build; no diverse formal kernel claim.",
+    "Python standard library."
+  ],
+  "checker_provenance": {
+    "upstream_repository": "https://github.com/marijnheule/drat-trim",
+    "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "upstream_git_command": [
+      "git",
+      "-C",
+      "tools/drat-trim",
+      "show",
+      "2e3b2dc0ecf938addbd779d42877b6ed69d9a985:drat-trim.c"
+    ],
+    "patch_git_command": [
+      "git",
+      "show",
+      "148c50e087da09f558c0e57f1a23154063caf11b:tools/patches/drat-trim-windows.patch"
+    ],
+    "source_change": "Only the explicit Windows header/getc/macro/time block; all checking logic byte-identical.",
+    "build_command": [
+      "cmd.exe",
+      "/d",
+      "/c",
+      "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\build.cmd"
+    ],
+    "compiler_path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+    "compiler_sha256": "7a154e5136cc538b42e6944997fc5e3bb49112894e41dd88a70940aaff9aa831",
+    "source_sha256": "82835512d4eda7dee1e0e3f610a0672fa1d216ea91246bcb576022020fe18f4c",
+    "binary_sha256": "23d1613cb0b1ed491f4e723ff82492a8be6c349c2426d440412842c5246b90ac",
+    "fresh_recompile_in_this_audit": false,
+    "reason": "Authenticated and reused the preserved successful build; no diverse compilation claim."
+  },
+  "checker_controls_and_replay": [
+    {
+      "name": "positive_tiny",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\tiny_unsat.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\valid.drat"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "timestamp": "2026-09-29T23:33:21.773859+00:00",
+      "exit_code": 0,
+      "accepted": true,
+      "expected_acceptance": true,
+      "elapsed_seconds": 0.04699999978765845,
+      "timeout_seconds": 120,
+      "cnf_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "proof_sha256": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+      "stdout": "acceleration/results/20260930_independent_review/prism_complement_design/positive_tiny.stdout.log",
+      "stdout_sha256": "4e6d667072ffaf6ed965d7037d4b67126f2171c7fc1537631d0e3a9100c29d81",
+      "stderr": "acceleration/results/20260930_independent_review/prism_complement_design/positive_tiny.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "corrupt_empty_only",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\tiny_unsat.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\empty_only.drat"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "timestamp": "2026-09-29T23:33:21.823860+00:00",
+      "exit_code": 1,
+      "accepted": false,
+      "expected_acceptance": false,
+      "elapsed_seconds": 0.0470000000204891,
+      "timeout_seconds": 120,
+      "cnf_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "stdout": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_empty_only.stdout.log",
+      "stdout_sha256": "589ce24191258898115e58fc0685ae51c3884e5e3bff73946f6cd624b31e49fc",
+      "stderr": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_empty_only.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "corrupt_fresh_unit",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\tiny_unsat.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\fresh_unit.drat"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "timestamp": "2026-09-29T23:33:21.874371+00:00",
+      "exit_code": 1,
+      "accepted": false,
+      "expected_acceptance": false,
+      "elapsed_seconds": 0.0470000000204891,
+      "timeout_seconds": 120,
+      "cnf_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "proof_sha256": "b7d379cb3d9c001c9c511b6cdfca9679993e8a2c73bc921014089ead9ac75a18",
+      "stdout": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_fresh_unit.stdout.log",
+      "stdout_sha256": "523f0c75ce4358172857347fb858d8ca8670d495fe5a9091bc99a5a118c722b7",
+      "stderr": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_fresh_unit.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "corrupt_sat_formula",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\tiny_sat.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\valid.drat"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "timestamp": "2026-09-29T23:33:21.925372+00:00",
+      "exit_code": 1,
+      "accepted": false,
+      "expected_acceptance": false,
+      "elapsed_seconds": 0.04600000008940697,
+      "timeout_seconds": 120,
+      "cnf_sha256": "cbff19c5ea74c8fc8e307afe9fe1ce08682bb98ec3b10983068b10376f847534",
+      "proof_sha256": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+      "stdout": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_sat_formula.stdout.log",
+      "stdout_sha256": "1984239a2e5ec0771b0d2b686afc7dd1fddfb90543756842e9c32ebe1c81af30",
+      "stderr": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_sat_formula.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "corrupt_main_empty",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_prism_factor_design_pilot\\instance.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\prism_complement_design\\empty_only.drat"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "timestamp": "2026-09-29T23:33:21.990882+00:00",
+      "exit_code": 1,
+      "accepted": false,
+      "expected_acceptance": false,
+      "elapsed_seconds": 0.0470000000204891,
+      "timeout_seconds": 120,
+      "cnf_sha256": "4fcda92fda7b82b2225448f744293d0fedd3f0a4786025603d1aeecc6edeaeaf",
+      "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "stdout": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_main_empty.stdout.log",
+      "stdout_sha256": "d70b015540988b49b693311073a905412bee926ac11cd81959bd4ad3af93b0a5",
+      "stderr": "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_main_empty.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "complete_main_proof",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_prism_factor_design_pilot\\instance.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_prism_factor_design_pilot\\proof.drat"
+      ],
+      "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "timestamp": "2026-09-29T23:33:23.313282+00:00",
+      "exit_code": 0,
+      "accepted": true,
+      "expected_acceptance": true,
+      "elapsed_seconds": 1.3119999999180436,
+      "timeout_seconds": 120,
+      "cnf_sha256": "4fcda92fda7b82b2225448f744293d0fedd3f0a4786025603d1aeecc6edeaeaf",
+      "proof_sha256": "5a1f7c0dd73e5f416ea01b93400db7b6e645b45d45cc3c78cea63d89497d38e6",
+      "stdout": "acceleration/results/20260930_independent_review/prism_complement_design/complete_main_proof.stdout.log",
+      "stdout_sha256": "ee51d76f50f7732215b2c036a71a08da1607d4be809cdacf9530339f629f669f",
+      "stderr": "acceleration/results/20260930_independent_review/prism_complement_design/complete_main_proof.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cnf_sha256": "4fcda92fda7b82b2225448f744293d0fedd3f0a4786025603d1aeecc6edeaeaf",
+  "proof_sha256": "5a1f7c0dd73e5f416ea01b93400db7b6e645b45d45cc3c78cea63d89497d38e6",
+  "proof_bytes": 10345534,
+  "native_solver_version": "CaDiCaL1.9.5 commit146207318796f094dcded87349a64f0c6927309e",
+  "native_solver_command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=2s",
+    "5s",
+    "/usr/bin/prlimit",
+    "--as=268435456:268435456",
+    "--fsize=134217728:134217728",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "-c",
+    "100000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_prism_factor_design_pilot/instance.cnf",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_prism_factor_design_pilot/proof.drat"
+  ],
+  "native_actual_exit_code": 20,
+  "artifact_availability": "LOCAL_ONLY",
+  "artifact_availability_reason": "All exact inputs,trace,source/build provenance and raw audit logs are present; publication controlled by parent.",
+  "target_resolution": false,
+  "external_review": false,
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/prism_complement_design/complete_main_proof.receipt.json": "7b0ecbcb3ba3ac96fec340acaf289c3e85387f7f035be1a656304bd7364eb45a",
+    "acceleration/results/20260930_independent_review/prism_complement_design/complete_main_proof.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/prism_complement_design/complete_main_proof.stdout.log": "ee51d76f50f7732215b2c036a71a08da1607d4be809cdacf9530339f629f669f",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_empty_only.receipt.json": "c50b70f74a31ecc0ecb603c366c29a89fc020653a148cde77eb90a9aeddd4a64",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_empty_only.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_empty_only.stdout.log": "589ce24191258898115e58fc0685ae51c3884e5e3bff73946f6cd624b31e49fc",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_fresh_unit.receipt.json": "f67982ee7347b958a1bd792f2f0c7040d89181310782f09225bc4bc45aad7622",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_fresh_unit.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_fresh_unit.stdout.log": "523f0c75ce4358172857347fb858d8ca8670d495fe5a9091bc99a5a118c722b7",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_main_empty.receipt.json": "f0b5c1183f4ec7965019b79adb86ee30e117dabff3fb0d181b04131c0bd2df0f",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_main_empty.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_main_empty.stdout.log": "d70b015540988b49b693311073a905412bee926ac11cd81959bd4ad3af93b0a5",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_sat_formula.receipt.json": "aec6e516efed4b2eb1f469f9503f2d35ae03b3d189a89d5ab04ac08fe6d56c1a",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_sat_formula.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/prism_complement_design/corrupt_sat_formula.stdout.log": "1984239a2e5ec0771b0d2b686afc7dd1fddfb90543756842e9c32ebe1c81af30",
+    "acceleration/results/20260930_independent_review/prism_complement_design/empty_only.drat": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "acceleration/results/20260930_independent_review/prism_complement_design/encoding_check.json": "3d767cbce3d408124892b3bdf9e418e65e24c0d959f2300f5ac11db85b763aaf",
+    "acceleration/results/20260930_independent_review/prism_complement_design/fresh_unit.drat": "b7d379cb3d9c001c9c511b6cdfca9679993e8a2c73bc921014089ead9ac75a18",
+    "acceleration/results/20260930_independent_review/prism_complement_design/manifest.json": "c5ebe5da7879b324560b1952a2604c5013f537c2bb54e0928425f730d3ddf5a6",
+    "acceleration/results/20260930_independent_review/prism_complement_design/parity_derivation_checks.json": "8fd649fc0f0f62b27fc2f2fd26ae620fcc9018182e08175c6f3b98d23331b28a",
+    "acceleration/results/20260930_independent_review/prism_complement_design/positive_tiny.receipt.json": "4f8559cc35fa365a7c9464858f9b313359666202e89ad358573aeece6ee26385",
+    "acceleration/results/20260930_independent_review/prism_complement_design/positive_tiny.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_independent_review/prism_complement_design/positive_tiny.stdout.log": "4e6d667072ffaf6ed965d7037d4b67126f2171c7fc1537631d0e3a9100c29d81",
+    "acceleration/results/20260930_independent_review/prism_complement_design/tiny_sat.cnf": "cbff19c5ea74c8fc8e307afe9fe1ce08682bb98ec3b10983068b10376f847534",
+    "acceleration/results/20260930_independent_review/prism_complement_design/tiny_unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+    "acceleration/results/20260930_independent_review/prism_complement_design/valid.drat": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0"
+  },
+  "elapsed_seconds": 1.7649999998975545
+}

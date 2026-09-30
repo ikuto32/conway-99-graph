@@ -1,0 +1,58 @@
+{
+  "status": "UNSAT_RESTRICTED_DESIGN_UNCHECKED",
+  "variables": 450,
+  "clauses": 2010,
+  "research_calls": 1,
+  "independent_approval": false,
+  "target_resolution": false,
+  "receipt": {
+    "timestamp": "2026-09-29T23:28:08.322180+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=2s",
+      "5s",
+      "/usr/bin/prlimit",
+      "--as=268435456:268435456",
+      "--fsize=134217728:134217728",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "100000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_prism_factor_design_pilot/instance.cnf",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_prism_factor_design_pilot/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 20,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 15,
+    "wall_seconds": 6.297000000020489,
+    "stdout": "acceleration/results/20260930_prism_factor_design_pilot/solver.stdout.log",
+    "stdout_sha256": "d3cd36ea2cc4280af0d09e26484644d92db85aea61abb11c601f42cdae0f3681",
+    "stderr": "acceleration/results/20260930_prism_factor_design_pilot/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_prism_factor_design_pilot/controls.json": "6191b57c3e23e871aa96d701efe6bb456266f2f4c099d79588f1e4fa255789f2",
+    "acceleration/results/20260930_prism_factor_design_pilot/instance.cnf": "4fcda92fda7b82b2225448f744293d0fedd3f0a4786025603d1aeecc6edeaeaf",
+    "acceleration/results/20260930_prism_factor_design_pilot/manifest.json": "c5da7c5f6f5985d99038a558a61a3ccce145c67e0fe682e575e5a90099762d1e",
+    "acceleration/results/20260930_prism_factor_design_pilot/model.json": "a64b2b1bb1f3a0580ef0eb94354069fe617d37103cb55ae10965126cc6891c12",
+    "acceleration/results/20260930_prism_factor_design_pilot/proof.drat": "5a1f7c0dd73e5f416ea01b93400db7b6e645b45d45cc3c78cea63d89497d38e6",
+    "acceleration/results/20260930_prism_factor_design_pilot/solver.receipt.json": "6adb48ff73e2049e213b3d17fe16ee6f7ccd32b9ed123558e26d4b2da012eed8",
+    "acceleration/results/20260930_prism_factor_design_pilot/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_prism_factor_design_pilot/solver.stdout.log": "d3cd36ea2cc4280af0d09e26484644d92db85aea61abb11c601f42cdae0f3681"
+  }
+}

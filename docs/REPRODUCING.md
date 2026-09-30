@@ -2,8 +2,10 @@
 
 ## Resumed experiments, 2026-09-30 JST
 
-For current work, read the [tenth milestone](RESEARCH_20260930_TENTH_WAVE.md)
-and [tenth replay guide](REPRODUCING_20260930_TENTH_WAVE.md). Also read the
+For current work, read the [eleventh milestone](RESEARCH_20260930_ELEVENTH_WAVE.md)
+and [eleventh replay guide](REPRODUCING_20260930_ELEVENTH_WAVE.md). Also read the
+[tenth milestone](RESEARCH_20260930_TENTH_WAVE.md)
+and [tenth replay guide](REPRODUCING_20260930_TENTH_WAVE.md), and the
 [ninth milestone](RESEARCH_20260930_NINTH_WAVE.md)
 and [ninth replay guide](REPRODUCING_20260930_NINTH_WAVE.md), and the
 [eighth milestone](RESEARCH_20260930_EIGHTH_WAVE.md)

@@ -1,0 +1,62 @@
+{
+  "status": "UNKNOWN",
+  "variables": 1260,
+  "clauses": 29655,
+  "research_calls": 1,
+  "independent_approval": false,
+  "target_resolution": false,
+  "receipt": {
+    "timestamp": "2026-09-29T23:37:09.586320+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=2s",
+      "5s",
+      "/usr/bin/prlimit",
+      "--as=268435456:268435456",
+      "--fsize=134217728:134217728",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "100000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_prism_unpaired_design_pilot/instance.cnf",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_prism_unpaired_design_pilot/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 124,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 15,
+    "wall_seconds": 7.891000000061467,
+    "stdout": "acceleration/results/20260930_prism_unpaired_design_pilot/solver.stdout.log",
+    "stdout_sha256": "f2d6e12fe6766355921f495cb09bfe3d40f5f9b4881cbc0cf116c9e8558316b4",
+    "stderr": "acceleration/results/20260930_prism_unpaired_design_pilot/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "scope": "Only fixed5matching cellpatterns with independent column bits; no allfactor/core/target coverage.",
+  "elapsed_seconds": 8.25,
+  "outputs_sha256": {
+    "acceleration/results/20260930_prism_unpaired_design_pilot/controls.json": "5cec3684dde7a0f30820790e576a09465d5c99ee73a403fb9762f305f1528af2",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/instance.cnf": "fb53151fc26f2762b0ca298440c471d1b1148ae1d9ea7a371e62e414f6690920",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/launch.json": "c38ec73b2eec00cc86641e2a9e254837511c913a4ec3f02adb15dbcafe732c65",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/manifest.json": "d510de19791f73e86784328d570b11e15a9b8617e0390b0c286a4aa2a1720999",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/model.json": "24beb62eecb4eee61501b597734d91be6325958d002af6ad1e3ab16f1e287974",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/preflight.json": "1750d51ff8d79e10f4b1c6602e24aeb983adc1fb11b4d323ce3b065175faeb4b",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/proof.drat": "41d3ffe41caa0044cb01faec8d80d49e8b5f86fc70ecfa3ac8bfe5a63bff8fd8",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/solver.receipt.json": "67a94e92383e5bdf3b86fa5d65c0af493a7730c0e066f582197e4598fb25fa79",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/solver.stdout.log": "f2d6e12fe6766355921f495cb09bfe3d40f5f9b4881cbc0cf116c9e8558316b4"
+  }
+}

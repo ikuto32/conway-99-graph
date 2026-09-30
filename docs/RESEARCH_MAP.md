@@ -4,6 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [eleventh milestone](RESEARCH_20260930_ELEVENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_ELEVENTH_WAVE.md) cover a verified 25-row
+partial factor, its exact fixed extension exclusion, restricted prism-design
+obstructions and an UNKNOWN strengthened full-factor run.
 The [tenth milestone](RESEARCH_20260930_TENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_TENTH_WAVE.md) record a verified partial
 factor satisfying component capacities and twelve proofs of its single fixed
