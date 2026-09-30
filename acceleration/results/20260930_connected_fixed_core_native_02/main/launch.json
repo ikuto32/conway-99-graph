@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-30T01:55:47.358152+00:00",
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "300s",
+    "/usr/bin/prlimit",
+    "--as=4294967296:4294967296",
+    "--fsize=10737418240:10737418240",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "-c",
+    "2000000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_connected_fixed_core_cnf/core_02/instance.cnf",
+    "/tmp/conway99-connected-core-02-QoikdF/proof.drat"
+  ],
+  "core_index": 2,
+  "cnf_sha256": "9c2019890279d1cefc730a46f09cdf7a5b7bd5ac9f40b78a2669032dd842ff79",
+  "core_sha256": "40c23054a9276039b0dc1320594f102ae65d06c8e2c819a31d6600c3ee279eeb",
+  "model_sha256": "42071b881973450db0f1813356133688b7532dd7d0495d37962acc5fa8c071f2",
+  "ext4_proof": "/tmp/conway99-connected-core-02-QoikdF/proof.drat"
+}

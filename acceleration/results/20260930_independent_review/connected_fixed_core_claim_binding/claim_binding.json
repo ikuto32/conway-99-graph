@@ -1,0 +1,90 @@
+{
+  "claim_id": "C-FOUR-CONNECTED-FIXED-CORE-FACTOR-CNF",
+  "claim_revision": 1,
+  "statement": "Each of the four frozen augmented CNFs is exactly the independently checked necessary variable-core factor encoding restricted to its stated connected core, via 24 positive units fixing both matchings and the identity cross permutation.",
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Four particular raw connected identity-P cores; necessary incidence factors with all base caps, no residual D.",
+  "assumptions": [
+    "No nontrivial target automorphism is assumed."
+  ],
+  "verifier": "/root/state_literature_audit",
+  "method": "independent_artifact_check_and_derivation",
+  "shared_components": [
+    "Python standard library; authenticated prior independent base encoding and domain gates.",
+    "No producer imports."
+  ],
+  "limitations": [
+    "These four cores are not a complete target normalization or coverage.",
+    "No solver was run; no factor, graph or UNSAT result is asserted.",
+    "Base encoding correctness is inherited from its exact independently checked gate; this audit checks all appended bytes and their semantics."
+  ],
+  "status": "INDEPENDENT_CONNECTED_FIXED_CORE_CLAIM_BINDING_CORRECTED_METADATA",
+  "timestamp": "2026-09-30T01:45:56.221155+00:00",
+  "source_commit": "22fc0ea2f81faa791ee99daf456a3c9785c55dc0",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/bind_20260930_connected_fixed_core_claim.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/connected_fixed_core_claim_binding"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/connected_fixed_core_cnf/summary.json": "3ab0a89b8ab4f7043b0bca8d3c66bdb6cbfc7b52a5f4e949de2602feabcf7d3b",
+    "acceleration/bind_20260930_connected_fixed_core_claim.py": "45b9c7e7f33fbff4f4d296ac3ddecf84ba8910fd92ce3a6ea8ee9660a4ef89b5"
+  },
+  "correction": {
+    "field": "dependencies[1].id",
+    "old": "C-UNRESTRICTED-VARIABLE-CORE-FACTOR-CNF",
+    "new": "C-UNRESTRICTED-TRIANGLE-NECESSARY-FACTOR-CNF-ENCODING",
+    "reason": "The initial audit used an invented shorthand instead of the existing authoritative claim ID. The exact mathematical premise was always the pinned independent base encoding gate ecc6c2ee488e68826e790360f3d47d6b029ac33953806bdab530ba50394a6ea0.",
+    "mathematical_scope_changed": false
+  },
+  "dependencies": [
+    {
+      "id": "C-FOUR-CONNECTED-IDENTITY-CORE-PORTFOLIO",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TRIANGLE-NECESSARY-FACTOR-CNF-ENCODING",
+      "revision": 1,
+      "relation": "encoding_equivalence"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "acceleration/results/20260930_independent_review/connected_fixed_core_cnf/summary.json",
+      "sha256": "3ab0a89b8ab4f7043b0bca8d3c66bdb6cbfc7b52a5f4e949de2602feabcf7d3b",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "verification": [
+    {
+      "claim_revision": 1,
+      "verifier": "/root/state_literature_audit",
+      "method": "independent_artifact_check_and_derivation",
+      "command_or_audit": "acceleration/results/20260930_independent_review/connected_fixed_core_cnf/summary.json",
+      "timestamp": "2026-09-30T01:42:12.943701+00:00",
+      "outcome": "PASS",
+      "scope": "Four particular raw connected identity-P cores; necessary incidence factors with all base caps, no residual D.",
+      "artifact_hashes": {
+        "acceleration/results/20260930_independent_review/connected_fixed_core_cnf/summary.json": "3ab0a89b8ab4f7043b0bca8d3c66bdb6cbfc7b52a5f4e949de2602feabcf7d3b"
+      },
+      "shared_components": [
+        "Python standard library; authenticated prior independent base encoding and domain gates.",
+        "No producer imports."
+      ]
+    }
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "original_report_preserved": true,
+  "ledger_changed": false,
+  "created_at": "2026-09-30T01:45:56.221155+00:00",
+  "updated_at": "2026-09-30T01:45:56.221155+00:00"
+}

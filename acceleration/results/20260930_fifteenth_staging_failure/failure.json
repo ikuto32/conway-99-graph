@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-30T02:38:01.614818+00:00",
+  "source_sha256": "557083a76c59226b8a6fb4e572d37b3ceed6eee045f1f4bb96e2ccae8d97e720",
+  "exit_code": 1,
+  "error": "Whitespace check rejected four blank context lines in frozen source comparison patch; all exact index byte checks already passed.",
+  "check_command": [
+    "git",
+    "-c",
+    "core.whitespace=cr-at-eol",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude)*.log"
+  ],
+  "check_stdout": "acceleration/native_20260930_connected_fixed_core_spec.md:41: new blank line at EOF.\nacceleration/results/20260930_independent_review/factor_portfolio_v4/source_delta.patch:26: trailing whitespace.\n+ \nacceleration/results/20260930_independent_review/factor_portfolio_v4/source_delta.patch:58: trailing whitespace.\n+ \nacceleration/results/20260930_independent_review/factor_portfolio_v4/source_delta.patch:85: trailing whitespace.\n+ \nacceleration/results/20260930_independent_review/factor_portfolio_v4/source_delta.patch:148: trailing whitespace.\n+ \n",
+  "check_stderr": "",
+  "patch": {
+    "path": "acceleration/results/20260930_independent_review/factor_portfolio_v4/source_delta.patch",
+    "sha256": "b872a29c9094360a5557dae1849566fe1fc55488b5c70d4216a81a11940eb0f2"
+  },
+  "action": "Preserve bytes; new stager v2 excludes only exact hash-bound comparison patch from cosmetic whitespace lint, retaining full hash and credential-shape checks."
+}

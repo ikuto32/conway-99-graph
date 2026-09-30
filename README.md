@@ -21,7 +21,11 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [fourteenth resumed milestone](docs/RESEARCH_20260930_FOURTEENTH_WAVE.md)
+See the [fifteenth resumed milestone](docs/RESEARCH_20260930_FIFTEENTH_WAVE_CORRECTED.md)
+for four selected connected-core construction domains, independently checked
+GPU saved states, conditional modular consistency results, a distinct
+60-pattern six-prism model and five completed UNKNOWN native attempts.
+The [fourteenth resumed milestone](docs/RESEARCH_20260930_FOURTEENTH_WAVE.md) records
 for checked GPU saved states and checkpoint repair, ordered-pair normalization,
 the fixed six-prism column-cap encoding and two completed UNKNOWN native runs.
 The [thirteenth resumed milestone](docs/RESEARCH_20260930_THIRTEENTH_WAVE.md) records

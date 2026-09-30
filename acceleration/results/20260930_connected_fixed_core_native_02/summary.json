@@ -1,0 +1,132 @@
+{
+  "status": "FIXED_CONNECTED_CORE_ARTIFACTS_PENDING_INDEPENDENT_REVIEW",
+  "core_index": 2,
+  "actual_exit_code": 0,
+  "receipt": {
+    "timestamp": "2026-09-30T01:57:45.472066+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "300s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "2000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_connected_fixed_core_cnf/core_02/instance.cnf",
+      "/tmp/conway99-connected-core-02-QoikdF/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 0,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 320,
+    "wall_seconds": 118.125,
+    "stdout": "acceleration/results/20260930_connected_fixed_core_native_02/main/solver.stdout.log",
+    "stdout_sha256": "a6b507f82d0fcfe01ffcafea3030adbba9afd04ecf1c19a72f5cfd0a56f72ad8",
+    "stderr": "acceleration/results/20260930_connected_fixed_core_native_02/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "scope": "One fixed connected core; complete factor only, residual D absent.",
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-connected-core-02-QoikdF/proof.drat",
+    "sha256": "90d22bd431a8f9d61c31ce5c99e89c8d5c823cf5fac5d0456c035edb8c964453",
+    "bytes": 839104290,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T01:57:46.024327+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-connected-core-02-QoikdF/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.5470000000204891,
+      "stdout": "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_hash.stdout.log",
+      "stdout_sha256": "73ca7964163974b0a008bf7f802799aa8bcd42a4f41b3640e3303f59ecac4c7f",
+      "stderr": "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T01:57:49.682336+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-connected-core-02-QoikdF/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_connected_fixed_core_native_02/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 3.6560000001918525,
+      "stdout": "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.6099999998696148
+  },
+  "interpreted_result": "UNKNOWN_NATIVE_OR_RESOURCE_OUTCOME",
+  "outputs_sha256": {
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/launch.json": "d41aafa51bd799bd59f3cd2229f5e0ede7cffd09374b25a9bd28eb962ecbe162",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/proof.drat": "90d22bd431a8f9d61c31ce5c99e89c8d5c823cf5fac5d0456c035edb8c964453",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/solver.receipt.json": "250823b0bc958d0e01d4c8d5ae2bcce4ff111ee48af82edb38fd80e7486bb658",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/solver.stdout.log": "a6b507f82d0fcfe01ffcafea3030adbba9afd04ecf1c19a72f5cfd0a56f72ad8",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_copy.receipt.json": "aed023905fff47bdc8927567b9aaae440357b095ccb733dafcc556f8f77c6a1f",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_hash.receipt.json": "e67babac132077b1fafd4294dfaaf152fec831ca6a6bc338f2a5b892773fdb06",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_connected_fixed_core_native_02/main/transfer_hash.stdout.log": "73ca7964163974b0a008bf7f802799aa8bcd42a4f41b3640e3303f59ecac4c7f"
+  },
+  "limitations": [
+    "Independent complete assignment and raw core/factor checking required on SAT; D remains absent.",
+    "A complete independently replayed UNSAT trace excludes only this fixed core through the audited necessary encoding.",
+    "Partial traces and resource outcomes establish no exclusion."
+  ]
+}

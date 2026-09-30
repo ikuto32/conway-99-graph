@@ -7,7 +7,18 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [fourteenth milestone](docs/RESEARCH_20260930_FOURTEENTH_WAVE.md)
+The latest [fifteenth milestone](docs/RESEARCH_20260930_FIFTEENTH_WAVE_CORRECTED.md)
+records 148 claims, 146 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Ten new claims
+cover four selected connected-core domains, finite GPU calibration and saved
+states, conditional modular consistency, and a distinct 60-pattern six-prism
+model. All five native attempts ended UNKNOWN. No target factor, graph or
+general proof was obtained. Next: independently audit the outcome of the
+separate six-bit-normalized coarse60 attempt, then test the conditional
+triangle-partition constraint. Later work requires its own receipts; this
+file is not a live process observation.
+[Fifteenth replay guide](docs/REPRODUCING_20260930_FIFTEENTH_WAVE.md).
+
+The [fourteenth milestone](docs/RESEARCH_20260930_FOURTEENTH_WAVE.md)
 records 138 claims, 136 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Eight new claims
 cover finite GPU calibration/saved states, a checkpoint repair and diagnosed
 failure, ordered-pair normalization, a finite failed modular route, and the
