@@ -21,8 +21,12 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [sixteenth resumed milestone](docs/RESEARCH_20260930_SIXTEENTH_WAVE.md)
-for 17 new independently checked claims, four exact exclusions among five
+See the [seventeenth resumed milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md)
+for a completely replayed cyclic-subclass exclusion, the independently checked
+broader fixed-support encoding and its UNKNOWN run, and exact local projection
+results. The support as a whole remains unresolved.
+The [sixteenth resumed milestone](docs/RESEARCH_20260930_SIXTEENTH_WAVE.md) records
+17 new independently checked claims, four exact exclusions among five
 selected Hadamard support matrices, a fractional witness for the remaining
 support, conditional triangle structure, and one completed UNKNOWN native run.
 The [fifteenth resumed milestone](docs/RESEARCH_20260930_FIFTEENTH_WAVE_CORRECTED.md) records

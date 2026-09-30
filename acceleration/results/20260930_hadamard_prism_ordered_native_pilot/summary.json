@@ -1,0 +1,131 @@
+{
+  "status": "HADAMARD_PRISM_ORDERED_NATIVE_ARTIFACTS_PENDING_INDEPENDENT_REVIEW",
+  "actual_exit_code": 124,
+  "receipt": {
+    "timestamp": "2026-09-30T03:42:14.021753+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "300s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "2000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_prism_ordered_cnf/instance.cnf",
+      "/tmp/conway99-hadamard-ordered-sIE5pp/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 124,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 320,
+    "wall_seconds": 300.0470000000205,
+    "stdout": "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "57c6a2ea590414c209823e2f720704b80a0c3afad54c735569af7b506c893f3b",
+    "stderr": "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "scope": "All-colouring fixed-support factor model with audited column ordering; no residual D, whole-core or target conclusion.",
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-hadamard-ordered-sIE5pp/proof.drat",
+    "sha256": "9f7182a2876e3381c888a3cf8f71baa59839828cd7790ed9da707c45ab5fb914",
+    "bytes": 350457856,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T03:42:14.269188+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-hadamard-ordered-sIE5pp/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.25,
+      "stdout": "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "ad2604629714e7cf919e5f549121594a4397f959cd81f5d169a9f07dc6c0ddab",
+      "stderr": "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T03:42:16.021047+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-hadamard-ordered-sIE5pp/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 1.75,
+      "stdout": "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.25
+  },
+  "interpreted_result": "UNKNOWN_NATIVE_OR_RESOURCE_OUTCOME",
+  "outputs_sha256": {
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/launch.json": "c601fe90c1b90a1e1ef12b02230708f183856d46d5ae09e5fc979ecbd1ad9995",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/proof.drat": "9f7182a2876e3381c888a3cf8f71baa59839828cd7790ed9da707c45ab5fb914",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/solver.receipt.json": "0a78f9d84e483a07104cb760f79c17edf90c84fe73bdc697cf38b477aea9f331",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/solver.stdout.log": "57c6a2ea590414c209823e2f720704b80a0c3afad54c735569af7b506c893f3b",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_copy.receipt.json": "0f14b598f7da5424d1070f828a75f118aee6e4c02773d69f88ab4380e5de8b4b",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_hash.receipt.json": "e29e5db4da20a04d755448144480303dee2cf23c093405dd6f05fc80685eca50",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_prism_ordered_native_pilot/main/transfer_hash.stdout.log": "ad2604629714e7cf919e5f549121594a4397f959cd81f5d169a9f07dc6c0ddab"
+  },
+  "limitations": [
+    "Independent whole-assignment/clause/raw-factor/column-cap check is mandatory on SAT; residual D is absent.",
+    "Complete independently checked UNSAT proof plus exact encoding/order coverage gates excludes this fixed support, not other supports or the core.",
+    "No UNKNOWN result or incomplete trace is an exclusion."
+  ]
+}

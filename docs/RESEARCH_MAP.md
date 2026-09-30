@@ -4,6 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [seventeenth milestone](RESEARCH_20260930_SEVENTEENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_SEVENTEENTH_WAVE.md) preserve the complete
+cyclic-subclass proof, the broader ordered encoding and UNKNOWN run, and
+exact marginal/local-triple projections. The fixed support remains unresolved.
 The [sixteenth milestone](RESEARCH_20260930_SIXTEENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_SIXTEENTH_WAVE.md) cover conditional triangle
 structure, four exact exclusions among five selected Hadamard supports,

@@ -7,7 +7,18 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [sixteenth milestone](docs/RESEARCH_20260930_SIXTEENTH_WAVE.md)
+The latest [seventeenth milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md)
+records 171 claims, 169 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Six new claims
+include one completely replayed cyclic-subclass exclusion, an independently
+checked broader fixed-support encoding, and exact marginal/local-triple
+projections. The broader native attempt ended UNKNOWN at its wall limit.
+No new whole support, core or target exclusion was obtained. Next: the
+separately gated direct binary MIP construction attempt and independent
+checking of its saved outcomes. Later work has separate receipts; this file
+is not a live process observation.
+[Seventeenth replay guide](docs/REPRODUCING_20260930_SEVENTEENTH_WAVE.md).
+
+The [sixteenth milestone](docs/RESEARCH_20260930_SIXTEENTH_WAVE.md)
 records 165 claims, 163 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Seventeen new
 claims include exact exclusions of four of five selected Hadamard supports,
 an exact fractional witness for the remaining support, conditional triangle
