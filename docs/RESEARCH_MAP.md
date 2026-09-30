@@ -4,6 +4,12 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [twenty-first milestone](RESEARCH_20260930_TWENTYFIRST_WAVE.md) and
+[replay guide](REPRODUCING_20260930_TWENTYFIRST_WAVE.md) preserve twelve checked
+claims, including unbalanced-group restrictions, exact finite marginal screens,
+partial-object certificates and the complete literal case0 proof. No full factor
+or target resolution follows; the remaining fifteen representative searches
+belong to the next campaign.
 The [twentieth milestone](RESEARCH_20260930_TWENTIETH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_TWENTIETH_WAVE.md) preserve five new verified
 claims, one refuted intersection guess, and the complete balanced-family UNSAT
