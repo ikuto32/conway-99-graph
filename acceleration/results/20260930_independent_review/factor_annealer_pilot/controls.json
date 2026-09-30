@@ -1,0 +1,55 @@
+{
+  "positive243": {
+    "objective_version": "TRIANGLE_FACTOR_CROSS_GRAM_SQUARED_V1",
+    "score": 0,
+    "block_scores_01_02_12": [
+      0,
+      0,
+      0
+    ],
+    "direction": "MINIMIZE",
+    "integer_arithmetic": true,
+    "rows": 60,
+    "columns": 180,
+    "cross_entries_checked": 1200,
+    "within_entries_checked": 1200,
+    "mixed_cap_violations": [],
+    "column_overlap_violations": [],
+    "exact_Gram_factor": true,
+    "target_graph": false,
+    "meaning": "Score zero means this fixed-core abstract Gram factor only; neither the caps nor residual D follow from the score."
+  },
+  "valid_domain_swapped_score": 24,
+  "corruptions": [
+    {
+      "label": "nonbinary",
+      "outcome": "REJECTED",
+      "reason": "binary factor dimensions"
+    },
+    {
+      "label": "wrong_C0",
+      "outcome": "REJECTED",
+      "reason": "canonical C0 columns"
+    },
+    {
+      "label": "broken_permutation",
+      "outcome": "REJECTED",
+      "reason": "two rows per fibre per column"
+    },
+    {
+      "label": "wrong_core",
+      "outcome": "REJECTED",
+      "reason": "cubic simple core"
+    },
+    {
+      "label": "wrong_saved_score",
+      "outcome": "REJECTED",
+      "reason": "claimed score identity"
+    },
+    {
+      "label": "wrong_saved_core",
+      "outcome": "REJECTED",
+      "reason": "intended fixed core"
+    }
+  ]
+}

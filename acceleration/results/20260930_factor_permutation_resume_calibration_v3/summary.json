@@ -1,0 +1,150 @@
+{
+  "status": "CANDIDATE_PUBLIC_JSON_RESUME_REGRESSION_PASS",
+  "calibration_only": true,
+  "records": [
+    {
+      "core": "shift6",
+      "first_checkpoint": "acceleration/results/20260930_factor_permutation_resume_calibration_v3/shift6_first23/checkpoint_00000.json",
+      "first_checkpoint_sha256": "54c457e92c2d37ca40ea5b7b0779d6aa2ae9a654109c533dcbee308dcb2e5124",
+      "resumed_checkpoint": "acceleration/results/20260930_factor_permutation_resume_calibration_v3/shift6_resume41/checkpoint_00000.json",
+      "resumed_checkpoint_sha256": "8b5547080e53a0f6ca91dd711547c96ace0c6c03e8e1c3ff54c88080ee53f62f",
+      "whole_checkpoint": "acceleration/results/20260930_factor_permutation_resume_calibration_v3/shift6_whole64/checkpoint_00000.json",
+      "whole_checkpoint_sha256": "0c690c6e291e04c9e60eb30e3a9f9caca1f348755438350c82fe1be5c2f51622",
+      "chains": 2,
+      "first_steps": 23,
+      "resumed_steps": 41,
+      "whole_steps": 64,
+      "all_persisted_fields_and_trace_equal": true
+    },
+    {
+      "core": "six_prism",
+      "first_checkpoint": "acceleration/results/20260930_factor_permutation_resume_calibration_v3/six_prism_first23/checkpoint_00000.json",
+      "first_checkpoint_sha256": "a93629af9e72a6e277c4fecedac2ad230e4a15fa5a0d347ff8af5fd3c7166623",
+      "resumed_checkpoint": "acceleration/results/20260930_factor_permutation_resume_calibration_v3/six_prism_resume41/checkpoint_00000.json",
+      "resumed_checkpoint_sha256": "9a9098e2fc32ad81bc81feb3642fe5b01d30acf5dacf0fd9c2c6920bdff2be58",
+      "whole_checkpoint": "acceleration/results/20260930_factor_permutation_resume_calibration_v3/six_prism_whole64/checkpoint_00000.json",
+      "whole_checkpoint_sha256": "e2a0278d83987ec709d46095d991aedf25905aa4346d60ae7759637922c3cff7",
+      "chains": 2,
+      "first_steps": 23,
+      "resumed_steps": 41,
+      "whole_steps": 64,
+      "all_persisted_fields_and_trace_equal": true
+    }
+  ],
+  "public_wrapper_native_calls": 6,
+  "calibration_proposals": 512,
+  "corrupt_public_resume_controls": [
+    {
+      "control": "wrong_target",
+      "failure": {
+        "timestamp": "2026-09-30T01:04:12.753613+00:00",
+        "error_type": "ValueError",
+        "error": "resume domain/objective binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "changed_edge_pair",
+      "failure": {
+        "timestamp": "2026-09-30T01:04:12.910260+00:00",
+        "error_type": "ValueError",
+        "error": "resume domain/objective binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "wrong_objective",
+      "failure": {
+        "timestamp": "2026-09-30T01:04:13.052452+00:00",
+        "error_type": "ValueError",
+        "error": "resume domain/objective binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "wrong_source_hash",
+      "failure": {
+        "timestamp": "2026-09-30T01:04:13.196601+00:00",
+        "error_type": "ValueError",
+        "error": "resume exact engine binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "wrong_binary_hash",
+      "failure": {
+        "timestamp": "2026-09-30T01:04:13.336770+00:00",
+        "error_type": "ValueError",
+        "error": "resume exact engine binding"
+      },
+      "native_calls": 0
+    }
+  ],
+  "independent_review_required": true,
+  "target_resolution": false,
+  "unchanged_native_source_sha256": "95c4efd8683d3a36b6b7c97e9b93253847630de680f125a32af8f02160a3c560",
+  "unchanged_binary_sha256": "3db33f4d8e75cf25eab7c70fda37f3856b1c0d70af7c778a86ecc297e7bd9f5c",
+  "scope": "Actual disk-checkpoint public Python-wrapper resume only; native algorithm and objective unchanged.",
+  "timestamp": "2026-09-30T01:04:10.744873+00:00",
+  "source_commit": "b9de2985adea787b67017df5d0d757755bc22c9c",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_factor_permutation_annealer_v3.py",
+    "resume-calibrate",
+    "--out",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/theory_20260930_factor_permutation_annealer_v3.py": "8f2a85f5a87d1c6a3a37fdb104628c126c67c4ba6ace846b7c9f3b3aba0525b3",
+    "acceleration/factor_permutation_anneal_20260930_v2.cu": "95c4efd8683d3a36b6b7c97e9b93253847630de680f125a32af8f02160a3c560",
+    "acceleration/build_factor_permutation_anneal_20260930_v2.ps1": "e1176d33a9cf98d7107f3b7297c46ad75330266a30a2422481b4e7bdd85612b1",
+    "acceleration/build/factor_permutation_anneal_20260930_v2.exe": "3db33f4d8e75cf25eab7c70fda37f3856b1c0d70af7c778a86ecc297e7bd9f5c",
+    "acceleration/theory_20260930_factor_permutation_annealer_v3_spec.md": "2e342b7be1650385407c2c9811ee51eb16ac6bcc84fcb1a0657386bdb1704c04",
+    "acceleration/theory_20260930_factor_permutation_annealer_v2.py": "5d367ebc6683c4c5e473573c7edf14dd571973f75f1612e2be5121892f37cd35",
+    "acceleration/results/20260930_independent_review/factor_permutation_annealer_bound/summary.json": "70c54735a3331f4bc9dff3ace2f5d1dd4bae49ec051f415a262538f9385b20b9",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_independent_review/prism_all_columns_cnf/derived_geometry.json": "6cce4aa318f821563568679a01624f25a74104eb8527a3a61c55ad7aac36a542",
+    "acceleration/results/20260930_triangle_joint_factor_cnf/scope.json": "51d5f51ba4177d41247239fc2d7a3753b26150e9660960b7452f38e304d731d0",
+    "acceleration/results/20260930_independent_review/triangle_factor_column_caps/summary.json": "675dae8635175088bff026c59e171c1d2b2b66a4a880cd6a10500ae66bb74331",
+    "acceleration/results/20260930_independent_review/prism_all_columns_cnf/summary.json": "07c589160e930205bc7e42f9524846280b4a8f0573ca9e5dfa06b627a6d115c3",
+    "acceleration/results/20260930_srg243_residual_fixture/triangle_blocks.json": "3f8dfa3803d6a5db8146dd24a0857477e1aa061ab10dac0f9e6e564aabc86439",
+    "acceleration/results/20260930_independent_review/srg243_residual_fixture/summary.json": "28bbd97b8e69515c3eb0345e5aa2db12debfaa8a44e83b2e3487342104c5d50e"
+  },
+  "configuration": {
+    "mode": "resume-calibrate",
+    "out": "acceleration\\results\\20260930_factor_permutation_resume_calibration_v3",
+    "core": "shift6",
+    "chains": 32,
+    "chunks": 1,
+    "steps": 256,
+    "seconds": 60,
+    "temperature": 3.25,
+    "seed": 20260930,
+    "resume": null,
+    "independent_gate": null,
+    "independent_gate_sha256": null
+  },
+  "binary_sha256": "3db33f4d8e75cf25eab7c70fda37f3856b1c0d70af7c778a86ecc297e7bd9f5c",
+  "outputs_sha256": {
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_changed_edge_pair.receipt.json": "9f26aba894b81fe40ea99291aaf8b4a3e8dd4694549199a76fbf5977b9a6bccc",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_changed_edge_pair_checkpoint.json": "5dc8bc576e40d32240dd81b97b465a4341878b0f8f38d14a2a0a5e1c0dbd49a1",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_binary_hash.receipt.json": "57b2cbe4eeb3b159e26bea6c9eed9639ac1c07cc7280028535e276b21f351525",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_binary_hash_checkpoint.json": "53ae3449eed78f7eef3fe275a51a2079610a04c2e50ddc6734574da875a9095c",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_objective.receipt.json": "fdb078c907c7c246c10bf42232745cf95c9123b4c72b15767899bfa105a7d1ec",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_objective_checkpoint.json": "cf026d67e484e828982b61aa3b7e94c1067a35badabdd0824fb0f9c141273e25",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_source_hash.receipt.json": "456486d1926a9f2d8c4e4b589f30dfb07b6f3477bb5ca9bd0d32335b83a8ec75",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_source_hash_checkpoint.json": "fc0e98a19c3c1a104fd5b6f846fff4d3f1a37343d44562568cdd01ec21546f3e",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_target.receipt.json": "08436b61a652189e878363103aba629254d8104d3f390ce365fc8729671b89ff",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/bad_wrong_target_checkpoint.json": "2eb96935318a1e37deb2048ae5e9014af5977b7cba8e0ecf8ae7c6760a7a9f27",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/manifest.json": "71484508dc58195119225a3824d8228aef64b4f551caf3c7aa3964520a056762",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/shift6_first23.receipt.json": "3615cb2cc3ca6124f2e17ca6780d724fd516640fdcb6053df64e45e621201f56",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/shift6_resume41.receipt.json": "7b9e502c16c082e17911a0ba183b06bae1b61f7b259c47c09bee0b2a551f2c72",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/shift6_whole64.receipt.json": "2828187ce78073a520cb845dd4e12cdf88e97bbfc6cf962620a7f6976c0d1b18",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/six_prism_first23.receipt.json": "2cc68ed883190fd87adfb9c451d4f10d9b2100f5f5d5599940440d24785ec324",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/six_prism_resume41.receipt.json": "94fa1fc58cc960cc332bc09d14527a3f15b9ecd149b027152dfb4a2e3cc283f4",
+    "acceleration/results/20260930_factor_permutation_resume_calibration_v3/six_prism_whole64.receipt.json": "8c0f396c729882c424b814a3b245af1cb6aabf7e918ef795e4bfaa491e37af19"
+  }
+}

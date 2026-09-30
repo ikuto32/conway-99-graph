@@ -1,0 +1,33 @@
+{
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py",
+    "calibration-chunk",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\public_wrapper_replay\\bad_wrong_source_hash",
+    "--core",
+    "shift6",
+    "--seed",
+    "20260930",
+    "--chains",
+    "2",
+    "--chunks",
+    "1",
+    "--steps",
+    "41",
+    "--seconds",
+    "30",
+    "--temperature",
+    "3.25",
+    "--resume",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\public_wrapper_replay\\bad_wrong_source_hash_checkpoint.json"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "exit_code": 1,
+  "wall_seconds": 0.1410000000614673,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 302, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 296, in main\n    result=resume_regression(out) if args.mode=='resume-calibrate' else run_chunks(args,out,calibration_only=args.mode=='calibration-chunk')\n                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 219, in run_chunks\n    need(prev['source_sha256']==digest(SOURCE) and prev['binary_sha256']==digest(EXE),'resume exact engine binding')\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 37, in need\n    if not b: raise ValueError(s)\n              ^^^^^^^^^^^^^^^^^^^\nValueError: resume exact engine binding\n",
+  "resume_path": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_source_hash_checkpoint.json",
+  "resume_sha256": "81583581ddf593e221cbe0b55b4ff56958054d829645a63b9aaf628bf668e9de",
+  "expect_ok": false
+}

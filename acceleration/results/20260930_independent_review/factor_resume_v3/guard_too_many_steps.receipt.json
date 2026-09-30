@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py",
+    "calibration-chunk",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\guard_too_many_steps",
+    "--core",
+    "shift6",
+    "--seed",
+    "20260930",
+    "--chains",
+    "2",
+    "--chunks",
+    "1",
+    "--steps",
+    "23",
+    "--seconds",
+    "30",
+    "--temperature",
+    "3.25",
+    "--steps",
+    "65"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 302, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 296, in main\n    result=resume_regression(out) if args.mode=='resume-calibrate' else run_chunks(args,out,calibration_only=args.mode=='calibration-chunk')\n                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 202, in run_chunks\n    need(args.core in ('shift6','six_prism') and args.seed==20260930 and args.chains==2 and args.chunks==1 and args.steps in (23,41,64) and args.seconds==30 and args.temperature==3.25,'fixed small public-resume calibration configuration')\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 37, in need\n    if not b: raise ValueError(s)\n              ^^^^^^^^^^^^^^^^^^^\nValueError: fixed small public-resume calibration configuration\n"
+}
