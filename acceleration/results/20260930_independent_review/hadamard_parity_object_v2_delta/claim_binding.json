@@ -1,0 +1,51 @@
+{
+  "id": "C-FIXED-HADAMARD-SIX-PRISM-NONCYCLIC-PARITY-PROJECTION-WITNESS",
+  "revision": 1,
+  "statement": "The exact520-variable4481-clause fixed-support parity formula has the saved satisfying assignment: its20one-hot group patterns comprise16mixed and4constant groups, and its60pair disagreement counts comprise48threes and12zeros. Thus this necessary parity projection admits noncyclic choices.",
+  "kind": "construction",
+  "basis": [
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Only a witness for the necessary parity projection; no local-colouring lift, full36x60factor, residual graph, fixed-support feasibility or target graph is asserted.",
+  "assumptions": [
+    "The exact saved support and parity model, with balance explicitly an additional construction restriction.",
+    "No hypothetical target automorphism is assumed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-BALANCED-PARITY-PROJECTION",
+      "revision": 1,
+      "relation": "encoding_equivalence"
+    }
+  ],
+  "evidence_references": {
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_sat_v2/summary.json": "d2536119ac3fa0d45c190a6562de2ccc67c3f9c9765fbfc03257e37b15097f9c",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_sat_v2/independent_projection.json": "08e2a5a4d3eca4777a71bf0d39ff557cc896041c74720fb8326fee92d748db3b",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_object_calibration_v2/summary.json": "101b4af16c1356cad1951f04626d3fcc4a244f3afac220ed94b717b9ee1e8dec"
+  },
+  "verification": {
+    "claim_revision": 1,
+    "verifier": "/root/eight_domain_audit",
+    "method": "independent_raw_native_assignment_clause_and_projection_check",
+    "command_or_audit": "acceleration/results/20260930_independent_review/hadamard_balanced_parity_sat_v2/summary.json",
+    "artifact_hashes": {
+      "acceleration/results/20260930_hadamard_balanced_parity/model.json": "a75b60c4ef0f8decd7537d70cced7bffa14cb7a4881de726bf98c96635888147",
+      "acceleration/results/20260930_hadamard_balanced_parity/instance.cnf": "92801921a62236effa19b0f6e7463c6f5c1ca2cb0b6957cf7d315a73e0e43fca",
+      "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/parsed_model.json": "0451ffb8b9b6712cd993d7259aa75f3e534845cec34cf7384c534825a0a3ff59",
+      "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/solver.stdout.log": "fb096e71b1fe862c76edd0fd1aaf69cf2e12575df285af1a5ef9e27a407f00c2",
+      "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/decoded_projection.json": "0e80251a964330092d8da9030df2e2ee7f56476cee9e588be921dbe2f470e646"
+    },
+    "timestamp": "2026-09-30T04:04:16.371154+00:00",
+    "outcome": "PASS"
+  },
+  "limitations": [
+    "This refutes only the assertion that the parity projection forces every group cyclic.",
+    "Full-Gram necessity of coordinatewise balance remains UNKNOWN.",
+    "The first actual checker failure concerned only optional hexadecimal string representation; original failure/source and both valid representations are preserved."
+  ],
+  "created_at": "2026-09-30T04:06:05.571145+00:00",
+  "updated_at": "2026-09-30T04:06:05.571145+00:00",
+  "artifact_availability": "LOCAL_ONLY"
+}

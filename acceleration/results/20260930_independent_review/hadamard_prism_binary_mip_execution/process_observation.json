@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-09-30T04:04:04.963205+00:00",
+  "command": "$p=Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^python(w)?\\.exe$' -and $_.CommandLine -like '*theory_20260930_hadamard_prism_binary_mip.py*' -and $_.CommandLine -like '*20260930_hadamard_prism_binary_mip_pilot*' }; @($p | Select-Object ProcessId,CommandLine) | ConvertTo-Json -Compress",
+  "stdout": "",
+  "stderr": "",
+  "exit_code": 0,
+  "scope": "Read-only Python processes matching exact producer basename and this output prefix only; not global research state."
+}

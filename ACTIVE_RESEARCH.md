@@ -7,7 +7,17 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [seventeenth milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md)
+The latest [eighteenth milestone](docs/RESEARCH_20260930_EIGHTEENTH_WAVE.md)
+records 178 claims, 176 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Seven new claims
+include one exact selected-parity lift exclusion, necessary parity encodings
+and two verified parity witnesses. The direct MIP run ended UNKNOWN without
+a valid incumbent. No full factor or whole-support, core or target exclusion
+was obtained. Next: independently check the second witness's lift through
+exact Gram and modular phase equations. That work has separate nineteenth
+cohort records; this document is not a live process observation.
+[Eighteenth replay guide](docs/REPRODUCING_20260930_EIGHTEENTH_WAVE.md).
+
+The [seventeenth milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md)
 records 171 claims, 169 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Six new claims
 include one completely replayed cyclic-subclass exclusion, an independently
 checked broader fixed-support encoding, and exact marginal/local-triple

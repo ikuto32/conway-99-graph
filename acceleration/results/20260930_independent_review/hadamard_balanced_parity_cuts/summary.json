@@ -1,0 +1,61 @@
+{
+  "status": "INDEPENDENT_HADAMARD_BALANCED_PARITY_CONSTANT_GROUP_CUTS_PASS",
+  "timestamp": "2026-09-30T04:18:11.328023+00:00",
+  "source_commit": "81320d3cf74339d2ffb1e671f51f0865218ac161",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_hadamard_balanced_parity_cuts.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_cuts"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_hadamard_balanced_parity/model.json": "a75b60c4ef0f8decd7537d70cced7bffa14cb7a4881de726bf98c96635888147",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity/summary.json": "8134ed25d5dc06704e6f7f668fa03deec56874eca6d5fad9e6a4138787c7dd76",
+    "acceleration/audit_20260930_hadamard_balanced_parity_cuts.py": "a6143c42878ba49bf2bcc1e5edbf00d31ff154ae01a660c0485f1798bda9e04f",
+    "acceleration/audit_20260930_hadamard_parity_lift_domains.py": "99213da5f27028426f5d82635587b7d60f6187ed30171fabddab5c43bec78b36",
+    "acceleration/audit_20260930_hadamard_prism_ordered_cnf.py": "63535cf73b8680e915563c6c57081791934af3e20571da5f6a090e8438a93f52",
+    "docs/AUDIT_20260930_HADAMARD_BALANCED_PARITY_CUTS.md": "4d092e393bfd26685f9b83f35ed3687d7657ef81eeed93602830b8fe8cdad3b3",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_cuts/controls.json": "ce5c84e200bcf2f776e1138d71719cdbbc59be96a473484de10330feb8e66180",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_cuts/local_permutation_controls.json": "347de1906a9b2f84e077982e1caf28ce17bc21f471677b46314dbf8dde844b35",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_cuts/necessary_clauses.json": "2204fd00f447d9df0c71f9500538987a185bc43ffc323366d62ad7ec3f87fef1"
+  },
+  "claim_id": "C-FIXED-HADAMARD-BALANCED-PARITY-CONSTANT-GROUP-NECESSITY",
+  "claim_revision": 1,
+  "verifier": "/root/state_literature_audit",
+  "method": "Independent universal multiplicity argument and full finite S3-array checks; no producer imports",
+  "counts": {
+    "coordinate_permutation_arrays": 46656,
+    "balanced_local_triples": 150,
+    "local_pair_records": 2250,
+    "relative_permutation_cases": 36,
+    "mixed_equal_parity_zero_cases": 720,
+    "positive_constant_coincidence_cases": 90,
+    "necessary_clauses": 60,
+    "literals_per_clause": 10,
+    "cut_truth_cases": 1024,
+    "corruptions_rejected": 8
+  },
+  "producer_imports": false,
+  "shared_components": [
+    "Own independent ordered-support core/Gram checker and new S3-array enumeration helper.",
+    "Python standard library; no producer classification, factor encoding or solver code imported."
+  ],
+  "recommendation": "VERIFIED",
+  "limitations": [
+    "Only factors with the additional coordinatewise balanced three-column-group restriction on the exact six-prism Hadamard support.",
+    "No particular saved parity assignment is a mathematical premise.",
+    "No residual D, target graph, unrestricted nonexistence, or novelty claim.",
+    "This report verifies the necessary clauses and original literal map; it does not authenticate a future appended DIMACS artifact.",
+    "The original model final nonconstant-group clause and its cyclic-exclusion premise are not needed for this new local necessity proof."
+  ],
+  "solver_calls": 0,
+  "target_resolution": false,
+  "artifact_availability": "LOCAL_ONLY"
+}

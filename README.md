@@ -21,8 +21,12 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [seventeenth resumed milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md)
-for a completely replayed cyclic-subclass exclusion, the independently checked
+See the [eighteenth resumed milestone](docs/RESEARCH_20260930_EIGHTEENTH_WAVE.md)
+for seven checked claims, an exact selected-parity lift exclusion, two verified
+parity projection witnesses and a completed UNKNOWN direct MIP attempt.
+The fixed support and unrestricted target remain unresolved.
+The [seventeenth resumed milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md) records
+a completely replayed cyclic-subclass exclusion, the independently checked
 broader fixed-support encoding and its UNKNOWN run, and exact local projection
 results. The support as a whole remains unresolved.
 The [sixteenth resumed milestone](docs/RESEARCH_20260930_SIXTEENTH_WAVE.md) records
