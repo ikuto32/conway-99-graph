@@ -4,6 +4,10 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [thirteenth milestone](RESEARCH_20260930_THIRTEENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_THIRTEENTH_WAVE.md) cover two verified
+relabelling reductions, a nonempty different-parameter validation fixture,
+a necessary residual screen and two completed UNKNOWN normalized searches.
 The [twelfth milestone](RESEARCH_20260930_TWELFTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_TWELFTH_WAVE.md) cover universal triangle
 normalization, an arbitrary-core necessary encoding, the complete fixed

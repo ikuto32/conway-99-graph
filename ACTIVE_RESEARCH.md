@@ -7,7 +7,16 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [twelfth milestone](docs/RESEARCH_20260930_TWELFTH_WAVE.md) records
+The latest [thirteenth milestone](docs/RESEARCH_20260930_THIRTEENTH_WAVE.md)
+records 130 claims, 128 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Two relabelling
+reductions preserve their declared model coverage, a 243-vertex raw fixture
+provides a nonempty positive control, and a dynamic necessary residual screen
+passed independent review. Both normalized native attempts ended UNKNOWN.
+Next: the complete ordered-pair normalization and exact-score construction
+experiments. Later runs require their own receipts; this file is not a live
+process observation. [Thirteenth replay guide](docs/REPRODUCING_20260930_THIRTEENTH_WAVE.md).
+
+The [twelfth milestone](docs/RESEARCH_20260930_TWELFTH_WAVE.md) records
 126 claims, 124 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Universal triangle
 normalization and its arbitrary-core necessary encoding passed independent
 review. The separate six-prism encoding includes all column patterns for that
