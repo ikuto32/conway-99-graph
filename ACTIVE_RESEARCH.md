@@ -7,7 +7,20 @@ below remain unchanged evidence and are superseded as instructions by this
 new user request.
 
 Target resolution remains **UNKNOWN**. The root `CLAIMS.yaml` is authoritative.
-The latest [eighteenth milestone](docs/RESEARCH_20260930_EIGHTEENTH_WAVE.md)
+The latest [nineteenth milestone](docs/RESEARCH_20260930_NINETEENTH_WAVE.md)
+records 188 claims, 186 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Ten new claims
+include exact phase exclusions of four specified balanced parity assignments,
+eleven overlapping reduced-pattern exclusions, and conditional matrix algebra.
+The finite sampler completed three checked SAT projections and one UNKNOWN
+attempt; all three sampled lifts are now excluded by exact phase checks.
+Four deferred learned traces are MISSING, with historical hashes retained;
+no mathematical exclusion depends on them. No full factor or whole-support,
+core or target exclusion was obtained. Next: independently audit and run the
+grouped full balanced-Gram encoding. Later oriented-triple and grouped-model
+work has separate twentieth-cohort records. This file is not a live process
+observation. [Nineteenth replay guide](docs/REPRODUCING_20260930_NINETEENTH_WAVE.md).
+
+The [eighteenth milestone](docs/RESEARCH_20260930_EIGHTEENTH_WAVE.md)
 records 178 claims, 176 VERIFIED/CLEAR and 2 CANDIDATE/CLEAR. Seven new claims
 include one exact selected-parity lift exclusion, necessary parity encodings
 and two verified parity witnesses. The direct MIP run ended UNKNOWN without

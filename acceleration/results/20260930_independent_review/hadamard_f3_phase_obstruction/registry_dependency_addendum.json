@@ -1,0 +1,42 @@
+{
+  "status": "APPROVED_EDITORIAL_REGISTRY_MAPPING",
+  "timestamp": "2026-09-30T04:49:43.3848161+00:00",
+  "claim_id": "C-FIXED-HADAMARD-SECOND-PARITY-GF3-PHASE-SCREEN",
+  "claim_revision": 1,
+  "claim_binding_sha256": "1498efe4eb04c603bbf11af86ebca91cf0274fa8c0f70bcae35b9f57e51b9b6d",
+  "verifier": "/root/structural_attack",
+  "original_dependencies": [
+    {
+      "relation": "premise",
+      "reference": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat/summary.json",
+      "sha256": "02ae20d479a0d2589c02f435e2a8fdd781ec0459b60095d130b68b5f2721a04a"
+    },
+    {
+      "relation": "premise",
+      "reference": "acceleration/results/20260930_hadamard20_support/six_prism.json",
+      "sha256": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d"
+    }
+  ],
+  "ledger_dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-SAT-WITNESS",
+      "revision": 1,
+      "relation": "premise"
+    },
+    {
+      "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+      "revision": 1,
+      "relation": "premise"
+    }
+  ],
+  "shared_components": [
+    "The producer and verifier use the same immutable raw fixed support/core and independently authenticated parity projection as the exact claim inputs.",
+    "Only Python standard-library JSON parsing and exact integer arithmetic modulo three are trusted computational components; no producer source or phase/elimination helper is imported.",
+    "The verifier separately derives the raw core Gram and equations, checks literal row-combination identities, and uses reverse-order column elimination rather than the producer row RREF.",
+    "The general finite controls use literal permutations, a distinct unordered balanced-word enumeration and direct small-matrix minors; no factor/CNF solver is a checking premise."
+  ],
+  "mapping_scope": "The five-support claim is used only to identify its exact saved six_prism support/core component; no broader projection conclusion is needed. Raw references and hashes remain evidence unchanged.",
+  "statement_changed": false,
+  "mathematical_claim_revision_changed": false,
+  "original_binding_unchanged": true
+}

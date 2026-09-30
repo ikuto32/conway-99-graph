@@ -21,8 +21,13 @@ continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
 [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
 remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
 rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
-See the [eighteenth resumed milestone](docs/RESEARCH_20260930_EIGHTEENTH_WAVE.md)
-for seven checked claims, an exact selected-parity lift exclusion, two verified
+See the [nineteenth resumed milestone](docs/RESEARCH_20260930_NINETEENTH_WAVE.md)
+for ten new checked claims, exact phase exclusions of four specified parity
+assignments, reduced-pattern exclusions and a completely checked finite phase
+enumeration. No full factor or target resolution follows. Four deferred learned
+traces are missing; all mathematical certificates remain available.
+The [eighteenth resumed milestone](docs/RESEARCH_20260930_EIGHTEENTH_WAVE.md) records
+seven checked claims, an exact selected-parity lift exclusion, two verified
 parity projection witnesses and a completed UNKNOWN direct MIP attempt.
 The fixed support and unrestricted target remain unresolved.
 The [seventeenth resumed milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md) records
