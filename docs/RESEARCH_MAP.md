@@ -4,6 +4,11 @@
 `codex/eight-coordinate-continuation-20260930`, based on merged main `90f1a32d`.
 Read [the current state](../ACTIVE_RESEARCH.md), [root ledger](../CLAIMS.yaml),
 and [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3).
+The [eighteenth milestone](RESEARCH_20260930_EIGHTEENTH_WAVE.md) and
+[replay guide](REPRODUCING_20260930_EIGHTEENTH_WAVE.md) preserve seven checked
+claims: direct MIP and parity encodings, two parity witnesses, an exact
+selected-lift exclusion and a necessary balanced-factor cut. The completed
+MIP run is UNKNOWN; no full factor or target resolution follows.
 The [seventeenth milestone](RESEARCH_20260930_SEVENTEENTH_WAVE.md) and
 [replay guide](REPRODUCING_20260930_SEVENTEENTH_WAVE.md) preserve the complete
 cyclic-subclass proof, the broader ordered encoding and UNKNOWN run, and

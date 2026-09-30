@@ -1,0 +1,97 @@
+{
+  "status": "INDEPENDENT_SELECTED_PARITY_LIFT_ZERO_ROW_EXCLUSION_PASS",
+  "timestamp": "2026-09-30T04:17:33.771341+00:00",
+  "source_commit": "81320d3cf74339d2ffb1e671f51f0865218ac161",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_balanced_lift_zero_rows.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/balanced_lift_zero_rows"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_sat_v2/summary.json": "d2536119ac3fa0d45c190a6562de2ccc67c3f9c9765fbfc03257e37b15097f9c",
+    "acceleration/results/20260930_hadamard_parity_lift_cnf/exact_model.json": "dc9534f38c2bf2cb6c7f24c027c7a0ef15e8a5282e3b1c83d87ed5679555fbbd",
+    "acceleration/results/20260930_hadamard_parity_lift_cnf/scope.json": "c7b232d8d6cf53bc7c7c0fb062191e25f88f2e0b531c98c21c0175335c79077c",
+    "acceleration/results/20260930_hadamard_parity_lift_obstruction/certificate.json": "e54b0676ed2796e2eb03930e066be8a4503553023746ad41b2c4df25700634e9",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_sat_v2/independent_projection.json": "08e2a5a4d3eca4777a71bf0d39ff557cc896041c74720fb8326fee92d748db3b",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/decoded_projection.json": "0e80251a964330092d8da9030df2e2ee7f56476cee9e588be921dbe2f470e646",
+    "acceleration/results/20260930_hadamard_parity_lift_cnf/failure.json": "8216623c56fd6c991747f9d97e9d639ac9cba82be1eff16f6ceb25f1a0e9845c",
+    "acceleration/audit_20260930_balanced_lift_zero_rows.py": "43cacfbcb0d10333e1ff9aca5cadd07e703faecc4aba35d72899a6dc6234ab03",
+    "acceleration/audit_20260930_balanced_lift_lp.py": "aa563fbf6a46838f02618a2b3ba3330312a8f2568c215b5800b5757a041e20dc",
+    "docs/AUDIT_20260930_BALANCED_LIFT_LP.md": "50f0925f750cba47e5a3ad78d2094f05fdedc21166db4a2b4f08021b0474c6d0",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/balanced_lift_zero_rows/independent_matrix.json": "b27b7e23ae5cfc658be75a11b7efb4d826769d7735077712672201f66edf89e7",
+    "acceleration/results/20260930_independent_review/balanced_lift_zero_rows/zero_row_certificate.json": "f6944250a540077a6211a979f4ad0fdbfd773635ad8c003612e64505efeac4d1"
+  },
+  "counts": {
+    "variables": 312,
+    "equations": 560,
+    "nonzeros": 14352,
+    "mixed_groups": 16,
+    "constant_groups": 4,
+    "zero_rows": 6,
+    "positive_uniform_control_variables": 3000,
+    "positive_uniform_control_rows": 560
+  },
+  "claim": {
+    "id": "C-FIXED-HADAMARD-SIX-PRISM-FIRST-PARITY-LIFT-EXCLUSION",
+    "revision": 1,
+    "statement": "The exact312-variable560-equation nonnegative Gram-selector system for the first independently checked parity assignment on the saved six-prism Hadamard support is infeasible: rows139,215,399,445,539,555 have zero coefficients and right-hand side1. The vector with only y139=-1 has all312column products0 and RHS product-1.",
+    "kind": "exclusion",
+    "basis": [
+      "DERIVED",
+      "COMPUTED"
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "scope": "Only this one fully specified selected-parity colouring branch on one fixed support. No other parity assignment, unbalanced factor, whole support, core or Conway99 exclusion.",
+    "assumptions": [
+      "Balanced local triples and the exact authenticated selected20parity patterns.",
+      "No target automorphism is assumed."
+    ],
+    "dependencies": [
+      {
+        "id": "C-FIXED-HADAMARD-SIX-PRISM-NONCYCLIC-PARITY-PROJECTION-WITNESS",
+        "revision": 1,
+        "relation": "premise"
+      },
+      {
+        "id": "C-FIXED-HADAMARD-SIX-PRISM-BALANCED-PARITY-PROJECTION",
+        "revision": 1,
+        "relation": "uses_result"
+      }
+    ],
+    "created_at": "2026-09-30T04:17:33.771341+00:00",
+    "updated_at": "2026-09-30T04:17:33.771341+00:00",
+    "limitations": [
+      "No LP or SAT solver result is required.",
+      "Integrality, between-group column caps and residualD are omitted from the already impossible continuous relaxation.",
+      "The producer partial-CNF assertion failure is preserved but is not the proof."
+    ]
+  },
+  "corruptions": [
+    "uniform_bad_denominator",
+    "positive_dual_rhs",
+    "nonnegative_primal_violation",
+    "actual_dual_sign",
+    "invented_zero_row_coefficient",
+    "zeroed_required_rhs",
+    "corrupt_domain_word",
+    "corrupt_sparse_matrix"
+  ],
+  "verifier": "/root/eight_domain_audit",
+  "method": "independent_complete_domain_matrix_and_literal_zero_row_check",
+  "shared_components": [
+    "Own independently authored pending LP checker helper reused for direct word-generation, sparse mapping and exact products; no producer imports.",
+    "Source was prepared before outcome and its never-executed LP mode is not used; native/LP solver is not called."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "target_resolution": false,
+  "solver_calls": 0
+}

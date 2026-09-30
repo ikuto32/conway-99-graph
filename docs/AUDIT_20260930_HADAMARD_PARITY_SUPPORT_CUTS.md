@@ -1,0 +1,9 @@
+# Strengthened parity formula and object audit
+
+The new formula has the exact original 4,481-clause body followed by the sixty proved constant-group support clauses; it has 520 variables and 4,541 clauses. The checker reuses the frozen independently authored v2 parity reconstruction and parser from the separate verifier, pins its exact bytes and reviewed correction gate, and independently reconstructs the sixty added literal sets from the support and general necessity lemma. No producer code is imported.
+
+The semantic claim remains a necessary projection for the additional balanced-triplet restriction on this one support, with outside-column caps. The original nonconstant-group clause uses the earlier cyclic exclusion. The sixty new clauses themselves need only the full Gram and balance. The checker does not conflate these premises or infer a full factor from parity SAT.
+
+The object path checks all 520 signed native/JSON assignment IDs, all 4,541 actual clauses, every chosen local parity pattern and all sixty raw disagreement relations. It then recomputes each added support cut directly from the selected parity patterns: either a coordinate pair disagrees in at least one of its five groups or one of those groups is constant. This check does not rely only on the auxiliary literal values. Optional producer metadata is compared, including all sixty raw support-cut records and exact hexadecimal masks.
+
+Calibration uses the genuine previous SAT object as a positive for the old formula and rejects it against precisely two new clauses. All-constant patterns are positive for the sixty added clauses alone and fail the original nonconstant clause. A separately marked complete synthetic 520-ID/4,541-clause codec control supplies no research-positive claim. Scope, clauses, IDs, patterns, native statuses and model hashes have deliberate corruption tests. No solver is invoked. Any UNSAT result still needs independently checked complete proof artifacts.
