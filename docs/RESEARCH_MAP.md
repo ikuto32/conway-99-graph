@@ -1,5 +1,13 @@
 # 研究資料の案内
 
+**Latest verified checkpoint: [thirty-fourth milestone](RESEARCH_20261002_THIRTYFOURTH_WAVE.md).**
+Five new precise scopes give 329 claims, 322 VERIFIED/CLEAR and no new exclusion.
+All 210 local profiles have independently checked normalized parity witnesses.
+Universal prism-count identities are checked; their target means (2,1) remain
+conditional on UNKNOWN prism absence. The weighted graph fails SRG, and its
+ordinary residual 3486 is worse than 3034. Target resolution: UNKNOWN.
+Overall search coverage: UNKNOWN; no validated denominator. Earlier notices follow.
+
 **Latest verified checkpoint: [thirty-third milestone](RESEARCH_20261002_THIRTYTHIRD_WAVE.md).**
 Six precise new scopes give324 claims,317 VERIFIED/CLEAR, without any new graph
 exclusion. The complete root7/root8 necessary-model audits are conditional on

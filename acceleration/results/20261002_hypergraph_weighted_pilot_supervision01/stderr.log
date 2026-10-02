@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/prepare_20261002_hypergraph_weighted_v1.py", line 333, in <module>
+    main()
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/prepare_20261002_hypergraph_weighted_v1.py", line 323, in main
+    result=dict(build=build,controls=controls,research=research)[args.mode](args,out,pins,deadline,outer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/prepare_20261002_hypergraph_weighted_v1.py", line 255, in research
+    authenticate(args,pins,deadline)
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/prepare_20261002_hypergraph_weighted_v1.py", line 133, in authenticate
+    pin(args.build_manifest, args.build_manifest_sha256, pins, deadline)
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/prepare_20261002_hypergraph_weighted_v1.py", line 71, in pin
+    need(actual == digest and (key(path) not in pins or pins[key(path)] == digest), 'exact input identity')
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/prepare_20261002_hypergraph_weighted_v1.py", line 30, in need
+    raise ValueError(message)
+ValueError: exact input identity

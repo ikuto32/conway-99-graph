@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "invocation_id": "ee9db0103718498cae3f3c8fa1b1d121",
+  "timestamp": "2026-10-02T14:15:13.183575+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-c",
+    "import ast,hashlib,json,platform,subprocess,sys\nfrom datetime import datetime,timezone\nfrom pathlib import Path\nrows=[]\nfor name in subprocess.check_output(['git','diff','--cached','--name-only','--diff-filter=ACM','-z']).decode().split('\\0'):\n    if name.endswith('.py'):\n        raw=subprocess.check_output(['git','show',':'+name]); ast.parse(raw,filename=name)\n        rows.append({'path':name,'sha256':hashlib.sha256(raw).hexdigest()})\nr={'timestamp':datetime.now(timezone.utc).isoformat(),'status':'STAGED_PYTHON_SYNTAX_PASS','command':[sys.executable,*sys.argv],'cwd':str(Path.cwd()),'python':platform.python_version(),'checked_sources':rows,'mathematical_verification':False,'historical_parse_failure':'Preserved as byte-identical .py.failed-source.txt; it is not executable Python.'}\nPath('acceleration/results/20261002_wave34_syntax02.json').write_text(json.dumps(r,indent=2)+'\\n',encoding='utf8',newline='\\n')\nprint(json.dumps({'status':r['status'],'source_count':len(rows)}))"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 60.0,
+  "allocation_reason": "Parse all newly staged Python sources after separate GF3 engineering gates; no scientific launch",
+  "success_criterion": "All exact staged Python blobs parse; save source hashes and actual runtime",
+  "verification_criterion": "Syntax and source identity only; independent mathematical gates remain separate",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 10.0,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}
