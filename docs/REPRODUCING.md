@@ -1,5 +1,36 @@
 # 取得と検証
 
+## Thirty-third milestone, 2026-10-02 JST
+
+The [latest milestone](RESEARCH_20261002_THIRTYTHIRD_WAVE.md) binds six new scoped
+claims and their exact independent audits. The construction object is a saved
+non-SRG graph with residual3034; neither its source nor numerical zero can
+approve a target discovery. Root7/root8 equation necessity remains conditional
+on the explicit UNKNOWN prism-free premise. Complete free-label catalogue
+coverage assumes no target automorphism.
+
+The [model payload](../acceleration/results/20261002_wave33_model_package01/manifest.json)
+contains four raw files in17 deterministic gzip parts, and the
+[independent full-row reconstruction](../acceleration/results/20261002_wave33_reconstruction_package01/manifest.json)
+has one raw file in eight parts. Each manifest supports the unchanged
+`acceleration/recover_20261001_twentyninth_raw_artifacts.py` with exact
+`--manifest-sha256`, a fresh `--destination-dir` and fresh `--receipt`.
+Wrap recovery in the current supported command supervisor; do not use a
+historical launcher. Existing originals are never overwritten. Independent
+recovery and immutable publication receipts separately establish availability.
+The locked root environment applies (`uv run --locked`; Windows environment
+`UV_PROJECT_ENVIRONMENT=build/research-venv`). Exact commands, hashes and source
+versions reside in saved manifests. The packages do not include the entire
+historical transitive closure or platform binaries.
+
+All failed numerical lifts, controls and registrar versions remain evidence.
+Four numerical corner attempts per model produced210 UNKNOWN outcome records,
+not210 solver attempts. Saved bases are numerical warm starts, never exact
+certificates. Independent GF2 rank checking and full20million-proposal replay
+are explicitly unavailable at this checkpoint. Schema/CI success verifies
+bookkeeping only. Active work and future exact certificates are separate from
+this frozen milestone.
+
 ## Thirty-second milestone, 2026-10-02 JST
 
 The [current milestone](RESEARCH_20261002_THIRTYSECOND_WAVE.md) binds complete

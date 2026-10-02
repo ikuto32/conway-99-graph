@@ -1,0 +1,167 @@
+{
+  "exact_primal_and_farkas_corruptions_rejected": true,
+  "negative": {
+    "parameters": [
+      0,
+      0
+    ],
+    "column_scales": [
+      1
+    ],
+    "row_scales": [
+      1
+    ],
+    "matrix_preparation_seconds": 0.0,
+    "guide_seconds": 10,
+    "numeric_settings": {
+      "solver": "simplex",
+      "presolve": "off",
+      "threads": 1,
+      "seed": 0,
+      "feasibility_tolerance": 1e-09
+    },
+    "scaling": "x_original=column_scale*x_scaled; row_scaled=(A*x_original)/row_scale; y_original=y_scaled/row_scale",
+    "resumed_basis": null,
+    "status": "EXACT_WEAKER_FARKAS_EXCLUSION",
+    "ray_exists": true,
+    "native_run_seconds": 0.0,
+    "run_status": "HighsStatus.kOk",
+    "model_status": "HighsModelStatus.kInfeasible",
+    "native_info": {
+      "valid": true,
+      "simplex_iteration_count": 0,
+      "num_primal_infeasibilities": 1,
+      "num_dual_infeasibilities": 0
+    },
+    "max_primal_infeasibility": 1.0,
+    "max_primal_infeasibility_unavailable_reason": null,
+    "numerical_values": [
+      0.0
+    ],
+    "numerical_values_scope": "Saved guide values at any returned status; never a certificate without exact replay.",
+    "saved_basis": {
+      "path": "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20261002_rooted8_product_subset_v3_controls01\\control_negative.bas",
+      "sha256": "182e1c528c18dd6c263ba2b48f4e3c301a144ce16284df215642c6d3de15ffac",
+      "mathematical_certificate": false
+    },
+    "ray_existence_status": "HighsStatus.kOk",
+    "ray_existence_query_seconds": 0.0,
+    "ray_retrieval_status": "HighsStatus.kOk",
+    "ray_retrieval_seconds": 0.0,
+    "numerical_ray": [
+      -1.0
+    ],
+    "certificate_integer_multipliers": [
+      1
+    ],
+    "certificate_rhs_affine": [
+      -1,
+      0,
+      0
+    ],
+    "exact_grid_attempts": [
+      {
+        "kind": "primal",
+        "common_denominator": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "common_denominator": 10,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "common_denominator": 1000,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "common_denominator": 1000000,
+        "exact_pass": false
+      },
+      {
+        "kind": "farkas",
+        "common_grid_denominator": 1,
+        "sign": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "farkas",
+        "common_grid_denominator": 1,
+        "sign": -1,
+        "exact_pass": true
+      }
+    ]
+  },
+  "basis_reload": {
+    "parameters": [
+      0,
+      0
+    ],
+    "column_scales": [
+      1
+    ],
+    "row_scales": [
+      2
+    ],
+    "matrix_preparation_seconds": 0.0,
+    "guide_seconds": 10,
+    "numeric_settings": {
+      "solver": "simplex",
+      "presolve": "off",
+      "threads": 1,
+      "seed": 0,
+      "feasibility_tolerance": 1e-09
+    },
+    "scaling": "x_original=column_scale*x_scaled; row_scaled=(A*x_original)/row_scale; y_original=y_scaled/row_scale",
+    "resumed_basis": {
+      "path": "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20261002_rooted8_product_subset_v3_controls01\\control_positive.bas",
+      "sha256": "34e7e4f1773be1a0775d47165c6f02c514b540adddc7334437e88fabc4cff812"
+    },
+    "status": "EXACT_WEAKER_RELAXATION_PRIMAL",
+    "ray_exists": false,
+    "native_run_seconds": 0.0,
+    "run_status": "HighsStatus.kOk",
+    "model_status": "HighsModelStatus.kOptimal",
+    "native_info": {
+      "valid": true,
+      "simplex_iteration_count": 0,
+      "num_primal_infeasibilities": 0,
+      "num_dual_infeasibilities": 0
+    },
+    "max_primal_infeasibility": 0.0,
+    "max_primal_infeasibility_unavailable_reason": null,
+    "numerical_values": [
+      0.5
+    ],
+    "numerical_values_scope": "Saved guide values at any returned status; never a certificate without exact replay.",
+    "saved_basis": {
+      "path": "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20261002_rooted8_product_subset_v3_controls01\\control_reload.bas",
+      "sha256": "34e7e4f1773be1a0775d47165c6f02c514b540adddc7334437e88fabc4cff812",
+      "mathematical_certificate": false
+    },
+    "ray_existence_status": "HighsStatus.kOk",
+    "ray_existence_query_seconds": 0.0,
+    "ray_retrieval_skipped_reason": "No stored ray; do not request an implicit extra LP.",
+    "certificate_integer_values": [
+      5
+    ],
+    "certificate_common_denominator": 10,
+    "integer_vector": false,
+    "exact_grid_attempts": [
+      {
+        "kind": "primal",
+        "common_denominator": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "common_denominator": 10,
+        "exact_pass": true
+      }
+    ]
+  },
+  "corrupt_basis_rejected": true,
+  "implicit_ray_solver_never_requested": true
+}

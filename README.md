@@ -1,5 +1,15 @@
 # Conway 99-graph research
 
+**2026-10-02 JST latest verified checkpoint:** [thirty-third milestone](docs/RESEARCH_20261002_THIRTYTHIRD_WAVE.md).
+Six new scoped revisions add no graph exclusion. The frozen ledger has324
+claims:317 VERIFIED/CLEAR, three CANDIDATE and four REFUTED. Complete conditional
+root7/root8 equations and one saved non-SRG graph have independent checks.
+That graph has exact residual3034; it fails the target identity. Prism absence
+remains UNKNOWN. The literal campaign remains380 checked cases of792.
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. Research authorization remains active; current execution requires
+fresh observations. The following notices preserve earlier dated checkpoints.
+
 **2026-10-02 JST verified checkpoint:** [thirty-second milestone](docs/RESEARCH_20261002_THIRTYSECOND_WAVE.md).
 Six additional scoped identities and engineering results add no exclusions.
 The root ledger has 318 claims: 311 VERIFIED/CLEAR, three CANDIDATE and four

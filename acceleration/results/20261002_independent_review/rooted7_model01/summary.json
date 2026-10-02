@@ -1,0 +1,100 @@
+{
+  "status": "INDEPENDENT_ROOTED7_MARKED_REROOT_NECESSARY_MODEL_PASS",
+  "timestamp": "2026-10-02T11:45:03.017372+00:00",
+  "verifier": "/root/checkpoint_audit",
+  "producer": "/root/structural",
+  "source_commit": "f7834874ad7a9c1ef3ba9daabd09fc18fe24a76a",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_rooted7_model_v1.py",
+    "--seconds",
+    "570",
+    "--out",
+    "acceleration/results/20261002_independent_review/rooted7_model01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20261002_rooted7_extension_model/model.json": "21eb899c3606727ef4e452d518316957cf9eb76e5e85c5a79af82421f4004595",
+    "acceleration/results/20261002_rooted7_extension_model/catalogue.json": "a01649d78eccfcb93c85ff2a86c84463458c120fd22cebaf34b8e573363084d5",
+    "acceleration/results/20261002_rooted6_prismfree_rigidity/ordered_nonedge_model.json": "ecf558faa95576b8e76fbc5a62743729a875307eeb99df803c7cb5cdac7b7645",
+    "acceleration/results/20261002_rooted6_prismfree_rigidity/ordered_edge_model.json": "06051294a142dfcda956f4ee3748986982f7f8ba5f9785fe4d7680d967538584",
+    "acceleration/results/20261002_rooted6_prismfree_rigidity/ordered_edge_prismfree_primal.json": "8c914f27e91f5c003644148738b9a634ac0dfe9683915dd42dc3ae067d2a2010",
+    "acceleration/results/20261002_rooted6_exact_parameter_domain/prismfree_nonedge_domain.json": "54f08f8dc87bebf61bada59067cbc721497f3d3a9683936e850b695f0ec41b12",
+    "acceleration/results/20261002_rooted6_exact_parameter_domain/prismfree_nonedge_nullspace.json": "b8abff4be27e90c5d1274cf94ee8aff262cf02117a2086cfdffec5dc97a13e77",
+    "acceleration/results/20261002_independent_review/rooted6_nonedge_domain01/summary.json": "65081849ccf721eae5bdf569b16f44c88255e0421f5fab1ec26a7fa7f36e8271",
+    "acceleration/results/20261002_independent_review/rooted6_prismfree02/summary.json": "f7e8f93a671648cd0e73c326a36ee8cc97682a2c568ed88f46044cb04abd4717",
+    "acceleration/results/20261002_independent_review/rooted7_catalogue01/summary.json": "3355afb38656eadc83eff6e0db3818eded9621f890c9d46f489fdb0324370758",
+    "acceleration/audit_20261002_rooted5_rigidity_v2.py": "b281675c501cbf49116b2c1f6cfd6beb55d0bdf00b0bacc34bf8e9b42660f0ed",
+    "acceleration/audit_20261002_rooted7_model_v1.py": "e796b8cd30d23750429a66f0a4b9366f5eeff12537c7b0ed0da13526f6a95734",
+    "acceleration/audit_20261002_rooted7_model_v1_spec.md": "cfc07871cc352fc0d0f1ac12e3b478e75c48da014931f047b6d25dfb4acf0faf",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "outputs_sha256": {
+    "reconstructed_model.json": "ff8c03ae1d3bc0cd249b6545dab37112d7521163e8273b98839b3966be748740"
+  },
+  "variables": 2766,
+  "rows": 11749,
+  "nonzeros": 86129,
+  "every_lower_isomorphism_checks": 402422,
+  "reroot_union_collision_choices": 31148,
+  "petersen_actual_ordered_pair_profiles": 90,
+  "petersen_actual_primary_nonedge_controls": 60,
+  "statement": "Every saved integer coefficient, collision/union term, aggregate bound and affine right side of the frozen2766-variable11749-row rooted7 model is independently derived as a necessary count relation for a hypothetical prism-free srg(99,14,1,2), without a target automorphism premise.",
+  "prismfree_premise_established": false,
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-ROOTED7-NONEDGE-LOCAL-CATALOGUE-COVERAGE",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-PRISMFREE-ORDERED-EDGE-ROOTED6-RIGIDITY",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-PRISMFREE-ORDERED-NONEDGE-ROOTED6-INTEGER-DOMAIN",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "controls": {
+    "corrupted_count_rejected": true,
+    "changed_model_rejections": [
+      "coefficient",
+      "affine_rhs",
+      "aggregate_bound",
+      "missing_row"
+    ]
+  },
+  "target_resolution": false,
+  "new_exclusions": 0,
+  "graph_realizability_asserted": false,
+  "scope": "Exact conditional necessary model encoding only; feasibility and realizability are not equivalent.",
+  "shared_components": [
+    "Earlier independent matrix/bit/orbit/DSU helper; no producer imports.",
+    "Python exact integers/Fraction, SHA-256, uv environment, contained deadline/supervisor."
+  ],
+  "limitations": [
+    "Prism absence remains UNKNOWN.",
+    "Prior independently checked rooted6 values/catalogue are used as pinned results; no new rank proof repeated here.",
+    "No LP certificate, modular screen, integer feasibility, graph construction or target exclusion is checked here."
+  ],
+  "elapsed_seconds": 4.296999999991385,
+  "deadline": {
+    "elapsed_seconds": 4.296999999991385,
+    "remaining_seconds": 565.7030000000086,
+    "review_remaining_seconds": 1795.7030000000086,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 147085.671,
+    "review_deadline_at": 148315.671,
+    "completed_reviews": 0
+  }
+}

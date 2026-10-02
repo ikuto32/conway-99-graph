@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-10-02T11:41:39.154431+00:00",
+  "source_commit": "f7834874ad7a9c1ef3ba9daabd09fc18fe24a76a",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/freeze_20261002_hypergraph_pilot_plan_v1.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "source_sha256": "778aeb735d94e6c3fa45ba45a4beee3f1efb646624731211605a0fc5864e92e6",
+  "question": "Can one predeclared unrestricted linear-triple trade chain produce an exact target graph or a lower independently checkable residual in this new domain?",
+  "domain": "99 labelled points;231 linear triples;pointdegree7, hence14-regular simple point graph. No fixed triangle core, support or target automorphism.",
+  "selection": "One fresh chain, seed99032010, with10000 mixing proposals. No best-of-unrecorded-run selection.",
+  "objective": {
+    "id": "SRG_SQUARED_PAIR_RESIDUAL_V1",
+    "definition": "sum over i<j of (common_neighbors(i,j)+A[i,j]-2)^2",
+    "arithmetic": "Exact integers",
+    "direction": "Minimize to0",
+    "limits": "Positive scores are heuristic guidance and not certificates; no comparison with other objective versions."
+  },
+  "configuration": {
+    "steps": 20000000,
+    "seed": 99032010,
+    "mix_steps": 10000,
+    "schedule_steps": 15000000,
+    "temperature_start": 20.0,
+    "temperature_end": 0.1,
+    "native_seconds": 180.0,
+    "producer_seconds": 270.0,
+    "outer_seconds": 300.0,
+    "address_space_bytes": 2147483648,
+    "file_bytes": 1073741824,
+    "checkpoint_seconds": 15,
+    "verify_every": 100000
+  },
+  "success": "Save exact current/best/RNG checkpoints and full best adjacency. Only E0 plus independent full99 SRG validation can be a candidate positive resolution.",
+  "falsification": "An independent domain/cache/score or full matrix mismatch vetoes promotion. No timeout or positive residual excludes a graph.",
+  "independent_verification": "Complete independent saved-object scoring and all saved checkpoint checks; full99 graph validator for E0. Sparse scientific trace is not complete trajectory verification.",
+  "numerical_acceptance": "E exactly0 for target candidate; floating Metropolis acceptance guides search only.",
+  "stopping": "20million proposals or native cooperative allocation, whichever first; preserve checkpoints and report incomplete work if allocated budget is reached.",
+  "resource_rationale": "Finite controls gave full99 states and complete score/move replay;180s is a first throughput/quality pilot, with90s worker reserve and30s outer reserve. No inherited solver/build stopping cap.",
+  "review": "Command shorter than1800s; inspect saved checkpoint/resource state during execution and reassess on significant evidence.",
+  "limitations": [
+    "No move-space connectivity, ergodicity or exhaustive coverage claim.",
+    "No calibrated success probability.",
+    "Initial cyclic construction is a starting point only; target symmetries are not imposed."
+  ],
+  "inputs_sha256": {
+    "acceleration/prepare_20261002_hypergraph_anneal_v1.py": "194072de3b2e9b8f97e58276c8fcd4adfafdfe3454ce681cb8b913c593572737",
+    "acceleration/hypergraph_anneal_20261002_v1.cpp": "50a240573b854552ea08a16c72eeade661fefdeddeb84936300d700ef5704974",
+    "acceleration/prepare_20261002_hypergraph_anneal_v1_spec.md": "09872b3386f2e0b97542728e569901c8d6ad4d3b2395b401fa02240f9b8e9ce1",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+    "acceleration/results/20261002_independent_review/hypergraph_controls02/summary.json": "81aa0427d80d66b45ae48d47cea98c02de02bc4ae096d5a0bcc688d6df2bacb3",
+    "acceleration/results/20261002_hypergraph_build01/build_manifest.json": "555fc69cedfabd76e5c0ffb23bba55e12a366a476320d550ce48771128708bb4",
+    "acceleration/results/20261002_hypergraph_build01/hypergraph_anneal": "8fb735312d7abc21331a91d2d2b43d84248f15a20fc6b7347020ecb08fc4785f"
+  },
+  "target_resolution": false,
+  "status": "FROZEN_CANDIDATE_SCIENTIFIC_PROTOCOL"
+}

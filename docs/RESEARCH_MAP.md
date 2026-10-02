@@ -1,5 +1,14 @@
 # 研究資料の案内
 
+**Latest verified checkpoint: [thirty-third milestone](RESEARCH_20261002_THIRTYTHIRD_WAVE.md).**
+Six precise new scopes give324 claims,317 VERIFIED/CLEAR, without any new graph
+exclusion. The complete root7/root8 necessary-model audits are conditional on
+UNKNOWN prism absence. The saved construction graph has exact residual3034
+and fails SRG. Four full and four weaker corner guides produced zero exact
+certificates. The frozen literal campaign remains380 of792 cases.
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. Earlier dated notices remain below.
+
 **Verified continuation: [thirty-second milestone, 2026-10-02](RESEARCH_20261002_THIRTYSECOND_WAVE.md).**
 Six additional scoped revisions add no graph exclusion. The ledger has 318
 claims, including 311 VERIFIED/CLEAR; the literal campaign remains at 380 checked
