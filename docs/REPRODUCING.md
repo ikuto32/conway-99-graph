@@ -1,4 +1,20 @@
-# Wave35 continuation — 2026-10-02 JST
+# Wave36 continuation — 2026-10-03 JST
+
+The [thirty-sixth milestone](RESEARCH_20261003_THIRTYSIXTH_WAVE.md) links the
+frozen337-claim ledger and independent exact unrestricted rooted7/LP/engineering
+audits. Their raw manifests record actual commands, source/tool hashes and
+completed cleanup receipts. New Python replay uses the committed root `uv.lock`:
+on Windows set `UV_PROJECT_ENVIRONMENT=build/research-venv` and use
+`uv run --locked --offline --cache-dir .uv-cache-20260917` with the recorded
+supervisor command. Historical commands and their environments remain evidence.
+
+The [prospective weight60 pilot protocol](../acceleration/freeze_20261002_hypergraph_weight60_pilot_plan_v1_spec.md)
+requires a fresh Linux-contained preflight of published exact sources and both
+new gates before science; old launcher approvals do not transfer. Replaying a
+manifest does not by itself independently verify its mathematics. Target
+resolution and overall target-wide search coverage remain UNKNOWN.
+
+# Previous wave35 continuation — 2026-10-02 JST
 
 The [thirty-fifth milestone](RESEARCH_20261002_THIRTYFIFTH_WAVE.md) records a
 frozen334-claim ledger:327 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. Five new

@@ -1,4 +1,19 @@
-# Research milestone — 2026-10-02 JST
+# Research milestone — 2026-10-03 JST
+
+The [thirty-sixth milestone](docs/RESEARCH_20261003_THIRTYSIXTH_WAVE.md) records
+337 material claims:330 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. The unrestricted
+rooted7 necessary operator and all651 rational profile witnesses passed separate
+exact checks;21 supplied count vectors are integral, without graph realization.
+The new weight60 exclusive-swap engine passed57 finite engineering calls. Its
+scientific pilot remains prospective at this checkpoint and requires fresh
+committed-source/process/resource gates. Target resolution: UNKNOWN.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+[Wave35 publication review](docs/AUDIT_20261003_WAVE35_PUBLICATION_CONFIRMED.md)
+confirms198 additional PUBLIC artifact records without changing material claims.
+Research remains authorized; this document observes no live workers.
+
+# Previous research milestone — 2026-10-02 JST
 
 The [thirty-fifth milestone](docs/RESEARCH_20261002_THIRTYFIFTH_WAVE.md) records a
 frozen334-claim ledger:327 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. Five new

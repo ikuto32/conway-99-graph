@@ -1,4 +1,21 @@
-# Latest verified continuation checkpoint — 2026-10-02 JST
+# Latest verified continuation checkpoint — 2026-10-03 JST
+
+Continue from the [thirty-sixth milestone](docs/RESEARCH_20261003_THIRTYSIXTH_WAVE.md):
+337 claims,330 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. The unrestricted rooted7
+operator and all651 complete rational witnesses are independently checked;
+21 supplied vectors are integral count solutions, not realized graphs. No new
+exclusion or target resolution is added. Overall search coverage: UNKNOWN;
+no validated denominator.
+
+The immediate construction experiment is one predeclared weight60 V2 invocation,
+after published exact source/gates and fresh worker/resource observation. Its
+changed overlap kernel has separate finite controls and a frozen saved-object
+checker. In parallel, test normalized mod2 constraints on the unrestricted
+rooted7 operator with complete scalar or XOR certificates. This page makes no
+live process observation. The historical stop remains preserved; the current
+explicit research authorization remains active.
+
+# Previous verified checkpoint — 2026-10-02 JST
 
 The [thirty-fifth milestone](docs/RESEARCH_20261002_THIRTYFIFTH_WAVE.md) records a
 frozen334-claim ledger:327 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. Five new

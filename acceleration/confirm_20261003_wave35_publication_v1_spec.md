@@ -1,0 +1,7 @@
+# Wave35 publication bookkeeping v1
+
+Authenticate published51a0c019178add446941d920ae0d3da63c58ac29, frozen stage02e32348ae19ed9e5c5ad3ba8121dcca080bd85666ec2e560685e94e811e9957a4, and334-entry ledger5476fe90324fb7a3a8aa275fc1ae1061f7aaeb8e42d9c5123d33a8d1c3f65f5a. Baseline is wave35_registration01/CLAIMS.before.yaml with329claims and PUBLIC wave34 metadata. Preserve every claim, verification, dependency and prior artifact record. Only new artifact availability/retrieval and ledger update timestamp can change.
+
+Read every frozen staged byte/new registered artifact and both public model packages through immutable Git blobs. Query all five raw model paths explicitly; decode25gzip segments/all184494332raw bytes. No second network clone or mathematical replay. Exactly one missing new artifact may retain LOCAL_ONLY:494930751byte mod3 native resume checkpoint, SHA256c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8. Any additional missing new artifact vetoes atomic mutation.
+
+Allocate240outer/200worker with10shutdown reserve, based priorwave34 byte confirmation8.062seconds. Success: all declared public bytes and unchanged334material statements, before/afterledger plusreceipt preserved, schema/PUBLIC-impact validation passed. Independent requirement: separate exact availability-only transition audit with raw byte checking and strict corrupt controls. Source becomes immutable at first invocation. This is engineering bookkeeping and promotes no mathematical result or target resolution.

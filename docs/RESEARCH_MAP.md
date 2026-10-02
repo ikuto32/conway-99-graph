@@ -1,4 +1,17 @@
-# Wave35 continuation — 2026-10-02 JST
+# Wave36 continuation — 2026-10-03 JST
+
+The [thirty-sixth milestone](RESEARCH_20261003_THIRTYSIXTH_WAVE.md) records337
+claims,330 VERIFIED/CLEAR. The unrestricted rooted7 necessary count model retains
+all2770 local classes and variable secondary profiles. All651 primary integer
+profiles have exact rational witnesses;21 supplied vectors are integral. These
+facts establish no graph realization or exclusion. The changed weight60 V2
+construction engine has new independent finite controls; scientific execution
+requires fresh committed-source/resource/process gates.
+
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. This map does not observe processes.
+
+# Previous wave35 continuation — 2026-10-02 JST
 
 The [thirty-fifth milestone](RESEARCH_20261002_THIRTYFIFTH_WAVE.md) records a
 frozen334-claim ledger:327 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. Five new
