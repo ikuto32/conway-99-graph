@@ -1,3 +1,20 @@
+# Wave35 continuation — 2026-10-02 JST
+
+The [thirty-fifth milestone](RESEARCH_20261002_THIRTYFIFTH_WAVE.md) records a
+frozen334-claim ledger:327 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. Five new
+scopes cover unrestricted rooted6 nonedge651/edge91 local integer domains,
+a linear-triple lambda-zero criterion, the saved graph's complete root census,
+and three full original mod-3 primal vectors. All210 conditional profiles
+survive mod3; no target exclusion or rank claim is added. Necessary local
+profiles have no established graph realization. Target resolution: UNKNOWN.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+The mod3 invocation and independent scalar check completed with shutdown receipts.
+The next experiments are the independently reconstructed unrestricted rooted7
+operator and a new weight60 construction engine with fresh finite controls.
+This document does not observe live workers. [Wave34 publication review](AUDIT_20261002_WAVE34_PUBLICATION_CONFIRMED.md)
+passed; current wave35 evidence awaits immutable publication checks.
+
 # 研究資料の案内
 
 **Latest verified checkpoint: [thirty-fourth milestone](RESEARCH_20261002_THIRTYFOURTH_WAVE.md).**

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "invocation_id": "6c88a3e789474a66af180a88d016c55d",
+  "timestamp": "2026-10-02T14:49:41.393178+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-c",
+    "import hashlib,json,platform,subprocess,sys\nfrom pathlib import Path\nfrom datetime import datetime,timezone\nhelper=Path('acceleration/audit_20261002_gf3_scalar_v1.py')\nmodel_path=Path('acceleration/results/20261002_rooted8_universal5_product_model02/model.json')\nreview_path=Path('acceleration/results/20261002_independent_review/gf3_full_artifact01/summary.json')\npins={str(helper):'698eb9bbe8b1ba6a257e8e6226a9e49517e17e966ce64afb11b98d17be08bafa',str(model_path):'a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b',str(review_path):'5ea4c3115e06c748baf23122f9b7d0c8d8260000787fa377daea8f4d6cf95d08'}\ndef checkpins():\n    for name,wanted in pins.items():\n        if hashlib.sha256(Path(name).read_bytes()).hexdigest()!=wanted:raise ValueError('Exact minimal GF3 certificate input identity')\ncheckpins()\nreview=json.loads(review_path.read_bytes())\nfor record in review['primal_vectors']:pins[record['path']]=record['sha256']\ncheckpins()\nsys.path.insert(0,'acceleration')\nimport audit_20261002_gf3_scalar_v1 as independent\nmodel=json.loads(model_path.read_bytes())\nif (len(model['variables']),len(model['equations']))!=(23019,85874):raise ValueError('Exact operator dimensions')\nvectors=independent.read_vectors(Path(review['primal_vectors'][0]['path']).parent,23019)\nindependent.scalar_vectors(model,vectors,'original')\nchanged=[list(v)for v in vectors];changed[0][0]=(changed[0][0]+1)%3\ntry:independent.scalar_vectors(model,changed,'original')\nexcept ValueError as error:\n    if str(error)!='GF3_ORIGINAL_PRIMAL_SCALAR_ROW':raise\nelse:raise ValueError('Corrupted actual ternary certificate accepted')\nreport={'timestamp':datetime.now(timezone.utc).isoformat(),'status':'MINIMAL_HASH_BOUND_GF3_PRIMAL_REPLAY_PASS','source_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'command':[sys.executable,*sys.argv],'cwd':str(Path.cwd()),'python':platform.python_version(),'inputs_sha256':pins,'complete_scalar_components':257622,'resume_checkpoint_read':False,'producer_or_native_execution':False,'encoding_or_rank_review':False,'changed_coordinate0_rejected':True,'shared_components':'Same calibrated independent scalar helper as full artifact audit; operational minimal replay, not a new independent mathematical promotion.','publication_availability':'Tracked separately in root ledger; no current immutable publication assumed by this check.','target_resolution':False}\nPath('acceleration/results/20261002_wave35_minimal_primal_replay01.json').write_text(json.dumps(report,indent=2)+'\\n',encoding='utf8',newline='\\n')\nprint(json.dumps({'status':report['status'],'complete_scalar_components':257622,'resume_checkpoint_read':False}))"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 60.0,
+  "allocation_reason": "Validate minimal originalmod3 certificate replay without local494MBcheckpoint; fullindependentartifact check4.453seconds",
+  "success_criterion": "All257622 scalarcomponents pass exact rawhashbound vectors/model/helper, actualtritcorruption rejected",
+  "verification_criterion": "Same calibrated checkingpath operational replay only, no new independent mathematical promotion, rank or graph claim",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 10.0,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}

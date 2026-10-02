@@ -1,0 +1,5 @@
+# Wave35 exact ledger transition confirmed
+
+Independent report `acceleration/results/20261002_independent_review/wave35_transition01/summary.json`, SHA25672e4f59613bc9ca62ffabf591985326b31256b0beb4b4e726ed983c2f8a87b5c, checks the saved329-to334 registration chain and checkpoint. All329 prior claim statements, verification/dependency fields, artifact records and target semantics remain unchanged. The five new exact r1 scopes have bound checking identities, raw hashes, dependencies and complete direct evidence closure. Counts are327 VERIFIED/CLEAR,3 CANDIDATE/CLEAR,4 REFUTED/CLEAR; no new exclusion or target resolution.
+
+Twelve strict transition mutations were rejected. The GF3 binding's v2 schema projection preserves the original v1 statement, revision and independent report; richer profile/prism-scope metadata remains in its immutable evidence. The impact checker performs no mathematical replay. Its7.250-second supervisor invocation exited with a reaped empty process group. This closes the separate impact-review pending note in the dated wave35 milestone without altering that frozen report. New evidence publication remains separately pending.
