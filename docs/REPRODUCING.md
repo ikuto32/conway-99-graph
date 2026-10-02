@@ -1,5 +1,18 @@
 # 取得と検証
 
+## Thirty-first milestone, 2026-10-02 JST
+
+The [new milestone](RESEARCH_20261002_THIRTYFIRST_WAVE.md) links the complete
+batch05 proof audit, exact structural witness check, complete stored-coefficient
+reconstruction and new driver controls. Their manifests preserve exact commands,
+tool versions, inputs and hashes. The root environment uses `uv run --locked`;
+the minimal native environment has its own retained `uv.lock`. The Linux outer
+supervisor must run inside Linux. Full raw formula/proof recovery for this new
+package remains LOCAL_ONLY pending separate lossless publication; a committed
+report alone does not establish public replay. The dated registry checks explicitly
+skip unavailable or local historical hash closures. Historical successful checks
+and failures remain evidence with their original bytes.
+
 ## Explicit resume, 2026-10-02 JST
 
 Read [the policy-aware continuation](RESUME_20261002_POLICY_AWARE.md) for the

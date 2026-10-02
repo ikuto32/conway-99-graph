@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-10-02T09:44:24.124513+00:00",
+  "source_commit": "2fdd9354d04641c64260d0221c7867b07c4b7405",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20261002_order8_psd_cuts.py",
+    "--model",
+    "acceleration/results/20261002_order8_marked_extension_v4/model.json.gz",
+    "--primal",
+    "acceleration/results/20261002_order8_marked_extension_v4/endpoint4158_numerical_primal.json",
+    "--out",
+    "acceleration/results/20261002_order8_psd_cuts",
+    "--iterations",
+    "24",
+    "--lp-seconds",
+    "30"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "source_sha256": "acef951643f090f008bfbf5f9234826a8ceb727e67c6654b5dc19865db4dd4fc",
+  "inputs": [
+    {
+      "path": "acceleration\\results\\20261002_order8_marked_extension_v4\\model.json.gz",
+      "sha256": "d3c36efaaf715eb6877bcf5931260581f7e60a490f4ab30f5cf91666218d4c35"
+    },
+    {
+      "path": "acceleration\\results\\20261002_order8_marked_extension_v4\\endpoint4158_numerical_primal.json",
+      "sha256": "8827cacdd20d4a91b1dbdc475705babc6fef85fdf265190dcbad11888a507d1b"
+    },
+    {
+      "path": "C:\\Users\\ikuto\\projects\\conway-99-graph\\external_conway99_research\\attempts\\wave147-alternative-lane\\coefficients.json.gz",
+      "sha256": "a46d8a8b6fd3ae339cdf7c9b633a661d917e3481bed762ae6aa70f1b4886cf1e"
+    }
+  ],
+  "inherited_helper": {
+    "path": "acceleration/theory_20261002_order8_marked_extension_v4.py",
+    "sha256": "f6820fd76535d6791ff1723d7f6eb4ae8b29ac7f6b5d47d0b5ab3136dc0019cc"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.3"
+  },
+  "scope": "Unrestricted necessary aggregate counts with selected rational rank-one PSD cuts; no graph.",
+  "acceptance": "Rational directions and integer coefficient cuts are exact candidates; spectra and LP objectives only guide selection.",
+  "stopping": "At most stated iterations; LP timeout per iteration; hard outer supervisor deadline; save every cut.",
+  "independent_verification": "Separate implementation must check all coefficient identities and rank-one cuts before promotion.",
+  "random_seed": null,
+  "random_seed_reason": "Deterministic eigendirection and rounding, no randomized operation."
+}
