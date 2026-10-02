@@ -1,0 +1,14 @@
+/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/rooted8_normalized_gf2_20261002_v1.cpp: In function ‘int main(int, char**)’:
+/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/rooted8_normalized_gf2_20261002_v1.cpp:125:17: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+  125 |                 while(first<s.words && row[first]==0)++first;if(first==s.words)break;
+      |                 ^~~~~
+/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/rooted8_normalized_gf2_20261002_v1.cpp:125:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+  125 |                 while(first<s.words && row[first]==0)++first;if(first==s.words)break;
+      |                                                              ^~
+/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/rooted8_normalized_gf2_20261002_v1.cpp:129:17: error: this ‘for’ clause does not guard... [-Werror=misleading-indentation]
+  129 |                 for(std::uint64_t w=first;w<s.words;++w)row[w]^=s.basis[pivot][w];mask^=s.rhs[pivot];
+      |                 ^~~
+/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/rooted8_normalized_gf2_20261002_v1.cpp:129:83: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  129 |                 for(std::uint64_t w=first;w<s.words;++w)row[w]^=s.basis[pivot][w];mask^=s.rhs[pivot];
+      |                                                                                   ^~~~
+cc1plus: all warnings being treated as errors
