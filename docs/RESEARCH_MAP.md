@@ -1,3 +1,19 @@
+# Wave37 continuation — 2026-10-03 JST
+
+The [thirty-seventh milestone](RESEARCH_20261003_THIRTYSEVENTH_WAVE.md) records
+343 claims:335 VERIFIED/CLEAR,3 CANDIDATE and5 REFUTED. It links the complete
+unrestricted rooted8 local catalogue and necessary marked/product operator,
+the rooted7 literal parity witnesses and the saved lambda-zero construction
+object. These checks add zero exclusions or target resolutions. Its two-graph
+root census supplies no direct warm scaffold. The generic rank counterexample
+refutes only the recorded generic implication; the target rank bound is UNKNOWN.
+
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. [Lossless rooted8 replay](REPLAY_20261003_WAVE37_UNRESTRICTED_ROOTED8.md)
+preserves both large original byte streams; byte recovery and mathematical
+verification are distinct. Wave37 publication is pending. This map observes no
+live processes. Historical continuation notices follow.
+
 # Wave36 continuation — 2026-10-03 JST
 
 The [thirty-sixth milestone](RESEARCH_20261003_THIRTYSIXTH_WAVE.md) records337

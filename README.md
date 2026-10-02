@@ -1,3 +1,19 @@
+# Latest research milestone — 2026-10-03 JST
+
+The [thirty-seventh milestone](docs/RESEARCH_20261003_THIRTYSEVENTH_WAVE.md)
+records343 material claims:335 VERIFIED/CLEAR,3 CANDIDATE and5 REFUTED.
+The saved weight60 pilot graph has exact E_lambda=0 and E_mu=3608; it still
+fails the target identity. Neither of the two checked graphs has a root with
+all84 outsider common-neighbor counts equal2. All651 rooted7 profiles remain
+compatible modulo2. The unrestricted rooted8 catalogue and every entry of its
+necessary operator passed separate complete checks. A generic rank lemma was
+refuted; the graph-specific rank bound remains UNKNOWN. No new exclusion.
+
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. [Wave36 publication confirmation](docs/AUDIT_20261003_WAVE36_PUBLICATION_CONFIRMED.md)
+changes artifact availability only. Wave37 publication remains pending.
+This notice observes no live workers; historical checkpoints follow.
+
 # Research milestone — 2026-10-03 JST
 
 The [thirty-sixth milestone](docs/RESEARCH_20261003_THIRTYSIXTH_WAVE.md) records

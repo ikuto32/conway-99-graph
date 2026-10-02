@@ -1,0 +1,80 @@
+{
+  "schema": "INDEPENDENT_WAVE37_LOSSLESS_RECOVERY_CONTROLS_V1",
+  "status": "PASS",
+  "positive_records": 2,
+  "negatives": [
+    {
+      "label": "offset",
+      "expected_stage": "OFFSET",
+      "actual_stage": "OFFSET",
+      "diagnostic": "OFFSET: part_0_1.gz"
+    },
+    {
+      "label": "part_hash",
+      "expected_stage": "PART_HASH",
+      "actual_stage": "PART_HASH",
+      "diagnostic": "PART_HASH: part_0_0.gz"
+    },
+    {
+      "label": "whole_hash",
+      "expected_stage": "WHOLE_HASH",
+      "actual_stage": "WHOLE_HASH",
+      "diagnostic": "WHOLE_HASH: raw_0.bin"
+    },
+    {
+      "label": "original_hash",
+      "expected_stage": "ORIGINAL_HASH",
+      "actual_stage": "ORIGINAL_HASH",
+      "diagnostic": "ORIGINAL_HASH: source identity"
+    },
+    {
+      "label": "traversal",
+      "expected_stage": "PATH",
+      "actual_stage": "PATH",
+      "diagnostic": "PATH: unsafe relative member"
+    },
+    {
+      "label": "duplicate_part",
+      "expected_stage": "DUP_PART",
+      "actual_stage": "DUP_PART",
+      "diagnostic": "DUP_PART: part_0_0.gz"
+    },
+    {
+      "label": "duplicate_raw",
+      "expected_stage": "DUP_RAW",
+      "actual_stage": "DUP_RAW",
+      "diagnostic": "DUP_RAW: raw_0.bin"
+    },
+    {
+      "label": "gzip_hash",
+      "expected_stage": "GZIP_HASH",
+      "actual_stage": "GZIP_HASH",
+      "diagnostic": "GZIP_HASH: part_0_0.gz"
+    },
+    {
+      "label": "part_length",
+      "expected_stage": "PART_LENGTH",
+      "actual_stage": "PART_LENGTH",
+      "diagnostic": "PART_LENGTH: decompression exceeds bound"
+    },
+    {
+      "label": "bad_stream",
+      "expected_stage": "GZIP_STREAM",
+      "actual_stage": "GZIP_STREAM",
+      "diagnostic": "GZIP_STREAM: BadGzipFile"
+    },
+    {
+      "label": "literal_original",
+      "expected_stage": "ORIGINAL_BYTES",
+      "actual_stage": "ORIGINAL_BYTES",
+      "diagnostic": "ORIGINAL_BYTES: literal mismatch at block offset 0"
+    },
+    {
+      "label": "destination_exists",
+      "expected_stage": "DESTINATION",
+      "actual_stage": "DESTINATION",
+      "diagnostic": "DESTINATION: fresh destination required"
+    }
+  ],
+  "negative_count": 12
+}

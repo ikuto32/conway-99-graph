@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "invocation_id": "b56ef4724737477bb6a0c1eaa1af4edd",
+  "timestamp": "2026-10-02T16:07:32.036774+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-c",
+    "import ast,hashlib,json,pathlib; paths=['acceleration/theory_20261003_rooted8_unrestricted_extension_v2.py','docs/PROTOCOL_20261003_UNRESTRICTED_ROOTED8_V2.md','acceleration/theory_20261003_rooted8_unrestricted_extension_v1.py','docs/PROTOCOL_20261003_UNRESTRICTED_ROOTED8_V1.md','acceleration/results/20261003_rooted8_unrestricted_precontrols01/failure.json','acceleration/results/20261003_rooted8_unrestricted_precontrols_supervisor01/summary.json']; ast.parse(pathlib.Path(paths[0]).read_text()); pathlib.Path('acceleration/results/20261003_rooted8_unrestricted_source_check02.json').write_text(json.dumps(dict(status='SOURCE_AST_PASS_V2',inputs_sha256={p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()for p in paths},scientific_build_launched=False),indent=2)+'\\n')"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 30.0,
+  "allocation_reason": "NEW V2 AST/source/spec pins and preserved V1 mixed-variable runtime failure identity; no scientificbuild",
+  "success_criterion": "Parse V2 and freeze exact new and failed source/protocol/receipts",
+  "verification_criterion": "New full fixture controls then parent source review required",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 5,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}

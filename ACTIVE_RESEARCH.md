@@ -1,3 +1,20 @@
+# Latest verified continuation checkpoint — wave37, 2026-10-03 JST
+
+Continue from the [thirty-seventh milestone](docs/RESEARCH_20261003_THIRTYSEVENTH_WAVE.md):
+343 claims,335 VERIFIED/CLEAR,3 CANDIDATE and5 REFUTED. The frozen saved pilot
+has exact E_lambda=0 and E_mu=3608 and fails SRG; the complete two-graph census
+found zero direct warm roots. All651 rooted7 profiles survive the literal mod2
+check. The complete unrestricted rooted8 catalogue and necessary operator are
+independently checked, without prism absence or target automorphism assumptions.
+The refuted generic rank inference gives no target-specific rank exclusion.
+
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. Wave37 evidence awaits immutable publication confirmation. Use
+fresh actual receipts for the separately authorized warm construction run and
+independently check its saved objects before promoting an improvement. Queued
+wave38 results are outside this343-claim cutoff. This notice makes no live
+process observation. Historical stop and continuation documents remain evidence.
+
 # Latest verified continuation checkpoint — 2026-10-03 JST
 
 Continue from the [thirty-sixth milestone](docs/RESEARCH_20261003_THIRTYSIXTH_WAVE.md):
