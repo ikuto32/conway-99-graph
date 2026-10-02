@@ -1,5 +1,13 @@
 # 研究資料の案内
 
+**Verified continuation: [thirty-first milestone, 2026-10-02](RESEARCH_20261002_THIRTYFIRST_WAVE.md).**
+Four scoped claims add 64 complete literal proof replays and an exact relaxation
+witness. The ledger has 312 claims, including 305 VERIFIED/CLEAR; the frozen
+literal campaign has 380 checked cases and 412 unresolved. The unrestricted
+target remains UNKNOWN. [Structural derivation](DERIVATION_20261002_ORDER8_MARKED_ENDPOINT.md)
+and [dated literature search](LITERATURE_20261002_STRUCTURAL_REFRESH.md) have
+their separate scopes. Earlier notices below preserve dated historical states.
+
 **Current entry point: [explicit October 2 resume](RESUME_20261002_POLICY_AWARE.md).**
 The user resumed research from the newer October 1 verified checkpoint. The
 historical stop descriptions below remain evidence, not current instructions.

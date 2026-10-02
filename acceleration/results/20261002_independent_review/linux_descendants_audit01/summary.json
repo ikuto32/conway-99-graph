@@ -1,0 +1,71 @@
+{
+  "status": "INDEPENDENT_LINUX_COMMAND_CONTAINMENT_PASS",
+  "timestamp": "2026-10-02T09:49:07.591210+00:00",
+  "source_commit": "2fdd9354d04641c64260d0221c7867b07c4b7405",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_linux_descendants_v1.py",
+    "--out",
+    "acceleration/results/20261002_independent_review/linux_descendants_audit01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/checkpoint_audit",
+  "inputs_sha256": {
+    "acceleration/results/20261002_independent_review/linux_descendants_observation01/observation.json": "377cc0114e15fb77a6600fa4c8690a821c42fc9d7da8142eb8e81e99b153f634",
+    "acceleration/results/20261002_independent_review/linux_descendants_success02/started.json": "0e3d4a898cec95d903feefd1b3df1d84b8ef4b7f772e478f228fcb5e3c055af1",
+    "acceleration/results/20261002_independent_review/linux_descendants_success_supervision02/manifest.json": "b1bf24665d253ae7811c589205e7d6fbf8a7e006dd147f109e62b2c4a6b140e4",
+    "acceleration/results/20261002_independent_review/linux_descendants_success_supervision02/summary.json": "6857132e57b5aa4ea20ef92c9e29dcfbf24b769f1c6618f21f81d6f56315cec0",
+    "acceleration/results/20261002_independent_review/linux_descendants_success_supervision02/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261002_independent_review/linux_descendants_success_supervision02/stderr.log": "3b6e359fc602d99fe3af8aef4ea9ad3cf3f95658bbfc06857ec8891213c70141",
+    "acceleration/results/20261002_independent_review/linux_descendants_success_supervision02/progress.jsonl": "decfdb6844fee74707a41463f8ea4468db7f88ca23fe064d399d4d96e3d62544",
+    "acceleration/results/20261002_independent_review/linux_descendants_success02/completed.json": "5c659c59d07e49d0c543cbfbd0f1fdcf4280570154babac90601f6b799e3bbcb",
+    "acceleration/results/20261002_independent_review/linux_descendants_timeout01/started.json": "bdf1821dd83a9f0d2fb49d08d475209beabdbdefcd6d8e95790b75806f6a5fb8",
+    "acceleration/results/20261002_independent_review/linux_descendants_timeout_supervision01/manifest.json": "bbab7ac2dfce13f1faef96d593eec4c3b3b4c17a5d61440d901f98cdec0a847f",
+    "acceleration/results/20261002_independent_review/linux_descendants_timeout_supervision01/summary.json": "7640ca7aecfc29ada417ba73bb7d3885282df466801a39f32c01f906d6d07e53",
+    "acceleration/results/20261002_independent_review/linux_descendants_timeout_supervision01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261002_independent_review/linux_descendants_timeout_supervision01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261002_independent_review/linux_descendants_timeout_supervision01/progress.jsonl": "1cbd26cca3e8b3011c1f4aef2ec6533a057655e57e49f4f6b2c88a1df0711391",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/control_20261002_linux_descendants_v1.py": "b7412028022e3334f85778a7a0baaeeca89d6edbe5e990b00a25d25156c9b5e9",
+    "acceleration/audit_20261002_linux_descendants_v1.py": "7d1ae81b197741434bf97dae4ade192931886ecafa8570efeb4d0131ad01d1e6",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434"
+  },
+  "controls": [
+    {
+      "mode": "success",
+      "started_path": "acceleration/results/20261002_independent_review/linux_descendants_success02/started.json",
+      "child_pid": 398,
+      "group": 359,
+      "supervision_summary_path": "acceleration/results/20261002_independent_review/linux_descendants_success_supervision02/summary.json",
+      "outcome": "PASS"
+    },
+    {
+      "mode": "timeout",
+      "started_path": "acceleration/results/20261002_independent_review/linux_descendants_timeout01/started.json",
+      "child_pid": 416,
+      "group": 410,
+      "supervision_summary_path": "acceleration/results/20261002_independent_review/linux_descendants_timeout_supervision01/summary.json",
+      "outcome": "PASS"
+    }
+  ],
+  "observed_live_matching_rows": [],
+  "preserved_prelaunch_failure": {
+    "attempt": "linux_descendants_success_supervision01",
+    "observed_exit_code": 1,
+    "reason": "WSL execvpe(/tmp/conway99-native-budget-v1-env/bin/python) failed: No such file or directory",
+    "worker_launched": false,
+    "artifact": null,
+    "artifact_null_reason": "Failure occurred before supervisor launch; tool transcript is the original observation, no worker receipt exists."
+  },
+  "scope": "Successful spawned child and stopped 60-second spawned sleeper within the same current Linux invocation process group.",
+  "limitations": [
+    "Two small local nonescaping fixture invocations only; no absolute or hard-real-time termination guarantee.",
+    "Worker observation uses /proc and OS process-group APIs; a fresh snapshot is required before future launches.",
+    "Native foreground case guard alone is not a descendant guard; the independently tested outer Linux supervisor supplies the containing boundary.",
+    "No mathematical search, exclusion, target resolution, cross-host or daemon escape guarantee."
+  ],
+  "target_resolution": false
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "EXACT_EIGHT_POLICY_NATIVE_LAUNCH_V1",
+  "timestamp": "2026-10-02T09:55:18.178885+00:00",
+  "case_id": "exact_eight_00acd6bbafa4c43e4ae62ff38fab5bd93115641d735e3a5588aaa5a3552d8997",
+  "case_index": 364,
+  "attempt_id": "batch05-native01",
+  "command": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "120.000000s",
+    "/usr/bin/prlimit",
+    "--as=4294967296:4294967296",
+    "--fsize=268435456:268435456",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "--seed=0",
+    "-c",
+    "1000000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261001_exact_eight_prefix64_batch05_cnfs_part03/case_0364/instance.cnf",
+    "/tmp/conway99-policy-v1-0364-gi6y6wf1/proof.drat"
+  ],
+  "native_wall_limit_seconds": 120.0,
+  "requested_case_seconds": 120.0,
+  "deadline_before_launch": {
+    "elapsed_seconds": 123.563055805,
+    "remaining_seconds": 746.436944195,
+    "review_remaining_seconds": 1676.436944195,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 872.442871783,
+    "review_deadline_at": 1802.442871783,
+    "completed_reviews": 0
+  },
+  "cnf": {
+    "path": "acceleration/results/20261001_exact_eight_prefix64_batch05_cnfs_part03/case_0364/instance.cnf",
+    "sha256": "3c0848ef66e67a6b4acff1603dbb4639a38edfc4f5467e672254969339ebd560",
+    "bytes": 2896068
+  },
+  "ext4_proof": "/tmp/conway99-policy-v1-0364-gi6y6wf1/proof.drat",
+  "limits": {
+    "address_space_bytes": 4294967296,
+    "proof_file_bytes": 268435456,
+    "conflicts_per_attempt": 1000000,
+    "seed": 0,
+    "kill_grace_seconds": 5,
+    "aggregate_retained_artifact_bytes": 68719476736,
+    "next_attempt_artifact_reserve_bytes": 1073741824,
+    "host_free_reserve_bytes": 34359738368,
+    "ext4_free_reserve_bytes": 2147483648,
+    "maximum_cases": 64,
+    "sequential": true,
+    "automatic_retry": false,
+    "automatic_resume": false
+  },
+  "numerical_acceptance": "Exact CNF only; no floating-point threshold"
+}

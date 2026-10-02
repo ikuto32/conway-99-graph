@@ -1,0 +1,67 @@
+{
+  "schema": "EXACT_EIGHT_POLICY_NATIVE_BATCH_RESULT_V1",
+  "timestamp": "2026-10-02T09:43:40.019453+00:00",
+  "status": "POLICY_NATIVE_OUTPUTS_PENDING_INDEPENDENT_VERIFICATION",
+  "mode": "controls",
+  "manifest_path": "acceleration/results/20261002_native_budget_controls02/manifest.json",
+  "manifest_sha256": "dee9956a4ff074879a56266490fe552d534e01e9604bfe45ca6bed348552ef72",
+  "selected_case_ids": [],
+  "case_records": [
+    {
+      "case_id": "tiny_sat",
+      "case_index": 0,
+      "summary_path": "acceleration/results/20261002_native_budget_controls02/case_0000/summary.json",
+      "summary_sha256": "3b89ff53b6eede63d31e442522f064191869d24033d9b18071997cf4bf91ac3e",
+      "interpreted_result": "SAT_RAW_OBJECT_PENDING_REVIEW",
+      "actual_exit_code": 10,
+      "wrapped_wall_seconds": 0.09277964900000057,
+      "allocated_native_wall_seconds": 10.0,
+      "ext4_trace_bytes": 0
+    },
+    {
+      "case_id": "tiny_unsat",
+      "case_index": 1,
+      "summary_path": "acceleration/results/20261002_native_budget_controls02/case_0001/summary.json",
+      "summary_sha256": "9e9fb476434c6c2e1b8172d43362e6cccabf320aa0a579aa7337dfe70c78cbd6",
+      "interpreted_result": "UNSAT_TRACE_PENDING_COMPLETE_REPLAY",
+      "actual_exit_code": 20,
+      "wrapped_wall_seconds": 0.08261794599999916,
+      "allocated_native_wall_seconds": 10.0,
+      "ext4_trace_bytes": 11
+    }
+  ],
+  "attempted_evaluations": 2,
+  "completed_evaluations": 2,
+  "pending_case_ids": [],
+  "native_calls": 2,
+  "timeout_control": {
+    "path": "acceleration/results/20261002_native_budget_controls02/timeout_control/solver.receipt.json",
+    "sha256": "8c5523d277cf6d2bed8a771a629210ac5b131fab0acd3fa20aa015c56b050670",
+    "actual_exit_code": 124
+  },
+  "stop_reason": "ENGINEERING_CONTROLS_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+  "producer_elapsed_seconds": 0.8540002340000044,
+  "limits": {
+    "address_space_bytes": 4294967296,
+    "proof_file_bytes": 268435456,
+    "conflicts_per_attempt": 1000000,
+    "seed": 0,
+    "kill_grace_seconds": 5,
+    "aggregate_retained_artifact_bytes": 68719476736,
+    "next_attempt_artifact_reserve_bytes": 1073741824,
+    "host_free_reserve_bytes": 34359738368,
+    "ext4_free_reserve_bytes": 2147483648,
+    "maximum_cases": 64,
+    "sequential": true,
+    "automatic_retry": false,
+    "automatic_resume": false
+  },
+  "mathematical_exclusions_asserted": 0,
+  "independent_approval": false,
+  "target_resolution": false,
+  "automatic_resume": false,
+  "unmet_requirements": [
+    "Independent outcome/proof review"
+  ],
+  "overall_search_coverage": "UNKNOWN; no validated target-wide denominator"
+}

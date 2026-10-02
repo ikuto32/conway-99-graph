@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "0.200000s",
+    "/tmp/conway99-native-budget-v1-env/bin/python",
+    "-c",
+    "import time; time.sleep(30)"
+  ],
+  "expected_exit_code": 124,
+  "purpose": "Native foreground timeout; no scientific search"
+}

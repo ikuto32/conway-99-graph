@@ -1,3 +1,22 @@
+# Verified continuation checkpoint — 2026-10-02 JST
+
+The [thirty-first milestone](docs/RESEARCH_20261002_THIRTYFIRST_WAVE.md) records
+four new scoped VERIFIED/CLEAR claims. The root ledger contains 312 claims:
+305 VERIFIED/CLEAR, three CANDIDATE/CLEAR and four REFUTED/CLEAR. Batch05 reused
+its 64 verified formulas, completed 64 native evaluations and passed 64 complete
+independent proof replays. The checked disjoint literal union is 380 of the frozen
+792 fixed-support representatives; 412 remain unresolved. No whole-support or
+unrestricted resolution follows. An exact aggregate integer witness also shows
+that the selected order-eight equations and two PSD blocks admit the endpoint.
+Target resolution remains UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. Full public replay of the new raw closure is not yet established.
+
+The explicit research authorization remains active. The next experiment is an
+independently checked candidate restart state from the earlier unrestricted
+partial proof, followed by a separately supervised continuation. Current execution
+state requires fresh process observations; this document is not a live monitor.
+The notices below preserve earlier dated state and historical stop instructions.
+
 # Explicit research resume — 2026-10-02 JST
 
 The user explicitly resumed research in the current chat. Read
