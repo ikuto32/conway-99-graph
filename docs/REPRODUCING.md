@@ -15,6 +15,14 @@ immutable commit and retrieval receipt; local recovery alone does not establish
 it. Registry and replay checks use the retained pinned uv environments and the
 supported per-command supervisor. A partial trace is not a complete proof.
 
+The later [publication receipt](../acceleration/results/20261002_wave32_publication01/receipt.json)
+confirms exact bytes at [commit 5308d0d](https://github.com/ikuto32/conway-99-graph/commit/5308d0d08085e71e1c3ace316e6e692d6b5c636a):
+all 934 direct raw members are recoverable from the 936 published gzip parts.
+Follow the [exact restoration guide](../acceleration/results/20261002_batch05_publication01/REPLAY.md).
+All 318 material claim records are unchanged by that availability update. No
+fresh mathematical proof replay or complete historical transitive closure is
+claimed by publication; the frozen milestone retains its earlier dated cutoff.
+
 ## Thirty-first milestone, 2026-10-02 JST
 
 The [new milestone](RESEARCH_20261002_THIRTYFIRST_WAVE.md) links the complete

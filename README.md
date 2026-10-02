@@ -7,7 +7,9 @@ REFUTED. The frozen fixed-support campaign remains at 380 checked literal cases
 of 792. The unrestricted continuation stopped with UNKNOWN and a saved partial
 trace. Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no
 validated denominator. The batch05 direct raw package passed complete local
-byte recovery; immutable public availability is tracked separately. Research
+byte recovery and its [immutable publication receipt](acceleration/results/20261002_wave32_publication01/receipt.json)
+confirms all 936 gzip parts. Historical transitive gates and platform binaries
+have separate availability. Research
 authorization is active; live execution requires fresh process observations.
 
 **2026-10-02 JST: explicit user instruction resumed research.** Read the

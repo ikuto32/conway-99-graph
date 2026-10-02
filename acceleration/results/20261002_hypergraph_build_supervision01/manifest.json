@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "invocation_id": "653d88398c1c461ead2e74c756206b5c",
+  "timestamp": "2026-10-02T11:08:17.180633+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "/tmp/conway99-native-budget-v1-env/bin/python",
+    "acceleration/prepare_20261002_hypergraph_anneal_v1.py",
+    "build",
+    "--seconds",
+    "150",
+    "--allocation-reason",
+    "Engineering compilation only with150s chosen from analogous small parser builds; no scientific run",
+    "--source-commit",
+    "28440b31f4effee3b25e30259110acc734695bf0",
+    "--native-seconds",
+    "100",
+    "--supervision-out",
+    "acceleration/results/20261002_hypergraph_build_supervision01",
+    "--out",
+    "acceleration/results/20261002_hypergraph_build01"
+  ],
+  "cwd": "/mnt/c/Users/ikuto/projects/conway-99-graph",
+  "seconds": 180.0,
+  "allocation_reason": "Compile one small C++ full99 hypergraph worker with pinned g++13.3; prior analogous exact parser build was seconds;150s producer and30s outer margin",
+  "success_criterion": "Pinned compiler accepts source with Wall Wextra Werror and saves exact new binary/build hashes",
+  "verification_criterion": "Independent adjacency-set controls auditor checks exact source build binary closure before any scientific search",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 10.0,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}
