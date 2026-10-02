@@ -1,5 +1,20 @@
 # 取得と検証
 
+## Thirty-second milestone, 2026-10-02 JST
+
+The [current milestone](RESEARCH_20261002_THIRTYSECOND_WAVE.md) binds complete
+rooted5/6 derivations, a full rooted7 catalogue audit, partial-trace preparation
+and the independently checked UNKNOWN native outcome. All original inputs,
+versioned sources, failed controls and exact command records remain evidence.
+The new [batch05 direct recovery manifest](../acceleration/results/20261002_batch05_raw_package02/manifest.json)
+and [independent byte audit](../acceleration/results/20261002_independent_review/batch05_recovery01/summary.json)
+cover 934 direct raw members and 936 gzip parts. Recovery includes every batch05
+CNF, model, scope and complete proof; the entire historical transitive gate
+closure is outside this package. Public availability requires an authenticated
+immutable commit and retrieval receipt; local recovery alone does not establish
+it. Registry and replay checks use the retained pinned uv environments and the
+supported per-command supervisor. A partial trace is not a complete proof.
+
 ## Thirty-first milestone, 2026-10-02 JST
 
 The [new milestone](RESEARCH_20261002_THIRTYFIRST_WAVE.md) links the complete

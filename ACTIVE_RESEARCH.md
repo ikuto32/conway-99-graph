@@ -1,21 +1,24 @@
 # Verified continuation checkpoint — 2026-10-02 JST
 
-The [thirty-first milestone](docs/RESEARCH_20261002_THIRTYFIRST_WAVE.md) records
-four new scoped VERIFIED/CLEAR claims. The root ledger contains 312 claims:
-305 VERIFIED/CLEAR, three CANDIDATE/CLEAR and four REFUTED/CLEAR. Batch05 reused
-its 64 verified formulas, completed 64 native evaluations and passed 64 complete
-independent proof replays. The checked disjoint literal union is 380 of the frozen
-792 fixed-support representatives; 412 remain unresolved. No whole-support or
-unrestricted resolution follows. An exact aggregate integer witness also shows
-that the selected order-eight equations and two PSD blocks admit the endpoint.
-Target resolution remains UNKNOWN. Overall search coverage: UNKNOWN; no validated
-denominator. Full public replay of the new raw closure is not yet established.
+The [thirty-second milestone](docs/RESEARCH_20261002_THIRTYSECOND_WAVE.md) records
+six additional scoped VERIFIED/CLEAR revisions, with no new exclusion. The root
+ledger contains 318 claims: 311 VERIFIED/CLEAR, three CANDIDATE/CLEAR and four
+REFUTED/CLEAR. Unrestricted rooted5 identities, necessary rooted6 operator
+kernels, conditional prism-free domains and complete rooted7 catalogue coverage
+are separate claims. Global prism absence remains UNKNOWN. The independently
+checked partial-trace state transformation establishes no RAT/equivalence proof.
+Its 1,800-second native continuation stopped with UNKNOWN and preserved all
+outputs. The independent outcome checker authenticated the complete saved
+partial trace and contained shutdown. No target graph or general proof exists
+in this repository. The literal campaign remains at 380 of 792 checked cases,
+with 412 unresolved. Overall search coverage: UNKNOWN; no validated denominator.
 
-The explicit research authorization remains active. The next experiment is an
-independently checked candidate restart state from the earlier unrestricted
-partial proof, followed by a separately supervised continuation. Current execution
-state requires fresh process observations; this document is not a live monitor.
-The notices below preserve earlier dated state and historical stop instructions.
+The explicit research authorization remains active. Next are scaled LP guides
+and exact structural certificate reconstruction, plus an independently gated
+linear triple-system construction search. The direct batch05 raw package passed
+complete independent local recovery; immutable publication is a separate step.
+Current execution state requires fresh process observations; this document is
+not a live monitor. Earlier notices preserve dated states and historical stops.
 
 # Explicit research resume — 2026-10-02 JST
 
