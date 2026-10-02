@@ -1,0 +1,1340 @@
+{
+  "character_constant_convention": "sum_w>0 A_w*K_j(w) >= N_j*M-K_j(0); equivalently sum_w>0 A_w*(N_j-K_j(w)) <= K_j(0)-N_j",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261003_incidence_low_weights_v1.py",
+    "--seconds",
+    "100",
+    "--out",
+    "acceleration/results/20261003_independent_review/incidence_low_weights01",
+    "--producer-summary-sha256",
+    "c79a403dbcfbd8b3c14a0bc92f23fbbe608d1ceb48659914c29551b9d68fa533"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "deadline": {
+    "completed_reviews": 0,
+    "deadline_at": 171428.093,
+    "deadline_reached": false,
+    "elapsed_seconds": 0.09400000001187436,
+    "remaining_seconds": 99.90599999998813,
+    "review_deadline_at": 173128.093,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "review_remaining_seconds": 1799.9059999999881,
+    "stop_required": false
+  },
+  "elapsed_seconds": 0.09400000001187436,
+  "inputs_sha256": {
+    "acceleration/audit_20261003_incidence_code_dual_v1.md": "9fd1522fc60cc001c57e03559ac77582fecee9be75f556a702226a0503376a67",
+    "acceleration/audit_20261003_incidence_griesmer_v1.md": "65d8eea3f4d72eb56391284f95eb43ad021e92a88a41fdcc2fe7a2e10f9dd92d",
+    "acceleration/audit_20261003_incidence_low_weights_v1.py": "414426f41f86f2ea4bd70744ba1cdc6f89fc06ef40262b84e5b306dbef06929f",
+    "acceleration/audit_20261003_incidence_low_weights_v1_proof.md": "45e3e4fbb8f39547ea169f65ad0df456f09396442fceed23c4483fb9d2be9f4a",
+    "acceleration/audit_20261003_incidence_low_weights_v1_spec.md": "56e6559a2a9c8237752ee075e97ae7e1db5f6f018f4f47a1e5722ad982138132",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/compute_policy.json": "275fe592ed48775acb4f380c00f065d9319ecdf228ddc542d59c32e65b6657fc",
+    "acceleration/results/20261003_incidence_low_weight_controls01/complete6_hypothesis_countercontrol.json": "2e11bd87390167b3f250743cb6f4632e343deb49243ff39a8e0a5ed40ac82ccf",
+    "acceleration/results/20261003_incidence_low_weight_controls01/friendship7.json": "5abf8dddda92edd84287efe3d04062a11e64b288c9152bfccacdc797b2bbf129",
+    "acceleration/results/20261003_incidence_low_weight_controls01/loose_cycle8.json": "06e30c586a4cd9146a66641ef8d79524993870f975f9c58165126971a14f8245",
+    "acceleration/results/20261003_incidence_low_weight_controls01/pasch_hypothesis_countercontrol.json": "dfbea1c7b1baa05ee4520f1c1af6a369785b0bea01e8c91775a493e69971960f",
+    "acceleration/results/20261003_incidence_low_weight_controls01/rook9.json": "bf6317c0dc3500408ad3a4aa34200b31d02ba5d25bdea1ea98241b7a53bf6bb0",
+    "acceleration/results/20261003_incidence_low_weight_controls01/summary.json": "c79a403dbcfbd8b3c14a0bc92f23fbbe608d1ceb48659914c29551b9d68fa533",
+    "acceleration/results/20261003_incidence_low_weight_controls01/triangle3.json": "b853d38501bc370e279e703b11b37720acc77f8f0392233fad2835743fa2fbbb",
+    "acceleration/results/20261003_incidence_low_weight_controls01/two_disjoint_triangles6.json": "40f31d3867f98a7640afeea536ab81f9dc55912cf9d1c614ff6aa97d22b98454",
+    "acceleration/results/20261003_incidence_low_weight_controls_supervision01/summary.json": "5309536a3e0f9175873281712209b60c299902eb525d1893ad9da5854dace959",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/theory_20261003_incidence_low_weight_controls_v1.py": "bdea6f2c7ab312f9ab803e7cc2622d27cbec5e0b463610ff57a378ed6711ebfd",
+    "acceleration/theory_20261003_incidence_low_weight_controls_v1_spec.md": "bef07026476870315c8dc7c4baf901d09a3475ca5422bc2483478fbebc8056d5",
+    "docs/CANDIDATE_20261003_TRIANGLE_INCIDENCE_LOW_WEIGHTS_V1.md": "ee6baa598f50bbad32c6dd9e51c77729202ffca6597f0bb35eca2d1ed5f122cd",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "external_conway99_research/attempts/wave102-prism-incidence-code/derivation.md": "df8841bee7f23b444186ab65947f77865ffb243363967dd56340207628f00c6f",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "limitations": [
+    "Pair-generated words are lower bounds, not full target low-weight enumerators.",
+    "Arbitrary linear hypergraphs insufficient; Pasch/K6 hypothesis failures explicitly retained.",
+    "No novelty, external review, target graph, rank consequence, optimization or target-wide coverage."
+  ],
+  "mathematical_scope": "Universal written implication under edge-unique-triangle hypothesis; all finite raw controls independently checked but not substituted for proof.",
+  "method": "independent_derivation",
+  "new_exclusions": 0,
+  "normalized_rows": {
+    "3": {
+      "coefficient_by_weight": {
+        "1": [
+          -10508,
+          11187
+        ],
+        "10": [
+          -39029,
+          78309
+        ],
+        "11": [
+          -52,
+          113
+        ],
+        "12": [
+          -33197,
+          78309
+        ],
+        "13": [
+          -30508,
+          78309
+        ],
+        "14": [
+          -3995,
+          11187
+        ],
+        "15": [
+          -332,
+          1017
+        ],
+        "16": [
+          -2589,
+          8701
+        ],
+        "17": [
+          -21172,
+          78309
+        ],
+        "18": [
+          -83,
+          339
+        ],
+        "19": [
+          -17300,
+          78309
+        ],
+        "2": [
+          -22999,
+          26103
+        ],
+        "20": [
+          -5183,
+          26103
+        ],
+        "21": [
+          -1988,
+          11187
+        ],
+        "22": [
+          -161,
+          1017
+        ],
+        "23": [
+          -10988,
+          78309
+        ],
+        "24": [
+          -9685,
+          78309
+        ],
+        "25": [
+          -404,
+          3729
+        ],
+        "26": [
+          -671,
+          7119
+        ],
+        "27": [
+          -708,
+          8701
+        ],
+        "28": [
+          -779,
+          11187
+        ],
+        "29": [
+          -20,
+          339
+        ],
+        "3": [
+          -64628,
+          78309
+        ],
+        "30": [
+          -3869,
+          78309
+        ],
+        "31": [
+          -3196,
+          78309
+        ],
+        "32": [
+          -371,
+          11187
+        ],
+        "33": [
+          -188,
+          7119
+        ],
+        "34": [
+          -535,
+          26103
+        ],
+        "35": [
+          -172,
+          11187
+        ],
+        "36": [
+          -41,
+          3729
+        ],
+        "37": [
+          -52,
+          7119
+        ],
+        "38": [
+          -37,
+          8701
+        ],
+        "39": [
+          -20,
+          11187
+        ],
+        "4": [
+          -785,
+          1017
+        ],
+        "40": [
+          1,
+          7119
+        ],
+        "41": [
+          124,
+          78309
+        ],
+        "42": [
+          29,
+          11187
+        ],
+        "43": [
+          4,
+          1243
+        ],
+        "44": [
+          25,
+          7119
+        ],
+        "45": [
+          92,
+          26103
+        ],
+        "46": [
+          37,
+          11187
+        ],
+        "47": [
+          76,
+          26103
+        ],
+        "48": [
+          17,
+          7119
+        ],
+        "49": [
+          20,
+          11187
+        ],
+        "5": [
+          -56444,
+          78309
+        ],
+        "50": [
+          13,
+          11187
+        ],
+        "51": [
+          4,
+          7119
+        ],
+        "52": [
+          1,
+          26103
+        ],
+        "53": [
+          -4,
+          11187
+        ],
+        "54": [
+          -5,
+          8701
+        ],
+        "55": [
+          -4,
+          7119
+        ],
+        "56": [
+          -1,
+          3729
+        ],
+        "57": [
+          4,
+          11187
+        ],
+        "58": [
+          107,
+          78309
+        ],
+        "59": [
+          20,
+          7119
+        ],
+        "6": [
+          -52621,
+          78309
+        ],
+        "60": [
+          53,
+          11187
+        ],
+        "61": [
+          188,
+          26103
+        ],
+        "62": [
+          73,
+          7119
+        ],
+        "63": [
+          52,
+          3729
+        ],
+        "64": [
+          205,
+          11187
+        ],
+        "65": [
+          204,
+          8701
+        ],
+        "66": [
+          209,
+          7119
+        ],
+        "67": [
+          404,
+          11187
+        ],
+        "68": [
+          3427,
+          78309
+        ],
+        "69": [
+          4100,
+          78309
+        ],
+        "7": [
+          -212,
+          339
+        ],
+        "70": [
+          7,
+          113
+        ],
+        "71": [
+          812,
+          11187
+        ],
+        "72": [
+          2201,
+          26103
+        ],
+        "73": [
+          692,
+          7119
+        ],
+        "74": [
+          415,
+          3729
+        ],
+        "75": [
+          9916,
+          78309
+        ],
+        "76": [
+          11219,
+          78309
+        ],
+        "77": [
+          164,
+          1017
+        ],
+        "78": [
+          2021,
+          11187
+        ],
+        "79": [
+          5260,
+          26103
+        ],
+        "8": [
+          -6499,
+          11187
+        ],
+        "80": [
+          17531,
+          78309
+        ],
+        "81": [
+          28,
+          113
+        ],
+        "82": [
+          21403,
+          78309
+        ],
+        "83": [
+          7844,
+          26103
+        ],
+        "84": [
+          335,
+          1017
+        ],
+        "85": [
+          4028,
+          11187
+        ],
+        "86": [
+          30739,
+          78309
+        ],
+        "87": [
+          33428,
+          78309
+        ],
+        "88": [
+          157,
+          339
+        ],
+        "89": [
+          39260,
+          78309
+        ],
+        "9": [
+          -14060,
+          26103
+        ],
+        "90": [
+          14137,
+          26103
+        ],
+        "91": [
+          6532,
+          11187
+        ],
+        "92": [
+          71,
+          113
+        ],
+        "93": [
+          52852,
+          78309
+        ],
+        "94": [
+          56675,
+          78309
+        ],
+        "95": [
+          788,
+          1017
+        ],
+        "96": [
+          64859,
+          78309
+        ],
+        "97": [
+          7692,
+          8701
+        ],
+        "98": [
+          10541,
+          11187
+        ],
+        "99": [
+          340,
+          339
+        ]
+      },
+      "denominator": 156618,
+      "lower_word_count": 231
+    },
+    "4": {
+      "coefficient_by_weight": {
+        "1": [
+          -494015,
+          537471
+        ],
+        "10": [
+          -2359,
+          6039
+        ],
+        "11": [
+          -119915,
+          342027
+        ],
+        "12": [
+          -56197,
+          179157
+        ],
+        "13": [
+          -350755,
+          1254099
+        ],
+        "14": [
+          -1349,
+          5429
+        ],
+        "15": [
+          -39397,
+          179157
+        ],
+        "16": [
+          -729145,
+          3762297
+        ],
+        "17": [
+          -91391,
+          537471
+        ],
+        "18": [
+          -62065,
+          418033
+        ],
+        "19": [
+          -6301,
+          48861
+        ],
+        "2": [
+          -3172537,
+          3762297
+        ],
+        "20": [
+          -419017,
+          3762297
+        ],
+        "21": [
+          -17125,
+          179157
+        ],
+        "22": [
+          -1327,
+          16287
+        ],
+        "23": [
+          -86435,
+          1254099
+        ],
+        "24": [
+          -10357,
+          179157
+        ],
+        "25": [
+          -16427,
+          342027
+        ],
+        "26": [
+          -21215,
+          537471
+        ],
+        "27": [
+          -13393,
+          418033
+        ],
+        "28": [
+          -13775,
+          537471
+        ],
+        "29": [
+          -10831,
+          537471
+        ],
+        "3": [
+          -12575,
+          16287
+        ],
+        "30": [
+          -29,
+          1869
+        ],
+        "31": [
+          -695,
+          59719
+        ],
+        "32": [
+          -10579,
+          1254099
+        ],
+        "33": [
+          -95,
+          16287
+        ],
+        "34": [
+          -14137,
+          3762297
+        ],
+        "35": [
+          -1151,
+          537471
+        ],
+        "36": [
+          -5,
+          5429
+        ],
+        "37": [
+          -137,
+          3762297
+        ],
+        "38": [
+          5,
+          8811
+        ],
+        "39": [
+          1181,
+          1254099
+        ],
+        "4": [
+          -294913,
+          418033
+        ],
+        "40": [
+          203,
+          179157
+        ],
+        "41": [
+          45,
+          38003
+        ],
+        "42": [
+          203,
+          179157
+        ],
+        "43": [
+          545,
+          537471
+        ],
+        "44": [
+          293,
+          342027
+        ],
+        "45": [
+          41,
+          59719
+        ],
+        "46": [
+          1975,
+          3762297
+        ],
+        "47": [
+          19,
+          48861
+        ],
+        "48": [
+          365,
+          1254099
+        ],
+        "49": [
+          43,
+          179157
+        ],
+        "5": [
+          -115237,
+          179157
+        ],
+        "50": [
+          43,
+          179157
+        ],
+        "51": [
+          365,
+          1254099
+        ],
+        "52": [
+          19,
+          48861
+        ],
+        "53": [
+          1975,
+          3762297
+        ],
+        "54": [
+          41,
+          59719
+        ],
+        "55": [
+          293,
+          342027
+        ],
+        "56": [
+          545,
+          537471
+        ],
+        "57": [
+          203,
+          179157
+        ],
+        "58": [
+          45,
+          38003
+        ],
+        "59": [
+          203,
+          179157
+        ],
+        "6": [
+          -733795,
+          1254099
+        ],
+        "60": [
+          1181,
+          1254099
+        ],
+        "61": [
+          5,
+          8811
+        ],
+        "62": [
+          -137,
+          3762297
+        ],
+        "63": [
+          -5,
+          5429
+        ],
+        "64": [
+          -1151,
+          537471
+        ],
+        "65": [
+          -14137,
+          3762297
+        ],
+        "66": [
+          -95,
+          16287
+        ],
+        "67": [
+          -10579,
+          1254099
+        ],
+        "68": [
+          -695,
+          59719
+        ],
+        "69": [
+          -29,
+          1869
+        ],
+        "7": [
+          -285391,
+          537471
+        ],
+        "70": [
+          -10831,
+          537471
+        ],
+        "71": [
+          -13775,
+          537471
+        ],
+        "72": [
+          -13393,
+          418033
+        ],
+        "73": [
+          -21215,
+          537471
+        ],
+        "74": [
+          -16427,
+          342027
+        ],
+        "75": [
+          -10357,
+          179157
+        ],
+        "76": [
+          -86435,
+          1254099
+        ],
+        "77": [
+          -1327,
+          16287
+        ],
+        "78": [
+          -17125,
+          179157
+        ],
+        "79": [
+          -419017,
+          3762297
+        ],
+        "8": [
+          -385,
+          801
+        ],
+        "80": [
+          -6301,
+          48861
+        ],
+        "81": [
+          -62065,
+          418033
+        ],
+        "82": [
+          -91391,
+          537471
+        ],
+        "83": [
+          -729145,
+          3762297
+        ],
+        "84": [
+          -39397,
+          179157
+        ],
+        "85": [
+          -1349,
+          5429
+        ],
+        "86": [
+          -350755,
+          1254099
+        ],
+        "87": [
+          -56197,
+          179157
+        ],
+        "88": [
+          -119915,
+          342027
+        ],
+        "89": [
+          -2359,
+          6039
+        ],
+        "9": [
+          -181393,
+          418033
+        ],
+        "90": [
+          -181393,
+          418033
+        ],
+        "91": [
+          -385,
+          801
+        ],
+        "92": [
+          -285391,
+          537471
+        ],
+        "93": [
+          -733795,
+          1254099
+        ],
+        "94": [
+          -115237,
+          179157
+        ],
+        "95": [
+          -294913,
+          418033
+        ],
+        "96": [
+          -12575,
+          16287
+        ],
+        "97": [
+          -3172537,
+          3762297
+        ],
+        "98": [
+          -494015,
+          537471
+        ],
+        "99": [
+          -1,
+          1
+        ]
+      },
+      "denominator": 3762297,
+      "lower_word_count": 2079
+    },
+    "6": {
+      "coefficient_by_weight": {
+        "1": [
+          -70334503,
+          80036055
+        ],
+        "10": [
+          -131525857,
+          560252385
+        ],
+        "11": [
+          -306259,
+          1543395
+        ],
+        "12": [
+          -93466297,
+          560252385
+        ],
+        "13": [
+          -78130537,
+          560252385
+        ],
+        "14": [
+          -9272671,
+          80036055
+        ],
+        "15": [
+          -7652239,
+          80036055
+        ],
+        "16": [
+          -2925743,
+          37350159
+        ],
+        "17": [
+          -35673457,
+          560252385
+        ],
+        "18": [
+          -3194281,
+          62250265
+        ],
+        "19": [
+          -22948801,
+          560252385
+        ],
+        "2": [
+          -143786779,
+          186750795
+        ],
+        "20": [
+          -6042403,
+          186750795
+        ],
+        "21": [
+          -2021599,
+          80036055
+        ],
+        "22": [
+          -12871,
+          661455
+        ],
+        "23": [
+          -8272441,
+          560252385
+        ],
+        "24": [
+          -1233725,
+          112050477
+        ],
+        "25": [
+          -300431,
+          37350159
+        ],
+        "26": [
+          -3212161,
+          560252385
+        ],
+        "27": [
+          -246793,
+          62250265
+        ],
+        "28": [
+          -211039,
+          80036055
+        ],
+        "29": [
+          -44389,
+          26678685
+        ],
+        "3": [
+          -376737313,
+          560252385
+        ],
+        "30": [
+          -544441,
+          560252385
+        ],
+        "31": [
+          -279049,
+          560252385
+        ],
+        "32": [
+          -106657,
+          560252385
+        ],
+        "33": [
+          -5,
+          926037
+        ],
+        "34": [
+          17189,
+          186750795
+        ],
+        "35": [
+          10409,
+          80036055
+        ],
+        "36": [
+          1161,
+          8892895
+        ],
+        "37": [
+          61703,
+          560252385
+        ],
+        "38": [
+          15101,
+          186750795
+        ],
+        "39": [
+          28583,
+          560252385
+        ],
+        "4": [
+          -327936649,
+          560252385
+        ],
+        "40": [
+          14447,
+          560252385
+        ],
+        "41": [
+          883,
+          112050477
+        ],
+        "42": [
+          -151,
+          80036055
+        ],
+        "43": [
+          -109,
+          26678685
+        ],
+        "44": [
+          -1,
+          4630185
+        ],
+        "45": [
+          479,
+          62250265
+        ],
+        "46": [
+          9767,
+          560252385
+        ],
+        "47": [
+          5021,
+          186750795
+        ],
+        "48": [
+          19199,
+          560252385
+        ],
+        "49": [
+          613,
+          16007211
+        ],
+        "5": [
+          -284456761,
+          560252385
+        ],
+        "50": [
+          613,
+          16007211
+        ],
+        "51": [
+          19199,
+          560252385
+        ],
+        "52": [
+          5021,
+          186750795
+        ],
+        "53": [
+          9767,
+          560252385
+        ],
+        "54": [
+          479,
+          62250265
+        ],
+        "55": [
+          -1,
+          4630185
+        ],
+        "56": [
+          -109,
+          26678685
+        ],
+        "57": [
+          -151,
+          80036055
+        ],
+        "58": [
+          883,
+          112050477
+        ],
+        "59": [
+          14447,
+          560252385
+        ],
+        "6": [
+          -245828809,
+          560252385
+        ],
+        "60": [
+          28583,
+          560252385
+        ],
+        "61": [
+          15101,
+          186750795
+        ],
+        "62": [
+          61703,
+          560252385
+        ],
+        "63": [
+          1161,
+          8892895
+        ],
+        "64": [
+          10409,
+          80036055
+        ],
+        "65": [
+          17189,
+          186750795
+        ],
+        "66": [
+          -5,
+          926037
+        ],
+        "67": [
+          -106657,
+          560252385
+        ],
+        "68": [
+          -279049,
+          560252385
+        ],
+        "69": [
+          -544441,
+          560252385
+        ],
+        "7": [
+          -10076917,
+          26678685
+        ],
+        "70": [
+          -44389,
+          26678685
+        ],
+        "71": [
+          -211039,
+          80036055
+        ],
+        "72": [
+          -246793,
+          62250265
+        ],
+        "73": [
+          -3212161,
+          560252385
+        ],
+        "74": [
+          -300431,
+          37350159
+        ],
+        "75": [
+          -1233725,
+          112050477
+        ],
+        "76": [
+          -8272441,
+          560252385
+        ],
+        "77": [
+          -12871,
+          661455
+        ],
+        "78": [
+          -2021599,
+          80036055
+        ],
+        "79": [
+          -6042403,
+          186750795
+        ],
+        "8": [
+          -5183099,
+          16007211
+        ],
+        "80": [
+          -22948801,
+          560252385
+        ],
+        "81": [
+          -3194281,
+          62250265
+        ],
+        "82": [
+          -35673457,
+          560252385
+        ],
+        "83": [
+          -2925743,
+          37350159
+        ],
+        "84": [
+          -7652239,
+          80036055
+        ],
+        "85": [
+          -9272671,
+          80036055
+        ],
+        "86": [
+          -78130537,
+          560252385
+        ],
+        "87": [
+          -93466297,
+          560252385
+        ],
+        "88": [
+          -306259,
+          1543395
+        ],
+        "89": [
+          -131525857,
+          560252385
+        ],
+        "9": [
+          -17203257,
+          62250265
+        ],
+        "90": [
+          -17203257,
+          62250265
+        ],
+        "91": [
+          -5183099,
+          16007211
+        ],
+        "92": [
+          -10076917,
+          26678685
+        ],
+        "93": [
+          -245828809,
+          560252385
+        ],
+        "94": [
+          -284456761,
+          560252385
+        ],
+        "95": [
+          -327936649,
+          560252385
+        ],
+        "96": [
+          -376737313,
+          560252385
+        ],
+        "97": [
+          -143786779,
+          186750795
+        ],
+        "98": [
+          -70334503,
+          80036055
+        ],
+        "99": [
+          -1,
+          1
+        ]
+      },
+      "denominator": 1120504770,
+      "lower_word_count": 24486
+    }
+  },
+  "positive_fixtures": [
+    {
+      "image_words": 2,
+      "kernel_words": 4,
+      "label": "triangle3",
+      "literal_character_checks": 16,
+      "pair_checks": 0,
+      "triangles": 1,
+      "vertices": 3
+    },
+    {
+      "image_words": 4,
+      "kernel_words": 16,
+      "label": "two_disjoint_triangles6",
+      "literal_character_checks": 49,
+      "pair_checks": 1,
+      "triangles": 2,
+      "vertices": 6
+    },
+    {
+      "image_words": 8,
+      "kernel_words": 16,
+      "label": "friendship7",
+      "literal_character_checks": 64,
+      "pair_checks": 3,
+      "triangles": 3,
+      "vertices": 7
+    },
+    {
+      "image_words": 16,
+      "kernel_words": 16,
+      "label": "loose_cycle8",
+      "literal_character_checks": 81,
+      "pair_checks": 6,
+      "triangles": 4,
+      "vertices": 8
+    },
+    {
+      "image_words": 32,
+      "kernel_words": 16,
+      "label": "rook9",
+      "literal_character_checks": 100,
+      "pair_checks": 15,
+      "triangles": 6,
+      "vertices": 9
+    }
+  ],
+  "prior_weight_interval_context": "65d8eea3f4d72eb56391284f95eb43ad021e92a88a41fdcc2fe7a2e10f9dd92d supplies separate36..60 premise; not required for this all-weight inequality.",
+  "prior_weight_interval_rederived": false,
+  "producer": "/root/structural",
+  "python": "3.12.10",
+  "rank_bound_claimed": false,
+  "shared_components": [
+    "Python exact integers/Fraction/JSON/SHA256 and supported deadline/supervisor.",
+    "Original raw small graph/control artifacts; checking uses independently constructed adjacency sets, support symmetric differences, exhaustive ambient orthogonal words and repeated polynomial multiplication.",
+    "Rank-nullity/character convention as exact written mathematics; no producer code imported."
+  ],
+  "source_commit": "e1691ed8cdab8e21b9038497c6ba109de7f781c8",
+  "statement": "For every finite simple graph in which every edge has exactly one common neighbor, its complete triangle-incidence image over GF(2) contains at least m weight3 words, sum_v binom(t_v,2) weight4 words, and binom(m,2)-sum_v binom(t_v,2) weight6 words. Consequently any graph satisfying the exact target identity has lower counts231,2079,24486 respectively, and its kernel weight enumerator satisfies the stated sharp shifted character inequalities; these are conditional necessary bounds, not existence or nonexistence.",
+  "status": "INDEPENDENT_TRIANGLE_IMAGE_LOW_WEIGHT_COUNTS_CHARACTER_V1_PASS",
+  "strict_negative_controls": 10,
+  "target_lower_word_counts": {
+    "3": 231,
+    "4": 2079,
+    "6": 24486
+  },
+  "target_resolution": "NONE",
+  "timestamp": "2026-10-02T18:38:31.480575+00:00",
+  "universal_derivation_checked": true,
+  "verifier": "/root/checkpoint_audit",
+  "written_audit": "acceleration/audit_20261003_incidence_low_weights_v1_proof.md"
+}
