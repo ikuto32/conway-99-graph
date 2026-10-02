@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "scope": "Future computationally intensive tasks; historical evidence unchanged",
+  "maximum_command_compute_wall_seconds": 21600,
+  "maximum_reassessment_compute_seconds": 1800,
+  "accounting": "Wall-clock elapsed time of one command invocation and its computational descendants; no accumulation across separate commands",
+  "included_phases": ["computational preprocessing", "execution", "transfers", "retries", "alternative methods", "required verification", "computational checkpointing", "worker shutdown"],
+  "excluded_intervals": ["conversation", "human review", "documentation editing", "explicit stopped intervals with no computational workers"],
+  "cumulative_across_commands": false,
+  "each_separate_command_has_own_allowance": true,
+  "internal_retries_extend_invocation_deadline": false,
+  "descendants_share_invocation_deadline": true,
+  "default_stage_timeout_seconds": null,
+  "default_stage_timeout_reason": "Allocate from evidence within this command's maximum; no inherited 120-second default",
+  "calibrated_probability_review_threshold": 0.05,
+  "probability_threshold_is_automatic_stop": false,
+  "uncalibrated_probability": null,
+  "uncalibrated_probability_reason": "Use concrete diagnostics and state uncertainty; never invent a probability",
+  "success_requires_separate_verification": true,
+  "scientific_research_state": "STOPPED_BY_USER",
+  "automatic_resume": false
+}

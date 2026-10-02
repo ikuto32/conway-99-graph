@@ -6,6 +6,12 @@ new explicit user instruction resumes research.** The stop request was
 This instruction supersedes all earlier continuation and batch authorizations.
 The objective is paused, not completed or blocked.
 
+Subsequent execution-policy update: the [CPU/GPU computation policy](COMPUTE_POLICY.md)
+now governs future work. Historical 120-second build and 60-second solver
+allocations below remain evidence of what happened, not current defaults.
+The saved resume argv must be replaced by a budget-aware execution plan after
+an explicit resume; changing policy does not authorize any scientific run.
+
 As of: see the timestamp in the [machine-readable stop checkpoint](../acceleration/results/20261001_user_stop/checkpoint.json).
 Research source commit: `cc55ad8bd7ad3ef35d33cae35232f9cc8eb264e5`, with
 executed source hashes preserved in the run records. Previous report:
@@ -96,8 +102,10 @@ only to resolve those literal encoded cases. Do not rebuild the completed
 formulas or start batch06 first.
 
 The [saved resume plan](../acceleration/results/20261001_user_stop/resume_plan.json)
-contains exact argv arrays, cwd, environment and source hashes. **These commands
-were saved, not executed.** Use `uv` with the existing pinned `uv.lock` and
+contains historical argv arrays, cwd, environment and source hashes. **These commands
+were saved, not executed, and are now superseded by the current compute policy.**
+Prepare a new budget-aware plan rather than executing them unchanged.
+Use `uv` with the existing pinned `uv.lock` and
 `UV_PROJECT_ENVIRONMENT=build/research-venv`; recheck current processes, disk
 reserves, source hashes and fresh output paths before launching. Require an
 actual successful preflight. Independently validate a decoded SAT object or

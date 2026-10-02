@@ -1,5 +1,10 @@
 # 研究資料の案内
 
+**Current entry point: [explicit October 2 resume](RESUME_20261002_POLICY_AWARE.md).**
+The user resumed research from the newer October 1 verified checkpoint. The
+historical stop descriptions below remain evidence, not current instructions.
+Target resolution is UNKNOWN; actual execution state requires fresh receipts.
+
 **Current entry point: [user stop, 2026-10-01 JST](STOP_20261001_EIGHT_COORDINATE.md).**
 Research is stopped; no automatic resume. The ledger has 308 claims, including
 301 VERIFIED/CLEAR. The fixed 792-case campaign has 316 checked exclusions and

@@ -1,6 +1,25 @@
+# Explicit research resume — 2026-10-02 JST
+
+The user explicitly resumed research in the current chat. Read
+[the policy-aware resume plan](docs/RESUME_20261002_POLICY_AWARE.md).
+The initial verified checkpoint remains the October 1 308-claim ledger and
+316 checked exclusions among 792 literal fixed-support cases. Batch05 reuses
+64 completed formulas and requires fresh input authentication, driver controls,
+and independent checks of actual results. No new mathematical claim is recorded
+by this resume notice. Target resolution: UNKNOWN. Overall search coverage:
+UNKNOWN; no validated denominator. Live process state comes from fresh receipts,
+not this document. The prior stop and all historical commands below are retained.
+
 # Stopped by user — 2026-10-01 JST
 
 **Research is stopped. A new explicit user instruction is required to resume.**
+The [current CPU/GPU budget policy](docs/COMPUTE_POLICY.md) supersedes historical
+120-second build and 60-second-per-case defaults for future research. It requires
+at most 21,600 computation wall seconds **per command invocation**, without
+accumulating time across separate commands. Allocations require evidence and
+reassessment at most every 1,800 active seconds.
+The historical saved resume commands require a new budget-aware execution plan;
+policy maintenance has not resumed research or changed any mathematical claim.
 Read [the current stop/restart record](docs/STOP_20261001_EIGHT_COORDINATE.md)
 and its [machine-readable checkpoint](acceleration/results/20261001_user_stop/checkpoint.json).
 The root ledger has 308 claims: 301 VERIFIED/CLEAR, three CANDIDATE/CLEAR and

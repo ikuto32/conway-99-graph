@@ -1,3 +1,11 @@
+# Explicit research resume — 2026-10-02 JST
+
+The current user explicitly instructed continued research. This supersedes the
+historical stop below as an execution instruction. See
+[the current resume plan](docs/RESUME_20261002_POLICY_AWARE.md). The historical
+stop checkpoint and command bytes remain preserved. No target resolution is
+claimed by resuming work.
+
 # 最新のユーザー指示による停止 — 2026-10-01 JST
 
 今回の実行は、ユーザーの明示的な指示により正常に停止しました。
