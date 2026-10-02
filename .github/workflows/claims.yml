@@ -23,15 +23,15 @@ jobs:
         run: uv sync --locked
       - name: Run positive and adversarial registry controls
         run: uv run --locked python -B -m unittest discover -s acceleration -p test_validate_claims.py -v
-      - name: Restore exact public structural model inputs
+      - name: Restore exact public model and control inputs
         run: >-
           uv run --locked python acceleration/run_compute_command.py
           --seconds 300
-          --allocation-reason "Five finite public raw model inputs; pinned lossless parts, shared child deadline and shutdown reserve"
-          --success-criterion "All five exact original identities restored or checked without overwriting existing files"
+          --allocation-reason "Six finite public raw model/control inputs; pinned lossless parts, shared child deadline and shutdown reserve"
+          --success-criterion "All six exact original identities restored or checked without overwriting existing files"
           --verification-criterion "Byte recovery only; independent mathematical audit is separate"
           --out build/claims-model-recovery-supervision
-          --cwd . -- python acceleration/recover_20261002_wave33_public_models_v1.py
+          --cwd . -- python acceleration/recover_20261003_wave36_public_inputs_v1.py
           --seconds 270 --out build/claims-model-recovery
       - name: Check registry, public hashes, and revision impact
         env:
