@@ -1,3 +1,21 @@
+# Wave37 continuation — 2026-10-03 JST
+
+The [thirty-seventh milestone](RESEARCH_20261003_THIRTYSEVENTH_WAVE.md) links the
+frozen343-claim ledger, six exact revision1 bindings and separate complete
+catalogue/operator, saved-object, parity, root-census and generic-counterexample
+audits. The [rooted8 replay record](REPLAY_20261003_WAVE37_UNRESTRICTED_ROOTED8.md)
+documents two new lossless originals. The new eight-input CI wrapper restores
+exactly eight raw inputs from four pinned manifests and48 gzip parts; it uses
+the unchanged historical restorer and does no mathematical replay.
+
+Use the pinned `uv.lock` and actual saved supervisor argv. New invocations share
+their preprocessing and children within an explicit deadline under
+[COMPUTE_POLICY.md](COMPUTE_POLICY.md). Independent byte recovery and claim
+impact checks passed; immutable wave37 PUBLIC confirmation remains pending.
+Schema/CI success is not proof of the target. Target resolution: UNKNOWN.
+Overall search coverage: UNKNOWN; no validated denominator. Historical commands
+and failed source/calibration versions retain their original bytes below.
+
 # Wave36 continuation — 2026-10-03 JST
 
 The [thirty-sixth milestone](RESEARCH_20261003_THIRTYSIXTH_WAVE.md) links the

@@ -27,11 +27,11 @@ jobs:
         run: >-
           uv run --locked python acceleration/run_compute_command.py
           --seconds 300
-          --allocation-reason "Six finite public raw model/control inputs; pinned lossless parts, shared child deadline and shutdown reserve"
-          --success-criterion "All six exact original identities restored or checked without overwriting existing files"
+          --allocation-reason "Eight finite public raw model/control inputs; pinned lossless parts, shared child deadline and shutdown reserve"
+          --success-criterion "All eight exact original identities restored or checked without overwriting existing files"
           --verification-criterion "Byte recovery only; independent mathematical audit is separate"
           --out build/claims-model-recovery-supervision
-          --cwd . -- python acceleration/recover_20261003_wave36_public_inputs_v1.py
+          --cwd . -- python acceleration/recover_20261003_wave37_public_inputs_v1.py
           --seconds 270 --out build/claims-model-recovery
       - name: Check registry, public hashes, and revision impact
         env:

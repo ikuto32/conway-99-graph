@@ -1,0 +1,71 @@
+{
+  "status": "PRODUCER_WARM_ROOT_CENSUS_V1_CALIBRATION_COMPLETE",
+  "positive_rook_roots": 9,
+  "negative_controls": [
+    {
+      "label": "rook9_diagonal",
+      "expected_stage": "DIAGONAL",
+      "actual_stage": "DIAGONAL",
+      "artifact": "rook9_diagonal.adj"
+    },
+    {
+      "label": "rook9_asymmetric",
+      "expected_stage": "SYMMETRY",
+      "actual_stage": "SYMMETRY",
+      "artifact": "rook9_asymmetric.adj"
+    },
+    {
+      "label": "rook9_degree",
+      "expected_stage": "DEGREE",
+      "actual_stage": "DEGREE",
+      "artifact": "rook9_degree.adj"
+    },
+    {
+      "label": "rook9_binary",
+      "actual_stage": "BINARY",
+      "expected_stage": "BINARY"
+    },
+    {
+      "label": "rook9_wrong_target99_scope",
+      "actual_stage": "SHAPE",
+      "expected_stage": "SHAPE"
+    },
+    {
+      "label": "rook9_corrupt_score",
+      "actual_stage": "SCORE_RECORD",
+      "expected_stage": "SCORE_RECORD"
+    },
+    {
+      "label": "rook9_corrupt_count",
+      "actual_stage": "SCORE_RECORD",
+      "expected_stage": "SCORE_RECORD"
+    },
+    {
+      "label": "actual99_diagonal",
+      "expected_stage": "DIAGONAL",
+      "actual_stage": "DIAGONAL",
+      "artifact": "actual99_diagonal.adj"
+    },
+    {
+      "label": "actual99_degree",
+      "expected_stage": "DEGREE",
+      "actual_stage": "DEGREE",
+      "artifact": "actual99_degree.adj"
+    },
+    {
+      "label": "actual99_corrupt_score",
+      "actual_stage": "SCORE_RECORD",
+      "expected_stage": "SCORE_RECORD"
+    },
+    {
+      "label": "control_harness_wrong_diagnostic",
+      "actual_stage": "WRONG_CONTROL_STAGE",
+      "expected_stage": "WRONG_CONTROL_STAGE"
+    }
+  ],
+  "independent_approval": false,
+  "limitations": [
+    "Producer-internal finite controls only; separate dense checking path must approve the actual census.",
+    "Generic rook9 is not a target99 certificate."
+  ]
+}

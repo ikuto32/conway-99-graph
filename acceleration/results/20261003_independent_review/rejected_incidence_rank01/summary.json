@@ -1,0 +1,63 @@
+{
+  "status": "INDEPENDENT_REJECTED_CODOMAIN_ISOTROPY_COUNTEREXAMPLE_PASS",
+  "timestamp": "2026-10-02T15:49:20.443802+00:00",
+  "source_commit": "51a0c019178add446941d920ae0d3da63c58ac29",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261003_rejected_incidence_rank_v1.py",
+    "--seconds",
+    "20",
+    "--out",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python_version": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/audit_20261003_rejected_incidence_rank_v1.py": "7108b54118b9005def3c3b4d1242544b635443fcf1603c353afb3b489b49ab3a",
+    "docs/AUDIT_20261003_REJECTED_INCIDENCE_RANK_V1.md": "d86b421ef834f54edc7e6743639d01f74a6463a07598404b28c5ef663e1495b1",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a"
+  },
+  "counterexample_sha256": "94d4c5331f30bf86db9d0cac0fb7821ee37d3d770536880429b55267a1d33faf",
+  "ranks": {
+    "P": 54,
+    "M": 45,
+    "B": 99,
+    "C": 54
+  },
+  "exact_checked_identities": [
+    "P symmetric, diagonalzero, P^2=P",
+    "M=I+P, M^2=M, PM=0",
+    "BB^T=M",
+    "C=PB, CC^T=0",
+    "rank(P)=54,rank(M)=45,rank(B)=99,rank(C)=54"
+  ],
+  "controls": [
+    "I54-I54 has rank54 and zero Gram",
+    "Changed duplicate factor column breaks BB^T=M",
+    "Changed projection diagonal breaks P^2=P"
+  ],
+  "refuted_statement": "For every factor B of a rank45 complementary projector M, C=(I-M)B and CC^T=0 imply rank(C)<=27 because the codomain has dimension54.",
+  "rejected_argument_originator": "/root/structural",
+  "raw_counterexample_originator": "/root",
+  "verifier": "/root/structural",
+  "shared_code": "No producer code imported; only budget/deadline helper and standard library. Independent scalar dot-product matrix multiplication and integer-bitset row elimination.",
+  "target_bound_status": "UNKNOWN",
+  "mathematical_scope": "Generic binary projection/factor implication only. Synthetic B contains columns of weights0,1,2,3 and does not satisfy the actual linear3uniform7regular triangle-incidence domain. No refutation of a target-specific rank72 statement, existence or nonexistence.",
+  "target_resolution": false,
+  "elapsed_seconds": 0.0629999999946449,
+  "deadline": {
+    "elapsed_seconds": 0.0629999999946449,
+    "remaining_seconds": 19.937000000005355,
+    "review_remaining_seconds": 1799.9370000000054,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 161197.187,
+    "review_deadline_at": 162977.187,
+    "completed_reviews": 0
+  }
+}

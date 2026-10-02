@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "invocation_id": "b9be8aad5fca458ebe5a2ab6c089723f",
+  "timestamp": "2026-10-02T16:07:58.905937+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-c",
+    "import hashlib,json,pathlib; paths=['acceleration/results/20261003_rooted8_unrestricted_precontrols02/summary.json','acceleration/results/20261003_rooted8_unrestricted_precontrols_supervisor02/summary.json','acceleration/results/20261003_rooted8_unrestricted_source_check02.json']; pathlib.Path('acceleration/results/20261003_rooted8_unrestricted_identity01.json').write_text(json.dumps({p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()for p in paths},indent=2)+'\\n')"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 30.0,
+  "allocation_reason": "Read-only identities for frozenV2 unrestrictedroot8 precontrols and source report before parent review",
+  "success_criterion": "Save sourcecheck/calibration/receipt SHA256 closure",
+  "verification_criterion": "Metadata only, no independent mathematical promotion or modelbuild",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 5,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}
