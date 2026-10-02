@@ -1,0 +1,545 @@
+{
+  "controls": [
+    {
+      "label": "known_rook9_positive",
+      "accepted": true,
+      "full_matrix": {
+        "domain_valid": true,
+        "domain_error_count": 0,
+        "domain_examples": [],
+        "exact_pair_residual_energy": 0,
+        "srg_valid": true,
+        "identity_mismatch_count": 0,
+        "identity_examples": [],
+        "ordered_entries_checked": 81,
+        "parameters": [
+          9,
+          4,
+          1,
+          2
+        ],
+        "arithmetic": "Python integer scalar matrix multiplication"
+      }
+    },
+    {
+      "label": "rook9_zero_rejected_as_target99",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "full99 integer SRG identity veto",
+      "diagnostic": "full99 integer SRG identity veto"
+    },
+    {
+      "label": "corrupted_matrix_loop",
+      "rejected": true,
+      "result": {
+        "domain_valid": false,
+        "domain_error_count": 2,
+        "domain_examples": [
+          [
+            "diagonal",
+            0
+          ],
+          [
+            "degree",
+            0,
+            5
+          ]
+        ],
+        "exact_pair_residual_energy": 4,
+        "srg_valid": false,
+        "identity_mismatch_count": 9,
+        "identity_examples": [
+          [
+            0,
+            0,
+            5,
+            3
+          ],
+          [
+            0,
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            2,
+            1
+          ],
+          [
+            0,
+            6,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            2,
+            1
+          ],
+          [
+            3,
+            0,
+            2,
+            1
+          ]
+        ],
+        "ordered_entries_checked": 81,
+        "parameters": [
+          9,
+          4,
+          1,
+          2
+        ],
+        "arithmetic": "Python integer scalar matrix multiplication"
+      }
+    },
+    {
+      "label": "corrupted_matrix_edge_flip",
+      "rejected": true,
+      "result": {
+        "domain_valid": false,
+        "domain_error_count": 2,
+        "domain_examples": [
+          [
+            "degree",
+            0,
+            3
+          ],
+          [
+            "degree",
+            1,
+            3
+          ]
+        ],
+        "exact_pair_residual_energy": 7,
+        "srg_valid": false,
+        "identity_mismatch_count": 16,
+        "identity_examples": [
+          [
+            0,
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            2
+          ],
+          [
+            0,
+            7,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            0,
+            1
+          ]
+        ],
+        "ordered_entries_checked": 81,
+        "parameters": [
+          9,
+          4,
+          1,
+          2
+        ],
+        "arithmetic": "Python integer scalar matrix multiplication"
+      }
+    },
+    {
+      "label": "corrupted_matrix_asymmetry",
+      "rejected": true,
+      "result": {
+        "domain_valid": false,
+        "domain_error_count": 3,
+        "domain_examples": [
+          [
+            "degree",
+            0,
+            3
+          ],
+          [
+            "asymmetry",
+            0,
+            1
+          ],
+          [
+            "asymmetry",
+            1,
+            0
+          ]
+        ],
+        "exact_pair_residual_energy": 4,
+        "srg_valid": false,
+        "identity_mismatch_count": 9,
+        "identity_examples": [
+          [
+            0,
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            2
+          ],
+          [
+            0,
+            7,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            3,
+            4
+          ],
+          [
+            2,
+            1,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            1,
+            2
+          ]
+        ],
+        "ordered_entries_checked": 81,
+        "parameters": [
+          9,
+          4,
+          1,
+          2
+        ],
+        "arithmetic": "Python integer scalar matrix multiplication"
+      }
+    },
+    {
+      "label": "corrupted_matrix_nonbinary",
+      "rejected": true,
+      "result": {
+        "domain_valid": false,
+        "srg_valid": false,
+        "reason": "nonbinary",
+        "ordered_entries_checked": 0
+      }
+    },
+    {
+      "label": "corrupted_matrix_shape",
+      "rejected": true,
+      "result": {
+        "domain_valid": false,
+        "srg_valid": false,
+        "reason": "shape",
+        "ordered_entries_checked": 0
+      }
+    },
+    {
+      "label": "valid99_domain_nonzero_object",
+      "accepted_as_domain": true,
+      "accepted_as_srg": false,
+      "result": {
+        "domain_valid": true,
+        "domain_error_count": 0,
+        "domain_examples": [],
+        "exact_pair_residual_energy": 19800,
+        "srg_valid": false,
+        "identity_mismatch_count": 6732,
+        "identity_examples": [
+          [
+            0,
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            3,
+            2
+          ],
+          [
+            0,
+            3,
+            4,
+            1
+          ],
+          [
+            0,
+            4,
+            6,
+            1
+          ],
+          [
+            0,
+            6,
+            3,
+            2
+          ],
+          [
+            0,
+            7,
+            6,
+            1
+          ],
+          [
+            0,
+            8,
+            5,
+            2
+          ],
+          [
+            0,
+            9,
+            0,
+            2
+          ]
+        ],
+        "ordered_entries_checked": 9801,
+        "parameters": [
+          99,
+          14,
+          1,
+          2
+        ],
+        "arithmetic": "Python integer scalar matrix multiplication"
+      }
+    },
+    {
+      "label": "nonzero99_matrix_with_corrupt_zero_label",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "full99 integer SRG identity veto",
+      "diagnostic": "full99 integer SRG identity veto"
+    },
+    {
+      "label": "corrupted_state_triple",
+      "rejected": true,
+      "exception": "CheckError",
+      "expected_stage": "DOMAIN",
+      "diagnostic": "DOMAIN: linear pair uniqueness"
+    },
+    {
+      "label": "corrupted_state_score",
+      "rejected": true,
+      "exception": "CheckError",
+      "expected_stage": "ENERGY",
+      "diagnostic": "ENERGY: exact current score"
+    },
+    {
+      "label": "corrupted_state_cache",
+      "rejected": true,
+      "exception": "CheckError",
+      "expected_stage": "CACHE",
+      "diagnostic": "CACHE: all exact common-neighbor cache entries"
+    },
+    {
+      "label": "corrupted_state_counter",
+      "rejected": true,
+      "exception": "CheckError",
+      "expected_stage": "COUNTERS",
+      "diagnostic": "COUNTERS: counter order"
+    },
+    {
+      "label": "corrupted_state_rng",
+      "rejected": true,
+      "exception": "CheckError",
+      "expected_stage": "RNG",
+      "diagnostic": "RNG: nonzero uint64 RNG"
+    },
+    {
+      "label": "corrupt_raw_binary_character",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "raw adjacency literal binary rows",
+      "diagnostic": "raw adjacency literal binary rows"
+    },
+    {
+      "label": "unrelated_error_cannot_satisfy_domain_control",
+      "rejected_as_calibration": true,
+      "diagnostic": "CONTROL: exact expected CheckError stage DOMAIN"
+    },
+    {
+      "label": "corrupt_local_rng_before",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "trace nonzero RNG words",
+      "diagnostic": "trace nonzero RNG words"
+    },
+    {
+      "label": "corrupt_local_rng_after",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "trace nonzero RNG words",
+      "diagnostic": "trace nonzero RNG words"
+    },
+    {
+      "label": "corrupt_local_temperature",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "trace temperature schedule",
+      "diagnostic": "trace temperature schedule"
+    },
+    {
+      "label": "corrupt_local_rng_transition",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "local recorded RNG transition",
+      "diagnostic": "local recorded RNG transition"
+    },
+    {
+      "label": "exact_sparse_population_positive",
+      "accepted": true,
+      "steps": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "label": "corrupt_sparse_population_missing",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "exact predeclared sparse trace selection",
+      "diagnostic": "exact predeclared sparse trace selection"
+    },
+    {
+      "label": "corrupt_sparse_population_duplicate",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "exact predeclared sparse trace selection",
+      "diagnostic": "exact predeclared sparse trace selection"
+    },
+    {
+      "label": "corrupt_sparse_population_out_of_range",
+      "rejected": true,
+      "exception": "ValueError",
+      "expected_message": "exact predeclared sparse trace selection",
+      "diagnostic": "exact predeclared sparse trace selection"
+    },
+    {
+      "label": "exact_complete_anchor_positive",
+      "accepted": true,
+      "fully_replayed_steps": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "label": "wrong_complete_rng_anchor",
+      "rejected": true,
+      "exception": "CheckError",
+      "expected_stage": "REPLAY",
+      "diagnostic": "REPLAY: raw transition tj"
+    },
+    {
+      "label": "corrupt_anchored_delta",
+      "rejected": true,
+      "exception": "CheckError",
+      "expected_stage": "REPLAY",
+      "diagnostic": "REPLAY: raw transition delta"
+    },
+    {
+      "label": "gap_not_silently_bridged",
+      "accepted": true,
+      "fully_replayed_steps": [
+        0
+      ],
+      "unreplayed_steps": [
+        2
+      ]
+    },
+    {
+      "label": "same_objective_diagnostic_partition",
+      "accepted": true,
+      "diagnostics": {
+        "objective": "SRG_SQUARED_PAIR_RESIDUAL_V1",
+        "unit": "unordered vertex pairs",
+        "adjacent_pairs": 693,
+        "nonadjacent_pairs": 4158,
+        "adjacent_common_neighbor_histogram": {
+          "1": 99,
+          "2": 198,
+          "4": 198,
+          "6": 198
+        },
+        "nonadjacent_common_neighbor_histogram": {
+          "0": 1881,
+          "2": 1386,
+          "3": 297,
+          "4": 198,
+          "5": 297,
+          "6": 99
+        },
+        "E_lambda": 6930,
+        "E_mu": 12870,
+        "exact_energy": 19800,
+        "interpretation": "Exact diagnostic components of the same E; not a new search objective or bound."
+      }
+    }
+  ],
+  "target_valid99_fixture": null,
+  "target_valid99_fixture_null_reason": "No independently verified99 target graph available; rook9 is a different parameter control."
+}

@@ -1,4 +1,23 @@
-# Verified continuation checkpoint — 2026-10-02 JST
+# Latest verified continuation checkpoint — 2026-10-02 JST
+
+The [thirty-third milestone](docs/RESEARCH_20261002_THIRTYTHIRD_WAVE.md) records
+six new scoped revisions: root7 necessary equations and rational witnesses,
+complete conditional root8 catalogue/equations, construction controls and one
+saved non-SRG graph. Its frozen324-record ledger has317 VERIFIED/CLEAR, three
+CANDIDATE and four REFUTED. No new exclusion or target resolution is added.
+The construction graph has exact residual3034. All210 structural profile
+records remain UNKNOWN after four full and four weaker numerical corner guides;
+none has an exact certificate. The producer parity screen adds no exclusion.
+The fixed-support campaign remains380 checked cases of792, with412 unresolved.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+Research authorization remains active. Next are independently gated weighted
+construction, saved-support exact reconstruction and checkable modular primals.
+Global prism absence remains UNKNOWN; no target automorphism is assumed.
+This document does not observe live workers. Completed-run receipts and exact
+restart procedures are linked by the milestone. Earlier dated states follow.
+
+# Earlier verified continuation checkpoint — 2026-10-02 JST
 
 The [thirty-second milestone](docs/RESEARCH_20261002_THIRTYSECOND_WAVE.md) records
 six additional scoped VERIFIED/CLEAR revisions, with no new exclusion. The root
