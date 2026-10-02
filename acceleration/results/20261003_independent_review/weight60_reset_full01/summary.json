@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-10-02T16:57:33.924683+00:00",
+  "verifier": "/root",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261003_weight60_reset_state_v1.py",
+    "check",
+    "--seconds",
+    "100",
+    "--source-state",
+    "acceleration/results/20261002_hypergraph_weight60_pilot01/native/final.state",
+    "--source-state-sha256",
+    "0dc37fdc2dd58fb78f55b88fd8e2ee7c43a83d32d1cc7897591151d5aca6a1bb",
+    "--reset-state",
+    "acceleration/results/20261003_weight60_graph_reset01/reset.state",
+    "--reset-state-sha256",
+    "f9cd59ab9d9bd3dcb89b6fab32784f17d3c744e047ebe23d212e2fd4f5bf6665",
+    "--producer-report",
+    "acceleration/results/20261003_weight60_graph_reset01/summary.json",
+    "--producer-report-sha256",
+    "983af04f99de4242d53ed6ca306770adfac8223c04d87c93777e3272f2b2b7b8",
+    "--calibration",
+    "acceleration/results/20261003_independent_review/weight60_reset_calibration01/summary.json",
+    "--calibration-sha256",
+    "5e93291da1bf0b3acecc4549a8a631e682c2a6e835e695a42a0a40cd19a17d23",
+    "--out",
+    "acceleration/results/20261003_independent_review/weight60_reset_full01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "source_commit": "43175e0a96ed4abbf6b03e16b67adff6f6f40b20",
+  "inputs_sha256": {
+    "acceleration/audit_20261003_weight60_reset_state_v1.py": "078524dd42270f10ee7ea42616101dc9d2e1e09bdfabc2ff654a2ec78655f7c8",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/results/20261003_independent_review/weight60_reset_calibration01/summary.json": "5e93291da1bf0b3acecc4549a8a631e682c2a6e835e695a42a0a40cd19a17d23",
+    "acceleration/results/20261002_hypergraph_weight60_pilot01/native/final.state": "0dc37fdc2dd58fb78f55b88fd8e2ee7c43a83d32d1cc7897591151d5aca6a1bb",
+    "acceleration/results/20261003_weight60_graph_reset01/reset.state": "f9cd59ab9d9bd3dcb89b6fab32784f17d3c744e047ebe23d212e2fd4f5bf6665",
+    "acceleration/results/20261003_weight60_graph_reset01/summary.json": "983af04f99de4242d53ed6ca306770adfac8223c04d87c93777e3272f2b2b7b8"
+  },
+  "target_resolution": "NONE",
+  "shared_components": [
+    "V2 serialized format and native splitmix seed specification; Python integer runtime and command deadline. No producer imports."
+  ],
+  "status": "INDEPENDENT_WEIGHT60_GRAPH_ONLY_RESET_V1_PASS",
+  "producer": "/root/native_driver",
+  "controls": {
+    "known_valid": "srg(9,4,1,2) rook graph, all81 scalar entries",
+    "positive_controls": 2,
+    "strict_negative_controls": 15,
+    "producer_output_inspected": false,
+    "limitation": "Finite controls cover dense fixture objects and strict complete serialized records; not a general parser proof."
+  },
+  "complete_reset_scalar_entries": 39204,
+  "parameters": {
+    "seed": 99032061,
+    "mix_steps": 0,
+    "schedule_steps": 80000000,
+    "t_start": 8.0,
+    "t_end": 0.1,
+    "forced": 0,
+    "step": 0,
+    "admissible": 0,
+    "accepted": 0,
+    "best_updates": 0
+  },
+  "graphs_preserved": [
+    "current",
+    "best",
+    "first_current",
+    "first_best"
+  ],
+  "lambda_energy": 0,
+  "mu_energy": 3608,
+  "identity_mismatches": 4934,
+  "producer_status_recorded": "WEIGHT60_GRAPH_ONLY_RESET_V1_OUTPUT_PENDING_INDEPENDENT_CHECK",
+  "limitations": [
+    "One exact derivative; graph-only seed/config reset, not RNG trajectory continuation.",
+    "No discovery, general exclusion, trajectory completeness, or performance claim."
+  ],
+  "deadline": {
+    "elapsed_seconds": 0.34399999998277053,
+    "remaining_seconds": 99.65600000001723,
+    "review_remaining_seconds": 1799.6560000000172,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 165370.64,
+    "review_deadline_at": 167070.64,
+    "completed_reviews": 0
+  }
+}
