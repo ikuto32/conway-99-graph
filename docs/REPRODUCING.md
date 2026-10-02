@@ -1,6 +1,20 @@
 # 取得と検証
 
+## Explicit resume, 2026-10-02 JST
+
+Read [the policy-aware continuation](RESUME_20261002_POLICY_AWARE.md) for the
+current authorized execution plan. Research resumes from the newer October 1
+checkpoint. The saved historical argv below must not be executed unchanged.
+Fresh driver/checker controls and artifact authentication precede native work.
+
 ## User stop, 2026-10-01 JST
+
+The [current CPU/GPU computation policy](COMPUTE_POLICY.md) replaces inherited
+120-second defaults for new work. Historical sources and run records are
+unchanged. Each command has its own maximum 21,600-second allowance, including
+its computational preparation and children; separate commands are not summed.
+A new policy-aware execution plan supersedes
+the historical saved resume argv. Research remains stopped.
 
 Read the [current stop/restart record](STOP_20261001_EIGHT_COORDINATE.md) first.
 Research is stopped. The [saved exact resume commands](../acceleration/results/20261001_user_stop/resume_plan.json)

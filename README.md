@@ -1,5 +1,12 @@
 # Conway 99-graph research
 
+**2026-10-02 JST: explicit user instruction resumed research.** Read the
+[current policy-aware continuation](docs/RESUME_20261002_POLICY_AWARE.md).
+The starting checkpoint has 308 claims and 316 checked literal exclusions on
+one fixed support; the unrestricted target remains UNKNOWN. The October 1 stop
+records below are historical. New native execution requires independently
+checked controls for the changed driver and fresh artifact authentication.
+
 強正則グラフ `srg(99,14,1,2)` の構成・非存在証明を調べたコード、実験記録、独立検証資料の研究アーカイブです。
 
 **このプロジェクトでは、条件を満たす 99 頂点グラフも、一般の非存在証明も得られていません。** 限定条件下の排除、部分グラフ、緩和問題の解、探索のタイムアウトは、問題全体の解決を意味しません。
