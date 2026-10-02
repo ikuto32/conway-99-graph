@@ -1,0 +1,74 @@
+{
+  "status": "INDEPENDENT_DRAT_RESTART_STREAMING_SOURCE_REVIEW_V2_PASS",
+  "timestamp": "2026-10-02T10:31:32.368288+00:00",
+  "verifier": "/root/checkpoint_audit",
+  "source_commit": "28440b31f4effee3b25e30259110acc734695bf0",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/review_20261002_drat_restart_stream_v1.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/audit_20261002_drat_restart_artifact_v2.py": "3693f1d77b60f9c095cd6afa0f6b67a9c048b4ad6336b9454f30ce459eb6156e",
+    "acceleration/results/20261002_drat_restart_stream_calibration02/summary.json": "e4013fdff6233f36b603666fd846946e73b7b0a446e3c267b0b131b6fbb6f8f9",
+    "acceleration/results/20261002_drat_restart_stream_calibration_supervision02/summary.json": "855608d23edb4bc182af9b4b9bfadeacd26f6e8ffb2787a0b40f5b74a7a36cd9",
+    "acceleration/audit_20261002_drat_restart_artifact_v1.py": "025b9cbd27fc16e53ef9259dcc898eca5865af8135085482189becb8ef23da18",
+    "acceleration/audit_20261002_drat_restart_controls_v1.py": "a48a3798f4991400aba904243b26c6ffbd96b776b23a9f44dc701ab4f452748d",
+    "acceleration/drat_restart_20261002_v1.cpp": "fded432e0e7b694b9cab7db0b41cea923342abbc68939878ae726eadb38c144f",
+    "build/rook-drat-checker/drat-trim.c": "82835512d4eda7dee1e0e3f610a0672fa1d216ea91246bcb576022020fe18f4c",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/review_20261002_drat_restart_stream_v1.py": "d43fcff84aec684291f3fed69b52de9df0678f0d989ed4ef6965a8ebf01d7052"
+  },
+  "scope": "Read-only checking-profile, algorithm and frozen calibration review; additional independently hand-derived tiny state controls. No substantial original input or candidate state replay.",
+  "reviewed_properties": [
+    "Canonical sorted unique signed literals are stored as complete packed int32 bytes; Counter equality has no digest-only clause comparison.",
+    "Counter keys retain first-seen order and zero multiplicities; addition restores one copy and deletion removes one existing non-small copy.",
+    "Default pinned backward DRAT parser ignores normalized size<=1 deletion at drat-trim.c:1192; the candidate profile discloses this restriction.",
+    "Every retained line preserves raw order/pivot bytes, with only the explicit EOF newline or final unterminated-record transformation.",
+    "All derivative clause occurrences, variable bound, statistics and final byte exhaustion are checked; no sampled state comparisons.",
+    "Version2 malformed controls require ParseSyntaxError at the input stage; v1's overly broad ValueError/KeyError catch is preserved and does not approve v2."
+  ],
+  "calibration": {
+    "valid_state_controls": 6,
+    "malformed_raw_controls": 6,
+    "malformed_rejection_stage": "INPUT_SYNTAX",
+    "corrupted_artifact_controls": [
+      "changed_clause",
+      "changed_prefix",
+      "wrong_boundary",
+      "changed_profile",
+      "wrong_count"
+    ],
+    "supervisor_reaped_group_empty": true
+  },
+  "additional_controls": {
+    "hand_derived_multiset": "PASS",
+    "malformed_records_rejected": [
+      "zero_then_extra_EOF",
+      "garbage_EOF",
+      "complete_extra_token",
+      "extra_variable",
+      "integer_overflow"
+    ]
+  },
+  "expected_resource_population": {
+    "unique_recorded_clauses": 8502107,
+    "stored_literals": 35738534,
+    "interpretation": "The Counter retains all recorded identities including deleted ones, beyond the 3069024 active occurrences; budget must include this population."
+  },
+  "shared_components": [
+    "Additional tiny controls execute the reviewed streaming checker itself; this is engineering source review, not another independent substantial artifact checker.",
+    "Python integers/Counter/struct, pinned environment and deadline/supervisor."
+  ],
+  "limitations": [
+    "No substantial 431.5MB input replay performed by this review.",
+    "No RAT/RUP, equisatisfiability, model reconstruction or target resolution established."
+  ],
+  "target_resolution": false,
+  "rat_rup_checked": false,
+  "equisatisfiability_asserted": false,
+  "artifact_availability": "LOCAL_ONLY"
+}

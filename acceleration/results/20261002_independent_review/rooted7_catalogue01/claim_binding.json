@@ -1,0 +1,82 @@
+{
+  "id": "C-UNRESTRICTED-ROOTED7-NONEDGE-LOCAL-CATALOGUE-COVERAGE",
+  "revision": 1,
+  "claim_revision": 1,
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "Full exhaustion of all1,048,576labelled simple seven-vertex graphs with fixed ordered nonadjacent roots and local common-neighbor caps1/2 gives exactly the saved2770free-label rooted classes; absence of any induced triangular prism gives exactly the saved2750-class subcatalogue.",
+  "scope": {
+    "description": "Exact finite catalogue coverage only; small flagged-graph permutation classes do not assume automorphisms of a hypothetical target. The prism-free subcatalogue is applicable to a target only conditional on that unestablished premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Finite simple labelled seven-vertex graphs with fixed ordered nonadjacent roots obey the local adjacent/nonadjacent common-neighbor caps1/2.",
+    "Only permutations of the five free labels define the catalogue coordinates; no automorphism of a hypothetical target is assumed.",
+    "The2750-class subcatalogue uses the explicit no-induced-triangular-prism predicate; this predicate is not proved for an unrestricted target."
+  ],
+  "dependencies": [],
+  "dependency_reason": "Independent full labelled-mask exhaustion, without the producer's rooted6 augmentation or imported catalogue completeness premise.",
+  "premise_state": {
+    "no_induced_triangular_prism": "UNKNOWN",
+    "reason": "Only subcatalogue membership is verified; no unrestricted target premise is established."
+  },
+  "verifier": "/root/checkpoint_audit",
+  "producer": "/root/structural",
+  "method": "independent_derivation",
+  "created_at": "2026-10-02T11:13:19.647683+00:00",
+  "updated_at": "2026-10-02T11:13:19.647683+00:00",
+  "verification_timestamp": "2026-10-02T11:07:18.471519+00:00",
+  "source_commit": "28440b31f4effee3b25e30259110acc734695bf0",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_rooted7_catalogue_v1.py",
+    "--seconds",
+    "270",
+    "--out",
+    "acceleration/results/20261002_independent_review/rooted7_catalogue01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20261002_rooted7_extension_model/catalogue.json": "a01649d78eccfcb93c85ff2a86c84463458c120fd22cebaf34b8e573363084d5",
+    "acceleration/audit_20261002_rooted7_catalogue_v1.py": "ef7cb343195407f3cf7c7a3a4c49f57f2862c9e74e778e1cd67e35a93b10d442",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/results/20261002_independent_review/rooted7_catalogue01/catalogue_audit.json": "90021201fd09705b1121601ec788b66c5e570465dc8311a553696c985a614ea1",
+    "acceleration/results/20261002_independent_review/rooted7_catalogue01/summary.json": "3355afb38656eadc83eff6e0db3818eded9621f890c9d46f489fdb0324370758"
+  },
+  "report": "acceleration/results/20261002_independent_review/rooted7_catalogue01/summary.json",
+  "report_sha256": "3355afb38656eadc83eff6e0db3818eded9621f890c9d46f489fdb0324370758",
+  "controls": {
+    "known_prism_detected": true,
+    "missing_prism_edge_rejected": true,
+    "common_neighbor_cap_violation_rejected": true,
+    "omitted_catalogue_members_rejected": [
+      "complete_locally_admissible_masks",
+      "prismfree_masks"
+    ]
+  },
+  "shared_components": [
+    "Python bit integers, permutations, JSON/SHA-256, locked environment and contained deadline; no discovery or archived catalogue code imported."
+  ],
+  "limitations": [
+    "The rooted7 marked/rerooted necessary model and any numerical/certified LP conclusions are not checked by this catalogue audit.",
+    "Prism-free applicability to a hypothetical target is conditional; the premise remains UNKNOWN.",
+    "No construction, exclusion, novelty or target-wide search coverage percentage is established."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Exact workspace inputs_sha256 paths; public retrieval/external review not established.",
+  "binding_creation": {
+    "script": "acceleration/record_20261002_rooted7_catalogue_binding_v1.py",
+    "sha256": "0dfa47ad8dd25c25d6dbb6ffebd6bd61269a6c47c139abd6c0ade1f260c590ae",
+    "scope": "Revision bookkeeping only; no marked/reroot model, LP or target approval."
+  }
+}

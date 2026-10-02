@@ -1,13 +1,14 @@
 # Conway 99-graph research
 
-**2026-10-02 JST verified checkpoint:** [thirty-first milestone](docs/RESEARCH_20261002_THIRTYFIRST_WAVE.md).
-Four new scoped claims include 64 complete independently checked literal
-exclusions. The root ledger has 312 claims: 305 VERIFIED/CLEAR, three CANDIDATE
-and four REFUTED. The frozen fixed-support campaign has 380 checked cases of
-792; no unrestricted resolution follows. Target resolution: UNKNOWN. Overall
-search coverage: UNKNOWN; no validated denominator. Full public recovery of
-the newest raw evidence closure remains unestablished. Research authorization
-is active; live execution requires fresh process observations.
+**2026-10-02 JST verified checkpoint:** [thirty-second milestone](docs/RESEARCH_20261002_THIRTYSECOND_WAVE.md).
+Six additional scoped identities and engineering results add no exclusions.
+The root ledger has 318 claims: 311 VERIFIED/CLEAR, three CANDIDATE and four
+REFUTED. The frozen fixed-support campaign remains at 380 checked literal cases
+of 792. The unrestricted continuation stopped with UNKNOWN and a saved partial
+trace. Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no
+validated denominator. The batch05 direct raw package passed complete local
+byte recovery; immutable public availability is tracked separately. Research
+authorization is active; live execution requires fresh process observations.
 
 **2026-10-02 JST: explicit user instruction resumed research.** Read the
 [current policy-aware continuation](docs/RESUME_20261002_POLICY_AWARE.md).

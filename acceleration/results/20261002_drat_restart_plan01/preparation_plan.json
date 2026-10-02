@@ -1,0 +1,52 @@
+{
+  "schema": "DRAT_RESTART_PREPARATION_PLAN_V1",
+  "created_at": "2026-10-02T10:20:41.897388+00:00",
+  "source_commit": "2fdd9354d04641c64260d0221c7867b07c4b7405",
+  "question": "Recover the exact candidate active clause multiset after complete records of the preserved300-second unrestricted proof prefix, without repeating native inference.",
+  "scope": "Original normalized unrestricted full99 CNF; derivative records are syntactic candidate state until independently checked. Prefix RAT/RUP validity and equisatisfiability are UNKNOWN.",
+  "success_criterion": "Produce complete derivative restart.cnf and retained_prefix.drat; preserve exact original bytes and receipt; account for every kept/dropped byte and clause occurrence; bounded resource stop and independently reconstruct full state before native use.",
+  "falsification_criterion": "Any internal malformed record, variable outside original universe, multiplicity/deletion mismatch, non-tail byte alteration, incorrect timeout/profile/source binding, or incomplete independent state reconstruction vetoes compute use.",
+  "independent_verification_criterion": "Different implementation reconstructs every original/retained-proof clause occurrence under the pinned profile and compares the whole active multiset and prefix bytes, with positive/corrupted controls. A later UNSAT requires complete independent combined-prefix+new-proof replay against original CNF, never derivative-only proof.",
+  "baseline_and_uncertainty": "Historical300-second original attempt returnedUNKNOWN and preserved346,616,832 proof bytes. Extraction reads431,536,766 input bytes once; expected hundreds of MB to few GiB parser memory has not been measured. Compare measured cost/state size with a newly allocated1800-second base run; no calibrated success likelihood or speedup is claimed.",
+  "checker_profile": "PINNED_BACKWARD_UNSAT_SINGLE_COPY_IGNORE_SMALL_DELETE_V1",
+  "original_variables": 1186500,
+  "original_clauses": 4136454,
+  "proposed_allocation": {
+    "outer_seconds": 960,
+    "producer_seconds": 900,
+    "parser_seconds": 800,
+    "address_space_bytes": 8589934592,
+    "host_free_reserve_bytes": 34359738368,
+    "ext4_free_reserve_bytes": 8589934592,
+    "rationale": "One exact linear scan/state update over84.9MB CNF+346.6MB partialDRAT, with time for output/hash/checkpointing; measured progress may justify an earlier stop."
+  },
+  "partial_tail_policy": "Keep original partial trace immutable; derivative drops only final unterminated raw record. Preserve all prior proof bytes/pivots; explicitly account for optional LF after an already complete EOF record.",
+  "acceptance": "Exact integers and bytes; parser success and UNKNOWN suffix give no mathematical exclusion.",
+  "status": "CANDIDATE",
+  "review_state": "NEEDS_RECHECK",
+  "rat_rup_checked": false,
+  "equisatisfiability_asserted": false,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "automatic_resume": false,
+  "original_cnf": {
+    "path": "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf",
+    "sha256": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+    "bytes": 84919934
+  },
+  "original_partial_proof": {
+    "path": "acceleration/results/20260930_unrestricted_native_pilot/main/proof.drat",
+    "sha256": "11abdc29b502b8b09d4dc6ac3e9f03fa7ea8947496bc8e538a5043d113272f22",
+    "bytes": 346616832
+  },
+  "historical_native_receipt": {
+    "path": "acceleration/results/20260930_unrestricted_native_pilot/main/solver.receipt.json",
+    "sha256": "9a6a2a0bbfb35d8ccbda9aa09e7a47522ec6fc3d7ad8c48e045d47bcc599686e",
+    "bytes": 1555
+  },
+  "encoding_gate": {
+    "path": "acceleration/results/20260930_independent_review/unrestricted_full99_cnf/summary.json",
+    "sha256": "2d6702d0f60341378fcf6b5b0808e6c34ea6a1025775cfae60500626f199ef58",
+    "bytes": 15962
+  }
+}
