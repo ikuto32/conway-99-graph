@@ -1,0 +1,7 @@
+# Wave35 checkpoint generator v1
+
+Generate only from the frozen334-entry root ledger, its329-entry pre-registration baseline and saved independent reports. Require five exact declared r1 VERIFIED/CLEAR additions, unchanged prior material records, original-mod3 complete scalar checks with zero exclusions, and the completed contained solve receipt. Counts describe claim records, literal fixed-support cases, local count profiles, or scalar row components explicitly; none gives a target-wide percentage.
+
+New Python tool uses the existing pinned root uv.lock. Setup/execution: set UV_PROJECT_ENVIRONMENT=build/research-venv; uv run --locked --offline --cache-dir .uv-cache-20260917 python acceleration/run_compute_command.py with the saved argv, then the absolute bundled research Python worker. Allocate120seconds outer with10shutdown reserve: the comparable prior checkpoint generator completed2.531seconds. The generator copies an exact ledger snapshot, writes checkpoint paths/hashes/counts and the dated milestone; it observes no live workers and repeats no mathematical proof.
+
+Success is an exact internally consistent report with334claims/327VERIFIED and the five recorded scopes, no new exclusions and targetUNKNOWN. A separate frozen-ledger impact review remains required; any later publication change needs byte authentication. Report source hash, exact command/cwd, starting ledger hash and timestamp in saved receipts. No objective change, checker approval or resource extension is performed here.

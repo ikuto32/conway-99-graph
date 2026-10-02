@@ -1,0 +1,451 @@
+{
+  "id": "C-PRISMFREE-ROOTED8-ORIGINAL-LITERAL-GF3-THREE-PRIMALS",
+  "revision": 1,
+  "claim_revision": 1,
+  "kind": "construction",
+  "basis": [
+    "COMPUTED",
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For the exact frozen23019-column85874-row rooted8 ORIGINAL integer operator, the three recorded complete ternary vectors x_const,x_a,x_b satisfy respectively all constant,a,b affine RHS components modulo3. Consequently for every integer pair(a,b), x_const+(a mod3)*x_a+(b mod3)*x_b, reduced coordinatewise modulo3, solves that fixed literal operator. In particular all210 frozen profiles a=0..20,b=0..9 survive this modular consistency test, with zero exclusions.",
+  "scope": {
+    "description": "Complete literal modular consistency certificate for one pinned local count operator. No rank, integer/nonnegative feasibility, root or graph realization, unrestricted target exclusion or target resolution.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE",
+    "profile_population": {
+      "unit": "integer parameter pair",
+      "a_inclusive": [
+        0,
+        20
+      ],
+      "b_inclusive": [
+        0,
+        9
+      ],
+      "count": 210,
+      "excluded": 0
+    },
+    "prism_free_target_interpretation": "Conditional necessary graph model only; global prism absence remains UNKNOWN. Literal modular statement concerns the pinned matrix itself."
+  },
+  "assumptions": [
+    "Use exactly the frozen ORIGINAL signed integer operator, variable ordering and affine RHS ordering; repeated literal terms are summed exactly.",
+    "Interpret linear combinations over F3, not as integer nonnegative flag counts.",
+    "Positive row contents1,2,4 and normalized literal stream are independently checked identity evidence; primal verification uses ORIGINAL coefficients without division.",
+    "Any graph-level interpretation requires the independently checked conditional necessary encoding and UNKNOWN global no-induced-prism premise; no target automorphism."
+  ],
+  "dependencies": [
+    {
+      "id": "C-PRISMFREE-ROOTED8-MARKED-UNIVERSAL5-PRODUCT-NECESSARY-ENCODING",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-PRISMFREE-ORDERED-NONEDGE-ROOTED6-INTEGER-DOMAIN",
+      "revision": 1,
+      "relation": "coverage"
+    }
+  ],
+  "dependency_reason": "Dependencies supply conditional graph interpretation and210profile population; original scalar certificate validity is directly bound to raw operator and vectors.",
+  "created_at": "2026-10-02T14:30:32.372697+00:00",
+  "updated_at": "2026-10-02T14:30:32.372697+00:00",
+  "source_commit": "cfef855d7cec5b42a2508e664ff8308270814756",
+  "producer": "/root/native_driver",
+  "verifier": "/root/structural",
+  "method": "independent_artifact_check",
+  "verification_timestamp": "2026-10-02T14:28:22.990772+00:00",
+  "report": "acceleration/results/20261002_independent_review/gf3_full_artifact01/summary.json",
+  "report_sha256": "5ea4c3115e06c748baf23122f9b7d0c8d8260000787fa377daea8f4d6cf95d08",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_gf3_full_artifact_v1.py",
+    "check",
+    "--seconds",
+    "260",
+    "--out",
+    "acceleration/results/20261002_independent_review/gf3_full_artifact01",
+    "--summary",
+    "acceleration/results/20261002_rooted8_gf3_solve01/summary.json",
+    "--summary-sha256",
+    "f795f564c0b555175622232f4728f9a1e3096f00403d3180aec79f7047fd942d",
+    "--input-case",
+    "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json",
+    "--input-case-sha256",
+    "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+    "--calibration",
+    "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json",
+    "--calibration-sha256",
+    "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/audit_20261002_gf3_full_artifact_v1.py": "b57176cccf0a39dfd6a2bc8e2380ff8feed70dcb086d57593edbdb7ee72e807b",
+    "docs/AUDIT_20261002_GF3_FULL_ARTIFACT_PROTOCOL.md": "ba0da2f950978633f2a70799ce574594e3718540a1125b1e8437f7a003615889",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/audit_20261002_gf3_scalar_v1.py": "698eb9bbe8b1ba6a257e8e6226a9e49517e17e966ce64afb11b98d17be08bafa",
+    "acceleration/results/20261002_independent_review/gf3_scalar_calibration01/summary.json": "8948291c910fe4532024ce883fc0a030a3db32a0c5042e226683dbe9ba308632",
+    "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json": "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b",
+    "acceleration/results/20261002_rooted8_universal5_product_model02/model.json": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+    "acceleration/results/20261002_rooted8_gf3_solve01/summary.json": "f795f564c0b555175622232f4728f9a1e3096f00403d3180aec79f7047fd942d",
+    "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json": "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+    "acceleration/prepare_20261002_rooted8_gf3_v2.py": "7f309d0442aa9121479f3068da6f09115c33c852a13b9dd59a70fb93832cde00",
+    "acceleration/rooted8_gf3_20261002_v1.cpp": "4859dfa8d61989a2a3373dcdbf605a7572a3ebdc9a4b6b97a92fd24230fa196b",
+    "acceleration/prepare_20261002_rooted8_gf3_v2_spec.md": "c740b58c56c59c358591b7d75eeb31e33acf747260158841e96403750f726ede",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+    "acceleration/design_20261002_rooted8_gf3_v2.md": "35c8aeb8585adc5f8ad7f778474affe2adb0c2001c53769a11976ed87a2203e2",
+    "acceleration/plan_20261002_rooted8_gf3_v1.json": "aa6d5c1da01e6be02067cc3217a1980055c3b98829f8773751825bd4eede9c4c",
+    "acceleration/plan_20261002_rooted8_gf3_correction_v2.json": "638afd92edbc876a4d500c12e3614b78057db0582f8e8b2f9130875b0908f43f",
+    "acceleration/results/20261002_rooted8_gf3_solve_supervision01/manifest.json": "01754db883db994d857ce4b7f138f7186ab8f421d71e347a904f92e829a5438d",
+    "acceleration/results/20261002_rooted8_gf3_build02/literal_gf3": "70bc5898fde7498b53a5d4ea5eaf054cc05d2973714e6440dc1c61e47df9cbfd",
+    "acceleration/results/20261002_rooted8_gf3_build02/build_manifest.json": "99c5f86f44bd62d1c8534df889bd5a1da01da423e4a9bc0a3b3a7b35acc138df",
+    "acceleration/results/20261002_independent_review/gf3_native_controls01/summary.json": "e4622abb19498f53591b6fe26d57a9e40b673d4c91231775274c1f2393af4ce8",
+    "acceleration/results/20261002_independent_review/rooted8_row_content01/normalization_manifest.json": "47c9f0158084a1cf04b9ce2f84db93ee748e5e3226d759f276090aa50bdfe91c",
+    "acceleration/results/20261002_independent_review/rooted8_model01/summary.json": "e3158fe17f4a83e5231c90f72c912e5ef37cd6ddc3ce6300f0c6861f9d0ffc4e",
+    "acceleration/results/20261002_rooted8_gf3_solve01/normalized_literal_rows.jsonl": "ddcdc3ae7f9d51a986e99c928901e5da2c621c2dafd25df0507a0db826492f26",
+    "acceleration/results/20261002_rooted8_gf3_solve01/sparse_rows.txt": "7c96d9f6402762f179a4a1d441391845e91920bcbcf5d14a5eec7d1f6d13df5c",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve.receipt.json": "0a02b3a8bde984abd826b5079a161c4ca246dff944edd63842aba8ccb06b442c",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/checkpoint.bin": "c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/native_resources.json": "1b4757a3a3d15ae6f61df52f1bd9ffb32a4905fba5f2804fe30747bacb267875",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/progress.jsonl": "709581dc3c938f0e1b92418c27c186c633152ad6d8262651f156b6f2677fd934",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/result.json": "8544b9a8639ab2014fdf50dcde061ef9d5b49ca8bb3ea5059ba4f33e4a693c20",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/row_residuals.bin": "91612eae981f256969566d11f5df41a093a83922e2d10bfb2cfe1f686d27daae",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_a.trits": "bb3c66b5b23e571be386c5929f28880ce2612efb48d1002b8eda78aa805a8a8e",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_b.trits": "ae896c9269933b55e8ff86ce05f65987dad8b1adcc66627312196a5cf20ef424",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_const.trits": "e3875d00a9f50386736dfcea00a177ab0e078737fa9e4260a2d261f044192367",
+    "acceleration/results/20261002_independent_review/gf3_full_artifact01/summary.json": "5ea4c3115e06c748baf23122f9b7d0c8d8260000787fa377daea8f4d6cf95d08"
+  },
+  "pre_output_calibration": {
+    "path": "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json",
+    "sha256": "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b",
+    "full_output_inspected": false,
+    "fixture_operators": 5,
+    "positive_complete_primal_sets": 4,
+    "positive_original_row_relations": 1,
+    "specific_corrupt_controls": 14
+  },
+  "certificate_artifacts": [
+    {
+      "component": "constant",
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_const.trits",
+      "sha256": "e3875d00a9f50386736dfcea00a177ab0e078737fa9e4260a2d261f044192367",
+      "ternary_coordinates": 23019,
+      "bytes": 23053,
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "component": "a",
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_a.trits",
+      "sha256": "bb3c66b5b23e571be386c5929f28880ce2612efb48d1002b8eda78aa805a8a8e",
+      "ternary_coordinates": 23019,
+      "bytes": 23049,
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "component": "b",
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_b.trits",
+      "sha256": "ae896c9269933b55e8ff86ce05f65987dad8b1adcc66627312196a5cf20ef424",
+      "ternary_coordinates": 23019,
+      "bytes": 23049,
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "normalization": {
+    "raw_model": "acceleration/results/20261002_rooted8_universal5_product_model02/model.json",
+    "raw_model_sha256": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+    "rows": 85874,
+    "columns": 23019,
+    "literal_term_occurrences": 968172,
+    "content_counts": {
+      "1": 82003,
+      "2": 3842,
+      "4": 29
+    },
+    "input_case": "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json",
+    "input_case_sha256": "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+    "normalized_literal_jsonl": "acceleration/results/20261002_rooted8_gf3_solve01/normalized_literal_rows.jsonl",
+    "normalized_literal_jsonl_sha256": "ddcdc3ae7f9d51a986e99c928901e5da2c621c2dafd25df0507a0db826492f26",
+    "sparse_original_mod3_input": "acceleration/results/20261002_rooted8_gf3_solve01/sparse_rows.txt",
+    "sparse_original_mod3_input_sha256": "7c96d9f6402762f179a4a1d441391845e91920bcbcf5d14a5eec7d1f6d13df5c",
+    "independently_checked": "Every raw/content/divided literal hash and exact raw/divided roundtrip, normalized/originalmod3 sparse bytes, complete streams/content census; every primal scalar sum uses original signed coefficients.",
+    "availability": "LOCAL_ONLY",
+    "retrieval": "Current shared checkout contains exact raw paths. Public availability is not claimed before independent publication closure."
+  },
+  "verification": {
+    "bound_claim_id": "C-PRISMFREE-ROOTED8-ORIGINAL-LITERAL-GF3-THREE-PRIMALS",
+    "bound_claim_revision": 1,
+    "raw_rows_checked_per_vector": 85874,
+    "exact_scalar_row_component_checks": 257622,
+    "actual_supported_coordinate_changed": 0,
+    "actual_corruption_diagnostic": "ENDPOINT_ORIGINAL_PRIMAL_SCALAR_ROW",
+    "shared_components": [
+      "Separate independently calibrated scalar checker698eb9bb... and endpoint checkerb57176cc...; no native/producer code imports.",
+      "Python exact integers/math.gcd, locked uv environment, deadline and contained supervisor.",
+      "Raw mathematical operator previously produced by structural but independently reconstructed by checkpoint_audit; this new modular discovery is produced by native_driver."
+    ],
+    "command_and_full_hashes": "The pinned immutable report contains exact command/cwd/environment and all checked identities."
+  },
+  "execution": {
+    "verifier_seconds": 4.172000000020489,
+    "supervisor_seconds": 4.452999999979511,
+    "supervisor_summary": "acceleration/results/20261002_independent_review/gf3_full_artifact_supervision01/summary.json",
+    "supervisor_summary_sha256": "3646d21743a26bceaef231717bc08a26ab8c3a17c366be8f6464836944581122",
+    "observed_exit_code": 0,
+    "reaped": true,
+    "empty_windows_job_observed": true,
+    "currently_running": false
+  },
+  "resume_checkpoint": {
+    "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/checkpoint.bin",
+    "sha256": "c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8",
+    "bytes": 494930751,
+    "availability": "LOCAL_ONLY",
+    "retrieval": "Current local checkout; same-source Linux little-endian GF3_PRIMAL_CP_V1 format. No automatic resume authorized.",
+    "mathematical_certificate_required": false,
+    "checked": "Full audit checked hash/bytes only; no full checkpoint basis/DAG/rank validation. Three complete raw primal vectors suffice for the stated modular claim."
+  },
+  "artifacts": [
+    {
+      "path": "acceleration/audit_20261002_gf3_full_artifact_v1.py",
+      "sha256": "b57176cccf0a39dfd6a2bc8e2380ff8feed70dcb086d57593edbdb7ee72e807b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "docs/AUDIT_20261002_GF3_FULL_ARTIFACT_PROTOCOL.md",
+      "sha256": "ba0da2f950978633f2a70799ce574594e3718540a1125b1e8437f7a003615889",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/command_deadline.py",
+      "sha256": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/run_compute_command.py",
+      "sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/audit_20261002_gf3_scalar_v1.py",
+      "sha256": "698eb9bbe8b1ba6a257e8e6226a9e49517e17e966ce64afb11b98d17be08bafa",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_scalar_calibration01/summary.json",
+      "sha256": "8948291c910fe4532024ce883fc0a030a3db32a0c5042e226683dbe9ba308632",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json",
+      "sha256": "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_universal5_product_model02/model.json",
+      "sha256": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/summary.json",
+      "sha256": "f795f564c0b555175622232f4728f9a1e3096f00403d3180aec79f7047fd942d",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json",
+      "sha256": "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/prepare_20261002_rooted8_gf3_v2.py",
+      "sha256": "7f309d0442aa9121479f3068da6f09115c33c852a13b9dd59a70fb93832cde00",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/rooted8_gf3_20261002_v1.cpp",
+      "sha256": "4859dfa8d61989a2a3373dcdbf605a7572a3ebdc9a4b6b97a92fd24230fa196b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/prepare_20261002_rooted8_gf3_v2_spec.md",
+      "sha256": "c740b58c56c59c358591b7d75eeb31e33acf747260158841e96403750f726ede",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/native_budget_env_v1/pyproject.toml",
+      "sha256": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/native_budget_env_v1/uv.lock",
+      "sha256": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/design_20261002_rooted8_gf3_v2.md",
+      "sha256": "35c8aeb8585adc5f8ad7f778474affe2adb0c2001c53769a11976ed87a2203e2",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/plan_20261002_rooted8_gf3_v1.json",
+      "sha256": "aa6d5c1da01e6be02067cc3217a1980055c3b98829f8773751825bd4eede9c4c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/plan_20261002_rooted8_gf3_correction_v2.json",
+      "sha256": "638afd92edbc876a4d500c12e3614b78057db0582f8e8b2f9130875b0908f43f",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve_supervision01/manifest.json",
+      "sha256": "01754db883db994d857ce4b7f138f7186ab8f421d71e347a904f92e829a5438d",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_build02/literal_gf3",
+      "sha256": "70bc5898fde7498b53a5d4ea5eaf054cc05d2973714e6440dc1c61e47df9cbfd",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_build02/build_manifest.json",
+      "sha256": "99c5f86f44bd62d1c8534df889bd5a1da01da423e4a9bc0a3b3a7b35acc138df",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_native_controls01/summary.json",
+      "sha256": "e4622abb19498f53591b6fe26d57a9e40b673d4c91231775274c1f2393af4ce8",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/rooted8_row_content01/normalization_manifest.json",
+      "sha256": "47c9f0158084a1cf04b9ce2f84db93ee748e5e3226d759f276090aa50bdfe91c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/rooted8_model01/summary.json",
+      "sha256": "e3158fe17f4a83e5231c90f72c912e5ef37cd6ddc3ce6300f0c6861f9d0ffc4e",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/normalized_literal_rows.jsonl",
+      "sha256": "ddcdc3ae7f9d51a986e99c928901e5da2c621c2dafd25df0507a0db826492f26",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/sparse_rows.txt",
+      "sha256": "7c96d9f6402762f179a4a1d441391845e91920bcbcf5d14a5eec7d1f6d13df5c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve.receipt.json",
+      "sha256": "0a02b3a8bde984abd826b5079a161c4ca246dff944edd63842aba8ccb06b442c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/checkpoint.bin",
+      "sha256": "c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/native_resources.json",
+      "sha256": "1b4757a3a3d15ae6f61df52f1bd9ffb32a4905fba5f2804fe30747bacb267875",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/progress.jsonl",
+      "sha256": "709581dc3c938f0e1b92418c27c186c633152ad6d8262651f156b6f2677fd934",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/result.json",
+      "sha256": "8544b9a8639ab2014fdf50dcde061ef9d5b49ca8bb3ea5059ba4f33e4a693c20",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/row_residuals.bin",
+      "sha256": "91612eae981f256969566d11f5df41a093a83922e2d10bfb2cfe1f686d27daae",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_a.trits",
+      "sha256": "bb3c66b5b23e571be386c5929f28880ce2612efb48d1002b8eda78aa805a8a8e",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_b.trits",
+      "sha256": "ae896c9269933b55e8ff86ce05f65987dad8b1adcc66627312196a5cf20ef424",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_const.trits",
+      "sha256": "e3875d00a9f50386736dfcea00a177ab0e078737fa9e4260a2d261f044192367",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_full_artifact01/summary.json",
+      "sha256": "5ea4c3115e06c748baf23122f9b7d0c8d8260000787fa377daea8f4d6cf95d08",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; publication closure/recovery report separate."
+    }
+  ],
+  "limitations": [
+    "No full-operator rank or completeness-of-relations claim.",
+    "Modulo3 primal vectors do not certify integer/nonnegative count feasibility or graph realization.",
+    "No target graph/nonexistence proof; graph necessity remains conditional on UNKNOWN global prism absence.",
+    "No novelty, peer/external review or new public artifact availability claim."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent raw artifact check only.",
+  "overall_search_coverage": "UNKNOWN; no validated denominator."
+}

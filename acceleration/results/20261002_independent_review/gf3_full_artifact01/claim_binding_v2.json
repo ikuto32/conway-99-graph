@@ -1,0 +1,974 @@
+{
+  "id": "C-PRISMFREE-ROOTED8-ORIGINAL-LITERAL-GF3-THREE-PRIMALS",
+  "revision": 1,
+  "claim_revision": 1,
+  "kind": "construction",
+  "basis": [
+    "COMPUTED",
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For the exact frozen23019-column85874-row rooted8 ORIGINAL integer operator, the three recorded complete ternary vectors x_const,x_a,x_b satisfy respectively all constant,a,b affine RHS components modulo3. Consequently for every integer pair(a,b), x_const+(a mod3)*x_a+(b mod3)*x_b, reduced coordinatewise modulo3, solves that fixed literal operator. In particular all210 frozen profiles a=0..20,b=0..9 survive this modular consistency test, with zero exclusions.",
+  "scope": {
+    "description": "Complete literal modular consistency certificate for one pinned local count operator. No rank, integer/nonnegative feasibility, root or graph realization, unrestricted target exclusion or target resolution.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Use exactly the frozen ORIGINAL signed integer operator, variable ordering and affine RHS ordering; repeated literal terms are summed exactly.",
+    "Interpret linear combinations over F3, not as integer nonnegative flag counts.",
+    "Positive row contents1,2,4 and normalized literal stream are independently checked identity evidence; primal verification uses ORIGINAL coefficients without division.",
+    "Any graph-level interpretation requires the independently checked conditional necessary encoding and UNKNOWN global no-induced-prism premise; no target automorphism."
+  ],
+  "dependencies": [
+    {
+      "id": "C-PRISMFREE-ROOTED8-MARKED-UNIVERSAL5-PRODUCT-NECESSARY-ENCODING",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-PRISMFREE-ORDERED-NONEDGE-ROOTED6-INTEGER-DOMAIN",
+      "revision": 1,
+      "relation": "coverage"
+    }
+  ],
+  "dependency_reason": "Dependencies supply conditional graph interpretation and210profile population; original scalar certificate validity is directly bound to raw operator and vectors.",
+  "created_at": "2026-10-02T14:30:32.372697+00:00",
+  "updated_at": "2026-10-02T14:32:33.092894+00:00",
+  "source_commit": "cfef855d7cec5b42a2508e664ff8308270814756",
+  "producer": "/root/native_driver",
+  "verifier": "/root/structural",
+  "method": "independent_artifact_check",
+  "verification_timestamp": "2026-10-02T14:28:22.990772+00:00",
+  "report": "acceleration/results/20261002_independent_review/gf3_full_artifact01/summary.json",
+  "report_sha256": "5ea4c3115e06c748baf23122f9b7d0c8d8260000787fa377daea8f4d6cf95d08",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_gf3_full_artifact_v1.py",
+    "check",
+    "--seconds",
+    "260",
+    "--out",
+    "acceleration/results/20261002_independent_review/gf3_full_artifact01",
+    "--summary",
+    "acceleration/results/20261002_rooted8_gf3_solve01/summary.json",
+    "--summary-sha256",
+    "f795f564c0b555175622232f4728f9a1e3096f00403d3180aec79f7047fd942d",
+    "--input-case",
+    "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json",
+    "--input-case-sha256",
+    "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+    "--calibration",
+    "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json",
+    "--calibration-sha256",
+    "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/audit_20261002_gf3_full_artifact_v1.py": "b57176cccf0a39dfd6a2bc8e2380ff8feed70dcb086d57593edbdb7ee72e807b",
+    "docs/AUDIT_20261002_GF3_FULL_ARTIFACT_PROTOCOL.md": "ba0da2f950978633f2a70799ce574594e3718540a1125b1e8437f7a003615889",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/audit_20261002_gf3_scalar_v1.py": "698eb9bbe8b1ba6a257e8e6226a9e49517e17e966ce64afb11b98d17be08bafa",
+    "acceleration/results/20261002_independent_review/gf3_scalar_calibration01/summary.json": "8948291c910fe4532024ce883fc0a030a3db32a0c5042e226683dbe9ba308632",
+    "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json": "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b",
+    "acceleration/results/20261002_rooted8_universal5_product_model02/model.json": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+    "acceleration/results/20261002_rooted8_gf3_solve01/summary.json": "f795f564c0b555175622232f4728f9a1e3096f00403d3180aec79f7047fd942d",
+    "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json": "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+    "acceleration/prepare_20261002_rooted8_gf3_v2.py": "7f309d0442aa9121479f3068da6f09115c33c852a13b9dd59a70fb93832cde00",
+    "acceleration/rooted8_gf3_20261002_v1.cpp": "4859dfa8d61989a2a3373dcdbf605a7572a3ebdc9a4b6b97a92fd24230fa196b",
+    "acceleration/prepare_20261002_rooted8_gf3_v2_spec.md": "c740b58c56c59c358591b7d75eeb31e33acf747260158841e96403750f726ede",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+    "acceleration/design_20261002_rooted8_gf3_v2.md": "35c8aeb8585adc5f8ad7f778474affe2adb0c2001c53769a11976ed87a2203e2",
+    "acceleration/plan_20261002_rooted8_gf3_v1.json": "aa6d5c1da01e6be02067cc3217a1980055c3b98829f8773751825bd4eede9c4c",
+    "acceleration/plan_20261002_rooted8_gf3_correction_v2.json": "638afd92edbc876a4d500c12e3614b78057db0582f8e8b2f9130875b0908f43f",
+    "acceleration/results/20261002_rooted8_gf3_solve_supervision01/manifest.json": "01754db883db994d857ce4b7f138f7186ab8f421d71e347a904f92e829a5438d",
+    "acceleration/results/20261002_rooted8_gf3_build02/literal_gf3": "70bc5898fde7498b53a5d4ea5eaf054cc05d2973714e6440dc1c61e47df9cbfd",
+    "acceleration/results/20261002_rooted8_gf3_build02/build_manifest.json": "99c5f86f44bd62d1c8534df889bd5a1da01da423e4a9bc0a3b3a7b35acc138df",
+    "acceleration/results/20261002_independent_review/gf3_native_controls01/summary.json": "e4622abb19498f53591b6fe26d57a9e40b673d4c91231775274c1f2393af4ce8",
+    "acceleration/results/20261002_independent_review/rooted8_row_content01/normalization_manifest.json": "47c9f0158084a1cf04b9ce2f84db93ee748e5e3226d759f276090aa50bdfe91c",
+    "acceleration/results/20261002_independent_review/rooted8_model01/summary.json": "e3158fe17f4a83e5231c90f72c912e5ef37cd6ddc3ce6300f0c6861f9d0ffc4e",
+    "acceleration/results/20261002_rooted8_gf3_solve01/normalized_literal_rows.jsonl": "ddcdc3ae7f9d51a986e99c928901e5da2c621c2dafd25df0507a0db826492f26",
+    "acceleration/results/20261002_rooted8_gf3_solve01/sparse_rows.txt": "7c96d9f6402762f179a4a1d441391845e91920bcbcf5d14a5eec7d1f6d13df5c",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve.receipt.json": "0a02b3a8bde984abd826b5079a161c4ca246dff944edd63842aba8ccb06b442c",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/checkpoint.bin": "c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/native_resources.json": "1b4757a3a3d15ae6f61df52f1bd9ffb32a4905fba5f2804fe30747bacb267875",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/progress.jsonl": "709581dc3c938f0e1b92418c27c186c633152ad6d8262651f156b6f2677fd934",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/result.json": "8544b9a8639ab2014fdf50dcde061ef9d5b49ca8bb3ea5059ba4f33e4a693c20",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/row_residuals.bin": "91612eae981f256969566d11f5df41a093a83922e2d10bfb2cfe1f686d27daae",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_a.trits": "bb3c66b5b23e571be386c5929f28880ce2612efb48d1002b8eda78aa805a8a8e",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_b.trits": "ae896c9269933b55e8ff86ce05f65987dad8b1adcc66627312196a5cf20ef424",
+    "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_const.trits": "e3875d00a9f50386736dfcea00a177ab0e078737fa9e4260a2d261f044192367",
+    "acceleration/results/20261002_independent_review/gf3_full_artifact01/summary.json": "5ea4c3115e06c748baf23122f9b7d0c8d8260000787fa377daea8f4d6cf95d08",
+    "acceleration/results/20261002_rooted8_gf3_controls02/controls_manifest.json": "f4e1b7330264015cee18992c08f5a7573ca44468236128a9ad5e00a87f0c4b6a",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/raw_model.json": "9c97d398cde6b846be7c1611ab2c7ec8962663860b9405457fb385a035f8678e",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/input_case.json": "66bb65ca78d98c356e22b8f168144a18120d05af1f5418eae9d671a039d6d0ae",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/normalized_literal_rows.jsonl": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/sparse_rows.txt": "02f937d8287b3bbb7c4cf20cdc9057d750d45f8100b3dc074c5ec8aaf17d50c7",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_const.trits": "804964ec9d09c0af94a35c570206221ac9959e2f4bb1ebb43553826ebf4d88d3",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_a.trits": "a351a2903413ad725c20c45e8e6063074c8a01a18cff8c6a35d668225eea9ba2",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_b.trits": "5a63918b1f1dff8d5ceefc1c1526b3f64aac5a76058bb852907ebc5bf3b0ef00",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/raw_model.json": "33b5eaf5a2b844ca4ceab8d5a0754d931a5f530716e0b497efec580609400262",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/input_case.json": "8a2ab66392efdc2941ca7bb900c67fd35ec34912cedf5f89e7d66a68eaa32846",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/normalized_literal_rows.jsonl": "7356b98a1b572dfbed8f816db749161e8874d5d0f868f21cbe72f5d4c3f4fe55",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/sparse_rows.txt": "76c46bf1b3ea6e07d4dee2d068dbf1c4158fc6bc48d9cf90e6528664d89a14bd",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_const.trits": "804964ec9d09c0af94a35c570206221ac9959e2f4bb1ebb43553826ebf4d88d3",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_a.trits": "a351a2903413ad725c20c45e8e6063074c8a01a18cff8c6a35d668225eea9ba2",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_b.trits": "5a63918b1f1dff8d5ceefc1c1526b3f64aac5a76058bb852907ebc5bf3b0ef00",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/raw_model.json": "a0c76e61275fd0a9878b5f1d5826f7d475ade1144227b57f0cea6d96bf8780c5",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/input_case.json": "9786c2fdfdb2e9d35ef140e7f55391d3f46cfacb3c6d7835dbfdaa8e4760fee6",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/normalized_literal_rows.jsonl": "a7b1de1601ce64b1258aeacd2d7a5852878085edff9fab3875a659c60ae1c724",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/sparse_rows.txt": "38b4f8665c72b87e00dcab1204ed23e8be9b7e15a3f007d3cbb3b05f4d4daaa4",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_whole/original_row_relation.json": "1f99c1f491751956e27bed74d45e67aadabaae580941f82ea9548d2d70f7f2bf",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/raw_model.json": "791c9569f48885e75d1f0c008d04445a9f58211ea3d59b6c30d6ec4f026fe1ad",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/input_case.json": "e67fab0fb09376c0e6ed885f151b65542149b25d1670247d88b4b42e6568027e",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/normalized_literal_rows.jsonl": "38555607a7e14660f5bb9a850480a11aa88833465933d311aeac2846656ffcf6",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/sparse_rows.txt": "583c149bcd6b71a83f52453bf91e74f3cec45b46eeaa0f50ebc4ded53e8e35dd",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_const.trits": "f534b14fdb1e325a8c396a5bb1204cbb84400734e64b3309e21f18b9e2bd3f2b",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_a.trits": "cabe3cf854ed7a03196e4b2688ebfb308538c341531c43a56717b82304064c2b",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_b.trits": "13c28ad44d7f9457b7f33cb00e8ea871b452a90b3c06273aa14f70347a5341cd",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/raw_model.json": "3ba4df8985d6e974437420741333bebd6bb1b6f7ce1b5a03cee0da8d3d9e30ac",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/input_case.json": "aaae090aa4a7c33b7dcb9bc22d68fa4dab8e830f08585e69a02e7a5bfca1b28a",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/normalized_literal_rows.jsonl": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/sparse_rows.txt": "6c3da59cd95b4f0d9ca460d8d173bd7659d07431f2e1b2186579d1722d19eabc",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_const.trits": "e1fe4b5e80715e60a7449bd8fd64a70364e23ccb9b5d970187468be1378edcee",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_a.trits": "924c61272e2c2da342811e7da6b36d9c0478eda405c08cb117932216a31c5bdb",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_b.trits": "7fbefe47564000b92eca863f527eb9c6d0ab13e9b934ec66449510228b51c441",
+    "acceleration/results/20261002_wave33_model_package01/manifest.json": "c3efa198c5f48eddb5ead69a4bb130a3dc55567bb298856143c6fb62eb0e0145",
+    "acceleration/results/20261002_independent_review/wave33_model_recovery01/summary.json": "b9352a5e5810f20ff9187c06f5e00636f2f3abad2810ed3d7c23df655b76f583",
+    "acceleration/audit_20261002_wave33_model_recovery_v1.py": "d9299167b78c63eca917de18c2d3a7990ade2ed499a1abfb76b815e69de52700",
+    "acceleration/audit_20261002_batch05_raw_recovery_v1.py": "8b44efe2ce1d839526a0ed2348d97b66b7eb0c1c54580a18ed72bd7bf14448ca",
+    "acceleration/recover_20261001_twentyninth_raw_artifacts.py": "d55e458b2fb980691f416ca346782ba371bf713c80b8ecb055c5240f794a5730",
+    "acceleration/results/20261002_wave33_model_package01/file_00_part_000.gz": "b1bd70dd24539300ec879d03d5738a0d6b3641b1e116e355fabd3e6957885d3a",
+    "acceleration/results/20261002_wave33_model_package01/file_00_part_001.gz": "14f43f2adb95d3dbe580db0170ede4cd994591abc89e4d5bf253c3ee5fc32798",
+    "acceleration/results/20261002_wave33_model_package01/file_01_part_000.gz": "3463f8ebadb8ec9f8f661aeb67e3af7052cb23acae90245949f5a71b6d14127b",
+    "acceleration/results/20261002_wave33_model_package01/file_01_part_001.gz": "0c47de27860656ebec8c3431cb19c3d6de21ac4211b4d313a8cdc50db1fa7633",
+    "acceleration/results/20261002_wave33_model_package01/file_01_part_002.gz": "65c253dca9fbc651cc55c5496388480330e905353b91e3eafd27abb5b5e577ac",
+    "acceleration/results/20261002_wave33_model_package01/file_01_part_003.gz": "7749da6674f9636eb5f9245dc1539549af0146665f9f91cc5e140ff10eb94a24",
+    "acceleration/results/20261002_wave33_model_package01/file_01_part_004.gz": "96d0e363bdb93cfa7f8858b6faedacc98cad88bf400d10a7d63ec95482210d68",
+    "acceleration/results/20261002_wave33_model_package01/file_01_part_005.gz": "eee01ff10acddd99a687cac4917f0ab340eb18b016f2e492402b8121869045ef",
+    "acceleration/results/20261002_wave33_model_package01/file_01_part_006.gz": "f7ccca5d5c6cda996e2e95479ac82396b14fe47e0cb2a824a25dd4fa680a50ac",
+    "acceleration/results/20261002_wave33_model_package01/file_02_part_000.gz": "a49e00811956b710c0efa01bfa97c0f3d13e69059dacb426f187c45138e45f53",
+    "acceleration/results/20261002_wave33_model_package01/file_02_part_001.gz": "b4bc85ba18463fd4a5c1107b00afc8ddaf09b6e89fe76717fc8162cedf75d38d",
+    "acceleration/results/20261002_wave33_model_package01/file_02_part_002.gz": "4b977ed4d44fe997694685a94498756b005e084be31a563d97741952dffa85ed",
+    "acceleration/results/20261002_wave33_model_package01/file_02_part_003.gz": "cbdde5a5e14824a9789090e7b6da2966b6b1955931f6eaf4a95d498aa1b49e5a",
+    "acceleration/results/20261002_wave33_model_package01/file_02_part_004.gz": "129a99b377bfdab859465cc0ed447746103c9abef33ce87c6bad59dd3f855176",
+    "acceleration/results/20261002_wave33_model_package01/file_02_part_005.gz": "073089207a81fcb87b4aaa46bc065bd925ef6c8c8ca9a3daad7aa07d18ec9344",
+    "acceleration/results/20261002_wave33_model_package01/file_03_part_000.gz": "198abf02651e16c7ac2fe6379eaca6bbe50592b0bf6bc19c013ac60e3d05fa28",
+    "acceleration/results/20261002_wave33_model_package01/file_03_part_001.gz": "4c85ab586afba7f0741300abd71fd03750011313b9b0f2f63d53cc34fe9d59bf",
+    "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding_schema3.json": "12b37fc32578dbc6162c3b2a3978e88c9bf124731dfc0a723b73b040f29c224b",
+    "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding.json": "2325194ff1ea911d060a2b0c2a62a4786bc72e2b2ecf3670815adaf671adb7c0",
+    "acceleration/record_20261002_gf3_primal_binding_v1.py": "972045761a1050df424db103967cd77dc2d455ccdb90fddf92d7dd451c5776d5",
+    "acceleration/record_20261002_gf3_primal_binding_schema3_v2.py": "19f07085d4290c56f0b653c6203a707373762e6f2cf43aa02606fc3bb76fcddf",
+    "acceleration/record_20261002_gf3_primal_binding_metadata_v3.py": "f125419603fb9ebd3f7c39fb285356fb89e68ccc2cd3a56f3147b10117fc3d06",
+    "acceleration/results/20261002_independent_review/gf3_primal_binding_supervision01/manifest.json": "ab167ed8d39c99c70e656f3d9046a428456e0ea0e8b8ba0bf3097a75e55abe95",
+    "acceleration/results/20261002_independent_review/gf3_primal_binding_supervision01/summary.json": "3e9b70519a8a830cbbb83c3d0714927fe8f4bdeec0fc04e05ec0ab6526ac2d4f",
+    "acceleration/results/20261002_independent_review/gf3_primal_binding_schema3_supervision01/manifest.json": "d3e34fca72eeb053e2762eeec4185d59caf2e27497c6da2557aaeb83ae772c6c",
+    "acceleration/results/20261002_independent_review/gf3_primal_binding_schema3_supervision01/summary.json": "710bc6ea0f34ee886c9728082458e3b7e61214834305ff44dd8ff5cfc1cf1831"
+  },
+  "pre_output_calibration": {
+    "path": "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json",
+    "sha256": "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b",
+    "full_output_inspected": false,
+    "fixture_operators": 5,
+    "positive_complete_primal_sets": 4,
+    "positive_original_row_relations": 1,
+    "specific_corrupt_controls": 14
+  },
+  "certificate_artifacts": [
+    {
+      "component": "constant",
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_const.trits",
+      "sha256": "e3875d00a9f50386736dfcea00a177ab0e078737fa9e4260a2d261f044192367",
+      "ternary_coordinates": 23019,
+      "bytes": 23053,
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "component": "a",
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_a.trits",
+      "sha256": "bb3c66b5b23e571be386c5929f28880ce2612efb48d1002b8eda78aa805a8a8e",
+      "ternary_coordinates": 23019,
+      "bytes": 23049,
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "component": "b",
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_b.trits",
+      "sha256": "ae896c9269933b55e8ff86ce05f65987dad8b1adcc66627312196a5cf20ef424",
+      "ternary_coordinates": 23019,
+      "bytes": 23049,
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "normalization": {
+    "raw_model": "acceleration/results/20261002_rooted8_universal5_product_model02/model.json",
+    "raw_model_sha256": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+    "rows": 85874,
+    "columns": 23019,
+    "literal_term_occurrences": 968172,
+    "content_counts": {
+      "1": 82003,
+      "2": 3842,
+      "4": 29
+    },
+    "input_case": "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json",
+    "input_case_sha256": "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+    "normalized_literal_jsonl": "acceleration/results/20261002_rooted8_gf3_solve01/normalized_literal_rows.jsonl",
+    "normalized_literal_jsonl_sha256": "ddcdc3ae7f9d51a986e99c928901e5da2c621c2dafd25df0507a0db826492f26",
+    "sparse_original_mod3_input": "acceleration/results/20261002_rooted8_gf3_solve01/sparse_rows.txt",
+    "sparse_original_mod3_input_sha256": "7c96d9f6402762f179a4a1d441391845e91920bcbcf5d14a5eec7d1f6d13df5c",
+    "independently_checked": "Every raw/content/divided literal hash and exact raw/divided roundtrip, normalized/originalmod3 sparse bytes, complete streams/content census; every primal scalar sum uses original signed coefficients.",
+    "availability": "LOCAL_ONLY",
+    "retrieval": "Current shared checkout contains exact raw paths. Public availability is not claimed before independent publication closure."
+  },
+  "verification": {
+    "bound_claim_id": "C-PRISMFREE-ROOTED8-ORIGINAL-LITERAL-GF3-THREE-PRIMALS",
+    "bound_claim_revision": 1,
+    "raw_rows_checked_per_vector": 85874,
+    "exact_scalar_row_component_checks": 257622,
+    "actual_supported_coordinate_changed": 0,
+    "actual_corruption_diagnostic": "ENDPOINT_ORIGINAL_PRIMAL_SCALAR_ROW",
+    "shared_components": [
+      "Separate independently calibrated scalar checker698eb9bb... and endpoint checkerb57176cc...; no native/producer code imports.",
+      "Python exact integers/math.gcd, locked uv environment, deadline and contained supervisor.",
+      "Raw mathematical operator previously produced by structural but independently reconstructed by checkpoint_audit; this new modular discovery is produced by native_driver."
+    ],
+    "command_and_full_hashes": "The pinned immutable report contains exact command/cwd/environment and all checked identities."
+  },
+  "execution": {
+    "verifier_seconds": 4.172000000020489,
+    "supervisor_seconds": 4.452999999979511,
+    "supervisor_summary": "acceleration/results/20261002_independent_review/gf3_full_artifact_supervision01/summary.json",
+    "supervisor_summary_sha256": "3646d21743a26bceaef231717bc08a26ab8c3a17c366be8f6464836944581122",
+    "observed_exit_code": 0,
+    "reaped": true,
+    "empty_windows_job_observed": true,
+    "currently_running": false
+  },
+  "resume_checkpoint": {
+    "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/checkpoint.bin",
+    "sha256": "c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8",
+    "bytes": 494930751,
+    "availability": "LOCAL_ONLY",
+    "retrieval": "Current local checkout; same-source Linux little-endian GF3_PRIMAL_CP_V1 format. No automatic resume authorized.",
+    "mathematical_certificate_required": false,
+    "checked": "Full audit checked hash/bytes only; no full checkpoint basis/DAG/rank validation. Three complete raw primal vectors suffice for the stated modular claim."
+  },
+  "artifacts": [
+    {
+      "path": "acceleration/audit_20261002_gf3_full_artifact_v1.py",
+      "sha256": "b57176cccf0a39dfd6a2bc8e2380ff8feed70dcb086d57593edbdb7ee72e807b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "docs/AUDIT_20261002_GF3_FULL_ARTIFACT_PROTOCOL.md",
+      "sha256": "ba0da2f950978633f2a70799ce574594e3718540a1125b1e8437f7a003615889",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/command_deadline.py",
+      "sha256": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/run_compute_command.py",
+      "sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/audit_20261002_gf3_scalar_v1.py",
+      "sha256": "698eb9bbe8b1ba6a257e8e6226a9e49517e17e966ce64afb11b98d17be08bafa",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_scalar_calibration01/summary.json",
+      "sha256": "8948291c910fe4532024ce883fc0a030a3db32a0c5042e226683dbe9ba308632",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01/summary.json",
+      "sha256": "da9ee10677ef26cd0dd5c6a1272c98f12d05b6d52a7f2f676d85d85f58ea215b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_universal5_product_model02/model.json",
+      "sha256": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/summary.json",
+      "sha256": "f795f564c0b555175622232f4728f9a1e3096f00403d3180aec79f7047fd942d",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/input_case.json",
+      "sha256": "29011b1473579b1ae80cce7c38f94c7f63a2804b696cf5255c9c2d9c023ffc86",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/prepare_20261002_rooted8_gf3_v2.py",
+      "sha256": "7f309d0442aa9121479f3068da6f09115c33c852a13b9dd59a70fb93832cde00",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/rooted8_gf3_20261002_v1.cpp",
+      "sha256": "4859dfa8d61989a2a3373dcdbf605a7572a3ebdc9a4b6b97a92fd24230fa196b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/prepare_20261002_rooted8_gf3_v2_spec.md",
+      "sha256": "c740b58c56c59c358591b7d75eeb31e33acf747260158841e96403750f726ede",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/native_budget_env_v1/pyproject.toml",
+      "sha256": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/native_budget_env_v1/uv.lock",
+      "sha256": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/design_20261002_rooted8_gf3_v2.md",
+      "sha256": "35c8aeb8585adc5f8ad7f778474affe2adb0c2001c53769a11976ed87a2203e2",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/plan_20261002_rooted8_gf3_v1.json",
+      "sha256": "aa6d5c1da01e6be02067cc3217a1980055c3b98829f8773751825bd4eede9c4c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/plan_20261002_rooted8_gf3_correction_v2.json",
+      "sha256": "638afd92edbc876a4d500c12e3614b78057db0582f8e8b2f9130875b0908f43f",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve_supervision01/manifest.json",
+      "sha256": "01754db883db994d857ce4b7f138f7186ab8f421d71e347a904f92e829a5438d",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_build02/literal_gf3",
+      "sha256": "70bc5898fde7498b53a5d4ea5eaf054cc05d2973714e6440dc1c61e47df9cbfd",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_build02/build_manifest.json",
+      "sha256": "99c5f86f44bd62d1c8534df889bd5a1da01da423e4a9bc0a3b3a7b35acc138df",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_native_controls01/summary.json",
+      "sha256": "e4622abb19498f53591b6fe26d57a9e40b673d4c91231775274c1f2393af4ce8",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/rooted8_row_content01/normalization_manifest.json",
+      "sha256": "47c9f0158084a1cf04b9ce2f84db93ee748e5e3226d759f276090aa50bdfe91c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/rooted8_model01/summary.json",
+      "sha256": "e3158fe17f4a83e5231c90f72c912e5ef37cd6ddc3ce6300f0c6861f9d0ffc4e",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/normalized_literal_rows.jsonl",
+      "sha256": "ddcdc3ae7f9d51a986e99c928901e5da2c621c2dafd25df0507a0db826492f26",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/sparse_rows.txt",
+      "sha256": "7c96d9f6402762f179a4a1d441391845e91920bcbcf5d14a5eec7d1f6d13df5c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve.receipt.json",
+      "sha256": "0a02b3a8bde984abd826b5079a161c4ca246dff944edd63842aba8ccb06b442c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/checkpoint.bin",
+      "sha256": "c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/native_resources.json",
+      "sha256": "1b4757a3a3d15ae6f61df52f1bd9ffb32a4905fba5f2804fe30747bacb267875",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/progress.jsonl",
+      "sha256": "709581dc3c938f0e1b92418c27c186c633152ad6d8262651f156b6f2677fd934",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/result.json",
+      "sha256": "8544b9a8639ab2014fdf50dcde061ef9d5b49ca8bb3ea5059ba4f33e4a693c20",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/row_residuals.bin",
+      "sha256": "91612eae981f256969566d11f5df41a093a83922e2d10bfb2cfe1f686d27daae",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_a.trits",
+      "sha256": "bb3c66b5b23e571be386c5929f28880ce2612efb48d1002b8eda78aa805a8a8e",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_b.trits",
+      "sha256": "ae896c9269933b55e8ff86ce05f65987dad8b1adcc66627312196a5cf20ef424",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_solve01/solve/x_const.trits",
+      "sha256": "e3875d00a9f50386736dfcea00a177ab0e078737fa9e4260a2d261f044192367",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_full_artifact01/summary.json",
+      "sha256": "5ea4c3115e06c748baf23122f9b7d0c8d8260000787fa377daea8f4d6cf95d08",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/controls_manifest.json",
+      "sha256": "f4e1b7330264015cee18992c08f5a7573ca44468236128a9ad5e00a87f0c4b6a",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/raw_model.json",
+      "sha256": "9c97d398cde6b846be7c1611ab2c7ec8962663860b9405457fb385a035f8678e",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/input_case.json",
+      "sha256": "66bb65ca78d98c356e22b8f168144a18120d05af1f5418eae9d671a039d6d0ae",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/normalized_literal_rows.jsonl",
+      "sha256": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/sparse_rows.txt",
+      "sha256": "02f937d8287b3bbb7c4cf20cdc9057d750d45f8100b3dc074c5ec8aaf17d50c7",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_const.trits",
+      "sha256": "804964ec9d09c0af94a35c570206221ac9959e2f4bb1ebb43553826ebf4d88d3",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_a.trits",
+      "sha256": "a351a2903413ad725c20c45e8e6063074c8a01a18cff8c6a35d668225eea9ba2",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_b.trits",
+      "sha256": "5a63918b1f1dff8d5ceefc1c1526b3f64aac5a76058bb852907ebc5bf3b0ef00",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/raw_model.json",
+      "sha256": "33b5eaf5a2b844ca4ceab8d5a0754d931a5f530716e0b497efec580609400262",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/input_case.json",
+      "sha256": "8a2ab66392efdc2941ca7bb900c67fd35ec34912cedf5f89e7d66a68eaa32846",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/normalized_literal_rows.jsonl",
+      "sha256": "7356b98a1b572dfbed8f816db749161e8874d5d0f868f21cbe72f5d4c3f4fe55",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/sparse_rows.txt",
+      "sha256": "76c46bf1b3ea6e07d4dee2d068dbf1c4158fc6bc48d9cf90e6528664d89a14bd",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_const.trits",
+      "sha256": "804964ec9d09c0af94a35c570206221ac9959e2f4bb1ebb43553826ebf4d88d3",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_a.trits",
+      "sha256": "a351a2903413ad725c20c45e8e6063074c8a01a18cff8c6a35d668225eea9ba2",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_b.trits",
+      "sha256": "5a63918b1f1dff8d5ceefc1c1526b3f64aac5a76058bb852907ebc5bf3b0ef00",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/raw_model.json",
+      "sha256": "a0c76e61275fd0a9878b5f1d5826f7d475ade1144227b57f0cea6d96bf8780c5",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/input_case.json",
+      "sha256": "9786c2fdfdb2e9d35ef140e7f55391d3f46cfacb3c6d7835dbfdaa8e4760fee6",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/normalized_literal_rows.jsonl",
+      "sha256": "a7b1de1601ce64b1258aeacd2d7a5852878085edff9fab3875a659c60ae1c724",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/sparse_rows.txt",
+      "sha256": "38b4f8665c72b87e00dcab1204ed23e8be9b7e15a3f007d3cbb3b05f4d4daaa4",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_whole/original_row_relation.json",
+      "sha256": "1f99c1f491751956e27bed74d45e67aadabaae580941f82ea9548d2d70f7f2bf",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/raw_model.json",
+      "sha256": "791c9569f48885e75d1f0c008d04445a9f58211ea3d59b6c30d6ec4f026fe1ad",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/input_case.json",
+      "sha256": "e67fab0fb09376c0e6ed885f151b65542149b25d1670247d88b4b42e6568027e",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/normalized_literal_rows.jsonl",
+      "sha256": "38555607a7e14660f5bb9a850480a11aa88833465933d311aeac2846656ffcf6",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/sparse_rows.txt",
+      "sha256": "583c149bcd6b71a83f52453bf91e74f3cec45b46eeaa0f50ebc4ded53e8e35dd",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_const.trits",
+      "sha256": "f534b14fdb1e325a8c396a5bb1204cbb84400734e64b3309e21f18b9e2bd3f2b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_a.trits",
+      "sha256": "cabe3cf854ed7a03196e4b2688ebfb308538c341531c43a56717b82304064c2b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_b.trits",
+      "sha256": "13c28ad44d7f9457b7f33cb00e8ea871b452a90b3c06273aa14f70347a5341cd",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/raw_model.json",
+      "sha256": "3ba4df8985d6e974437420741333bebd6bb1b6f7ce1b5a03cee0da8d3d9e30ac",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/input_case.json",
+      "sha256": "aaae090aa4a7c33b7dcb9bc22d68fa4dab8e830f08585e69a02e7a5bfca1b28a",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/normalized_literal_rows.jsonl",
+      "sha256": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/sparse_rows.txt",
+      "sha256": "6c3da59cd95b4f0d9ca460d8d173bd7659d07431f2e1b2186579d1722d19eabc",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_const.trits",
+      "sha256": "e1fe4b5e80715e60a7449bd8fd64a70364e23ccb9b5d970187468be1378edcee",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_a.trits",
+      "sha256": "924c61272e2c2da342811e7da6b36d9c0478eda405c08cb117932216a31c5bdb",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_b.trits",
+      "sha256": "7fbefe47564000b92eca863f527eb9c6d0ab13e9b934ec66449510228b51c441",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/manifest.json",
+      "sha256": "c3efa198c5f48eddb5ead69a4bb130a3dc55567bb298856143c6fb62eb0e0145",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/wave33_model_recovery01/summary.json",
+      "sha256": "b9352a5e5810f20ff9187c06f5e00636f2f3abad2810ed3d7c23df655b76f583",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/audit_20261002_wave33_model_recovery_v1.py",
+      "sha256": "d9299167b78c63eca917de18c2d3a7990ade2ed499a1abfb76b815e69de52700",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/audit_20261002_batch05_raw_recovery_v1.py",
+      "sha256": "8b44efe2ce1d839526a0ed2348d97b66b7eb0c1c54580a18ed72bd7bf14448ca",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/recover_20261001_twentyninth_raw_artifacts.py",
+      "sha256": "d55e458b2fb980691f416ca346782ba371bf713c80b8ecb055c5240f794a5730",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_00_part_000.gz",
+      "sha256": "b1bd70dd24539300ec879d03d5738a0d6b3641b1e116e355fabd3e6957885d3a",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_00_part_001.gz",
+      "sha256": "14f43f2adb95d3dbe580db0170ede4cd994591abc89e4d5bf253c3ee5fc32798",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_01_part_000.gz",
+      "sha256": "3463f8ebadb8ec9f8f661aeb67e3af7052cb23acae90245949f5a71b6d14127b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_01_part_001.gz",
+      "sha256": "0c47de27860656ebec8c3431cb19c3d6de21ac4211b4d313a8cdc50db1fa7633",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_01_part_002.gz",
+      "sha256": "65c253dca9fbc651cc55c5496388480330e905353b91e3eafd27abb5b5e577ac",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_01_part_003.gz",
+      "sha256": "7749da6674f9636eb5f9245dc1539549af0146665f9f91cc5e140ff10eb94a24",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_01_part_004.gz",
+      "sha256": "96d0e363bdb93cfa7f8858b6faedacc98cad88bf400d10a7d63ec95482210d68",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_01_part_005.gz",
+      "sha256": "eee01ff10acddd99a687cac4917f0ab340eb18b016f2e492402b8121869045ef",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_01_part_006.gz",
+      "sha256": "f7ccca5d5c6cda996e2e95479ac82396b14fe47e0cb2a824a25dd4fa680a50ac",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_02_part_000.gz",
+      "sha256": "a49e00811956b710c0efa01bfa97c0f3d13e69059dacb426f187c45138e45f53",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_02_part_001.gz",
+      "sha256": "b4bc85ba18463fd4a5c1107b00afc8ddaf09b6e89fe76717fc8162cedf75d38d",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_02_part_002.gz",
+      "sha256": "4b977ed4d44fe997694685a94498756b005e084be31a563d97741952dffa85ed",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_02_part_003.gz",
+      "sha256": "cbdde5a5e14824a9789090e7b6da2966b6b1955931f6eaf4a95d498aa1b49e5a",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_02_part_004.gz",
+      "sha256": "129a99b377bfdab859465cc0ed447746103c9abef33ce87c6bad59dd3f855176",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_02_part_005.gz",
+      "sha256": "073089207a81fcb87b4aaa46bc065bd925ef6c8c8ca9a3daad7aa07d18ec9344",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_03_part_000.gz",
+      "sha256": "198abf02651e16c7ac2fe6379eaca6bbe50592b0bf6bc19c013ac60e3d05fa28",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_wave33_model_package01/file_03_part_001.gz",
+      "sha256": "4c85ab586afba7f0741300abd71fd03750011313b9b0f2f63d53cc34fe9d59bf",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding_schema3.json",
+      "sha256": "12b37fc32578dbc6162c3b2a3978e88c9bf124731dfc0a723b73b040f29c224b",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding.json",
+      "sha256": "2325194ff1ea911d060a2b0c2a62a4786bc72e2b2ecf3670815adaf671adb7c0",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/record_20261002_gf3_primal_binding_v1.py",
+      "sha256": "972045761a1050df424db103967cd77dc2d455ccdb90fddf92d7dd451c5776d5",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/record_20261002_gf3_primal_binding_schema3_v2.py",
+      "sha256": "19f07085d4290c56f0b653c6203a707373762e6f2cf43aa02606fc3bb76fcddf",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/record_20261002_gf3_primal_binding_metadata_v3.py",
+      "sha256": "f125419603fb9ebd3f7c39fb285356fb89e68ccc2cd3a56f3147b10117fc3d06",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_supervision01/manifest.json",
+      "sha256": "ab167ed8d39c99c70e656f3d9046a428456e0ea0e8b8ba0bf3097a75e55abe95",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_supervision01/summary.json",
+      "sha256": "3e9b70519a8a830cbbb83c3d0714927fe8f4bdeec0fc04e05ec0ab6526ac2d4f",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_schema3_supervision01/manifest.json",
+      "sha256": "d3e34fca72eeb053e2762eeec4185d59caf2e27497c6da2557aaeb83ae772c6c",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    },
+    {
+      "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_schema3_supervision01/summary.json",
+      "sha256": "710bc6ea0f34ee886c9728082458e3b7e61214834305ff44dd8ff5cfc1cf1831",
+      "availability": "LOCAL_ONLY",
+      "retrieval": "Current shared checkout; separate publication/recovery closure determines public status."
+    }
+  ],
+  "limitations": [
+    "No full-operator rank or completeness-of-relations claim.",
+    "Modulo3 primal vectors do not certify integer/nonnegative count feasibility or graph realization.",
+    "No target graph/nonexistence proof; graph necessity remains conditional on UNKNOWN global prism absence.",
+    "No novelty, peer/external review or new public artifact availability claim."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent raw artifact check only.",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "profile_population": {
+    "unit": "integer parameter pair",
+    "a_inclusive": [
+      0,
+      20
+    ],
+    "b_inclusive": [
+      0,
+      9
+    ],
+    "count": 210,
+    "excluded": 0
+  },
+  "prism_free_target_interpretation": "Conditional necessary graph model only; global prism absence remains UNKNOWN. Literal modular statement concerns the pinned matrix itself.",
+  "shared_components": [
+    "Separate independently calibrated scalar checker698eb9bb... and endpoint checkerb57176cc...; no native/producer code imports.",
+    "Python exact integers/math.gcd, locked uv environment, deadline and contained supervisor.",
+    "Raw mathematical operator previously produced by structural but independently reconstructed by checkpoint_audit; this new modular discovery is produced by native_driver."
+  ],
+  "raw_model_recovery": {
+    "raw_path": "acceleration/results/20261002_rooted8_universal5_product_model02/model.json",
+    "raw_sha256": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+    "raw_bytes": 57414699,
+    "committed_raw": false,
+    "package_manifest": "acceleration/results/20261002_wave33_model_package01/manifest.json",
+    "package_manifest_sha256": "c3efa198c5f48eddb5ead69a4bb130a3dc55567bb298856143c6fb62eb0e0145",
+    "independent_recovery_report": "acceleration/results/20261002_independent_review/wave33_model_recovery01/summary.json",
+    "independent_recovery_report_sha256": "b9352a5e5810f20ff9187c06f5e00636f2f3abad2810ed3d7c23df655b76f583",
+    "availability": "PUBLIC",
+    "retrieval": "Use the unchanged recovery CLI and exact argv in the pinned independent report, with package/parts at repositorycommit cfef855d7cec5b42a2508e664ff8308270814756. Authenticate every compressed/raw part; no new public network replay is asserted by this metadata correction."
+  },
+  "editorial_correction": {
+    "preserved_original_binding": "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding.json",
+    "preserved_original_binding_sha256": "2325194ff1ea911d060a2b0c2a62a4786bc72e2b2ecf3670815adaf671adb7c0",
+    "reason": "Before registration, match schema3 exactly: three scope keys, top-level shared_components, complete pre-output-calibration input closure, and existing public lossless raw-model recovery metadata. Statement/revision and verification report unchanged.",
+    "previous_binding_promoted": false,
+    "statement_unchanged": true
+  },
+  "binding_construction_provenance": {
+    "editorial_only": true,
+    "prior_intermediate_binding": "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding_schema3.json",
+    "prior_intermediate_binding_sha256": "12b37fc32578dbc6162c3b2a3978e88c9bf124731dfc0a723b73b040f29c224b",
+    "writer_sources_and_completed_receipts": [
+      {
+        "path": "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding_schema3.json",
+        "sha256": "12b37fc32578dbc6162c3b2a3978e88c9bf124731dfc0a723b73b040f29c224b"
+      },
+      {
+        "path": "acceleration/results/20261002_independent_review/gf3_full_artifact01/claim_binding.json",
+        "sha256": "2325194ff1ea911d060a2b0c2a62a4786bc72e2b2ecf3670815adaf671adb7c0"
+      },
+      {
+        "path": "acceleration/record_20261002_gf3_primal_binding_v1.py",
+        "sha256": "972045761a1050df424db103967cd77dc2d455ccdb90fddf92d7dd451c5776d5"
+      },
+      {
+        "path": "acceleration/record_20261002_gf3_primal_binding_schema3_v2.py",
+        "sha256": "19f07085d4290c56f0b653c6203a707373762e6f2cf43aa02606fc3bb76fcddf"
+      },
+      {
+        "path": "acceleration/record_20261002_gf3_primal_binding_metadata_v3.py",
+        "sha256": "f125419603fb9ebd3f7c39fb285356fb89e68ccc2cd3a56f3147b10117fc3d06"
+      },
+      {
+        "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_supervision01/manifest.json",
+        "sha256": "ab167ed8d39c99c70e656f3d9046a428456e0ea0e8b8ba0bf3097a75e55abe95"
+      },
+      {
+        "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_supervision01/summary.json",
+        "sha256": "3e9b70519a8a830cbbb83c3d0714927fe8f4bdeec0fc04e05ec0ab6526ac2d4f"
+      },
+      {
+        "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_schema3_supervision01/manifest.json",
+        "sha256": "d3e34fca72eeb053e2762eeec4185d59caf2e27497c6da2557aaeb83ae772c6c"
+      },
+      {
+        "path": "acceleration/results/20261002_independent_review/gf3_primal_binding_schema3_supervision01/summary.json",
+        "sha256": "710bc6ea0f34ee886c9728082458e3b7e61214834305ff44dd8ff5cfc1cf1831"
+      }
+    ],
+    "statement_and_revision_unchanged": true
+  }
+}
