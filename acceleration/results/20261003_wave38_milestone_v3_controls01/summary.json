@@ -1,0 +1,205 @@
+{
+  "status": "AUTHOR_WAVE38_V3_HISTORICAL_INDEX_OMISSION_CONTROLS_PASS",
+  "timestamp": "2026-10-02T19:21:19.261926+00:00",
+  "source_sha256": "d35693006c44210d83014ebae4c1b8792bf9a1c84ed98d0de8dd654fb32eb0a1",
+  "inputs_sha256": {
+    "acceleration/record_20261003_wave38_milestone_v3.py": "d35693006c44210d83014ebae4c1b8792bf9a1c84ed98d0de8dd654fb32eb0a1",
+    "acceleration/record_20261003_wave38_milestone_v3_spec.md": "73a23449e6ad70d23aac1d936efca6f91aaf3aba35c5b4c6e4dc972f41746711",
+    "acceleration/calibrate_20261003_wave38_milestone_v3_v1_spec.md": "9a11482f5d33fa4147b9f3a29bdbb26f909a6cd8562f8a681772688c149b624c",
+    "acceleration/calibrate_20261003_wave38_milestone_v3_v1.py": "a59d410dc63d9308285fdccb782dd18d73ba35541badf61f5ea3202068206393",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/validate_claims.py": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "CLAIMS.yaml": "cc8184dbe3c0c1bc6d539e8925fc392b80a3a4344c29e051118af0157d948a2c",
+    "acceleration/results/20261003_independent_review/wave38_transition02/summary.json": "70a8adf03a941ca426033f56fd2f87632b0d6860c9ea217ddc3b2fe82f79f4db",
+    ".gitattributes": "4c5232096640a5308943cb6f18d10402a0528102c5d0e96d09e662a290cad35a",
+    "acceleration/results/20261003_wave38_milestone_v3_controls01/selected_path_inventory.json": "0b7009db87a5ac1901f3a5766c616634f3e34477a8e06db6a72d3d37bca1eb78"
+  },
+  "controls": [
+    {
+      "label": "research_source",
+      "input": "acceleration/command_deadline.py",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "label": "research_doc",
+      "input": "docs/REPRODUCING.md",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "label": "root_ledger",
+      "input": "CLAIMS.yaml",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "label": "root_readme",
+      "input": "README.md",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "label": "attributes",
+      "input": ".gitattributes",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "label": "schema",
+      "input": "docs/claims.schema.json",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "label": "workflow",
+      "input": ".github/workflows/claims.yml",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "label": "historical_index",
+      "input": ".git/index",
+      "outcome": "OMITTED_HISTORICAL_ONLY"
+    },
+    {
+      "label": "wrong_index_hash",
+      "input": ".git/index",
+      "outcome": "REJECTED",
+      "diagnostic": "HISTORICAL_INDEX_OBSERVATION_HASH:'.git/index'"
+    },
+    {
+      "label": "missing_index_hash",
+      "input": ".git/index",
+      "outcome": "REJECTED",
+      "diagnostic": "HISTORICAL_INDEX_OBSERVATION_HASH:'.git/index'"
+    },
+    {
+      "label": "git_config",
+      "input": ".git/config",
+      "outcome": "REJECTED",
+      "diagnostic": "WORKSPACE_RELATIVE_PATH:'.git/config'"
+    },
+    {
+      "label": "git_private",
+      "input": ".git/objects/x",
+      "outcome": "REJECTED",
+      "diagnostic": "WORKSPACE_RELATIVE_PATH:'.git/objects/x'"
+    },
+    {
+      "label": "parent_traversal",
+      "input": "../CLAIMS.yaml",
+      "outcome": "REJECTED",
+      "diagnostic": "WORKSPACE_RELATIVE_PATH:'../CLAIMS.yaml'"
+    },
+    {
+      "label": "internal_traversal",
+      "input": "docs/../CLAIMS.yaml",
+      "outcome": "REJECTED",
+      "diagnostic": "WORKSPACE_RELATIVE_PATH:'docs/../CLAIMS.yaml'"
+    },
+    {
+      "label": "absolute_linux",
+      "input": "/mnt/c/Users/ikuto/projects/conway-99-graph/docs/REPRODUCING.md",
+      "outcome": "REJECTED",
+      "diagnostic": "WORKSPACE_RELATIVE_PATH:'/mnt/c/Users/ikuto/projects/conway-99-graph/docs/REPRODUCING.md'"
+    },
+    {
+      "label": "absolute_windows",
+      "input": "C:/Users/ikuto/projects/conway-99-graph/docs/REPRODUCING.md",
+      "outcome": "REJECTED",
+      "diagnostic": "RESEARCH_NAMESPACE:'C:/Users/ikuto/projects/conway-99-graph/docs/REPRODUCING.md'"
+    },
+    {
+      "label": "outside_linux",
+      "input": "/tmp/private",
+      "outcome": "REJECTED",
+      "diagnostic": "WORKSPACE_RELATIVE_PATH:'/tmp/private'"
+    },
+    {
+      "label": "outside_windows",
+      "input": "C:/private/file",
+      "outcome": "REJECTED",
+      "diagnostic": "RESEARCH_NAMESPACE:'C:/private/file'"
+    },
+    {
+      "label": "backslash",
+      "input": "docs\\x.md",
+      "outcome": "REJECTED",
+      "diagnostic": "LITERAL_RELATIVE_PATH:'docs\\\\x.md'"
+    },
+    {
+      "label": "newline",
+      "input": "docs/x\n.md",
+      "outcome": "REJECTED",
+      "diagnostic": "LITERAL_RELATIVE_PATH:'docs/x\\n.md'"
+    },
+    {
+      "label": "nul",
+      "input": "docs/x\u0000.md",
+      "outcome": "REJECTED",
+      "diagnostic": "LITERAL_RELATIVE_PATH:'docs/x\\x00.md'"
+    },
+    {
+      "label": "queued_lowword",
+      "input": "acceleration/incidence_low_weight_new.py",
+      "outcome": "REJECTED",
+      "diagnostic": "EXCLUDED_QUEUED_WAVE39:'acceleration/incidence_low_weight_new.py'"
+    },
+    {
+      "label": "queued_neighbor",
+      "input": "acceleration/results/new_neighbor_census/run.json",
+      "outcome": "REJECTED",
+      "diagnostic": "EXCLUDED_QUEUED_WAVE39:'acceleration/results/new_neighbor_census/run.json'"
+    },
+    {
+      "label": "duplicate_build",
+      "input": "acceleration/build/a",
+      "outcome": "REJECTED",
+      "diagnostic": "EXCLUDED_BUILD_OR_DUPLICATE:'acceleration/build/a'"
+    },
+    {
+      "label": "recovered_copy",
+      "input": "acceleration/recovered/a",
+      "outcome": "REJECTED",
+      "diagnostic": "EXCLUDED_BUILD_OR_DUPLICATE:'acceleration/recovered/a'"
+    },
+    {
+      "label": "outside_namespace",
+      "input": "private/file",
+      "outcome": "REJECTED",
+      "diagnostic": "RESEARCH_NAMESPACE:'private/file'"
+    }
+  ],
+  "positive_controls": 8,
+  "strict_negative_controls": 18,
+  "selected_evidence_path_records": 463,
+  "selected_impact_path_records": 404,
+  "historical_readonly_index_omissions": 1,
+  "absolute_artifact_aliases": 0,
+  "namespace_broadened": false,
+  "source_syntax_checked": true,
+  "generator_main_called": false,
+  "ledger_mutated": false,
+  "index_mutated": false,
+  "current_documents_mutated": false,
+  "attributes_mutated": false,
+  "scientific_launched": false,
+  "mathematical_replays": 0,
+  "shared_components": [
+    "Producer publication_impact_path/bounded functions tested as author calibration only.",
+    "Existing registry YAML reader used only to identify exact current350 selected paths.",
+    "Existing deadline helper and Git index path query."
+  ],
+  "deadline": {
+    "elapsed_seconds": 2.202999999979511,
+    "remaining_seconds": 37.79700000002049,
+    "review_remaining_seconds": 1797.7970000000205,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 173933.703,
+    "review_deadline_at": 175693.703,
+    "completed_reviews": 0
+  },
+  "limitations": [
+    "Author engineering controls; ROOT review and raw staged/public byte checking remain required.",
+    "Names and finite boundary behavior checked; no new mathematical assertion or artifact availability approval."
+  ]
+}

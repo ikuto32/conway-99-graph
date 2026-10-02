@@ -1,0 +1,121 @@
+{
+  "status": "INDEPENDENT_INCIDENCE_CODE_DUAL_RECURRENCE_CALIBRATION_V1_PASS",
+  "positive_fixtures": 5,
+  "strict_negative_controls": [
+    {
+      "case": "truncated",
+      "diagnostic": "DUAL_LENGTH"
+    },
+    {
+      "case": "negative",
+      "diagnostic": "DUAL_NONNEGATIVE"
+    },
+    {
+      "case": "zero",
+      "diagnostic": "DUAL_INEQUALITY"
+    },
+    {
+      "case": "half",
+      "diagnostic": "DUAL_INEQUALITY"
+    },
+    {
+      "case": "invalid_rational",
+      "diagnostic": "RATIONAL_SYNTAX"
+    },
+    {
+      "case": "nonlinear_words",
+      "diagnostic": "CODE_LINEARITY"
+    },
+    {
+      "case": "changed_coefficient",
+      "diagnostic": "MODEL_COEFFICIENT"
+    }
+  ],
+  "complete_small_character_checks": 140,
+  "full_binary_code": {
+    "size": 16,
+    "weight_histogram": [
+      1,
+      4,
+      6,
+      4,
+      1
+    ],
+    "character_sums": [
+      16,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "even_length3_code": {
+    "size": 4,
+    "weight_histogram": [
+      1,
+      0,
+      3,
+      0
+    ],
+    "character_sums": [
+      4,
+      0,
+      0,
+      4
+    ]
+  },
+  "complete_rook_kernel": {
+    "size": 16,
+    "weight_histogram": [
+      1,
+      0,
+      0,
+      0,
+      9,
+      0,
+      6,
+      0,
+      0,
+      0
+    ],
+    "character_sums": [
+      16,
+      0,
+      0,
+      96,
+      144,
+      144,
+      96,
+      0,
+      0,
+      16
+    ]
+  },
+  "producer_output_inspected": false,
+  "scope": "Finite checker calibration only, not target/code bound approval.",
+  "timestamp": "2026-10-02T17:46:49.385565+00:00",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261003_incidence_code_dual_v1.py",
+    "calibrate",
+    "--seconds",
+    "40",
+    "--out",
+    "acceleration/results/20261003_independent_review/incidence_code_dual_calibration01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/audit_20261003_incidence_code_dual_v1_spec.md": "6596f259f1386dc24360b3e656d01dc5f76aa723b6564f516b5a1bf2cb9b7d41",
+    "acceleration/audit_20261003_incidence_code_dual_v1.md": "9fd1522fc60cc001c57e03559ac77582fecee9be75f556a702226a0503376a67",
+    "acceleration/audit_20261003_incidence_code_dual_v1.py": "d4b4aaf3cfe5e5c456508dcb0a845ccf2255b447b686079ced5ca7394dce13ce",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "producer": "/root",
+  "verifier": "/root/structural",
+  "shared_components": [
+    "Same stated binary code domain; independently implemented recurrence and direct character sums.",
+    "Python standard library/deadline helper only; no producer, optimizer or numerical arithmetic imports."
+  ]
+}
