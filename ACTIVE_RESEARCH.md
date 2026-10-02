@@ -16,7 +16,8 @@ with 412 unresolved. Overall search coverage: UNKNOWN; no validated denominator.
 The explicit research authorization remains active. Next are scaled LP guides
 and exact structural certificate reconstruction, plus an independently gated
 linear triple-system construction search. The direct batch05 raw package passed
-complete independent local recovery; immutable publication is a separate step.
+complete independent local recovery and [immutable publication confirmation](acceleration/results/20261002_wave32_publication01/receipt.json).
+Its full historical transitive gate closure and platform tools remain separate.
 Current execution state requires fresh process observations; this document is
 not a live monitor. Earlier notices preserve dated states and historical stops.
 
