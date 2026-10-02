@@ -1,0 +1,87 @@
+{
+  "status": "INDEPENDENT_TWO_LINE_DENSE_DELTA_V1_PREOUTPUT_CALIBRATION_PASS",
+  "timestamp": "2026-10-02T18:06:31.767523+00:00",
+  "verifier": "/root",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261003_two_line_dense_delta_v1.py",
+    "--seconds",
+    "60",
+    "--out",
+    "acceleration/results/20261003_independent_review/two_line_dense_calibration01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "numpy": "2.5.3",
+  "source_commit": "e1691ed8cdab8e21b9038497c6ba109de7f781c8",
+  "complete_rook_proposals": 135,
+  "counts": {
+    "valid": 54,
+    "new-pair-already-present": 36,
+    "exclusive-selection": 45
+  },
+  "valid_overlapping": 36,
+  "complete_fullmatrix_comparisons": 54,
+  "strict_corruptions": [
+    {
+      "case": "missing_triple",
+      "diagnostic": "complete triple population"
+    },
+    {
+      "case": "duplicate_triple",
+      "diagnostic": "linear incidence"
+    },
+    {
+      "case": "bad_label",
+      "diagnostic": "distinct literal triple labels"
+    },
+    {
+      "case": "bool_label",
+      "diagnostic": "distinct literal triple labels"
+    },
+    {
+      "case": "wrong_degree",
+      "diagnostic": "exact point domain"
+    },
+    {
+      "case": "same_triple_proposal",
+      "diagnostic": "canonical proposal indices"
+    },
+    {
+      "case": "out_of_range_index",
+      "diagnostic": "canonical proposal indices"
+    }
+  ],
+  "producer_census_output_inspected": false,
+  "scientific_census_launches": 0,
+  "integer_range_bound": "n<=99; CN<=99; total unweighted pair energy<=4851*99^2; signed intermediate and sums far below2^63.",
+  "shared_components": [
+    "NumPy fixed-width integer arithmetic with explicit size bounds and full literal scalar calibration; pinned deadline and Python runtime.",
+    "No producer/native/parser/scorer imports."
+  ],
+  "inputs_outputs_sha256": {
+    "acceleration/audit_20261003_two_line_dense_delta_v1.py": "f51001bda1ca5e197960e2bb2b54ea06e4c8044c9e104d969b3f6106e713d1bd",
+    "acceleration/audit_20261003_two_line_dense_delta_v1_spec.md": "5aa29264ef89b4b743037c5ef330e59e9d13daa3ec2f0ae9451d79f322660dba",
+    "acceleration/results/20261003_independent_review/two_line_dense_calibration01/rook135_records.json": "e3bb46e5f6c27d0711b0d9461a8999ca891ada0146109d534cda38b4a3e36516",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9"
+  },
+  "limitations": [
+    "Finite rook calibration only; no scientific239085 census outcome or whole algorithm formalization.",
+    "A new complete output checker version will bind producer source/interface and actual warm artifacts."
+  ],
+  "target_resolution": "NONE",
+  "deadline": {
+    "elapsed_seconds": 0.046999999991385266,
+    "remaining_seconds": 59.953000000008615,
+    "review_remaining_seconds": 1799.9530000000086,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 169468.437,
+    "review_deadline_at": 171208.437,
+    "completed_reviews": 0
+  }
+}
