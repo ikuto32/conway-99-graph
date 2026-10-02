@@ -1,0 +1,110 @@
+{
+  "schema": "ROOTED8_LITERAL_GF3_ENGINEERING_AND_PROPOSED_SCIENCE_V1",
+  "created_at": "2026-10-02T13:24:00+00:00",
+  "source_commit_reference": "96049d9929b87de97858a8fded03c47d672cf0b6",
+  "status": "CANDIDATE_ENGINEERING_DESIGN_NO_GF3_COMPUTATION",
+  "design": {
+    "path": "acceleration/design_20261002_rooted8_gf3_v2.md",
+    "sha256": "35c8aeb8585adc5f8ad7f778474affe2adb0c2001c53769a11976ed87a2203e2",
+    "prior_draft": "acceleration/design_20261002_rooted8_gf3_v1.md",
+    "prior_draft_limitation": "Draft checkpoint-record count22 corrected to21 by literal saved-record enumeration."
+  },
+  "question": "Do the three original literal affine RHS coefficient columns admit GF3 primals, or is there a complete original-row coefficient relation with nonzero affine RHS?",
+  "scope": {
+    "columns": 23019,
+    "rows": 85874,
+    "field": 3,
+    "original_integer_rows": true,
+    "rank_claim": false,
+    "integer_feasibility_claim": false,
+    "nonnegative_feasibility_claim": false,
+    "target_resolution": false,
+    "prism_free_premise": "UNKNOWN",
+    "coverage": "Complete literal row checking is required for endpoints; this is not exhaustive graph coverage or an unconditional target exclusion."
+  },
+  "raw_model": {
+    "path": "acceleration/results/20261002_rooted8_universal5_product_model02/model.json",
+    "sha256": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+    "bytes": 57414699,
+    "committed_lossless_manifest": "acceleration/results/20261002_wave33_model_package01/manifest.json",
+    "committed_lossless_manifest_sha256": "c3efa198c5f48eddb5ead69a4bb130a3dc55567bb298856143c6fb62eb0e0145",
+    "independent_recovery": "acceleration/results/20261002_independent_review/wave33_model_recovery01/summary.json",
+    "independent_recovery_sha256": "b9352a5e5810f20ff9187c06f5e00636f2f3abad2810ed3d7c23df655b76f583"
+  },
+  "normalization_manifest": {
+    "path": "acceleration/results/20261002_independent_review/rooted8_row_content01/normalization_manifest.json",
+    "sha256": "47c9f0158084a1cf04b9ce2f84db93ee748e5e3226d759f276090aa50bdfe91c",
+    "use": "Independently recompute every literal row/divisor/normalized hash. Contents1/2/4 invertible modulo3; producer uses ORIGINAL rows."
+  },
+  "previous_measurement": {
+    "summary": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/summary.json",
+    "summary_sha256": "310f28738edc1f8b242f2e22524c1b4acb473d594170c738eacb920286e356b4",
+    "independent_check": "acceleration/results/20261002_independent_review/normalized_gf2_full_artifact01/summary.json",
+    "independent_check_sha256": "5e4eaad1a1d8945e33435d2fb09bb113f648f3adc1c7f568fc000f28a132bc14",
+    "native_wall_seconds": 75.211297253,
+    "outer_wall_seconds": 85.144070145,
+    "checkpoint_bytes": 343414964,
+    "saved_progress_records": 21,
+    "peak_rss_bytes": null,
+    "peak_rss_null_reason": "Prior native invocation did not measure getrusage/RSS; checkpoint bytes are not memory usage.",
+    "performance_guarantee": false,
+    "gf3_completion_probability": null,
+    "gf3_probability_null_reason": "New packed ternary arithmetic and weighted DAG overhead not calibrated."
+  },
+  "planned_sources": [
+    "acceleration/rooted8_gf3_20261002_v1.cpp",
+    "acceleration/prepare_20261002_rooted8_gf3_v1.py",
+    "acceleration/prepare_20261002_rooted8_gf3_v1_spec.md"
+  ],
+  "source_hashes": null,
+  "source_hashes_null_reason": "Engineering design precedes source implementation. Freeze exact new source hashes in build protocol before any compiler/native invocation.",
+  "encoding": "GF3_AFFINE_SPARSE_V1: three RHS residues0..2 and ordered unique nonzero coefficient1/2 columns, aggregated from original signed literal terms.",
+  "positive_endpoint": "Three exact23019-digit ternary vectors x_const,x_a,x_b; each independently satisfies all85874original row-component sums mod3.",
+  "alternative_endpoint": "Complete sorted original-row coefficients1/2, zero every23019LHScolumn mod3, nonzero exact three-component affine RHS; independently scalarchecked.",
+  "incomplete_endpoint": "Checkpoint of exact completed row prefix with input hash/planes/RHS/weighted DAG, preserved on stop; no exclusion.",
+  "tiny_control_populations": [
+    "All9 scalar add pairs and all27RHS triples with scalars0/1/2; packed boundaries and padding",
+    "Full-rank feasible signed/divisor2/4/duplicate-cancellation/all3RHS/zero-row fixture",
+    "Singular feasible/free-variable/dependent-row fixture, whole versus split/resume",
+    "Inconsistent weighted row-relation fixture, whole versus split/resume",
+    "Multiword matrix at columns0/63/64/65/127 and trailing-word boundary",
+    "Strict malformed sparse input and checkpoint hash/plane/padding/prefix/weighted-DAG controls",
+    "Independent raw coordinate/coefficient/sign/RHS/relation-weight corruption tests"
+  ],
+  "engineering_allocations_seconds": {
+    "build_outer": 180,
+    "build_worker": 150,
+    "compiler": 120,
+    "controls_outer": 300,
+    "controls_worker": 270,
+    "native_tiny_case_maximum": 15,
+    "children_share_worker_deadline": true,
+    "reason": "Prior compiler1.105s and GF2 tinycontrols1.556s; changed arithmetic/weighted-DAG validation requires new finite calibration and compiler diagnostics, no inherited default cap."
+  },
+  "proposed_scientific_allocation_seconds": {
+    "outer": 900,
+    "worker": 850,
+    "native_guard": 750,
+    "cooperative": 745,
+    "status": "PROPOSAL_PENDING_NEW_ENGINEERING_EVIDENCE_AND_ROOT_APPROVAL",
+    "reason": "Measured GF2 native75.211s; GF3 has two coefficient planes/more Boolean operations/weighted DAG. Actual overhead not calibrated."
+  },
+  "proposed_resources": {
+    "address_space_bytes": 4294967296,
+    "per_file_bytes": 4294967296,
+    "minimum_memavailable_bytes": 8589934592,
+    "minimum_host_free_bytes": 34359738368,
+    "minimum_ext4_free_bytes": 8589934592,
+    "native_measured_peak_rss": "Emit Linux getrusage ru_maxrss with its units, not a performance guarantee."
+  },
+  "independent_engineering_gate": null,
+  "independent_gate_null_reason": "New source/binary/build/finite-control population does not yet exist; prior GF2 gates do not approve GF3.",
+  "scientific_source_commit": null,
+  "scientific_source_commit_null_reason": "Require a fresh committed and pinned exact changed source/gate closure before launch.",
+  "scientific_command": null,
+  "scientific_command_null_reason": "Must be frozen only after separate engineering gate, endpoint checker calibration and fresh empty-worker/resource preflight.",
+  "scientific_launched": false,
+  "automatic_retry": false,
+  "deadline_extension": false,
+  "self_approval": false
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "invocation_id": "7369e6db755e428f81ed2f7b58fb2b8c",
+  "timestamp": "2026-10-02T13:54:48.948837+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-c",
+    "import hashlib,json,sys\nfrom pathlib import Path\nfrom datetime import datetime,timezone\nsys.path.insert(0,'acceleration')\nimport audit_20261002_normalized_gf2_controls_v1 as independent\nmodel_path=Path('acceleration/results/20261002_rooted8_universal5_product_model02/model.json')\nvector_dir=Path('acceleration/results/20261002_rooted8_normalized_gf2_solve01/solve')\npins={str(model_path):'a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b',str(Path(independent.__file__).relative_to(Path.cwd())):'675e393b8ba1cb20b78565b40cb6a478c96dc01e4a6b50de51f5272fb19bc3f0',str(vector_dir/'x_const.bits'):'ead4ca387495634c62538fafc4589b89b3cbcc8c4fa51eda3f95532260059d11',str(vector_dir/'x_a.bits'):'d6c90797b2c8067b56d51da85da208436fbcad30da03c271d8584ace36e2805d',str(vector_dir/'x_b.bits'):'8e454bf957ed8b5f2baec6e0f5e4fe0b971813d9629b53bac156dc26f3fa7a44'}\nfor name,wanted in pins.items():\n    if hashlib.sha256(Path(name).read_bytes()).hexdigest()!=wanted: raise ValueError('Exact public-certificate input identity')\nmodel=json.loads(model_path.read_bytes()); vectors=independent.read_vectors(vector_dir,23019); independent.check_vectors(model,vectors)\nchanged=[list(v)for v in vectors];changed[0][0]^=1\ntry: independent.check_vectors(model,changed)\nexcept ValueError as error:\n    if str(error)!='PRIMAL_SCALAR_ROW': raise\nelse: raise ValueError('Corrupted public-certificate vector accepted')\nreport={'timestamp':datetime.now(timezone.utc).isoformat(),'status':'MINIMAL_HASH_BOUND_PUBLIC_GF2_PRIMAL_REPLAY_PASS','command':[sys.executable,*sys.argv],'cwd':str(Path.cwd()),'inputs_sha256':pins,'complete_scalar_components':257622,'resume_checkpoint_read':False,'producer_or_native_execution':False,'encoding_or_rank_review':False,'changed_coordinate0_rejected':True,'shared_components':'Same calibrated independent scalar helper as full artifact audit; operational minimal replay, not a new independent mathematical promotion.','target_resolution':False}\nPath('acceleration/results/20261002_wave34_public_primal_replay01.json').write_text(json.dumps(report,indent=2)+'\\n',encoding='utf8',newline='\\n')\nprint(json.dumps({'status':report['status'],'complete_scalar_components':257622,'resume_checkpoint_read':False}))"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 60.0,
+  "allocation_reason": "Resolve public-replay concern: check exact3vector certificate using publicmodel/helper only, without local343MBcheckpoint; priorfullcheck3.5s",
+  "success_criterion": "All257622scalar components pass, exactinputhashes and actualvectorbitflip reject; no checkpoint accessed",
+  "verification_criterion": "Repeated calibrated checking path only; no new encoding/rank or mathematical promotion",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 10.0,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}

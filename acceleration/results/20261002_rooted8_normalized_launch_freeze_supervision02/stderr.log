@@ -1,0 +1,17 @@
+fatal: detected dubious ownership in repository at '/mnt/c/Users/ikuto/projects/conway-99-graph'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /mnt/c/Users/ikuto/projects/conway-99-graph
+Traceback (most recent call last):
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/freeze_20261002_rooted8_normalized_launch_v2.py", line 125, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/freeze_20261002_rooted8_normalized_launch_v2.py", line 40, in main
+    need(sys.platform.startswith('linux'),'fresh preflight inside Linux');head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip();need(head==args.source_commit,'explicit fresh source HEAD')
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.

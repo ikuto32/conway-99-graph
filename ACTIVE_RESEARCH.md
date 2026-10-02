@@ -1,5 +1,27 @@
 # Latest verified continuation checkpoint — 2026-10-02 JST
 
+The [thirty-fourth milestone](docs/RESEARCH_20261002_THIRTYFOURTH_WAVE.md) records
+five exact new revisions and a frozen 329-record ledger: 322 VERIFIED/CLEAR,
+three CANDIDATE and four REFUTED. The weighted pilot and full normalized parity
+calculation completed with independently checked artifacts. All 210 local
+profiles survive the parity test; there is no rank or integer-lift claim.
+Universal per-vertex/global prism-count identities are checked; their target
+means (2,1) and four added root7 rows are conditional on UNKNOWN prism absence.
+All four saved corners satisfy those rows. No profile exclusion is added.
+
+The weighted saved graph has F=3801=6*63+3423 and ordinary E=3486, worse than
+the earlier E=3034. It is not an SRG. The literal campaign remains 380 checked
+cases of 792, with 412 unresolved. Target resolution: UNKNOWN. Overall search
+coverage: UNKNOWN; no validated denominator.
+
+Research authorization remains active. Next is an independently gated packed
+modulo-3 calculation emitting complete primal vectors or an original-row
+relation. New sources need their own controls and committed preflight. This
+document does not observe live workers. Publication/ledger transition reviews
+have separate records; schema checks are not mathematical verification.
+
+# Earlier verified continuation checkpoint — 2026-10-02 JST
+
 The [thirty-third milestone](docs/RESEARCH_20261002_THIRTYTHIRD_WAVE.md) records
 six new scoped revisions: root7 necessary equations and rational witnesses,
 complete conditional root8 catalogue/equations, construction controls and one

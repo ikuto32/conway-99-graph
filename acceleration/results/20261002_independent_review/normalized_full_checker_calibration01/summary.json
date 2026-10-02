@@ -1,0 +1,87 @@
+{
+  "status": "INDEPENDENT_NORMALIZED_GF2_FULL_CHECKER_CALIBRATION_V1_PASS",
+  "timestamp": "2026-10-02T13:12:39.710296+00:00",
+  "source_commit": "96049d9929b87de97858a8fded03c47d672cf0b6",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/calibrate_20261002_normalized_gf2_full_checker_v1.py",
+    "--seconds",
+    "40",
+    "--out",
+    "acceleration/results/20261002_independent_review/normalized_full_checker_calibration01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python_version": "3.12.10",
+  "verifier": "/root/structural",
+  "inputs_sha256": {
+    "acceleration/audit_20261002_normalized_gf2_full_artifact_v1.py": "21b96c97ae3482486a021c3c399a4987cb1991035d8bb6be4ee3e60c1a4e0544",
+    "acceleration/audit_20261002_normalized_gf2_controls_v1.py": "675e393b8ba1cb20b78565b40cb6a478c96dc01e4a6b50de51f5272fb19bc3f0",
+    "docs/AUDIT_20261002_NORMALIZED_GF2_FULL_ARTIFACT_PROTOCOL.md": "ad29d3a6f2924f580419116e5ac42ce45bccf8afbe6067f7d5d4c2101f800c37",
+    "acceleration/calibrate_20261002_normalized_gf2_full_checker_v1.py": "bb8c807fef9a35a676a368f007141542af6dae41af7b03b6833bb430b3af7b0e",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "positive_controls": [
+    {
+      "kind": "raw_integer_scalar_vectors",
+      "columns": 1,
+      "rows": 2,
+      "vectors": 3
+    },
+    {
+      "kind": "raw_integer_scalar_relation",
+      "columns": 1,
+      "rows": 2,
+      "mask": 1
+    }
+  ],
+  "corrupted_controls": [
+    {
+      "label": "tiny_flipped_vector",
+      "diagnostic": "PRIMAL_SCALAR_ROW"
+    },
+    {
+      "label": "tiny_changed_RHS",
+      "diagnostic": "PRIMAL_SCALAR_ROW"
+    },
+    {
+      "label": "tiny_changed_coefficient",
+      "diagnostic": "PRIMAL_SCALAR_ROW"
+    },
+    {
+      "label": "tiny_changed_XORmask",
+      "diagnostic": "XOR_SCALAR_ROW"
+    }
+  ],
+  "disabled_scalar_checker_vetoes": [
+    {
+      "disabled": "vectors",
+      "diagnostic": "CORRUPTED_CONTROL_ACCEPTED tiny_flipped_vector"
+    },
+    {
+      "disabled": "relation",
+      "diagnostic": "CORRUPTED_CONTROL_ACCEPTED tiny_changed_XORmask"
+    }
+  ],
+  "exact_selected_source_lines": [
+    65,
+    75
+  ],
+  "selected_AST_statement_count": 13,
+  "extracted_actual_control_source_sha256": "ce6b664a84f710b4512b53351ac7d94c86b07982094e87ef786c26c153a31943",
+  "full_solver_output_accessed": false,
+  "native_execution": false,
+  "method": "Execute only exact frozen own-checker tiny AST block with independently authored scalar helper; accepting malformed scalar artifacts fails specific corrupt controls.",
+  "shared_trusted_components": [
+    "Independent scalar helper675e393b...bc3f0",
+    "Python ast/compiler/standard library",
+    "command_deadline.py",
+    "run_compute_command.py",
+    "locked uv environment"
+  ],
+  "scope": "Checker engineering calibration only. Full mathematical/vector/XOR output has not been inspected or approved.",
+  "target_resolution": false,
+  "elapsed_seconds": 0.030999999988125637
+}

@@ -1,0 +1,246 @@
+{
+  "status": "INDEPENDENT_GF3_LITERAL_ENDPOINT_CHECKER_CALIBRATION_V1_PASS",
+  "calibration_cases": {
+    "singular": {
+      "rows": 7,
+      "columns": 4,
+      "content_counts": {
+        "2": 1,
+        "4": 1,
+        "1": 4,
+        "3": 1
+      },
+      "normalized_literal_jsonl_sha256": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+      "raw_divided_mod3_equivalent": false,
+      "complete_vectors": 3,
+      "scalar_raw_row_component_checks": 21
+    },
+    "fullrank": {
+      "rows": 9,
+      "columns": 4,
+      "content_counts": {
+        "2": 1,
+        "4": 2,
+        "1": 5,
+        "3": 1
+      },
+      "normalized_literal_jsonl_sha256": "7356b98a1b572dfbed8f816db749161e8874d5d0f868f21cbe72f5d4c3f4fe55",
+      "raw_divided_mod3_equivalent": false,
+      "complete_vectors": 3,
+      "scalar_raw_row_component_checks": 27
+    },
+    "inconsistent": {
+      "rows": 7,
+      "columns": 4,
+      "content_counts": {
+        "2": 1,
+        "4": 1,
+        "1": 4,
+        "3": 1
+      },
+      "normalized_literal_jsonl_sha256": "a7b1de1601ce64b1258aeacd2d7a5852878085edff9fab3875a659c60ae1c724",
+      "raw_divided_mod3_equivalent": false,
+      "relation": {
+        "lhs_exact_integer_sums": [
+          -3,
+          12,
+          18,
+          0
+        ],
+        "rhs_exact_integer_sums": [
+          13,
+          3,
+          9
+        ],
+        "rhs_mod3": [
+          1,
+          0,
+          0
+        ],
+        "selected_rows": [
+          0,
+          1,
+          2
+        ],
+        "weights": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "operator_mode": "original"
+      }
+    },
+    "multiword": {
+      "rows": 10,
+      "columns": 130,
+      "content_counts": {
+        "2": 1,
+        "4": 2,
+        "1": 6,
+        "3": 1
+      },
+      "normalized_literal_jsonl_sha256": "38555607a7e14660f5bb9a850480a11aa88833465933d311aeac2846656ffcf6",
+      "raw_divided_mod3_equivalent": false,
+      "complete_vectors": 3,
+      "scalar_raw_row_component_checks": 30
+    },
+    "divided_scope_control": {
+      "rows": 7,
+      "columns": 4,
+      "content_counts": {
+        "1": 7
+      },
+      "normalized_literal_jsonl_sha256": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+      "raw_divided_mod3_equivalent": true,
+      "complete_vectors": 3,
+      "scalar_raw_row_component_checks": 21
+    }
+  },
+  "negative_controls": [
+    {
+      "label": "relation_weight",
+      "diagnostic": "GF3_ORIGINAL_ROW_RELATION_SCALAR"
+    },
+    {
+      "label": "relation_RHS",
+      "diagnostic": "GF3_ORIGINAL_ROW_RELATION_SCALAR"
+    },
+    {
+      "label": "relation_dimensions",
+      "diagnostic": "ENDPOINT_RELATION_DIMENSIONS"
+    },
+    {
+      "label": "vector_coordinate",
+      "diagnostic": "ENDPOINT_ORIGINAL_PRIMAL_SCALAR_ROW"
+    },
+    {
+      "label": "vector_truncated",
+      "diagnostic": "ENDPOINT_COMPLETE_TERNARY_VECTORS"
+    },
+    {
+      "label": "vector_nontrit",
+      "diagnostic": "ENDPOINT_COMPLETE_TERNARY_VECTORS"
+    },
+    {
+      "label": "coefficient_sign",
+      "diagnostic": "ENDPOINT_ORIGINAL_PRIMAL_SCALAR_ROW"
+    },
+    {
+      "label": "raw_affine_RHS",
+      "diagnostic": "ENDPOINT_ORIGINAL_PRIMAL_SCALAR_ROW"
+    },
+    {
+      "label": "literal_content_record",
+      "diagnostic": "ENDPOINT_ORIGINAL_LITERAL_RECORD"
+    },
+    {
+      "label": "missing_raw_row_record",
+      "diagnostic": "ENDPOINT_INPUT_DIMENSIONS"
+    },
+    {
+      "label": "content_census",
+      "diagnostic": "ENDPOINT_FULL_CONTENT_CENSUS"
+    },
+    {
+      "label": "normalized_stream_digest",
+      "diagnostic": "ENDPOINT_FULL_CONTENT_CENSUS"
+    },
+    {
+      "label": "raw_primal_on_divided_content3",
+      "diagnostic": "ENDPOINT_ORIGINAL_PRIMAL_SCALAR_ROW"
+    },
+    {
+      "label": "content3_false_equivalence",
+      "diagnostic": "ENDPOINT_CONTENT3_SCOPE"
+    }
+  ],
+  "full_scientific_output_inspected": false,
+  "scientific_GF3_launched": false,
+  "scope": "New endpoint original-row checking code exercised on all five tiny/control operators, four complete primal artifact sets and one relation. No full scientific verdict.",
+  "timestamp": "2026-10-02T14:05:49.528173+00:00",
+  "source_commit": "96049d9929b87de97858a8fded03c47d672cf0b6",
+  "verifier": "/root/structural",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_gf3_full_artifact_v1.py",
+    "calibrate",
+    "--seconds",
+    "40",
+    "--out",
+    "acceleration/results/20261002_independent_review/gf3_endpoint_calibration01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python_version": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/audit_20261002_gf3_full_artifact_v1.py": "b57176cccf0a39dfd6a2bc8e2380ff8feed70dcb086d57593edbdb7ee72e807b",
+    "docs/AUDIT_20261002_GF3_FULL_ARTIFACT_PROTOCOL.md": "ba0da2f950978633f2a70799ce574594e3718540a1125b1e8437f7a003615889",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/audit_20261002_gf3_scalar_v1.py": "698eb9bbe8b1ba6a257e8e6226a9e49517e17e966ce64afb11b98d17be08bafa",
+    "acceleration/results/20261002_independent_review/gf3_scalar_calibration01/summary.json": "8948291c910fe4532024ce883fc0a030a3db32a0c5042e226683dbe9ba308632",
+    "acceleration/results/20261002_rooted8_gf3_controls02/controls_manifest.json": "f4e1b7330264015cee18992c08f5a7573ca44468236128a9ad5e00a87f0c4b6a",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/raw_model.json": "9c97d398cde6b846be7c1611ab2c7ec8962663860b9405457fb385a035f8678e",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/input_case.json": "66bb65ca78d98c356e22b8f168144a18120d05af1f5418eae9d671a039d6d0ae",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/normalized_literal_rows.jsonl": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_input/sparse_rows.txt": "02f937d8287b3bbb7c4cf20cdc9057d750d45f8100b3dc074c5ec8aaf17d50c7",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_const.trits": "804964ec9d09c0af94a35c570206221ac9959e2f4bb1ebb43553826ebf4d88d3",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_a.trits": "a351a2903413ad725c20c45e8e6063074c8a01a18cff8c6a35d668225eea9ba2",
+    "acceleration/results/20261002_rooted8_gf3_controls02/singular_whole/x_b.trits": "5a63918b1f1dff8d5ceefc1c1526b3f64aac5a76058bb852907ebc5bf3b0ef00",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/raw_model.json": "33b5eaf5a2b844ca4ceab8d5a0754d931a5f530716e0b497efec580609400262",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/input_case.json": "8a2ab66392efdc2941ca7bb900c67fd35ec34912cedf5f89e7d66a68eaa32846",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/normalized_literal_rows.jsonl": "7356b98a1b572dfbed8f816db749161e8874d5d0f868f21cbe72f5d4c3f4fe55",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_input/sparse_rows.txt": "76c46bf1b3ea6e07d4dee2d068dbf1c4158fc6bc48d9cf90e6528664d89a14bd",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_const.trits": "804964ec9d09c0af94a35c570206221ac9959e2f4bb1ebb43553826ebf4d88d3",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_a.trits": "a351a2903413ad725c20c45e8e6063074c8a01a18cff8c6a35d668225eea9ba2",
+    "acceleration/results/20261002_rooted8_gf3_controls02/fullrank_whole/x_b.trits": "5a63918b1f1dff8d5ceefc1c1526b3f64aac5a76058bb852907ebc5bf3b0ef00",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/raw_model.json": "a0c76e61275fd0a9878b5f1d5826f7d475ade1144227b57f0cea6d96bf8780c5",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/input_case.json": "9786c2fdfdb2e9d35ef140e7f55391d3f46cfacb3c6d7835dbfdaa8e4760fee6",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/normalized_literal_rows.jsonl": "a7b1de1601ce64b1258aeacd2d7a5852878085edff9fab3875a659c60ae1c724",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_input/sparse_rows.txt": "38b4f8665c72b87e00dcab1204ed23e8be9b7e15a3f007d3cbb3b05f4d4daaa4",
+    "acceleration/results/20261002_rooted8_gf3_controls02/inconsistent_whole/original_row_relation.json": "1f99c1f491751956e27bed74d45e67aadabaae580941f82ea9548d2d70f7f2bf",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/raw_model.json": "791c9569f48885e75d1f0c008d04445a9f58211ea3d59b6c30d6ec4f026fe1ad",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/input_case.json": "e67fab0fb09376c0e6ed885f151b65542149b25d1670247d88b4b42e6568027e",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/normalized_literal_rows.jsonl": "38555607a7e14660f5bb9a850480a11aa88833465933d311aeac2846656ffcf6",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_input/sparse_rows.txt": "583c149bcd6b71a83f52453bf91e74f3cec45b46eeaa0f50ebc4ded53e8e35dd",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_const.trits": "f534b14fdb1e325a8c396a5bb1204cbb84400734e64b3309e21f18b9e2bd3f2b",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_a.trits": "cabe3cf854ed7a03196e4b2688ebfb308538c341531c43a56717b82304064c2b",
+    "acceleration/results/20261002_rooted8_gf3_controls02/multiword_whole/x_b.trits": "13c28ad44d7f9457b7f33cb00e8ea871b452a90b3c06273aa14f70347a5341cd",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/raw_model.json": "3ba4df8985d6e974437420741333bebd6bb1b6f7ce1b5a03cee0da8d3d9e30ac",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/input_case.json": "aaae090aa4a7c33b7dcb9bc22d68fa4dab8e830f08585e69a02e7a5bfca1b28a",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/normalized_literal_rows.jsonl": "565883096f6f351b0af253338be8836fd5249eb4cb35661a44f30928bc6d6f78",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_input/sparse_rows.txt": "6c3da59cd95b4f0d9ca460d8d173bd7659d07431f2e1b2186579d1722d19eabc",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_const.trits": "e1fe4b5e80715e60a7449bd8fd64a70364e23ccb9b5d970187468be1378edcee",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_a.trits": "924c61272e2c2da342811e7da6b36d9c0478eda405c08cb117932216a31c5bdb",
+    "acceleration/results/20261002_rooted8_gf3_controls02/divided_scope_control_whole/x_b.trits": "7fbefe47564000b92eca863f527eb9c6d0ab13e9b934ec66449510228b51c441"
+  },
+  "shared_components": [
+    "Separate independently calibrated scalar helper",
+    "command_deadline; no producer imports"
+  ],
+  "elapsed_seconds": 0.03200000000651926,
+  "deadline": {
+    "elapsed_seconds": 0.03200000000651926,
+    "remaining_seconds": 39.96799999999348,
+    "review_remaining_seconds": 1799.9679999999935,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 155006.343,
+    "review_deadline_at": 156766.343,
+    "completed_reviews": 0
+  },
+  "rank_claim": false,
+  "target_resolution": false
+}

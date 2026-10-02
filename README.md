@@ -1,5 +1,16 @@
 # Conway 99-graph research
 
+**2026-10-02 JST latest verified checkpoint:** [thirty-fourth milestone](docs/RESEARCH_20261002_THIRTYFOURTH_WAVE.md).
+Five new scoped revisions bring the frozen ledger to 329 claims: 322
+VERIFIED/CLEAR, three CANDIDATE and four REFUTED. Complete normalized parity
+witnesses leave all 210 local profiles consistent modulo 2. New universal
+counting identities give conditional prism-free means (2,1); prism absence
+remains UNKNOWN. The weighted saved graph fails SRG and has ordinary residual
+3486, compared with the earlier 3034. No new exclusion or target resolution.
+Overall search coverage: UNKNOWN; no validated denominator. Research is
+authorized; actual execution requires fresh observations. Earlier dated
+checkpoints follow.
+
 **2026-10-02 JST latest verified checkpoint:** [thirty-third milestone](docs/RESEARCH_20261002_THIRTYTHIRD_WAVE.md).
 Six new scoped revisions add no graph exclusion. The frozen ledger has324
 claims:317 VERIFIED/CLEAR, three CANDIDATE and four REFUTED. Complete conditional

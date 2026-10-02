@@ -1,5 +1,27 @@
 # 取得と検証
 
+## Thirty-fourth milestone, 2026-10-02 JST
+
+The [latest milestone](RESEARCH_20261002_THIRTYFOURTH_WAVE.md) records five exact
+scoped revisions. [Independent normalized parity replay](../acceleration/results/20261002_independent_review/normalized_gf2_full_artifact01/summary.json)
+checks every literal row and three complete binary vectors; it asserts no rank
+or integer/nonnegative lift. The producer checkpoint is separately LOCAL_ONLY
+and is not required to check the three-vector certificate. The raw model can
+be restored by the lossless wave33 manifests below.
+
+The [universal counting proof](../acceleration/audit_20261002_rooted6_means_v1_proof.md)
+uses ordered wedges and marked four-cycles. Its finite [independent audit](../acceleration/results/20261002_independent_review/rooted6_means02/summary.json)
+calibrates positive/corrupted fixtures; fixture agreement alone is not the proof.
+Four derived root7 equations are conditional on UNKNOWN prism absence, and all
+four saved corner witnesses satisfy them. No graph or profile is excluded.
+
+The weighted saved-object audit checks the complete integer matrix and components;
+F=3801 and ordinary E=3486 describe one non-SRG graph. Sparse replay does not
+certify the full 20-million-proposal trajectory. Original setup/source/registration
+failures remain available in their own versioned records. Use the locked uv
+environment and supported command supervisor for each reproduction. New modulo-3
+work requires its own source, controls, checking gate and committed preflight.
+
 ## Thirty-third milestone, 2026-10-02 JST
 
 The [latest milestone](RESEARCH_20261002_THIRTYTHIRD_WAVE.md) binds six new scoped

@@ -1,0 +1,111 @@
+{
+  "id": "C-PRISMFREE-ROOTED8-NORMALIZED-LITERAL-GF2-THREE-PRIMALS",
+  "revision": 1,
+  "claim_revision": 1,
+  "kind": "construction",
+  "basis": ["COMPUTED", "DERIVED"],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For the exact frozen23019-column85874-row rooted8 integer operator after dividing each row by its positive literal integer content, the three recorded complete binary vectors x_const,x_a,x_b satisfy respectively all constant,a,b affine RHS components modulo2. Consequently for every integer pair (a,b), x_const XOR ((a mod2)*x_a) XOR ((b mod2)*x_b) solves that fixed literal operator modulo2; in particular all210 frozen integer profiles a=0..20,b=0..9 survive this modular consistency test, with zero exclusions.",
+  "scope": {
+    "description": "Exact literal modular consistency certificate for one pinned local count operator, with complete independently checked normalization and scalar rows. No rank, integer/nonnegative feasibility, rooted profile realization, graph realization, unrestricted target exclusion or target resolution.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE",
+    "profile_population": {"unit": "integer parameter pair", "a_inclusive": [0,20], "b_inclusive": [0,9], "count": 210, "excluded": 0},
+    "prism_free_target_interpretation": "Conditional necessary model only; global prism absence remains UNKNOWN. The literal modular statement itself is about the pinned matrix and does not assert that its graph premise holds."
+  },
+  "assumptions": [
+    "Use exactly the pinned raw integer model and fixed variable/row ordering.",
+    "Each positive divisor is the gcd of all literal term coefficients and three affine RHS coefficients, with all-zero gcd mapped to1; duplicate terms remain literal through division.",
+    "Interpret linear combinations over the field F2, not as integer count vectors.",
+    "Any graph-level use additionally requires the separately verified conditional rooted8 necessary encoding and its UNKNOWN no-induced-prism premise; no target automorphism is assumed."
+  ],
+  "dependencies": [
+    {"id": "C-PRISMFREE-ROOTED8-MARKED-UNIVERSAL5-PRODUCT-NECESSARY-ENCODING", "revision": 1, "relation": "uses_result"},
+    {"id": "C-PRISMFREE-ORDERED-NONEDGE-ROOTED6-INTEGER-DOMAIN", "revision": 1, "relation": "coverage"}
+  ],
+  "dependency_reason": "The first claim supplies only the conditional graph interpretation of the frozen raw operator; the second identifies the210profile population. Literal scalar certificate validity is bound directly to the raw matrix, exact normalization and vector hashes below.",
+  "created_at": "2026-10-02T13:20:50+00:00",
+  "updated_at": "2026-10-02T13:20:50+00:00",
+  "source_commit": "96049d9929b87de97858a8fded03c47d672cf0b6",
+  "producer": "/root/native_driver",
+  "verifier": "/root/structural",
+  "method": "independent_artifact_check",
+  "verification_timestamp": "2026-10-02T13:19:04.167507+00:00",
+  "report": "acceleration/results/20261002_independent_review/normalized_gf2_full_artifact01/summary.json",
+  "report_sha256": "5e4eaad1a1d8945e33435d2fb09bb113f648f3adc1c7f568fc000f28a132bc14",
+  "pre_output_calibration": {
+    "path": "acceleration/results/20261002_independent_review/normalized_full_checker_calibration01/summary.json",
+    "sha256": "63ae57b00a0cdc87ec2209dceb8e185ef70cd1ac350bf3a51ab0b7c13dfe5611",
+    "full_output_inspected": false,
+    "positive_fixtures": 2,
+    "specific_corrupt_controls": 4,
+    "disabled_scalar_checker_vetoes": 2
+  },
+  "certificate_artifacts": [
+    {"component": "constant", "path": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/solve/x_const.bits", "sha256": "ead4ca387495634c62538fafc4589b89b3cbcc8c4fa51eda3f95532260059d11", "binary_coordinates": 23019, "bytes": 23053, "availability": "LOCAL_ONLY"},
+    {"component": "a", "path": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/solve/x_a.bits", "sha256": "d6c90797b2c8067b56d51da85da208436fbcad30da03c271d8584ace36e2805d", "binary_coordinates": 23019, "bytes": 23049, "availability": "LOCAL_ONLY"},
+    {"component": "b", "path": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/solve/x_b.bits", "sha256": "8e454bf957ed8b5f2baec6e0f5e4fe0b971813d9629b53bac156dc26f3fa7a44", "binary_coordinates": 23019, "bytes": 23049, "availability": "LOCAL_ONLY"}
+  ],
+  "normalization": {
+    "raw_model": "acceleration/results/20261002_rooted8_universal5_product_model02/model.json",
+    "raw_model_sha256": "a2162b5edc4eb68952cc9887156c5d0cd731aaaf9a6b5f94f446174b9d10528b",
+    "rows": 85874,
+    "columns": 23019,
+    "literal_term_occurrences": 968172,
+    "content_counts": {"1": 82003, "2": 3842, "4": 29},
+    "independent_manifest": "acceleration/results/20261002_independent_review/rooted8_row_content01/normalization_manifest.json",
+    "independent_manifest_sha256": "47c9f0158084a1cf04b9ce2f84db93ee748e5e3226d759f276090aa50bdfe91c",
+    "input_case": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/input_case.json",
+    "input_case_sha256": "e329819f55cf189c5ccd7eccacaa6dcf77e861f476c1748d8f3cfacc12bc3423",
+    "normalized_literal_jsonl": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/normalized_literal_rows.jsonl",
+    "normalized_literal_jsonl_sha256": "ddcdc3ae7f9d51a986e99c928901e5da2c621c2dafd25df0507a0db826492f26",
+    "sparse_parity_input": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/sparse_rows.txt",
+    "sparse_parity_input_sha256": "1d963c09608254f54cd4c8aa387fbf79ce3a943b5d36f590102fb7ea29460ac5",
+    "independently_checked": "Every raw/normalized literal hash, divisor, normalized/parity byte and row record; complete streams and census; scalar verification uses divided original integer rows, not native sparse replay.",
+    "availability": "LOCAL_ONLY",
+    "retrieval": "Exact raw paths exist in the shared repository checkout. This new binding does not claim public replay until the publisher records the public artifact closure."
+  },
+  "verification": {
+    "bound_claim_id": "C-PRISMFREE-ROOTED8-NORMALIZED-LITERAL-GF2-THREE-PRIMALS",
+    "bound_claim_revision": 1,
+    "raw_rows_checked_per_vector": 85874,
+    "exact_scalar_row_component_checks": 257622,
+    "actual_supported_coordinate_flip": 0,
+    "actual_corruption_diagnostic": "PRIMAL_SCALAR_ROW",
+    "shared_components": [
+      "Independent scalar helper audit_20261002_normalized_gf2_controls_v1.py SHA675e393b8ba1cb20b78565b40cb6a478c96dc01e4a6b50de51f5272fb19bc3f0",
+      "Frozen full checker SHA21b96c97ae3482486a021c3c399a4987cb1991035d8bb6be4ee3e60c1a4e0544",
+      "Python exact integers, math.gcd, standard library, locked uv environment and contained command deadline/supervisor",
+      "Raw operator produced by structural but independently derived and coverage-checked by checkpoint_audit before this new native modular discovery; no native/front-end producer imports"
+    ],
+    "command_and_all_input_output_hashes": "Pinned immutable verification report above contains the complete command, cwd, versions and hashes."
+  },
+  "execution": {
+    "verifier_seconds": 3.3280000000086147,
+    "supervisor_seconds": 3.5469999999913853,
+    "supervisor_summary": "acceleration/results/20261002_independent_review/normalized_gf2_full_artifact_supervision01/summary.json",
+    "observed_exit_code": 0,
+    "reaped": true,
+    "empty_windows_job_observed": true,
+    "currently_running": false
+  },
+  "resume_checkpoint": {
+    "path": "acceleration/results/20261002_rooted8_normalized_gf2_solve01/solve/checkpoint.bin",
+    "sha256": "3ecd66eb252cdd8cd92b1293fae8edfdd1a03d218fc9ab15684a81738370c227",
+    "bytes": 343414964,
+    "availability": "LOCAL_ONLY",
+    "retrieval": "Existing local repository checkout, same-source Linux little-endian GF2_PRIMAL_CP_V2 format; no automatic resume authorized by this record.",
+    "mathematical_certificate_required": false,
+    "checked": "Hash/byte identity only in full audit; no full checkpoint basis/DAG/rank validation claimed. The three raw full primal vectors suffice for the stated literal modular result."
+  },
+  "limitations": [
+    "No rank or completeness-of-relations claim.",
+    "Modulo2 witnesses do not lift to integer or nonnegative count solutions.",
+    "No target graph or general nonexistence proof; graph necessity remains conditional on UNKNOWN global prism absence.",
+    "No claim of novelty, peer review, external review or public artifact availability for these newly produced paths."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent raw-artifact check only.",
+  "overall_search_coverage": "UNKNOWN; no validated denominator."
+}
