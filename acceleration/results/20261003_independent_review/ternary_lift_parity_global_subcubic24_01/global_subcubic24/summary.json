@@ -1,0 +1,66 @@
+{
+  "schema": "INDEPENDENT_TERNARY_LIFT_SUPPORT_WRITTEN_REPORT_V1",
+  "status": "INDEPENDENT_EXACT_WRITTEN_DERIVATION_PASS",
+  "timestamp": "2026-10-03T08:07:23.5900080+00:00",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-GLOBAL-SUBCUBIC-SUPPORT-LOWER24",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verifier": "/root",
+  "method": "independent_derivation",
+  "statement": "For every symmetric binary99x99 zero-diagonal matrix A with exactly14 ones in each integer row, let H be the whole nonzero unordered off-diagonal support of M=A^2+A+J over GF(3), with isolated vertices discarded. If H is nonempty and has maximum support degree at most3, then H has at least24 vertices and at least24 edges, without any connectivity assumption. No24-vertex support is asserted realizable and H=empty is not excluded.",
+  "scope": {
+    "target_resolution": "NONE",
+    "unrestricted_target": true,
+    "description": "Universal degree14 adjacency domain; conditional restriction on the whole nonempty subcubic residual support, including disconnected supports."
+  },
+  "assumptions": [
+    "A is exactly binary symmetric99x99 with zero diagonal and row sums14.",
+    "The whole nonempty residual support has maximum degree at most3."
+  ],
+  "dependencies": [
+    {
+      "revision": 1,
+      "reason": "The separately independently derived even eigenvalue1 kernel parity excludes the remainingfive-C4 whole support.",
+      "relation": "uses_result",
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUAL-LIFT-EIGEN1-PARITY"
+    }
+  ],
+  "proof": "acceleration/audit_20261003_ternary_lift_parity_global_subcubic24_v1.md",
+  "proof_sha256": "b499e5f57712499bf55988af1c7b0043c36eb903cb4f6d9eaa80aca3474eea8a",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_RESIDUE_LIFT_PARITY_GLOBAL_SUBCUBIC24_V1.md": "6189d5c4014974eac958d1993d6f852dfc6bc3209c207361db15724494af7a2b",
+    "acceleration/audit_20261003_ternary_lift_parity_global_subcubic24_v1.md": "b499e5f57712499bf55988af1c7b0043c36eb903cb4f6d9eaa80aca3474eea8a"
+  },
+  "controls": {
+    "executed_mathematical_fixtures": 0,
+    "actual_graph_realizations": 0,
+    "checks": [
+      "Binary outside-whole-support propagation with degree4 counterexample",
+      "Exact complete-witness double count and independently completed square",
+      "Nonbipartite and bipartite good-residual budgets",
+      "C4 sharper integer residual budget and20-vertex classification",
+      "Exact C4 characteristic polynomial andfive-block parity veto",
+      "Empty-support andsix-C4 nonsufficiency boundaries"
+    ],
+    "written_boundary_checks": 6
+  },
+  "command": null,
+  "command_null_reason": "No mathematical computational command was run; verification is the separate written exact derivation. Metadata hashing does not establish the theorem.",
+  "mathematical_replays": 0,
+  "executed_mathematical_fixtures": 0,
+  "target_resolution": "NONE",
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "Working-source context; newcandidate/audit/report bytes are not asserted to be committed.",
+  "shared_components": [
+    "Exact integer adjacency/common-neighbor/residual definitions and ordinary finite-field algebra; no producer program or floating evidence.",
+    "SameROOT independent proof checks bothparity andbound; their logicaldependency is explicit."
+  ],
+  "limitations": [
+    "Only whole subcubic supports; a small component within a larger support containingdegree4 is not excluded.",
+    "Connectivity is not assumed; existing connected-spanning99 result is not imported or weakened.",
+    "Twentyfour is a necessary lower bound, no realization/sufficiency/target nonexistence or general F3>=24 statement without the subcubic premise.",
+    "Written independent derivation only; no executed support enumeration, mathematical program, formal-prover, graph realization, novelty or external review."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "external_review": false
+}

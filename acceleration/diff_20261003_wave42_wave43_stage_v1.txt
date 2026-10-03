@@ -1,0 +1,466 @@
+diff --git a/acceleration/stage_20261003_wave42_index_v1.py b/acceleration/stage_20261003_wave43_index_v1.py
+index e3b7b09f0..c315e34f4 100644
+--- a/acceleration/stage_20261003_wave42_index_v1.py
++++ b/acceleration/stage_20261003_wave43_index_v1.py
+@@ -1,4 +1,4 @@
+-"""SOURCE ONLY: exact371 inventory/raw-index adaptation; no producer imports."""
++"""SOURCE ONLY: exact389 raw-index derivative of preserved Wave42 stage."""
+ import argparse
+ import ast
+ import copy
+@@ -12,86 +12,74 @@ import re
+ import shutil
+ import subprocess
+ import sys
+-
+ from command_deadline import CommandDeadline
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ PARENT = 'acceleration/stage_20261003_wave40_index_v2.py'
+ PARENT_SHA = '11150733d86ee7154eab2c0cc98b239019fb625d0ff44ff16071218d270661f3'
+-ANCESTOR = 'acceleration/stage_20261003_wave41_index_v2.py'
+-ANCESTOR_SHA = '686e3c383447195e65e2f5c200ec751fe1e5ac498e159a47b8a2259aa45c7e88'
+-FINISHER = 'acceleration/finish_20261003_wave41_stage_v1.py'
+-FINISHER_SHA = 'da594101c452bab25117215cddbb94e18257bbff2d330d38c72dde8a92a998ff'
+-LEDGER = 'a0ed6dfb9716266e44dd8cdbef00620266190fa1bce0852a11bbabbf8d09416e'
+-BEFORE = '10b7636dafced40101ccf257d5f80468914f53aa2ee2d3c89db43be268bdcc09'
+-CONTEXT = '63437c9b9fc2dd58b3bdfb51fc347b880b397503'
+-INDEX = 'ee2362961d2d160c87ef07b3a0d2f3de4c1378301f561f69a8509e59c87fbf7d'
+-INVENTORY = 'acceleration/results/20261003_wave42_inventory02'
+-MANIFEST_SHA = 'bfa9d4fa7c75fc3c7ee3051dbdbda1fac214c897c949f4916892a56a315d16c4'
+-SELECTED_SHA = 'eb1fde243dbc2c69b21e9a7023d96ec57a3d3fe8f7c5ee9609f3ff1835dd7439'
+-DIRECT_COUNT, DIRECT_BYTES = 3477, 301664631
+-IDS = [
+-    'C-FIXED-LAMBDA1-REGULAR14-TRIANGLE-INCIDENCE-GF3-RANK98',
+-    'C-FIXED-ROOTFOCUSED-SELECTED45369-COMPLETE99-ROOT-RESIDUALS',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUE-ENERGY-BOUNDS',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-ADJACENCY-EXACTNESS',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-SMALL-DEFECT-SUPPORT',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-FOUR-DEFECT-NONREALIZABILITY',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-SIX-DEFECT-NONREALIZABILITY',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-RESTRICTION',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-LOWER45',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-SPANNING99',
+-    'C-UNRESTRICTED-DEGREE14-TERNARY-SEVEN-DEFECT-NONREALIZABILITY',
+-    'C-ROOTFOCUSED-STRICT-LEX-STEP1-FIXED-TWO-LINE-CENSUS',
+-    'C-ROOTFOCUSED-SELECTED145287-RESTRICTED-THREE-LINE-CENSUS',
++ANCESTOR = 'acceleration/stage_20261003_wave42_index_v1.py'
++ANCESTOR_SHA = '601784ce04bd904aa74a0f4046aa0f562e755a322e2ed10c9bf1723c193cb24e'
++FINISHER = 'acceleration/finish_20261003_wave42_stage_v1.py'
++FINISHER_SHA = '30506ef337eecb323e45d0e57f9adce76bea3ba15f98f2806fc8407ffe05b32f'
++LEDGER = 'b7d07a8be5cbbce8c2125e631d58f4035ed56a66c2b1e79db27cb56500859f8a'
++BEFORE = '23ee170c0f7250843ec2852758f0dd7d1324e85647c44e1907a62f062db47da9'
++CONTEXT = 'd0c0dd7db0d3de420b1d718b59122b069df01107'
++INDEX = '618367410b57562be69a658a96c48f7dd1908bd3f58bac806d050cdab0c72632'
++ATTRS = '10856c2a8bbdf8c06f7943aa64e3b5a119daab91c204cb4ac8b19ec1a7088763'
++INVENTORY = 'acceleration/results/20261003_wave43_inventory02'
++MANIFEST_SHA = 'd6c8030a3dd0064c1a77477042746217822102929011d88f3b6536c446e2cb38'
++SELECTED_SHA = '5158db85d28410aeab59885c4180a892b6fb6dff4329d32a714781291337ef01'
++PROPOSAL = 'acceleration/proposal_20261003_wave43_publication_paths_v1.json'
++PROPOSAL_SHA = 'e2caf73210d5db258380eabc394a8d756b601910441a4d3290fb00325d72cbef'
++INVENTORY_REVIEW = 'acceleration/results/20261003_wave43_inventory_v2_root_actual_review01.json'
++INVENTORY_REVIEW_SHA = 'ab38803e86439e17ba855671ac73999fff9672c61822b428a5b6827d328a3f50'
++DIRECT_COUNT, DIRECT_BYTES = 262, 147927260
++IDS = [
++  "C-UNRESTRICTED-DEGREE14-TERNARY-PROPER-SUPPORT-NULLITY-LOWER3",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-NULLITY2-PROPER-SUPPORT-EXCEPTION98",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-EQUAL-OUTSIDE-ROW-BUDGET-FILTER",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-NINE-DEFECT-NONREALIZABILITY",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-NONZERO-DEFECT-LOWER12",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-TWELVE-DEFECT-SUPPORT-CLASSIFICATION",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUAL-LIFT-EIGEN1-PARITY",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-GLOBAL-SUBCUBIC-SUPPORT-LOWER24",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-EIGHT-DEFECT-NONREALIZABILITY",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-TEN-DEFECT-NONREALIZABILITY",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-WHOLE-K2-6-SUPPORT-NONREALIZABILITY",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-WHOLE-OCTAHEDRAL-SUPPORT-NONREALIZABILITY",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-NONZERO-DEFECT-LOWER13",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-THIRTEEN-DEFECT-NONREALIZABILITY",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-EQUAL-OUTSIDE-CLASS-LIFT-BUDGET",
++  "C-UNRESTRICTED-DEGREE14-TERNARY-NONZERO-DEFECT-LOWER14",
++  "C-TERNARY-TWELVE-LINE-CAP-CORE-UNBALANCED-DEPENDENCE",
++  "C-TARGET99-TWELVE-LINE-CAP-CORE-COMPLETION-EXCLUSION"
+ ]
+ DOCS = ['README.md', 'ACTIVE_RESEARCH.md', 'docs/RESEARCH_MAP.md', 'docs/REPRODUCING.md']
+-MILESTONE = 'docs/RESEARCH_20261003_FORTYSECOND_WAVE.md'
+-DENY = ('ternary_mixed', 'ternary_eight_defect', 'native_active_stop', 'unrestricted_native_full')
+-PACKAGES = {
+-    'acceleration/results/20261002_wave33_model_package01/manifest.json': 'c3efa198c5f48eddb5ead69a4bb130a3dc55567bb298856143c6fb62eb0e0145',
+-    'acceleration/results/20261002_wave33_reconstruction_package01/manifest.json': 'f639431b7ea9ce0f1500ea48b002629d2523271eead700217dd512e8ade66989',
+-    'acceleration/results/20261003_wave36_coupling_package01/manifest.json': '38f641ec21ec3d1d617515e8b3e578e098886863f7016ad640ac1906e8b0988f',
+-    'acceleration/results/20261003_wave37_rooted8_package01/manifest.json': 'ea48c30dfa68fe70bad17edbfd3697d8a2dcf28f9ab24b63d0d66895e7eb9b14',
+-}
+-MAPS = [
+-    dict(claim_id=IDS[-2], path='acceleration/results/20261003_fixed_move_census_binding_proposals01/step1/declared_checking_closure.json',
+-         sha256='11d37bd57a6fc8541f6a7575a0c21e5efb1ce159b4406c04ad2c3ca76b4dce7f', declared_members=2376),
+-    dict(claim_id=IDS[-1], path='acceleration/results/20261003_fixed_move_census_binding_proposals01/restricted_three_line/declared_checking_closure.json',
+-         sha256='b1e420b2dcb695a569482e6cb11374f3e24f29d2efffa7c63ff40867198d362c', declared_members=3066),
+-]
++MILESTONE = 'docs/RESEARCH_20261003_FORTYTHIRD_WAVE.md'
++OWN = ['acceleration/inventory_20261003_wave43_v2.py', 'acceleration/inventory_20261003_wave43_v2_spec.md',
++       'acceleration/plan_20261003_wave43_inventory_v2.json', PROPOSAL]
++DENY = ('ternary_mixed', 'external_moment', 'seventeen_point_triangle_family', 'unrestricted_native_full')
+ APPENDIX_FILES = [
+-    'acceleration/inventory_20261003_wave42_v1.py', 'acceleration/inventory_20261003_wave42_v1_spec.md',
+-    'acceleration/inventory_20261003_wave42_v2.py', 'acceleration/inventory_20261003_wave42_v2_spec.md',
+-    'acceleration/inventory_20261003_wave42_selection_v1.json',
+-    'acceleration/inventory_20261003_wave42_selection_v2.json',
+-    'acceleration/inventory_20261003_wave42_selection_v3.json',
+-    'acceleration/plan_20261003_wave42_inventory_v1.json',
+-    'acceleration/plan_20261003_wave42_inventory_v2.json',
+-    'acceleration/plan_20261003_wave42_inventory_v3.json',
+-    'acceleration/results/20261003_wave42_inventory_admission01.json',
+-    'acceleration/results/20261003_wave42_inventory_admission02.json',
+-    *[f'acceleration/results/20261003_wave42_inventory{number:02}/{name}'
+-      for number in (1, 2) for name in ('manifest.json', 'selected_paths.nul', 'CLAIMS.yaml')],
++    'acceleration/inventory_20261003_wave43_v1.py', 'acceleration/inventory_20261003_wave43_v1_spec.md',
++    'acceleration/plan_20261003_wave43_inventory_v1.json',
++    'acceleration/diff_20261003_wave43_inventory_v1_v2.txt',
++    'acceleration/results/20261003_wave43_inventory_v1_root_static_veto01.json',
++    *[INVENTORY+'/'+name for name in ('manifest.json', 'selected_paths.nul', 'CLAIMS.yaml', 'controls.json')],
++    'acceleration/results/20261003_wave43_inventory_v2_root_one_authorization01.json', INVENTORY_REVIEW,
+ ]
+ SUPERVISORS = [
+-    'acceleration/results/20261003_wave42_inventory_supervision01',
+-    'acceleration/results/20261003_wave42_inventory_supervision02',
+-    'acceleration/results/20261003_independent_review/wave42_stage_calibration_supervision01',
++    'acceleration/results/20261003_wave43_inventory_supervision02',
++    'acceleration/results/20261003_independent_review/wave43_stage_calibration_supervision01',
+ ]
+ RECEIPTS = ('manifest.json', 'summary.json', 'stdout.log', 'stderr.log', 'progress.jsonl')
+-REVIEW_PATH = 'acceleration/results/20261003_wave42_root_engineering_review01.json'
++REVIEW_PATH = 'acceleration/results/20261003_wave43_root_engineering_review01.json'
+ EXTRA_COMPLETED_FILES = [
+-    'acceleration/plan_20261003_wave42_index_calibration_v1.json',
+-    'acceleration/plan_20261003_wave42_index_shadow_v1.json',
+-    'acceleration/plan_20261003_wave42_index_apply_v1.json',
+-    'acceleration/results/20261003_wave42_index_calibration_admission01.json',
+-    'acceleration/results/20261003_wave42_index_shadow_admission01.json',
+-    'acceleration/results/20261003_wave42_index_apply_admission01.json',
++    'acceleration/plan_20261003_wave43_index_calibration_v1.json',
++    'acceleration/plan_20261003_wave43_index_shadow_v1.json',
++    'acceleration/results/20261003_wave43_index_shadow_admission01.json',
+ ]
+ MARKERS = re.compile(rb'(?:ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{35,}|sk-proj-[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16})')
+ 
+-
+ def need(ok, stage):
+     if not ok:
+         raise ValueError(stage)
+@@ -129,12 +117,22 @@ def save(path, value):
+ def parent():
+     for name, identity in ((PARENT, PARENT_SHA), (ANCESTOR, ANCESTOR_SHA), (FINISHER, FINISHER_SHA)):
+         need(hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == identity, 'PINNED_SHARED_ENGINEERING')
+-    spec = importlib.util.spec_from_file_location('wave42_shared_index_helpers', ROOT/PARENT)
++    spec = importlib.util.spec_from_file_location('wave43_shared_index_helpers', ROOT/PARENT)
+     module = importlib.util.module_from_spec(spec)
+     spec.loader.exec_module(module)
+     return module
+ 
+ 
++def raw_member(name, lib):
++    path = lib.bounded(name)
++    cursor = ROOT
++    for part in Path(name).parts:
++        cursor = cursor/part
++        need(not cursor.is_symlink() and not (getattr(os.lstat(cursor), 'st_file_attributes', 0) & 0x400),
++             'RAW_MEMBER_REPARSE')
++    need(path.is_file(), 'RAW_MEMBER_FILE')
++    return path
++
+ def notice_suffix(before, prepared, current, git_blob):
+     need(before == git_blob, 'BEFORE_DOCUMENT_GIT_BLOB')
+     need(prepared.endswith(before), 'DOCUMENT_HISTORICAL_SUFFIX')
+@@ -161,15 +159,25 @@ def marker(raw):
+ 
+ 
+ def scope(m, attrs, lib):
+-    need([m.get(k) for k in ('schema', 'source_context_commit', 'current_ledger_sha256', 'previous_ledger_sha256', 'claim_ids')]
+-         == ['WAVE42_FIXED371_EXPLICIT_BYTE_INVENTORY_V2', CONTEXT, LEDGER, BEFORE, IDS], 'FROZEN371_SCOPE')
++    need(same([m.get(k) for k in ('schema', 'source_context_commit', 'current_ledger_sha256', 'previous_ledger_sha256', 'claim_ids')],
++         ['WAVE43_FIXED389_EXPLICIT_BYTE_INVENTORY_V2', CONTEXT, LEDGER, BEFORE, IDS]), 'FROZEN389_SCOPE')
+     need(all(type(m.get(k)) is int for k in ('direct_record_count', 'direct_bytes')), 'INTEGER_COUNTS')
+     need((m['direct_record_count'], m['direct_bytes']) == (DIRECT_COUNT, DIRECT_BYTES), 'FROZEN_DIRECT_POPULATION')
+     need(all(m.get(k) is False for k in ('ledger_mutated', 'index_mutated', 'availability_changed', 'scientific_launched', 'current_docs_mutated', 'independent_approval'))
+          and type(m.get('mathematical_replays')) is int and m['mathematical_replays'] == 0
+          and m.get('target_resolution') == 'NONE', 'METADATA_ONLY')
+-    pins = m.get('inputs_sha256')
+-    need(type(pins) is dict and pins.get('.gitattributes') == attrs, 'ATTRIBUTES')
++    expected = [('total_claims', 389, 'CLAIM_COUNT'), ('status_counts', dict(VERIFIED=381, CANDIDATE=3, REFUTED=5), 'CLAIM_STATUSES'),
++                ('review_state_counts', dict(CLEAR=389), 'CLAIM_REVIEW_STATES'), ('prior_PUBLIC_artifact_entries', 6054, 'PRIOR_PUBLIC'),
++                ('last_Wave42_changed_subset', 119, 'LAST_PUBLIC_SUBSET'), ('literal_math_map_members', 70, 'MATH_MAP_COUNT'),
++                ('literal_math_JSON_ancestors', 38, 'MATH_ANCESTOR_COUNT'), ('base_record_count', 258, 'BASE_RECORD_COUNT')]
++    for key, value, stage in expected:
++        need(same(m.get(key), value), stage)
++    need(same(m.get('own_metadata_paths'), OWN) and type(m.get('own_metadata_count')) is int
++         and m['own_metadata_count'] == 4, 'OWN_METADATA')
++    need(m.get('base_selection_path') == PROPOSAL and m.get('base_selection_sha256') == PROPOSAL_SHA
++         and m.get('old_archives_not_rehashed_or_recovered') is True and m.get('no_new_archive_omissions') is True,
++         'EXACT_SELECTION_HISTORY')
++    pins = m.get('inputs_sha256'); need(type(pins) is dict, 'DIRECT_INPUT_MAP')
+     records = m.get('records')
+     need(type(records) is list and all(type(row) is dict for row in records), 'DIRECT_RECORDS')
+     names = [row.get('path') for row in records]
+@@ -182,48 +190,34 @@ def scope(m, attrs, lib):
+         need(not any(word in name.lower() for word in DENY), 'QUEUED_SCIENCE')
+         need(type(row.get('sha256')) is str and re.fullmatch('[0-9a-f]{64}', row['sha256']) is not None
+              and pins.get(name) == row['sha256'], 'DIRECT_PINS')
+-    need(set(DOCS+[MILESTONE, '.gitattributes', 'CLAIMS.yaml']) <= set(names), 'CURRENT_DOCUMENT_MEMBERS')
+-    omitted_rows = m.get('omitted')
+-    need(type(omitted_rows) is list and all(type(row) is dict and type(row.get('path')) is str for row in omitted_rows), 'OMITTED_RECORDS')
+-    omitted = {row['path']: row for row in omitted_rows}
+-    need(len(omitted) == len(omitted_rows) == 8 and not set(names) & set(omitted), 'EIGHT_OMITTED')
+-    need(all(type(row.get('bytes')) is int and row['bytes'] > 0 for row in omitted.values())
+-         and sum(row['bytes'] for row in omitted.values()) == 367261301, 'OLD_RAW_TOTAL')
+-    need(all(pins.get(name) == row.get('sha256') for name, row in omitted.items())
+-         and set(pins) == set(names)|set(omitted), 'COMPLETE_INPUT_MAP')
+-    need(same(m.get('old_lossless_packages'), PACKAGES), 'FOUR_EXACT_PACKAGES')
+-    maps = m.get('complete_declared_checking_maps')
+-    need(type(maps) is list and all(type(row.get('declared_members')) is int for row in maps if type(row) is dict), 'CHECKING_MAP_COUNT_TYPES')
+-    need(same(maps, MAPS), 'TWO_EXACT_CHECKING_MAPS')
+-    ref = m.get('historical_external_reference')
+-    need(type(ref) is dict and [ref.get(k) for k in ('path', 'sha256', 'repository', 'commit')]
+-         == [lib.ARCHIVE, lib.ARCHIVE_SHA, lib.ARCHIVE_REPOSITORY, lib.ARCHIVE_COMMIT], 'ARCHIVE_IDENTITY')
+-    need(type(ref.get('bytes')) is int and ref['bytes'] == 6085, 'ARCHIVE_BYTES')
+-    return names, omitted
++    need(set(DOCS+[MILESTONE, 'CLAIMS.yaml']+OWN) <= set(names), 'CURRENT_DOCUMENT_MEMBERS')
++    need(set(pins) == set(names), 'COMPLETE_INPUT_MAP')
++    return names
+ 
+ 
+ def fixture(attrs, lib):
+-    names = sorted(['.gitattributes', 'CLAIMS.yaml', *DOCS, MILESTONE]
+-                   + [f'acceleration/synthetic_wave42_{j:04}.json' for j in range(DIRECT_COUNT-7)])
+-    rows = [dict(path=name, bytes=80000, sha256=attrs if name == '.gitattributes' else 'a'*64) for name in names]
++    mandatory = DOCS+[MILESTONE, 'CLAIMS.yaml']+OWN
++    names = sorted(mandatory+[f'acceleration/synthetic_wave43_{j:04}.json' for j in range(DIRECT_COUNT-len(mandatory))])
++    rows = [dict(path=name, bytes=560000, sha256='a'*64) for name in names]
+     rows[0]['bytes'] += DIRECT_BYTES-sum(row['bytes'] for row in rows)
+-    omitted = [dict(path=f'acceleration/synthetic_old_raw_{i}', bytes=1 if i else 367261294, sha256='f'*64) for i in range(8)]
+-    return dict(schema='WAVE42_FIXED371_EXPLICIT_BYTE_INVENTORY_V2', source_context_commit=CONTEXT,
++    return dict(schema='WAVE43_FIXED389_EXPLICIT_BYTE_INVENTORY_V2', source_context_commit=CONTEXT,
+                 current_ledger_sha256=LEDGER, previous_ledger_sha256=BEFORE, claim_ids=IDS[:],
+-                direct_record_count=DIRECT_COUNT, direct_bytes=DIRECT_BYTES, records=rows, omitted=omitted,
+-                inputs_sha256={row['path']: row['sha256'] for row in rows+omitted}, old_lossless_packages=copy.deepcopy(PACKAGES),
+-                complete_declared_checking_maps=copy.deepcopy(MAPS), historical_external_reference=dict(path=lib.ARCHIVE,
+-                    sha256=lib.ARCHIVE_SHA, repository=lib.ARCHIVE_REPOSITORY, commit=lib.ARCHIVE_COMMIT, bytes=6085),
++                direct_record_count=DIRECT_COUNT, direct_bytes=DIRECT_BYTES, records=rows,
++                inputs_sha256={row['path']: row['sha256'] for row in rows}, total_claims=389,
++                status_counts=dict(VERIFIED=381, CANDIDATE=3, REFUTED=5), review_state_counts=dict(CLEAR=389),
++                prior_PUBLIC_artifact_entries=6054, last_Wave42_changed_subset=119,
++                literal_math_map_members=70, literal_math_JSON_ancestors=38, base_record_count=258,
++                own_metadata_count=4, own_metadata_paths=OWN[:], base_selection_path=PROPOSAL,
++                base_selection_sha256=PROPOSAL_SHA, old_archives_not_rehashed_or_recovered=True, no_new_archive_omissions=True,
+                 ledger_mutated=False, index_mutated=False, availability_changed=False, scientific_launched=False,
+                 current_docs_mutated=False, independent_approval=False, mathematical_replays=0, target_resolution='NONE')
+ 
+-
+ def controls(attrs, lib):
+-    good = fixture(attrs, lib); names, _ = scope(good, attrs, lib)
++    good = fixture(attrs, lib); names = scope(good, attrs, lib)
+     raw = b''.join(name.encode()+b'\0' for name in names); selected_nul(raw, hashlib.sha256(raw).hexdigest(), names)
+     original = b'historical document\n'; prepared = b'new notice\n'+original
+     notice_suffix(original, prepared, prepared, original); syntax(b'value = 1\n'); marker(b'benign fixture')
+-    records = [dict(label=label, outcome='PASS') for label in ('synthetic_exact371_scope', 'complete_selected_nul',
++    records = [dict(label=label, outcome='PASS') for label in ('synthetic_exact389_scope', 'complete_selected_nul',
+                 'git_bound_document_suffix', 'valid_python', 'benign_marker')]
+     def reject(label, expected, callback):
+         try:
+@@ -234,32 +228,32 @@ def controls(attrs, lib):
+             raise ValueError('CONTROL_FALSE_ACCEPT:'+label)
+         records.append(dict(label=label, expected_stage=expected, actual_stage=expected, outcome='REJECTED'))
+     changes = [
+-        ('schema', 'FROZEN371_SCOPE', lambda m: m.update(schema='WRONG')),
+-        ('context', 'FROZEN371_SCOPE', lambda m: m.update(source_context_commit='0'*40)),
+-        ('ledger', 'FROZEN371_SCOPE', lambda m: m.update(current_ledger_sha256='0'*64)),
+-        ('baseline', 'FROZEN371_SCOPE', lambda m: m.update(previous_ledger_sha256='0'*64)),
+-        ('ids', 'FROZEN371_SCOPE', lambda m: m.update(claim_ids=IDS[::-1])),
++        ('schema', 'FROZEN389_SCOPE', lambda m: m.update(schema='WRONG')),
++        ('context', 'FROZEN389_SCOPE', lambda m: m.update(source_context_commit='0'*40)),
++        ('ledger', 'FROZEN389_SCOPE', lambda m: m.update(current_ledger_sha256='0'*64)),
++        ('baseline', 'FROZEN389_SCOPE', lambda m: m.update(previous_ledger_sha256='0'*64)),
++        ('ids', 'FROZEN389_SCOPE', lambda m: m.update(claim_ids=IDS[::-1])),
+         ('float_count', 'INTEGER_COUNTS', lambda m: m.update(direct_record_count=float(DIRECT_COUNT))),
+         ('bool_count', 'INTEGER_COUNTS', lambda m: m.update(direct_record_count=True)),
+         ('count', 'FROZEN_DIRECT_POPULATION', lambda m: m.update(direct_record_count=DIRECT_COUNT+1)),
+         ('math_bool', 'METADATA_ONLY', lambda m: m.update(mathematical_replays=False)),
+         ('science', 'METADATA_ONLY', lambda m: m.update(scientific_launched=True)),
+-        ('attributes', 'ATTRIBUTES', lambda m: m['inputs_sha256'].update({'.gitattributes':'0'*64})),
+         ('duplicate_record', 'UNIQUE_DIRECT', lambda m: m['records'].__setitem__(1, copy.deepcopy(m['records'][0]))),
+         ('oversize', 'DIRECT_SIZE', lambda m: m['records'][0].update(bytes=50*1024**2+1)),
+         ('total', 'DIRECT_TOTAL', lambda m: m['records'][0].update(bytes=m['records'][0]['bytes']+1)),
+         ('traversal', 'BOUNDED_PATH', lambda m: m['records'][0].update(path='../CLAIMS.yaml')),
+         ('submodule', 'EXACT_NAMESPACE', lambda m: m['records'][-1].update(path=lib.ARCHIVE)),
+-        ('queued', 'QUEUED_SCIENCE', lambda m: m['records'][0].update(path='acceleration/ternary_mixed_unapproved.py')),
++        ('queued', 'QUEUED_SCIENCE', lambda m: m['records'][0].update(path='acceleration/external_moment_unapproved.py')),
+         ('direct_hash', 'DIRECT_PINS', lambda m: m['records'][0].update(sha256='0'*64)),
+-        ('omission', 'EIGHT_OMITTED', lambda m: m['omitted'].pop()),
+-        ('raw_total', 'OLD_RAW_TOTAL', lambda m: m['omitted'][0].update(bytes=1)),
+-        ('omitted_pin', 'COMPLETE_INPUT_MAP', lambda m: m['inputs_sha256'].update({m['omitted'][0]['path']:'0'*64})),
+-        ('package', 'FOUR_EXACT_PACKAGES', lambda m: m['old_lossless_packages'].pop(next(iter(PACKAGES)))),
+-        ('checking_map', 'TWO_EXACT_CHECKING_MAPS', lambda m: m['complete_declared_checking_maps'][0].update(sha256='0'*64)),
+-        ('map_bool', 'CHECKING_MAP_COUNT_TYPES', lambda m: m['complete_declared_checking_maps'][0].update(declared_members=True)),
+-        ('archive_hash', 'ARCHIVE_IDENTITY', lambda m: m['historical_external_reference'].update(sha256='0'*64)),
+-        ('archive_bytes', 'ARCHIVE_BYTES', lambda m: m['historical_external_reference'].update(bytes=6085.0)),
++        ('claims_bool', 'CLAIM_COUNT', lambda m: m.update(total_claims=True)),
++        ('status_bool', 'CLAIM_STATUSES', lambda m: m['status_counts'].update(VERIFIED=True)),
++        ('review_float', 'CLAIM_REVIEW_STATES', lambda m: m['review_state_counts'].update(CLEAR=389.0)),
++        ('public_subset', 'PRIOR_PUBLIC', lambda m: m.update(prior_PUBLIC_artifact_entries=119)),
++        ('last_subset_bool', 'LAST_PUBLIC_SUBSET', lambda m: m.update(last_Wave42_changed_subset=True)),
++        ('math_members_float', 'MATH_MAP_COUNT', lambda m: m.update(literal_math_map_members=70.0)),
++        ('ancestor_bool', 'MATH_ANCESTOR_COUNT', lambda m: m.update(literal_math_JSON_ancestors=True)),
++        ('base_count', 'BASE_RECORD_COUNT', lambda m: m.update(base_record_count=257)),
++        ('own_metadata', 'OWN_METADATA', lambda m: m.update(own_metadata_paths=OWN[::-1])),
+     ]
+     for label, expected, mutate in changes:
+         bad = copy.deepcopy(good); mutate(bad)
+@@ -290,21 +284,22 @@ def main():
+         p.add_argument('--'+name, type=Path); p.add_argument('--'+name+'-sha256')
+     p.add_argument('--extra-completed', action='append', choices=EXTRA_COMPLETED_FILES, default=[])
+     a = p.parse_args()
+-    d = CommandDeadline(a.seconds, allocation_reason='Exact371 publication raw-byte/index engineering only; all hashes/Git/scans within invocation with20save reserve, no mathematics')
++    d = CommandDeadline(a.seconds, allocation_reason='Exact389 publication raw-byte/index engineering only; all hashes/Git/scans within invocation with20save reserve, no mathematics')
+     lib = parent(); out = a.out.resolve()
+     need(out.is_relative_to(ROOT) and not out.exists(), 'FRESH_OUTPUT'); out.mkdir(parents=True)
+     source = Path(__file__); spec = source.with_name(source.stem+'_spec.md')
+     need(lib.ids(source)[1] == a.source_sha256 and lib.ids(spec)[1] == a.spec_sha256, 'EXACT_SOURCE_SPEC')
+     def tick(): need(not d.status()['stop_required'] and d.status()['remaining_seconds'] > 20, 'DEADLINE_RESERVE')
+     def git(words, env=None):
+-        tick()
++        budget = d.status()
++        need(not budget['stop_required'] and budget['remaining_seconds'] > 20, 'DEADLINE_RESERVE')
+         return subprocess.check_output(['git', *words], cwd=ROOT, env=env, stderr=subprocess.PIPE,
+-                                       timeout=max(1, d.status()['remaining_seconds']-15))
++                                       timeout=budget['remaining_seconds']-20)
+     index_name = Path(git(['rev-parse', '--git-path', 'index']).decode().strip())
+     index = index_name if index_name.is_absolute() else ROOT/index_name
+     need(lib.ids(index)[1] == INDEX and lib.ids(ROOT/'CLAIMS.yaml')[1] == LEDGER
+          and git(['rev-parse', 'HEAD']).decode().strip() == CONTEXT, 'FROZEN_LEDGER_INDEX_HEAD')
+-    attrs = lib.ids(ROOT/'.gitattributes')[1]; original = lib.parse_index(git(['ls-files', '--stage', '-z'])); started = False
++    attrs = lib.ids(ROOT/'.gitattributes')[1]; need(attrs == ATTRS, 'PINNED_ATTRIBUTES'); original = lib.parse_index(git(['ls-files', '--stage', '-z'])); started = False
+     try:
+         tested = controls(attrs, lib)
+         common = dict(timestamp=datetime.now(timezone.utc).isoformat(), source_sha256=a.source_sha256,
+@@ -313,48 +308,27 @@ def main():
+                       shared_engineering_sha256=PARENT_SHA, ancestor_source_sha256=ANCESTOR_SHA,
+                       finisher_convention_sha256=FINISHER_SHA, controls=tested, synthetic_positives=5,
+                       precise_negatives=36, mathematical_replays=0, command=[sys.executable,*sys.argv], cwd=str(ROOT),
+-                      source_author='/root/checkpoint_audit', source_author_is_not_independent_of_this_implementation=True)
++                      source_author='/root/checkpoint_audit', intended_executor='/root', producer='/root',
++                      source_author_is_not_independent_of_this_implementation=True)
+         if a.mode == 'calibrate':
+             need(not a.extra_completed and not any(getattr(a, name) for name in ('manifest', 'calibration', 'shadow_report', 'root_review')), 'CALIBRATION_NO_ACTUAL')
+             need(lib.ids(index)[1] == INDEX and lib.ids(ROOT/'CLAIMS.yaml')[1] == LEDGER, 'PROTECTED_UNCHANGED')
+-            save(out/'controls.json', tested)
+-            save(out/'summary.json', dict(**common, status='WAVE42_EXACT371_INDEX_CALIBRATION_PASS',
++            tick(); save(out/'controls.json', tested)
++            save(out/'summary.json', dict(**common, status='WAVE43_EXACT389_INDEX_CALIBRATION_PASS',
+                  actual_manifest_inspected=False, live_index_mutated=False, deadline=d.status())); return
+-        need(a.calibration and a.calibration.resolve() == ROOT/'acceleration/results/20261003_independent_review/wave42_stage_calibration01/summary.json'
++        need(a.calibration and a.calibration.resolve() == ROOT/'acceleration/results/20261003_independent_review/wave43_stage_calibration01/summary.json'
+              and a.calibration_sha256 and lib.ids(a.calibration)[1] == a.calibration_sha256, 'EXACT_CALIBRATION')
+         cal = read(a.calibration)
+-        need(cal.get('status') == 'WAVE42_EXACT371_INDEX_CALIBRATION_PASS'
++        need(cal.get('status') == 'WAVE43_EXACT389_INDEX_CALIBRATION_PASS'
+              and all(same(cal.get(k), common[k]) for k in ('source_sha256', 'spec_sha256', 'ledger_sha256', 'index_before_sha256', 'gitattributes_sha256', 'controls')), 'APPLICABLE_CALIBRATION')
+         need(a.manifest and a.manifest.resolve() == ROOT/INVENTORY/'manifest.json'
+              and a.manifest_sha256 == MANIFEST_SHA and lib.ids(a.manifest)[1] == MANIFEST_SHA, 'EXACT_MANIFEST')
+-        m = read(a.manifest); names, omitted = scope(m, attrs, lib)
++        m = read(a.manifest); names = scope(m, attrs, lib)
+         selected_nul((ROOT/INVENTORY/'selected_paths.nul').read_bytes(), SELECTED_SHA, names)
+         need(m.get('selected_paths_sha256') == SELECTED_SHA, 'MANIFEST_SELECTED_NUL')
+-        expected_pins = {row['path']:row['sha256'] for row in m['records']+m['omitted']}
+-        for row in MAPS:
+-            need(expected_pins.get(row['path']) == row['sha256'], 'CHECKING_MAP_SELECTED')
+-            need(lib.ids(lib.bounded(row['path']))[1] == row['sha256'], 'CHECKING_MAP_IDENTITY')
+-            members = read(lib.bounded(row['path'])).get('inputs_sha256')
+-            need(type(members) is dict and len(members) == row['declared_members'], 'CHECKING_MAP_FULL_POPULATION')
+-            for name, identity in members.items():
+-                tick()
+-                historical = name == '.git/index' or name == 'CLAIMS.yaml' and identity != LEDGER
+-                external = name == lib.ARCHIVE and identity == lib.ARCHIVE_SHA
+-                need(historical or external or expected_pins.get(name) == identity, 'COMPLETE_CHECKING_MEMBER:'+name)
+-        ref = m['historical_external_reference']
+-        need(git(['-C','external_conway99_research','rev-parse','HEAD']).decode().strip() == lib.ARCHIVE_COMMIT, 'ARCHIVE_HEAD')
+-        archive = git(['-C','external_conway99_research','cat-file','blob',lib.ARCHIVE_COMMIT+':'+lib.ARCHIVE.split('/',1)[1]])
+-        need(hashlib.sha256(archive).hexdigest() == lib.ARCHIVE_SHA and len(archive) == ref['bytes']
+-             and archive == (ROOT/lib.ARCHIVE).read_bytes(), 'ARCHIVE_RAW_BLOB')
+-        packages = {}; parts = []
+-        for name, identity in PACKAGES.items():
+-            need(lib.ids(lib.bounded(name))[1] == identity, 'PACKAGE_PIN')
+-            for row in read(lib.bounded(name))['records']:
+-                need(row['raw_path'] not in packages, 'UNIQUE_PACKAGE_RAW'); packages[row['raw_path']] = row
+-                parts += row['parts']
+-        need(set(packages) == set(omitted) and all((row['raw_sha256'],row['raw_bytes']) == (omitted[name]['sha256'],omitted[name]['bytes']) for name,row in packages.items()), 'EXACT_PACKAGE_OMISSIONS')
+-        need(len(parts) == 48 and sum(row['gzip_bytes'] for row in parts) == 11723542
+-             and all(expected_pins.get(row['path']) == row['gzip_sha256'] for row in parts), 'ALL48_PACKAGE_PARTS_SELECTED')
++        need(lib.ids(ROOT/PROPOSAL)[1] == PROPOSAL_SHA and lib.ids(ROOT/INVENTORY_REVIEW)[1] == INVENTORY_REVIEW_SHA,
++             'EXACT_INVENTORY_HISTORY')
++        expected_pins = {row['path']: row['sha256'] for row in m['records']}
+         appendix = list(APPENDIX_FILES)+[source.relative_to(ROOT).as_posix(), spec.relative_to(ROOT).as_posix(),
+                                       a.calibration.resolve().relative_to(ROOT).as_posix(),
+                                       a.calibration.resolve().parent.relative_to(ROOT).as_posix()+'/controls.json']
+@@ -370,11 +344,14 @@ def main():
+         rows = {row['path']:row for row in m['records']}
+         for name in DOCS:
+             original_blob = git(['show',CONTEXT+':'+name]); current = (ROOT/name).read_bytes()
+-            notice_suffix(original_blob, current, current, original_blob)
++            snapshot = 'acceleration/results/20261003_wave43_documentation01/'+name.replace('/','_')
++            before_bytes = raw_member(snapshot+'.before', lib).read_bytes()
++            prepared_bytes = raw_member(snapshot+'.prepared', lib).read_bytes()
++            notice_suffix(before_bytes, prepared_bytes, current, original_blob)
+             document_checks.append(dict(path=name, historical_git_commit=CONTEXT,
+                 historical_git_sha256=hashlib.sha256(original_blob).hexdigest(), current_sha256=hashlib.sha256(current).hexdigest(), suffix_byte_exact=True))
+         for name in stage_names:
+-            tick(); file = lib.bounded(name)
++            tick(); file = raw_member(name, lib)
+             need(file.is_file() and not (ROOT/name).is_symlink(), 'RAW_MEMBER_FILE')
+             size, digest, blob = lib.ids(file); need(size <= 50*1024**2, 'STAGE_SIZE')
+             if name in rows: need((size,digest) == (rows[name]['bytes'],rows[name]['sha256']), 'RAW_MEMBER:'+name)
+@@ -386,12 +363,10 @@ def main():
+                     tail = b''
+                     for block in iter(lambda:handle.read(1024**2),b''):
+                         tick(); need(not MARKERS.search(tail+block), 'CREDENTIAL_MARKER_PATH:'+name); tail = block[-256:]
+-        for name, row in omitted.items():
+-            tick(); need(lib.ids(lib.bounded(name))[:2] == (row['bytes'],row['sha256']) and name not in original, 'OMITTED_RAW_IDENTITY')
+         if a.mode == 'apply':
+             need(a.shadow_report and a.shadow_report_sha256 and lib.ids(a.shadow_report)[1] == a.shadow_report_sha256, 'EXACT_SHADOW_ARGUMENTS')
+             gate = read(a.shadow_report)
+-            need(gate.get('status') == 'WAVE42_EXACT371_SHADOW_INDEX_RAW_BYTE_PASS' and gate.get('failures') == []
++            need(gate.get('status') == 'WAVE43_EXACT389_SHADOW_INDEX_RAW_BYTE_PASS' and gate.get('failures') == []
+                  and gate.get('manifest_sha256') == MANIFEST_SHA and gate.get('calibration_sha256') == a.calibration_sha256
+                  and gate.get('selected_paths') == stage_names and same(gate.get('expected_raw_blob_ids'),expected)
+                  and same(gate.get('appendix_sha256'),appendix_pins) and gate.get('root_review_sha256') == a.root_review_sha256
+@@ -399,7 +374,7 @@ def main():
+         exact = out/'exact_stage_paths.nul'; exact.write_bytes(b''.join(name.encode()+b'\0' for name in stage_names))
+         env = os.environ.copy(); shadow = None
+         if a.mode == 'shadow':
+-            shadow = ROOT/'build'/('wave42_'+out.name+'.index'); need(not shadow.exists(), 'FRESH_SHADOW')
++            shadow = ROOT/'build'/('wave43_'+out.name+'.index'); need(not shadow.exists(), 'FRESH_SHADOW')
+             shutil.copy2(index, shadow); env['GIT_INDEX_FILE'] = str(shadow)
+         need(lib.ids(index)[1] == INDEX and lib.ids(ROOT/'CLAIMS.yaml')[1] == LEDGER, 'UNCHANGED_BEFORE_INDEX')
+         started = True; git(['add','-f','--pathspec-from-file='+str(exact),'--pathspec-file-nul'],env)
+@@ -407,17 +382,17 @@ def main():
+         failures = [name for name,blob in expected.items() if actual.get(name,(None,None))[1] != blob]
+         outside = [name for name in set(original)|set(actual) if name not in expected and original.get(name) != actual.get(name)]
+         need(not outside and all(actual.get(name) == entry for name,entry in original.items() if entry[0] == '160000'), 'UNSELECTED_AND_GITLINK_UNCHANGED')
+-        need(all(name not in actual for name in omitted), 'RAW_OMISSIONS_UNINDEXED')
+-        unchanged = lib.ids(index)[1] == INDEX; need(a.mode != 'shadow' or unchanged, 'LIVE_INDEX_UNCHANGED_SHADOW')
+-        need(lib.ids(ROOT/'CLAIMS.yaml')[1] == LEDGER, 'LEDGER_UNCHANGED')
+-        save(out/'summary.json',dict(**common,status='WAVE42_EXACT371_'+a.mode.upper()+'_INDEX_RAW_BYTE_PASS' if not failures else 'WAVE42_INDEX_RAW_BYTE_VETO',
++        tick(); unchanged = lib.ids(index)[1] == INDEX; need(a.mode != 'shadow' or unchanged, 'LIVE_INDEX_UNCHANGED_SHADOW')
++        need(lib.ids(ROOT/'CLAIMS.yaml')[1] == LEDGER and git(['rev-parse','HEAD']).decode().strip() == CONTEXT, 'LEDGER_HEAD_UNCHANGED')
++        tick()
++        save(out/'summary.json',dict(**common,status='WAVE43_EXACT389_'+a.mode.upper()+'_INDEX_RAW_BYTE_PASS' if not failures else 'WAVE43_INDEX_RAW_BYTE_VETO',
+             manifest_sha256=MANIFEST_SHA, calibration_sha256=a.calibration_sha256, failures=failures,
+             direct_records_checked=DIRECT_COUNT,direct_bytes_checked=DIRECT_BYTES,selected_paths=stage_names,
+             selected_nul_sha256=SELECTED_SHA,indexed_paths_checked=len(expected),explicit_metadata_appendix=sorted(set(appendix)),
+             appendix_sha256=appendix_pins,expected_raw_blob_ids=expected,root_review_sha256=a.root_review_sha256,
+             python_ast_paths=python_paths,document_checks=document_checks,credential_values_printed=False,
+-            complete_declared_checking_maps=MAPS,omitted_raw_count=8,omitted_raw_bytes=367261301,
+-            package_parts_checked=48,historical_external_sources_checked=1,unselected_entries_changed=outside,
++            prior_PUBLIC_artifact_entries=6054,last_Wave42_changed_subset=119,new_archive_omissions=0,
++            old_archive_rehashes=0,literal_math_map_members=70,literal_math_JSON_ancestors=38,unselected_entries_changed=outside,
+             submodule_entries_preserved=True,live_index_mutated=not unchanged,index_after_sha256=lib.ids(index)[1],
+             shadow_index_path=str(shadow) if shadow else None,committed=False,published=False,availability_changed=False,deadline=d.status()))
+         need(not failures,'RAW_INDEX_VETO')

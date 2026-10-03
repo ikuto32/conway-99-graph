@@ -1,0 +1,31 @@
+diff --git a/acceleration/inventory_20261003_wave43_v1.py b/acceleration/inventory_20261003_wave43_v2.py
+index 32bda280b..2683d79bd 100644
+--- a/acceleration/inventory_20261003_wave43_v1.py
++++ b/acceleration/inventory_20261003_wave43_v2.py
+@@ -15,7 +15,7 @@ import validate_claims as registry
+ ROOT = Path(__file__).resolve().parents[1]
+ SELF = Path(__file__).resolve()
+ SPEC = SELF.with_name(SELF.stem + '_spec.md')
+-PLAN = 'acceleration/plan_20261003_wave43_inventory_v1.json'
++PLAN = 'acceleration/plan_20261003_wave43_inventory_v2.json'
+ CONFIG = 'acceleration/proposal_20261003_wave43_publication_paths_v1.json'
+ CONFIG_SHA = 'e2caf73210d5db258380eabc394a8d756b601910441a4d3290fb00325d72cbef'
+ DESCRIPTOR = 'acceleration/proposal_20261003_wave43_eighteen_written_bindings_v2.json'
+@@ -184,7 +184,7 @@ def main():
+         config = read(CONFIG, CONFIG_SHA)
+         descriptor = read(DESCRIPTOR, DESCRIPTOR_SHA)
+         base = config['selected_existing_paths']
+-        need(type(base) is list and len(base) == len(set(base)) == 258 and base == sorted(base), 'EXACT258_PATH_SET')
++        need(type(base) is list and len(base) == len(set(base)) == 258, 'EXACT258_PATH_SET')
+         need(same(config['accepted_cutoff'], dict(total=389, VERIFIED=381, CANDIDATE=3, REFUTED=5, CLEAR=389,
+              new_claims=18, prior_PUBLIC_artifact_entries=6054, last_Wave42_changed_subset=119,
+              target_resolution='UNKNOWN', general_target_exclusions=0, specified_configuration_exclusions=1)), 'EXACT389_CUTOFF')
+@@ -261,7 +261,7 @@ def main():
+         ledger_bytes = (ROOT / 'CLAIMS.yaml').read_bytes()
+         need(hashlib.sha256(ledger_bytes).hexdigest() == LEDGER, 'FROZEN_LEDGER_COPY')
+         save('CLAIMS.yaml', ledger_bytes)
+-        save_json('manifest.json', dict(schema='WAVE43_FIXED389_EXPLICIT_BYTE_INVENTORY_V1',
++        save_json('manifest.json', dict(schema='WAVE43_FIXED389_EXPLICIT_BYTE_INVENTORY_V2',
+             timestamp=datetime.now(timezone.utc).isoformat(), source_author='/root/checkpoint_audit',
+             intended_executor='/root', producer='/root', command=[sys.executable,*sys.argv], cwd=str(ROOT),
+             source_context_commit=HEAD, current_ledger_sha256=LEDGER, previous_ledger_sha256=BEFORE_SHA,

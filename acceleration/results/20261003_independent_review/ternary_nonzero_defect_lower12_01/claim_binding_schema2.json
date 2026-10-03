@@ -1,0 +1,79 @@
+{
+  "id": "C-UNRESTRICTED-DEGREE14-TERNARY-NONZERO-DEFECT-LOWER12",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every symmetric binary integer99-by-99 matrix A with zero diagonal and every row sum exactly14, the number F3 of unordered off-diagonal nonzero entries of M=A^2+A+J overGF(3) is either0 or at least12.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root/structural",
+  "verifier": "/root",
+  "method": "independent_derivation",
+  "scope": {
+    "population": "All simple99-vertex symmetric binary zero-diagonal integer degree14 adjacency matrices",
+    "whole_support": true,
+    "automorphism_assumed": false,
+    "target_resolution": "NONE",
+    "applicability_to_unrestricted_target": "Necessary restriction on nonzero residuals; empty support and target remain permitted"
+  },
+  "assumptions": [
+    "99vertices",
+    "Simple symmetric binary zero-diagonal adjacency",
+    "Exact integer degree14",
+    "Exact integers and GF(3)"
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-EQUAL-OUTSIDE-ROW-BUDGET-FILTER",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "report": "acceleration/results/20261003_independent_review/ternary_nonzero_defect_lower12_01/summary.json",
+  "report_sha256": "b5cb1f515ff8f36dd9b18c57208c7b12540a6750e375ca932be3906ccaed5ea0",
+  "verification_timestamp": "2026-10-03T09:23:30.0082509Z",
+  "proof": "acceleration/audit_20261003_ternary_nonzero_defect_lower12_v1.md",
+  "proof_sha256": "74fa37e72d3c2b44ee054933d06f887baf3bb2c4d9370fa1f09aa993973fb7a6",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_NONZERO_DEFECT_LOWER12_V1.md": "8af2f38aeb004b5d485b8596f10d04caf1d3bb061d03885031641a9b8ebcdd25",
+    "acceleration/audit_20261003_ternary_nonzero_defect_lower12_v1.md": "74fa37e72d3c2b44ee054933d06f887baf3bb2c4d9370fa1f09aa993973fb7a6",
+    "acceleration/results/20261003_independent_review/ternary_equal_outside_nine_01/equal_outside_filter/summary.json": "7d2ecc903415ecb66d5693891031d889e2862b05bfcf8d11b480fdda71344394",
+    "acceleration/results/20261003_independent_review/ternary_nonzero_defect_lower12_01/summary.json": "b5cb1f515ff8f36dd9b18c57208c7b12540a6750e375ca932be3906ccaed5ea0"
+  },
+  "controls": {
+    "written_boundary_reviews": 12,
+    "executed_controls": 0,
+    "executed_graphs": 0,
+    "formal_proof": false,
+    "source": "Literal counts in exact independently written report; no computational fixture implied"
+  },
+  "shared_components": [
+    "Exact integer/GF(3) algebra and pinned equal-outside filter, rederived here",
+    "No prior particular-defect exclusion, producer executable or support catalogue imported"
+  ],
+  "limitations": [
+    "No target graph/general nonexistence",
+    "Whole support only; not an arbitrary component exclusion",
+    "Field-level K2,6 boundary is not a graph lift or sharpness certificate",
+    "No executed fixtures, formal-prover verification or external review",
+    "Overall search coverage UNKNOWN; no validated denominator"
+  ],
+  "created_at": "2026-10-03T10:31:17.5151874+00:00",
+  "updated_at": "2026-10-03T10:31:17.5151874+00:00",
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "Historical context; new files not asserted present in that commit",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Literal workspace files pending immutable publication",
+  "target_resolution": "NONE",
+  "metadata_mapping": {
+    "author": "/root",
+    "source": "Existing exact independently accepted report",
+    "statement_scope_assumptions_roles_unchanged": true,
+    "dependency_id_key_normalization": "Original claim_id key mapped to id without changing reference/revision/relation; raw report preserved",
+    "mathematical_replays": 0,
+    "new_verification": false
+  }
+}

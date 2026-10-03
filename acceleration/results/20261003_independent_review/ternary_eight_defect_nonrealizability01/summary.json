@@ -1,0 +1,86 @@
+{
+  "status": "INDEPENDENT_TERNARY_EIGHT_DEFECT_NONREALIZABILITY_WRITTEN_DERIVATION_PASS",
+  "timestamp": "2026-10-03 06:18:12 UTC",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "statement": "For every symmetric binary 99 by 99 matrix A with zero diagonal and exactly 14 ones in each row, let F3 count unordered pairs u<v for which (A^2)_uv+A_uv-2 is nonzero modulo3. Then F3 is not8. This statement alone neither excludes F3=0 nor asserts realizability of any other defect count or resolution of the target.",
+  "scope": {
+    "description": "Universal 99-point simple14-regular adjacency domain; exact exclusion of eight nonzero unordered modulo3 residual pairs only, using the whole-connected-subcubic-support restriction r1.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is exactly a symmetric binary99x99 zero-diagonal matrix with every row sum14.",
+    "The pinned whole-connected-subcubic-support restriction r1 is used only in its exact domain."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-RESTRICTION",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "Imported only for the entire connected support with at most8 vertices and maximum degree3, after independently excluding disconnected supports."
+    }
+  ],
+  "proof": "acceleration/audit_20261003_ternary_eight_defect_nonrealizability_v1.md",
+  "proof_sha256": "5857515e86d6917fa46b60d30510e1b0e47a6dbbc9fa0a426998dcb7fa34dbe7",
+  "inputs_sha256": {
+    "acceleration/audit_20261003_ternary_eight_defect_nonrealizability_v1.md": "5857515e86d6917fa46b60d30510e1b0e47a6dbbc9fa0a426998dcb7fa34dbe7",
+    "docs/CANDIDATE_20261003_TERNARY_EIGHT_DEFECT_NONREALIZABILITY_V1.md": "fc885e399684ed41e1dba848474a19a392b5becddc27420769a5011d7570ecba",
+    "acceleration/results/20261003_independent_review/ternary_subcubic_connected_support01/claim_binding_schema2.json": "562676e3af281e33384265824f9e115dfce27cca498b94f3b46cd0100346edd3",
+    "acceleration/results/20261003_independent_review/ternary_subcubic_connected_support01/summary.json": "e3b6ea1f00bea171554867b68667bdf6d25ed57a3c8c1438d8654cfed01aba15",
+    "acceleration/audit_20261003_ternary_subcubic_connected_support_v1.md": "1233903ac6449e354f8aead02d222b9b2594b617f06dfa0ce8c07800611809ed"
+  },
+  "controls": {
+    "written_boundary_checks": 14,
+    "executed_mathematical_fixtures": 0,
+    "actual_graph_realizations": 0,
+    "checks": [
+      "twoC4 disconnected boundary",
+      "K5 minus disjoint missing edges signs",
+      "K5 minus shared missing edges signs",
+      "shared cycles3+5 binary twins",
+      "shared cycles4+4 binary twins",
+      "universal5 with P3+K2",
+      "nonadjacent degree4 K2,4",
+      "adjacent degree4 pair low edge",
+      "high-nonneighbor tree signed rows",
+      "low-nonneighbor P5 central",
+      "low-nonneighbor P5 near-end",
+      "low-nonneighbor C3+P2",
+      "whole connected subcubic only",
+      "balanced degree4 row does not imply equality"
+    ]
+  },
+  "command": null,
+  "command_null_reason": "No mathematical computational command was run; verification is the independently written exhaustive case derivation.",
+  "mathematical_replays": 0,
+  "executed_mathematical_fixtures": 0,
+  "target_resolution": "NONE",
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "Working-source context only; pinned new candidate/audit bytes are not asserted to be committed.",
+  "shared_components": [
+    "Integer adjacency/common-neighbor definitions and exact old12 whole-support theorem; same-verifier prior dependency explicitly disclosed.",
+    "Written modular arithmetic and complete small support degree/complement/path classification; no producer code or floating point evidence."
+  ],
+  "limitations": [
+    "Exact F3!=8 only; neither F3=0 nor F3=9 or any other count is excluded by this claim alone.",
+    "Written derivation, no executed support enumeration, mathematical program, graph fixture or actual graph realization.",
+    "The imported old12 theorem is used for the whole connected support only; no invalid component-wise extension.",
+    "Prior old12 independent verifier is also Checkpoint; this shared written result is explicitly pinned and disclosed.",
+    "No lambda1, triangle decomposition, prism absence, automorphism, novelty, external peer review, formal-prover or target-resolution claim.",
+    "Checkpoint's metadata/registrar authorship is unrelated to the separate mathematical audit of ROOT's frozen discovery."
+  ],
+  "unavailable_information": {
+    "external_peer_review": null,
+    "external_peer_review_reason": "Internal different-author written verification only",
+    "formal_prover": null,
+    "formal_prover_reason": "No formalization executed",
+    "graph_fixture_results": null,
+    "graph_fixture_results_reason": "Written modular supports are not graph realizations or executable fixtures",
+    "cpu_model": null,
+    "cpu_model_reason": "No mathematical computational invocation",
+    "random_seed": null,
+    "random_seed_reason": "Deterministic written derivation without randomized computation"
+  }
+}

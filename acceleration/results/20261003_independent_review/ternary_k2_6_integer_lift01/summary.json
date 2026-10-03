@@ -1,0 +1,121 @@
+{
+  "schema": "INDEPENDENT_TERNARY_WHOLE_K2_6_WRITTEN_CLAIM_REVISION_V1",
+  "status": "INDEPENDENT_TERNARY_WHOLE_K2_6_INTEGER_LIFT_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-WHOLE-K2-6-SUPPORT-NONREALIZABILITY",
+  "claim_revision": 1,
+  "statement": "For every symmetric binary integer 99-by-99 matrix A with zero diagonal and exactly 14 ones in every integer row, put R=A^2+A-12I-2J and M=R modulo 3 over GF(3). The whole nonzero unordered off-diagonal support graph of M cannot be isomorphic to K2,6. Empty support is permitted; this excludes neither a K2,6 component inside a larger residual support nor all twelve-edge supports, and supplies no target resolution, incidence-rank bound, optimum or realization of another defect count.",
+  "claim_status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical result",
+  "basis": ["DERIVED"],
+  "producer": "/root",
+  "verifier": "/root/structural",
+  "method": "independent_derivation",
+  "independent_of_discovery_producer": true,
+  "timestamp": "2026-10-03T09:39:55+00:00",
+  "timestamp_role": "Actual review clock before the independently written audit was saved; exact file-creation time is not asserted.",
+  "scope": {
+    "description": "Universal complete simple99-vertex integer degree14 adjacency domain, conditional exclusion of the whole signed residual-support shape K2,6 through its forced integer lift; no general twelve-defect coverage or target resolution.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is exactly binary, symmetric, zero diagonal and 99-by-99.",
+    "Every integer row sum is exactly14.",
+    "The alleged K2,6 is the whole nonzero off-diagonal support of the exact polynomial residual M over GF(3), not a selected component of another support.",
+    "The integer residual and all field/scalar/norm calculations are interpreted exactly as stated."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-EQUAL-OUTSIDE-ROW-BUDGET-FILTER",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "The material outside binary-neighborhood and exact negative-budget restriction is separately ROOT-verified in report7d2ecc; its required elementary derivation is also reproduced in this audit. No defect-lower12 or ten-defect exclusion is used."
+    }
+  ],
+  "candidate": "docs/CANDIDATE_20261003_TERNARY_K2_6_INTEGER_LIFT_V1.md",
+  "candidate_sha256": "4efb2e1ffbcf4bf8c310c3521b175e570b93e1ed7ef18d20cbecaf05dea55260",
+  "written_audit": "acceleration/audit_20261003_ternary_k2_6_integer_lift_v1.md",
+  "written_audit_sha256": "2b8dad64a3d15443ddca45ddd4946ccc5aa215a7739a9d9f234b4c7f4873bd7d",
+  "dependency_report": "acceleration/results/20261003_independent_review/ternary_equal_outside_nine_01/equal_outside_filter/summary.json",
+  "dependency_report_sha256": "7d2ecc903415ecb66d5693891031d889e2862b05bfcf8d11b480fdda71344394",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_K2_6_INTEGER_LIFT_V1.md": "4efb2e1ffbcf4bf8c310c3521b175e570b93e1ed7ef18d20cbecaf05dea55260",
+    "acceleration/audit_20261003_ternary_k2_6_integer_lift_v1.md": "2b8dad64a3d15443ddca45ddd4946ccc5aa215a7739a9d9f234b4c7f4873bd7d",
+    "docs/CANDIDATE_20261003_TERNARY_EQUAL_OUTSIDE_BUDGET_NINE_DEFECT_V1.md": "a67fe7e196228165b4fcccedef9e8956362d9248404766f0a0202ddd370670cd",
+    "acceleration/audit_20261003_ternary_equal_outside_nine_v1.md": "0497fef0e3a9ca8558acc2aacdbc68abe6b9ef8db925e502765d02a85676be18",
+    "acceleration/results/20261003_independent_review/ternary_equal_outside_nine_01/equal_outside_filter/summary.json": "7d2ecc903415ecb66d5693891031d889e2862b05bfcf8d11b480fdda71344394"
+  },
+  "controls": {
+    "written_falsification_checks": 14,
+    "executed_mathematical_commands": 0,
+    "executed_fixtures": 0,
+    "executed_graph_realizations": 0,
+    "checks": [
+      "Exhaustive c0/3/6 high-label counts and beta6 vetoes",
+      "Good high-pair integer lower rounding and both beta9 upper bounds",
+      "Exact high-row saturation pins all minima and every other good term",
+      "Entire outside integer rows vanish by good nonnegativity",
+      "Every low has precisely one residual3 partner and forms a perfect matching",
+      "Half-integer notation represents only exact integer minus2/minus1 entries",
+      "U invariance, weighted constant coordinates and distinct eigenvalues0/12",
+      "Exact quadratic symmetric cross factor and high-difference norm",
+      "Independent sum-of-squares Rayleigh bound valid for all matching/sign types",
+      "Full99-dimensional simplicity including the91-dimensional outside subspace",
+      "Integer scalar theta at a primitive eigenvector coordinate1 and Jz0",
+      "Exact nonsquare discriminant97 between integer squares81/100",
+      "Field-level zero-row nilpotent K2,6 remains algebraically possible",
+      "Whole-support scope and no general twelve-edge or target conclusion"
+    ]
+  },
+  "checked_details": {
+    "whole_support_vertices": 8,
+    "whole_support_edges": 12,
+    "high_residue1_counts": [0, 3, 6],
+    "remaining_balanced_high_count": 3,
+    "balanced_high_budgets": [9, 9],
+    "forced_high_high_integer_residual": 9,
+    "forced_low_low_positive_residual": 3,
+    "low_low_residual_shape": "a perfect matching on six lows; no sign-correlation type assumed",
+    "invariant_constant_block": [[9, -9], [-3, 3]],
+    "primitive_eigenvector": "minus3 at both highs, plus1 at all six lows, zero at all91 outside vertices",
+    "primitive_eigenvalue": 12,
+    "complement_norm_squared": "2x^2+||l||^2",
+    "complement_quadratic_form": "minus18x^2 minus2x*s^T*l plus3l^T*P*l",
+    "independent_nonnegative_certificate": "4||v||^2-Q=20x^2+||l+x*s||^2+(3/2)||l-P*l||^2",
+    "complement_eigenvalue_upper_bound": 4,
+    "full_eigenvalue12_multiplicity": 1,
+    "forced_integer_adjacency_scalar_equation": "theta^2+theta-24=0",
+    "discriminant": 97
+  },
+  "command": null,
+  "command_null_reason": "The mathematical verification is a complete written exact derivation. No computational mathematical command, numerical diagonalization, matching enumeration or executable fixture was run; small source reads and metadata hashes do not constitute theorem computation.",
+  "formal_proof": false,
+  "formal_proof_reason": "No proof-assistant formalization or formal proof certificate was executed.",
+  "external_review": null,
+  "external_review_null_reason": "Internal different-author written verification only; no external peer review has occurred.",
+  "novelty": "UNKNOWN",
+  "trusted_arithmetic": "Exact integer and GF(3) arithmetic; exact real norm squares, matching orthogonality and finite-dimensional symmetric spectral decomposition. No floating solver or producer executable.",
+  "shared_components": [
+    "Common adjacency/residual definitions and ordinary exact integer/GF(3)/real linear algebra.",
+    "Structural authored the earlier equal-outside filter discovery; ROOT separately verified it. The required filter facts are explicitly rederived here rather than accepted as an unverified self-authored assertion.",
+    "ROOT's K2,6 discovery is checked by Structural. The complement bound is independently certified by a displayed sum-of-squares identity; no Native parser, scorer, numerical eigensolver or matching catalogue is imported."
+  ],
+  "limitations": [
+    "The claim excludes only the whole K2,6 residual support in the complete99/14 domain, not an arbitrary component or all twelve-edge supports.",
+    "M=0 is permitted; no target construction, general nonexistence, incidence-rank, optimum, sharpness or coverage claim follows.",
+    "The signed field-level K2,6 and nilpotent cube are not refuted; the obstruction is its actual integer adjacency-polynomial lift.",
+    "Written exact verification only; no graph fixture, formal proof or external review is supplied."
+  ],
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "Historical context; the new candidate/audit/report are not asserted present in that commit.",
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Literal workspace paths and SHA256 pins above; immutable publication and availability confirmation remain separate.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no graph-space denominator is established.",
+  "mathematical_replays": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "registration_state": "Not registered; outside the frozen371-claim wave42 cutoff."
+}
