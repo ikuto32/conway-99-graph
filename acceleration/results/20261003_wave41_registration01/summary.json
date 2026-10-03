@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-10-03T02:11:23.830013+00:00",
+  "status": "EXACT_BOUND_SCOPED_CLAIMS_REGISTERED",
+  "source_commit": "00ffb6fdd7d91bd38269e1cc5e6b214ebf7591c8",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/register_20261003_bound_claims_v16.py",
+    "--out",
+    "acceleration/results/20261003_wave41_registration01",
+    "--previous-sha256",
+    "a4f2f5b2ff41ea7aebf99413cdc825fc1e08f5269079d43e305da713f4af29ef",
+    "--binding",
+    "acceleration/results/20261003_weight5_c4_binding01/claim_binding_schema2.json",
+    "--binding-sha256",
+    "6525dae3734dc6c2f7eabcbd12db994f8c283019176388bb0f540690859225ee",
+    "--binding",
+    "acceleration/results/20261003_triangle_rank87_binding01/claim_binding_schema2.json",
+    "--binding-sha256",
+    "dc079188f50e43ac31c9b9707e94a5f6db1fe9644c9b3dbccca4c9e02591a39d"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "source_sha256": "a8e7c2694817970df28ff1ec7be3d8265ba2f6e3ffe3d88798241832426c2026",
+  "before_ledger_sha256": "a4f2f5b2ff41ea7aebf99413cdc825fc1e08f5269079d43e305da713f4af29ef",
+  "ledger_sha256": "10b7636dafced40101ccf257d5f80468914f53aa2ee2d3c89db43be268bdcc09",
+  "new_claim_ids": [
+    "C-UNRESTRICTED-TRIANGLE-INCIDENCE-WEIGHT5-C4-COLLISION-SUBTRACTION-LOWER-COUNT",
+    "C-UNRESTRICTED-TRIANGLE-INCIDENCE-BINARY-RANK-LOWER87"
+  ],
+  "claim_records": 358,
+  "status_counts": {
+    "VERIFIED": 350,
+    "CANDIDATE": 3,
+    "REFUTED": 5
+  },
+  "review_state_counts": {
+    "CLEAR": 358
+  },
+  "new_exclusions": 0,
+  "target_resolution": "UNKNOWN",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "mathematical_replays": 0,
+  "editorial_statement_mappings": [
+    {
+      "claim_id": "C-UNRESTRICTED-TRIANGLE-INCIDENCE-WEIGHT5-C4-COLLISION-SUBTRACTION-LOWER-COUNT",
+      "claim_revision": 1,
+      "mathematical_replays": 0,
+      "original_calibration": "acceleration/results/20261003_independent_review/weight5_c4_raw_calibration03/summary.json",
+      "original_calibration_sha256": "e4ba5e7dbe927ce2b3c60b80600bb8436d9e6b47de2a87af784e9157853c27bf",
+      "original_independent_report_method": "independent_derivation_and_complete_artifact_checking",
+      "original_report": "acceleration/results/20261003_independent_review/weight5_c4_raw_full02/summary.json",
+      "original_report_sha256": "75bf5f7adc8b082311b4ad786d46f53857960ea07c8cb58576c3a38d2bbce5a5",
+      "original_report_statement": "For every finite simple graph with exactly one common neighbor for each adjacent pair, the binary triangle-incidence image contains at least max(ceil(P/2), P-c4(G)) weight-five words, where P is the unordered three-triangle path count and c4(G) the induced four-cycle count. Consequently any srg(99,14,1,2) has N5>=22869 and its exact degree-five kernel-character shifted right-hand side is71500275.",
+      "original_report_statement_field": "universal_statement",
+      "original_written_audit": "acceleration/audit_20261003_triangle_image_weight5_c4_v1.md",
+      "original_written_audit_sha256": "bdc99b2f6a2bf92f9e322616227c4be26db7d57b08ccbcfd9353fbf76260ce12",
+      "raw_statement_changed": false,
+      "reason": "Exact two-ID metadata projection preserves the existing literal raw headline and combined independent derivation/artifact method. The schema records independent_derivation and retains the original method here. Universal mathematics and exact certificates were already checked by ROOT; this registrar does not replay them or infer any wider result.",
+      "recorded_binding": "acceleration/results/20261003_weight5_c4_binding01/claim_binding_schema2.json",
+      "recorded_binding_sha256": "6525dae3734dc6c2f7eabcbd12db994f8c283019176388bb0f540690859225ee",
+      "recorded_binding_statement": "For every finite simple graph with exactly one common neighbor for each adjacent pair, the binary triangle-incidence image contains at least max(ceil(P/2), P-c4(G)) weight-five words, where P is the unordered three-triangle path count and c4(G) the induced four-cycle count. Consequently any srg(99,14,1,2) has N5>=22869 and its exact degree-five kernel-character shifted right-hand side is71500275.",
+      "recorded_binding_statement_sha256": "2e863864026ccab1d9307c44ecc1653c27c2011815f34c85c33ef2f6150c623a",
+      "schema_method": "independent_derivation",
+      "target_resolution": "NONE"
+    },
+    {
+      "claim_id": "C-UNRESTRICTED-TRIANGLE-INCIDENCE-BINARY-RANK-LOWER87",
+      "claim_revision": 1,
+      "mathematical_replays": 0,
+      "original_calibration": "acceleration/results/20261003_independent_review/c4_endpoint_calibration01/summary.json",
+      "original_calibration_sha256": "2a4b999a53075560dc4d38f0af4fd7d10b3aaa63086b5a2e6e56fc9ba709d9a8",
+      "original_independent_report_method": "independent_derivation_and_complete_artifact_checking",
+      "original_report": "acceleration/results/20261003_independent_review/c4_endpoint_full01/summary.json",
+      "original_report_sha256": "663c7fffc558e6a45232c08f272230970ff31bcc2d542e3f5c826aaa53dccbc9",
+      "original_report_statement": "For every srg(99,14,1,2), its complete 99-by231 triangle-incidence matrix B has binary rank at least87: its binary kernel has size at most12187808/2723<8192, hence dimension at most12. This conditional implication allows the zero kernel and uses the even36..60 nonzero-weight interval and image counts N3>=231,N4>=2079,N5>=22869,N6>=24486.",
+      "original_report_statement_field": "statement",
+      "original_written_audit": "acceleration/audit_20261003_triangle_kernel_c4_endpoint_v1.md",
+      "original_written_audit_sha256": "d464ee1b3522a0e61784031b2f47efcc4ecf84926dcc64e306f6f2855e384ea0",
+      "raw_statement_changed": false,
+      "reason": "Exact two-ID metadata projection preserves the existing literal raw headline and combined independent derivation/artifact method. The schema records independent_derivation and retains the original method here. Universal mathematics and exact certificates were already checked by ROOT; this registrar does not replay them or infer any wider result.",
+      "recorded_binding": "acceleration/results/20261003_triangle_rank87_binding01/claim_binding_schema2.json",
+      "recorded_binding_sha256": "dc079188f50e43ac31c9b9707e94a5f6db1fe9644c9b3dbccca4c9e02591a39d",
+      "recorded_binding_statement": "For every srg(99,14,1,2), its complete 99-by231 triangle-incidence matrix B has binary rank at least87: its binary kernel has size at most12187808/2723<8192, hence dimension at most12. This conditional implication allows the zero kernel and uses the even36..60 nonzero-weight interval and image counts N3>=231,N4>=2079,N5>=22869,N6>=24486.",
+      "recorded_binding_statement_sha256": "46ddebe1ae4cb1e0da955069811a8927f57080d55590922489b37037671a0f17",
+      "schema_method": "independent_derivation",
+      "target_resolution": "NONE"
+    }
+  ]
+}

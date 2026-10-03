@@ -1,0 +1,150 @@
+{
+  "schema": "C4_ENDPOINT_EXACT_TWO_ROW_GUIDE_PLAN_V1",
+  "status": "HOLD_PENDING_ROOT_REVIEW_AND_EXPLICIT_AUTHORIZATION",
+  "created_at": "2026-10-02 23:23:11 UTC",
+  "author": "/root/structural",
+  "source_sha256": "7cb503ef66a494192856c10f8dbd33c3b6d094d1ecbb6d33b13c82fefb69c219",
+  "protocol_sha256": "946cedbb301af25ff722e1592a9e4d947c9f86485eeaa57f71757b5e7bf9ed18",
+  "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+  "environment": {
+    "UV_PROJECT_ENVIRONMENT": "build/research-venv"
+  },
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    ".uv-cache-20260917",
+    "acceleration/run_compute_command.py",
+    "--seconds",
+    "60",
+    "--shutdown-reserve-seconds",
+    "10",
+    "--allocation-reason",
+    "One exact2x2rational endpoint construction,1287fullcells/99dualcoordinates/13inequalities; actualauthorcal0.218outer;40worker10save reserve; no floatingoptimizer",
+    "--success-criterion",
+    "Preserve exactfullmodel,2x2system andnonnegative rationaldual ifall13inequalities pass; candidateU12187808/2723/nooptimum; checkpoint failure/rawclosure;protectedstateunchanged",
+    "--verification-criterion",
+    "ROOT unchanged7775 independent polynomial/system/fullrational checker must verify complete actual artifacts and conditional premises; producer cannot approve rank87",
+    "--out",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261003_triangle_kernel_c4_endpoint_supervision01",
+    "--",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20261003_triangle_kernel_c4_endpoint_v3.py",
+    "--mode",
+    "endpoint",
+    "--seconds",
+    "40",
+    "--out",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261003_triangle_kernel_c4_endpoint01",
+    "--source-sha256",
+    "7cb503ef66a494192856c10f8dbd33c3b6d094d1ecbb6d33b13c82fefb69c219",
+    "--protocol-sha256",
+    "946cedbb301af25ff722e1592a9e4d947c9f86485eeaa57f71757b5e7bf9ed18",
+    "--count-audit",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261003_independent_review/weight5_c4_raw_full02/summary.json",
+    "--count-audit-sha256",
+    "75bf5f7adc8b082311b4ad786d46f53857960ea07c8cb58576c3a38d2bbce5a5",
+    "--checker-calibration",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261003_independent_review/c4_endpoint_calibration01/summary.json",
+    "--checker-calibration-sha256",
+    "2a4b999a53075560dc4d38f0af4fd7d10b3aaa63086b5a2e6e56fc9ba709d9a8"
+  ],
+  "child_argv": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20261003_triangle_kernel_c4_endpoint_v3.py",
+    "--mode",
+    "endpoint",
+    "--seconds",
+    "40",
+    "--out",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261003_triangle_kernel_c4_endpoint01",
+    "--source-sha256",
+    "7cb503ef66a494192856c10f8dbd33c3b6d094d1ecbb6d33b13c82fefb69c219",
+    "--protocol-sha256",
+    "946cedbb301af25ff722e1592a9e4d947c9f86485eeaa57f71757b5e7bf9ed18",
+    "--count-audit",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261003_independent_review/weight5_c4_raw_full02/summary.json",
+    "--count-audit-sha256",
+    "75bf5f7adc8b082311b4ad786d46f53857960ea07c8cb58576c3a38d2bbce5a5",
+    "--checker-calibration",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261003_independent_review/c4_endpoint_calibration01/summary.json",
+    "--checker-calibration-sha256",
+    "2a4b999a53075560dc4d38f0af4fd7d10b3aaa63086b5a2e6e56fc9ba709d9a8"
+  ],
+  "allocation": {
+    "outer_seconds": 60,
+    "worker_seconds": 40,
+    "outer_shutdown_seconds": 10,
+    "internal_serialization_seconds": 10
+  },
+  "independent_gates": [
+    {
+      "path": "acceleration/results/20261003_independent_review/weight5_c4_raw_full02/summary.json",
+      "sha256": "75bf5f7adc8b082311b4ad786d46f53857960ea07c8cb58576c3a38d2bbce5a5",
+      "scope": "Universal conditionalN5>=22869/C4injection/rawcompletechecking; no rank"
+    },
+    {
+      "path": "acceleration/results/20261003_independent_review/c4_endpoint_calibration01/summary.json",
+      "sha256": "2a4b999a53075560dc4d38f0af4fd7d10b3aaa63086b5a2e6e56fc9ba709d9a8",
+      "producer_outputs_checked": false,
+      "checker_source_sha256": "7775bb097a412b20701c54960b65a8ecf5ec6e84a8bf0f0150538c188329229c"
+    }
+  ],
+  "author_controls": {
+    "path": "acceleration/results/20261003_triangle_kernel_c4_endpoint_controls01/summary.json",
+    "sha256": "2eacfe9dde65e7b93e2d376f3f8038d28129569ba89424e4eda9e495213c9cc8",
+    "positive_fixtures": 2,
+    "literal_character_cells": 140,
+    "precise_negative_controls": 13,
+    "source_context": "ExactauthorV3; no targetendpointconstructed",
+    "plan_metadata_error_preserved": "acceleration/plan_20261003_c4_endpoint_author_calibration_v1.json",
+    "plan_metadata_correction": "acceleration/plan_20261003_c4_endpoint_author_calibration_metadata_v2.json"
+  },
+  "scope": {
+    "target": "Conditional complete triangleincidencekernel of any exact99vertex target; zero kernel allowed",
+    "weight_domain": "even13",
+    "nonzero_weights": [
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60
+    ],
+    "lower_image_counts": {
+      "3": 231,
+      "4": 2079,
+      "5": 22869,
+      "6": 24486
+    },
+    "target_resolution": "NONE",
+    "optimum": false
+  },
+  "candidate_only": {
+    "construction": "Exactdegree4/5intersectionatw36,60 thenall13inequalities",
+    "expected_upper": [
+      12187808,
+      2723
+    ],
+    "maximum_dimension": 12,
+    "rank_lower": 87,
+    "independent_complete_check_required": true
+  },
+  "protected_observed": {
+    "ledger": "f66b82fb0bac49b7e0732eef177cb283f5338b1e433f980dce7e55ee64acf2ae",
+    "index": "709d1d0b6cfbdc69214c996c440e86e373d719bdb2a918b49303c7edbcf3e3d1"
+  },
+  "retries": 0,
+  "optimizer_calls": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0
+}
