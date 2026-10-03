@@ -1,0 +1,114 @@
+{
+  "schema": "INDEPENDENT_TERNARY_SMALL_DEFECT_SUPPORT_WRITTEN_DERIVATION_V1",
+  "status": "INDEPENDENT_DEGREE14_TERNARY_SMALL_DEFECT_SUPPORT_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-SMALL-DEFECT-SUPPORT",
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly 14 ones in every integer row, put r_uv=(A^2)_uv+A_uv-2 for u<v and let F3 count unordered residuals not divisible by 3. Then F3 belongs to {0,4} union {6,7,...,4851}. If F3=4, the four nonzero residue pairs form a simple four-cycle on four vertices whose residues alternate 1,2,1,2 in cyclic order. These are necessary conditions only; no adjacency realization of four defects or any other allowed value is asserted.",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "timestamp": "2026-10-03T04:14:00+00:00",
+  "source_context_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_context_role": "ROOT-supplied postpublication context; exact new working candidate/audit bytes are separately pinned and not claimed to be present in that commit.",
+  "source": "docs/CANDIDATE_20261003_TERNARY_SMALL_DEFECT_SUPPORT_V1.md",
+  "source_sha256": "d887daf8e80a8751049f472c54f80d7c61abd245a40020ed93c9114d22677ffd",
+  "written_audit": "acceleration/audit_20261003_ternary_small_defect_support_v1.md",
+  "written_audit_sha256": "f083053e29d51488d9dc4e6d624fde2781b36a5921a25912ae9d57b7058bcab8",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_SMALL_DEFECT_SUPPORT_V1.md": "d887daf8e80a8751049f472c54f80d7c61abd245a40020ed93c9114d22677ffd",
+    "acceleration/audit_20261003_ternary_small_defect_support_v1.md": "f083053e29d51488d9dc4e6d624fde2781b36a5921a25912ae9d57b7058bcab8"
+  },
+  "scope": {
+    "description": "Universal necessary residual-support restrictions on the complete simple symmetric zero-diagonal degree14 adjacency domain of order99. Every unordered pair and every complete vertex row is included; no lambda1, incidence or symmetry premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99 and all residuals refer to its complete matrix entries.",
+    "A is symmetric, binary and zero diagonal.",
+    "Every integer row has exactly14 ones.",
+    "F3 counts all4851 unordered pairs; row congruences include every98 other vertex, with identical labels at both endpoints."
+  ],
+  "dependencies": [],
+  "independent_path": [
+    "Compute complete CN row sum196 and diagonal14; subtract diagonal, add row14 and subtract196 to obtain exact off-diagonal residual sum0.",
+    "Convert nonzero residues to undirected signs+1/-1 over GF(3); complete rows force minimum support degree2, opposite degree2 signs and equal degree3 signs.",
+    "At most5 edges allow only one nontrivial component; signed handshaking gives v<=e and simplicity gives e<=binomial(v,2).",
+    "For e1/2 there is no possible simple support; e3 isC3, e4 isC4, e5 isC5 orK4-e.",
+    "Odd-cycle alternation excludesC3/C5; the high-degree shared edge inK4-e forces forbidden equal degree2 labels; C4 must alternate."
+  ],
+  "complete_written_derivation_checked": true,
+  "independent_of_discovery_producer": true,
+  "all_simple_support_sizes_through_5_covered": true,
+  "excluded_support_sizes": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "four_edge_support_shape": "C4",
+  "four_edge_residues": "Alternating1,2,1,2",
+  "written_falsification_checks": [
+    "Independently expand every complete off-diagonal row sum as (196-14)+14-196=0; exact integer degree is essential.",
+    "Recompute diagonal14-12-2=0 from symmetry/binary/zero-diagonal assumptions.",
+    "Require the same residue at both endpoints; directed/asymmetric labels are outside the support reduction.",
+    "Exhaust all four degree2 sign assignments; only opposite signs have zero sum over GF(3).",
+    "Exhaust degree3 by its0,1,2,3 positive signs; only equal labels yield sums divisible by3.",
+    "Every nontrivial simple component has at least3 edges; two components require at least6, so small disconnected supports are covered.",
+    "Rule out one or two edges using nonisolated vertex count and simplicity; parallel-edge variants are outside scope.",
+    "Traverse both odd cycles C3/C5; odd sign alternation requires2s=0 for nonzero s.",
+    "Written modular C4 edges12/23/34/41 labelled1/2/1/2 have complete zero row sums; not an adjacency realization.",
+    "Written K4-e degree3 labels agree on their shared edge and force nonzero degree2 sums; no other5-edge simple support remains.",
+    "Written modular K4 with all edge residues1 has six edges and zero row sums, delimiting the support argument; not a target fixture.",
+    "Deleting an edge from either positive support breaks a complete row sum; loops, partial entries or global-only residue sums do not replace hypotheses."
+  ],
+  "written_falsification_check_count": 12,
+  "written_control_population": {
+    "positive_modular_supports": 2,
+    "positive_names": [
+      "Alternating C4",
+      "All-residue1 K4"
+    ],
+    "adjacency_realizations": 0,
+    "executed_fixtures": 0
+  },
+  "executable_controls": null,
+  "executable_controls_null_reason": "Twelve written falsification boundaries and modular support matrices; no executable fixture or adjacency realization was produced.",
+  "command": null,
+  "command_null_reason": "Independent human-checkable universal derivation only; no mathematical computation command executed.",
+  "tool_versions": null,
+  "tool_versions_null_reason": "No solver, elimination program, executable enumeration or proof assistant used.",
+  "mathematical_computation_commands": 0,
+  "executed_proof_or_fixture_commands": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "target_graphs_produced": 0,
+  "target_exclusions_produced": 0,
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "shared_components": [
+    "Elementary exact CN-row arithmetic and finite-field sign sums; the argument was derived directly rather than invoking a prior ledger theorem.",
+    "The discovery source defines the exact subject; the separate checking path uses off-diagonal CN row sums, signed handshaking bounds and component exhaustion.",
+    "No producer imports, discovery computation, agent agreement, numerical score or sampled graph check supplies the universal proof."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only; no external or peer review recorded.",
+  "novelty": null,
+  "novelty_null_reason": "No literature-priority or novelty audit performed for this elementary necessary condition.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable exact proof only; no formal proof assistant artifact.",
+  "human_reviewer": null,
+  "human_reviewer_null_reason": "Independent checking agent identity is recorded; no human reviewer claimed.",
+  "raw_adjacency_realization": null,
+  "raw_adjacency_realization_null_reason": "Support controls are modular matrices, not complete degree14 adjacency witnesses.",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read the exact candidate and independent written audit paths/hashes above; any publication is a separate check.",
+  "limitations": [
+    "Necessary support-size restrictions, not existence or nonexistence; no allowed support size is asserted realizable.",
+    "The purely modular method permitsC4 and all-onesK4 supports; additional adjacency-domain constraints could rule out cases not excluded here.",
+    "No automorphism, lambda1, incidence rank, engine/cache/move, performance or scientific search approval.",
+    "Candidate source bytes stay historically CANDIDATE; the exact subsequent independent written verification is this separate report.",
+    "Metadata recording, source hashing and later registration do not replay mathematics."
+  ]
+}

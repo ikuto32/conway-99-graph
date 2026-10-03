@@ -1,0 +1,160 @@
+{
+  "id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-SPANNING99",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly14 ones in each integer row, put M=(A^2+A-12I-2J) modulo3 and let H be its simple nonzero unordered off-diagonal support, with isolated vertices discarded. If H is nonempty, connected and has maximum degree at most3, then H has exactly99 vertices. No support with99 vertices is asserted realizable. Disconnected and higher-degree supports are outside this claim, and it does not resolve target existence or nonexistence.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root/checkpoint_audit",
+  "verifier": "/root/structural",
+  "method": "independent_derivation",
+  "scope": {
+    "description": "Universal conditional spanning theorem for the whole nonempty connected subcubic ternary residual support on the complete order99 symmetric binary zero-diagonal degree14 adjacency domain; spanning support realizability and target resolution remain unestablished.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99, symmetric binary entries, zero diagonal and exact integer row degree14.",
+    "M includes all complete matrix residual entries modulo3; H is the whole nonisolated unordered off-diagonal support.",
+    "H is nonempty, connected and has maximum degree at most3."
+  ],
+  "dependencies": [
+    {
+      "revision": 1,
+      "reason": "Reuse only the exact prior necessary bounds m>=45 and nonbipartite m>=47 under identical domain/whole-support hypotheses, pinned binding44cf/reportbaa69/proofb51c. Binary commutator propagation and new cross-block contradiction are independently reproduced.",
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-LOWER45",
+      "relation": "uses_result"
+    }
+  ],
+  "report": "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_spanning99_01/summary.json",
+  "report_sha256": "72b3af6387373090538033c4cffb97476545f1666c01f8f1163e101d6c675ed3",
+  "written_audit": "acceleration/audit_20261003_ternary_connected_subcubic_support_spanning99_v1.md",
+  "written_audit_sha256": "0fe7b3e29546d421e7082c7c7a23730582a1f28224026175026357255e599d03",
+  "verification_timestamp": "2026-10-03T05:12:04.7230381+00:00",
+  "recorded_validation": {
+    "complete_written_derivation_checked": true,
+    "full_symmetric_zero_cross_block_checked": true,
+    "adjacency_realizations_produced": 0,
+    "minimum_bipartition_class_size": 18,
+    "conditional_support_size": 99,
+    "target_resolution": "NONE",
+    "binary_even_walk_propagation_checked": true
+  },
+  "controls": {
+    "executable_controls": null,
+    "executed_fixture_count": 0,
+    "written_falsification_check_count": 14,
+    "executable_controls_null_reason": "Fourteen exact paper boundaries, no executed adjacency/support fixture."
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_SPANNING99_V1.md": "ae30674d5d024aef03da62bcfde3cb51d7aeb3aa0cd327b8827744f84d5c3668",
+    "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/claim_binding_schema2.json": "44cf238643a09335d5af17be9161baf7f18afb4d1b6f60d61c4936cdbd685455",
+    "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/summary.json": "baa69ead3f4a65902e9ef0d864a151e82017da0707a82337de359cdc7e846789",
+    "acceleration/audit_20261003_ternary_connected_subcubic_support_lower45_v1.md": "b51cf3d17586cad49a97ef7c369c4944964e2462c7c60e5ff15f9957b110a065",
+    "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_LOWER45_V1.md": "4948749bfa84348792f04628f5dd24dee3c7837f6bc7d1c30933f23a01b2902f",
+    "acceleration/audit_20261003_ternary_connected_subcubic_support_spanning99_v1.md": "0fe7b3e29546d421e7082c7c7a23730582a1f28224026175026357255e599d03",
+    "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_spanning99_01/summary.json": "72b3af6387373090538033c4cffb97476545f1666c01f8f1163e101d6c675ed3"
+  },
+  "shared_components": [
+    "Shared exact definitions, elementary integer/GF3 arithmetic and one pinned prior size theorem; no producer code or agent agreement is evidence.",
+    "Different verifier Structural rederived the full commutator/binary equations, part-size-versus-degree bound and symmetric cross-block contradiction.",
+    "Prior ROOT producer/Checkpoint verifier lower45 result is reused explicitly; it is not silently promoted as fresh independent reproduction of its whole Cauchy theorem."
+  ],
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-SPANNING99",
+      "revision": 1,
+      "claim_revision": 1,
+      "timestamp": "2026-10-03T05:12:04.7230381+00:00",
+      "producer": "/root/checkpoint_audit",
+      "verifier": "/root/structural",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "report": "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_spanning99_01/summary.json",
+      "report_sha256": "72b3af6387373090538033c4cffb97476545f1666c01f8f1163e101d6c675ed3",
+      "written_audit": "acceleration/audit_20261003_ternary_connected_subcubic_support_spanning99_v1.md",
+      "written_audit_sha256": "0fe7b3e29546d421e7082c7c7a23730582a1f28224026175026357255e599d03",
+      "inputs_sha256": {
+        "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_SPANNING99_V1.md": "ae30674d5d024aef03da62bcfde3cb51d7aeb3aa0cd327b8827744f84d5c3668",
+        "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/claim_binding_schema2.json": "44cf238643a09335d5af17be9161baf7f18afb4d1b6f60d61c4936cdbd685455",
+        "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/summary.json": "baa69ead3f4a65902e9ef0d864a151e82017da0707a82337de359cdc7e846789",
+        "acceleration/audit_20261003_ternary_connected_subcubic_support_lower45_v1.md": "b51cf3d17586cad49a97ef7c369c4944964e2462c7c60e5ff15f9957b110a065",
+        "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_LOWER45_V1.md": "4948749bfa84348792f04628f5dd24dee3c7837f6bc7d1c30933f23a01b2902f",
+        "acceleration/audit_20261003_ternary_connected_subcubic_support_spanning99_v1.md": "0fe7b3e29546d421e7082c7c7a23730582a1f28224026175026357255e599d03"
+      },
+      "artifact_hashes": {
+        "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_SPANNING99_V1.md": "ae30674d5d024aef03da62bcfde3cb51d7aeb3aa0cd327b8827744f84d5c3668",
+        "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/claim_binding_schema2.json": "44cf238643a09335d5af17be9161baf7f18afb4d1b6f60d61c4936cdbd685455",
+        "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/summary.json": "baa69ead3f4a65902e9ef0d864a151e82017da0707a82337de359cdc7e846789",
+        "acceleration/audit_20261003_ternary_connected_subcubic_support_lower45_v1.md": "b51cf3d17586cad49a97ef7c369c4944964e2462c7c60e5ff15f9957b110a065",
+        "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_LOWER45_V1.md": "4948749bfa84348792f04628f5dd24dee3c7837f6bc7d1c30933f23a01b2902f",
+        "acceleration/audit_20261003_ternary_connected_subcubic_support_spanning99_v1.md": "0fe7b3e29546d421e7082c7c7a23730582a1f28224026175026357255e599d03",
+        "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_spanning99_01/summary.json": "72b3af6387373090538033c4cffb97476545f1666c01f8f1163e101d6c675ed3"
+      },
+      "command": null,
+      "command_null_reason": "Exact independent human-checkable written derivation only; metadata reads/hashes/writes are not mathematical execution or theorem fixtures.",
+      "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+      "tool_versions": null,
+      "tool_versions_null_reason": "No solver, executable mathematical checker, enumeration or formal proof assistant used.",
+      "checking_assumptions": [
+        "A has order99, symmetric binary entries, zero diagonal and exact integer row degree14.",
+        "M includes all complete matrix residual entries modulo3; H is the whole nonisolated unordered off-diagonal support.",
+        "H is nonempty, connected and has maximum degree at most3."
+      ],
+      "scope": {
+        "description": "Universal conditional spanning theorem for the whole nonempty connected subcubic ternary residual support on the complete order99 symmetric binary zero-diagonal degree14 adjacency domain; spanning support realizability and target resolution remain unestablished.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "shared_components": [
+        "Shared exact definitions, elementary integer/GF3 arithmetic and one pinned prior size theorem; no producer code or agent agreement is evidence.",
+        "Different verifier Structural rederived the full commutator/binary equations, part-size-versus-degree bound and symmetric cross-block contradiction.",
+        "Prior ROOT producer/Checkpoint verifier lower45 result is reused explicitly; it is not silently promoted as fresh independent reproduction of its whole Cauchy theorem."
+      ],
+      "executable_controls": null,
+      "executable_controls_null_reason": "Fourteen exact paper boundaries, no executed adjacency/support fixture.",
+      "independent_of_discovery_producer": true,
+      "external_review": false,
+      "limitations": [
+        "Necessary conditional whole-support spanning statement only; m99 may or may not be realizable.",
+        "Disconnected and degree4plus supports outside claim; connectivity is not connectivity of A.",
+        "No lambda1, incidence, automorphism, fixed graph, numerical or engine premise.",
+        "Fourteen paper falsification boundaries; zero mathematical programs/executed graph fixtures/exhaustive computations.",
+        "No target resolution, formal proof, human review, external peer review, novelty or performance claim; outside protected358 cutoff."
+      ]
+    }
+  ],
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "Published context supplied by ROOT; new working discovery/audit/report separately hashbound and not claimed committed there.",
+  "created_at": "2026-10-03T05:12:04.7230381+00:00",
+  "updated_at": "2026-10-03T05:12:04.7230381+00:00",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read immutable discovery, independent written proof/report and prior dependency binding at the complete inputs_sha256 paths; future publication/registration separate.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "unavailable_information": {
+    "raw_adjacency_realization_null_reason": "No graph realization or executable fixture produced.",
+    "verifier_source_commit_null_reason": "Written proof is separately hashbound; no verification implementation commit.",
+    "novelty_null_reason": "No literature-priority or novelty audit.",
+    "formalization_null_reason": "Human-checkable written proof, no formal artifact.",
+    "raw_adjacency_realization": null,
+    "human_reviewer_null_reason": "Independent agent role identified; no human reviewer claimed.",
+    "external_peer_review": null,
+    "formalization": null,
+    "verifier_source_commit": null,
+    "external_peer_review_null_reason": "Internal independent written derivation only.",
+    "human_reviewer": null,
+    "novelty": null
+  },
+  "limitations": [
+    "Necessary conditional whole-support spanning statement only; m99 may or may not be realizable.",
+    "Disconnected and degree4plus supports outside claim; connectivity is not connectivity of A.",
+    "No lambda1, incidence, automorphism, fixed graph, numerical or engine premise.",
+    "Fourteen paper falsification boundaries; zero mathematical programs/executed graph fixtures/exhaustive computations.",
+    "No target resolution, formal proof, human review, external peer review, novelty or performance claim; outside protected358 cutoff."
+  ]
+}

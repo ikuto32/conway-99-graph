@@ -1,3 +1,15 @@
+# Latest verified continuation checkpoint — wave42, 2026-10-03 JST
+
+The [forty-second milestone](docs/RESEARCH_20261003_FORTYSECOND_WAVE.md) freezes
+371 claims: 363 VERIFIED/CLEAR, three CANDIDATE/CLEAR and five REFUTED/CLEAR.
+Thirteen additions include exact ternary constraints and two exclusions of
+fixed move families. Target resolution remains UNKNOWN. The frozen results
+allow F3=0 or F3>=8 for degree-14 graphs; neither fixed-family exclusion proves
+general nonexistence. Overall search coverage: UNKNOWN; no validated denominator.
+New evidence remains LOCAL_ONLY pending immutable publication checks. Later
+construction and SAT waves lie outside this cutoff. Historical records do not
+establish current process state. Historical text follows unchanged.
+
 # Latest verified continuation checkpoint — wave41, 2026-10-03 JST
 
 The [forty-first milestone](docs/RESEARCH_20261003_FORTYFIRST_WAVE.md) freezes

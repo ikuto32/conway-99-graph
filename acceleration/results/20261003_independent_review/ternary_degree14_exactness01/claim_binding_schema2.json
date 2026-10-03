@@ -1,0 +1,113 @@
+{
+  "id": "C-UNRESTRICTED-DEGREE14-TERNARY-ADJACENCY-EXACTNESS",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary matrix A with zero diagonal and exactly 14 ones in every row, A^2 = 12I - A + 2J over the integers if and only if A^2 = -A + 2J over GF(3). Both equations refer to every matrix entry. I and J have order 99.",
+  "kind": "mathematical result",
+  "basis": ["DERIVED"],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": {
+    "description": "Complete entrywise ternary/integer equivalence in the unrestricted simple symmetric zero-diagonal degree-14 adjacency domain of order 99. No adjacency-common-neighbor or incidence premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order 99; I and J have the same order.",
+    "A is symmetric, binary and zero diagonal.",
+    "Each row of A has exactly 14 ones over the integers.",
+    "The ternary equation is checked for every matrix entry over GF(3)."
+  ],
+  "dependencies": [],
+  "producer": "/root",
+  "verifier": "/root/structural",
+  "method": "independent_derivation",
+  "created_at": "2026-10-03T02:10:19+00:00",
+  "updated_at": "2026-10-03T02:10:19+00:00",
+  "verification_timestamp": "2026-10-03T02:00:16.8017443+00:00",
+  "report": "acceleration/results/20261003_independent_review/ternary_degree14_exactness01/summary.json",
+  "report_sha256": "6f05a34ceb5c630b9b7529f3784fdba1f7bf0cd2295678ebb4dbc9506c05643c",
+  "written_audit": "acceleration/audit_20261003_ternary_degree14_exactness_v1.md",
+  "written_audit_sha256": "9f34fc4842379b026eb01430b25edb0a4911ddac713b9dae05f15b2bc9336d24",
+  "source_commit": "00ffb6fdd7d91bd38269e1cc5e6b214ebf7591c8",
+  "source_commit_role": "Recorded source context for the written review; separately pinned new working documents are not inferred to be present in that commit.",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_DEGREE14_EXACTNESS_V1.md": "274ce3fb355f69068bec254782f9f7d72c5b28e7e0dd53ca655c292dd6361582",
+    "acceleration/audit_20261003_ternary_degree14_exactness_v1.md": "9f34fc4842379b026eb01430b25edb0a4911ddac713b9dae05f15b2bc9336d24",
+    "docs/DESIGN_20261003_TERNARY_RESIDUE_EXACTNESS_V2.md": "424e9ee705ea9a46fb2ca755e7470992c4825d7ac508ee3b34a2d2673be02170",
+    "acceleration/results/20261003_independent_review/ternary_degree14_exactness01/summary.json": "6f05a34ceb5c630b9b7529f3784fdba1f7bf0cd2295678ebb4dbc9506c05643c"
+  },
+  "shared_components": [
+    "Finite exact integer arithmetic, divisibility, nonnegative row sums and the complete recorded domain.",
+    "The earlier Structural paper note424e predates the frozen ROOT source and is disclosed supporting derivation, not silently relabelled as source-bound verification.",
+    "No producer imports, discovery calculation, numerical optimizer, SAT checker or software elimination."
+  ],
+  "controls": {
+    "written_falsification": {
+      "path": "acceleration/audit_20261003_ternary_degree14_exactness_v1.md",
+      "sha256": "9f34fc4842379b026eb01430b25edb0a4911ddac713b9dae05f15b2bc9336d24",
+      "checks": 7,
+      "scope": "Paper-only premise, sign, exactness and application-boundary attacks. These are not executable positive or corrupted fixtures."
+    },
+    "executable_controls": null,
+    "executable_controls_null_reason": "No executable fixtures or proof-checking commands were run for this universal written derivation."
+  },
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-ADJACENCY-EXACTNESS",
+      "revision": 1,
+      "claim_revision": 1,
+      "producer": "/root",
+      "verifier": "/root/structural",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "timestamp": "2026-10-03T02:00:16.8017443+00:00",
+      "report": "acceleration/results/20261003_independent_review/ternary_degree14_exactness01/summary.json",
+      "report_sha256": "6f05a34ceb5c630b9b7529f3784fdba1f7bf0cd2295678ebb4dbc9506c05643c",
+      "command_or_audit": "acceleration/audit_20261003_ternary_degree14_exactness_v1.md",
+      "written_audit_sha256": "9f34fc4842379b026eb01430b25edb0a4911ddac713b9dae05f15b2bc9336d24",
+      "inputs_sha256": {
+        "docs/CANDIDATE_20261003_TERNARY_DEGREE14_EXACTNESS_V1.md": "274ce3fb355f69068bec254782f9f7d72c5b28e7e0dd53ca655c292dd6361582",
+        "acceleration/audit_20261003_ternary_degree14_exactness_v1.md": "9f34fc4842379b026eb01430b25edb0a4911ddac713b9dae05f15b2bc9336d24",
+        "docs/DESIGN_20261003_TERNARY_RESIDUE_EXACTNESS_V2.md": "424e9ee705ea9a46fb2ca755e7470992c4825d7ac508ee3b34a2d2673be02170"
+      },
+      "scope": "Complete universal matrix equivalence under the exact recorded order, symmetry, simplicity and integer degree premises. No target existence or exclusion.",
+      "command": null,
+      "command_null_reason": "Written independent derivation only; zero executable proof or fixture commands.",
+      "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+      "tool_versions": null,
+      "tool_versions_null_reason": "No solver or executable proof checker was used.",
+      "shared_components": ["Exact integer arithmetic and the literal recorded domain; earlier paper derivation disclosed, no producer code imports."],
+      "independent_of_discovery_producer": true,
+      "external_review": false,
+      "limitations": ["No executable control gate, formalization, numerical certificate, search implementation or target resolution."]
+    }
+  ],
+  "premise_state": "UNKNOWN",
+  "premise_state_reason": "Existence of an adjacency satisfying the complete ternary condition is UNKNOWN; the universal equivalence itself has independent written verification.",
+  "command": null,
+  "command_null_reason": "Written derivation only, with zero computational proof or fixture commands.",
+  "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+  "tool_versions": null,
+  "tool_versions_null_reason": "No computational solver, checker or elimination was used.",
+  "novelty": null,
+  "novelty_null_reason": "No literature-priority audit was performed for this implication.",
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only; no external or peer review is recorded.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable proof only; no proof-assistant artifact was produced.",
+  "limitations": [
+    "An equivalence of necessary target conditions, not existence or nonexistence.",
+    "No lambda1, incidence rank, nonzero kernel, connectedness, fixed local configuration or automorphism premise is used.",
+    "Incomplete residues, degree congruence only, approximate numerical zero or rank do not satisfy the complete premise.",
+    "Any graph found by a future residue engine must independently pass the complete integer SRG validator.",
+    "No implementation, performance, new objective engine or scientific run is approved by this record.",
+    "Metadata recording does not add mathematical checks beyond the exact pinned written audit."
+  ],
+  "availability": "LOCAL_ONLY",
+  "retrieval": "All complete source, written audit, prior paper and report bytes are available at the exact repository-relative paths in inputs_sha256. Publication availability is recorded separately.",
+  "metadata_only": true,
+  "registry_mutations": 0,
+  "index_mutations": 0,
+  "target_resolution": "NONE"
+}

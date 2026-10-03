@@ -1,0 +1,137 @@
+{
+  "id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-LOWER45",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly 14 ones in each integer row, put M=(A^2+A-12I-2J) modulo 3 and let H be its simple nonzero unordered off-diagonal support, with isolated vertices discarded. Suppose H is nonempty, connected and has maximum degree at most 3. Let m be its number of vertices; if H is bipartite let p be the size of a larger part, and otherwise let p=m. Then p*(48-m)<=72. Consequently m>=45, and if H is not bipartite, m>=47. No allowed support is asserted realizable; disconnected or higher-degree supports and target existence/nonexistence are outside this claim.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "scope": {
+    "description": "Universal conditional necessary inequality and size bounds for the whole nonempty connected subcubic ternary residual support of a complete simple symmetric zero-diagonal order99 degree14 adjacency matrix. It is not a target resolution or a restriction on disconnected or degree4+ supports.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99, symmetric binary entries, zero diagonal and exact integer degree14.",
+    "Every unordered residual and complete integer row is included.",
+    "The whole nonisolated residual support H is nonempty, connected and has maximum degree at most3.",
+    "p is the larger bipartition class size in the bipartite case, and the whole support size m otherwise."
+  ],
+  "dependencies": [],
+  "report": "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/summary.json",
+  "report_sha256": "baa69ead3f4a65902e9ef0d864a151e82017da0707a82337de359cdc7e846789",
+  "verification_timestamp": "2026-10-03T05:01:07.3683362Z",
+  "recorded_validation": {
+    "complete_written_derivation_checked": true,
+    "binary_even_walk_propagation_checked": true,
+    "common_neighbor_doublecount_checked": true,
+    "rational_cauchy_square_checked": true,
+    "completed_square_checked": true,
+    "bipartite_row_budget_checked": true,
+    "nonbipartite_row_budget_checked": true,
+    "exact_necessary_inequality": "p*(48-m)<=72",
+    "connected_subcubic_support_size_lower_bound": 45,
+    "nonbipartite_support_size_lower_bound": 47,
+    "adjacency_realizations_produced": 0,
+    "target_exclusions": 0
+  },
+  "controls": {
+    "written_falsification_check_count": 12,
+    "executed_fixture_count": 0,
+    "executable_controls": null,
+    "executable_controls_null_reason": "Twelve exact written falsification boundaries; no executable graph/support fixture."
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_LOWER45_V1.md": "4948749bfa84348792f04628f5dd24dee3c7837f6bc7d1c30933f23a01b2902f",
+    "acceleration/audit_20261003_ternary_connected_subcubic_support_lower45_v1.md": "b51cf3d17586cad49a97ef7c369c4944964e2462c7c60e5ff15f9957b110a065",
+    "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/summary.json": "baa69ead3f4a65902e9ef0d864a151e82017da0707a82337de359cdc7e846789"
+  },
+  "shared_components": [
+    "Exact definitions and elementary integer/GF(3) arithmetic shared with discovery; no producer code or agent agreement supplies proof.",
+    "Independent exact common-neighbor doublecount, expanded rational sum of squares and factorization(m-4)*(44-m)/2 verify the three main bounds.",
+    "Prior small-support/four-/six-defect and at-most12 proofs are historical context only; all identities are reproduced with no mathematical dependencies."
+  ],
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-LOWER45",
+      "claim_revision": 1,
+      "timestamp": "2026-10-03T05:01:07.3683362Z",
+      "verifier": "/root/checkpoint_audit",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "audit_path": "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/summary.json",
+      "audit_sha256": "baa69ead3f4a65902e9ef0d864a151e82017da0707a82337de359cdc7e846789",
+      "written_proof": "acceleration/audit_20261003_ternary_connected_subcubic_support_lower45_v1.md",
+      "written_proof_sha256": "b51cf3d17586cad49a97ef7c369c4944964e2462c7c60e5ff15f9957b110a065",
+      "artifact_hashes": {
+        "docs/CANDIDATE_20261003_TERNARY_CONNECTED_SUBCUBIC_SUPPORT_LOWER45_V1.md": "4948749bfa84348792f04628f5dd24dee3c7837f6bc7d1c30933f23a01b2902f",
+        "acceleration/audit_20261003_ternary_connected_subcubic_support_lower45_v1.md": "b51cf3d17586cad49a97ef7c369c4944964e2462c7c60e5ff15f9957b110a065",
+        "acceleration/results/20261003_independent_review/ternary_connected_subcubic_support_lower45_01/summary.json": "baa69ead3f4a65902e9ef0d864a151e82017da0707a82337de359cdc7e846789"
+      },
+      "command": null,
+      "command_null_reason": "Independent exact human-checkable written derivation only; no mathematical computation. Metadata read/hash/write is not a theorem fixture.",
+      "executable_controls": null,
+      "executable_controls_null_reason": "Twelve exact written falsification boundaries; no executable graph/support fixture.",
+      "tool_versions": null,
+      "tool_versions_null_reason": "No solver, enumeration, executable checker or proof assistant.",
+      "checking_assumptions": [
+        "A has order99, symmetric binary entries, zero diagonal and exact integer degree14.",
+        "Every unordered residual and complete integer row is included.",
+        "The whole nonisolated residual support H is nonempty, connected and has maximum degree at most3.",
+        "p is the larger bipartition class size in the bipartite case, and the whole support size m otherwise."
+      ],
+      "scope": {
+        "description": "Universal conditional necessary inequality and size bounds for the whole nonempty connected subcubic ternary residual support of a complete simple symmetric zero-diagonal order99 degree14 adjacency matrix. It is not a target resolution or a restriction on disconnected or degree4+ supports.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "shared_components": [
+        "Exact definitions and elementary integer/GF(3) arithmetic shared with discovery; no producer code or agent agreement supplies proof.",
+        "Independent exact common-neighbor doublecount, expanded rational sum of squares and factorization(m-4)*(44-m)/2 verify the three main bounds.",
+        "Prior small-support/four-/six-defect and at-most12 proofs are historical context only; all identities are reproduced with no mathematical dependencies."
+      ],
+      "limitations": [
+        "Conditional necessary inequality and45/47size corollaries only; no allowed support is asserted realizable.",
+        "Disconnected supports and support degree4 or more are outside scope; support connectivity is not connectivity or symmetry ofA.",
+        "No target graph, unrestricted nonexistence, incidence/lambda1 premise, numerical certificate, engine or performance approval.",
+        "Twelve written falsification boundaries, zero mathematical programs or executable graph fixtures; formalization, novelty and external review unavailable.",
+        "Older at-most12 candidate/audit bytes remain unchanged; any stronger result is a separate claim. Outside frozenV17 four-claim batch."
+      ]
+    }
+  ],
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "ROOT-supplied published context; new working source/proof/report separately pinned, not claimed present in that commit.",
+  "created_at": "2026-10-03T05:01:07.4019116Z",
+  "updated_at": "2026-10-03T05:01:07.4019116Z",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read exact candidate and independent audit at inputs_sha256 paths; publication requires separate immutable checking.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "unavailable_information": {
+    "verifier_source_commit": null,
+    "verifier_source_commit_null_reason": "Written working proof is separately pinned; no verification implementation commit.",
+    "human_reviewer": null,
+    "human_reviewer_null_reason": "Independent agent identified; no human reviewer claimed.",
+    "external_peer_review": null,
+    "external_peer_review_null_reason": "Internal independent written review only.",
+    "novelty": null,
+    "novelty_null_reason": "No literature-priority or novelty audit.",
+    "formalization": null,
+    "formalization_null_reason": "Human-checkable written proof only; no formal artifact.",
+    "raw_adjacency_realization": null,
+    "raw_adjacency_realization_null_reason": "No graph realization or fixture produced."
+  },
+  "limitations": [
+    "Conditional necessary inequality and45/47size corollaries only; no allowed support is asserted realizable.",
+    "Disconnected supports and support degree4 or more are outside scope; support connectivity is not connectivity or symmetry ofA.",
+    "No target graph, unrestricted nonexistence, incidence/lambda1 premise, numerical certificate, engine or performance approval.",
+    "Twelve written falsification boundaries, zero mathematical programs or executable graph fixtures; formalization, novelty and external review unavailable.",
+    "Older at-most12 candidate/audit bytes remain unchanged; any stronger result is a separate claim. Outside frozenV17 four-claim batch."
+  ]
+}
