@@ -1,0 +1,181 @@
+{
+  "schema": "INDEPENDENT_TERNARY_NONZERO_DEFECT_LOWER13_WRITTEN_V1",
+  "status": "INDEPENDENT_TERNARY_NONZERO_DEFECT_LOWER13_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-NONZERO-DEFECT-LOWER13",
+  "claim_revision": 1,
+  "statement": "For every symmetric binary integer99-by-99 matrix A with zero diagonal and every integer row sum exactly14, define R=A^2+A-12I-2J over the integers, M=R modulo3 over GF(3), and F3 as the number of unordered off-diagonal nonzero entries of M. Then F3=0 or13<=F3<=4851.",
+  "claim_status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "independent_of_discovery_producer": true,
+  "timestamp": "2026-10-03T10:26:00.6285488+00:00",
+  "scope": {
+    "description": "Universal complete99/14 simple integer adjacency domain; necessary whole-residual nonzero defect lower bound13, allowing empty support and with no realization or target conclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is exactly a symmetric binary integer99-by-99 zero-diagonal matrix with every integer row sum14.",
+    "Four pinned revision1 results apply to the same WHOLE nonzero off-diagonal support of the exact residual over GF(3); all required elementary steps are reconstructed in this written audit.",
+    "Exact integer/GF(3) arithmetic and finite-dimensional real symmetric spectral decomposition."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-NONZERO-DEFECT-LOWER12",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "Exact same whole99/14 residual definition; every nonempty whole support has at least12 edges."
+    },
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-TWELVE-DEFECT-SUPPORT-CLASSIFICATION",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "At exactly12 edges the whole support is K2,6 or K6 minus a perfect matching; no component-wise extension."
+    },
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-WHOLE-K2-6-SUPPORT-NONREALIZABILITY",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "Excludes the first entire classified support through its forced integer adjacency-polynomial lift."
+    },
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-WHOLE-OCTAHEDRAL-SUPPORT-NONREALIZABILITY",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "Excludes the second entire classified support using all signed2-factor/matching kernels and integer row budgets."
+    }
+  ],
+  "candidate": "docs/CANDIDATE_20261003_TERNARY_NONZERO_DEFECT_LOWER13_V1.md",
+  "candidate_sha256": "440e68ac8c857295cc8e6177d556615432e9ef9f646d1d110d133bb5a12a4c27",
+  "written_audit": "acceleration/audit_20261003_ternary_nonzero_defect_lower13_v1.md",
+  "written_audit_sha256": "50adbc50721826da1c97f59663c6d649e17c0e82d0457440a7795f99af7d6b86",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_NONZERO_DEFECT_LOWER13_V1.md": "440e68ac8c857295cc8e6177d556615432e9ef9f646d1d110d133bb5a12a4c27",
+    "docs/CANDIDATE_20261003_TERNARY_NONZERO_DEFECT_LOWER12_V1.md": "8af2f38aeb004b5d485b8596f10d04caf1d3bb061d03885031641a9b8ebcdd25",
+    "acceleration/audit_20261003_ternary_nonzero_defect_lower12_v1.md": "74fa37e72d3c2b44ee054933d06f887baf3bb2c4d9370fa1f09aa993973fb7a6",
+    "acceleration/results/20261003_independent_review/ternary_nonzero_defect_lower12_01/summary.json": "b5cb1f515ff8f36dd9b18c57208c7b12540a6750e375ca932be3906ccaed5ea0",
+    "docs/CANDIDATE_20261003_TERNARY_TWELVE_DEFECT_SUPPORT_CLASSIFICATION_V1.md": "8a773e82bdd4bc7255f960deb93717c27c8ade0fab8a1fb4017e05a68e09384e",
+    "acceleration/audit_20261003_ternary_twelve_defect_support_classification_v1.md": "a53823f058201aca934349d79c049cea4762672d5d2574aa7327c4946205666b",
+    "acceleration/results/20261003_independent_review/ternary_twelve_defect_support_classification01/summary.json": "a54c3eab6419ba0ce4e563c52444fd3d748d2e0687640b9bed81d1fe087da707",
+    "docs/CANDIDATE_20261003_TERNARY_K2_6_INTEGER_LIFT_V1.md": "4efb2e1ffbcf4bf8c310c3521b175e570b93e1ed7ef18d20cbecaf05dea55260",
+    "acceleration/audit_20261003_ternary_k2_6_integer_lift_v1.md": "2b8dad64a3d15443ddca45ddd4946ccc5aa215a7739a9d9f234b4c7f4873bd7d",
+    "acceleration/results/20261003_independent_review/ternary_k2_6_integer_lift01/summary.json": "0301d9591b261b3cf1b29f1f51bd52b0233126ea2bf01dfa2e0721e2e9cd8832",
+    "docs/CANDIDATE_20261003_TERNARY_OCTAHEDRAL_SUPPORT_V1.md": "4fe0d18e60d62af2b6c95a784b4bf4201168aa4cfdc141e1681f8561b9cbbd5a",
+    "acceleration/audit_20261003_ternary_octahedral_support_v2.md": "812014ddb5aa877ab4a0ae83e5371a49f32adf40b22894f80b882c32fc8ce9fe",
+    "acceleration/results/20261003_independent_review/ternary_octahedral_support01/summary.json": "7320feba0d6e86e6691fbef55daab95b561829d659fe9365242f8afbb9676a97",
+    "acceleration/audit_20261003_ternary_nonzero_defect_lower13_v1.md": "50adbc50721826da1c97f59663c6d649e17c0e82d0457440a7795f99af7d6b86"
+  },
+  "read_scope": {
+    "complete_candidate_audit_report_packages": 4,
+    "authenticated_direct_prior_files": 13,
+    "initial_read_truncation_remedied": true,
+    "mathematical_dependencies": 4,
+    "dependency_revisions": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "all_dependencies_use_whole_support": true
+  },
+  "controls": {
+    "written_boundary_checks": 18,
+    "executed_mathematical_commands": 0,
+    "executed_mathematical_fixtures": 0,
+    "executed_support_enumerations": 0,
+    "actual_graph_realizations": 0,
+    "checks": [
+      "Matching complete99/14 residual definitions",
+      "Exact integer diagonal and row sums",
+      "Residue minima and paired budget subtraction",
+      "Binary-only degree3 propagation",
+      "Whole-support outside-zero commutation",
+      "Both parities of the CN intersection minimum",
+      "No support degree1",
+      "Complete1..11 degree and shape exhaustion",
+      "Signed K5 exact square and kernel",
+      "Separate m12 degree2 row budget",
+      "Every12-edge order and low-degree branch",
+      "Explicit retained(5,5,4,4,4,2) shape before integer veto",
+      "K2,6 exhaustive high-label counts and both saturated rows",
+      "All outside integer rows and forced low matching",
+      "Distinct exact positive norm certificate and full99-dimensional simple12 eigenvalue",
+      "Primitive eigenvector, integer theta and nonsquare97",
+      "All signed octahedral2-factors and compatible missing matchings",
+      "Integer composition, empty support and unknown13 realizability retained"
+    ]
+  },
+  "checked_details": {
+    "nonzero_prior_lower_bound": 12,
+    "classified_supports_at12": [
+      "K2,6",
+      "K6 minus a perfect matching"
+    ],
+    "both_whole_integer_lifts_excluded": true,
+    "nonzero_lower_bound": 13,
+    "upper_bound": 4851,
+    "empty_support_allowed": true,
+    "realizability_at13": "UNKNOWN",
+    "new_simple12_certificate": "12||v||^2-Q=36x^2+||l+x*s||^2+8||l||^2+(3/2)||l-P*l||^2, strictly positive for nonzero complement vectors",
+    "forced_integer_scalar_equation": "theta^2+theta-24=0",
+    "nonsquare_discriminant": 97
+  },
+  "command": null,
+  "command_null_reason": "No mathematical computational command was executed; source reads, metadata hashes and saving written artifacts do not constitute theorem computation.",
+  "formal_proof": false,
+  "external_review": null,
+  "external_review_null_reason": "Internal different-author written verification only.",
+  "unavailable_information": {
+    "verification_command": null,
+    "verification_command_reason": "No mathematical computational command was executed; source reads, metadata hashes and saving written artifacts do not constitute theorem computation.",
+    "writing_start_timestamp": null,
+    "writing_start_timestamp_reason": "No reliable start/creation timestamp recorded; actual final report clock is supplied.",
+    "formal_prover": null,
+    "formal_prover_reason": "No formalization executed.",
+    "external_peer_review": null,
+    "external_peer_review_reason": "Internal different-author written verification only.",
+    "graph_fixture_results": null,
+    "graph_fixture_results_reason": "No computational fixture or actual graph realization used.",
+    "cpu_model": null,
+    "cpu_model_reason": "No mathematical computational invocation.",
+    "random_seed": null,
+    "random_seed_reason": "Deterministic written derivation without randomized computation.",
+    "novelty": "UNKNOWN",
+    "sharpness": "UNKNOWN"
+  },
+  "shared_components": [
+    "All four exact candidate/audit/report packages are disclosed material revision1 results, fully read and independently reconstructed in the written audit. Their original author/verifier roles are retained.",
+    "Common integer/GF(3) adjacency identities, simple graph degree arguments and exact symmetric real spectral decomposition. A different positive norm certificate is expanded for the simple12 eigenvalue step.",
+    "No producer parser/scorer, support catalogue, numerical spectrum, mathematical program or graph fixture imported. Checkpoint metadata/registrar authorship is unrelated to this mathematical audit of ROOT discovery."
+  ],
+  "limitations": [
+    "Only the complete99/14 whole-residual necessary bound; no component-wise exclusion, graph-space denominator or search percentage.",
+    "F3=0 remains allowed; no target construction, general nonexistence, sharpness, realization or exclusion of13.",
+    "Written internal different-author derivation with zero executed mathematical commands, support enumerations, fixtures or graph realizations; no formal prover or external review.",
+    "The four premises are new LOCAL_ONLY internally reviewed results; no historical ledger label or immutable-publication claim substitutes for mathematical review.",
+    "No lambda-one, incidence decomposition, automorphism, heuristic gate, scientific-performance or full-trajectory assertion."
+  ],
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "Historical working-source context; these new artifacts are not asserted present in that commit.",
+  "historical_execution_state_observation": {
+    "timestamp": "2026-10-03T10:19:35+00:00",
+    "ledger_sha256": "a0ed6dfb9716266e44dd8cdbef00620266190fa1bce0852a11bbabbf8d09416e",
+    "index_sha256": "604fe28fc1cc7c997506a57bd08d48a69c26c5beecbd56efe3be08da34141d67",
+    "role": "Read-only historical observation; ROOT concurrent authorized apply changes index, and neither mutable file is an immutable mathematical premise."
+  },
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Exact literal candidate/proof/report packages and SHA256 pins; immutable publication requires a separate confirmation.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated graph-space denominator.",
+  "mathematical_replays": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "registration_state": "Not registered; outside frozen371 cutoff."
+}
