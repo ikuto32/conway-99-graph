@@ -1,0 +1,501 @@
+{
+  "status": "INDEPENDENT_UNRESTRICTED_FULL99_CNF_ENCODING_PASS",
+  "claim_id": "C-UNRESTRICTED-FULL99-PREFIX-CNF-ENCODING",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "timestamp": "2026-09-29T21:03:17.198524+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_unrestricted_full99_cnf_v1.py",
+    "--run",
+    "acceleration/results/20260930_unrestricted_full99_cnf",
+    "--out",
+    "acceleration/results/20260930_independent_review/unrestricted_full99_cnf",
+    "--model-sha256",
+    "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+    "--cnf-sha256",
+    "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+    "--producer-sha256",
+    "4a14834ef79fd597c3f3a96f25c510bbcf802872373e1ec0e4d90b5ca38e4a4d",
+    "--seconds",
+    "900"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/eight_domain_audit independent checking agent",
+  "verification_type": "Independent unrestricted scope/coverage derivation plus complete raw polynomial and truth-relation clause comparison",
+  "statement": "The exact recorded CNF is satisfiable if and only if there exists a99x99 symmetric binary zero-diagonal adjacency A satisfying A^2=12I-A+2J. Every satisfying assignment decodes to such a normalized target, and every target admits the recorded scaffold labeling and an auxiliary extension.",
+  "scope": "Unrestricted target equivalence via universally available root normalization; all3486outerpairs are free and no nontrivial automorphism is assumed.",
+  "assumptions": [
+    "Only the target definition: order99, symmetry, binary adjacency, zero diagonal, and exact A^2=12I-A+2J.",
+    "Exact recorded raw CNF/model bytes and audited Boolean semantics."
+  ],
+  "dependencies": [
+    {
+      "id": "C-ROOT-SCAFFOLD-NORMALIZATION",
+      "revision": 1,
+      "relation": "normalization"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/audit_20260930_eight_full99_cnf_v1.py": "c956504752a937ffa6aa1ad84d4aa30d95db8723287970e76cbfd262b74ecf4c",
+    "acceleration/results/20260917_independent_review/root_scaffold.json": "e96941c2bc050aad65b67a4f22a8968d588ae4dbe3cd7b7f22bfe84972a963a8",
+    "acceleration/audit_20260917_root_scaffold.py": "f47c96f5737cda0cd276293e0d3ffcc220ff55b8cff1542b409837cce12cd948",
+    "acceleration/results/20260917_independent_review/ROOT_SCAFFOLD_DERIVATION.md": "a45fa5c52f3b348e8fb41b347925a363bb79e4d6389f60f760ec85e6cfe8f077",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260917_root_scaffold/manifest.json": "ae3d13619864342e22574bedcfdb5286dfbb7e843011fd198b2bc15c2bd1b742",
+    "acceleration/theory_20260917_root_scaffold.py": "fa679bd412e9d42ce33ccbc74b90e4deee599331d70d7f919c403622aa11019b",
+    "docs/THEORY_20260917_ROOT_SCAFFOLD.md": "76dc3e50fdcd8edcb1a5560ee8e2753b50e9c1a21c1d5cf16326a88d453c53f1",
+    "acceleration/results/20260917_root_scaffold/summary.json": "984c0f0ef215d9885f9d46b27317ad699ec38ee2a44e0666acea51977e03ea1d",
+    "acceleration/results/20260917_root_scaffold/rook9_adjacency.json": "56c792fff5e1fd8130b71d151680c1d84e184773d82cb47d1f1ead2e1cc22713",
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+    "acceleration/results/20260930_unrestricted_full99_cnf/manifest.json": "5533534acbddb6e7a848b91045b125c7038bd55883e4f3676ae8bbf2746bb5aa",
+    "acceleration/results/20260930_unrestricted_full99_cnf/summary.json": "5e1341d4eb27f77fab3d73b92e749c4fb647e888ddebbe605e3193186c5d543b",
+    "acceleration/theory_20260930_unrestricted_full99_cnf.py": "4a14834ef79fd597c3f3a96f25c510bbcf802872373e1ec0e4d90b5ca38e4a4d",
+    "acceleration/theory_20260930_unrestricted_full99_cnf_spec.md": "223948ec501460372845f8a01cd19d1127421a24995bae2fd6f07a881ee8b170",
+    "acceleration/results/20260930_unrestricted_full99_preflight_v2/scope.json": "2359c7389b4bb23475cf9607a99c07060119976abff8bc70bbdb5d131ab1921d",
+    "acceleration/results/20260930_unrestricted_full99_preflight_v2/summary.json": "530981cddd6c483a14d062171e4a0800f7026d2b6106565b5f60c65d61918ea5",
+    "acceleration/theory_20260930_eight_full99_cnf.py": "21c357543c9397456a911175b277da6e6caa769be31d18c12e034cc76d99074c",
+    "acceleration/theory_20260930_full_srg_validator.py": "c0e070aa1ac39e8860b52a7f5e086b3e8da5e01f83d0f4fe76ab1e91c077279b",
+    "acceleration/results/20260930_independent_review/eight_full99_cnf/summary.json": "ecd4adb354a0c8c03589b1446ab511014ea47c7b5bf9ff1d529d34a2d1c79667",
+    "acceleration/environments/rook-sat/uv.lock": "a38ec6c1bb56c33eb5fba0e1fbc770f7d479d8d5dc380a3e013c4f09fbf419e2",
+    "acceleration/environments/rook-sat/pyproject.toml": "193413ec708aaaa81f121d94af20747e013696b677e8f8b3202cb1a02e490aee",
+    "acceleration/audit_20260930_unrestricted_full99_cnf_v1.py": "8de1d8d0cfbab38962f59f4073d0cd3ae33ab7b175b8b3db16427fd66fd65f54",
+    "docs/AUDIT_20260930_UNRESTRICTED_FULL99_ENCODING_DERIVATION.md": "533103f57c4c44a35f50288a4e07894c7746fcada926f27de624453cba3a5254",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_unrestricted_full99_cnf/artifact_packages.json": "38ded32e7935f15c6e03dcfb16dcce62caacb7c9fe82c2e3d9908d939c95b1f2",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf.gz.part000": "75c54ad3aac89820c4fde19300d85d67780975517a81903f768aaf13b4301fdc",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf.gz.part001": "419b96e9088c3d83b6363fbf2f2246aa15180f09f6494965060a3b26fef69c51",
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json.gz.part000": "ec2d869283ea14d8e45c30a2eb49a4cd51fecbdf7548aa4a8f2ffb6f32b35e95"
+  },
+  "controls": {
+    "threshold": {
+      "status": "INDEPENDENT_TRUTH_RELATION_AND_PREFIX_CONTROLS_PASS",
+      "truth_relation_method": "Complete Boolean truth relation and minimal implicate enumeration, not producer gate templates",
+      "counter_configurations": 30,
+      "full_assignments_checked": 44698,
+      "wrong_helper_assignments_rejected": 24044,
+      "known_valid_gate_stream_passed": true,
+      "corrupted_artifacts_rejected": [
+        "missing_clause",
+        "wrong_sign",
+        "wrong_gate_relation",
+        "wrong_alias_reference"
+      ],
+      "rows": [
+        {
+          "inputs": 0,
+          "bound": 0,
+          "equality": false,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 0,
+          "bound": 0,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 1,
+          "bound": 0,
+          "equality": false,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 1,
+          "bound": 0,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 1,
+          "bound": 1,
+          "equality": false,
+          "accepted_inputs": 2
+        },
+        {
+          "inputs": 1,
+          "bound": 1,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 2,
+          "bound": 0,
+          "equality": false,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 2,
+          "bound": 0,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 2,
+          "bound": 1,
+          "equality": false,
+          "accepted_inputs": 3
+        },
+        {
+          "inputs": 2,
+          "bound": 1,
+          "equality": true,
+          "accepted_inputs": 2
+        },
+        {
+          "inputs": 2,
+          "bound": 2,
+          "equality": false,
+          "accepted_inputs": 4
+        },
+        {
+          "inputs": 2,
+          "bound": 2,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 3,
+          "bound": 0,
+          "equality": false,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 3,
+          "bound": 0,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 3,
+          "bound": 1,
+          "equality": false,
+          "accepted_inputs": 4
+        },
+        {
+          "inputs": 3,
+          "bound": 1,
+          "equality": true,
+          "accepted_inputs": 3
+        },
+        {
+          "inputs": 3,
+          "bound": 2,
+          "equality": false,
+          "accepted_inputs": 7
+        },
+        {
+          "inputs": 3,
+          "bound": 2,
+          "equality": true,
+          "accepted_inputs": 3
+        },
+        {
+          "inputs": 3,
+          "bound": 3,
+          "equality": false,
+          "accepted_inputs": 8
+        },
+        {
+          "inputs": 3,
+          "bound": 3,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 4,
+          "bound": 0,
+          "equality": false,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 4,
+          "bound": 0,
+          "equality": true,
+          "accepted_inputs": 1
+        },
+        {
+          "inputs": 4,
+          "bound": 1,
+          "equality": false,
+          "accepted_inputs": 5
+        },
+        {
+          "inputs": 4,
+          "bound": 1,
+          "equality": true,
+          "accepted_inputs": 4
+        },
+        {
+          "inputs": 4,
+          "bound": 2,
+          "equality": false,
+          "accepted_inputs": 11
+        },
+        {
+          "inputs": 4,
+          "bound": 2,
+          "equality": true,
+          "accepted_inputs": 6
+        },
+        {
+          "inputs": 4,
+          "bound": 3,
+          "equality": false,
+          "accepted_inputs": 15
+        },
+        {
+          "inputs": 4,
+          "bound": 3,
+          "equality": true,
+          "accepted_inputs": 4
+        },
+        {
+          "inputs": 4,
+          "bound": 4,
+          "equality": false,
+          "accepted_inputs": 16
+        },
+        {
+          "inputs": 4,
+          "bound": 4,
+          "equality": true,
+          "accepted_inputs": 1
+        }
+      ],
+      "all_accepted_inputs_have_unique_correct_threshold_extension": true
+    },
+    "normalization": {
+      "known_rook9_valid": true,
+      "root_pair_bijections_checked": 9,
+      "corrupted_unordered_edge_toggles_rejected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "scope": "Calibrates normalization bookkeeping, not the universal theorem"
+    },
+    "scope": {
+      "positive_unrestricted_scope_passed": true,
+      "corrupted_scope_artifacts_rejected": [
+        "fixed_outer_edge",
+        "fixed_outer_absence",
+        "wrong_root_edge",
+        "missing_variable",
+        "duplicate_variable",
+        "wrong_label",
+        "added_branch",
+        "claimed_automorphism"
+      ]
+    }
+  },
+  "written_derivation": "docs/AUDIT_20260930_UNRESTRICTED_FULL99_ENCODING_DERIVATION.md",
+  "model_sha256": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+  "cnf_sha256": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+  "producer_sha256": "4a14834ef79fd597c3f3a96f25c510bbcf802872373e1ec0e4d90b5ca38e4a4d",
+  "fixed_positive_scaffold_edges": 189,
+  "prescribed_root_or_inner_nonedges": 1176,
+  "fixed_outer_edges": 0,
+  "fixed_outer_nonedges": 0,
+  "unknown_outer_edges": 3486,
+  "variables": 1186500,
+  "edge_variables": 3486,
+  "product_variables": 285852,
+  "prefix_variables": 897162,
+  "clauses": 4136454,
+  "degree_rows": 99,
+  "pair_cap_rows": 4851,
+  "gate_clause_populations": {
+    "3": 600432,
+    "4": 582582
+  },
+  "folded_alias_states": 4746,
+  "independent_package_checks": [
+    {
+      "raw_path": "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf",
+      "raw_sha256": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+      "raw_bytes": 84919934,
+      "independent_decompression": "PASS"
+    },
+    {
+      "raw_path": "acceleration/results/20260930_unrestricted_full99_cnf/model.json",
+      "raw_sha256": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+      "raw_bytes": 122319858,
+      "independent_decompression": "PASS"
+    }
+  ],
+  "degree_cap_sum": {
+    "degree": 14,
+    "edges": 693,
+    "common_neighbor_sum": 9009,
+    "cap_lhs_sum": 9702,
+    "cap_upper_sum": 9702
+  },
+  "producer_imported": false,
+  "solver_launched": false,
+  "unrestricted_encoding_coverage": true,
+  "shared_components": [
+    "The prior independently authored and hash-pinned audit_20260930_eight_full99_cnf_v1 truth-table gate/threshold checker is reused; this is not a second independent gate implementation.",
+    "Python standard library exact integers, JSON and gzip; tqdm progress output.",
+    "Historical root normalization audit is authenticated; coverage is independently rederived in the linked written proof."
+  ],
+  "limitations": [
+    "An encoding equivalence is not a target graph or nonexistence proof.",
+    "A SAT assignment requires a separately calibrated full decoded99graph validator and complete raw clause checking.",
+    "An UNSAT result requires a complete saved proof and independently authenticated checker replay against these exact bytes.",
+    "No solver performance, novelty, or external review claim."
+  ],
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "elapsed_seconds": 15.343999999808148
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "WAVE41_AUTHOR_CALIBRATION_ADMISSION_API_CORRECTION_PROPOSAL_V1",
+  "state": "UNEXECUTED_PENDING_ROOT_REVIEW",
+  "author": "/root/checkpoint_audit",
+  "failed_invocation": "14df3173b59240378046a468322c60a4",
+  "failed_outer_summary": "acceleration/results/20261003_wave41_milestone_calibration_admission_supervision01/summary.json",
+  "failed_outer_summary_sha256": "64cdb174387fbe4c2bcf09ccd6c60cd3747bf0f6e0a53e8a68cbfbad7a60eaa2",
+  "failed_manifest_sha256": "c086515c649165a1190ec9e4104887cc33f8e0f5b8611087835c20878b530c5b",
+  "failed_stderr_sha256": "35e340757cd9447185f97a55222779696d69d1c9bb0d3f7d974e7c71111cb8bc",
+  "actual_failure": "AttributeError: 'CommandDeadline' object has no attribute 'raise_if_stopped'",
+  "failure_stage": "Before the first plan hash; no direct pin was accepted, no admission output was written and no writer calibration was launched.",
+  "cleanup_observed": {"actual_exit_code": 1, "reaped": true, "job_active_zero_observed": true, "elapsed_seconds": 0.125},
+  "correction": {"old_inline_chunk_statement": "d.raise_if_stopped()", "new_inline_chunk_statement": "if d.status()['stop_required']: raise TimeoutError('admission deadline')", "reason": "Use the existing public CommandDeadline.status API; retain the same per-invocation limit and supported outer containment."},
+  "original_writer_source_sha256": "a741785ecc8eb506c6286c2dd95131c059dd840dbbdf83038937dd5f1cf7911e",
+  "original_author_calibration_plan_sha256": "64f011cf70e4553e9f4a2822c585dd99526e6bec14008487408bc0efbe73fdbf",
+  "proposed_admission": "acceleration/results/20261003_wave41_milestone_calibration_admission02.json",
+  "proposed_admission_supervision": "acceleration/results/20261003_wave41_milestone_calibration_admission_supervision02",
+  "writer_or_threshold_changes": 0,
+  "automatic_retry": false,
+  "ledger_or_index_mutations": 0,
+  "mathematical_replays": 0,
+  "scientific_launches": 0
+}

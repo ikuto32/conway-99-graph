@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-09-30T10:32:25.544211+00:00",
+  "source_commit": "05f87c6e14105610f8335718675a4e09ff7cf92b",
+  "verifier": "/root",
+  "method": "Independent code review of narrow path/hash/receipt/diagnostic exception, followed by Linux repeated execution of the producer-authored ten regression controls.",
+  "inputs_sha256": {
+    "check_python_syntax.py": "2bc8fb9c9d66936dba638d7bb34ad3d455831e80eccb21c162e37bd25fe09d05",
+    "test_python_syntax.py": "361bb37c3a00721f132f8af0845612781fb159d1bbd8da9bf28253de6f56534d",
+    ".github/workflows/validate.yml": "9a698d6c51eba826612a611c2c905a4ea50586cc39af589d4488c092484561f8"
+  },
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "test_python_syntax",
+    "-v"
+  ],
+  "python": "Python 3.12.3",
+  "result_code": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "10e5c51a9f33bbc300b6bab397f2053df6214136d04d77ef752111077a0be433",
+  "review": "Every selected non-exempt Python source must compile; exactly one immutable historical parse failure must still fail at its bound line/message. Missing, changed or newly valid fixture rejected; no producer source executed.",
+  "limitations": [
+    "The ten tests reuse producer-authored controls; they are repeated execution, not a second independently authored test suite.",
+    "No mathematical verification."
+  ]
+}

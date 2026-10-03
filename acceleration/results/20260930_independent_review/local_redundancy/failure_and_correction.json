@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-29T20:25:51.712085+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/prepare_20260930_local_redundancy_v2.py"
+  ],
+  "failure": "The v1 checker incorrectly compared the variable-edge star_mask to the full outer-neighborhood mask. The first raw graph had already passed symmetry, center equalities, both kernels, degree bound and all SOS coefficients.",
+  "failed_command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python acceleration/audit_20260930_local_redundancy_v1.py",
+  "exit_code": 1,
+  "original_failure_timestamp": null,
+  "original_failure_timestamp_reason": "The original execution did not write a timestamped receipt; tool transcript records exit1 and AssertionError at the metadata comparison.",
+  "original_source_sha256": "2107b8e136f94de72559b2cfc3ea7471513f5b0d98b57bb0ff0b7ecd69f20388",
+  "corrected_source_sha256": "7cfac1def393551fbc4a414abfd58b24d7d25946a10d595989d5b16238a0099d",
+  "observed_first_case": {
+    "whole_outer_neighborhood": "0x2d650060000028000",
+    "saved_variable_mask": "0x2d650020000020000",
+    "whole_neighbors": 12,
+    "saved_variable_neighbors": 10
+  },
+  "correction": "Verify the saved mask is a subset of the full row. The precise full-domain generation mapping remains outside this raw-matrix/theorem check and is explicitly not claimed.",
+  "mathematical_artifact_changed": false,
+  "acceptance_threshold_changed": false,
+  "prior_cap_lemma_report_preserved": true
+}

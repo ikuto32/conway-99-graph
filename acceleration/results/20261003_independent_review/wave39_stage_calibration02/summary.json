@@ -1,0 +1,135 @@
+{
+  "status": "WAVE39_EXACT353_STAGING_CALIBRATION_PASS",
+  "timestamp": "2026-10-02T20:56:41.689597+00:00",
+  "source_sha256": "d88f7551d34908e34b7c092adf1064e00629c66761a8780192660a6e0d474c01",
+  "spec_sha256": "e9942785ebc02e188099725c239a4f2c505e6e8eb95053b9ed25aad6d2d61675",
+  "gitattributes_sha256": "233d26547f9032d7d99a95f5586f55838e4ecafe7db74e6393a7f98ac8a8a508",
+  "ledger_sha256": "b2796504a736ef16872ee36812d3b8ddb6446d0ea28d4883525f9ab9a3dd5679",
+  "index_before_sha256": "68b695ba680915be542d08a9522a2a3acd329f8fd05e471b35ae27a9e0523152",
+  "controls": [
+    {
+      "label": "valid_exact353_scope",
+      "outcome": "PASS"
+    },
+    {
+      "label": "wrong_claim_count",
+      "stage": "EXACT353_SCOPE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_ledger",
+      "stage": "EXACT353_SCOPE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_baseline",
+      "stage": "EXACT353_SCOPE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_ids",
+      "stage": "EXACT353_SCOPE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_attribute",
+      "stage": "EXACT_GIT_ATTRIBUTES",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "large_direct",
+      "stage": "DIRECT50MIB_BOUND",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "duplicate_raw_stage",
+      "stage": "EXACT_EIGHT_RAW_PLUS_INDEX_OMISSIONS",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "unhashed_omission",
+      "stage": "OMITTED_IDENTITIES_CHECKED",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "floating_count",
+      "stage": "LITERAL_POPULATION_COUNTS",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_index_omission",
+      "stage": "EXACT_HISTORICAL_INDEX_OMISSION",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "missing_archive",
+      "stage": "EXACT_ONE_ARCHIVED_REFERENCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_archive_commit",
+      "stage": "EXACT_ARCHIVED_REFERENCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_archive_repository",
+      "stage": "EXACT_ARCHIVED_REFERENCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "wrong_archive_blob",
+      "stage": "EXACT_ARCHIVED_REFERENCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "later_science",
+      "stage": "NO_LATER_SCIENCE_MEMBER",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "traversal",
+      "stage": "BOUNDED_PATH",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "submodule_payload",
+      "stage": "EXACT_NAMESPACE",
+      "outcome": "REJECTED"
+    },
+    {
+      "label": "relative_absolute_calibration_receipts",
+      "outcome": "PASS"
+    }
+  ],
+  "positive_scope_controls": 1,
+  "positive_path_controls": 1,
+  "strict_corruptions": 17,
+  "producer_manifest_inspected": false,
+  "index_operation_started": false,
+  "mathematical_replay": false,
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/stage_20261003_wave39_index_v2.py",
+    "--mode",
+    "calibrate",
+    "--ledger-sha256",
+    "b2796504a736ef16872ee36812d3b8ddb6446d0ea28d4883525f9ab9a3dd5679",
+    "--seconds",
+    "150",
+    "--out",
+    "acceleration/results/20261003_independent_review/wave39_stage_calibration02"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "deadline": {
+    "elapsed_seconds": 0.3129999999946449,
+    "remaining_seconds": 149.68700000000536,
+    "review_remaining_seconds": 1799.6870000000054,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 179767.968,
+    "review_deadline_at": 181417.968,
+    "completed_reviews": 0
+  }
+}

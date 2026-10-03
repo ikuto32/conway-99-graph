@@ -1,0 +1,145 @@
+{
+  "schema": "POLICY_NATIVE_SINGLE_BATCH_V2",
+  "timestamp": "2026-10-02T10:35:59.202106+00:00",
+  "mode": "preflight",
+  "source_commit": "28440b31f4effee3b25e30259110acc734695bf0",
+  "command": [
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/native_budget_env_v1/.venv/bin/python3",
+    "acceleration/native_20261002_budget_single_v2.py",
+    "preflight",
+    "--plan",
+    "acceleration/results/20261002_drat_derivative_solver_plan01/derivative_solver_plan.json",
+    "--plan-sha256",
+    "aef8d0db321073d24f4866bf04ef377f44b5e1303cf2a5fbe60cf2ddd8fd5573",
+    "--out",
+    "acceleration/results/20261002_drat_derivative_preflight01",
+    "--supervision-out",
+    "acceleration/results/20261002_drat_derivative_preflight_supervision01",
+    "--driver-gate",
+    "acceleration/results/20261002_independent_review/single_v2_calibration01/summary.json",
+    "--driver-gate-sha256",
+    "768fa80d515b02194c18c7e9670457b582c0db9f4f434fc66e919bb7c6a7e942"
+  ],
+  "cwd": "/mnt/c/Users/ikuto/projects/conway-99-graph",
+  "python": "3.12.3",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "tool_versions": {
+    "cadical": {
+      "command": [
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+        "--version"
+      ],
+      "actual_exit_code": 0,
+      "stdout": "1.9.5\n",
+      "stderr": ""
+    },
+    "timeout": {
+      "command": [
+        "/usr/bin/timeout",
+        "--version"
+      ],
+      "actual_exit_code": 0,
+      "stdout": "timeout (GNU coreutils) 9.4\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by P\u00e1draig Brady.\n",
+      "stderr": ""
+    },
+    "prlimit": {
+      "command": [
+        "/usr/bin/prlimit",
+        "--version"
+      ],
+      "actual_exit_code": 0,
+      "stdout": "prlimit from util-linux 2.39.3\n",
+      "stderr": ""
+    },
+    "uv": {
+      "command": [
+        "/root/.local/bin/uv",
+        "--version"
+      ],
+      "actual_exit_code": 0,
+      "stdout": "uv 0.11.3 (x86_64-unknown-linux-gnu)\n",
+      "stderr": ""
+    }
+  },
+  "native_calls_unit": "Scientific/engineering CNF evaluations; metadata-only version probes are separate.",
+  "inputs_sha256": {
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/native_20261002_budget_single_v2.py": "a8bfc9a9b8b4edd36281f4cca78e628c0145743db522fc6faa31152d4c01c063",
+    "acceleration/native_20261002_budget_single_v2_spec.md": "7db1dfd0f1439c47be63f6fadbeda8030270fddc034855f7c54fa75deb556e34",
+    "acceleration/native_20261002_exact_eight_budget_v1.py": "df59431bb284bc9f8b247c6949555873d5e8f8d474a2210874870127416c6d36",
+    "acceleration/native_20261002_exact_eight_budget_v1_spec.md": "090a22efaa2e29267f00d7e20068310e4519b84bc8372b82f2dfe18ced5efec7",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+    "build/research-cadical195/source/build/cadical": "021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7",
+    "acceleration/results/20261002_drat_derivative_solver_plan01/derivative_solver_plan.json": "aef8d0db321073d24f4866bf04ef377f44b5e1303cf2a5fbe60cf2ddd8fd5573",
+    "acceleration/results/20261002_drat_restart_prepare01/candidate/restart.cnf": "59698435dfd8954dc3420098d43a9e9c94eb3175190c3cc1133ef7a5b6fdad9e",
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+    "acceleration/results/20260930_unrestricted_full99_preflight_v2/scope.json": "2359c7389b4bb23475cf9607a99c07060119976abff8bc70bbdb5d131ab1921d",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+    "acceleration/results/20260930_unrestricted_native_pilot/main/proof.drat": "11abdc29b502b8b09d4dc6ac3e9f03fa7ea8947496bc8e538a5043d113272f22",
+    "acceleration/results/20261002_drat_restart_prepare01/candidate/retained_prefix.drat": "4b966350baab1677ae37c4104d5cd48ad76641e3f5974e3f9757591b298bcf80",
+    "acceleration/results/20261002_drat_restart_prepare01/candidate/parser_summary.json": "01956c2df33f05ba761bed508a2a53e86e27312cba7159d5e75194b8df9b0268",
+    "acceleration/results/20260930_independent_review/unrestricted_full99_cnf/summary.json": "2d6702d0f60341378fcf6b5b0808e6c34ea6a1025775cfae60500626f199ef58",
+    "acceleration/results/20261002_drat_restart_artifact_audit01/summary.json": "429026fd035e429ba8f16c0f92a02e9fdfab51cf2fb773321b112b95b3af2e89"
+  },
+  "plan_path": "acceleration/results/20261002_drat_derivative_solver_plan01/derivative_solver_plan.json",
+  "plan_sha256": "aef8d0db321073d24f4866bf04ef377f44b5e1303cf2a5fbe60cf2ddd8fd5573",
+  "supervision": {
+    "manifest_path": "acceleration/results/20261002_drat_derivative_preflight_supervision01/manifest.json",
+    "manifest_sha256": "c5cf257fe127557c336cef0c0235af34caddd489ff6a687a03ae0cbafb78b0b6",
+    "invocation_id": "7bffc26a50b043f4a231111eaf2ba5e9",
+    "outer_seconds": 2100.0,
+    "producer_seconds": 2050.0,
+    "process_group": 404,
+    "guard_argv": [
+      "/usr/bin/timeout",
+      "--signal=KILL",
+      "2094.993178s",
+      "/root/.local/bin/uv",
+      "run",
+      "--locked",
+      "--offline",
+      "--project",
+      "acceleration/native_budget_env_v1",
+      "--cache-dir",
+      "build/native-budget-linux-cache",
+      "--python",
+      "/usr/bin/python3",
+      "acceleration/native_20261002_budget_single_v2.py",
+      "preflight",
+      "--plan",
+      "acceleration/results/20261002_drat_derivative_solver_plan01/derivative_solver_plan.json",
+      "--plan-sha256",
+      "aef8d0db321073d24f4866bf04ef377f44b5e1303cf2a5fbe60cf2ddd8fd5573",
+      "--out",
+      "acceleration/results/20261002_drat_derivative_preflight01",
+      "--supervision-out",
+      "acceleration/results/20261002_drat_derivative_preflight_supervision01",
+      "--driver-gate",
+      "acceleration/results/20261002_independent_review/single_v2_calibration01/summary.json",
+      "--driver-gate-sha256",
+      "768fa80d515b02194c18c7e9670457b582c0db9f4f434fc66e919bb7c6a7e942"
+    ],
+    "boundary": "Outer command includes setup, all hashing/native computation and transfer"
+  },
+  "configuration": {
+    "address_space_bytes": 8589934592,
+    "proof_file_bytes": 4294967296,
+    "seed": 0,
+    "conflict_limit": null,
+    "conflict_limit_null_reason": "Use observed wall/resource progress rather than inheriting the historical one-million-conflict cutoff.",
+    "host_free_reserve_bytes": 34359738368,
+    "ext4_free_reserve_bytes": 8589934592,
+    "aggregate_retained_artifact_bytes": 12884901888,
+    "native_seconds": 1800.0,
+    "producer_seconds": 2050.0,
+    "shutdown_reserve_seconds": 150.0
+  },
+  "actual_producer_seconds": 2050.0,
+  "independent_approval": false,
+  "target_resolution": false,
+  "historical_gate_reuse": "Exact gate bytes and direct selected artifacts authenticated; no historical execution approval transferred.",
+  "automatic_retry": false,
+  "automatic_resume": false
+}

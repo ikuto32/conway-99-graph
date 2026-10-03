@@ -1,0 +1,122 @@
+[
+  {
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "rank_bound": 2,
+    "result": {
+      "psd": true,
+      "rank": 2,
+      "rank_bound": 2,
+      "rank_bound_pass": true
+    }
+  },
+  {
+    "matrix": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "rank_bound": 2,
+    "result": {
+      "psd": true,
+      "rank": 1,
+      "rank_bound": 2,
+      "rank_bound_pass": true
+    }
+  },
+  {
+    "matrix": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "rank_bound": 2,
+    "result": {
+      "psd": false,
+      "rank": null,
+      "rank_null_reason": "A negative-direction certificate already falsifies PSD; full rank was not needed.",
+      "reason": "NEGATIVE_DIAGONAL_CONGRUENCE_PIVOT",
+      "integer_negative_vector": [
+        1,
+        0
+      ],
+      "support": [
+        0
+      ],
+      "quadratic_value": -1
+    }
+  },
+  {
+    "matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "rank_bound": 2,
+    "result": {
+      "psd": false,
+      "rank": null,
+      "rank_null_reason": "A negative-direction certificate already falsifies PSD; full rank was not needed.",
+      "reason": "ZERO_DIAGONAL_NONZERO_OFFDIAGONAL",
+      "integer_negative_vector": [
+        1,
+        -1
+      ],
+      "support": [
+        0,
+        1
+      ],
+      "quadratic_value": -2
+    }
+  },
+  {
+    "matrix": [
+      [
+        1
+      ]
+    ],
+    "rank_bound": 0,
+    "result": {
+      "psd": true,
+      "rank": 1,
+      "rank_bound": 0,
+      "rank_bound_pass": false,
+      "nonzero_principal_minor_indices": [
+        0
+      ],
+      "nonzero_principal_minor_determinant": 1
+    }
+  },
+  {
+    "name": "rook9_exact_gram",
+    "result": {
+      "psd": true,
+      "rank": 8,
+      "rank_bound": 8,
+      "rank_bound_pass": true
+    }
+  }
+]

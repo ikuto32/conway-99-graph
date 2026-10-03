@@ -1,0 +1,28 @@
+{
+  "schema": "AUTHOR_CALIBRATION_COUNT_DEVIATION_V1",
+  "created_at": "2026-10-02T21:41:31+00:00",
+  "reporter": "/root/structural",
+  "source_path": "acceleration/theory_20261003_incidence_four_low_counts_lp_v2.py",
+  "source_sha256": "6f08f7c91a947fd866fdd9aec7c2a5df700b29f7fcdf7c59ef539f35b9ecb002",
+  "protocol_path": "acceleration/theory_20261003_incidence_four_low_counts_lp_v2_spec.md",
+  "protocol_sha256": "2e3c43365138083555cb440f39c85eaccd162e71fbfb33bc958d2acabf96cd2a",
+  "declared_literal_character_checks": 140,
+  "actual_literal_character_checks_per_invocation": 139,
+  "actual_population": "For every n in {1,2,3,4,5,6}, each ordered pair (w,j) in {0,...,n} squared; one representative word with weight w and complete character sum over all weight-j words.",
+  "count_derivation": "4+9+16+25+36+49=139",
+  "omitted_case": {"n": 0, "w": 0, "j": 0},
+  "cause": "Inherited author loop starts at n=1. The protocol and both supervisor success criteria incorrectly say 140. Earlier independent checker populations included the n=0 case; independent counts are separate evidence.",
+  "affected_reports": [
+    {"path": "acceleration/results/20261003_incidence_four_counts_even13_controls01/summary.json", "sha256": "d819a3253301130dd75dc2616ebf2aab5749a2fbd243733bfb6cd80f92d9940c"},
+    {"path": "acceleration/results/20261003_incidence_four_counts_div4_controls01/summary.json", "sha256": "611ca69c500f1105a4541828a36049da9dc334746220e2ceda9af7ce3a7fcf4c"}
+  ],
+  "actual_complete_selected_domain_coefficient_counts": {"even13": 1287, "divisible4_seven": 693},
+  "actual_positive_fixtures_per_invocation": 2,
+  "actual_strict_negative_controls_per_invocation": 12,
+  "numerical_solver_invocations": 0,
+  "source_and_evidence_bytes_modified": false,
+  "retrospective_threshold_change": false,
+  "independent_approval": false,
+  "target_resolution": "NONE",
+  "limitation": "This records an author-control declaration discrepancy. Independent changed-checker calibration and explicit authorization remain required before either numerical guide. It does not establish any mathematical claim."
+}

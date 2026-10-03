@@ -1,0 +1,7 @@
+# Exact affine Gram screen modulo2
+
+Question: does the prescribed Gram lie in the sum of the affine spans over GF(2) of allowed group contributions? Test exactly217 frozen models: all31110 local triples at every support group; the known eight-count profile; and the215 already selected seven profiles. Do not assume a target automorphism. Each case belongs to one literal fixed support; within-group catalogue restrictions remain explicit.
+
+Use576 entries (36 diagonal and540 intercoordinate entries) and exact bitwise arithmetic. At each group retain one reference contribution and a complete independent subset of its original local differences. Solve membership in their joint linear span. A negative result requires a separating functional annihilating every generator and pairing to1 with the residual target. A positive affine certificate is an XOR combination, not a factor. Save original local indices, references, all selected generators and exact certificate for every case. Retain every case regardless of outcome. No floating-point acceptance.
+
+Before screening, compare256 small systems with exhaustive span enumeration and check authentic consistent/inconsistent controls. Allocation180seconds, no solver or native calls; stop with explicit failure evidence on allocation exhaustion. Record source commit, source/input/output hashes, command and versions. Results remain CANDIDATE pending a separately authored check of raw contribution vectors, domain completeness and certificates.

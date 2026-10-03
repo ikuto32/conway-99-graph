@@ -1,0 +1,33 @@
+{
+  "status": "VETO_UNAPPROVED_FIELD_ACCEPTED",
+  "timestamp": "2026-09-29T21:42:29.459820+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "python": "3.12.10",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_editorial_migration_veto.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/validate_claims.py": "48c886bed1a60c63d7e7c2ad0decb29811cfa0f1f0b3b6f38bdecddc9b0c3644",
+    "acceleration/test_validate_claims.py": "14f7991c2ff38ef69b01515f8d56b7652df3454619c767ad8f7c137413c0c5d0",
+    "docs/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "docs/CLAIMS_SCHEMA.md": "56d049dffad3ca2840163f46ef1de2d4731cba9fd13e32a54169efc1032fc483"
+  },
+  "verifier": "/root independent code reviewer",
+  "checking_path": "Independent adversarial mutation and code inspection; positive fixture reused from producer tests, explicitly synthetic.",
+  "positive_valid": true,
+  "corrupted_valid": true,
+  "corrupted_errors": [],
+  "claim_id": "C-TARGET-GRAM-BOOLEAN-BOX-NOGOODS",
+  "mutation": {
+    "field": "limitations",
+    "value": [
+      "Unapproved deletion of restrictions"
+    ]
+  },
+  "scope": "Validator standalone mode at exact migration revision; no root ledger was changed.",
+  "required_correction": "At the exact approved migration revision, enforce all permitted field changes against the immutable old snapshot even without --previous. Preserve future revision impact rules.",
+  "mathematical_claim_changed": false,
+  "target_resolution": false
+}

@@ -1,0 +1,82 @@
+{
+  "status": "INDEPENDENT_WEIGHT60_TWO_GRAPH_DENSE_ROOT_CENSUS_V1_PASS",
+  "timestamp": "2026-10-02T16:30:30.716377+00:00",
+  "producer": "/root/native_driver",
+  "verifier": "/root",
+  "method": "independent_artifact_check",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261003_weight60_root_census_v1.py",
+    "--seconds",
+    "100",
+    "--out",
+    "acceleration/results/20261003_independent_review/weight60_roots_dense01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20261003_weight60_warm_root_census01/summary.json": "d3cb54a62bee9145134d472b7c567ff32a5e796dca708c76dfcc057c2e94aa06",
+    "acceleration/audit_20261003_weight60_root_census_v1.py": "308c221dcca322d80eb23a3255abbdf8350db36302bcf50a4d5f6c0614ab3373",
+    "acceleration/results/20261002_hypergraph_weight60_pilot01/native/best.adj": "818314b75fccfa0f3fe702602afb02b6415f3138a770ef15ed0621d189d88836",
+    "acceleration/results/20261003_weight60_warm_root_census01/final_best_census.json": "b30ffa08fe1a3d15df1741b1119cb24d8960796fe5a491c7bda5855c8d2022e4",
+    "acceleration/results/20261003_weight60_warm_root_census01/final_best_roots.jsonl": "33c020d10b77e31ce82ff952979b4fbf9046ce418edce366f1adc3009b5ab976",
+    "acceleration/results/20261003_weight60_warm_root_census01/final_best_triangles.json": "8cbba8dc0bd3b41b89d7adaeaf882ef6d7a3a25016aba9fc62655ed2588f192a",
+    "acceleration/results/20261002_hypergraph_weight60_pilot01/native/first_lambda0.adj": "c95eff815f69c6d7c4122c5c0cde96d8c5124ffec892f3d8a4913ad0b1486f21",
+    "acceleration/results/20261003_weight60_warm_root_census01/first_lambda0_census.json": "a6db115695163279ed1b86ddb7b429edda632fa3f79bf1ae192e47aec2dfee57",
+    "acceleration/results/20261003_weight60_warm_root_census01/first_lambda0_roots.jsonl": "4c2bef5f625059df0e92c429b7271a1e58b1ae1526822d327796854daf65092a",
+    "acceleration/results/20261003_weight60_warm_root_census01/first_lambda0_triangles.json": "92d12bdfdedeeddd8624116acadf80bddd88ba97163b5a99662ae3e464341bb6"
+  },
+  "raw_graphs": 2,
+  "complete_roots": 198,
+  "literal_triangle_population": 313698,
+  "complete_scalar_matrix_entries": 19602,
+  "graph_records": [
+    {
+      "label": "final_best",
+      "matching_roots": 99,
+      "fully_cn2_roots": 0,
+      "minimum_mu_row_residual": 50,
+      "minimum_root_ties": [
+        81
+      ],
+      "selected_root": 81,
+      "triangle_count": 231,
+      "global_mu_energy": 3608
+    },
+    {
+      "label": "first_lambda0",
+      "matching_roots": 99,
+      "fully_cn2_roots": 0,
+      "minimum_mu_row_residual": 66,
+      "minimum_root_ties": [
+        29
+      ],
+      "selected_root": 29,
+      "triangle_count": 231,
+      "global_mu_energy": 4936
+    }
+  ],
+  "controls": {
+    "positive_roots": 9,
+    "strict_negative_controls": 5,
+    "control_timing": "Controls completed before full target-artifact inspection; this is a cheap census check after separately calibrated scientific saved-object validation, not a new search gate."
+  },
+  "target_resolution": "NONE",
+  "limitations": [
+    "Exactly two raw partial graphs; no unrestricted exclusion, graph normalization or SAT equivalence certificate.",
+    "Discovery bitsets not imported; dense Python integer products and literal neighbor/triple witnesses.",
+    "No source-commit or transitive historical mathematical replay inferred from current data."
+  ],
+  "deadline": {
+    "elapsed_seconds": 0.1720000000204891,
+    "remaining_seconds": 99.82799999997951,
+    "review_remaining_seconds": 1799.8279999999795,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 163747.281,
+    "review_deadline_at": 165447.281,
+    "completed_reviews": 0
+  }
+}

@@ -1,0 +1,9 @@
+# Independent complete proof audit of the literal eight-count lift
+
+Freeze the exact candidate run before replay. The selected factor profile is the authenticated first count-master witness, digest d2b0c89bb1d8f0d75b47f541603e952618cebe9b7ecccd8e1b2c23a279ac8dd9, with exceptional groups 1,3,5,11,13,15,18,19. The independently checked encoding contains 9,748 variables and 167,416 clauses and retains all initial local domains. It imposes the full prescribed Gram and within-triplicate caps; cross-group caps and residual D remain omitted.
+
+Verify exact native command, source/binary versions, prelaunch encoding/object gates, native status/exit, configured resource boundaries, trace size, immediate ext4-to-host identity receipts and targeted process observations. Reauthenticate the existing pinned DRAT-trim source/binary and disclosed Windows portability shim using the previously independent provenance helper. Do not modify the dirty upstream submodule or run a solver.
+
+Run a separately truth-checked tiny UNSAT positive with nonempty reasoning, reject its empty-only and unrelated-unit traces, reject that proof on a nearby SAT formula, and reject an empty-only trace on the actual research CNF. Replay the entire 7,811,117-byte actual proof against the exact checked CNF. Calibrate native receipt corruptions. Preserve every raw checker output, result and hash, including failures; do not infer a complete proof from a solver label.
+
+A passing proof excludes only this literal count profile's factor lift. It leaves the verified count-master and interval-screen witness claims intact: those were weaker necessary models. No other count profile, exception-count population, full fixed support, core family or unrestricted target is excluded here. The trusted DRAT checker/runtime and reused independent receipt/provenance code must be disclosed. Byte transport is a separate later task. No ledger or publication edits.

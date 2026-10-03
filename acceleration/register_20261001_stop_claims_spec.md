@@ -1,0 +1,5 @@
+# User-stop claim registration
+
+Start exact303 ledger0fd27c9fe019247eded6509f4c228141ce350e3cf387d98314742c89ecc1d56d. Register only five COMPLETED independently bound claims: batch04 full encoding and complete proof; batch05 full encoding WITHOUT solver/exclusion claim; Z82 conditional identity/archived row overlap; one literal t6_h1 third-star exclusion with written coverage review. Expected308 claims301VERIFIED3CANDIDATE4REFUTED. Literal campaign union remains316, not380. No native/build/selection/proof replay is authorized or performed by this registrar.
+
+Retain reviewed fail-closed hash/status/verifier/dependency checks and malformed controls, preserve303 old claim records, validate the entire proposed ledger and available artifacts. Authenticate both root written reviews and distinct producer/verifier identities. Preserve atomic prepared ledger/receipt/journal and observed-hash recovery. The earlier five-claim followup and380-case checkpoint/inventory preparations remain unexecuted and superseded by this explicit stop scope, never silently reused.

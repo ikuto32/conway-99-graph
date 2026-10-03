@@ -1,0 +1,53 @@
+{
+  "cleanup_delay": 5.0,
+  "deadline": 1.0,
+  "clock": 5.025,
+  "second_child_cancelled_at": 5.025,
+  "dispatch": {
+    "receipts": {
+      "0": {
+        "index": 0,
+        "cancelled": false,
+        "at": 5.025
+      },
+      "1": {
+        "index": 1,
+        "cancelled": true,
+        "at": 5.025
+      }
+    },
+    "launched": 2,
+    "peak_workers": 2,
+    "stop": "ABSOLUTE_INVOCATION_BUILD_DEADLINE",
+    "cleanup_errors": [],
+    "unlaunched_indices": []
+  },
+  "events": [
+    {
+      "kind": "child_started",
+      "index": 0
+    },
+    {
+      "kind": "child_started",
+      "index": 1
+    },
+    {
+      "kind": "child_reaped",
+      "index": 0,
+      "receipt": {
+        "index": 0,
+        "cancelled": false,
+        "at": 5.025
+      }
+    },
+    {
+      "kind": "child_cancelled_and_reaped",
+      "index": 1,
+      "receipt": {
+        "index": 1,
+        "cancelled": true,
+        "at": 5.025
+      }
+    }
+  ]
+}

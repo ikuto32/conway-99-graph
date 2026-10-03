@@ -1,0 +1,765 @@
+[
+  {
+    "scenario": "delayed_cleanup",
+    "result": {
+      "events": [
+        {
+          "kind": "resumed",
+          "chunk": 0,
+          "time": 0.003,
+          "deadline": 120.0
+        },
+        {
+          "kind": "resumed",
+          "chunk": 1,
+          "time": 0.006,
+          "deadline": 120.003
+        },
+        {
+          "kind": "resumed",
+          "chunk": 2,
+          "time": 0.009000000000000001,
+          "deadline": 120.006
+        },
+        {
+          "kind": "resumed",
+          "chunk": 3,
+          "time": 0.012,
+          "deadline": 120.009
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 0,
+          "time": 0.022,
+          "reason": "SERIAL_ROOT_EXIT",
+          "exit_code": 0
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 1,
+          "time": 120.0120000000245,
+          "reason": "CHUNK_DEADLINE"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 2,
+          "time": 120.0120000000245,
+          "reason": "CHUNK_DEADLINE"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 3,
+          "time": 120.0120000000245,
+          "reason": "CHUNK_DEADLINE"
+        }
+      ],
+      "stop_phase_finished": 120.0120000000245,
+      "cleanup_finished": 140.0120000000245,
+      "failure": null,
+      "stop_errors": [],
+      "receipts": [
+        {
+          "chunk": 0,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 1,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 2,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 3,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        }
+      ]
+    },
+    "events": [
+      {
+        "kind": "stop_attempt",
+        "i": 0,
+        "time": 0.022
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 1,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 2,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 3,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 0,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 1,
+        "time": 125.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 2,
+        "time": 130.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 3,
+        "time": 135.0120000000245
+      }
+    ]
+  },
+  {
+    "scenario": "normal",
+    "result": {
+      "events": [
+        {
+          "kind": "resumed",
+          "chunk": 0,
+          "time": 0.003,
+          "deadline": 120.0
+        },
+        {
+          "kind": "resumed",
+          "chunk": 1,
+          "time": 0.006,
+          "deadline": 120.003
+        },
+        {
+          "kind": "resumed",
+          "chunk": 2,
+          "time": 0.009000000000000001,
+          "deadline": 120.006
+        },
+        {
+          "kind": "resumed",
+          "chunk": 3,
+          "time": 0.012,
+          "deadline": 120.009
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 3,
+          "time": 0.052000000000000005,
+          "reason": "SERIAL_ROOT_EXIT",
+          "exit_code": 0
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 2,
+          "time": 0.102,
+          "reason": "SERIAL_ROOT_EXIT",
+          "exit_code": 0
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 1,
+          "time": 0.152,
+          "reason": "SERIAL_ROOT_EXIT",
+          "exit_code": 0
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 0,
+          "time": 0.20200000000000004,
+          "reason": "SERIAL_ROOT_EXIT",
+          "exit_code": 0
+        }
+      ],
+      "stop_phase_finished": 0.20200000000000004,
+      "cleanup_finished": 20.201999999999998,
+      "failure": null,
+      "stop_errors": [],
+      "receipts": [
+        {
+          "chunk": 0,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 1,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 2,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 3,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        }
+      ]
+    },
+    "events": [
+      {
+        "kind": "stop_attempt",
+        "i": 3,
+        "time": 0.052000000000000005
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 2,
+        "time": 0.102
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 1,
+        "time": 0.152
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 0,
+        "time": 0.20200000000000004
+      },
+      {
+        "kind": "cleanup",
+        "i": 0,
+        "time": 0.20200000000000004
+      },
+      {
+        "kind": "cleanup",
+        "i": 1,
+        "time": 5.202
+      },
+      {
+        "kind": "cleanup",
+        "i": 2,
+        "time": 10.202
+      },
+      {
+        "kind": "cleanup",
+        "i": 3,
+        "time": 15.202
+      }
+    ]
+  },
+  {
+    "scenario": "nonzero",
+    "result": {
+      "events": [
+        {
+          "kind": "resumed",
+          "chunk": 0,
+          "time": 0.003,
+          "deadline": 120.0
+        },
+        {
+          "kind": "resumed",
+          "chunk": 1,
+          "time": 0.006,
+          "deadline": 120.003
+        },
+        {
+          "kind": "resumed",
+          "chunk": 2,
+          "time": 0.009000000000000001,
+          "deadline": 120.006
+        },
+        {
+          "kind": "resumed",
+          "chunk": 3,
+          "time": 0.012,
+          "deadline": 120.009
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 0,
+          "time": 0.022,
+          "reason": "SERIAL_ROOT_EXIT",
+          "exit_code": 7
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 1,
+          "time": 0.022,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 2,
+          "time": 0.022,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 3,
+          "time": 0.022,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        }
+      ],
+      "stop_phase_finished": 0.022,
+      "cleanup_finished": 20.022,
+      "failure": "SERIAL_NONZERO_EXIT",
+      "stop_errors": [],
+      "receipts": [
+        {
+          "chunk": 0,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 1,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 2,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 3,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        }
+      ]
+    },
+    "events": [
+      {
+        "kind": "stop_attempt",
+        "i": 0,
+        "time": 0.022
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 1,
+        "time": 0.022
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 2,
+        "time": 0.022
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 3,
+        "time": 0.022
+      },
+      {
+        "kind": "cleanup",
+        "i": 0,
+        "time": 0.022
+      },
+      {
+        "kind": "cleanup",
+        "i": 1,
+        "time": 5.022
+      },
+      {
+        "kind": "cleanup",
+        "i": 2,
+        "time": 10.022
+      },
+      {
+        "kind": "cleanup",
+        "i": 3,
+        "time": 15.022
+      }
+    ]
+  },
+  {
+    "scenario": "resume_error",
+    "result": {
+      "events": [
+        {
+          "kind": "resumed",
+          "chunk": 0,
+          "time": 0.003,
+          "deadline": 120.0
+        },
+        {
+          "kind": "resumed",
+          "chunk": 1,
+          "time": 0.006,
+          "deadline": 120.003
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 0,
+          "time": 0.006,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 1,
+          "time": 0.006,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 2,
+          "time": 0.006,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 3,
+          "time": 0.006,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        }
+      ],
+      "stop_phase_finished": 0.006,
+      "cleanup_finished": 20.006,
+      "failure": "OSError('injected resume')",
+      "stop_errors": [],
+      "receipts": [
+        {
+          "chunk": 0,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 1,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 2,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 3,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        }
+      ]
+    },
+    "events": [
+      {
+        "kind": "stop_attempt",
+        "i": 0,
+        "time": 0.006
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 1,
+        "time": 0.006
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 2,
+        "time": 0.006
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 3,
+        "time": 0.006
+      },
+      {
+        "kind": "cleanup",
+        "i": 0,
+        "time": 0.006
+      },
+      {
+        "kind": "cleanup",
+        "i": 1,
+        "time": 5.006
+      },
+      {
+        "kind": "cleanup",
+        "i": 2,
+        "time": 10.006
+      },
+      {
+        "kind": "cleanup",
+        "i": 3,
+        "time": 15.006
+      }
+    ]
+  },
+  {
+    "scenario": "poll_error",
+    "result": {
+      "events": [
+        {
+          "kind": "resumed",
+          "chunk": 0,
+          "time": 0.003,
+          "deadline": 120.0
+        },
+        {
+          "kind": "resumed",
+          "chunk": 1,
+          "time": 0.006,
+          "deadline": 120.003
+        },
+        {
+          "kind": "resumed",
+          "chunk": 2,
+          "time": 0.009000000000000001,
+          "deadline": 120.006
+        },
+        {
+          "kind": "resumed",
+          "chunk": 3,
+          "time": 0.012,
+          "deadline": 120.009
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 0,
+          "time": 0.012,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 1,
+          "time": 0.012,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 2,
+          "time": 0.012,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 3,
+          "time": 0.012,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        }
+      ],
+      "stop_phase_finished": 0.012,
+      "cleanup_finished": 20.012,
+      "failure": "OSError('injected poll')",
+      "stop_errors": [],
+      "receipts": [
+        {
+          "chunk": 0,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 1,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 2,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 3,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        }
+      ]
+    },
+    "events": [
+      {
+        "kind": "stop_attempt",
+        "i": 0,
+        "time": 0.012
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 1,
+        "time": 0.012
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 2,
+        "time": 0.012
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 3,
+        "time": 0.012
+      },
+      {
+        "kind": "cleanup",
+        "i": 0,
+        "time": 0.012
+      },
+      {
+        "kind": "cleanup",
+        "i": 1,
+        "time": 5.012
+      },
+      {
+        "kind": "cleanup",
+        "i": 2,
+        "time": 10.012
+      },
+      {
+        "kind": "cleanup",
+        "i": 3,
+        "time": 15.012
+      }
+    ]
+  },
+  {
+    "scenario": "stop_error",
+    "result": {
+      "events": [
+        {
+          "kind": "resumed",
+          "chunk": 0,
+          "time": 0.003,
+          "deadline": 120.0
+        },
+        {
+          "kind": "resumed",
+          "chunk": 1,
+          "time": 0.006,
+          "deadline": 120.003
+        },
+        {
+          "kind": "resumed",
+          "chunk": 2,
+          "time": 0.009000000000000001,
+          "deadline": 120.006
+        },
+        {
+          "kind": "resumed",
+          "chunk": 3,
+          "time": 0.012,
+          "deadline": 120.009
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 0,
+          "time": 0.022,
+          "reason": "SERIAL_ROOT_EXIT",
+          "exit_code": 0
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 2,
+          "time": 120.0120000000245,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        },
+        {
+          "kind": "stop_requested",
+          "chunk": 3,
+          "time": 120.0120000000245,
+          "reason": "PEER_FAILURE_OR_FINAL_STOP"
+        }
+      ],
+      "stop_phase_finished": 120.0120000000245,
+      "cleanup_finished": 140.0120000000245,
+      "failure": "OSError('injected stop')",
+      "stop_errors": [
+        {
+          "chunk": 1,
+          "error": "OSError('injected stop')"
+        }
+      ],
+      "receipts": [
+        {
+          "chunk": 0,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 1,
+          "reaped": true,
+          "job_active_zero_observed": false,
+          "cleanup_errors": [
+            "stop failed"
+          ]
+        },
+        {
+          "chunk": 2,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        },
+        {
+          "chunk": 3,
+          "reaped": true,
+          "job_active_zero_observed": true,
+          "cleanup_errors": []
+        }
+      ]
+    },
+    "events": [
+      {
+        "kind": "stop_attempt",
+        "i": 0,
+        "time": 0.022
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 1,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 1,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 2,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "stop_attempt",
+        "i": 3,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 0,
+        "time": 120.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 1,
+        "time": 125.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 2,
+        "time": 130.0120000000245
+      },
+      {
+        "kind": "cleanup",
+        "i": 3,
+        "time": 135.0120000000245
+      }
+    ]
+  }
+]

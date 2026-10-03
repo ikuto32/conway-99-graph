@@ -1,0 +1,145 @@
+{
+  "schema": "INDEPENDENT_TERNARY_SIX_DEFECT_NONREALIZABILITY_WRITTEN_DERIVATION_V1",
+  "status": "INDEPENDENT_DEGREE14_TERNARY_SIX_DEFECT_NONREALIZABILITY_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-SIX-DEFECT-NONREALIZABILITY",
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly 14 ones in each integer row, put r_uv=(A^2)_uv+A_uv-2 for u<v and let F3 count all unordered residuals not divisible by 3. Then F3 is not 6. This statement alone does not exclude any other positive value or establish the existence or nonexistence of the target; no remaining value is asserted realizable.",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "timestamp": "2026-10-03T04:51:13.0245019Z",
+  "source_context_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_context_role": "ROOT-supplied published context; working candidate/proof/report bytes are separately pinned, not claimed present in that commit.",
+  "source": "docs/CANDIDATE_20261003_TERNARY_SIX_DEFECT_NONREALIZABILITY_V1.md",
+  "source_sha256": "ae2e422fb1b45b5eaa98385d2ab829dc8c9c14958d005769d7cfddbec8594801",
+  "written_audit": "acceleration/audit_20261003_ternary_six_defect_nonrealizability_v1.md",
+  "written_audit_sha256": "dccfc083c2d8f66da719e81abd745194dbe363feccd4042599d0e9c428bd6163",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_SIX_DEFECT_NONREALIZABILITY_V1.md": "ae2e422fb1b45b5eaa98385d2ab829dc8c9c14958d005769d7cfddbec8594801",
+    "acceleration/audit_20261003_ternary_six_defect_nonrealizability_v1.md": "dccfc083c2d8f66da719e81abd745194dbe363feccd4042599d0e9c428bd6163"
+  },
+  "scope": {
+    "description": "Universal necessary exclusion of the single ternary residual count F3=6 in the complete simple symmetric zero-diagonal degree14 adjacency domain of order99. Identities and all six-edge support cases are reproduced without any prior theorem, lambda1, incidence, fixed graph or symmetry premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99, symmetric binary entries and zero diagonal.",
+    "Every integer row has exactly14 ones; complete common-neighbor and residual rows are used.",
+    "F3 counts all4851 unordered pairs with identical endpoint residues."
+  ],
+  "dependencies": [],
+  "complete_written_derivation_checked": true,
+  "independent_of_discovery_producer": true,
+  "complete_six_edge_support_classification_checked": true,
+  "independent_classification": "Connected support on4/5/6 vertices; the5-vertex complement has degrees1,1,2,2,2 and isP5 orP2+C3. Mixed theta is rejected by a direct degree2 row, without suppression.",
+  "surviving_modular_support_shapes": [
+    "C6",
+    "K2,3",
+    "Bowtie",
+    "K4"
+  ],
+  "disconnected_case": "TwoC3, forbidden by odd degree2 alternation",
+  "all_nonzero_sign_choices_checked": true,
+  "commutator_checked_over_integers": true,
+  "binary_external_twins_checked": true,
+  "realization_contradictions": [
+    {
+      "shape": "C6",
+      "support_vertices": 6,
+      "common_outside_neighbors_at_least": 9,
+      "selected_good_residual_at_least": 9,
+      "selected_good_residual_at_most": 3
+    },
+    {
+      "shape": "K2,3",
+      "support_vertices": 5,
+      "common_outside_neighbors_at_least": 10,
+      "selected_good_residual_at_least": 9,
+      "selected_good_residual_at_most": 6
+    },
+    {
+      "shape": "Bowtie",
+      "support_vertices": 5,
+      "common_outside_neighbors_at_least": 10,
+      "selected_good_residual_at_least": 9,
+      "selected_good_residual_at_most": 3
+    },
+    {
+      "shape": "K4",
+      "support_vertices": 4,
+      "common_outside_neighbors_at_least": 11,
+      "each_of_three_bad_residuals_at_least": 9,
+      "complete_row_sum_at_least": 27
+    }
+  ],
+  "excluded_residual_values": [
+    6
+  ],
+  "written_falsification_checks": [
+    "Reconstruct diagonal0, integer row sum0 and commutator before modular reduction.",
+    "Exhaust degree2/degree3 signs rather than assume label uniformity.",
+    "TwoC3 is the only disconnected6-edge case and violates odd alternation.",
+    "Handshaking and simplicity cover v4/v5/v6 and both5-vertex degree sequences.",
+    "Complement degrees1,1,2,2,2 permit onlyP5 orP2+C3.",
+    "ComplementP5 directly forces equal signs at a degree2 support vertex.",
+    "Both alternatingC6 signs give the needed same-part outside twin pair.",
+    "K2,3 only needs the two degree3 outside coordinates equal, not equality across parts.",
+    "Bowtie degree4 center requires opposite triangle signs; leaf columns force all coordinates equal.",
+    "K4 outside equations T-x_i=0 permit allzero/allone written vectors and force binary equality.",
+    "Worst internal neighborhoods leave common-neighbor bounds9/10/10/11; only good pairs are rounded to multiples3.",
+    "Allfour modular support patterns remain valid written zero-row supports; only adjacency realization is contradicted."
+  ],
+  "written_falsification_check_count": 12,
+  "written_control_population": {
+    "positive_modular_supports": 4,
+    "positive_names": [
+      "AlternatingC6",
+      "SignedK2,3",
+      "SignedBowtie",
+      "All-equalK4"
+    ],
+    "adjacency_realizations": 0,
+    "executed_fixtures": 0
+  },
+  "command": null,
+  "command_null_reason": "Independent human-checkable exact universal derivation only; no mathematical computation command. Read/hash/document metadata operations are not theorem fixtures.",
+  "executable_controls": null,
+  "executable_controls_null_reason": "Twelve written falsification boundaries and four modular support patterns; zero executed graph/support fixtures.",
+  "tool_versions": null,
+  "tool_versions_null_reason": "No solver, enumeration, executable proof checker or proof assistant.",
+  "mathematical_computation_commands": 0,
+  "executed_proof_or_fixture_commands": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "target_graphs_produced": 0,
+  "target_exclusions_produced": 0,
+  "target_exclusions_meaning": "No unrestricted target resolution or exhaustive graph-space branch; the exact residual-value exclusion is separately [6].",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "shared_components": [
+    "The standalone proof reproduces every row identity and sign rule. Prior small-support and four-defect proofs are historical context, not mathematical dependencies.",
+    "Elementary integer/GF(3) arithmetic and exact definitions are shared with discovery; independent complement-graph classification replaces its suppressed-path argument.",
+    "No producer code, mathematical computation, graph sample, numerical guide or agent agreement supplies the universal proof."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only.",
+  "novelty": null,
+  "novelty_null_reason": "No literature-priority or novelty audit.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable written proof only; no formal proof artifact.",
+  "human_reviewer": null,
+  "human_reviewer_null_reason": "Independent checking agent is identified; no human reviewer claimed.",
+  "raw_adjacency_realization": null,
+  "raw_adjacency_realization_null_reason": "The4 modular support patterns are not adjacency realizations; no graph fixture was produced.",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read exact candidate and independent proof through inputs_sha256; public availability requires a separate immutable check.",
+  "limitations": [
+    "Only F3=6 is excluded by this claim; no other positive residual count is excluded here and no allowed count is asserted realizable.",
+    "No unrestricted nonexistence, target graph, automorphism assumption, incidence premise, engine/cache/performance approval or target-wide denominator.",
+    "Four modular support patterns are written controls, not adjacency fixtures; zero mathematical programs or graph fixtures were executed.",
+    "Formalization, novelty and external review are not established.",
+    "Candidate bytes remain historically CANDIDATE; subsequent independent verification is this separate report. Outside the frozen V17 four-claim batch."
+  ]
+}

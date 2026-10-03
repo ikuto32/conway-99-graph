@@ -1,0 +1,81 @@
+{
+  "status": "INDEPENDENT_HADAMARD_CYCLIC_NAMED_DEPENDENCY_BINDING_PASS",
+  "timestamp": "2026-09-30T03:20:54.800775+00:00",
+  "source_commit": "ca7797c192f92d657ab893018f5d60e01545f1f1",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/bind_20260930_hadamard_cyclic_dependencies.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/hadamard_cyclic_named_dependencies"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_six_prism_cyclic_reduction/summary.json": "7b9d988b946284d7a9fbcccccf1c2f32592dbdeb2e30cb6201e1565ea75d4de1",
+    "acceleration/results/20260930_independent_review/hadamard_cyclic_unsat/summary.json": "83029350b25523c015dfe916d8056324c0970021d2b024d68941dd41fb8c2b70",
+    "acceleration/results/20260930_independent_review/hadamard_cyclic_unsat/claim_binding.json": "7f7ddc6a23e3b2db4ddff673110cb4ea6230f6477ae2513bb1835615a1f62c2e",
+    "acceleration/results/20260930_independent_review/hadamard_cyclic_factor_cnf/summary.json": "494add3aecbd2d7d4629c738be73dda3a884c89ecb624fbdb5e867dca2a6ad64",
+    "acceleration/results/20260930_independent_review/hadamard_cyclic_factor_cnf/claim_binding.json": "01e9ff873a05a8b86980aaa578452935b0181d15d63fbe73a9df2f8448bfe418",
+    "acceleration/bind_20260930_hadamard_cyclic_dependencies.py": "ccc841b376114544cdeec9cc58b66d3b057b771c82bc12b6906f4e4b1e892163"
+  },
+  "claim_updates": [
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-CYCLIC-COLORING-CNF",
+      "revision": 1,
+      "statement": "The authenticated26360-variable122394-clause CNF is satisfiable exactly when the frozen six-prism coordinate support L admits a binary36x60 prescribed-Gram factor with all1770 column-pair caps and the explicitly prescribed cyclic fibre-triplet restriction, modulo the documented within-triplet phase normalization.",
+      "scope": "One fixed six-prism L and additional cyclic three-column restriction; not all fixed-L factors.",
+      "assumptions": [
+        "No nontrivial target automorphism is assumed."
+      ],
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-CYCLIC-FIBRE-REDUCTION",
+          "revision": 1,
+          "relation": "normalization"
+        }
+      ],
+      "source_binding_path": "acceleration/results/20260930_independent_review/hadamard_cyclic_factor_cnf/claim_binding.json",
+      "source_binding_sha256": "01e9ff873a05a8b86980aaa578452935b0181d15d63fbe73a9df2f8448bfe418",
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "verification_scope": "Named dependency identity completed; original statement, exact scope and all existing evidence remain unchanged."
+    },
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-CYCLIC-FACTOR-EXCLUSION",
+      "revision": 1,
+      "statement": "No binary36x60 prescribed-Gram factor of the frozen six-prism coordinate support L satisfies both all1770 column-pair overlap caps and the prescribed cyclic fibre-triplet construction restriction; its exact26360-variable122394-clause CNF is UNSAT.",
+      "scope": "This excludes only the extra cyclic construction subfamily of one literal support, not all factors for that support or core.",
+      "assumptions": [
+        "No nontrivial target automorphism is assumed.",
+        "The cyclic restriction is an additional condition on the partial factor, not a normalization of all fixed-support factors."
+      ],
+      "dependencies": [
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-CYCLIC-COLORING-CNF",
+          "revision": 1,
+          "relation": "encoding_equivalence"
+        },
+        {
+          "id": "C-FIXED-HADAMARD-SIX-PRISM-CYCLIC-FIBRE-REDUCTION",
+          "revision": 1,
+          "relation": "normalization"
+        }
+      ],
+      "source_binding_path": "acceleration/results/20260930_independent_review/hadamard_cyclic_unsat/claim_binding.json",
+      "source_binding_sha256": "7f7ddc6a23e3b2db4ddff673110cb4ea6230f6477ae2513bb1835615a1f62c2e",
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "verification_scope": "Named dependency identity completed; original statement, exact scope and all existing evidence remain unchanged."
+    }
+  ],
+  "verifier": "/root/state_literature_audit",
+  "method": "independent_exact_dependency_scope_review",
+  "written_review": "The pinned reduction establishes only the phase gauge and full Gram/cap equivalence inside the explicit cyclic-F subclass. The encoding represents exactly those normalized choices; its checked UNSAT trace therefore excludes that subclass including its ungauged phase variants. It supplies no coverage of arbitrary factors on this support. Raw L, core, domains and scope hashes agree across all three gates. The existing encoding and exclusion statements already contain this restriction and require no change.",
+  "ledger_changed": false,
+  "original_records_preserved": true,
+  "artifact_availability": "LOCAL_ONLY",
+  "target_resolution": false,
+  "limitations": [
+    "Initial registration metadata only; no new mathematical statement or broader coverage.",
+    "No reinterpretation as target or residual automorphism."
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "status": "INDEPENDENT_LITERAL_GUIDE_COMMAND_REVIEW_PASS",
+  "commands": [
+    {
+      "source": "acceleration/recover_20260930_twentythird_raw_artifacts.py",
+      "arguments": [
+        "--receipt",
+        "build/wave23-recovery.json"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/recover_20260930_twentyfourth_raw_artifacts.py",
+      "arguments": [
+        "--manifest",
+        "acceleration/results/20260930_twentyfourth_raw_recovery/manifest.json",
+        "--manifest-sha256",
+        "2311cebb8617c95c3ae3a4225def8ce2dce8992ae9621cdcfd8cf0684806c3c8",
+        "--receipt",
+        "build/wave24-recovery.json"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_hadamard_twohundredfifteen_profiles_v2.py",
+      "arguments": [
+        "--batch-summary",
+        "acceleration/results/20260930_hadamard_seven_remaining_cnfs/run02/summary.json",
+        "--batch-summary-sha256",
+        "eabd989bd427c6fcfc57564d62b907d80630f1b5c7b7d56df17fa09f2df16119",
+        "--out",
+        "build/replay-wave24-encodings"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_hadamard_twohundredfifteen_profile_proofs.py",
+      "arguments": [
+        "--campaign-dir",
+        "acceleration/results/20260930_hadamard_seven_profile_batch_native",
+        "--campaign-summary-sha256",
+        "02520b91d50c0f448fc966b61348da0215d520a5f2082767d09918632b0b0b46",
+        "--object-gate",
+        "acceleration/results/20260930_independent_review/hadamard_twohundredfifteen_profile_object_calibration/summary.json",
+        "--object-gate-sha256",
+        "1302fdcb58227c27fd88d1ce31b5b11d11d36e4da9b87b51c3b0c5ef8de9aa7a",
+        "--out",
+        "build/replay-wave24-proofs"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_hadamard_seven_profile_union.py",
+      "arguments": [
+        "final",
+        "--proof-gate",
+        "acceleration/results/20260930_independent_review/hadamard_twohundredfifteen_profile_proofs/summary.json",
+        "--proof-gate-sha256",
+        "14d5064f7d09f491899f25113844df53b0b49658abc549ed784ed0b92ad55210",
+        "--out",
+        "build/replay-wave24-seven-union"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_hadamard_count_master_cnf_v2.py",
+      "arguments": [
+        "--out",
+        "build/replay-wave24-count-encoding"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_count_interval_cnf.py",
+      "arguments": [
+        "--out",
+        "build/replay-wave24-interval-encoding"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_count_interval_object.py",
+      "arguments": [
+        "constructed",
+        "--encoding-gate",
+        "acceleration/results/20260930_independent_review/count_interval_cnf/summary.json",
+        "--encoding-gate-sha256",
+        "03bc6b052a831eb0e5d3dacce7647ec88a81410e5f63ec81c88246575cd6baa6",
+        "--assignment",
+        "acceleration/results/20260930_count_interval_witness/assignment.json",
+        "--out",
+        "build/replay-wave24-interval-witness"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_eight_count_profile_lift.py",
+      "arguments": [
+        "audit",
+        "--out",
+        "build/replay-wave24-eight-encoding"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_eight_count_profile_unsat.py",
+      "arguments": [
+        "--out",
+        "build/replay-wave24-eight-proof"
+      ],
+      "execution": false
+    },
+    {
+      "source": "acceleration/audit_20260930_count_master_eight_orbit_cuts.py",
+      "arguments": [
+        "--out",
+        "build/replay-wave24-six-cuts"
+      ],
+      "execution": false
+    }
+  ],
+  "limitations": "Parser/source and exact input hash review only. Replay commands not executed. Fresh DRAT builds still require their own controls/provenance."
+}

@@ -1,0 +1,121 @@
+{
+  "id": "C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUE-ENERGY-BOUNDS",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exact integer row degree14, put r_uv=(A^2)_uv+A_uv-2 for u<v, F3=sum_[u<v] 1[3 does not divide r_uv] and E=sum_[u<v] r_uv^2. Then F3<=E<=28*F3. If q_i counts these unordered residuals congruent to i modulo3, q1-q2 is divisible by3; the same congruence holds in every complete vertex row. Consequently F3=1 is impossible and F3=2 implies q1=q2=1. No existence or realization of these small defects is asserted.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": {
+    "description": "Exact metric and complete residue-histogram necessities on the full simple symmetric degree14 adjacency domain of order99; no lambda1 or incidence premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is binary, symmetric, zero diagonal and of order99.",
+    "Every row has exactly14 ones over the integers.",
+    "F3 and E include all4851 unordered pairs; row histogram claims include every other vertex in the row.",
+    "Residues use the mathematical values0,1,2, including for negative residuals."
+  ],
+  "dependencies": [],
+  "producer": "/root/structural",
+  "verifier": "/root",
+  "method": "independent_derivation",
+  "created_at": "2026-10-03T11:29:47+09:00",
+  "updated_at": "2026-10-03T11:29:47+09:00",
+  "verification_timestamp": "2026-10-03T11:25:05+09:00",
+  "verification_timestamp_provenance": "Actual written-review timestamp communicated by ROOT; the preserved written artifact records the UTC date.",
+  "source_commit": "00ffb6fdd7d91bd38269e1cc5e6b214ebf7591c8",
+  "source_commit_role": "Current published source context; new candidate/audit bytes are independently hash pinned and not inferred present in that commit.",
+  "report": "acceleration/results/20261003_independent_review/ternary_residue_energy_bounds01/summary.json",
+  "report_sha256": "2ba582cac32a3440611ae610899824689b87a3b1798603f2fabf6bb8b555c1d3",
+  "written_audit": "acceleration/audit_20261003_ternary_residue_energy_bounds_v1.md",
+  "written_audit_sha256": "c2ebce87570a6b0828e1ea3feb66121bab6a16f6d14e2d0e6b9d39fc3c2393bf",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_RESIDUE_ENERGY_BOUNDS_V1.md": "82f92749d30949fe0dcdcfcf3aab15256f90c31bfcbb1208350397870a123392",
+    "acceleration/results/20261003_independent_review/ternary_residue_energy_bounds01/summary.json": "2ba582cac32a3440611ae610899824689b87a3b1798603f2fabf6bb8b555c1d3",
+    "acceleration/audit_20261003_ternary_residue_energy_bounds_v1.md": "c2ebce87570a6b0828e1ea3feb66121bab6a16f6d14e2d0e6b9d39fc3c2393bf"
+  },
+  "shared_components": [
+    "Exact finite integer arithmetic, middle-vertex walk counting, residual sign bounds and the literal matrix domain; no producer imports or optimizer."
+  ],
+  "controls": {
+    "written_falsification": {
+      "path": "acceleration/audit_20261003_ternary_residue_energy_bounds_v1.md",
+      "sha256": "c2ebce87570a6b0828e1ea3feb66121bab6a16f6d14e2d0e6b9d39fc3c2393bf",
+      "checks": 5,
+      "scope": "Complete written proof and five paper falsification boundaries; not executed fixtures."
+    },
+    "executable_controls": null,
+    "executable_controls_null_reason": "ROOT performed a complete written derivation and paper falsification review; no executable fixtures or controls were run for this theorem."
+  },
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUE-ENERGY-BOUNDS",
+      "revision": 1,
+      "claim_revision": 1,
+      "producer": "/root/structural",
+      "verifier": "/root",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "timestamp": "2026-10-03T11:25:05+09:00",
+      "timestamp_provenance": "Actual written-review timestamp communicated by ROOT; the preserved written artifact records the UTC date.",
+      "report": "acceleration/results/20261003_independent_review/ternary_residue_energy_bounds01/summary.json",
+      "report_sha256": "2ba582cac32a3440611ae610899824689b87a3b1798603f2fabf6bb8b555c1d3",
+      "command_or_audit": "acceleration/audit_20261003_ternary_residue_energy_bounds_v1.md",
+      "written_audit_sha256": "c2ebce87570a6b0828e1ea3feb66121bab6a16f6d14e2d0e6b9d39fc3c2393bf",
+      "inputs_sha256": {
+        "docs/CANDIDATE_20261003_TERNARY_RESIDUE_ENERGY_BOUNDS_V1.md": "82f92749d30949fe0dcdcfcf3aab15256f90c31bfcbb1208350397870a123392",
+        "acceleration/audit_20261003_ternary_residue_energy_bounds_v1.md": "c2ebce87570a6b0828e1ea3feb66121bab6a16f6d14e2d0e6b9d39fc3c2393bf"
+      },
+      "scope": "Exact metric and complete residue-histogram necessities on the full simple symmetric degree14 adjacency domain of order99; no lambda1 or incidence premise.",
+      "command": null,
+      "command_null_reason": "Written independent derivation only; no mathematical computation command.",
+      "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+      "tool_versions": null,
+      "tool_versions_null_reason": "No solver, software elimination or executable proof checker was used.",
+      "shared_components": [
+        "Exact finite integer arithmetic, middle-vertex walk counting, residual sign bounds and the literal matrix domain; no producer imports or optimizer."
+      ],
+      "independent_of_discovery_producer": true,
+      "external_review": false,
+      "limitations": [
+        "Necessary metric relations only, with no graph construction, target exclusion or small-defect realizability conclusion.",
+        "No lambda1, incidence factor, automorphism, nonzero kernel or upper rank premise.",
+        "Cache falsification checks are not sufficient verification of any native implementation.",
+        "No engine, temperature, move distribution, numerical optimizer or scientific invocation approved.",
+        "Metadata records ROOT's accepted written checking without adding mathematical replays."
+      ]
+    }
+  ],
+  "premise_state": "UNKNOWN",
+  "premise_state_reason": "Universal implication on a known regular adjacency domain; existence of a zero target remains UNKNOWN. No target condition is assumed established.",
+  "command": null,
+  "command_null_reason": "Written independent derivation only; no mathematical computation command.",
+  "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+  "tool_versions": null,
+  "tool_versions_null_reason": "No solver, software elimination or executable proof checker was used.",
+  "novelty": null,
+  "novelty_null_reason": "No literature-priority audit was performed for these elementary inequalities.",
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only; no external or peer review recorded.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable proof only; no proof-assistant artifact.",
+  "limitations": [
+    "Necessary metric relations only, with no graph construction, target exclusion or small-defect realizability conclusion.",
+    "No lambda1, incidence factor, automorphism, nonzero kernel or upper rank premise.",
+    "Cache falsification checks are not sufficient verification of any native implementation.",
+    "No engine, temperature, move distribution, numerical optimizer or scientific invocation approved.",
+    "Metadata records ROOT's accepted written checking without adding mathematical replays."
+  ],
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read the complete discovery note and separate ROOT written audit at the exact paths in inputs_sha256. Publication availability is separately recorded.",
+  "metadata_only": true,
+  "mathematical_replays": 0,
+  "registry_mutations": 0,
+  "index_mutations": 0,
+  "target_resolution": "NONE"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "RECOVERY_HELPER_METADATA_FAILURE_BEFORE_WRITES",
+  "recorded_at": "2026-09-30T07:28:00.7232189+00:00",
+  "source_commit": "c31b42ffc2d0ac1dd3d905ac8f80afe1e094663e",
+  "source_path": "acceleration/recover_20260930_twentysecond_raw_artifacts.py",
+  "source_sha256": "5163577dbebe35851af18fa89a20495834d1e95619dae597ba7ffccee992a388",
+  "error": "KeyError: 'raw_path'",
+  "cause": "Proof package uses raw_original_path; model package uses raw_path. Failure occurred while preparing records before any destination write.",
+  "correction": "Preserved source; v2 reads the existing proof manifest field. Packages and research evidence unchanged.",
+  "command": "uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/recover_20260930_twentysecond_raw_artifacts.py --destination-dir build/twentysecond-raw-recovery --receipt acceleration/results/20260930_resume/twentysecond_raw_recovery.json",
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "mathematical_verification": false
+}

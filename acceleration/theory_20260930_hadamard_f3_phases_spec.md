@@ -1,0 +1,13 @@
+# Exact GF(3) phase screen for the second parity branch
+
+Before execution, freeze the independently checked strengthened parity witness with twenty mixed groups and sixty disagreement counts equal to three. The question is whether its necessary homogeneous phase equations already force a phase difference that must be nonzero to vanish, or otherwise reduce its possible phase assignments to a small exact linear space.
+
+Inputs are the immutable six-prism support and the independently saved parity projection. No new column coloring, solver, numerical LP or prior failed lift is used as a premise. Each group is gauged by relabeling its three columns so its first coordinate permutation is the identity. The six coordinate maps then have the form x -> s*x+t over GF(3), with s=1 or -1 fixed by the normalized parity. This is a column-label choice, not an automorphism premise.
+
+The experiment constructs 120 phase variables. It records twenty gauge equations, forty local same-sign phase-sum equations, and for each of sixty coordinate pairs two relative-phase sum equations: one over its three odd relative permutations, one over its two even relative permutations. It derives the orientation as pi_b composed with pi_a inverse. All coefficients, ranks, transformations and nullspace bases use exact modular integers.
+
+Acceptance is exact: verify the complete row-operation transformation and every nullspace vector internally. For each recorded necessary nonzero phase difference, restrict the functional to the full computed nullspace. If it vanishes identically, preserve an exact row-combination certificate. Such an obstruction remains CANDIDATE until another verifier checks the raw system, derivation and certificate. Otherwise report only the rank, nullspace and remaining inequalities; no feasibility conclusion.
+
+Controls precede research calculation: all affine-permutation compositions, all 243 relative phase tuples for three odd and two even maps, all 2,430 gauged local phase tuples over ten mixed patterns, and all 729 two-by-three matrices over GF(3) against a distinct minor-based rank formula. Corrupt relation signs and certificate vectors must be rejected.
+
+Resource limit: 60 seconds for this exact linear experiment. No exponential nullspace enumeration, SAT/MIP call or new research native execution. Save resumable raw matrices/bases for a later explicitly scoped experiment if needed. No dependency or lockfile change, no ledger edits, no self-approval or novelty claim. This is one additional balanced fixed-support parity branch; outside-column caps and residual D are absent from the linear system.

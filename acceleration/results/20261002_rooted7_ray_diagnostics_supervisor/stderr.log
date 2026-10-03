@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\theory_20261002_rooted7_ray_diagnostics.py", line 59, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\theory_20261002_rooted7_ray_diagnostics.py", line 54, in main
+    save(args.out/'summary.json',dict(status='NUMERICAL_RAY_EXACT_DIAGNOSTICS_ONLY',model_sha256=sha(modelpath),results=results,
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\theory_20261002_rooted7_ray_diagnostics.py", line 21, in save
+    with path.open('x',encoding='utf8',newline='\n') as stream:json.dump(value,stream,indent=2);stream.write('\n')
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\encoder.py", line 314, in _iterencode_list
+    yield buf + _intstr(value)
+                ^^^^^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

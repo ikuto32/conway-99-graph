@@ -1,0 +1,283 @@
+{
+  "status": "INDEPENDENT_FROZEN_ROOK_STAR_WINDOW_CNF_ENCODING_PASS",
+  "recommendation": "VERIFIED",
+  "claim_id": "C-ROOK-FIXED-STAR-WINDOW-CNF-ENCODING",
+  "claim_revision": 1,
+  "statement": "The exact saved CNF is satisfiable if and only if the600right-cell edges extend the frozen central star to the stated59vertex local window with all required block degrees and all common-neighbor upper caps. Every full target containing this exact labelled fixed star induces such a satisfying assignment. No universal coverage of rook-containing targets is claimed.",
+  "timestamp": "2026-09-29T19:27:49.771911+00:00",
+  "source_commit": "148c50e087da09f558c0e57f1a23154063caf11b",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_window_cnf_v1.py",
+    "--run",
+    "acceleration/results/20260930_rook_window_sat",
+    "--star",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json",
+    "--out",
+    "acceleration/results/20260930_rook_window_sat/independent_cnf_encoding.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration\\results\\20260930_rook_cell_factors\\local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration\\results\\20260930_rook_window_sat\\summary.json": "95c4c499935f59cca8a6b300cdcc9fc46ce6d6711412b092362c170a0fdd0df3",
+    "acceleration\\results\\20260930_rook_window_sat\\manifest.json": "b0abb1d8d7a6243dbec1a94a42a714b1a1c887a9d048626c7283ea683bc47547",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_window_sat.py": "4fc9b331f2014bf0fc2a416059bc6fdad4fed57717c8245ae1fd8e90e62ba8e7",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration/theory_20260930_rook_window_sat_spec.md": "02558c065809abf5796c87e254a392fbad33f55e9677582900c383c0e8b0e9c9",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration\\results\\20260930_rook_window_sat\\controls.json": "5d98115fbb362288e677aaadc019e3bc8d07194bcd61923961f6aa912d5eebbb",
+    "acceleration\\results\\20260930_rook_window_sat\\instance.cnf": "85110f18e5f4bb63c5070c0b5b454e683b292467e5e5173a283bfb56abf66d4e",
+    "acceleration\\results\\20260930_rook_window_sat\\instance.cnf.gz": "94cbb8463a4d985eb146b1d35c479a4b930d5dce668acf8bff2ec887aed82920",
+    "acceleration\\results\\20260930_rook_window_sat\\model.json": "a0e6518a69672f3d5bdd87eabe64b9cd9abf548f0f0a43d9b3ddf4e8be8208ad",
+    "acceleration\\results\\20260930_rook_window_sat\\model.json.gz": "38f7705804ab1d5fe158bbc401087d29f4b7661768021854c36cc93c2a385771",
+    "acceleration\\results\\20260930_rook_window_sat\\rook_control.cnf": "b1a370fc0b8307a97fae9419185f095e6c1d209e3837425072135f3ce20cf010",
+    "acceleration\\results\\20260930_rook_window_sat\\rook_control_assignment.json": "f56062198e28e8fe54dbb1e4a5c3fc0f2b4d5009789e24a3fb8f592a4b543e08",
+    "acceleration\\results\\20260930_rook_window_sat\\rook_control_model.json": "63f5dea85d80d3fae88e465caa9e7adf935ad033929717d8e72f5a8e81020f42",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_20260930_rook_window_cnf_v1.py": "bab0c88e4feab56e7d454c01aaefba2565e1d4e71a7228b163fdb50d9655b088",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_20260930_rook_window_graph_v1.py": "e42e6189115977b0b8cb337d6b1302f0572d324e6376f0759068d860f4b43d8d",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "variables": 18000,
+  "edge_variables": 600,
+  "product_variables": 17400,
+  "clauses": 819840,
+  "degree_constraints": 120,
+  "external_pair_constraints": 1225,
+  "embedded59_pair_count": 1711,
+  "controls": {
+    "cardinality_cases": 2046,
+    "and_gate_cases": 8,
+    "raw59": {
+      "positive_fixed_partial59": {
+        "vertices": 59,
+        "checked_pairs": 1711,
+        "edge_count": 173,
+        "maximum_known_degree": 14,
+        "required_right_block_degrees_checked": false,
+        "unknown_edges": 600,
+        "blocks": [
+          {
+            "cells": [
+              1,
+              2
+            ],
+            "required_degree": 1,
+            "row_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "column_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "cells": [
+              1,
+              3
+            ],
+            "required_degree": 1,
+            "row_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "column_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "cells": [
+              1,
+              4
+            ],
+            "required_degree": 2,
+            "row_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "column_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "cells": [
+              2,
+              3
+            ],
+            "required_degree": 2,
+            "row_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "column_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "cells": [
+              2,
+              4
+            ],
+            "required_degree": 1,
+            "row_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "column_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "cells": [
+              3,
+              4
+            ],
+            "required_degree": 1,
+            "row_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "column_degrees": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "target_graph": false
+      },
+      "corruptions_rejected": [
+        "loop",
+        "asymmetry",
+        "extra_owner_core",
+        "fixed_edge_deleted",
+        "complete_degree_claim"
+      ],
+      "limitation": "Positive fixture is the fixed partial59 base. It intentionally does not assert a completed right-block assignment exists."
+    },
+    "rook_positive_false_clauses": 0,
+    "rook_corrupt_false_clauses": 2,
+    "wrong_product_value_rejected": true
+  },
+  "producer_imported": false,
+  "solver_launched": false,
+  "method": "Independent symbolic common-neighbor polynomials; complete exact-AND variable bijection; independently rebuilt block degrees; full unordered DIMACS clause-multiset equality; raw59 validator controls.",
+  "derivation": "Every AND auxiliary is equivalent to its two edge inputs by all three clauses. Direct subset clauses are equivalent to the integer cardinalities. The600edge variables cover exactly all four arbitrary perfect-matching and two arbitrary degree2bipartite blocks. External pair constraints count known common external neighbors, the shared owner-core neighbor, and adjacency. Core-core caps are inherited from rook9. For a core-external pair in two included distinct cells, its common-neighbor count is their rook-adjacency indicator plus required block degree, equal2; in the same cell it is the fixed internal matching degree1. For a missing-cell core it is at most1. Known degrees are at most14. Thus the external constraints and exact block degrees imply every full59upper cap; no extra normalization/pruning is used.",
+  "verifier": "/root/eight_domain_audit independent checking agent",
+  "verification_type": "Independent encoding equivalence and raw-artifact check",
+  "shared_components": [
+    "Python standard library",
+    "separate independent raw59 graph validator"
+  ],
+  "scope": "One exact raw central star SHA256 da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f and its five fixed internal matchings;600free labelled right-cell edges, no automorphism assumption.",
+  "limitations": [
+    "Encoding verification supplies no SAT/UNSAT result.",
+    "A valid59window is only a necessary local condition for the99vertex target.",
+    "UNSAT can exclude only this frozen family after independent proof replay; no claim that every target contains this star or any rook9.",
+    "Full target regular-set necessity depends on the independently reviewed conditional rook9 encoding, not established by this CNF artifact alone."
+  ],
+  "elapsed_seconds": 3.202999999979511,
+  "artifact_availability": "LOCAL_ONLY",
+  "target_resolution": false,
+  "external_review": false
+}

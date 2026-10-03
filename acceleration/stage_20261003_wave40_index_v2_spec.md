@@ -1,0 +1,12 @@
+# Independent Wave40 index checker V2
+
+ROOT checks Structural's frozen356 manifest independently of its producer.
+Preserve unexecuted V1 source8f9f98b308046317862e6892f911e6bb2191a5bdac9c6cbfe6cfb23ec387dd4b and its spec. V2 corrects inherited Exact353 descriptive/calibration labels, adds a literal predecessor identity check and stages the preserved pair. No source/gate transfer, mathematical approval or new exclusion.
+
+Executable scope: ledgerf66, baseline4b648/current356/previous353, three exact old N5/pilot/rank86 IDs, index709, attributes10856, Structural manifest3fffe. Current source remains unexecuted. Eight exact old raw files are omitted and matched to four public lossless packages; no .git/index omission is present in this actual manifest. The single archived85e705c/df884 source stays an immutable external reference. No submodule payload or later C4/rank87/census source is admitted. Source uses own SHA256/raw Git blob path, no generator imports.
+
+Fresh synthetic calibration checks one exact accepted scope,17 corruptions at exact diagnostics, and relative/absolute five-receipt path equivalence. It reads no actual producer manifest and writes no index. Expected ledger/index/attributes/source/spec stay fixed. Then shadow checks every direct raw record, exact NUL1401 universe, eight package omission identities, external Git/workspace source, explicit completed metadata appendix, and unchanged unrelated entries/Gitlinks. Application requires the exact unchanged successful shadow/calibration identities. No automatic retry, commit, push, availability promotion or mathematical replay.
+
+Calibration180outer150worker20shutdown/20save; shadow and application240outer200worker20shutdown/20save from earlier multi-MB publication gates, not a solver cap. Locked uv child setup inside WindowsJob invocation. All hashing/staging/preprocessing share CommandDeadline. Save every veto/partial result; current source/spec first reviewed separately before execution.
+
+All appendix roots are explicit completed metadata, including generator plans/calibration receipts,56 registry tests, semantic artifact validation and stage calibration receipts. Raw scientific records and failed controls are preserved through the generator's fixed closure. Existing ancestor checker/runtime/Python/Git are shared trusted components, disclosed as engineering reuse. Exact counters/schema/greenCI do not verify science. Credentials marker checking remains a separate bounded selected-byte finalization step before any commit.

@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-09-29T21:32:34.051541+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\audit_20260930_strengthened_four_branch_bytes_v1.py",
+    "--base",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_unrestricted_full99_cnf\\instance.cnf",
+    "--branch-cnf",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_four_branch_strengthened_preparation\\a1_complement\\instance.cnf",
+    "--branch",
+    "a1_complement",
+    "--recipe",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_unrestricted_four_branches\\branches.json",
+    "--coverage-gate",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\unrestricted_four_branch_cover\\summary.json",
+    "--coverage-gate-sha256",
+    "ae44765cab81327f050b27d3ab75e6b952f44d5387a054a38029516e71516d34",
+    "--equality-suffix",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_unrestricted_pair_equalities\\run01\\pair_equalities.units.cnfpart",
+    "--equality-gate",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\unrestricted_pair_equalities_v2\\summary.json",
+    "--equality-gate-sha256",
+    "1ebbff5e7313a97de6ce86aef3a9047ef856aae7ef0e8b1258eec216f1840237",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_four_branch_strengthened_preparation\\a1_complement\\independent_composed_bytes.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "Independent composed-byte checker authored by /root/eight_domain_audit",
+  "controls": {
+    "positive_complete_composition_passed": true,
+    "corruptions_rejected": [
+      "wrong_count",
+      "changed_body",
+      "reversed_suffixes",
+      "wrong_equality_literal",
+      "missing_equality",
+      "changed_branch",
+      "extra_bytes",
+      "duplicated_base_header"
+    ]
+  },
+  "producer_imported": false,
+  "solver_calls": 0,
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "status": "INDEPENDENT_STRENGTHENED_FOUR_BRANCH_CNF_BYTES_PASS",
+  "branch": "a1_complement",
+  "base_cnf_sha256": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+  "branch_cnf_sha256": "62145ad7856b6a298b018b4d06e0bf342773283471cb8e86536e874d903cd7e7",
+  "units": [
+    44,
+    -1,
+    -2,
+    3
+  ],
+  "equality_suffix_sha256": "78b5be7dcbcee5e6593ffd8a047f88228f0383da70d0ebab5261348716466b95",
+  "equality_units_count": 4662,
+  "coverage_gate_sha256": "ae44765cab81327f050b27d3ab75e6b952f44d5387a054a38029516e71516d34",
+  "equality_gate_sha256": "1ebbff5e7313a97de6ce86aef3a9047ef856aae7ef0e8b1258eec216f1840237",
+  "original_branch_recipe_sha256": "2520f51a2a5452f53caa64fe41a17fb2dedf29df989f7af7ceef0d55b2ce318c",
+  "variables": 1186500,
+  "clauses": 4141120,
+  "original_base_body_bytes_compared": 84919912,
+  "exact_header": true,
+  "original_body_preserved": true,
+  "exact_equality_suffix_before_branch_suffix": true,
+  "semantic_composition": "The independently approved equality conjunction is entailed by the original baseCNF. Adding it to any checked branch preserves satisfiability. Thus the four strengthened branches retain the independently approved unrestricted cover.",
+  "semantic_dependencies": [
+    {
+      "id": "C-UNRESTRICTED-PAIR-EQUALITY-UNITS",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-FOUR-BRANCH-COVER",
+      "revision": 1,
+      "relation": "coverage"
+    }
+  ],
+  "scope": "Exact materialization of one base+4662entailedunits+fourbranchunits instance; no solver result.",
+  "shared_components": [
+    "Python standard library hashes and literal bytecomparison",
+    "Author produced candidate equality units; their mathematics is approved by the separately authored and hash-bound rootaudit, not selfapproved here.",
+    "Prior independently checked fourbranch coverage is reused."
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/unrestricted_four_branch_cover/summary.json": "ae44765cab81327f050b27d3ab75e6b952f44d5387a054a38029516e71516d34",
+    "acceleration/results/20260930_independent_review/unrestricted_pair_equalities_v2/summary.json": "1ebbff5e7313a97de6ce86aef3a9047ef856aae7ef0e8b1258eec216f1840237",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+    "acceleration/results/20260930_unrestricted_pair_equalities/run01/pair_equalities.units.cnfpart": "78b5be7dcbcee5e6593ffd8a047f88228f0383da70d0ebab5261348716466b95",
+    "acceleration/results/20260930_unrestricted_four_branches/branches.json": "2520f51a2a5452f53caa64fe41a17fb2dedf29df989f7af7ceef0d55b2ce318c",
+    "acceleration/results/20260930_unrestricted_four_branches/a1_complement.units.cnfpart": "fbdb5cb3d67b3d47bee427f2e1262e62cc0df00b9786088f78c50acd45bc2b39",
+    "acceleration/results/20260930_four_branch_strengthened_preparation/a1_complement/instance.cnf": "62145ad7856b6a298b018b4d06e0bf342773283471cb8e86536e874d903cd7e7",
+    "acceleration/audit_20260930_strengthened_four_branch_bytes_v1.py": "62d10e4cc6f2b1427b656fae5b200febe8f118ea9e409dfa25d8bc10e921161d",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "checker_sha256": "62d10e4cc6f2b1427b656fae5b200febe8f118ea9e409dfa25d8bc10e921161d"
+}

@@ -1,4 +1,169 @@
+# Latest verified continuation checkpoint — wave43, 2026-10-04 JST
+
+The [forty-third milestone](docs/RESEARCH_20261003_FORTYTHIRD_WAVE.md) freezes 389 claims:
+381 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 5 REFUTED/CLEAR.
+Eighteen additions establish necessary ternary residual restrictions, including
+F3=0 or F3>=14 for simple99-vertex degree14 graphs, and one exclusion of a
+specified twelve-triangle configuration. Target resolution remains UNKNOWN;
+zero residuals and unrestricted target existence remain permitted. Overall
+search coverage: UNKNOWN; no validated denominator. All6,054 earlier PUBLIC
+artifact entries are preserved;119 was the last Wave42 availability subset.
+New Wave43 evidence remains LOCAL_ONLY pending immutable confirmation. Later
+scientific and written results are outside this cutoff. Completed receipts do
+not establish current worker state. Historical text follows byte for byte.
+
+# Latest verified continuation checkpoint — wave42, 2026-10-03 JST
+
+The [forty-second milestone](docs/RESEARCH_20261003_FORTYSECOND_WAVE.md) freezes
+371 claims: 363 VERIFIED/CLEAR, three CANDIDATE/CLEAR and five REFUTED/CLEAR.
+Thirteen additions include exact ternary constraints and two exclusions of
+fixed move families. Target resolution remains UNKNOWN. The frozen results
+allow F3=0 or F3>=8 for degree-14 graphs; neither fixed-family exclusion proves
+general nonexistence. Overall search coverage: UNKNOWN; no validated denominator.
+New evidence remains LOCAL_ONLY pending immutable publication checks. Later
+construction and SAT waves lie outside this cutoff. Historical records do not
+establish current process state. Historical text follows unchanged.
+
+# Latest verified continuation checkpoint — wave41, 2026-10-03 JST
+
+The [forty-first milestone](docs/RESEARCH_20261003_FORTYFIRST_WAVE.md) freezes
+358 claims: 350 VERIFIED/CLEAR,
+3 CANDIDATE and 5 REFUTED. Two additions
+establish the universal weight-five C4 collision subtraction bound and the
+conditional incidence rank lower bound87. Target resolution remains UNKNOWN.
+Zero new finite/unrestricted exclusions; prior scoped records remain unchanged.
+Overall search coverage: UNKNOWN; no validated denominator. Wave40 evidence is
+separately PUBLIC; new wave41 awaits immutable confirmation. Later queued
+science is outside this cutoff. No live worker state is inferred.
+Historical text follows unchanged.
+
+# Latest verified continuation checkpoint — wave40, 2026-10-03 JST
+
+The [fortieth milestone](docs/RESEARCH_20261003_FORTIETH_WAVE.md) freezes356claims:
+348VERIFIED/CLEAR,3CANDIDATE,5REFUTED. Three additions establish conditional
+rankB>=86, the universal triangle-path weight5 image lower count, and finite
+root-focused pilot saved objects. Target resolution remains UNKNOWN. Zero new
+finite/unrestricted exclusions; prior fixed-neighborhood and380/792 branch
+records are unchanged. Overall search coverage: UNKNOWN; no validated denominator.
+Wave39 evidence is separately PUBLIC; newwave40 awaits immutable confirmation.
+Later queued science lies outside this cutoff. No live worker state is inferred.
+Historical text follows unchanged.
+
+# Latest verified continuation checkpoint — wave39, 2026-10-03 JST
+
+The [thirty-ninth milestone](docs/RESEARCH_20261003_THIRTYNINTH_WAVE.md) freezes353claims:
+345VERIFIED/CLEAR,3CANDIDATE,5REFUTED. Three additions establish conditional
+rankB>=85, triangle-image lower word counts, and absence of strict descent in
+one complete239085-labelled-proposal fixed neighborhood. Target resolution
+remains UNKNOWN. One finite exclusion is separate from zero unrestricted
+exclusions; frozen branch380of792 is unchanged. Overall search coverage:
+UNKNOWN; no validated denominator. Wave38 evidence is separately PUBLIC;
+new wave39 evidence awaits immutable confirmation. Later queued computations
+are outside this cutoff. No live process state is inferred. Historical text
+follows unchanged.
+
+# Latest verified continuation checkpoint — wave38, 2026-10-03 JST
+
+The [thirty-eighth milestone](docs/RESEARCH_20261003_THIRTYEIGHTH_WAVE.md) freezes350claims:
+342VERIFIED/CLEAR,3CANDIDATE,5REFUTED. Seven exact additions retain UNKNOWN
+target resolution and add no exclusion. The named seed61 warm graph has
+E_lambda=0,E_mu=3480 and4764ordered identity failures; neither of its two
+checked graphs supplies a direct warm root. All651rooted8 profiles survive
+literal parity. Conditional incidence rank>=76 supplies no upper bound.
+Overall search coverage: UNKNOWN; no validated denominator. Wave37 evidence
+is separately PUBLIC; new wave38 evidence awaits immutable confirmation.
+Later queued low-word/weightedcode/LP outcomes are outside this cutoff. This
+notice makes no live process observation. Historical text follows unchanged.
+
+# Latest research milestone — 2026-10-03 JST
+
+The [thirty-seventh milestone](docs/RESEARCH_20261003_THIRTYSEVENTH_WAVE.md)
+records343 material claims:335 VERIFIED/CLEAR,3 CANDIDATE and5 REFUTED.
+The saved weight60 pilot graph has exact E_lambda=0 and E_mu=3608; it still
+fails the target identity. Neither of the two checked graphs has a root with
+all84 outsider common-neighbor counts equal2. All651 rooted7 profiles remain
+compatible modulo2. The unrestricted rooted8 catalogue and every entry of its
+necessary operator passed separate complete checks. A generic rank lemma was
+refuted; the graph-specific rank bound remains UNKNOWN. No new exclusion.
+
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. [Wave36 publication confirmation](docs/AUDIT_20261003_WAVE36_PUBLICATION_CONFIRMED.md)
+changes artifact availability only. Wave37 publication remains pending.
+This notice observes no live workers; historical checkpoints follow.
+
+# Research milestone — 2026-10-03 JST
+
+The [thirty-sixth milestone](docs/RESEARCH_20261003_THIRTYSIXTH_WAVE.md) records
+337 material claims:330 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. The unrestricted
+rooted7 necessary operator and all651 rational profile witnesses passed separate
+exact checks;21 supplied count vectors are integral, without graph realization.
+The new weight60 exclusive-swap engine passed57 finite engineering calls. Its
+scientific pilot remains prospective at this checkpoint and requires fresh
+committed-source/process/resource gates. Target resolution: UNKNOWN.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+[Wave35 publication review](docs/AUDIT_20261003_WAVE35_PUBLICATION_CONFIRMED.md)
+confirms198 additional PUBLIC artifact records without changing material claims.
+Research remains authorized; this document observes no live workers.
+
+# Previous research milestone — 2026-10-02 JST
+
+The [thirty-fifth milestone](docs/RESEARCH_20261002_THIRTYFIFTH_WAVE.md) records a
+frozen334-claim ledger:327 VERIFIED/CLEAR,3 CANDIDATE and4 REFUTED. Five new
+scopes cover unrestricted rooted6 nonedge651/edge91 local integer domains,
+a linear-triple lambda-zero criterion, the saved graph's complete root census,
+and three full original mod-3 primal vectors. All210 conditional profiles
+survive mod3; no target exclusion or rank claim is added. Necessary local
+profiles have no established graph realization. Target resolution: UNKNOWN.
+Overall search coverage: UNKNOWN; no validated denominator.
+
+The mod3 invocation and independent scalar check completed with shutdown receipts.
+The next experiments are the independently reconstructed unrestricted rooted7
+operator and a new weight60 construction engine with fresh finite controls.
+This document does not observe live workers. [Wave34 publication review](docs/AUDIT_20261002_WAVE34_PUBLICATION_CONFIRMED.md)
+passed; current wave35 evidence awaits immutable publication checks.
+
 # Conway 99-graph research
+
+**2026-10-02 JST latest verified checkpoint:** [thirty-fourth milestone](docs/RESEARCH_20261002_THIRTYFOURTH_WAVE.md).
+Five new scoped revisions bring the frozen ledger to 329 claims: 322
+VERIFIED/CLEAR, three CANDIDATE and four REFUTED. Complete normalized parity
+witnesses leave all 210 local profiles consistent modulo 2. New universal
+counting identities give conditional prism-free means (2,1); prism absence
+remains UNKNOWN. The weighted saved graph fails SRG and has ordinary residual
+3486, compared with the earlier 3034. No new exclusion or target resolution.
+Overall search coverage: UNKNOWN; no validated denominator. Research is
+authorized; actual execution requires fresh observations. Earlier dated
+checkpoints follow.
+
+**2026-10-02 JST latest verified checkpoint:** [thirty-third milestone](docs/RESEARCH_20261002_THIRTYTHIRD_WAVE.md).
+Six new scoped revisions add no graph exclusion. The frozen ledger has324
+claims:317 VERIFIED/CLEAR, three CANDIDATE and four REFUTED. Complete conditional
+root7/root8 equations and one saved non-SRG graph have independent checks.
+That graph has exact residual3034; it fails the target identity. Prism absence
+remains UNKNOWN. The literal campaign remains380 checked cases of792.
+Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no validated
+denominator. Research authorization remains active; current execution requires
+fresh observations. The following notices preserve earlier dated checkpoints.
+
+**2026-10-02 JST verified checkpoint:** [thirty-second milestone](docs/RESEARCH_20261002_THIRTYSECOND_WAVE.md).
+Six additional scoped identities and engineering results add no exclusions.
+The root ledger has 318 claims: 311 VERIFIED/CLEAR, three CANDIDATE and four
+REFUTED. The frozen fixed-support campaign remains at 380 checked literal cases
+of 792. The unrestricted continuation stopped with UNKNOWN and a saved partial
+trace. Target resolution: UNKNOWN. Overall search coverage: UNKNOWN; no
+validated denominator. The batch05 direct raw package passed complete local
+byte recovery and its [immutable publication receipt](acceleration/results/20261002_wave32_publication01/receipt.json)
+confirms all 936 gzip parts. Historical transitive gates and platform binaries
+have separate availability. Research
+authorization is active; live execution requires fresh process observations.
+
+**2026-10-02 JST: explicit user instruction resumed research.** Read the
+[current policy-aware continuation](docs/RESUME_20261002_POLICY_AWARE.md).
+The starting checkpoint has 308 claims and 316 checked literal exclusions on
+one fixed support; the unrestricted target remains UNKNOWN. The October 1 stop
+records below are historical. New native execution requires independently
+checked controls for the changed driver and fresh artifact authentication.
 
 強正則グラフ `srg(99,14,1,2)` の構成・非存在証明を調べたコード、実験記録、独立検証資料の研究アーカイブです。
 
@@ -15,6 +180,146 @@
 隣接行列 `A` による同値な条件は `A² = 12I − A + 2J` です。定義と正規化の詳細は [CONJECTURE.md](https://github.com/YesterdaysLemon/conway-99-research/blob/85e705cc6c2a14d123120c93a847e30aaab1789e/CONJECTURE.md) にあります。
 
 ## 最初に読む資料
+
+**2026-10-01 JST: ユーザー指示により研究を正常に停止しました。**
+最新の入口は [停止状態・再開手順](docs/STOP_20261001_EIGHT_COORDINATE.md) です。
+台帳は308件（VERIFIED/CLEAR 301件）。固定792ケース中316件を独立検証で排除し、
+476件は未解決です。次の64件は式の検査まで完了し、探索は未実施です。
+新しい証拠一式はLOCAL_ONLYで、完全な公開再現パッケージは未作成です。
+以下の記録は過去のマイルストーンです。新しい再開指示までは探索しません。
+
+Research previously resumed by explicit user instruction on 2026-09-30 JST. The historical
+continuation is [ACTIVE_RESEARCH.md](ACTIVE_RESEARCH.md) and
+[draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), based on merged
+remote main `90f1a32d`. The eight-coordinate local domains and separate scoped
+rook results have independent audits in the root [claim ledger](CLAIMS.yaml).
+See the previous [twenty-ninth milestone](docs/RESEARCH_20261001_TWENTYNINTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20261001_TWENTYNINTH_WAVE.md).
+Six new scoped claims are verified. Two 64-case batches add 128 complete
+independently replayed literal exclusions: the frozen 792-case campaign now has
+188 distinct exclusions and 604 unresolved cases. GF(3) affine witnesses for
+16 profiles and uniform-mixture counterexamples for all 792 add no exclusions.
+The checkpoint freezes 300 claims. No whole-support or unrestricted resolution
+follows; batch03 and later work are outside this milestone.
+See the previous [twenty-eighth milestone](docs/RESEARCH_20260930_TWENTYEIGHTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYEIGHTH_WAVE.md).
+Six new scoped claims are verified and two unused-launcher guarantees are refuted.
+The next32 and sizeclass16 batches add48 complete independently replayed literal
+exclusions, bringing this frozen792-case campaign to60 excluded and732 unresolved.
+Only the first12 have a checked72-image union. The complete792 common-kernel test
+removes no local options. The checkpoint freezes294 claims; no whole-support or
+target resolution follows. Next64 and replacement-launcher work are separate.
+See the previous [twenty-seventh milestone](docs/RESEARCH_20260930_TWENTYSEVENTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYSEVENTH_WAVE.md).
+Eight new scoped claims are verified. All twelve first-batch literal Gram
+instances have complete independently checked UNSAT proofs; one repeats the
+preceding single pilot. All 792 count survivors pass exact PSD screening at
+rank 22, which excludes none. Coverage and domain inventories retain their
+conditional scopes. The checkpoint freezes 286 claims; no whole-support or
+target resolution follows. Next32 work and later union arguments are separate.
+See the previous [corrected twenty-sixth milestone](docs/RESEARCH_20260930_TWENTYSIXTH_WAVE_CORRECTED.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYSIXTH_WAVE.md).
+Eleven verified additions include the complete fixed-support exactly-eight
+count census: 1,548 fibre classes, 756 scalar exclusions and 792 survivors.
+All survivors pass separate block tests; these do not establish a joint factor.
+A third literal profile has a completely checked UNSAT proof. A GF(3) mixed
+completion criterion and three exact PSD diagnostics retain their stated scopes.
+The milestone freezes 278 claims. No whole-support or target resolution follows.
+Later next-profile and PSD-kernel work is separate.
+See the previous [twenty-fifth milestone](docs/RESEARCH_20260930_TWENTYFIFTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYFIFTH_WAVE.md).
+Eighteen verified additions exclude one further literal eight-count profile,
+establish six necessary scalar cuts, and verify a third count witness.
+Four direct-cell attempts ended UNKNOWN. Two general algebraic results retain
+their explicit field and conditional triangle assumptions. One unbuilt design
+inventory remains CANDIDATE. No complete factor or target resolution follows.
+The milestone freezes 267 claims; subsequent third-profile Gram work is separate.
+See the previous [twenty-fourth resumed milestone](docs/RESEARCH_20260930_TWENTYFOURTH_WAVE.md)
+and [replay guide](docs/REPRODUCING_20260930_TWENTYFOURTH_WAVE.md)
+for eighteen new verified claims and one refuted formula claim. Complete proof
+replay and exact coverage exclude seven unbalanced groups on the literal
+support; the full-Gram and column-cap family there requires at least eight.
+Checked count, interval and separate Gram-block witnesses remain weaker than
+a complete factor. No whole-support or target resolution follows.
+See the previous [twenty-third resumed milestone](docs/RESEARCH_20260930_TWENTYTHIRD_WAVE.md)
+and [corrected replay guide](docs/REPRODUCING_20260930_TWENTYTHIRD_WAVE_V2.md)
+for thirteen new verified claims. Complete replay of 55 representative proofs
+and exact coverage exclude the six-unbalanced-group family on the literal
+support. Any factor there satisfying the full Gram and column caps needs at
+least seven unbalanced groups. Seven-group screening leaves 216 representative
+profiles; complete coordinate domains support the next coupled count model.
+No full factor, whole-support exclusion or target resolution follows.
+The previous [twenty-second resumed milestone](docs/RESEARCH_20260930_TWENTYSECOND_WAVE.md)
+for ten new verified claims. Complete proof replay and exact profile coverage
+exclude exactly four unbalanced groups on the literal fixed support. With the
+earlier exclusions, this Gram-plus-column-cap family requires at least six
+unbalanced groups. Six- and seven-group screens leave necessary candidates;
+no full factor, whole-support exclusion or target resolution follows.
+The [twenty-first resumed milestone](docs/RESEARCH_20260930_TWENTYFIRST_WAVE.md)
+for twelve new verified claims: sparse unbalanced-group restrictions, exact
+profile/marginal censuses, checked partial objects and a complete proof excluding
+literal case0. The first proof leaves fifteen four-group representatives for
+the next campaign. No full factor or target resolution follows.
+The [twentieth resumed milestone](docs/RESEARCH_20260930_TWENTIETH_WAVE.md)
+for five new verified claims and one refuted claim. A complete independently
+replayed proof excludes every balanced factor on the fixed six-prism support.
+Its six-part public proof package and replay guide preserve exact evidence.
+Unbalanced factors, the whole support and the target remain unresolved.
+The next work examines full-Gram marginals and four-unbalanced-group profiles.
+The [nineteenth resumed milestone](docs/RESEARCH_20260930_NINETEENTH_WAVE.md)
+for ten new checked claims, exact phase exclusions of four specified parity
+assignments, reduced-pattern exclusions and a completely checked finite phase
+enumeration. No full factor or target resolution follows. Four deferred learned
+traces are missing; all mathematical certificates remain available.
+The [eighteenth resumed milestone](docs/RESEARCH_20260930_EIGHTEENTH_WAVE.md) records
+seven checked claims, an exact selected-parity lift exclusion, two verified
+parity projection witnesses and a completed UNKNOWN direct MIP attempt.
+The fixed support and unrestricted target remain unresolved.
+The [seventeenth resumed milestone](docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md) records
+a completely replayed cyclic-subclass exclusion, the independently checked
+broader fixed-support encoding and its UNKNOWN run, and exact local projection
+results. The support as a whole remains unresolved.
+The [sixteenth resumed milestone](docs/RESEARCH_20260930_SIXTEENTH_WAVE.md) records
+17 new independently checked claims, four exact exclusions among five
+selected Hadamard support matrices, a fractional witness for the remaining
+support, conditional triangle structure, and one completed UNKNOWN native run.
+The [fifteenth resumed milestone](docs/RESEARCH_20260930_FIFTEENTH_WAVE_CORRECTED.md) records
+four selected connected-core construction domains, independently checked
+GPU saved states, conditional modular consistency results, a distinct
+60-pattern six-prism model and five completed UNKNOWN native attempts.
+The [fourteenth resumed milestone](docs/RESEARCH_20260930_FOURTEENTH_WAVE.md) records
+for checked GPU saved states and checkpoint repair, ordered-pair normalization,
+the fixed six-prism column-cap encoding and two completed UNKNOWN native runs.
+The [thirteenth resumed milestone](docs/RESEARCH_20260930_THIRTEENTH_WAVE.md) records
+two verified relabelling reductions, nonempty residual-checking controls,
+and two completed UNKNOWN normalized searches. The
+[twelfth resumed milestone](docs/RESEARCH_20260930_TWELFTH_WAVE.md) records
+the independently checked arbitrary-core necessary model, a complete fixed-core
+column domain, exact linear-relaxation witnesses, and two UNKNOWN native runs.
+The [eleventh resumed milestone](docs/RESEARCH_20260930_ELEVENTH_WAVE.md) records
+a verified 25-row partial factor and its fixed extension exclusion, restricted
+prism-design obstructions, and a completed UNKNOWN full-factor search.
+The [tenth resumed milestone](docs/RESEARCH_20260930_TENTH_WAVE.md) records
+a verified capacity-compatible partial factor, its exact extension obstruction,
+and conditional residual-completion equations. The [ninth milestone](docs/RESEARCH_20260930_NINTH_WAVE.md) records
+three new fixed-factor exclusions, a short component-balance obstruction,
+and two completed UNKNOWN factor searches. Its broader factor models remain
+conditional on one core. The [eighth milestone](docs/RESEARCH_20260930_EIGHTH_WAVE.md) records
+the exact matching-pair/permutation counts, universal local-test limitations,
+and a small direct row proof. The [seventh milestone](docs/RESEARCH_20260930_SEVENTH_WAVE.md) records
+two proof-checked fixed triangle/Q1 exclusions, a necessary 36-literal clause
+and its 192 checked relabelings, and exact local consistency results. These
+exclude no unrestricted branch. The [sixth milestone](docs/RESEARCH_20260930_SIXTH_WAVE.md)
+records the four-branch coverage and completed UNKNOWN native runs.
+The [fifth milestone](docs/RESEARCH_20260930_FIFTH_WAVE.md)
+establishes the unrestricted full99 SAT equivalence. The [fourth milestone](docs/RESEARCH_20260930_FOURTH_WAVE.md) records
+verified conditional Gram clauses and local-test redundancy theorems. The
+[third milestone](docs/RESEARCH_20260930_THIRD_WAVE.md) preserves all six
+exact GPU support attempts and the earlier scoped SAT results.
+The unrestricted target remains **UNKNOWN**. The September 17 stop below is
+historical; new execution status comes from fresh run receipts.
+
+### Preserved September 17 stopping point
 
 2026-09-17、トークン資源のためユーザー指示で研究を停止しました。
 [最新の保存状態・再開手順](docs/STOP_20260917_SIX_COORDINATE.md) を最初に読んでください。

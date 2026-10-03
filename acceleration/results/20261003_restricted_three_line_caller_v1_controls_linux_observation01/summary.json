@@ -1,0 +1,93 @@
+{
+  "schema": "ROOT_FOCUSED_PILOT_FRESH_LINUX_ADMISSION_OBSERVATION_V1",
+  "timestamp": "2026-10-03T03:52:15.751772+00:00",
+  "source_sha256": "a6cea1fb1e58863ca18dce80653296c759aece1b13a8b896f7940e9cec2e72c6",
+  "source_inputs_sha256": {
+    "acceleration/observe_20261003_linux_sanitized_workers_v1.py": "da371dc063824c76a63cc345bac5b51ebc34c223b4614af70473f0cef8f83ef3",
+    "acceleration/observe_20261003_root_focused_live_v2.py": "f674c74037046a1d270be75e5ba0e71e97a6edd519467eef87b679bf6fdb150c"
+  },
+  "resource_observation": {
+    "path": "acceleration/results/20261003_restricted_three_line_caller_v1_controls_linux_observation01/resources.json",
+    "sha256": "a3275532e14323492cac46fdfd91720670d4e3727d1c6b8713d61bff2af7eba6",
+    "timestamp": "2026-10-03T03:52:15.427761+00:00"
+  },
+  "root_focused_observation": {
+    "path": "acceleration/results/20261003_restricted_three_line_caller_v1_controls_linux_observation01/root_focused.json",
+    "sha256": "15c404e10ecc2ca3921e0c9a2844015672a6effcc02edab7c06fb391efdbec15",
+    "timestamp": "2026-10-03T03:52:15.639772+00:00"
+  },
+  "euid": 0,
+  "scientific_UID1000_observed": {
+    "euid": 1000,
+    "egid": 1000,
+    "process_group": 490
+  },
+  "metadata_pid": 491,
+  "metadata_process_group": 490,
+  "own_metadata_ancestry_or_finished_child_pids": [
+    1,
+    2,
+    296,
+    298,
+    303,
+    490,
+    491,
+    500,
+    502,
+    503
+  ],
+  "known_public_services": [
+    {
+      "pid": 222,
+      "public_service_label": "unattended-upgrade-shutdown"
+    }
+  ],
+  "unknown_computational_workers": [],
+  "recognized_old_classifier_workloads": [],
+  "recognized_root_focused_processes": [],
+  "permission_uncertain_pids": [],
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "memory_bytes": {
+    "MemTotal": 50346422272,
+    "MemAvailable": 49297711104,
+    "SwapTotal": 12884901888,
+    "SwapFree": 12884901888
+  },
+  "disks": {
+    "host": {
+      "total": 3999825653760,
+      "used": 3861149290496,
+      "free": 138676363264
+    },
+    "ext4": {
+      "total": 1081101176832,
+      "used": 708695674880,
+      "free": 317413146624
+    }
+  },
+  "private_argv_saved": false,
+  "resource_sufficient": true,
+  "limitations": [
+    "Fresh finite observation only; no future or absolute worker absence guarantee.",
+    "Only the explicitly listed native/public producer population is recognized.",
+    "Private command lines and process executable paths are omitted; public fixed classifier reads argv only to return whitelisted source labels.",
+    "Not a mathematical or execution gate approval.",
+    "Finite point-in-time observation only, exact public two-source classifier; no inference for other workloads or future state.",
+    "An empty result does not distinguish a completed invocation from one not yet started; actual supervisor receipts decide terminal state.",
+    "Old fixed classifier is preserved; separate unchanged V2 checks current root-focused wrapper/native. Additional executable-name classifier rejects unknown Python/uv/compiler/declared native processes outside exact observer ancestry, permits only fixed public unattended-upgrade-shutdown service. No global absence guarantee for unrecognized names.",
+    "UID1000 helper is an actual contained runuser observation; scientific dispatch must separately use Ubuntu defaultUID1000, never this root metadata process."
+  ],
+  "deadline": {
+    "elapsed_seconds": 3.445712146,
+    "remaining_seconds": 41.554287853999995,
+    "review_remaining_seconds": 1796.554287854,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 48.405136187,
+    "review_deadline_at": 1803.405136187,
+    "completed_reviews": 0
+  },
+  "launch_admissible": true
+}

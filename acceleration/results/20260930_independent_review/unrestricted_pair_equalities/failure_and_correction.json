@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-09-29T21:28:14.600344+00:00",
+  "source_commit": "8c0523f90bf652bc36261da51d62778cc96905cd",
+  "observed_failure": "AssertionError: ([1, 15], 'linear_terms')",
+  "failed_command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    ".uv-cache-20260917",
+    "python",
+    "acceleration/audit_20260930_pair_equality_units.py"
+  ],
+  "failed_source_sha256": "966c1f228c9ac1e13fb1f2e1f70061dd4f7943a8219d164da3916280b1f378a3",
+  "new_source_sha256": "63839d8ac0b481dcb038484ec0ac66d18fae54943b165629a076ea28154d0653",
+  "correction": "The producer records which product leg is fixed one; the independent checker previously used the generic tag common. New version derives the correct side tag from its own raw adjacency references. No polynomial coefficient, threshold calculation, input artifact, or acceptance condition changed.",
+  "mathematical_result_from_failed_run": null,
+  "mathematical_result_null_reason": "The independent audit halted; no claim was promoted."
+}

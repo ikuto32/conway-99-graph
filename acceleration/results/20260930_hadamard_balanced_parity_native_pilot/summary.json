@@ -1,0 +1,134 @@
+{
+  "status": "HADAMARD_BALANCED_PARITY_NATIVE_ARTIFACTS_PENDING_INDEPENDENT_REVIEW",
+  "actual_exit_code": 10,
+  "receipt": {
+    "timestamp": "2026-09-30T04:02:24.933954+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "60s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "100000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_balanced_parity/instance.cnf",
+      "/tmp/conway99-hadamard-parity-1fM3X3/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 10,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 80,
+    "wall_seconds": 0.21899999980814755,
+    "stdout": "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "fb096e71b1fe862c76edd0fd1aaf69cf2e12575df285af1a5ef9e27a407f00c2",
+    "stderr": "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "scope": "Balanced/noncyclic necessary parity projection only; no full factor, whole-core or target conclusion.",
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-hadamard-parity-1fM3X3/proof.drat",
+    "sha256": "e3b4893f93da877f3963707eb0194208edeaaaac27399900988d796b19523016",
+    "bytes": 1161683,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T04:02:25.043158+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-hadamard-parity-1fM3X3/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.0940000000409782,
+      "stdout": "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "2a0f1b9af298a5d3203119e127a70d62cce7da4b39715c60715c1f8b1e26a2f0",
+      "stderr": "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T04:02:25.135504+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-hadamard-parity-1fM3X3/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 0.07800000021234155,
+      "stdout": "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.0
+  },
+  "interpreted_result": "PARITY_PROJECTION_SAT_RAW_UNCHECKED",
+  "outputs_sha256": {
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/decoded_projection.json": "0e80251a964330092d8da9030df2e2ee7f56476cee9e588be921dbe2f470e646",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/launch.json": "f2a75bdb9cd4ef15f5d072355845baa53632702021e7dcf1891daea82a392343",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/parsed_model.json": "0451ffb8b9b6712cd993d7259aa75f3e534845cec34cf7384c534825a0a3ff59",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/proof.drat": "e3b4893f93da877f3963707eb0194208edeaaaac27399900988d796b19523016",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/solver.receipt.json": "b98951efe6211ba61506af43594e3cc49e4410c75438249ab27bb6917572b7cf",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/solver.stdout.log": "fb096e71b1fe862c76edd0fd1aaf69cf2e12575df285af1a5ef9e27a407f00c2",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_copy.receipt.json": "c68f49676dd39bb62bb7479c8080f4e31543e2268f7606f4ba951f6f415ff794",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_hash.receipt.json": "f601bc7a68f3b40000fcca0f3aceed152db858d277de79410c001158cf378d3e",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_parity_native_pilot/main/transfer_hash.stdout.log": "2a0f1b9af298a5d3203119e127a70d62cce7da4b39715c60715c1f8b1e26a2f0"
+  },
+  "limitations": [
+    "SAT supplies parity patterns only; independent all-assignment/clause/projection checking is mandatory, and no fullGram factor or residualD follows.",
+    "UNSAT requires a full independent trace replay and exact projection reduction. A balanced-factor exclusion additionally uses allYcaps and the separately checked cyclic-factor exclusion.",
+    "Balance is an extra assumption, not WLOG. No whole-support, core or target exclusion follows directly.",
+    "No UNKNOWN result or incomplete trace is an exclusion."
+  ]
+}

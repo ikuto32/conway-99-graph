@@ -1,4 +1,21 @@
-# 最新のユーザー指示による停止 — 2026-09-17
+# Explicit research resume — 2026-10-02 JST
+
+The current user explicitly instructed continued research. This supersedes the
+historical stop below as an execution instruction. See
+[the current resume plan](docs/RESUME_20261002_POLICY_AWARE.md). The historical
+stop checkpoint and command bytes remain preserved. No target resolution is
+claimed by resuming work.
+
+# 最新のユーザー指示による停止 — 2026-10-01 JST
+
+今回の実行は、ユーザーの明示的な指示により正常に停止しました。
+[最新の停止状態・再開手順](docs/STOP_20261001_EIGHT_COORDINATE.md) と
+[機械可読チェックポイント](acceleration/results/20261001_user_stop/checkpoint.json)
+を参照してください。新たな再開指示があるまで探索を起動しません。
+目標は一時停止であり、Conway-99 の存在・非存在は未解決です。
+以降の停止・再開記録は履歴として保持しています。
+
+# 過去のユーザー指示による停止 — 2026-09-17
 
 トークン資源を保存するため研究を停止しました。
 最新の記録は [停止状態・再開手順](docs/STOP_20260917_SIX_COORDINATE.md) と

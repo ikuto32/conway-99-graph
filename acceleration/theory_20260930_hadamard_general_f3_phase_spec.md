@@ -1,0 +1,13 @@
+# Preregistered preparation: general balanced GF(3) phase screen
+
+This preparation executes only finite local controls. It makes no native solver, LP or research branch-generation call. The current selected-branch obstruction and all earlier files remain unchanged.
+
+Question: do the affine GF(3) local and coordinate-pair phase-sum arguments remain necessary for both constant and mixed balanced groups, and what precisely supports a sound branch nogood?
+
+The control population is frozen as all 46,656 ordered six-tuples of affine permutations and all 7,776 ordered five-tuples. Check literal matrix sums, the exact normalized column gauge, local phase multiplicities, even/odd phase sums, and deliberately corrupted sign/profile implications. Use exact Python integers modulo three. Success means the proposed necessary equations agree on every valid local configuration; it is not global feasibility or an exclusion. Stop at sixty seconds and preserve failure artifacts. No numerical tolerance, random seed, new dependency or lockfile change is involved.
+
+A proposed later batch, not authorized or executed by this preparation, would retain at most sixteen distinct independently checked parity assignments in deterministic solver-output order. Candidate generation would use the authenticated strengthened parity formula plus exact prior blocking clauses, with fixed native seed/options and explicit time/conflict limits frozen by the parent before launch. A timeout counts as an attempt, not a new candidate. Save every native output and independently check each complete parity object.
+
+For each candidate, preserve the full 120-variable matrix with twenty gauges, one or two local rows per group, and 120 pair-sign rows including zeros. Compute exact rank, a complete nullspace and row-operation certificate. The initial rejection criterion is only an identically zero required difference in a mixed same-sign class. A separate checker must reproduce the matrix, verify the necessity derivation and every exclusion row combination before any nogood is added. Each assignment remains a separate scope; no coverage percentage or all-parity conclusion follows from sixteen cases.
+
+The conservative nogood uses all twenty selected pattern literals. Any shortened clause must use an independently checked certificate dependency union, counting all five groups for each used pair row. Do not infer general validity from the sparse nonzero coefficient support. Keep the candidate stream, retries, completed screens, independently verified exclusions and surviving linear spaces separate. At a surviving screen, save the full space and pending nonlinear constraints for the next construction attack; do not claim a factor or silently broaden the batch.

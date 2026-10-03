@@ -1,0 +1,69 @@
+{
+  "schema": "HYPERGRAPH_WEIGHTED_ENGINEERING_PLAN_V1",
+  "source_commit": "f7834874ad7a9c1ef3ba9daabd09fc18fe24a76a",
+  "producer": "/root/native_driver",
+  "status": "FROZEN_ENGINEERING_SELECTION_PENDING_EXECUTION_AND_INDEPENDENT_CHECK",
+  "source_hashes": {
+    "acceleration/hypergraph_weighted_anneal_20261002_v1.cpp": "235b3bae6647ed76652f23978bc3fd9841855ab49e81c6b622016e1d23ee6e70",
+    "acceleration/prepare_20261002_hypergraph_weighted_v1.py": "c9e95c0dee72845013233a731e17913fcfda46e64854214a3bba91f3d94890c0",
+    "acceleration/prepare_20261002_hypergraph_weighted_v1_spec.md": "d8be3174c7d7d6c571481f308a401756d809e438701d902cd7d8ff5479642111",
+    "acceleration/design_20261002_hypergraph_weighted_v1.md": "e3adc9f030d3f4085d852b38d2c98360cb461ea3fb628fec44ed78097aa7817f"
+  },
+  "objective": "SRG_LAMBDA_WEIGHTED_PAIR_RESIDUAL_V1",
+  "lambda_weight": 6,
+  "selection": "Exactly32 engineering calls in frozen spec/source:16successful,16expectedexit2; no extra unreported retry or scientific worker.",
+  "expected_successful_proposals": 19456,
+  "counting_method": "Executed proposal attempts across complete engineering trajectories, including overlapping whole/split control paths; no count of unique candidate graphs.",
+  "expected_pair_cost_records_per_successful_call": 86,
+  "expected_intermediate_checkpoints_without_timer_extras": 304,
+  "native_source_environment": {
+    "host": "WSL Ubuntu-24.04",
+    "supervisor_inside_linux": true,
+    "python": "/usr/bin/python3",
+    "uv": "/root/.local/bin/uv",
+    "project": "acceleration/native_budget_env_v1",
+    "locked": true,
+    "offline": true,
+    "environment": "build/native-budget-linux-venv",
+    "cache": "build/native-budget-linux-cache",
+    "compiler": "/usr/bin/g++",
+    "compiler_sha256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769"
+  },
+  "build_allocation": {
+    "outer_seconds": 300,
+    "producer_seconds": 240,
+    "reason": "v1 build observed1.36s; ample new source/setup/compile/hash margin; no historical cap inherited",
+    "output": "acceleration/results/20261002_hypergraph_weighted_build01",
+    "supervision": "acceleration/results/20261002_hypergraph_weighted_build_supervision01"
+  },
+  "controls_allocation": {
+    "outer_seconds": 600,
+    "producer_seconds": 540,
+    "native_guard_seconds_each": 30,
+    "reason": "v1 complete control wrapper observed7.84s for10752proposals; larger19456proposal32-call population with exact component/cost/import hashing;540s shared invocation and20s internal reserve",
+    "address_space_bytes_each": 2147483648,
+    "file_bytes_each": 1073741824,
+    "output": "acceleration/results/20261002_hypergraph_weighted_controls01",
+    "supervision": "acceleration/results/20261002_hypergraph_weighted_controls_supervision01"
+  },
+  "success_criteria": [
+    "New binary/build manifest pins frozen source/compiler/env and successful contained build receipt",
+    "Every16successful call emits complete immutable initial/final/traces/cache/components/current+best matrices and86pair costs; every malformed case rejects with the exact designated diagnostic",
+    "Fresh and imported256versus73+183 final bytes/trace concatenations agree exactly",
+    "Independent no-producer-import adjacency-set path checks every19456proposal, all saved state/cache/component/delta/RNG/import/source/receipt fields and86pair-cost populations",
+    "Separate known rook9 full SRG identity controls pass and corrupted score/cache/triple/RNG/weight/import/99scope controls are falsified"
+  ],
+  "numerical_thresholds": {
+    "scores_counts_caches_rng_deltas": "EXACT_INTEGERS",
+    "temperature_absolute_tolerance": 1e-12,
+    "probabilistic_acceptance_minimum_margin": 1e-12,
+    "raw_target_zero": "Complete99x99 integer SRG validator required; scientific result never promoted from a floating score"
+  },
+  "falsification": "Any cache/component/domain/weighted delta/receipt/source identity/import selection/reset/resume disagreement or ambiguous acceptance vetoes the fresh independent gate; preserve raw artifacts and create a new version for corrections.",
+  "independent_verifier": "/root/checkpoint_audit",
+  "independent_approval": false,
+  "target_resolution": false,
+  "scientific_launch": false,
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "limitations": ["Finite engineering controls only", "No general parser/performance guarantee", "No connected move-space or exhaustive coverage claim", "Producer cannot approve its own output"]
+}

@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-09-29T19:58:38.284015+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-sat-venv\\Scripts\\python.exe",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_rook_gram_minimize.py",
+    "--graph",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_lazy_wave01\\round_04\\independent_sat\\independent_full59.json",
+    "--certificate",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_lazy_wave01\\round_04\\gram\\result.json",
+    "--encoding-model",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_free_internal_sat\\model.json",
+    "--cnf",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_free_internal_sat\\instance.cnf",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_rook_lazy_wave01\\round_04\\minimized"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.12",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_gram_minimize.py": "e261af21abd463c3ce9b8a1700d17fe8fe46e581076b9689069c965baf2abb10",
+    "acceleration/theory_20260930_rook_gram_falsifier.py": "b2d6581c9b458307198d84344233c18748df75b8b0a2b97f8cdbcc6e6cd20b3b",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_rook_lazy_wave01/round_04/independent_sat/independent_full59.json": "b768dbb3ccc2d70dce59a625f36b672d14f741d4c376ec0251f8b56af5c0c7a8",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_rook_lazy_wave01/round_04/gram/result.json": "d16faaeec2cf5a82852065e7507cfb1d3deb00e8a5e6e686db18387f1bf04669",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_rook_free_internal_sat/model.json": "26908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_rook_free_internal_sat/instance.cnf": "ed9d0e102b16481fdbcecef34240b5be2b8a357af8c219606bb688dcb5fe9403",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Can deletion of principal Gram rows shrink the exact negative-direction support and the corresponding sound assignment-blocking clause?",
+  "scope": "One independently decoded local59 graph and the fixed780-edge model. A resulting nogood is necessary for any target extension, not a proof of family nonexistence.",
+  "selection_rule": "Try support vertices in descending full59 index, so right-cell vertices are attempted first. Keep a deletion only when fresh exact rational elimination proves the remaining principal matrix indefinite. Repeat up to three passes or until no deletion.",
+  "resource_limits": {
+    "wall_seconds": 120,
+    "passes": 3
+  },
+  "success_criteria": "Emit an explicit integer vector with directly computed negative v^T(27I-9A+J)v, then block only current values of encoding variables with nonzero quadratic coefficients.",
+  "falsification_criteria": "Reject any nonnegative final quadratic, malformed mapping, or mismatch between the full quadratic and reconstructed coefficient sum.",
+  "status": "CANDIDATE",
+  "independent_review_pending": true,
+  "no_sat_launch": true
+}

@@ -1,0 +1,957 @@
+{
+  "status": "CANDIDATE_COMPLETE_SEVEN_EXCEPTION_LOCAL_DOMAIN_FILTER",
+  "timestamp": "2026-09-30T07:54:22.705565+00:00",
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_hadamard_triplicate_counts/local_triples.json": "9e2cc28f419241755a9c7380fbe217ff04bff0bb4bcd3708be104a40295d9776",
+    "acceleration/results/20260930_hadamard_seven_rank5_dp/summary.json": "6eb84ece5bd4a1eb494215a7bab5020f1b2297463604ed32ba22b9bc995bbef5",
+    "acceleration/results/20260930_independent_review/hadamard_four_group_local_screen/summary.json": "ff30d47b012d1661182f1cba066425dd9d5aaccad3754cad4d526b7477725c67",
+    "acceleration/results/20260930_independent_review/hadamard_seven_rank5_profiles/summary.json": "a5d5ac4d966077ceda4b19382bc4ddc5f85b7b812ab3bf01352260c74b2cb93d",
+    "acceleration/theory_20260930_hadamard_seven_profile_local_domains.py": "f770235e940ad82dab412ba590edfe56755fe47e7f3c51093104685e65fe8aca",
+    "acceleration/theory_20260930_hadamard_seven_profile_local_domains_spec.md": "4c8b79de8abd19ed1f9cdb2406f23346d9adf2558785011a8caa954fe7bb0a39",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_07_checkpoint.json": "8b7f01f5490b41ebe7fa1ea2e43bb2f3f12699c92201d0c8b0cacf9b9d49bac4",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_07_profile_hashes.json": "bb4c8e58c6b7896c7a39e1673a1db83e43b7bd6feada995eb8800b40a5efae70",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_08_checkpoint.json": "d8c17ae1fd7eba4fbac73dc86277c7469f1e1d74574c4334f6fd39f500c2e158",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_08_profile_hashes.json": "55e554511ee67d58549c10fc1ad6371779a03159f59ba715b9305eba52192caf",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_100_checkpoint.json": "84ffe71d3f2685ee8ee8cfb76f06305cf847f156eb41f7e2d9d2f461b6e657ff",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_100_profile_hashes.json": "0bbc84408976b66b14a74ab72d93f060cb71b44dca47aef6e5ae634bc9ea1994",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_110_checkpoint.json": "ba33b85fc14e777c992f0c1cfe8954090550fe6b145138e8f2d89f266c69c0a2",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_110_profile_hashes.json": "75c39c068cb0fe1d7dc9b06ecaf64a123fc3c4079919f36c96618f0428974f3b",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_111_checkpoint.json": "840b56405f6e7dfcd885d9a3ef4eee70698b4a42b18157ec70a4d8322cc06aca",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_111_profile_hashes.json": "af776cafed47bcea4cbcd2b21af8b2bbfbfbb90f58a3621b146ad1751e89b7f7",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_112_checkpoint.json": "d37d82ae67f179287c3155001b316b466903de9a995892cc736c45de31bf0b11",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_112_profile_hashes.json": "bfce74cb4858f94d70fcf381d7a4960ca0417e606ec132e8b76b84bdf2aa1ab2",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_113_checkpoint.json": "667a76843a29a33996e7070a0e7a620a0a632db6e0cdf7a6113ecac7efcf05b6",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_113_profile_hashes.json": "aad6d8329f73819d57507fe6373f7f55725ee7a718337f62052ae5f75d71caba",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_114_checkpoint.json": "4ed726b5f407320f038219d05ee5bdc44ed6f93f13a2a784f52b344b8c4a17db",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_114_profile_hashes.json": "7af726e0c4f198b85e70e0553b4a6dc92446cebe9a7d2b89102fce8b6cba82e1",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_119_checkpoint.json": "f87967351f24bae092b534437c0c92bd190963e9152d83c9ef98434e24a615fa",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_119_profile_hashes.json": "888d2e403c9b2ad69a7dc7ed2da9813b85e91c8dcef85fac6579e3d5f731475d",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_120_checkpoint.json": "059aa9a104f9323ff7d4b15d3da0563ed243da0a610285209488adc38a0ce767",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_120_profile_hashes.json": "9a43f78ac4fa8e93ba2f579b795c34b8cfcf1e8f6f47eb6fbbfef1a165e9a5f8",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_121_checkpoint.json": "4159b28e115783dffcfe84354dcdd4aafbbc61b48c0cdd0e9b82585ff01b4614",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_121_profile_hashes.json": "a9e0d69cb24c7b2ea7c21c40a73cc710edaa62c78ffd596452af6178291a9196",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_122_checkpoint.json": "9abf509a446bc4cbf1ca7b8cee7842499eb5e069908f61c47850c371fae6a583",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_122_profile_hashes.json": "52d689a37a47ae27d89ae81f84b5931f8b4d2a1ab323b75ecefb4ee2b68554c3",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_126_checkpoint.json": "f9f1646e75aaae231c0257192dde06cd1773bb0ccdaa7251b1789fc045d605a3",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_126_profile_hashes.json": "f598dbd4fc263b88cc86af83250387a5ca92fede56678bc853ced0a378de1f36",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_136_checkpoint.json": "0c913e42d2d5f1686bb832de5bc46e8944fdbe839791a2f5b928d91f4e2b70ec",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_136_profile_hashes.json": "1a08c23eeed4e93d277129b0d085acb3d7f6280c49c20ecc6a58564742a65129",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_13_checkpoint.json": "547579fda26fe6828c5a2baba5bb4e4fd0f4f0c9b45076f9ba21127d5f03c992",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_13_profile_hashes.json": "d8d3eec6295cd0d07c6fa9e3cd4223d791e6f54de9adc53e8f5677f761a8646d",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_144_checkpoint.json": "6ffa2b1492c0dd7b87b482aff6f3de9859ec6c77c94945d86a3708694bb81c72",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_144_profile_hashes.json": "280554a0c916901bf2f864ca6993c70fe2fe13a7943e2241e788b29f6f052605",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_153_checkpoint.json": "10c3bc2597bf66aa84a9234f2736730bce012348008a232f0f264af37ea0e547",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_153_profile_hashes.json": "45d24760ec39f07eb9dfa2790c68b3ea04493bc3ee2c09eace404a1ae19a9c35",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_159_checkpoint.json": "f9854faae893796238f685164ba6d786c6602669992ce290060bbe8a4023a7e2",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_159_profile_hashes.json": "bbc43890f3fe4cb134901c680e67e68fddafeac313c51e21c609c00cd512cace",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_15_checkpoint.json": "efd7506923488cd53e128523301edf9b17bea0bfa1f289446e32072f672f1063",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_15_profile_hashes.json": "59f5e3d444db20b58f173219111de20faae0e720359d444ecd052a87ba7e5a52",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_176_checkpoint.json": "4b43afba40f519a2030f6a723f3639af89f5349636295a46287f0a84a794e66a",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_176_profile_hashes.json": "151b73aac30f57bec5ffea5cdb591b04ffa77ac4382f2d15c657a39cf1bfc0fe",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_178_checkpoint.json": "bb2b9f454c5f4def9c32a81fa96154d634d98013d7ddf148a595b73407c82115",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_178_profile_hashes.json": "31cccdad28bc03b931fc7d7f44dadfa33c64dc81d6bf25fff548c4417585f9e8",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_17_checkpoint.json": "2923f937889846f5d2f3ce10698c66736de341ffc53e09583735ff92a46152fe",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_17_profile_hashes.json": "9126d94209baec6ec5fe83d519597d00565a5dfdf16ca304a96eb9bba067e30b",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_183_checkpoint.json": "978bafba6f024c853bf18120a2f2f24da1e1fac243b0bee5a30304e246995b77",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_183_profile_hashes.json": "0db2244bf321226c0f8c8aa52a2aa565bac83e87e0a6a71536cdcd9c47fc330d",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_189_checkpoint.json": "959aa95f4b496716812bc04a24c8b16e4991db468bb3d751a6f1ea209eb2fb17",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_189_profile_hashes.json": "502516bd7a67f9ac183b143cc806e06bf831e2e10c1bb8bbf41c753013694f8c",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_190_checkpoint.json": "5b4787e56ac1e10e42db04cbfaece5c00c3054bde3ea10f436b60329f17a3dc2",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_190_profile_hashes.json": "78157293bf73382fcfda609e1fd50731165b2165743653096757cee89e31beb2",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_195_checkpoint.json": "7535869b03288d3652a6e94c8dcb14874aa0ca4adba5a99983030e5515a1dcd4",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_195_profile_hashes.json": "97c397a09621bb6cfa682511014a69151bd93a1436284f19858330d001844445",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_27_checkpoint.json": "4df04bbeb2d2f772697591545cd2563f0c5a628fe065e2483c01e30d5d0e59a7",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_27_profile_hashes.json": "9481f7232b75c846b8052e83674a4b1e9f53b35d8b93392ecf2a3be032e98892",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_43_checkpoint.json": "b09e03997097d05c59d0f91b104692bc7ac873ce154fdbf941183aff5b2068ae",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_43_profile_hashes.json": "7e248d6021d4dbaabecca56facaf7b5186bdac845719494f1dd3bcf92e9642c3",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_44_checkpoint.json": "fa6ab9495467957f971b40d04d284bec572eecb50728f7e2c6bc85910e6d49fa",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_44_profile_hashes.json": "f1a9d85759b9bf33cd824f49cca090a0ede7f362d31022277a33947ea5a13d13",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_46_checkpoint.json": "e83978e3eb2fc28129e4adde9c579d80f2be464b62265fefba5a7247f3283721",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_46_profile_hashes.json": "d007255f8c976e084a27b676b5ca4357d44fd20763ab76dfa431f87d2b0cf2a5",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_49_checkpoint.json": "5054408c194e25d4df03caecebcd9f7a3cdc72e053e447b51ede0ce90981cc87",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_49_profile_hashes.json": "21f27da8993e154395ab8ae4d9c864723f92eaeec2757c1abcbd0c22bc2968ae",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_52_checkpoint.json": "66c1cdde6ad3e08d6f33bbed4d4f37577d0eba34879e9f20ac69d701523b32e6",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_52_profile_hashes.json": "ebeba7ac6cb4e080c5744d0b2d038a20cf6c26a3b5bd417d5e6f8c4f255fc947",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_53_checkpoint.json": "607e649bd20285a53f163b399267a48ca56cd108c2f1d271b0b946212281606b",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_53_profile_hashes.json": "d6396628659bdd189ecf985cb6901ce11d6c3e6e45a2f8edbac7ea6b0bd3265b",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_56_checkpoint.json": "95890f3cc74390818a5ecdd405716b1af15490859cdc4010703b363a935b3de8",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_56_profile_hashes.json": "1c2f6f1e3dba200f428f9e2ed532736db5603a7eadd3672d54cc55130d61ddbb",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_64_checkpoint.json": "ae7049bf85ed3f7fe6ac123365ed265b149c61558307b7570f3a96e735c2d26d",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_64_profile_hashes.json": "073debfe93f83f468a9fd153acb6e3e9b480f9988e8f11097120d767c5d578bf",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_67_checkpoint.json": "79e718fc02aa232c01a59e40ff70529ad6182c5a14d3f08bc73b333afbfc9e8e",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_67_profile_hashes.json": "81aee0be82d9d8e6c504023b7e9c494d6d4f0a8c703f7be14766baf39a06a748",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_80_checkpoint.json": "da59f0aa65999a2ac48ffaecf6aea2b5345231086fa41046ea1fe75041820524",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_80_profile_hashes.json": "a8b2906eac8e490da77b6d1409eb0ac66ae5aac400f8c8caa53296457bac142b",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_82_checkpoint.json": "cb73cd36e0b45ac31234f94336f4eead657923d92a9828669c222a07931ce7c5",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/case_82_profile_hashes.json": "8cae26122d3bfeff46f107c5324bdf93c15e8449e4d8115eedaad1f651bcd80c",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/controls.json": "32da1d75426e745cabab7bfbe51e220c5b67d0ae6afb131966398305b6578cf5",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/diagnostic_fibre_orbits.json": "b139d5c71bb06b7adf6b6358f340e3ecd270019b684604e37edccaf613d5a25c",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/manifest.json": "d7bb0ccd4d05af82248846a7d807391498dd2759b1c1eb7c5ce58ed4e9303d69",
+    "acceleration/results/20260930_hadamard_seven_profile_local_domains/profiles.jsonl.gz": "88d5e572fe280a70b51e0dd2785378d73300e6873a7db788072bcbca8ef256ae"
+  },
+  "cases": [
+    {
+      "case": 7,
+      "groups": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        19
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 8,
+      "groups": [
+        0,
+        1,
+        5,
+        7,
+        9,
+        18,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 13,
+      "groups": [
+        0,
+        1,
+        7,
+        9,
+        11,
+        15,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 15,
+      "groups": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        13,
+        15
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 17,
+      "groups": [
+        0,
+        1,
+        9,
+        11,
+        12,
+        14,
+        15
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 27,
+      "groups": [
+        0,
+        2,
+        5,
+        10,
+        11,
+        13,
+        15
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 43,
+      "groups": [
+        0,
+        3,
+        9,
+        10,
+        11,
+        12,
+        14
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 44,
+      "groups": [
+        0,
+        3,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 46,
+      "groups": [
+        0,
+        4,
+        7,
+        9,
+        17,
+        18,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 49,
+      "groups": [
+        0,
+        5,
+        7,
+        8,
+        9,
+        17,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 52,
+      "groups": [
+        0,
+        6,
+        10,
+        11,
+        13,
+        15,
+        18
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 53,
+      "groups": [
+        0,
+        7,
+        9,
+        10,
+        13,
+        15,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 56,
+      "groups": [
+        0,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 64,
+      "groups": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        17,
+        18
+      ],
+      "expected": 180,
+      "backtracked": 180,
+      "unique": 180,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 180,
+      "domain_size_histogram": {
+        "2": 72,
+        "8": 72,
+        "12": 36,
+        "21": 216,
+        "48": 864
+      }
+    },
+    {
+      "case": 67,
+      "groups": [
+        1,
+        2,
+        4,
+        5,
+        11,
+        13,
+        17
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 80,
+      "groups": [
+        1,
+        2,
+        5,
+        9,
+        11,
+        13,
+        15
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 82,
+      "groups": [
+        1,
+        2,
+        5,
+        11,
+        13,
+        18,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 100,
+      "groups": [
+        1,
+        3,
+        9,
+        10,
+        11,
+        12,
+        15
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 110,
+      "groups": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        18,
+        19
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 111,
+      "groups": [
+        1,
+        4,
+        5,
+        9,
+        11,
+        15,
+        17
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 112,
+      "groups": [
+        1,
+        4,
+        7,
+        8,
+        9,
+        11,
+        15
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 113,
+      "groups": [
+        1,
+        4,
+        7,
+        8,
+        12,
+        14,
+        19
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 114,
+      "groups": [
+        1,
+        4,
+        7,
+        8,
+        17,
+        18,
+        19
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 119,
+      "groups": [
+        1,
+        5,
+        6,
+        11,
+        13,
+        18,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 120,
+      "groups": [
+        1,
+        5,
+        7,
+        8,
+        17,
+        18,
+        19
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 121,
+      "groups": [
+        1,
+        5,
+        7,
+        12,
+        14,
+        18,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 122,
+      "groups": [
+        1,
+        5,
+        9,
+        11,
+        15,
+        18,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 126,
+      "groups": [
+        1,
+        6,
+        9,
+        11,
+        13,
+        15,
+        18
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 136,
+      "groups": [
+        2,
+        3,
+        5,
+        10,
+        11,
+        12,
+        13
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 144,
+      "groups": [
+        2,
+        4,
+        5,
+        6,
+        17,
+        18,
+        19
+      ],
+      "expected": 180,
+      "backtracked": 180,
+      "unique": 180,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 180,
+      "domain_size_histogram": {
+        "2": 72,
+        "8": 72,
+        "12": 36,
+        "21": 216,
+        "48": 864
+      }
+    },
+    {
+      "case": 153,
+      "groups": [
+        2,
+        5,
+        6,
+        7,
+        8,
+        17,
+        18
+      ],
+      "expected": 132,
+      "backtracked": 132,
+      "unique": 132,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 132,
+      "domain_size_histogram": {
+        "2": 12,
+        "6": 12,
+        "8": 48,
+        "12": 12,
+        "21": 180,
+        "48": 660
+      }
+    },
+    {
+      "case": 159,
+      "groups": [
+        2,
+        5,
+        7,
+        8,
+        11,
+        13,
+        17
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 176,
+      "groups": [
+        3,
+        6,
+        10,
+        11,
+        12,
+        13,
+        18
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 178,
+      "groups": [
+        3,
+        7,
+        10,
+        11,
+        12,
+        14,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 183,
+      "groups": [
+        4,
+        5,
+        7,
+        8,
+        17,
+        18,
+        19
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 189,
+      "groups": [
+        4,
+        6,
+        11,
+        13,
+        17,
+        18,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    },
+    {
+      "case": 190,
+      "groups": [
+        4,
+        7,
+        12,
+        14,
+        17,
+        18,
+        19
+      ],
+      "expected": 24,
+      "backtracked": 24,
+      "unique": 24,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 24,
+      "domain_size_histogram": {
+        "6": 6,
+        "21": 12,
+        "48": 150
+      }
+    },
+    {
+      "case": 195,
+      "groups": [
+        5,
+        7,
+        8,
+        12,
+        14,
+        17,
+        19
+      ],
+      "expected": 36,
+      "backtracked": 36,
+      "unique": 36,
+      "empty_local_domain_profiles": 0,
+      "retained_profiles": 36,
+      "domain_size_histogram": {
+        "8": 24,
+        "12": 12,
+        "48": 216
+      }
+    }
+  ],
+  "labelled_profiles": 1608,
+  "completed_profiles": 1608,
+  "unique_profile_hashes": 1608,
+  "unique_local_count_domains": 1086,
+  "profiles_with_empty_local_domain": 0,
+  "retained_profiles": 1608,
+  "diagnostic_fibre_orbits": 268,
+  "fibre_orbit_sizes": {
+    "6": 268
+  },
+  "independent_approval": false,
+  "native_solver_calls": 0,
+  "target_resolution": false,
+  "elapsed_seconds": 9.422000000020489,
+  "scope": "Marginal profiles filtered only by individual local triples with within-groupYcaps; retained is not simultaneous Gram/caps/factor feasibility."
+}

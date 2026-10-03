@@ -23,6 +23,16 @@ jobs:
         run: uv sync --locked
       - name: Run positive and adversarial registry controls
         run: uv run --locked python -B -m unittest discover -s acceleration -p test_validate_claims.py -v
+      - name: Restore exact public model and control inputs
+        run: >-
+          uv run --locked python acceleration/run_compute_command.py
+          --seconds 300
+          --allocation-reason "Eight finite public raw model/control inputs; pinned lossless parts, shared child deadline and shutdown reserve"
+          --success-criterion "All eight exact original identities restored or checked without overwriting existing files"
+          --verification-criterion "Byte recovery only; independent mathematical audit is separate"
+          --out build/claims-model-recovery-supervision
+          --cwd . -- python acceleration/recover_20261003_wave37_public_inputs_v1.py
+          --seconds 270 --out build/claims-model-recovery
       - name: Check registry, public hashes, and revision impact
         env:
           PR_BASE: ${{ github.event.pull_request.base.sha }}
@@ -49,5 +59,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: claims-validation
-          path: build/claims-validation.json
+          path: |
+            build/claims-validation.json
+            build/claims-model-recovery/*.json
+            build/claims-model-recovery-supervision/*.json
           if-no-files-found: warn

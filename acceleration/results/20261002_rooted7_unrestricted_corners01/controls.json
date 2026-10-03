@@ -1,0 +1,132 @@
+{
+  "positive": {
+    "parameters": [
+      0,
+      0,
+      0
+    ],
+    "column_scales": [
+      1
+    ],
+    "row_scales": [
+      2
+    ],
+    "preparation_seconds": 0.0,
+    "guide_seconds": 5,
+    "status": "CANDIDATE_EXACT_RATIONAL_PRIMAL",
+    "run_status": "HighsStatus.kOk",
+    "model_status": "HighsModelStatus.kOptimal",
+    "native_seconds": 0.0,
+    "numerical_values": [
+      0.5
+    ],
+    "saved_basis": {
+      "path": "acceleration/results/20261002_rooted7_unrestricted_corners01/tiny_positive.bas",
+      "sha256": "34e7e4f1773be1a0775d47165c6f02c514b540adddc7334437e88fabc4cff812",
+      "certificate": false
+    },
+    "ray_existence_status": "HighsStatus.kOk",
+    "ray_exists": false,
+    "certificate_numerators": [
+      1
+    ],
+    "certificate_denominator": 2,
+    "integer_vector": false,
+    "exact_attempts": [
+      {
+        "kind": "primal",
+        "max_individual_denominator": 1,
+        "common_denominator": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "max_individual_denominator": 10,
+        "common_denominator": 2,
+        "exact_pass": true
+      }
+    ]
+  },
+  "negative": {
+    "parameters": [
+      0,
+      0,
+      0
+    ],
+    "column_scales": [
+      1
+    ],
+    "row_scales": [
+      1
+    ],
+    "preparation_seconds": 0.0,
+    "guide_seconds": 5,
+    "status": "CANDIDATE_EXACT_FARKAS_EXCLUSION",
+    "run_status": "HighsStatus.kOk",
+    "model_status": "HighsModelStatus.kInfeasible",
+    "native_seconds": 0.0,
+    "numerical_values": [
+      0.0
+    ],
+    "saved_basis": {
+      "path": "acceleration/results/20261002_rooted7_unrestricted_corners01/tiny_negative.bas",
+      "sha256": "182e1c528c18dd6c263ba2b48f4e3c301a144ce16284df215642c6d3de15ffac",
+      "certificate": false
+    },
+    "ray_existence_status": "HighsStatus.kOk",
+    "ray_exists": true,
+    "ray_retrieval_status": "HighsStatus.kOk",
+    "numerical_ray": [
+      -1.0
+    ],
+    "certificate_multipliers": [
+      1
+    ],
+    "certificate_rhs_affine": [
+      -1,
+      0,
+      0,
+      0
+    ],
+    "exact_attempts": [
+      {
+        "kind": "primal",
+        "max_individual_denominator": 1,
+        "common_denominator": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "max_individual_denominator": 10,
+        "common_denominator": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "max_individual_denominator": 1000,
+        "common_denominator": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "primal",
+        "max_individual_denominator": 1000000,
+        "common_denominator": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "farkas",
+        "max_individual_denominator": 1,
+        "sign": 1,
+        "exact_pass": false
+      },
+      {
+        "kind": "farkas",
+        "max_individual_denominator": 1,
+        "sign": -1,
+        "exact_pass": true
+      }
+    ]
+  },
+  "corrupt_primal_coefficient_and_ray_sign_rejected": true,
+  "producer_calibration_only": true
+}

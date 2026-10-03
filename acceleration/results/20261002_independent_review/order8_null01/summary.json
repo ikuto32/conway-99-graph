@@ -1,0 +1,107 @@
+{
+  "status": "INDEPENDENT_ORDER8_SELECTED_RELAXATION_INTEGER_NULL_PASS",
+  "timestamp": "2026-10-02T09:51:10.476462+00:00",
+  "verifier": "/root",
+  "claim_revision": 1,
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_order8_null_v1.py",
+    "--model",
+    "acceleration/results/20261002_order8_marked_extension_v4/model.json.gz",
+    "--model-sha256",
+    "d3c36efaaf715eb6877bcf5931260581f7e60a490f4ab30f5cf91666218d4c35",
+    "--witness",
+    "acceleration/results/20261002_order8_psd_cuts/integer_null_witness.json",
+    "--witness-sha256",
+    "97b3762b9559c5d7d7a93478b35909ed7faa4125ba60e1d016d85e7d2bd55a98",
+    "--seconds",
+    "870",
+    "--out",
+    "acceleration/results/20261002_independent_review/order8_null01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "source_commit": "2fdd9354d04641c64260d0221c7867b07c4b7405",
+  "input_hashes": {
+    "acceleration\\results\\20261002_order8_marked_extension_v4\\model.json.gz": "d3c36efaaf715eb6877bcf5931260581f7e60a490f4ab30f5cf91666218d4c35",
+    "acceleration\\results\\20261002_order8_psd_cuts\\integer_null_witness.json": "97b3762b9559c5d7d7a93478b35909ed7faa4125ba60e1d016d85e7d2bd55a98",
+    "external_conway99_research\\attempts\\wave147-alternative-lane\\coefficients.json.gz": "a46d8a8b6fd3ae339cdf7c9b633a661d917e3481bed762ae6aa70f1b4886cf1e",
+    "acceleration\\audit_20261002_order8_null_v1.py": "dcd205d4344d0b61f21297a2a500eb36c17abbbfccc972a657f7d1b6128206ce",
+    "acceleration\\command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "variables": 1223,
+  "complete_reconstructed_equations": 4543,
+  "nonnegative_integer_counts": true,
+  "exact_zero_residuals": 4543,
+  "explicit_N3_graph_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "N3_index": 61,
+  "exact_N3_count": 4158,
+  "moments": {
+    "ordered_edge": {
+      "dimension": 66,
+      "exact_rank": 1,
+      "PSD": true,
+      "method": "Exact Fraction Schur complements; zero pivots require entire remaining row zero",
+      "matrix_sha256": "15cee3b7f2490d94002e0bcabde2e8767524791d2d266f7b0ad29c17adfdfe85"
+    },
+    "ordered_nonedge": {
+      "dimension": 87,
+      "exact_rank": 1,
+      "PSD": true,
+      "method": "Exact Fraction Schur complements; zero pivots require entire remaining row zero",
+      "matrix_sha256": "b58c8f56cc41f36d70082111ef786b867f47c7b73d3892907c1d3a723fda6054"
+    }
+  },
+  "controls": {
+    "rejected_PSD": [
+      "negative_eigenvalue",
+      "zero_diagonal_nonzero_row"
+    ],
+    "corrupted_endpoint_rejected": true
+  },
+  "producer_imports": [],
+  "shared_components": [
+    "Python standard library, Fraction, existing deadline helper, immutable raw archived graph/flag coefficient data"
+  ],
+  "limitations": [
+    "No graph is constructed; no target resolution.",
+    "Catalogue completeness and universal flag coefficient derivation are not independently established here.",
+    "Conditional counting-row derivation assumes the listed catalogue covers induced graphs of a target.",
+    "Only the two explicit66/87 coefficient contractions are PSD; no all-order moment hierarchy claim."
+  ],
+  "elapsed_seconds": 1.5
+}

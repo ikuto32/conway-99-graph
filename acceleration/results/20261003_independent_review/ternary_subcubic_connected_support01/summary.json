@@ -1,0 +1,158 @@
+{
+  "schema": "INDEPENDENT_TERNARY_SUBCUBIC_CONNECTED_SUPPORT_WRITTEN_DERIVATION_V1",
+  "status": "INDEPENDENT_DEGREE14_TERNARY_SUBCUBIC_CONNECTED_SUPPORT_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-RESTRICTION",
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly 14 ones in each integer row, let D=A^2+A-12I-2J and let H be the simple graph of all nonzero unordered off-diagonal entries of D modulo 3, with isolated vertices discarded. If H is nonempty and connected, then H cannot simultaneously have at most 12 vertices and maximum degree at most 3. This is a necessary residual-support restriction only; it makes no assertion about disconnected supports, larger supports, support degree at least 4 or target existence.",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "timestamp": "2026-10-03T04:56:07.7477013Z",
+  "source_context_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_context_role": "ROOT-supplied published context; working source/proof/report bytes pinned separately, not claimed present in that commit.",
+  "source": "docs/CANDIDATE_20261003_TERNARY_SUBCUBIC_CONNECTED_SUPPORT_V1.md",
+  "source_sha256": "2fb3397faabf4670d5c04f5d0e720effb53166aa89b6fe283e2425c275ca8a82",
+  "written_audit": "acceleration/audit_20261003_ternary_subcubic_connected_support_v1.md",
+  "written_audit_sha256": "1233903ac6449e354f8aead02d222b9b2594b617f06dfa0ce8c07800611809ed",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_SUBCUBIC_CONNECTED_SUPPORT_V1.md": "2fb3397faabf4670d5c04f5d0e720effb53166aa89b6fe283e2425c275ca8a82",
+    "acceleration/audit_20261003_ternary_subcubic_connected_support_v1.md": "1233903ac6449e354f8aead02d222b9b2594b617f06dfa0ce8c07800611809ed"
+  },
+  "scope": {
+    "description": "Universal conditional necessary restriction on the complete simple symmetric zero-diagonal degree14 adjacency domain of order99: its whole nonempty connected residual support cannot be subcubic on at most12 nonisolated vertices. No assumption of adjacency-graph connectivity or automorphism.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99, symmetric binary entries, zero diagonal and exact integer degree14.",
+    "Every unordered residual and complete integer row is included.",
+    "The conditional premise concerns the whole nonempty connected nonisolated support H, with maximum degree at most3 and at most12 vertices; no premise is imposed on connectivity of A."
+  ],
+  "dependencies": [],
+  "complete_written_derivation_checked": true,
+  "independent_of_discovery_producer": true,
+  "commutator_checked_over_integers": true,
+  "binary_neighbor_coordinate_propagation_checked": true,
+  "complete_even_walk_classification_checked": true,
+  "nonbipartite_row_positive_checked": true,
+  "bipartite_complete_row_budget_checked": true,
+  "exact_table_columns": [
+    "support_vertices_m",
+    "next_multiple3_q",
+    "lower_bound"
+  ],
+  "exact_table": [
+    [
+      4,
+      9,
+      3
+    ],
+    [
+      5,
+      9,
+      12
+    ],
+    [
+      6,
+      9,
+      12
+    ],
+    [
+      7,
+      6,
+      12
+    ],
+    [
+      8,
+      6,
+      12
+    ],
+    [
+      9,
+      6,
+      18
+    ],
+    [
+      10,
+      3,
+      6
+    ],
+    [
+      11,
+      3,
+      9
+    ],
+    [
+      12,
+      3,
+      9
+    ]
+  ],
+  "exact_table_row_count": 9,
+  "independent_grouped_bounds": [
+    "m4..6: at least9-6=3",
+    "m7..9: at least3*6-6=12",
+    "m10..12: at least4*3-6=6"
+  ],
+  "written_falsification_checks": [
+    "Exact diagonal and complete integer row sum before modular reduction.",
+    "Both AJ and JA equal14J and exact commutator expansion.",
+    "Degree2/degree3 complete zero-row sign rules and minimum support degree2.",
+    "Binary3-coordinate sum divisible3 is0 or3; weighted inference fails.",
+    "Bipartite even walks retain exactly the two sides.",
+    "Odd cycle yields an odd closed walk to flip any connecting path parity.",
+    "Allow allm-1 internal neighbors in the common-outside bound.",
+    "Nonbipartite m<=12 has positive bad residuals and nonnegative good ones.",
+    "Both bipartite sides have at least2 vertices; larger side comes from counting only.",
+    "Three worst bad residuals give-6; all3 grouped bounds and9literal rows are exact and positive.",
+    "Degree4 labels++-- and binary1,0,1,0 block all-neighbor equality.",
+    "Disconnected propagation and m13 zero lower bound are left open."
+  ],
+  "written_falsification_check_count": 12,
+  "written_control_population": {
+    "degree4_boundary_patterns": 1,
+    "positive_graph_fixtures": 0,
+    "adjacency_realizations": 0,
+    "executed_fixtures": 0
+  },
+  "command": null,
+  "command_null_reason": "Independent exact human-checkable written derivation only; no mathematical computation. Metadata read/hash/write is not a theorem fixture.",
+  "executable_controls": null,
+  "executable_controls_null_reason": "Twelve written boundaries and9handwritten substitutions; no executable graph or support fixture.",
+  "tool_versions": null,
+  "tool_versions_null_reason": "No solver, enumeration, executable checking code or proof assistant.",
+  "mathematical_computation_commands": 0,
+  "executed_proof_or_fixture_commands": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "target_graphs_produced": 0,
+  "target_exclusions_produced": 0,
+  "target_exclusions_meaning": "No unrestricted target resolution or exhaustive graph-space branch; only the exact connected small subcubic residual-support condition is excluded.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "shared_components": [
+    "Exact definitions and elementary integer/GF(3) identities shared with discovery; no producer code or agent agreement supplies proof.",
+    "Independent path explicitly constructs even-walk parity classes and proves positivity in3 size intervals rather than accepting a table alone.",
+    "Prior small-support/four-/six-defect proofs are historical context only; all required identities are reproduced, with no mathematical dependencies."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only.",
+  "novelty": null,
+  "novelty_null_reason": "No literature-priority or novelty audit.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable written proof, no formal artifact.",
+  "human_reviewer": null,
+  "human_reviewer_null_reason": "Checking agent identified, no human reviewer claimed.",
+  "raw_adjacency_realization": null,
+  "raw_adjacency_realization_null_reason": "No graph realization or fixture produced.",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Exact source and independent written audit at inputs_sha256 paths; separate immutable check required for publication.",
+  "limitations": [
+    "Conditional necessary restriction only; disconnected supports, degree4 or more and more than12 vertices remain outside the claim.",
+    "No adjacency realizability, target graph, unrestricted nonexistence, rank/incidence/lambda1 premise, automorphism or engine/performance approval.",
+    "Twelve written falsification checks and9handwritten substitutions; zero executable fixtures or mathematical programs.",
+    "Formalization, novelty, external review and target-wide denominator are unavailable.",
+    "Candidate bytes remain historically CANDIDATE; any registration/publication is separate bookkeeping. Outside frozenV17 four-claim batch."
+  ]
+}

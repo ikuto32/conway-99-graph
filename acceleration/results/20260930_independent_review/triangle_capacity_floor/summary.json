@@ -1,0 +1,64 @@
+{
+  "status": "INDEPENDENT_TRIANGLE_INDIVIDUAL_CAPACITY_REDUNDANCY_PASS",
+  "created_at": "2026-09-30T02:45:58.270706+00:00",
+  "updated_at": "2026-09-30T02:45:58.270706+00:00",
+  "source_commit": "ca7797c192f92d657ab893018f5d60e01545f1f1",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_triangle_capacity_floor.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10 (main, May 30 2025, 05:39:07) [MSC v.1943 64 bit (AMD64)]",
+  "random_seed": 20260930,
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/triangle_contraction/capacity_floor_candidate.json": "413401274623e6717f287dfbb292de04cf27d549cc3b114482421fc5fae7d460",
+    "acceleration/results/20260930_independent_review/triangle_contraction/summary.json": "5b190d159e2fc2b681dc52be1083d2f74f402c86f1305b7acdaf58435fcdc96a",
+    "acceleration/audit_20260930_triangle_capacity_floor.py": "b287d0af8a32f5f84332f87c426e76295e8754b0b05546be12738c77bb8bf8e9",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/triangle_capacity_floor/corruptions.json": "0a654004ba3dcbf62478bf32e017363c8acc212dd6b0f2494a1d164407a83fa4",
+    "acceleration/results/20260930_independent_review/triangle_capacity_floor/dynamic_program.json": "fbdb50536e951838e120c640e1e4bb2fe202bdcc5a963dd24379e643e6316420",
+    "acceleration/results/20260930_independent_review/triangle_capacity_floor/independent_proof.txt": "4c3f9213d1e20e1375a7309ea5c5fbb04ff0f66baad760c01740d604694ddd47",
+    "acceleration/results/20260930_independent_review/triangle_capacity_floor/positive_controls.json": "8433d366243995629130ffc8c7d5b04bb82d918581961d51a33a77cc8d51be40"
+  },
+  "claim_id": "C-TRIANGLE-CONTRACTION-INDIVIDUAL-CAPACITY-REDUNDANCY",
+  "claim_revision": 1,
+  "statement": "For every binary36x20 matrix T with each row sum10 and each column sum18, each of the20 off-diagonal capacity sums sum_{q!=p} floor((18-T_p^T T_q)/5) is at least21; consequently each separate degree18 row-capacity test is redundant.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Every matrix with the stated binary dimensions and margins; application to the conditional residual-triangle capacities only.",
+  "dependencies": [
+    {
+      "id": "C-IDENTITY-P-RESIDUAL-TRIANGLE-CONTRACTION",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "assumptions": [
+    "No existence of a target completion or nontrivial automorphism is assumed."
+  ],
+  "verifier": "/root",
+  "method": "independent_derivation",
+  "shared_components": [
+    "The producer candidate statement and previously independent contraction theorem are read; no producer calculation is imported."
+  ],
+  "controls": {
+    "exact_arithmetic_DP_minimum": 21,
+    "positive_matrices": 256,
+    "checked_row_capacities": 5120,
+    "corruptions_rejected": 6
+  },
+  "limitations": [
+    "The independent written proof, not the finite controls, establishes the universal result.",
+    "No tightness over actual binary matrices is claimed; the broader integer-sequence domain has minimum21.",
+    "Simultaneous symmetric degree feasibility and actual residual equations remain unresolved."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "target_resolution": "UNKNOWN",
+  "external_review": false
+}

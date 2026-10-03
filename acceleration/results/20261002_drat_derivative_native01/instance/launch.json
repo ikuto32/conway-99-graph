@@ -1,0 +1,50 @@
+{
+  "schema": "POLICY_NATIVE_SINGLE_LAUNCH_V2",
+  "timestamp": "2026-10-02T10:37:22.249644+00:00",
+  "command": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "1800.000000s",
+    "/usr/bin/prlimit",
+    "--as=8589934592:8589934592",
+    "--fsize=4294967296:4294967296",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "--seed=0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_drat_restart_prepare01/candidate/restart.cnf",
+    "/tmp/conway99-single-v2-ujbjlf_d/proof.drat"
+  ],
+  "cnf_path": "acceleration/results/20261002_drat_restart_prepare01/candidate/restart.cnf",
+  "cnf_sha256": "59698435dfd8954dc3420098d43a9e9c94eb3175190c3cc1133ef7a5b6fdad9e",
+  "ext4_proof": "/tmp/conway99-single-v2-ujbjlf_d/proof.drat",
+  "native_wall_limit_seconds": 1800.0,
+  "requested_native_seconds": 1800.0,
+  "configuration": {
+    "address_space_bytes": 8589934592,
+    "proof_file_bytes": 4294967296,
+    "seed": 0,
+    "conflict_limit": null,
+    "conflict_limit_null_reason": "Use observed wall/resource progress rather than inheriting the historical one-million-conflict cutoff.",
+    "host_free_reserve_bytes": 34359738368,
+    "ext4_free_reserve_bytes": 8589934592,
+    "aggregate_retained_artifact_bytes": 12884901888,
+    "native_seconds": 1800.0,
+    "producer_seconds": 2050.0,
+    "shutdown_reserve_seconds": 150.0
+  },
+  "deadline_before_launch": {
+    "elapsed_seconds": 3.836624164,
+    "remaining_seconds": 2046.163375836,
+    "review_remaining_seconds": 1796.163375836,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 2052.865642889,
+    "review_deadline_at": 1802.865642889,
+    "completed_reviews": 0
+  }
+}

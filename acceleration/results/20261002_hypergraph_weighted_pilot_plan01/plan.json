@@ -1,0 +1,133 @@
+{
+  "schema": "HYPERGRAPH_WEIGHTED_SCIENTIFIC_FROZEN_V1",
+  "status": "FROZEN_ONE_SEED_WITH_NEW_ENGINE_AND_SAVED_OBJECT_GATES",
+  "producer": "/root/native_driver",
+  "source_commit": "9b9e41cfba5f733d96e010ab2ca6dc91f32d6efd",
+  "source_commit_null_reason": null,
+  "gate": {
+    "path": "acceleration/results/20261002_independent_review/hypergraph_weighted_controls01/summary.json",
+    "sha256": "464a90e4093194ac59c4bdba3c19da661f7eabde52806307b37dbd33a7249f57"
+  },
+  "gate_null_reason": null,
+  "objective": "SRG_LAMBDA_WEIGHTED_PAIR_RESIDUAL_V1",
+  "lambda_weight": 6,
+  "domain": "99 labelled points;231 linear triples;every point in7triples;14regular point graph",
+  "selection": "Exactly one fixed new seed, importing the independently checked unweighted pilot01 best graph; reset weighted RNG/settings/counters, do not repeat the unweighted trajectory.",
+  "import": {
+    "path": "acceleration/results/20261002_hypergraph_pilot01/native/final.state",
+    "sha256": "7dc0232e70d8cf26d9f9be3c24cfc7eb9b613ee5698655c32d58567c88f59059",
+    "select": "best",
+    "independent_review": "acceleration/results/20261002_independent_review/hypergraph_pilot_review01/summary.json",
+    "independent_review_sha256": "73b90ebea2c3685ab9f38622e37cba2349b51ba55204d39348d92434c05fcc51",
+    "starting_scores": {
+      "F": 5169,
+      "E_lambda": 427,
+      "E_mu": 2607,
+      "ordinary_E": 3034
+    },
+    "new_counters": {
+      "step": 0,
+      "admissible": 0,
+      "accepted": 0,
+      "best_updates": 0
+    }
+  },
+  "native_options": {
+    "steps": 20000000,
+    "seed": 99032023,
+    "mix_steps": 10000,
+    "temperature_start": 40,
+    "temperature_end": 0.2,
+    "schedule_steps": 15000000,
+    "verify_every": 100000,
+    "checkpoint_every": 1000000,
+    "checkpoint_seconds": 15,
+    "trace_max": 2048,
+    "trace_stride": 100000,
+    "stop_at_zero": true
+  },
+  "allocation_proposal": {
+    "outer_seconds": 300,
+    "producer_seconds": 270,
+    "native_guard_seconds": 180,
+    "native_cooperative_seconds": 175,
+    "address_space_bytes": 2147483648,
+    "file_bytes": 1073741824,
+    "reason": "One bounded comparative-objective pilot, not a multi-seed search; unweighted20million pilot observed40.326s and new complete engineering32calls17s suggests ample margin but supplies no weighted scientific runtime guarantee. Reassess actual new gate/control diagnostics before launch."
+  },
+  "acceptance_and_falsification": {
+    "all_scores_counts_cache": "EXACT_INTEGERS",
+    "temperature_acceptance": "Heuristic only; controls require1e-12 absolute temperature tolerance and probabilistic decision margins>1e-12",
+    "raw_F_zero": "Save complete triples/current+best99matrix and stop; full independent integer SRG validator and additional checking path required before a candidate resolution claim",
+    "ordinary_E_comparison": "Record ordinary_E and exact component histograms as diagnostics; a lowerF need not improve ordinaryE. CompareF only under fixedFversion/weight/domain.",
+    "veto": "Any import/source/gate/domain/cache/component/weighted score/saved-state disagreement prevents promotion; retain all raw checkpoints and stop reason."
+  },
+  "required_outputs": [
+    "initial.state",
+    "final.state",
+    "all exact saved checkpoints",
+    "current.adj",
+    "best.adj",
+    "sparse moves.jsonl",
+    "result.json",
+    "native logs/receipt",
+    "outer manifest/cleanup summary",
+    "hash-bound independent saved-object and raw99matrix checking"
+  ],
+  "verification_scope": "Every saved current/best object and complete CN caches/components/matrices; sparse full move replay only from exact saved anchors. No complete20million trajectory claim from sampled records.",
+  "resource_and_stop": "One invocation, checkpoint on requested-step completion/native allocation/zero/veto. No automatic retry or second seed. No inference of running process from historical files.",
+  "independent_verifier": "/root/checkpoint_audit",
+  "independent_approval": false,
+  "scientific_launched": false,
+  "target_resolution": false,
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "limitations": [
+    "No move-space connectedness or exhaustive coverage",
+    "Prism-free mathematical lane is separate and does not constrain this hypergraph search",
+    "No target automorphism or fixed triangle core/Hadamard support",
+    "No controlled general performance guarantee or calibrated success probability"
+  ],
+  "saved_object_gate": {
+    "path": "acceleration/results/20261002_independent_review/hypergraph_weighted_saved_calibration02/summary.json",
+    "sha256": "503a9a55d02823f2016e5a7053f6644f0c11d9b0981ef28368f854777a2e5d2c",
+    "checker": "acceleration/audit_20261002_hypergraph_weighted_saved_objects_v2.py"
+  },
+  "build": {
+    "path": "acceleration/results/20261002_hypergraph_weighted_build01/build_manifest.json",
+    "sha256": "c5b53b6c39e794f4141958ac0cc4b84be94f02165a230636493d2f41a3d34bca",
+    "binary": "acceleration/results/20261002_hypergraph_weighted_build01/hypergraph_weighted_anneal",
+    "binary_sha256": "01cb37543a9c6a93edbef15d66de8fb75c044ba01741a620587825321f91f01a"
+  },
+  "timestamp": "2026-10-02T12:49:37.534869+00:00",
+  "input_hashes": {
+    "acceleration/plan_20261002_hypergraph_weighted_pilot_v1.json": "ad464cc2954ab2dcbd35939f3efefe5ead8a45bb04f41593d034413562bf8463",
+    "acceleration/results/20261002_independent_review/hypergraph_weighted_controls01/summary.json": "464a90e4093194ac59c4bdba3c19da661f7eabde52806307b37dbd33a7249f57",
+    "acceleration/results/20261002_independent_review/hypergraph_weighted_saved_calibration02/summary.json": "503a9a55d02823f2016e5a7053f6644f0c11d9b0981ef28368f854777a2e5d2c",
+    "acceleration/results/20261002_hypergraph_weighted_build01/build_manifest.json": "c5b53b6c39e794f4141958ac0cc4b84be94f02165a230636493d2f41a3d34bca",
+    "acceleration/hypergraph_weighted_anneal_20261002_v1.cpp": "235b3bae6647ed76652f23978bc3fd9841855ab49e81c6b622016e1d23ee6e70",
+    "acceleration/prepare_20261002_hypergraph_weighted_v1.py": "c9e95c0dee72845013233a731e17913fcfda46e64854214a3bba91f3d94890c0",
+    "acceleration/prepare_20261002_hypergraph_weighted_v1_spec.md": "d8be3174c7d7d6c571481f308a401756d809e438701d902cd7d8ff5479642111",
+    "acceleration/results/20261002_hypergraph_weighted_build01/hypergraph_weighted_anneal": "01cb37543a9c6a93edbef15d66de8fb75c044ba01741a620587825321f91f01a",
+    "acceleration/audit_20261002_hypergraph_weighted_saved_objects_v2.py": "fd36b5aca691d4fc710fee82a59df52d100ac7481d14510f35f37e780edc52fc",
+    "acceleration/audit_20261002_hypergraph_weighted_saved_objects_v2_spec.md": "f95032662b9e25ae7d6ddcb8262d788032b9ecc3ddde57f3b2cc4bb375907010",
+    "acceleration/results/20261002_hypergraph_pilot01/native/final.state": "7dc0232e70d8cf26d9f9be3c24cfc7eb9b613ee5698655c32d58567c88f59059"
+  },
+  "preserved_draft": {
+    "path": "acceleration/plan_20261002_hypergraph_weighted_pilot_v1.json",
+    "sha256": "ad464cc2954ab2dcbd35939f3efefe5ead8a45bb04f41593d034413562bf8463"
+  },
+  "freeze": {
+    "source": "acceleration/freeze_20261002_hypergraph_weighted_pilot_plan_v1.py",
+    "source_sha256": "477d5f858380114437d837eaa5e24d309a90290db005b48bf90dc4080e534797",
+    "command": [
+      "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+      "acceleration/freeze_20261002_hypergraph_weighted_pilot_plan_v1.py",
+      "--out",
+      "acceleration/results/20261002_hypergraph_weighted_pilot_plan01",
+      "--source-commit",
+      "9b9e41cfba5f733d96e010ab2ca6dc91f32d6efd"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph"
+  },
+  "independent_approval_scope": "Exact finite engine and saved-object controls only; no approval of a future scientific outcome."
+}

@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-29T19:12:41.528633+00:00",
+  "source_commit": "048ff18824f076898652da87f4213d74147a0a95",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_rook_joint.py",
+    "--star",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json",
+    "--pairs",
+    "acceleration/results/20260930_rook_offdiagonal",
+    "--out",
+    "acceleration/results/20260930_rook_joint"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_joint.py": "9cebc56a81cbea35e821ef20a8d12d3b7f8123199c6f83308436ab09aae0cfc2",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration/results/20260930_rook_offdiagonal/pair_0_1.json": "ea66faffce6ac842bb19258128cb27f5c3cf1240381eb07c925cd44cc2e867cb",
+    "acceleration/results/20260930_rook_offdiagonal/pair_0_2.json": "ef750c4795766764857afb983e4b29b7b47e84b52da52dc9af72122c8826ccb8",
+    "acceleration/results/20260930_rook_offdiagonal/pair_1_3.json": "24f7f34c9e86fe80e707aa7c18f8ffc2f2d02c9af81871d8fbf20bc081ae4063",
+    "acceleration/results/20260930_rook_offdiagonal/pair_2_3.json": "5e3f9f90579c9cab64ba68f60cd85d71b20107e5847f67eddc2b38800423891d",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Does a joint assignment of all four rook-adjacent right-cell permutations survive the full known common-neighbor upper bounds of the frozen 50-external-vertex relaxation?",
+  "scope": "One frozen central star; four cross blocks sampled from the complete pair domains. Unassigned cross edges and other external cells remain missing. No exclusion follows from sample failure.",
+  "selection_rule": "Python Random seed 20260930 independently samples one index from each saved complete pair domain; first all-cap witness is retained.",
+  "success_criteria": "Every pair of the 50 external vertices has at most 2-A_uv known common neighbors, including its shared rook neighbor when in one cell.",
+  "falsification_criteria": "Any excess known common-neighbor count rejects that sample, even if earlier three-cell tests passed.",
+  "resource_limits": {
+    "attempt_cap": 100000,
+    "wall_seconds_cap": 120,
+    "stop_on_first_witness": true
+  },
+  "numeric_thresholds": null,
+  "reason": "Integer bit counts only.",
+  "random_seed": 20260930,
+  "status": "CANDIDATE",
+  "independent_review_pending": true
+}

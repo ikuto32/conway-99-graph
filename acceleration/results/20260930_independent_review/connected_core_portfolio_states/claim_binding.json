@@ -1,0 +1,57 @@
+{
+  "claim_id": "C-CONNECTED-CORE-PORTFOLIO-ANNEALER-SAVED-STATES",
+  "claim_revision": 1,
+  "statement": "The frozen four-core portfolio has 96 saved chunk-best, 192 phase-final-current and 192 phase-final-best factors in their declared permutation domains with exact recorded scores; its 64 initialized chains continue across three phases with checked checkpoint carry, and final minima per core are 168\u2192154\u2192140, 170\u2192134\u2192132, 172\u2192146\u2192128 and 166\u2192144\u2192134; no saved state has score zero.",
+  "kind": "empirical/engineering result",
+  "basis": [
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Exact saved scores, domain membership and checkpoint carry for this finite four-core portfolio only.",
+  "dependencies": [
+    {
+      "id": "C-FOUR-CONNECTED-IDENTITY-CORE-PORTFOLIO",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-FOUR-CONNECTED-CORE-ANNEALER-CALIBRATION",
+      "revision": 1,
+      "relation": "verification_dependency"
+    },
+    {
+      "id": "C-SRG243-NONEMPTY-RESIDUAL-POSITIVE-CONTROL",
+      "revision": 1,
+      "relation": "verification_dependency"
+    }
+  ],
+  "assumptions": [
+    "No nontrivial target automorphism is assumed."
+  ],
+  "verifier": "/root/state_literature_audit",
+  "method": "independent_artifact_check",
+  "shared_components": [
+    "Frozen independent columnwise objective and separately authored bitset factor checker.",
+    "Frozen independently checked carry helper; standard-library seeded initialization.",
+    "No producer imports."
+  ],
+  "limitations": [
+    "Saved proposal records were counted, but individual campaign transitions and RNG progression were not replayed.",
+    "Phase populations overlap; 192 endpoints represent 64 continuing chains.",
+    "Scores are exact values of the heuristic objective, not mathematical bounds or exclusions.",
+    "Cap violations are recorded as diagnostics; no residual adjacency was constructed.",
+    "No performance guarantee, target-wide coverage, full factor or target graph is claimed."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "created_at": "2026-09-30T01:39:31.223011+00:00",
+  "updated_at": "2026-09-30T01:39:31.223011+00:00",
+  "evidence": [
+    {
+      "path": "acceleration/results/20260930_independent_review/connected_core_portfolio_states/summary.json",
+      "sha256": "44dd89648beb0fce71aa16fe43ab863097d1a2b893593d042b78c81b163206c1",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "ledger_changed": false
+}

@@ -1,0 +1,40 @@
+{
+  "claim_id": "C-FIXED-HADAMARD-PARTIAL-CUT-COUNT-CSP-WITNESS",
+  "revision": 1,
+  "statement": "The pinned 155939-variable 705845-clause at-least-seven count formula with six whole-profile and six scalar necessary cuts is satisfiable. The complete saved assignment decodes to count profile 3bc6ebf9444e7a2f15af1ac85c6164119333244ced5d6dbe83a6c6b367e533d5 with 8 exceptional groups and passes all 540 universal upper-envelope diagnostics. This is a count-relaxation witness, not a Gram factor, cross-column completion or target graph.",
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PARTIAL-SCALAR-COUNT-CUTS",
+      "revision": 1,
+      "relation": "encoding_equivalence"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-COUNT-MASTER-SIX-PROFILE-CUT-ENCODING",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "independent_verification": {
+    "report": "acceleration/results/20260930_independent_review/count_master_partial_cut_sat_outcome/summary.json",
+    "sha256": "736ccbcda81ee34c21ede2a80253d5b224fabb96a2e83d0a2c1c76dba435d071",
+    "verifier": "structural_attack",
+    "method": "Fresh complete native/JSON/raw-clause and raw-count audit with corruptions"
+  },
+  "evidence": {
+    "assignment": "acceleration/results/20260930_count_master_partial_cuts_native_pilot/main/parsed_model.json",
+    "assignment_sha256": "29a86b25a32b466bb7ff8b501421f1c38306728506306be343d006cc1f9a4324",
+    "independent_count_profile": "acceleration/results/20260930_independent_review/count_master_partial_cut_sat_outcome/independent_count_profile.json",
+    "independent_count_profile_sha256": "03d68bdfff62aa6f73dd44d72eab80acfdb8d001bb1b504df7aa36707b8d695e",
+    "encoding_gate": "acceleration/results/20260930_independent_review/count_master_partial_cut_cnf/summary.json",
+    "encoding_gate_sha256": "dc1ada9d87d41b5cc6597cd0ff7ce2ed0a06981d8b487dbb797505240f435460"
+  },
+  "limitations": [
+    "No full Gram realization, cross-group column-cap compatibility, residual D, target construction, exclusion or novel-family coverage."
+  ],
+  "shared_components": [
+    "Fresh standard-library-only parsing, literal clause evaluator, catalogue-signature grouping and count decoder; no repository checker/producer imports.",
+    "Frozen complete local catalogue and authenticated model mappings are earlier independent premises. Encoding semantics are not reproved by this outcome check."
+  ]
+}

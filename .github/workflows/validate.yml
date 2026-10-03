@@ -24,13 +24,8 @@ jobs:
         run: python -B -m unittest discover -s external_conway99_research/verification -p test_check_srg.py -v
       - name: Check root Python syntax without running experiments
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          files = sorted(Path('.').glob('*.py')) + sorted(Path('acceleration').glob('*.py'))
-          for path in files:
-              compile(path.read_bytes(), str(path), 'exec')
-          print(f'Compiled {len(files)} Python source files')
-          PY
+          python -B -m unittest test_python_syntax -v
+          python -B check_python_syntax.py
       - name: Build and verify exact Rust overlap scorer
         run: |
           python -B acceleration/prepare.py --out build/controls

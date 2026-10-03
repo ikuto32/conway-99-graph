@@ -1,0 +1,64 @@
+{
+  "status": "INDEPENDENT_FACTOR_OBJECTIVE_RAW_CHECKER_CALIBRATION_PASS",
+  "positive": {
+    "objective_version": "TRIANGLE_FACTOR_CROSS_GRAM_SQUARED_V1",
+    "score": 0,
+    "block_scores_01_02_12": [
+      0,
+      0,
+      0
+    ],
+    "direction": "MINIMIZE",
+    "integer_arithmetic": true,
+    "rows": 60,
+    "columns": 180,
+    "cross_entries_checked": 1200,
+    "within_entries_checked": 1200,
+    "mixed_cap_violations": [],
+    "column_overlap_violations": [],
+    "exact_Gram_factor": true,
+    "target_graph": false,
+    "meaning": "Score zero means this fixed-core abstract Gram factor only; neither the caps nor residual D follow from the score."
+  },
+  "valid_domain_swapped_score": 24,
+  "malformed_controls_rejected": [
+    {
+      "control": "asymmetric_core",
+      "error": "cubic simple core"
+    },
+    {
+      "control": "nonbinary_factor",
+      "error": "binary factor dimensions"
+    },
+    {
+      "control": "wrong_C0",
+      "error": "canonical C0 columns"
+    },
+    {
+      "control": "broken_permutation",
+      "error": "two rows per fibre per column"
+    }
+  ],
+  "producer_imports": false,
+  "research_factor_supplied": false,
+  "target_resolution": false,
+  "limitation": "This is independent raw-object/scoring calibration, not a GPU delta, acceptance-rule or search-outcome audit.",
+  "timestamp": "2026-09-30T00:34:00.170893+00:00",
+  "source_commit": "b9de2985adea787b67017df5d0d757755bc22c9c",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_factor_annealing_objective.py",
+    "calibrate",
+    "--out",
+    "acceleration/results/20260930_independent_review/factor_annealing_objective_calibration"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/audit_20260930_factor_annealing_objective.py": "1e801e5b408de07a8e7218d90628cc0ecefb37afe302fe8f16f601dca2e17277",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_srg243_residual_fixture/triangle_blocks.json": "3f8dfa3803d6a5db8146dd24a0857477e1aa061ab10dac0f9e6e564aabc86439",
+    "acceleration/results/20260930_independent_review/srg243_residual_fixture/summary.json": "28bbd97b8e69515c3eb0345e5aa2db12debfaa8a44e83b2e3487342104c5d50e"
+  }
+}

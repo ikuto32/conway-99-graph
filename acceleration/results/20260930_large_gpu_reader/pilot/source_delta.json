@@ -1,0 +1,26 @@
+{
+  "status": "INDEPENDENT_EXACT_GUARD_ONLY_SOURCE_DELTA_PASS",
+  "changes": [
+    {
+      "before": "uint64_t(2)*1024*1024*1024,\"Input exceeds2GiB limit\"",
+      "after": "uint64_t(8)*1024*1024*1024,\"Input exceeds8GiB limit\""
+    },
+    {
+      "before": "g.n<=1000000 ",
+      "after": "g.n<=2000000 "
+    },
+    {
+      "before": "g.nnz<=100000000,",
+      "after": "g.nnz<=200000000,"
+    },
+    {
+      "before": "total_nnz<=100000000,",
+      "after": "total_nnz<=200000000,"
+    }
+  ],
+  "kernels_and_numerics_byte_preserved": true,
+  "source_sha256": "963d4427aeaa24b4ebcae182f981e1662dd8f371621e25eaf4c19ec30a57638a",
+  "binary_sha256": "feb23cfee5bd26abbc37334d3304ee7b5a3e43a386cca9905b8becd58f2df55b",
+  "integer_review": "Reader lengths and aggregate sums are uint64_t; required geometry explicitly widens products. At new caps all unsigned indices and row-pointer values remain below 2^32; n+m+blocks+3 is below 2010131. Windows x64 size_t/streamsize hold 8 GiB, as also exercised by sparse boundary inputs.",
+  "aggregate_guard_scope": "Exactly one model is accepted. Per-model new n and nnz caps imply unchanged aggregate n and changed aggregate nnz caps; multi-model aggregate behavior is unreachable and not dynamically claimed."
+}

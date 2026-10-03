@@ -1,0 +1,126 @@
+[
+  {
+    "revision": 1,
+    "basis": [
+      "DERIVED",
+      "COMPUTED"
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "created_at": "2026-09-30T05:16:43.959414+00:00",
+    "updated_at": "2026-09-30T05:16:43.959414+00:00",
+    "verifier": "/root/eight_domain_audit",
+    "external_review": false,
+    "artifact_availability": "LOCAL_ONLY",
+    "verification_method": "Complete independent raw assignment/CNF/phase checks plus immutable case-report binding; no producer imports.",
+    "id": "C-FIXED-HADAMARD-PARITY-PHASE-BATCH01-PROJECTIONS",
+    "kind": "construction",
+    "statement": "The three exact saved projections in cases00,01,02 are distinct and satisfy all4541 clauses of the fixed-support strengthened parity formula, and respectively its1,2,3 complete twenty-selector sampling blocks.",
+    "scope": "Three specified parity projections on the single frozen six-prism Hadamard support; no full Gram factor or graph.",
+    "assumptions": [
+      "Coordinatewise balanced support triples are an additional construction restriction."
+    ],
+    "dependencies": [
+      {
+        "id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-PROJECTION",
+        "revision": 1,
+        "relation": "encoding_equivalence"
+      }
+    ],
+    "evidence": [
+      "acceleration/results/20260930_independent_review/hadamard_parity_phase_batch_cases/case_00/summary.json",
+      "acceleration/results/20260930_independent_review/hadamard_parity_phase_batch_cases/case_01/summary.json",
+      "acceleration/results/20260930_independent_review/hadamard_parity_phase_batch_cases/case_02/summary.json"
+    ],
+    "limitations": [
+      "Finite sample, not exhaustive coverage.",
+      "A satisfying projection need not lift to a factor.",
+      "Sampling blocks are not all mathematical exclusions."
+    ]
+  },
+  {
+    "revision": 1,
+    "basis": [
+      "DERIVED",
+      "COMPUTED"
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "created_at": "2026-09-30T05:16:43.959414+00:00",
+    "updated_at": "2026-09-30T05:16:43.959414+00:00",
+    "verifier": "/root/eight_domain_audit",
+    "external_review": false,
+    "artifact_availability": "LOCAL_ONLY",
+    "verification_method": "Complete independent raw assignment/CNF/phase checks plus immutable case-report binding; no producer imports.",
+    "id": "C-FIXED-HADAMARD-PARITY-PHASE-BATCH01-LOCAL-PHASE-EXCLUSIONS",
+    "kind": "exclusion",
+    "statement": "For each of the exact saved parity assignments in cases00 and02, the necessary general GF(3) phase equations force a mixed-group same-sign phase difference to zero; hence neither assignment has a coordinatewise balanced coloring lift realizing the prescribed full Gram matrix.",
+    "scope": "Exactly two specified balanced fixed-support parity branches; not the entire support, any core, or the unrestricted target.",
+    "assumptions": [
+      "The selected parity patterns and frozen six-prism Hadamard supports.",
+      "The general phase necessity theorem is used only within its balanced-triple scope."
+    ],
+    "dependencies": [
+      {
+        "id": "C-FIXED-HADAMARD-GENERAL-BALANCED-GF3-PHASE-NECESSITY",
+        "revision": 1,
+        "relation": "premise"
+      },
+      {
+        "id": "C-FIXED-HADAMARD-PARITY-PHASE-BATCH01-PROJECTIONS",
+        "revision": 1,
+        "relation": "premise"
+      }
+    ],
+    "evidence": [
+      "acceleration/results/20260930_independent_review/hadamard_parity_phase_batch_cases/case_00/summary.json",
+      "acceleration/results/20260930_independent_review/hadamard_parity_phase_batch_cases/case_02/summary.json"
+    ],
+    "limitations": [
+      "The explicit row combinations are exact; ranks alone are not exclusion certificates.",
+      "Case01 is not excluded by these checks.",
+      "No target-level consequence or exhaustive branch cover."
+    ]
+  },
+  {
+    "revision": 1,
+    "basis": [
+      "DERIVED",
+      "COMPUTED"
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "created_at": "2026-09-30T05:16:43.959414+00:00",
+    "updated_at": "2026-09-30T05:16:43.959414+00:00",
+    "verifier": "/root/eight_domain_audit",
+    "external_review": false,
+    "artifact_availability": "LOCAL_ONLY",
+    "verification_method": "Complete independent raw assignment/CNF/phase checks plus immutable case-report binding; no producer imports.",
+    "id": "C-FIXED-HADAMARD-PARITY-PHASE-BATCH01-LINEAR-SURVIVOR",
+    "kind": "empirical/engineering result",
+    "statement": "For the exact saved case01 projection, the declared172-by120 homogeneous GF(3) phase matrix has rank113 and nullity7, and none of its72 mixed-group same-sign difference functionals vanishes on the whole nullspace.",
+    "scope": "One specified linear necessary-condition screen, with its72 declared individual rejection functionals.",
+    "assumptions": [
+      "The exact saved case01 projection and declared phase-system schema."
+    ],
+    "dependencies": [
+      {
+        "id": "C-FIXED-HADAMARD-GENERAL-BALANCED-GF3-PHASE-NECESSITY",
+        "revision": 1,
+        "relation": "premise"
+      },
+      {
+        "id": "C-FIXED-HADAMARD-PARITY-PHASE-BATCH01-PROJECTIONS",
+        "revision": 1,
+        "relation": "premise"
+      }
+    ],
+    "evidence": [
+      "acceleration/results/20260930_independent_review/hadamard_parity_phase_batch_cases/case_01/summary.json"
+    ],
+    "limitations": [
+      "Separate nonzero evaluations do not establish a vector satisfying all inequalities simultaneously.",
+      "No nonlinear phase solution, coloring, full factor or graph is claimed."
+    ]
+  }
+]

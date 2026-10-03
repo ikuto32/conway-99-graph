@@ -1,0 +1,84 @@
+{
+  "schema": "INDEPENDENT_CLAIM_REVISION_BINDING_V1",
+  "claim_id": "C-FIXED-TRIANGLE-CAPACITY-Q1-ROW-EXCLUSION",
+  "claim_revision": 1,
+  "statement": "For the exact fixed39 triangle core, canonical C0 and capacity-compatible Q1 in the hash-bound raw99 artifact, each of the twelve vertices27..38 has no binary60-entry B-neighbour row satisfying the independently necessary degree10,24 exact common-neighbour equations and108 pair-cap incompatibilities. Consequently no complete99-vertex graph extending this single fixed Q1 and core satisfies A^2=12I-A+2J.",
+  "kind": "exclusion",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "One exact fixed-Q1 configuration. Twelve independently checked empty necessary row domains are twelve explanations of the same exclusion, not twelve disjoint graph families.",
+  "assumptions": [
+    "Exact raw core/C0/Q1 fixed entries from the bound raw99 artifact.",
+    "Every target extension is symmetric binary with zero diagonal and satisfies the integer target identity.",
+    "No nontrivial target automorphism or universal containment of this core is assumed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-TRIANGLE-CAPACITY-COMPATIBLE-Q1-CONSTRUCTION",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "mathematical_derivation": {
+    "path": "docs/AUDIT_20260930_TRIANGLE_CAPACITY_Q1_ROWS.md",
+    "sha256": "08d8d6bbd63fca54686ba4bd49cdb35a3b7de02c50abbb7ff11292e6c24623f6",
+    "relation": "derived_from",
+    "checked": "Necessary constraints follow entrywise from the integer target identity; complete tree checking uses opposite-value entailment and both binary branches."
+  },
+  "verification": {
+    "claim_revision": 1,
+    "verifier": "/root/state_literature_audit",
+    "method": "independent_artifact_check",
+    "timestamp": "2026-09-29T23:19:47.955932+00:00",
+    "outcome": "PASS",
+    "audit_path": "acceleration/results/20260930_independent_review/triangle_capacity_q1_rows/summary.json",
+    "audit_sha256": "1116581ea1b789d8972ca569d87d1b60e54ef777bee26759b59dd9e53eed6c5e",
+    "scope": "All9801rawentries,576prescribedGram entries,all12constraint lists and every node/force/leaf in12complete UNSAT trees; calibrated positive and50fresh corruption controls."
+  },
+  "counts": {
+    "distinct_fixed_configurations_excluded": 1,
+    "distinct_row_domains_checked": 12,
+    "binary_variables_per_domain": 60,
+    "complete_tree_nodes": 2774,
+    "binary_splits": 1381,
+    "contradiction_leaves": 1393,
+    "forced_batches": 9627,
+    "individually_checked_forced_bits": 22560,
+    "fresh_corrupt_controls_rejected": 50
+  },
+  "limitations": [
+    "No exclusion of all capacity-compatible Q1 factors or of the whole core family.",
+    "The row proof uses only necessary target conditions; no claim that the constraints encode all completion conditions.",
+    "No satisfying-domain enumeration, target-wide denominator, novelty or external review claim.",
+    "No complete36factor or99graph is constructed."
+  ],
+  "shared_components": [
+    "Pinned independent raw row-constraint and complete-tree checker, with original exact controls rerun.",
+    "Python standard library."
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/triangle_capacity_q1_rows/summary.json": "1116581ea1b789d8972ca569d87d1b60e54ef777bee26759b59dd9e53eed6c5e",
+    "acceleration/audit_20260930_triangle_capacity_q1_rows.py": "9e3796efc937f622654612a494ad7483974510a9cdb1a626981fcbf1831224c2",
+    "docs/AUDIT_20260930_TRIANGLE_CAPACITY_Q1_ROWS.md": "08d8d6bbd63fca54686ba4bd49cdb35a3b7de02c50abbb7ff11292e6c24623f6",
+    "acceleration/results/20260930_independent_review/triangle_q1_capacity_sat_binding/summary.json": "8f9a8465c7ecdbb0a37b1a37333625682158e548bb00b7f9a6d136af1e4cae65",
+    "acceleration/results/20260930_capacity_q1_rows/summary.json": "3e665beda8c3521b3fad27d1c31e52afe5be820476d5ba92950f58698d3593c3",
+    "acceleration/results/20260930_capacity_q1_rows/raw99.json": "a9fc61bffe354027d2ef25be1cb915ad9cc3590b176194b5168eac303d494a62",
+    "acceleration/bind_20260930_triangle_capacity_q1_rows.py": "e5a1cd39d5ef9c4f7b624cd8b9a8a4edd897b83fbb7b3dea35377a639aa0e79d"
+  },
+  "artifact_availability": "LOCAL_ONLY",
+  "target_resolution": false,
+  "external_review": false,
+  "created_at": "2026-09-29T23:21:35.134136+00:00",
+  "updated_at": "2026-09-29T23:21:35.134136+00:00",
+  "source_commit": "f3c1e730877d24ac3a1eb72309b2cc69f77a543f",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/bind_20260930_triangle_capacity_q1_rows.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10"
+}

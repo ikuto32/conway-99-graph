@@ -1,0 +1,198 @@
+{
+  "status": "INDEPENDENT_EIGHT_GPU_SUPPORT_CLAIM_BINDING_PASS",
+  "claim_id": "C-PARTIAL-K-EIGHT-COORDINATE-GPU-FROZEN-SUPPORT-ATTEMPTS",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For each of the six frozen run02 support attempts, in checkpoint order 1000, 5000, 10000 and last then average, independently evaluating every one of the 1875214 retained eight-coordinate stars gives exact support-bound numerators [-77488,-88510,-211,-26216,-1,-13149] over denominator 1048576. All six bounds are nonpositive and establish no exclusion.",
+  "kind": "empirical/engineering result",
+  "basis": [
+    "COMPUTED"
+  ],
+  "verifier": "/root/state_literature_audit independent checking agent",
+  "timestamp": "2026-09-29T20:05:01.992300+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_eight_gpu_support_claim_binding.py",
+    "--audit-sha256",
+    "4170962974b8ed58eb9643be29c4e15125a55fedf21d0a33c9af6d14056f023a"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "scope": "Exactly the frozen 120-fixed-K-edge eight-coordinate family with all prescribed absences, and its audited matching-filtered moment relaxation. Exactly six saved weight choices, not optimization over all possible weights.",
+  "dependencies": [
+    {
+      "id": "C-PARTIAL-K-EIGHT-COORDINATE-DOMAINS",
+      "revision": 1,
+      "relation": "coverage"
+    },
+    {
+      "id": "C-PARTIAL-K-EIGHT-COORDINATE-NEIGHBORHOOD-MATCHING-FILTER",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-PARTIAL-K-EIGHT-COORDINATE-MATCHING-FILTERED-MOMENT-ENCODING",
+      "revision": 1,
+      "relation": "verification_dependency"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/eight_gpu_support_run02.json": "4170962974b8ed58eb9643be29c4e15125a55fedf21d0a33c9af6d14056f023a",
+    "acceleration/audit_20260930_eight_gpu_support_claim_binding.py": "7e49091851cbf1e6e25b742c761a0de9f341133f4b605ad40b98f7199d232628",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260930_independent_review/eight_gpu_support_derivation.md": "188391596e00b1cd0c6cc03aea4534850102c88ce72117e6c96ae0524a6cbf2e",
+    "acceleration/results/20260930_eight_moment_pdhg/run02/certificates/summary.json": "975393614a0d6f0654c1d09e9c6e1aad477114dcecbbf871479a0b741b7a8657",
+    "acceleration/results/20260930_eight_moment_pdhg/run02/summary.json": "a655d5edd2a98f0a8da82482d408fb7e989ce9ba665fcecdf67072b26dd689c5"
+  },
+  "exact_values": [
+    {
+      "iterations": 1000,
+      "iterate": "last",
+      "numerator": -77488,
+      "denominator": 1048576,
+      "reduced": "-4843/65536",
+      "certificate_path": "acceleration/results/20260930_eight_moment_pdhg/run02/certificates/1000_last.json",
+      "certificate_sha256": "a3ffa3857081efb6488460fc760032fe5a23c71471a881a945545990478ac68c"
+    },
+    {
+      "iterations": 1000,
+      "iterate": "average",
+      "numerator": -88510,
+      "denominator": 1048576,
+      "reduced": "-44255/524288",
+      "certificate_path": "acceleration/results/20260930_eight_moment_pdhg/run02/certificates/1000_average.json",
+      "certificate_sha256": "091e0004a8010d6d6c42e4eaabe86721195d8e0aedf8d4125e222f7827b4935d"
+    },
+    {
+      "iterations": 5000,
+      "iterate": "last",
+      "numerator": -211,
+      "denominator": 1048576,
+      "reduced": "-211/1048576",
+      "certificate_path": "acceleration/results/20260930_eight_moment_pdhg/run02/certificates/5000_last.json",
+      "certificate_sha256": "376f42ea7f1f2ac24dddd1faeb3d85999c2d4a92ca657140d38f1390d11cce2a"
+    },
+    {
+      "iterations": 5000,
+      "iterate": "average",
+      "numerator": -26216,
+      "denominator": 1048576,
+      "reduced": "-3277/131072",
+      "certificate_path": "acceleration/results/20260930_eight_moment_pdhg/run02/certificates/5000_average.json",
+      "certificate_sha256": "14d09b04f05a0e77dc6255c180333dc1fd3cd0ff8b23a186f2b8e6c6cfae19da"
+    },
+    {
+      "iterations": 10000,
+      "iterate": "last",
+      "numerator": -1,
+      "denominator": 1048576,
+      "reduced": "-1/1048576",
+      "certificate_path": "acceleration/results/20260930_eight_moment_pdhg/run02/certificates/10000_last.json",
+      "certificate_sha256": "fef097540aa767b7b713dc81306a6207a7455de54bac8dc28b3fa86ba84e6105"
+    },
+    {
+      "iterations": 10000,
+      "iterate": "average",
+      "numerator": -13149,
+      "denominator": 1048576,
+      "reduced": "-13149/1048576",
+      "certificate_path": "acceleration/results/20260930_eight_moment_pdhg/run02/certificates/10000_average.json",
+      "certificate_sha256": "922f05fc0188e5a8c048002cc130fb10fe79b993eb1fcf6e5c4e89999bb63851"
+    }
+  ],
+  "counts": {
+    "frozen_attempts": 6,
+    "independently_evaluated_attempts": 6,
+    "skipped_attempts": 0,
+    "failed_attempts": 0,
+    "positive_attempts": 0,
+    "distinct_retained_stars": 1875214,
+    "star_evaluations_across_six_attempts": 11251284,
+    "centers_per_attempt": 84,
+    "center_maxima_across_six_attempts": 504
+  },
+  "best_bound": {
+    "numerator": -1,
+    "denominator": 1048576,
+    "iterations": 10000,
+    "iterate": "last",
+    "metric": "Matching-filtered full-neighborhood moment L1 support lower bound for this fixed family; larger is stronger. This bound is weaker than the trivial nonnegative objective lower bound zero."
+  },
+  "checking_method": "Checkpoint byte recovery from authenticated gzip parts, exact binary64 ratio rounding and clipping, independent Python unbounded-integer direct raw-neighborhood scoring of every retained star, all maxima and first argmax IDs, and complete sound-filter premise binding. No serialized matrix arithmetic or producer scorer imports.",
+  "shared_components": [
+    "Python standard library",
+    "tqdm",
+    "prior independent raw-neighborhood scorer and rook controls",
+    "independent zlib recovery helper",
+    "pinned complete domain/filter/model/export reviews; these use NumPy/SciPy sparse operations, but this scoring path does not"
+  ],
+  "controls": [
+    {
+      "root": 0,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 1,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 2,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 3,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 4,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 5,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 6,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 7,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    },
+    {
+      "root": 8,
+      "lower_numerator": 0,
+      "rhs_corruption_rejected": true,
+      "column_corruption_rejected": true
+    }
+  ],
+  "limitations": [
+    "A numerical checkpoint is never itself a certificate; only the separately checked integer weights and all column maxima enter this result.",
+    "Scope 120 fixed K edges and prescribed other absences; no unrestricted target resolution or nontrivial automorphism assumption.",
+    "Nonpositive attempts prove neither feasibility nor exclusion; no claim of optimality.",
+    "Resumed completed attempt receipts, if used, are bound to this checker source and all frozen inputs; they are repeated evidence, not another independent implementation.",
+    "These six nonpositive lower bounds prove neither exact LP feasibility nor graph existence, and are not evidence that no stronger support bound exists.",
+    "GPU numerical calibration is engineering context, not a mathematical premise for validity of arbitrary integer weights.",
+    "The first native run produced no checkpoints; its six independently audited skips are a separate execution record and are not six additional evaluated bounds."
+  ],
+  "unrestricted_target_resolution": false,
+  "external_review": false
+}

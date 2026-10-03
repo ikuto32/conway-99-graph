@@ -1,0 +1,143 @@
+{
+  "runs": [
+    {
+      "label": "rook9_positive",
+      "full_trace_proposals": 0,
+      "admissible_proposals_recomputed": 0,
+      "initial_energy": 0,
+      "current_energy": 0,
+      "best_energy": 0,
+      "ending_step": 0,
+      "receipt_sha256": "d27b390de88f0da571963ed3a30e52ad4cec87ecdc79bbcb87cbefebcb7fd86a"
+    },
+    {
+      "label": "rook9_forced",
+      "full_trace_proposals": 2048,
+      "admissible_proposals_recomputed": 272,
+      "initial_energy": 0,
+      "current_energy": 0,
+      "best_energy": 0,
+      "ending_step": 2048,
+      "receipt_sha256": "256c50ac0bdc92031e0e059a2aeede3db5c5a7e2f9956c917cccbe77b7186c98"
+    },
+    {
+      "label": "target99_forced",
+      "full_trace_proposals": 2048,
+      "admissible_proposals_recomputed": 1214,
+      "initial_energy": 19800,
+      "current_energy": 7876,
+      "best_energy": 7012,
+      "ending_step": 2048,
+      "receipt_sha256": "3f5f25cbb14644dbb3d01036964c177c5d7e4140d719ed0ddbe82b874a6e1639"
+    },
+    {
+      "label": "target99_greedy",
+      "full_trace_proposals": 2048,
+      "admissible_proposals_recomputed": 1159,
+      "initial_energy": 19800,
+      "current_energy": 4968,
+      "best_energy": 4968,
+      "ending_step": 2048,
+      "receipt_sha256": "e67d7894ffc67dcf59ba6960583a035cf7dddff71b40101e6ae82918663444c9"
+    },
+    {
+      "label": "target99_anneal",
+      "full_trace_proposals": 2048,
+      "admissible_proposals_recomputed": 1154,
+      "initial_energy": 19800,
+      "current_energy": 5050,
+      "best_energy": 5050,
+      "ending_step": 2048,
+      "receipt_sha256": "730e957c817428994a50fbf7226efe3cfd34efb274501714ae8ffa351cf2a4fa"
+    },
+    {
+      "label": "target99_mixed",
+      "full_trace_proposals": 2048,
+      "admissible_proposals_recomputed": 1145,
+      "initial_energy": 19800,
+      "current_energy": 5304,
+      "best_energy": 5248,
+      "ending_step": 2048,
+      "receipt_sha256": "46774022c18c98d13f49ee41c51e39a28b1a36ddf6530f9b842b66f17eb8dce0"
+    },
+    {
+      "label": "resume_whole",
+      "full_trace_proposals": 256,
+      "admissible_proposals_recomputed": 165,
+      "initial_energy": 19800,
+      "current_energy": 6934,
+      "best_energy": 6934,
+      "ending_step": 256,
+      "receipt_sha256": "31df5bd4b9311500f0b26a4c04d8e03e82d3169715acda883620f4bf3167e639"
+    },
+    {
+      "label": "resume_first",
+      "full_trace_proposals": 73,
+      "admissible_proposals_recomputed": 52,
+      "initial_energy": 19800,
+      "current_energy": 10072,
+      "best_energy": 10072,
+      "ending_step": 73,
+      "receipt_sha256": "e00235f34fa9940572e76954f79758e05f6a1f37c12e5620f25e30c85a70f887"
+    },
+    {
+      "label": "resume_second",
+      "full_trace_proposals": 183,
+      "admissible_proposals_recomputed": 113,
+      "initial_energy": 10072,
+      "current_energy": 6934,
+      "best_energy": 6934,
+      "ending_step": 256,
+      "receipt_sha256": "027b3f4d51498c9e210ec871de1ae5dc87d91a9124f66abf3a910335120f150b"
+    }
+  ],
+  "checking_controls": [
+    {
+      "positive": "exact srg(9,4,1,2) all81 integer identities",
+      "rejected_99_scope": "MATRIX: exact matrix dimensions"
+    },
+    {
+      "corrupted_rook_edge": "MATRIX: diagonal/degree"
+    },
+    {
+      "raw_corruption": "energy",
+      "diagnostic": "ENERGY: exact current score"
+    },
+    {
+      "raw_corruption": "best_energy",
+      "diagnostic": "BEST_ENERGY: exact best score/order"
+    },
+    {
+      "raw_corruption": "cn",
+      "diagnostic": "CACHE: all exact common-neighbor cache entries"
+    },
+    {
+      "raw_corruption": "duplicate_triple",
+      "diagnostic": "DOMAIN: linear pair uniqueness"
+    },
+    {
+      "raw_corruption": "zero_rng",
+      "diagnostic": "RNG: nonzero uint64 RNG"
+    },
+    {
+      "mutated_trace_field": "delta",
+      "diagnostic": "REPLAY: raw transition delta"
+    },
+    {
+      "mutated_trace_field": "energy_after",
+      "diagnostic": "REPLAY: raw transition energy_after"
+    },
+    {
+      "mutated_trace_field": "rng_after",
+      "diagnostic": "REPLAY: raw transition rng_after"
+    },
+    {
+      "mutated_trace_field": "accepted",
+      "diagnostic": "REPLAY: raw transition accepted"
+    }
+  ],
+  "all_saved_intermediate_checkpoints": 168,
+  "full_proposals": 10752,
+  "admissible_proposals_full_rescored": 5274,
+  "minimum_probabilistic_decision_margin": 0.0005679459568983612
+}

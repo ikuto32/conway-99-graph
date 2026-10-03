@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-09-29T20:39:57.203673+00:00",
+  "status": "PRODUCER_FULL99_SOLVER_CALIBRATION_PASS",
+  "research_solver_calls": 0,
+  "orchestrator_sha256": "63d2a422a349568c790180d473dec44d66810d13744fb0cc0b3fcaa2fa36f784",
+  "protocol_sha256": "3bd991657244446c8fb26740a68f3d1884ab257bbb5888459909fa63cc513a7d",
+  "manifest_sha256": "7b9a7b54c993e50a09e3ddf743a206b458584dbc4de0df97592a0251b8e17fdd",
+  "records": [
+    {
+      "name": "sat",
+      "result": {
+        "solver_answer": "SAT_MODEL_UNCHECKED",
+        "pysat_version": "1.9.dev15",
+        "engine": "cadical195",
+        "variables": 2,
+        "clauses": 2,
+        "stats": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 0
+        },
+        "parse_seconds": 0.01500000013038516,
+        "load_seconds": 0.0,
+        "solve_seconds": 0.0,
+        "worker_exit_code": 0,
+        "worker_observed_stopped": true,
+        "wall_seconds": 0.10899999993853271,
+        "wall_limit_seconds": 30,
+        "conflict_limit": 10000
+      },
+      "cnf_sha256": "c723087c6c5f7c739aa6f938795f888f96ddff55f6ff620953f14fb726660296",
+      "positive_assignment_passed": true,
+      "corrupt_assignment_rejected": [
+        -1,
+        -2
+      ]
+    },
+    {
+      "name": "unsat",
+      "result": {
+        "solver_answer": "UNSAT_PROOF_UNCHECKED",
+        "pysat_version": "1.9.dev15",
+        "engine": "cadical195",
+        "variables": 2,
+        "clauses": 4,
+        "stats": {
+          "restarts": 0,
+          "conflicts": 2,
+          "decisions": 1,
+          "propagations": 2
+        },
+        "parse_seconds": 0.01600000006146729,
+        "load_seconds": 0.0,
+        "solve_seconds": 0.0,
+        "proof_lines": 3,
+        "proof_sha256": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+        "proof_stream_finalized": true,
+        "synthesized_empty_clause": false,
+        "worker_exit_code": 0,
+        "worker_observed_stopped": true,
+        "wall_seconds": 0.10900000017136335,
+        "wall_limit_seconds": 30,
+        "conflict_limit": 10000
+      },
+      "cnf_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "checker_controls": [
+        {
+          "name": "valid",
+          "command": [
+            "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+            "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_eight_full99_solver_calibration\\unsat\\instance.cnf",
+            "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_eight_full99_solver_calibration\\unsat\\proof.drat"
+          ],
+          "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+          "actual_exit_code": 0,
+          "accepted": true,
+          "wall_seconds": 0.04699999978765845,
+          "proof_sha256": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+          "log_sha256": "fe900aeb83c3b491ebccf895cc338c6e6a22f95ddd052d793264c31467c2056a"
+        },
+        {
+          "name": "invalid_empty_only",
+          "command": [
+            "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+            "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_eight_full99_solver_calibration\\unsat\\instance.cnf",
+            "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_eight_full99_solver_calibration\\unsat\\invalid_empty_only.drat"
+          ],
+          "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+          "actual_exit_code": 1,
+          "accepted": false,
+          "wall_seconds": 0.03100000019185245,
+          "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "log_sha256": "06601b69d68813e641e8cc5306df43898336cdca73396c96d9dd165b4e4aa495"
+        }
+      ]
+    }
+  ],
+  "actual_worker_exit_codes": [
+    0,
+    0
+  ],
+  "independent_review": false,
+  "calibration_is_not_research_verification": true
+}

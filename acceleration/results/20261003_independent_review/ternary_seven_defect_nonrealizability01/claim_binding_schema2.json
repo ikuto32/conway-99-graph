@@ -1,0 +1,147 @@
+{
+  "id": "C-UNRESTRICTED-DEGREE14-TERNARY-SEVEN-DEFECT-NONREALIZABILITY",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly 14 ones in each integer row, put r_uv=(A^2)_uv+A_uv-2 for u<v and let F3 count all unordered residuals not divisible by 3. Then F3 is not 7. This statement alone excludes no other residual count and makes no existence, nonexistence or realization assertion about the target.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "scope": {
+    "description": "Universal necessary exclusion of the single ternary residual count F3=7 in the complete simple symmetric zero-diagonal degree14 adjacency domain of order99. The whole connected support and all high-degree seven-edge cases are covered; only the old connected subcubic support<=12 theorem is used.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99, symmetric binary entries and zero diagonal.",
+    "Every integer row has exactly14 ones; complete common-neighbor and residual rows are used.",
+    "F3 counts all4851 unordered pairs; each modular label is identical at its two endpoints."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-CONNECTED-SUBCUBIC-SUPPORT-RESTRICTION",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "report": "acceleration/results/20261003_independent_review/ternary_seven_defect_nonrealizability01/summary.json",
+  "report_sha256": "8d5e71b12b73888fc50aa32d34bcece9fba0f9a5ad34bd37041a2bbc72fcd722",
+  "verification_timestamp": "2026-10-03T05:24:38.2129313+00:00",
+  "recorded_validation": {
+    "complete_written_derivation_checked": true,
+    "complete_seven_edge_support_classification_checked": true,
+    "all_nonzero_sign_choices_checked": true,
+    "commutator_checked_over_integers": true,
+    "binary_external_twins_checked": true,
+    "excluded_residual_values": [
+      7
+    ],
+    "adjacency_realizations_produced": 0,
+    "target_exclusions": 0
+  },
+  "controls": {
+    "written_falsification_check_count": 12,
+    "positive_written_modular_supports": 1,
+    "positive_names": [
+      "Signed five-vertex seven-edge P4 fan"
+    ],
+    "executed_fixture_count": 0,
+    "executable_controls": null,
+    "executable_controls_null_reason": "Twelve written falsification boundaries and one valid modular support pattern; zero executed graph/support fixtures."
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_SEVEN_DEFECT_NONREALIZABILITY_V1.md": "b292fa51bf1c4ec07c07633e768d525085523cefecd9cc1028a39aa459a8a827",
+    "acceleration/audit_20261003_ternary_seven_defect_nonrealizability_v1.md": "00d8b2ff16c414fa766b695ed9c076043da7f5cd9b69585487e8a24e04ef5f81",
+    "acceleration/results/20261003_independent_review/ternary_subcubic_connected_support01/claim_binding_schema2.json": "562676e3af281e33384265824f9e115dfce27cca498b94f3b46cd0100346edd3",
+    "acceleration/results/20261003_independent_review/ternary_subcubic_connected_support01/summary.json": "e3b6ea1f00bea171554867b68667bdf6d25ed57a3c8c1438d8654cfed01aba15",
+    "acceleration/audit_20261003_ternary_subcubic_connected_support_v1.md": "1233903ac6449e354f8aead02d222b9b2594b617f06dfa0ce8c07800611809ed",
+    "acceleration/results/20261003_independent_review/ternary_seven_defect_nonrealizability01/summary.json": "8d5e71b12b73888fc50aa32d34bcece9fba0f9a5ad34bd37041a2bbc72fcd722"
+  },
+  "shared_components": [
+    "Only the old12 r1 theorem is reused; it was independently written by this same verifier. Its exact report/binding/proof pins are disclosed. Lower45 and spanning99 are not mathematical dependencies.",
+    "Discovery definitions and elementary integer/GF3 arithmetic are shared. Component and excess-degree coverage, binary equations and full row budgets were reconstructed separately on paper.",
+    "No producer code, mathematical program, graph sample, numerical guide, agent agreement or formal proof checker supplies this universal derivation."
+  ],
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-SEVEN-DEFECT-NONREALIZABILITY",
+      "claim_revision": 1,
+      "timestamp": "2026-10-03T05:24:38.2129313+00:00",
+      "verifier": "/root/checkpoint_audit",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "audit_path": "acceleration/results/20261003_independent_review/ternary_seven_defect_nonrealizability01/summary.json",
+      "audit_sha256": "8d5e71b12b73888fc50aa32d34bcece9fba0f9a5ad34bd37041a2bbc72fcd722",
+      "written_proof": "acceleration/audit_20261003_ternary_seven_defect_nonrealizability_v1.md",
+      "written_proof_sha256": "00d8b2ff16c414fa766b695ed9c076043da7f5cd9b69585487e8a24e04ef5f81",
+      "artifact_hashes": {
+        "docs/CANDIDATE_20261003_TERNARY_SEVEN_DEFECT_NONREALIZABILITY_V1.md": "b292fa51bf1c4ec07c07633e768d525085523cefecd9cc1028a39aa459a8a827",
+        "acceleration/audit_20261003_ternary_seven_defect_nonrealizability_v1.md": "00d8b2ff16c414fa766b695ed9c076043da7f5cd9b69585487e8a24e04ef5f81",
+        "acceleration/results/20261003_independent_review/ternary_subcubic_connected_support01/claim_binding_schema2.json": "562676e3af281e33384265824f9e115dfce27cca498b94f3b46cd0100346edd3",
+        "acceleration/results/20261003_independent_review/ternary_subcubic_connected_support01/summary.json": "e3b6ea1f00bea171554867b68667bdf6d25ed57a3c8c1438d8654cfed01aba15",
+        "acceleration/audit_20261003_ternary_subcubic_connected_support_v1.md": "1233903ac6449e354f8aead02d222b9b2594b617f06dfa0ce8c07800611809ed",
+        "acceleration/results/20261003_independent_review/ternary_seven_defect_nonrealizability01/summary.json": "8d5e71b12b73888fc50aa32d34bcece9fba0f9a5ad34bd37041a2bbc72fcd722"
+      },
+      "command": null,
+      "command_null_reason": "Independent written exact universal derivation only; no mathematical computation command. Read/hash/document metadata operations are not theorem fixtures.",
+      "executable_controls": null,
+      "executable_controls_null_reason": "Twelve written falsification boundaries and one valid modular support pattern; zero executed graph/support fixtures.",
+      "tool_versions": null,
+      "tool_versions_null_reason": "No solver, enumeration, executable proof checker or proof assistant.",
+      "checking_assumptions": [
+        "A has order99, symmetric binary entries and zero diagonal.",
+        "Every integer row has exactly14 ones; complete common-neighbor and residual rows are used.",
+        "F3 counts all4851 unordered pairs; each modular label is identical at its two endpoints."
+      ],
+      "scope": {
+        "description": "Universal necessary exclusion of the single ternary residual count F3=7 in the complete simple symmetric zero-diagonal degree14 adjacency domain of order99. The whole connected support and all high-degree seven-edge cases are covered; only the old connected subcubic support<=12 theorem is used.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "shared_components": [
+        "Only the old12 r1 theorem is reused; it was independently written by this same verifier. Its exact report/binding/proof pins are disclosed. Lower45 and spanning99 are not mathematical dependencies.",
+        "Discovery definitions and elementary integer/GF3 arithmetic are shared. Component and excess-degree coverage, binary equations and full row budgets were reconstructed separately on paper.",
+        "No producer code, mathematical program, graph sample, numerical guide, agent agreement or formal proof checker supplies this universal derivation."
+      ],
+      "limitations": [
+        "Only F3=7 is excluded by this claim; no other positive count is excluded here and no remaining value is asserted realizable.",
+        "One signed fan is a written modular control, not an adjacency realization; twelve paper checks and zero executed fixtures.",
+        "No target resolution, graph-space denominator, engine approval, symmetry premise, novelty, formalization or external peer review.",
+        "Source candidate remains unchanged and historically CANDIDATE; this separate report records independent written verification. Outside the frozen first V17 four-claim batch."
+      ]
+    }
+  ],
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "Published context only; separately pinned working candidate/proof bytes are not claimed present in that commit.",
+  "created_at": "2026-10-03T05:24:38.2129313+00:00",
+  "updated_at": "2026-10-03T05:24:38.2129313+00:00",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Exact candidate/proof/dependency bytes through inputs_sha256; public availability requires separate immutable confirmation.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "unavailable_information": {
+    "verifier_source_commit": null,
+    "verifier_source_commit_null_reason": "Separately pinned working written proof; no executable checker implementation commit.",
+    "human_reviewer": null,
+    "human_reviewer_null_reason": "Independent checking agent identified; no human reviewer claimed.",
+    "external_peer_review": null,
+    "external_peer_review_null_reason": "Internal independent written review only.",
+    "novelty": null,
+    "novelty_null_reason": "No literature-priority audit.",
+    "formalization": null,
+    "formalization_null_reason": "Human-checkable written proof only.",
+    "raw_adjacency_realization": null,
+    "raw_adjacency_realization_null_reason": "The signed fan is a modular support control only; no adjacency fixture."
+  },
+  "limitations": [
+    "Only F3=7 is excluded by this claim; no other positive count is excluded here and no remaining value is asserted realizable.",
+    "One signed fan is a written modular control, not an adjacency realization; twelve paper checks and zero executed fixtures.",
+    "No target resolution, graph-space denominator, engine approval, symmetry premise, novelty, formalization or external peer review.",
+    "Source candidate remains unchanged and historically CANDIDATE; this separate report records independent written verification. Outside the frozen first V17 four-claim batch."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "invocation_id": "45b512bfd75042d3a642edd5e616d5f5",
+  "timestamp": "2026-10-02T21:46:44.423642+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:/Users/ikuto/.local/bin/uv.exe",
+    "run",
+    "--locked",
+    "--offline",
+    "python",
+    "acceleration/audit_20261003_wave39_availability_v2.py",
+    "calibration",
+    "--seconds",
+    "150",
+    "--out",
+    "acceleration/results/20261003_wave39_availability_calibration01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 180.0,
+  "allocation_reason": "Read-only Wave39 availability calibration: exact353/350 transition, stage9-omission shape, external metadata and tiny gzip controls;180seconds covers archive-anchor I/O with30worker margin and20shutdown reserve, no mathematical replay.",
+  "success_criterion": "Produce exact V2 calibration summary with all typed positive/corrupted controls and immutable archive anchors; preserve any failed output.",
+  "verification_criterion": "ROOT reviews actual strict control population, source/spec pins, reader anchors and unchanged ledger/index before separately approving full availability audit.",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 20.0,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}

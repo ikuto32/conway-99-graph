@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\record_20261003_wave38_milestone_v2.py", line 212, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\record_20261003_wave38_milestone_v2.py", line 83, in main
+    for name,identity in impact['inputs_sha256'].items():add(name,'independent complete350 impact input',identity)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\record_20261003_wave38_milestone_v2.py", line 73, in add
+    bounded(name);origins[name].add(origin)
+    ^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\record_20261003_wave38_milestone_v2.py", line 66, in bounded
+    need(type(name)is str and name and not any(c in name for c in'\\\r\n\0'),'LITERAL_RELATIVE_PATH');p=PurePosixPath(name);need(not p.is_absolute()and'..'not in p.parts and not name.startswith('.git/'),'WORKSPACE_RELATIVE_PATH');need(name.startswith(('acceleration/','docs/'))or name in DOCS+['CLAIMS.yaml','pyproject.toml','uv.lock','.gitattributes','.github/workflows/claims.yml'],'RESEARCH_NAMESPACE');need(name=='docs/DESIGN_20261003_WEIGHT60_WARM_LOCAL_TRADE_CENSUS_V1.md'or not any(s in name.lower()for s in DENY),'EXCLUDED_QUEUED_WAVE39');need('/build/'not in name and'/recovered/'not in name,'EXCLUDED_BUILD_OR_DUPLICATE');r=(ROOT/name).resolve();need(r.is_relative_to(ROOT),'RESOLVED_BOUNDARY');return r
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\record_20261003_wave38_milestone_v2.py", line 60, in need
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: WORKSPACE_RELATIVE_PATH

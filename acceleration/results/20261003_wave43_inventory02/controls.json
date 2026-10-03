@@ -1,0 +1,48 @@
+{
+  "positive": 4,
+  "strict_negative": 8,
+  "records": [
+    {
+      "case": "parent_path",
+      "expected_stage": "PATH_BOUNDARY",
+      "actual_stage": "PATH_BOUNDARY"
+    },
+    {
+      "case": "backslash",
+      "expected_stage": "LITERAL_PATH",
+      "actual_stage": "LITERAL_PATH"
+    },
+    {
+      "case": "private_build",
+      "expected_stage": "PRIVATE_OR_BUILD_PATH",
+      "actual_stage": "PRIVATE_OR_BUILD_PATH"
+    },
+    {
+      "case": "unrelated_instructions",
+      "expected_stage": "RESEARCH_NAMESPACE",
+      "actual_stage": "RESEARCH_NAMESPACE"
+    },
+    {
+      "case": "duplicate_json",
+      "expected_stage": "JSON_DUPLICATE",
+      "actual_stage": "JSON_DUPLICATE"
+    },
+    {
+      "case": "nonfinite_json",
+      "expected_stage": "JSON_NONFINITE",
+      "actual_stage": "JSON_NONFINITE"
+    },
+    {
+      "case": "wrong_suffix",
+      "expected_stage": "GIT_DOCUMENT_SUFFIX",
+      "actual_stage": "GIT_DOCUMENT_SUFFIX"
+    },
+    {
+      "case": "bool_count_alias",
+      "expected_stage": "TYPED_ALIAS",
+      "actual_stage": "TYPED_ALIAS"
+    }
+  ],
+  "mathematical_replays": 0,
+  "limitation": "Synthetic literal/IO/type boundaries only; no generic filesystem/Git/cleanup guarantee"
+}

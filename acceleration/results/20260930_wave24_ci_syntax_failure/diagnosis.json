@@ -1,0 +1,61 @@
+{
+  "status": "CI_FAILURE_DIAGNOSED",
+  "source_commit": "05f87c6e14105610f8335718675a4e09ff7cf92b",
+  "runs": [
+    {
+      "conclusion": "failure",
+      "databaseId": 36702172523,
+      "event": "pull_request",
+      "headSha": "05f87c6e14105610f8335718675a4e09ff7cf92b",
+      "url": "https://github.com/ikuto32/conway-99-graph/actions/runs/36702172523",
+      "workflowName": "Validate research tools"
+    },
+    {
+      "conclusion": "failure",
+      "databaseId": 36702154667,
+      "event": "push",
+      "headSha": "05f87c6e14105610f8335718675a4e09ff7cf92b",
+      "url": "https://github.com/ikuto32/conway-99-graph/actions/runs/36702154667",
+      "workflowName": "Validate research tools"
+    }
+  ],
+  "python": "3.12.10 (main, May 30 2025, 05:39:07) [MSC v.1943 64 bit (AMD64)]",
+  "scanned_source_count": 1673,
+  "syntax_errors": [
+    {
+      "path": "acceleration/theory_20260930_count_interval_frechet.py",
+      "sha256": "df9cb31a836e8dada21d5e4eb425cfa2fca7b7f40ae62efded76d3f259234850",
+      "exception": "SyntaxError",
+      "message": "expected 'else' after 'if' expression",
+      "line": 21
+    }
+  ],
+  "preserved_failure": {
+    "timestamp": "2026-09-30T08:50:26.368636+00:00",
+    "source_commit": "90d1728fbecc53b01fa88507515e2a445262f168",
+    "command": [
+      "uv",
+      "run",
+      "--locked",
+      "--offline",
+      "--cache-dir",
+      ".uv-cache-20260917",
+      "python",
+      "-B",
+      "acceleration\\theory_20260930_count_interval_frechet.py",
+      "--out",
+      "acceleration/results/20260930_count_interval_frechet"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 1,
+    "error": "SyntaxError at line21: expected 'else' after 'if' expression; token else2 lacked a separating space.",
+    "source_sha256": "df9cb31a836e8dada21d5e4eb425cfa2fca7b7f40ae62efded76d3f259234850",
+    "spec_sha256": "a892978043f17a30884b91b992788c7b6d662bffc25b1f533ce769c1239a8f59",
+    "research_executed": false,
+    "output_directory_created": false,
+    "mathematical_refutation": false
+  },
+  "preserved_failure_sha256": "d80c548a7ac24b791b8a812a1a373f44712f4d4e58230abc55cb0c40aa01b9ae",
+  "protected_sources_unchanged": true,
+  "ledger_changed": false
+}

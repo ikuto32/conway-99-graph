@@ -1,0 +1,90 @@
+{
+  "status": "INDEPENDENT_TRIANGLE_RESIDUAL60_EQUIVALENCE_PASS",
+  "timestamp": "2026-09-29T23:12:39.245900+00:00",
+  "source_commit": "4858e79ca64d278a0ec45767d94ec48617682549",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_triangle_residual60.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/triangle_residual60"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root independent written derivation and raw bitset control checker",
+  "claim_id": "C-TRIANGLE-FACTOR-RESIDUAL60-COMPLETION-EQUIVALENCE",
+  "claim_revision": 1,
+  "statement": "For any specified triangle39core and binary36by60 factor F satisfying the exact factor Gram and two-neighbors-per-fiber column conditions, a symmetric binary zero-diagonal60by60 matrix D completes the99-vertex target if and only if FD=2J-F-CF and D^2+F^TF=12I-D+2J. Its degree8 condition is redundant but may be imposed explicitly.",
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "scope": "Conditional exact block equivalence for a supplied fully validated factor, without assuming a factor exists. No target automorphism or fixed-core containment premise.",
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "dependencies": [],
+  "assumptions": [
+    "Exact triangle core with one C-neighbor in each of three12vertex cells.",
+    "F is binary36x60 and satisfies both stated factor equations.",
+    "D is symmetric binary zero-diagonal60x60."
+  ],
+  "checks": {
+    "raw_block_matrices": [
+      {
+        "cell_size": 2,
+        "entries": 100
+      },
+      {
+        "cell_size": 4,
+        "entries": 484
+      },
+      {
+        "cell_size": 6,
+        "entries": 1089
+      },
+      {
+        "cell_size": 12,
+        "entries": 9801
+      }
+    ],
+    "known_valid_rook9": true,
+    "corruptions_rejected": [
+      "altered residual 2",
+      "altered residual 4",
+      "altered residual 6",
+      "altered residual 12",
+      "altered adjacency assembly",
+      "deleted known-valid rook edge"
+    ],
+    "literal_small_star_cases": 12,
+    "small_star_positives": 3
+  },
+  "inputs_sha256": {
+    "acceleration/results/20260930_triangle_residual60/summary.json": "640f5d191e0e1ebdca9049595f9ab2d92b2e873466ecaa8d409032d5913440b3",
+    "acceleration/theory_20260930_triangle_residual60.py": "c629b9e3ee2ec86b8dcc1edb2605af108320a8b8a99bb6bf9a5fee2c417de5b7",
+    "docs/DERIVATION_20260930_TRIANGLE_RESIDUAL60.md": "9b1722294910bc041b13701b006bbb76fd96dafba3ca81d1b443b0db595d39e1",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_triangle_residual60/block_control_m02.json": "a088a333852e9c8e6b9f8c9042437d241cc02aa6572cf496adb774eb14253087",
+    "acceleration/results/20260930_triangle_residual60/block_control_m04.json": "3f0e1c3080c61d67b15a7dd87fe22efe95ad3bd75bb6402000054d3cfb608cb3",
+    "acceleration/results/20260930_triangle_residual60/block_control_m06.json": "5ac7d6ac72cee064d546278faddd9f1b82b95e4def009bb6d42a5c25149714c8",
+    "acceleration/results/20260930_triangle_residual60/block_control_m12.json": "824b65975e53d1845f112d8dc7379f3d29addbbc430204d1a2522af4c3ad9122",
+    "acceleration/results/20260930_triangle_residual60/generic_star_controls.json": "a433e2c9192a30935934a81291169e3c4b3570bb12780c7c9bf9cae64be0083c",
+    "acceleration/results/20260930_triangle_residual60/manifest.json": "633b52227bb5c1aab7d9524f25f9873456d340094f85a2af3dc621f983db3f8c",
+    "acceleration/audit_20260930_triangle_residual60.py": "7d4e3cf4a80146ece39e2e894eb2b809288b73db7889e643b43e81fe0c7c5e98",
+    "docs/AUDIT_20260930_TRIANGLE_RESIDUAL60.md": "ba511adcd3e873ca39e04afef50d690f4c41d33260ef9e9cf8851936b3d22661"
+  },
+  "shared_components": [
+    "Raw producer fixtures and Python exact integer arithmetic; no producer imports."
+  ],
+  "limitations": [
+    "No factor or residual graph has been constructed or excluded here.",
+    "Nonempty individual row domains do not imply symmetric simultaneous feasibility.",
+    "The row-star relaxation does not include all D^2 equations; the full equivalence requires them.",
+    "Finite controls calibrate implementation, not universal quantification.",
+    "No complete SAT encoding or exhaustive star enumerator is certified by this theorem audit.",
+    "Producer screening API has only finite calibration here; any future claimed factor exclusion needs its own complete artifact audit."
+  ],
+  "target_resolution": false,
+  "actual_target_factor_available": false
+}

@@ -1,0 +1,163 @@
+{
+  "status": "BALANCED_GRAM_NATIVE_PENDING_INDEPENDENT_REVIEW",
+  "timestamp": "2026-09-30T05:35:10.836673+00:00",
+  "receipt": {
+    "timestamp": "2026-09-30T05:35:10.828666+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "60s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "1000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_balanced_gram_cnf/instance.cnf",
+      "/tmp/conway99-balanced-gram-VwAlRm/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 20,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 70,
+    "wall_seconds": 22.233999999938533,
+    "stdout": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "06f17bf173baeb1ebf754c32fcb9b2e856da47642993d2cc03dfb0d4145d6c11",
+    "stderr": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-balanced-gram-VwAlRm/proof.drat",
+    "sha256": "94d2ab35c76b61f3deb01ebfd9ca0dc70452bddf847383d5838b2b2ca902396b",
+    "bytes": 227098316,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T05:35:11.002770+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-balanced-gram-VwAlRm/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.1559999999590218,
+      "stdout": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "305a254121950f939ef140834ee54935d0dc6570c2944b3666c09907ccfd1026",
+      "stderr": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T05:35:12.089891+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-balanced-gram-VwAlRm/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 1.078999999910593,
+      "stdout": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.17100000008940697
+  },
+  "fresh_process_observation": {
+    "timestamp": "2026-09-30T05:35:12.328946+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/ps",
+      "-C",
+      "cadical",
+      "-o",
+      "pid,ppid,comm,pcpu,rss,args"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 1,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 10,
+    "wall_seconds": 0.06299999984912574,
+    "stdout": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/processes_after.stdout.log",
+    "stdout_sha256": "266e9b4bf5552ca62bca2570eeae80ae7ce23b8a831e8513c3aaa3e1f7c4840f",
+    "stderr": "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/processes_after.stderr.log",
+    "stderr_sha256": "b9295050338450e1f2fe7f4bd4411764002b46d9dfe5fea0bc86c964e426bc8c",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "interpreted_result": "BALANCED_GRAM_UNSAT_TRACE_UNCHECKED",
+  "outputs_sha256": {
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/launch.json": "c3aee518ce0c0776adb014a29e95df947f91af390466069c9df4400471c17fa9",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/proof.drat": "94d2ab35c76b61f3deb01ebfd9ca0dc70452bddf847383d5838b2b2ca902396b",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/solver.receipt.json": "1fa93afdcec2f4f85ca92c5ab5118b892f71742b3edf00a95373d7fcc630a086",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/solver.stdout.log": "06f17bf173baeb1ebf754c32fcb9b2e856da47642993d2cc03dfb0d4145d6c11",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_copy.receipt.json": "583ca13ec6419f5e6ffe1bc0db8a4b18cb9c84f9c0628656a03691ab4e1dc034",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_hash.receipt.json": "037fe964d859756dfd869bff613af9a6fa3a52469773c05ba350bf9cb8f521dc",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_balanced_gram_native_pilot/main/transfer_hash.stdout.log": "305a254121950f939ef140834ee54935d0dc6570c2944b3666c09907ccfd1026"
+  },
+  "limitations": [
+    "SAT requires the separate complete-assignment/actual-clause/raw-factor checker; producer safeguards are not independent approval.",
+    "Outside-column caps were omitted; diagnostic failures preserve a weaker Gram factor. No residualD/full99 graph follows even if caps pass.",
+    "UNSAT requires complete independent proof replay and the exact balanced fixed-support equivalence; no unrestricted nonexistence follows.",
+    "UNKNOWN excludes nothing. Full trace hashing/copy time is separately recorded outside the native wall allocation."
+  ]
+}

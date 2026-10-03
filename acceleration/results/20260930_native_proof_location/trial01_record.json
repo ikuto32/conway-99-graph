@@ -1,0 +1,142 @@
+{
+  "location": "ext4",
+  "native_receipt": {
+    "timestamp": "2026-09-29T21:19:45.773824+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "15s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "1000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_proof_location/pigeonhole9into8.cnf",
+      "/tmp/conway99-native-proof-gOqpBr/trial01_ext4.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 20,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 35,
+    "wall_seconds": 0.25,
+    "stdout": "acceleration/results/20260930_native_proof_location/trial01_ext4/solver.stdout.log",
+    "stdout_sha256": "a8a407e90b9657cc22bbd05a5758fe5f38261796d30f9e1c467486a0c8dbc8d6",
+    "stderr": "acceleration/results/20260930_native_proof_location/trial01_ext4/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "copy": {
+    "linux_source": "/tmp/conway99-native-proof-gOqpBr/trial01_ext4.drat",
+    "sha256": "997943286ed0604ced76a54fd01c5af2b1329e0425860717a3f853053efa12dd",
+    "bytes": 2729103,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-29T21:19:45.874266+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-native-proof-gOqpBr/trial01_ext4.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.0940000000409782,
+      "stdout": "acceleration/results/20260930_native_proof_location/trial01_ext4/transfer_hash.stdout.log",
+      "stdout_sha256": "f3ede6598cdf97dddae1c108917b72b6c99d5e61837f9924bf71a78bde519db5",
+      "stderr": "acceleration/results/20260930_native_proof_location/trial01_ext4/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-29T21:19:45.973336+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-native-proof-gOqpBr/trial01_ext4.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_proof_location/trial01_ext4/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 0.0779999999795109,
+      "stdout": "acceleration/results/20260930_native_proof_location/trial01_ext4/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_native_proof_location/trial01_ext4/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.0
+  },
+  "proof": "acceleration/results/20260930_native_proof_location/trial01_ext4/proof.drat",
+  "proof_sha256": "997943286ed0604ced76a54fd01c5af2b1329e0425860717a3f853053efa12dd",
+  "proof_bytes": 2729103,
+  "solver_plus_copy_seconds": 0.3279999999795109,
+  "index": 1,
+  "status": "COMPLETED_UNSAT",
+  "proof_check": {
+    "accepted": true,
+    "proof_sha256": "997943286ed0604ced76a54fd01c5af2b1329e0425860717a3f853053efa12dd",
+    "receipt": {
+      "timestamp": "2026-09-29T21:19:46.315677+00:00",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_proof_location\\pigeonhole9into8.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_proof_location\\trial01_ext4\\proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 30,
+      "wall_seconds": 0.3279999999795109,
+      "stdout": "acceleration/results/20260930_native_proof_location/trial01_checker.stdout.log",
+      "stdout_sha256": "58fca5246501250cfb6cc57c55aa8445f13c194903213ea05b6d74355e3a275b",
+      "stderr": "acceleration/results/20260930_native_proof_location/trial01_checker.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    }
+  }
+}

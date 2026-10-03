@@ -1,0 +1,43 @@
+# Wave30 batches03 through05 registration preparation
+
+This unexecuted source admits exactly six independently bound revision1 claims:
+encoding then complete literal exclusion for each of batch03,04,05 in that order.
+Require the explicit CLI SHA of the current300-claim ledger (after publication
+availability changes), six report/binding hash pairs, all raw input/output hashes,
+the exact report paths and independent PASS statuses, and original verifier and
+claim scopes. Preserve all prior claim/artifact objects. Before execution root
+must review every actual independent report and binding; pending cases cannot be
+registered. This program does no mathematical approval or replay.
+
+Check every CNF/scope/count identity between each encoding and proof report,
+complete64 outcomes per batch, disjoint192 new case IDs, and prior proof counts
+188,252,316 respectively. Each later prior set must contain all earlier new IDs.
+Every dependency must already be VERIFIED/CLEAR at its exact revision. Retain
+original scopes, assumptions, shared components and timestamps. New evidence is
+LOCAL_ONLY until immutable publication is confirmed. Preserve before/after
+ledgers, validation, corruption controls and exact execution provenance.
+
+Reject corrupted revision, status, review state, verifier, identity, independent
+report status and formula/proof mismatches. Validate schema, available hashes and
+impact before the live write. Output must be fresh. This is a narrowly scoped
+extension of the preserved wave29 registrar, not evidence of target resolution.
+
+V2 changes only ledger commit/recovery. Preserve v1 unexecuted source and its
+independent source-review finding. Prepare and fsync a same-volume ledger temp
+and final-receipt temp, write an immutable PREPARED journal and preparatory report,
+then authenticate the live before bytes immediately before atomic os.replace.
+Publish summary.json only after replacement. An exception records whether the
+ledger replacement occurred and the observed live hash. If replacement succeeds
+but final receipt publication fails, treat registration as requiring a separate
+recovery audit using immutable before/after snapshots, journal and prepared receipt.
+Do not rerun or silently roll back. Atomic filesystem rename semantics are a
+trusted component; power-loss durability and concurrent external edits are not
+universally guaranteed. The single root writer remains the operational assumption.
+
+V3 changes only failure classification. The replacement Boolean is diagnostic:
+actual observed live SHA256 determines UNCHANGED_BEFORE, REPLACED_WITH_EXPECTED_AFTER,
+or UNKNOWN_OR_UNEXPECTED_BYTES. Any state except exact BEFORE requires a separate
+recovery audit. Unavailable observations and unavailable prepared-after bytes
+are explicit nulls with reasons. This closes the interrupt interval between
+atomic replacement and assigning its diagnostic flag. No exception injection
+or registrar execution has occurred during this preparation.

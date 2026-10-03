@@ -1,0 +1,159 @@
+{
+  "timestamp": "2026-09-30T00:07:11.591575+00:00",
+  "source_commit": "b2842b933366c68ee42bbd5669717550d5227f08",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_eleventh_checkpoint.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "previous_report": "docs/RESEARCH_20260930_TENTH_WAVE.md",
+  "previous_checkpoint_sha256": "01c2648992548ae7ddd4aa2c449f56800f5f8c6ff7d8cb0a47aa7a78a91418ac",
+  "target_resolution": "UNKNOWN",
+  "external_review": null,
+  "external_review_reason": "No validated target graph or general nonexistence proof in this repository.",
+  "claim_population": 122,
+  "verified_clear": 120,
+  "claim_status_counts": {
+    "VERIFIED": 120,
+    "CANDIDATE": 2
+  },
+  "claim_review_counts": {
+    "CLEAR": 122
+  },
+  "new_verified_ids": [
+    "C-FIXED-TRIANGLE-ONE-C2-ROW-TARGET-PROJECTION-CNF",
+    "C-FIXED-TRIANGLE-ONE-C2-ROW-PROJECTION-CONSTRUCTION",
+    "C-SIX-PRISM-FIVE-MATCHING-COMPLEMENT-DESIGN-EXCLUSION",
+    "C-SIX-PRISM-GLOBAL-COMPLEMENT-PAIRING-EXCLUSION",
+    "C-FIXED-TRIANGLE-ONE-C2-COMPACT-CNF-EQUIVALENCE",
+    "C-FIXED-25-ROW-TRIANGLE-EXTENSION-EXCLUSION",
+    "C-SIX-PRISM-FIVE-MATCHING-UNPAIRED-DESIGN-EXCLUSION",
+    "C-FIXED-TRIANGLE-FULL-FACTOR-COLUMN-CAP-CNF"
+  ],
+  "completed_native_attempts": 4,
+  "native_runs": [
+    {
+      "name": "fixed25",
+      "summary": "acceleration/results/20260930_triangle_one_c2_row_native_pilot/summary.json",
+      "summary_sha256": "a0ed6bc88064b17ab608278cd81b0bb1d086de74806f487b50d3a0bea37ea1e4",
+      "actual_exit_code": 10,
+      "result": "SAT",
+      "attempts": 1,
+      "wrapper_wall_seconds": 17.391000000061467,
+      "conflicts": 176251,
+      "conflicts_unavailable_reason": null
+    },
+    {
+      "name": "prism_complement_design",
+      "summary": "acceleration/results/20260930_prism_factor_design_pilot/summary.json",
+      "summary_sha256": "3ffe56a77656ce20b336c74ecc118d3762c21b4f3f6ab52a740462f11b2694d7",
+      "actual_exit_code": 20,
+      "result": "UNSAT_REPLAYED_SCOPED",
+      "attempts": 1,
+      "wrapper_wall_seconds": 6.297000000020489,
+      "conflicts": 97899,
+      "conflicts_unavailable_reason": null
+    },
+    {
+      "name": "prism_unpaired_design",
+      "summary": "acceleration/results/20260930_prism_unpaired_design_pilot/summary.json",
+      "summary_sha256": "722480a88413bea0e36b1a4071d3675e3e40b8453a07cebe42381ae5d7cc1c03",
+      "actual_exit_code": 124,
+      "result": "UNKNOWN_TIMEOUT",
+      "attempts": 1,
+      "wrapper_wall_seconds": 7.891000000061467,
+      "conflicts": 57015,
+      "conflicts_unavailable_reason": null
+    },
+    {
+      "name": "fixed36_column_caps",
+      "summary": "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/summary.json",
+      "summary_sha256": "b50c6c4b3a6c234241c72fee802e3e22a06e736f60f071382931c1a1180086da",
+      "actual_exit_code": 0,
+      "result": "UNKNOWN_CONFLICT_LIMIT",
+      "attempts": 1,
+      "wrapper_wall_seconds": 83.21899999980815,
+      "conflicts": 1000001,
+      "conflicts_unavailable_reason": null
+    }
+  ],
+  "independently_validated_partial_factors": 1,
+  "partial_factor_shape": [
+    25,
+    60
+  ],
+  "complete36_factors": 0,
+  "complete99_graphs": 0,
+  "complete_unsat_traces_independently_replayed": 1,
+  "row_exclusion": {
+    "distinct_fixed_configurations": 1,
+    "row_domains": 11,
+    "complete_tree_nodes": 1037,
+    "independently_rejected_fresh_corruptions": 34
+  },
+  "newly_closed_unrestricted_branches": 0,
+  "coverage": "Overall search coverage: UNKNOWN; no validated denominator.",
+  "execution": {
+    "observed_at": "2026-09-30T00:07:11.987430+00:00",
+    "command": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu-24.04",
+      "--",
+      "ps",
+      "-C",
+      "cadical",
+      "-o",
+      "pid,etime,pcpu,rss,args"
+    ],
+    "exit_code": 0,
+    "state": "CADICAL_PROCESS_OBSERVED",
+    "stdout_sha256": "10e7176e0bbfb4fe66cf3839ba90d17a3194587fc68ecc393eaea783bb80550d",
+    "stderr_sha256": "b9295050338450e1f2fe7f4bd4411764002b46d9dfe5fea0bc86c964e426bc8c",
+    "scope": "All four named native attempts are complete; any newly observed process belongs to subsequent work."
+  },
+  "next_experiment": "Build and independently audit the arbitrary-core factor model with all matching/permutation choices free and mixed/column caps, then run a bounded native pilot.",
+  "evidence_sha256": {
+    "acceleration/results/20260930_eleventh_artifact_packaging/catalog.json": "b74b33a5338093703f125583886dbec9df28c1861fb68f8ff27517671c4a7f05",
+    "acceleration/results/20260930_eleventh_factor_registration/summary.json": "49775ed09ab2e6ed1223c0e9dd54026be66924eaf6a719a09ff86e78efd451a7",
+    "acceleration/results/20260930_eleventh_preparation_registration/summary.json": "f83dd1121e0e24ab0fb167eed95f4790bc8d3b90962813cf9782b7abf0b37c05",
+    "acceleration/results/20260930_independent_review/one_c2_extension_rows/summary.json": "4b034eb6339d839cb86d7ac51d6b3b7c15db340061d197a4b2b7a34478cbd63b",
+    "acceleration/results/20260930_independent_review/prism_complement_design/complete_main_proof.receipt.json": "7b0ecbcb3ba3ac96fec340acaf289c3e85387f7f035be1a656304bd7364eb45a",
+    "acceleration/results/20260930_independent_review/prism_complement_design/summary.json": "7fe88ffdfb13708f48a730f326d632362331e7c2434ff6e67e21159e53a9c978",
+    "acceleration/results/20260930_independent_review/prism_unpaired_kernel/summary.json": "e6eab509282828851ceede47cb0ff710495e9e6102ca3f242f638781317310b1",
+    "acceleration/results/20260930_independent_review/triangle_column_cap_factor_object_calibration/summary.json": "1c90436973c4483016eb55fca50adf6859849adb58cb3f574889302acb6b4452",
+    "acceleration/results/20260930_independent_review/triangle_factor_column_caps/summary.json": "675dae8635175088bff026c59e171c1d2b2b66a4a880cd6a10500ae66bb74331",
+    "acceleration/results/20260930_independent_review/triangle_one_c2_compact/summary.json": "ea7d2ab3ea41118c6047261fc0dc7e6e7b23f667785cfec8d902c0fadc635a60",
+    "acceleration/results/20260930_independent_review/triangle_one_c2_compact_object_calibration/summary.json": "32ba2ee42e25521b843b4c45380ff6deea2b354b08b2f0ecad3a2a5d0a27c073",
+    "acceleration/results/20260930_independent_review/triangle_one_c2_row_cnf/summary.json": "661062b1fbdf0d9e076082867b44353509fb892d9946dc142d1c70b91f59558d",
+    "acceleration/results/20260930_independent_review/triangle_one_c2_row_sat_binding/summary.json": "ee7af7ec95d70c19068e2d3b3fb756e28db3ba97c7a8c16c0f79c09516a3950e",
+    "acceleration/results/20260930_independent_review/triangle_one_c2_row_sat_object/independent_factor.json": "56bb4def8bc90ffeef5284d342b016b0ced8fc747e0c9cbc6128f6e5c21fcb72",
+    "acceleration/results/20260930_independent_review/triangle_one_c2_row_sat_object/summary.json": "e4693a9bb52831e26ecdeb350565123df4cac58917a66db4762ea31e161809b1",
+    "acceleration/results/20260930_one_c2_extension_rows/manifest.json": "7e69032584471ac42f9b663f63179aeff6c3899b0ee11ecfd81206a2891a1f0c",
+    "acceleration/results/20260930_one_c2_extension_rows/summary.json": "5881b87e985f4f6ca6d8034230938fff315c3f1a9084b4e232715ebdca139242",
+    "acceleration/results/20260930_prism_factor_design_pilot/instance.cnf": "4fcda92fda7b82b2225448f744293d0fedd3f0a4786025603d1aeecc6edeaeaf",
+    "acceleration/results/20260930_prism_factor_design_pilot/manifest.json": "c5da7c5f6f5985d99038a558a61a3ccce145c67e0fe682e575e5a90099762d1e",
+    "acceleration/results/20260930_prism_factor_design_pilot/proof.drat": "5a1f7c0dd73e5f416ea01b93400db7b6e645b45d45cc3c78cea63d89497d38e6",
+    "acceleration/results/20260930_prism_factor_design_pilot/summary.json": "3ffe56a77656ce20b336c74ecc118d3762c21b4f3f6ab52a740462f11b2694d7",
+    "acceleration/results/20260930_prism_unpaired_design_pilot/summary.json": "722480a88413bea0e36b1a4071d3675e3e40b8453a07cebe42381ae5d7cc1c03",
+    "acceleration/results/20260930_prism_unpaired_kernel/manifest.json": "86eb544beb257816c7271680ab5e997f01509c83c17b50e44ce5765ec4d9a9e8",
+    "acceleration/results/20260930_prism_unpaired_kernel/summary.json": "46ab1f208faa608a502df7ffcd8963afca08904db22894c96b56a131b1a618f0",
+    "acceleration/results/20260930_resume/claims_at_eleventh_milestone.yaml": "dd5763ea006eca0a8668671ecdc1996d381dc52366f1cc5e1cc06645727e9b81",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/summary.json": "b50c6c4b3a6c234241c72fee802e3e22a06e736f60f071382931c1a1180086da",
+    "acceleration/results/20260930_triangle_factor_column_caps/instance.cnf": "5a4f1972c74b6987ed05b2e2d19f1919fbe8426f02f4657faaf4b1e3ce1b92c6",
+    "acceleration/results/20260930_triangle_factor_column_caps/manifest.json": "6be982f5bf07cc9f6af0724c076d5883ab1afc534c8e84e7bdb0a3432a545c5c",
+    "acceleration/results/20260930_triangle_factor_column_caps/model.json": "2ac81d4e5f42cd6957b2361b440bcd79ce713f0078dba7140d2a3602f846570b",
+    "acceleration/results/20260930_triangle_one_c2_compact/instance.cnf": "1cb92c761a0d7f9541ee071017e63faf890b1345f48e8d3f278a5314718e6877",
+    "acceleration/results/20260930_triangle_one_c2_compact/manifest.json": "c7c490ee7892c6a05f38fe023fbc92815d8ded979639ad6426fbd0272d15115f",
+    "acceleration/results/20260930_triangle_one_c2_compact/model.json": "3216f163467e60e5da4fa16da90fb1baeab6090cc26c28358b87f694a3d557cf",
+    "acceleration/results/20260930_triangle_one_c2_row_cnf/instance.cnf": "bdafe54585c4f49f2ef4ca7a29862172c7410e73d34c2ac4ac7af4c5cdd79b1b",
+    "acceleration/results/20260930_triangle_one_c2_row_cnf/manifest.json": "0cb3ed51ba81cd1454c3ac6115a8aed4cdee4dc59718ae9887927dac1d95284f",
+    "acceleration/results/20260930_triangle_one_c2_row_cnf/model.json": "918d3a35b1b240874997cb7ac6a001ef5d78ce05792414eeb336a192b8fc1e2a",
+    "acceleration/results/20260930_triangle_one_c2_row_cnf/scope.json": "9c2c0618e4b07dc549eb006b2a81a5e9338b919cc499f01abcddc4dcac8402c8",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/manifest.json": "386144c9249f8fa62c414aea7b806cd09b837e0a59054e4d321e6933447f8d3f",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/summary.json": "a0ed6bc88064b17ab608278cd81b0bb1d086de74806f487b50d3a0bea37ea1e4",
+    "docs/AUDIT_20260930_ONE_C2_EXTENSION_ROWS.md": "2845b504908e6f52a7dee47f179700956b024d83896c03534b2b90d1cfb78893",
+    "docs/AUDIT_20260930_PRISM_COMPLEMENT_DESIGN.md": "1a7836d6971bdde66be02a1ae7fbb17c5d900ccdf2447ca5f386f752cd02ad4b",
+    "docs/AUDIT_20260930_PRISM_UNPAIRED_KERNEL.md": "85f106ac063e4e2a3ef0bb5478475e4115fd05f5138e1f8df90e446d0cad7a32"
+  }
+}

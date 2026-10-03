@@ -1,0 +1,15 @@
+# Independent necessity of the constant-group parity cuts
+
+Fix the saved six-prism Hadamard coordinate support. Assume that a binary factor has the full prescribed Gram, and additionally that each coordinate visits each fibre once across the three columns of every identical-support group. This balance assumption is not known to hold for arbitrary factors. No target automorphism or residual adjacency is assumed.
+
+In one balanced group, associate to each of its six coordinates the permutation in S3 mapping the three column positions to their fibres. Every column contains two coordinates of each fibre, so the sum of these six permutation matrices is 2J. Write the multiplicities of the three even permutations as a_i and those of the three odd permutations as b_j. Each matrix entry occurs in exactly one even and one odd permutation; moreover all nine pairs (i,j) occur. Consequently a_i+b_j=2 for all i,j. All a_i equal an integer a, and all b_j equal 2-a, with a in {0,1,2}.
+
+Thus a group whose coordinate parities are not constant has a=1: its six coordinate permutations are all distinct. Any two distinct permutations of the same sign differ by a nonidentity even permutation of three letters, which is a 3-cycle and has no fixed point. Such two coordinates never lie in the same fibre in any of the group's three columns. This gives zero to each of their three same-fibre Gram entries.
+
+Each nonmatched coordinate pair occurs in exactly five support groups, checked directly from the immutable support. Its prescribed same-fibre Gram entries are all one. If all five groups were nonconstant and their two coordinate signs agreed in every group, the preceding argument would make all three Gram entries zero. This contradiction proves that at least one of the five groups has a sign disagreement or has constant coordinate parity.
+
+In the authenticated original parity model, y denotes the coordinate-sign disagreement auxiliary, and z denotes the all-zero normalized parity selector in a group. The necessary clause for a pair is the disjunction of its five y literals and its five z literals. All sixty maps are independently reconstructed. This proof does not need the original parity model's final nonconstant-group clause or the earlier cyclic-factor exclusion.
+
+Controls enumerate all 6^6 coordinate permutation arrays, all 150 resulting unordered balanced triples, all 2,250 local coordinate pairs and all 36 permutation pairs. Constant groups with repeated permutations provide positive same-fibre coefficients, demonstrating why the constant-group alternative cannot be dropped. Corrupted permutation/domain/literal/RHS records are rejected. The SRG243 fixture is not presented as a balanced-triplet control: this additional hypothesis was never established for that fixture.
+
+The result is a necessary condition across all balanced parity branches on this one support. It is not a factor construction, a complete parity characterization, or an unrestricted exclusion. A later CNF containing these clauses requires a separate byte-level encoding audit and any UNSAT claim requires complete proof replay.

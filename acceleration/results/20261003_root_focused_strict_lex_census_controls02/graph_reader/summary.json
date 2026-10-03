@@ -1,0 +1,530 @@
+{
+  "status": "AUTHOR_STRICT_LEX_GRAPH_PROJECTION_CONTROLS_PENDING_INDEPENDENT_GATE",
+  "timestamp": "2026-10-03T01:14:45.820222+00:00",
+  "producer": "/root/native_driver",
+  "positive_fixtures": [
+    "rook9",
+    "prism9",
+    "cube12"
+  ],
+  "graph_specific_negative_count": 23,
+  "graph_specific_negatives": [
+    {
+      "case": "duplicate_key",
+      "stage": "PROJECTION_JSON",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "malformed_utf8",
+      "stage": "PROJECTION_JSON",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "extra_field",
+      "stage": "GRAPH_SCHEMA",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "old_schema",
+      "stage": "GRAPH_SCHEMA",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "bool_n",
+      "stage": "GRAPH_DOMAIN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "bool_degree",
+      "stage": "GRAPH_DOMAIN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "bool_root",
+      "stage": "GRAPH_DOMAIN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "duplicate_vertex",
+      "stage": "DOMAIN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "duplicate_line",
+      "stage": "DOMAIN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "repeated_pair",
+      "stage": "LINEARITY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "point_bool",
+      "stage": "DOMAIN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "point_range",
+      "stage": "DOMAIN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "missing_line",
+      "stage": "DEGREE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "reordered_frozen",
+      "stage": "GRAPH_FROZEN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "missing_mutable",
+      "stage": "GRAPH_FROZEN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "bool_mutable",
+      "stage": "GRAPH_FROZEN",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "wrong_E_lambda",
+      "stage": "GRAPH_ENERGY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "wrong_E_mu",
+      "stage": "GRAPH_ENERGY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "wrong_R_root",
+      "stage": "GRAPH_ENERGY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "energy_bool",
+      "stage": "ENERGY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "extra_energy",
+      "stage": "ENERGY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "native_history",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "rook_not_target99",
+      "stage": "TARGET_SCOPE",
+      "outcome": "REJECTED"
+    }
+  ],
+  "exact_progress_controls": [
+    {
+      "name": "root_down_mu_worse",
+      "selected": {
+        "E_lambda": 0,
+        "E_mu": 100,
+        "R_root": 1
+      },
+      "baseline": {
+        "E_lambda": 0,
+        "E_mu": 1,
+        "R_root": 2
+      },
+      "expected": true
+    },
+    {
+      "name": "neutral_mu_down",
+      "selected": {
+        "E_lambda": 0,
+        "E_mu": 9,
+        "R_root": 10
+      },
+      "baseline": {
+        "E_lambda": 0,
+        "E_mu": 10,
+        "R_root": 10
+      },
+      "expected": true
+    },
+    {
+      "name": "equal_pair",
+      "selected": {
+        "E_lambda": 0,
+        "E_mu": 10,
+        "R_root": 10
+      },
+      "baseline": {
+        "E_lambda": 0,
+        "E_mu": 10,
+        "R_root": 10
+      },
+      "expected": false
+    },
+    {
+      "name": "root_up_mu_down",
+      "selected": {
+        "E_lambda": 0,
+        "E_mu": 0,
+        "R_root": 11
+      },
+      "baseline": {
+        "E_lambda": 0,
+        "E_mu": 10,
+        "R_root": 10
+      },
+      "expected": false
+    }
+  ],
+  "source_review_synthetic_positive": 2,
+  "source_review_specific_negatives": [
+    {
+      "case": "source_wrong_status",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_wrong_producer",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_wrong_verifier",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_wrong_method",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_wrong_target_resolution",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_false_graph_only_input",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_false_literal_one_move_population_only",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_native_history",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_wrong_complete_labelled_proposals",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_bool_complete_labelled_proposals",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_wrong_mutable_label_count",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_bool_mutable_label_count",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_wrong_selected_proposal_id",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_bool_selected_proposal_id",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_frozen_reordered",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_aggregate_mismatch",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_aggregate_missing",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_pinmap_type",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_matrix_pin_missing",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "source_triples_pin_corrupt",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_incomplete",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_wrong_completed_proposals",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_bool_completed_proposals",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_wrong_population",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_bool_population",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_wrong_starting_proposal_id",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_bool_starting_proposal_id",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_missing_parts",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_type_parts",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_missing_checkpoints",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_type_checkpoints",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_selected_mismatch",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_identity_missing",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_identity_history",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_identity_frozen",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "raw_identity_bool_n",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "old_complete_structural_role",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "future_complete_checkpoint_role",
+      "stage": "SOURCE_REVIEW",
+      "outcome": "REJECTED"
+    }
+  ],
+  "source_review_specific_negative_count": 38,
+  "provenance_synthetic_positive": 1,
+  "provenance_specific_negative_count": 20,
+  "provenance_specific_negatives": [
+    {
+      "case": "prov_extra_rng",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_history",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_unknown_mode",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_pid_bool",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_pid_negative",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_pid_outside",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_path_escape_source_manifest",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_hash_source_manifest",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_path_escape_source_matrix",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_hash_source_matrix",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_path_escape_source_triples",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_hash_source_triples",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_drive_path",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_audit_status",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_audit_extra",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_audit_hash",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_lambda_nonzero",
+      "stage": "PROVENANCE",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_score_bool",
+      "stage": "ENERGY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_score_negative",
+      "stage": "ENERGY",
+      "outcome": "REJECTED"
+    },
+    {
+      "case": "prov_score_missing",
+      "stage": "ENERGY",
+      "outcome": "REJECTED"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/project_20261003_root_focused_chain_graph_v2.py": "5c22e4fec65ef3d95ae3f6e09023b3067b674d1a631c228e09b2282daa5d2aab",
+    "acceleration/project_20261003_root_focused_chain_graph_v2_spec.md": "80d5e9148bd8bf387448483e3dd470c3418dea1d7ecaeb392a9e4bf63a2ed2a3",
+    "acceleration/project_20261003_root_focused_neighbor_graph_v1.py": "593b04087da6d54f9d25c159466100dc2b215615d088caf1af7b0eb33009353c",
+    "acceleration/project_20261003_root_focused_neighbor_graph_v1_spec.md": "9842e294d920094140776246c6a36ed2b840f948cefac5607129be23bf0864ec",
+    "acceleration/census_20261003_root_focused_two_line_v1.py": "bbc91ed768a07b302e0e417e8c4415925ef6fac01bd14d78051a56b723419017",
+    "acceleration/census_20261003_root_focused_two_line_v1_spec.md": "9b2fcfc0b330b9183a47c0f3888126ef8dfe8a8dbb4d41366c9adf11006cdcc8",
+    "acceleration/census_20261003_root_focused_chain_v2.py": "fcf84498063d26cb36c003cc3868b865d7e6b7ef3a3da6594b335b1e5a3444ea",
+    "acceleration/census_20261003_root_focused_chain_v2_spec.md": "6248f794c0413f4a0d445cc537b326d81576979a8f31c057ccf5a6b18b568b27",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+    "acceleration/results/20261003_root_focused_two_line_controls01/rook9.json": "a98b36598b2c36796ff895f45564bd5b83c112f1792fd9d80632b88f7d53c821",
+    "acceleration/results/20261003_root_focused_two_line_controls01/prism9.json": "009f8ada57464ccb1c0c3c24d426a1e244ccd69b501377c61d0519ad29ecabff",
+    "acceleration/results/20261003_root_focused_two_line_controls01/cube12.json": "9424900a176eece648eeef84eb2d7acf6758109e15c88a2e1acb7e2b3ea66220"
+  },
+  "command": [
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/native_budget_env_v1/build/native-budget-linux-venv/bin/python3",
+    "acceleration/census_20261003_root_focused_chain_v2.py",
+    "controls",
+    "--seconds",
+    "100",
+    "--out",
+    "acceleration/results/20261003_root_focused_strict_lex_census_controls02",
+    "--source-commit",
+    "00ffb6fdd7d91bd38269e1cc5e6b214ebf7591c8"
+  ],
+  "cwd": "/mnt/c/Users/ikuto/projects/conway-99-graph",
+  "python": "3.12.3",
+  "actual_selected_graph_read": false,
+  "historical_native_state_written": false,
+  "independent_approval": false,
+  "scientific_launched": false,
+  "deadline": {
+    "elapsed_seconds": 1.589658854,
+    "remaining_seconds": 98.41034114600001,
+    "review_remaining_seconds": 1798.4103411459998,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 102.469355151,
+    "review_deadline_at": 1802.469355151,
+    "completed_reviews": 0
+  }
+}

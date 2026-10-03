@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-09-30T00:50:29.413021+00:00",
+  "source_commit": "b9de2985adea787b67017df5d0d757755bc22c9c",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_factor_annealer_pilot.py",
+    "--gate",
+    "acceleration/results/20260930_independent_review/factor_permutation_annealer_bound/summary.json",
+    "--gate-sha256",
+    "70c54735a3331f4bc9dff3ace2f5d1dd4bae49ec051f415a262538f9385b20b9",
+    "--out",
+    "acceleration/results/20260930_factor_annealer_pilot"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/theory_20260930_factor_annealer_pilot.py": "e54d4f7d6e0f282e8010822e6e8cc9056873fd4bac5741af2bc906cb6e83578e",
+    "acceleration/theory_20260930_factor_annealer_pilot_spec.md": "f4c745a44e798be385a550a0a9e87b3c585df77b6b15958b911836d56b1f567b",
+    "acceleration/theory_20260930_factor_permutation_annealer_v2.py": "5d367ebc6683c4c5e473573c7edf14dd571973f75f1612e2be5121892f37cd35",
+    "acceleration/build/factor_permutation_anneal_20260930_v2.exe": "3db33f4d8e75cf25eab7c70fda37f3856b1c0d70af7c778a86ecc297e7bd9f5c",
+    "acceleration/results/20260930_independent_review/factor_permutation_annealer_bound/summary.json": "70c54735a3331f4bc9dff3ace2f5d1dd4bae49ec051f415a262538f9385b20b9",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "cases": [
+    {
+      "core": "shift6",
+      "seed": 20260930,
+      "temperature": 1,
+      "chains": 16,
+      "chunks": 8,
+      "steps": 1024,
+      "seconds": 120,
+      "label": "shift6_T1"
+    },
+    {
+      "core": "shift6",
+      "seed": 20260930,
+      "temperature": 3.25,
+      "chains": 16,
+      "chunks": 8,
+      "steps": 1024,
+      "seconds": 120,
+      "label": "shift6_T3_25"
+    },
+    {
+      "core": "shift6",
+      "seed": 20260930,
+      "temperature": 8,
+      "chains": 16,
+      "chunks": 8,
+      "steps": 1024,
+      "seconds": 120,
+      "label": "shift6_T8"
+    },
+    {
+      "core": "six_prism",
+      "seed": 20260931,
+      "temperature": 1,
+      "chains": 16,
+      "chunks": 8,
+      "steps": 1024,
+      "seconds": 120,
+      "label": "six_prism_T1"
+    },
+    {
+      "core": "six_prism",
+      "seed": 20260931,
+      "temperature": 3.25,
+      "chains": 16,
+      "chunks": 8,
+      "steps": 1024,
+      "seconds": 120,
+      "label": "six_prism_T3_25"
+    },
+    {
+      "core": "six_prism",
+      "seed": 20260931,
+      "temperature": 8,
+      "chains": 16,
+      "chunks": 8,
+      "steps": 1024,
+      "seconds": 120,
+      "label": "six_prism_T8"
+    }
+  ],
+  "planned_cases": 6,
+  "maximum_proposals": 786432,
+  "maximum_initialized_chains": 96,
+  "gpu": "name, driver_version, memory.total [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 616.56, 24564 MiB, 22338 MiB\n",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "objective": "TRIANGLE_FACTOR_CROSS_GRAM_SQUARED_V1",
+  "numerical_acceptance": "double exp heuristic; integer score and deltas",
+  "target_resolution": false
+}
