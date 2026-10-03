@@ -1,0 +1,113 @@
+{
+  "schema": "ROOT_FOCUSED_ENGINEERING_PLAN_V1",
+  "timestamp": "2026-10-02T20:14:26.9320943+00:00",
+  "source_reference_commit": "2d578fa8171597d7a009f02f0d92ee987de24555",
+  "objective": "SRG_ROOT_LOCAL_PAIR_RESIDUAL_V1",
+  "distribution": "MUTABLE_LABELLED_LINES_REJECTION_BOUNDED_XOSHIRO256SS_V1",
+  "source_inputs_sha256": {
+    "acceleration/prepare_20261003_hypergraph_root_focused_v2.py": "8151ed6f6e59fd43a41d17cb499d4b4d6bb3fda4acd9112dfb3c4c5e7396e96e",
+    "acceleration/hypergraph_root_focused_anneal_20261003_v2.cpp": "79e4ef6cad0e439fba4c3868c187115b9ec34c32ad2c04eafce6112f93488267",
+    "acceleration/prepare_20261003_hypergraph_root_focused_v2_spec.md": "193a8997dd1ab1b034ab078d97861ec7dafb760ed0f0731b3aede9732a3986d0",
+    "acceleration/hypergraph_root_focused_anneal_20261003_v2_spec.md": "28c4ee7a9fd81fb2b126440a23934273afe4829683e91478a154a90c042ca641",
+    "docs/DESIGN_20261003_ROOT_FOCUSED_HYPERGRAPH_V1.md": "c299c03d60c97d9ddb8a43cf1b9831e934c791ef3a35ed0e020aafd384c6078c",
+    "acceleration/audit_20261003_root_focused_design_v1.md": "df46f082e0be63917975b5cab517966036a7b2eae6e934917db5d73e917672ff",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434"
+  },
+  "execution_state": "PREPARED_UNEXECUTED_REQUIRES_NEW_ROOT_BUILD_REVIEW",
+  "scientific_launched": false,
+  "build_launched": false,
+  "controls_launched": false,
+  "ledger_edited": false,
+  "input_provenance": {
+    "candidate_native_input": "acceleration/results/20261003_root_focused_start_export01/graph_input.txt",
+    "candidate_native_input_sha256": "203e9a28106304476efeb92bae143be448e0423e87e227cf2a0ec85852ded30e",
+    "candidate_scope": "ROOT independently checked raw start97c251: exact root11 input203e and selected lambda0/mu3484/R50; not used in build/fixture controls.",
+    "independent_input_gate": {
+      "path": "acceleration/results/20261003_independent_review/root_focused_start_full01/summary.json",
+      "sha256": "97c251ab0e5383303f4ec19852b3f6a05b4e1f768a742efa10adabf0d0e29d34",
+      "scope": "Exact selected raw graph/root/selection only; no new engine approval or scientific authorization",
+      "role": "/root"
+    },
+    "independent_input_gate_reason": null,
+    "native_input_used_in_engineering_build": false,
+    "native_input_used_in_finite_controls": false
+  },
+  "frozen_domain": {
+    "target_points": 99,
+    "point_degree": 7,
+    "triples": 231,
+    "root": 11,
+    "frozen_literal_incident_triples": 7,
+    "mutable_labelled_triples": 224,
+    "restricted_move_space": true,
+    "automorphism_assumed": false
+  },
+  "build_allocation": {
+    "outer_seconds": 180,
+    "wrapper_seconds": 150,
+    "compiler_seconds": 100,
+    "wrapper_save_reserve_seconds": 30,
+    "outer_shutdown_reserve_seconds": 20,
+    "automatic_retry": false,
+    "rationale": "Existing byte-preserved V2 native build was1.757069s/wrapper1.933780s; new parser/retention/reference source may cost more. This allocation is evidence-based, not a historical cap or performance guarantee.",
+    "comparison_record": "acceleration/results/20261002_hypergraph_weight60_build02/summary.json",
+    "comparison_sha256": "c7ea29cc1acbc9513f7101211d22526a339c1bd8ad1fc36dc904d1cc7f4f38ef",
+    "success": "Compiler exits0 with exact new native binary/buildmanifest/commands/tool hashes and supported supervisor cleanup; no mathematical claim."
+  },
+  "controls_allocation": {
+    "outer_seconds": 600,
+    "wrapper_seconds": 550,
+    "native_guard_seconds": 10,
+    "cooperative_native_seconds": 5,
+    "wrapper_save_reserve_seconds": 30,
+    "outer_shutdown_reserve_seconds": 20,
+    "address_space_bytes": 2147483648,
+    "file_bytes": 1073741824,
+    "automatic_retry": false,
+    "rationale": "Prior57 native finite controls took22.954537wrapper seconds. New62call/root/distribution/state controls require independent checks;550wrapper provides margin without inherited build/solvercaps. All children share this invocation deadline.",
+    "comparison_record": "acceleration/results/20261002_hypergraph_weight60_controls02/summary.json",
+    "comparison_sha256": "f44a338e33c2593adbb84d1f4da723a9e5331f0aa8895cc228772b615f0695f3",
+    "positive_calls": 26,
+    "strict_negative_calls": 36,
+    "native_calls": 62,
+    "complete_probe_proposals": 270,
+    "whole_split_families": 4,
+    "pair_cost_records_per_positive_call": 172,
+    "success": "All exact62calls/designated outcomes, four complete whole/split objects+traces, root/frozen/import/RNG/cache/category/rollback and immediate retained-selection controls; failed/unattempted cases preserved."
+  },
+  "independent_requirements": [
+    "Separate changed-source engineering checker completely rebuilds every finite raw graph/CN/component/proposal/RNG/acceptance/rollback/frozen source/import/retention/split and actual strict veto. Producer cannot approve own output.",
+    "Separate pre-output saved-object calibration binds changed helper/source closure; sparse scientific traces may not bridge gaps or assert unobserved earliest attainment.",
+    "Exact ROOT selected-start raw input/matrix/triples/fullintegerroot audit is mandatory before science.",
+    "A localzero is only a partial root condition; support multiplicities and complete99 integer SRG identity require separate checks."
+  ],
+  "prelaunch_requirements": [
+    "ROOT reviews exact frozen source/spec/engineeringplan/buildcommand hash and fresh supported resource/process context before compiler launch.",
+    "Build result actualbinary/buildmanifest hashes must enter a new frozen controls command and ROOT review, not invented placeholders.",
+    "No scientific seed/count/temperature/deadline is authorized by this engineering plan; a future exact source/gate/input/resource science plan and ROOT authorization are required."
+  ],
+  "scientific_configuration": null,
+  "scientific_configuration_reason": "Not authorized or calibrated; wrapper defaults are implementation placeholders only.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "source_file_version": 2,
+  "preserved_predecessor": {
+    "engineering_plan": "acceleration/plan_20261003_hypergraph_root_focused_engineering_v1.json",
+    "failure": "acceleration/results/20261003_hypergraph_root_focused_build01/failure.json",
+    "failure_sha256": "e427980c284e9bc1f310540f0c34dfcf92a1d6ce700f06421667c93355ac9701",
+    "actual_result": "Compiler exit1 misleading-indentation warning treated as error, native1.71208682s/outer2.622627249s; deadline not reached, reaped observed emptygroup, no binary or controls/science.",
+    "supervisor_sha256": "ef9e0887295fbc9fde4427d40c3f93c915015e5b5db847a9b0b535efc6d5d4f8",
+    "failed_build_sha256": "9ea96490eea0879b0e326d7af95ed6b607bf483e1c5eac829331471dda79b77d",
+    "wrapper": "acceleration/prepare_20261003_hypergraph_root_focused_v1.py",
+    "wrapper_sha256": "d272f1a4e1f45aa6502f78bea674653e68fc196a8b7ff822d0d8ab570341ff90",
+    "failed_build": "acceleration/results/20261003_hypergraph_root_focused_build01/build.receipt.json",
+    "source": "acceleration/hypergraph_root_focused_anneal_20261003_v1.cpp",
+    "source_sha256": "fa2d2ca8ded83578b03b4e8c30189c886d07cf178303b0e06280c290de276daf",
+    "supervisor": "acceleration/results/20261003_hypergraph_root_focused_build_supervision01/summary.json",
+    "engineering_plan_sha256": "b73fb10f4753133f89ab7f39bdd86d11ac81b83ac6897f4c8716271542629721"
+  },
+  "changed_scope": "Source revision only: explicit braces/newline for constructor degree loop; wrapper only redirects CPP/spec paths. Native objective/state/trace/distribution/interface schemas remain version1. No inherited gate approval; exact V2 source/binary requires new controls and saved-checker gate."
+}
