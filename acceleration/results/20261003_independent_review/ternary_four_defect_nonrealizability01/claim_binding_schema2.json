@@ -1,0 +1,159 @@
+{
+  "id": "C-UNRESTRICTED-DEGREE14-TERNARY-FOUR-DEFECT-NONREALIZABILITY",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly 14 ones in each integer row, put r_uv=(A^2)_uv+A_uv-2 for u<v and let F3 count all unordered residuals not divisible by 3. Then F3 is not 4. Together with C-UNRESTRICTED-DEGREE14-TERNARY-SMALL-DEFECT-SUPPORT r1, this gives F3=0 or F3>=6. No realization of any allowed value and no target existence or nonexistence conclusion is asserted.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "scope": {
+    "description": "Universal necessary exclusion of the single ternary residual count F3=4 in the complete simple symmetric zero-diagonal degree14 adjacency domain of order99. No lambda1, incidence, fixed graph, prism, automorphism or numerical premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99, symmetric binary entries and zero diagonal.",
+    "Every integer row has exactly14 ones; all common-neighbor and residual row sums use the complete matrix.",
+    "F3 counts all4851 unordered pairs with identical endpoint residues.",
+    "The pinned small-support theorem r1 supplies only the necessary alternating C4 support shape when F3=4."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-SMALL-DEFECT-SUPPORT",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "report": "acceleration/results/20261003_independent_review/ternary_four_defect_nonrealizability01/summary.json",
+  "report_sha256": "4c7650c7d4e7e94361678c97c7c5d2307570aecb5035d456e0c4022fc245d76c",
+  "verification_timestamp": "2026-10-03T13:43:43.69341+09:00",
+  "recorded_validation": {
+    "complete_written_derivation_checked": true,
+    "commutator_checked_over_integers": true,
+    "binary_external_twins_checked": true,
+    "common_outside_neighbor_lower_bound": 11,
+    "opposite_good_residual_lower_bound": 9,
+    "opposite_good_residual_upper_bound": 3,
+    "excluded_residual_values": [
+      4
+    ],
+    "combined_necessary_residual_domain": "F3=0 or F3>=6, using the exact prior small-support theorem r1; no allowed value asserted realizable.",
+    "adjacency_realizations_produced": 0,
+    "target_exclusions": 0
+  },
+  "controls": {
+    "written_falsification_check_count": 12,
+    "positive_written_modular_supports": 1,
+    "positive_names": [
+      "Alternating C4 retained from the prior support proof"
+    ],
+    "executed_fixture_count": 0,
+    "executable_controls": null,
+    "executable_controls_null_reason": "Twelve written falsification boundaries; zero executed graph or support fixtures."
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_FOUR_DEFECT_NONREALIZABILITY_V1.md": "08845d97676d050b137e8183f10d38bf3df2424b71aa2997db9fb82384f86364",
+    "acceleration/audit_20261003_ternary_four_defect_nonrealizability_v1.md": "0cf272ed968d83ccd57a14bfece8025bf7b22362ee4e902458f5b2475f4eddf4",
+    "acceleration/results/20261003_independent_review/ternary_small_defect_support01/claim_binding_schema2.json": "764dfa3e0684ee26ff8fbd332260263e1ff32acd82385052cc4f399f100c9f1c",
+    "acceleration/results/20261003_independent_review/ternary_small_defect_support01/summary.json": "74b3043bb5ea79603db65bf6d6f11504274cf5be189525a204d8f6c014946246",
+    "acceleration/audit_20261003_ternary_small_defect_support_v1.md": "f083053e29d51488d9dc4e6d624fde2781b36a5921a25912ae9d57b7058bcab8",
+    "docs/CANDIDATE_20261003_TERNARY_SMALL_DEFECT_SUPPORT_V1.md": "d887daf8e80a8751049f472c54f80d7c61abd245a40020ed93c9114d22677ffd",
+    "acceleration/results/20261003_ternary_four_defect_source01/draft_before_timestamp.md": "be87b6a288b8527924fcd9d174fb6e887d1cd26b2c5d7984591ed979b3bfa6dc",
+    "acceleration/results/20261003_ternary_four_defect_source01/timestamp_correction.json": "a927812a6105a2b335982295b27c79ebfe61c47b0f3e3fae3ad6700d816b8eda",
+    "acceleration/results/20261003_independent_review/ternary_four_defect_nonrealizability01/summary.json": "4c7650c7d4e7e94361678c97c7c5d2307570aecb5035d456e0c4022fc245d76c"
+  },
+  "shared_components": [
+    "The prior necessary support theorem is an explicit uses_result dependency. The same Checkpoint identity independently verified that prior theorem; its exact proof, report and binding are pinned.",
+    "Elementary integer/GF(3) arithmetic and the exact candidate definition are shared. No producer code, graph sample, numerical score or agent agreement is a premise.",
+    "Candidate timestamp-only draft/correction records are preserved and pinned; their metadata correction is not a mathematical change."
+  ],
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-FOUR-DEFECT-NONREALIZABILITY",
+      "claim_revision": 1,
+      "timestamp": "2026-10-03T13:43:43.69341+09:00",
+      "verifier": "/root/checkpoint_audit",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "audit_path": "acceleration/results/20261003_independent_review/ternary_four_defect_nonrealizability01/summary.json",
+      "audit_sha256": "4c7650c7d4e7e94361678c97c7c5d2307570aecb5035d456e0c4022fc245d76c",
+      "written_proof": "acceleration/audit_20261003_ternary_four_defect_nonrealizability_v1.md",
+      "written_proof_sha256": "0cf272ed968d83ccd57a14bfece8025bf7b22362ee4e902458f5b2475f4eddf4",
+      "artifact_hashes": {
+        "docs/CANDIDATE_20261003_TERNARY_FOUR_DEFECT_NONREALIZABILITY_V1.md": "08845d97676d050b137e8183f10d38bf3df2424b71aa2997db9fb82384f86364",
+        "acceleration/audit_20261003_ternary_four_defect_nonrealizability_v1.md": "0cf272ed968d83ccd57a14bfece8025bf7b22362ee4e902458f5b2475f4eddf4",
+        "acceleration/results/20261003_independent_review/ternary_small_defect_support01/claim_binding_schema2.json": "764dfa3e0684ee26ff8fbd332260263e1ff32acd82385052cc4f399f100c9f1c",
+        "acceleration/results/20261003_independent_review/ternary_small_defect_support01/summary.json": "74b3043bb5ea79603db65bf6d6f11504274cf5be189525a204d8f6c014946246",
+        "acceleration/audit_20261003_ternary_small_defect_support_v1.md": "f083053e29d51488d9dc4e6d624fde2781b36a5921a25912ae9d57b7058bcab8",
+        "docs/CANDIDATE_20261003_TERNARY_SMALL_DEFECT_SUPPORT_V1.md": "d887daf8e80a8751049f472c54f80d7c61abd245a40020ed93c9114d22677ffd",
+        "acceleration/results/20261003_ternary_four_defect_source01/draft_before_timestamp.md": "be87b6a288b8527924fcd9d174fb6e887d1cd26b2c5d7984591ed979b3bfa6dc",
+        "acceleration/results/20261003_ternary_four_defect_source01/timestamp_correction.json": "a927812a6105a2b335982295b27c79ebfe61c47b0f3e3fae3ad6700d816b8eda",
+        "acceleration/results/20261003_independent_review/ternary_four_defect_nonrealizability01/summary.json": "4c7650c7d4e7e94361678c97c7c5d2307570aecb5035d456e0c4022fc245d76c"
+      },
+      "command": null,
+      "command_null_reason": "Independent human-checkable exact universal derivation only; no mathematical computation command executed. Read/hash/document metadata operations are not theorem fixtures.",
+      "executable_controls": null,
+      "executable_controls_null_reason": "Twelve written falsification boundaries; zero executed graph or support fixtures.",
+      "tool_versions": null,
+      "tool_versions_null_reason": "No solver, enumeration, executable proof checker or proof assistant used.",
+      "checking_assumptions": [
+        "A has order99, symmetric binary entries and zero diagonal.",
+        "Every integer row has exactly14 ones; all common-neighbor and residual row sums use the complete matrix.",
+        "F3 counts all4851 unordered pairs with identical endpoint residues.",
+        "The pinned small-support theorem r1 supplies only the necessary alternating C4 support shape when F3=4."
+      ],
+      "scope": {
+        "description": "Universal necessary exclusion of the single ternary residual count F3=4 in the complete simple symmetric zero-diagonal degree14 adjacency domain of order99. No lambda1, incidence, fixed graph, prism, automorphism or numerical premise.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "shared_components": [
+        "The prior necessary support theorem is an explicit uses_result dependency. The same Checkpoint identity independently verified that prior theorem; its exact proof, report and binding are pinned.",
+        "Elementary integer/GF(3) arithmetic and the exact candidate definition are shared. No producer code, graph sample, numerical score or agent agreement is a premise.",
+        "Candidate timestamp-only draft/correction records are preserved and pinned; their metadata correction is not a mathematical change."
+      ],
+      "limitations": [
+        "Only F3=4 is excluded here; prior support restrictions imply F3=0 or at least6. No allowed residual count is asserted realizable.",
+        "This is a new strengthening, not a revision or refutation of the prior support theorem.",
+        "No general nonexistence, target graph, automorphism assumption, engine/cache/performance approval or justified target-wide denominator.",
+        "Candidate bytes remain historically CANDIDATE; subsequent independent written verification is this separate report.",
+        "Outside the frozen prospective V17 four-claim batch; any future registration and publication require separate exact bookkeeping checks."
+      ]
+    }
+  ],
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_commit_role": "ROOT-supplied published context; new working candidate, proof and report are separately pinned and not claimed present in that commit.",
+  "created_at": "2026-10-03T04:46:11.8505548Z",
+  "updated_at": "2026-10-03T04:46:11.8505548Z",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read exact candidate, independent proof, prior theorem and preserved timestamp history through inputs_sha256. Publication requires a separate immutable availability audit.",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "unavailable_information": {
+    "verifier_source_commit": null,
+    "verifier_source_commit_null_reason": "Written proof has separately pinned working bytes; no verification implementation commit applies.",
+    "human_reviewer": null,
+    "human_reviewer_null_reason": "Independent checking agent identity is recorded; no human reviewer claimed.",
+    "external_peer_review": null,
+    "external_peer_review_null_reason": "Internal independent written review only; no external or peer review recorded.",
+    "novelty": null,
+    "novelty_null_reason": "No literature-priority or novelty audit.",
+    "formalization": null,
+    "formalization_null_reason": "Human-checkable written proof only; no formal proof artifact.",
+    "raw_adjacency_realization": null,
+    "raw_adjacency_realization_null_reason": "No degree14 adjacency realization of this modular support exists by the checked claim; no graph fixture was produced."
+  },
+  "limitations": [
+    "Only F3=4 is excluded here; prior support restrictions imply F3=0 or at least6. No allowed residual count is asserted realizable.",
+    "This is a new strengthening, not a revision or refutation of the prior support theorem.",
+    "No general nonexistence, target graph, automorphism assumption, engine/cache/performance approval or justified target-wide denominator.",
+    "Candidate bytes remain historically CANDIDATE; subsequent independent written verification is this separate report.",
+    "Outside the frozen prospective V17 four-claim batch; any future registration and publication require separate exact bookkeeping checks."
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "INDEPENDENT_TERNARY_DEGREE14_WRITTEN_DERIVATION_V1",
+  "status": "INDEPENDENT_DEGREE14_TERNARY_ADJACENCY_EXACTNESS_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-ADJACENCY-EXACTNESS",
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary matrix A with zero diagonal and exactly 14 ones in every row, A^2 = 12I - A + 2J over the integers if and only if A^2 = -A + 2J over GF(3). Both equations refer to every matrix entry. I and J have order 99.",
+  "producer": "/root",
+  "verifier": "/root/structural",
+  "method": "independent_derivation",
+  "timestamp": "2026-10-03T02:00:16.8017443+00:00",
+  "record_created_at": "2026-10-03T02:10:19+00:00",
+  "source_commit": "00ffb6fdd7d91bd38269e1cc5e6b214ebf7591c8",
+  "source_commit_role": "Recorded source context for the written review; separately pinned new working documents are not inferred to be present in that commit.",
+  "source": "docs/CANDIDATE_20261003_TERNARY_DEGREE14_EXACTNESS_V1.md",
+  "source_sha256": "274ce3fb355f69068bec254782f9f7d72c5b28e7e0dd53ca655c292dd6361582",
+  "written_audit": "acceleration/audit_20261003_ternary_degree14_exactness_v1.md",
+  "written_audit_sha256": "9f34fc4842379b026eb01430b25edb0a4911ddac713b9dae05f15b2bc9336d24",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_DEGREE14_EXACTNESS_V1.md": "274ce3fb355f69068bec254782f9f7d72c5b28e7e0dd53ca655c292dd6361582",
+    "acceleration/audit_20261003_ternary_degree14_exactness_v1.md": "9f34fc4842379b026eb01430b25edb0a4911ddac713b9dae05f15b2bc9336d24",
+    "docs/DESIGN_20261003_TERNARY_RESIDUE_EXACTNESS_V2.md": "424e9ee705ea9a46fb2ca755e7470992c4825d7ac508ee3b34a2d2673be02170"
+  },
+  "scope": {
+    "description": "Complete entrywise ternary/integer equivalence in the unrestricted simple symmetric zero-diagonal degree-14 adjacency domain of order 99. No adjacency-common-neighbor or incidence premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order 99; I and J have the same order.",
+    "A is symmetric, binary and zero diagonal.",
+    "Each row of A has exactly 14 ones over the integers.",
+    "The ternary equation is checked for every matrix entry over GF(3)."
+  ],
+  "dependencies": [],
+  "independent_path": [
+    "D=A^2-12I+A-2J has every entry divisible by 3.",
+    "Simplicity, symmetry and exact degree imply D_uu=14-12-2=0.",
+    "For u!=v, D_uv is an integer at least -2; divisibility by 3 therefore implies D_uv>=0.",
+    "D times the all-ones vector equals (196-12+14-198) times that vector, hence is zero.",
+    "Every entry of a nonnegative matrix with zero row sums is zero, so D=0.",
+    "Conversely reduce the full integer equation modulo 3."
+  ],
+  "complete_written_derivation_checked": true,
+  "independent_of_discovery_producer": true,
+  "written_falsification_checks": [
+    "Exact integer degree is needed; degree only modulo 3 does not supply the zero row sums.",
+    "Symmetry/binary/zero-diagonal premises are needed for the diagonal and sign bounds; other matrix domains are not asserted.",
+    "Incomplete entries, rank or sampled residue checks cannot supply entrywise divisibility.",
+    "Floating-point residuals or approximate zero cannot supply exact divisibility.",
+    "Modulo 2 permits negative defect -2, so this sign argument cannot be transferred to GF(2).",
+    "The saved incidence-only rank98 graph fails the target equation and cannot be a counterexample to this equivalence; the synthetic degree95/98 Gram construction violates exact degree14.",
+    "No nonzero binary kernel or rank upper bound follows from this implication."
+  ],
+  "written_falsification_check_count": 7,
+  "executable_controls": null,
+  "executable_controls_null_reason": "Written universal proof and paper falsification review only; no executable fixtures or controls were run for this theorem.",
+  "command": null,
+  "command_null_reason": "No mathematical computation command was executed; the written audit is the checking artifact.",
+  "executed_proof_or_fixture_commands": 0,
+  "tool_versions": null,
+  "tool_versions_null_reason": "Exact written integer arithmetic uses no solver, software elimination or executable proof checker.",
+  "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+  "shared_components": [
+    "Finite exact integer arithmetic, divisibility, nonnegative row sums and the complete recorded domain.",
+    "The earlier Structural paper note424e predates the frozen ROOT source and is disclosed supporting derivation, not silently relabelled as source-bound verification.",
+    "No producer imports, discovery calculation, numerical optimizer, SAT checker or software elimination."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only; no external or peer review is recorded.",
+  "novelty": null,
+  "novelty_null_reason": "No novelty or literature-priority audit was performed for this elementary implication.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable proof only; no formal proof assistant artifact was produced.",
+  "mathematical_computation_commands": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "target_graphs_produced": 0,
+  "target_exclusions_produced": 0,
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read the source and written audit at the exact repository-relative paths in inputs_sha256; publication state is separately recorded.",
+  "limitations": [
+    "An equivalence of necessary target conditions, not existence or nonexistence.",
+    "A graph found by a future residue engine must independently pass the complete integer SRG validator.",
+    "No search implementation, move kernel, encoding, performance, automorphism, incidence rank or forced nonzero kernel is approved here.",
+    "The preserved discovery source remains labelled CANDIDATE in its historical bytes; the exact subsequent written verification is this separate record.",
+    "Metadata recording adds no mathematical checking beyond the pinned written audit."
+  ]
+}
