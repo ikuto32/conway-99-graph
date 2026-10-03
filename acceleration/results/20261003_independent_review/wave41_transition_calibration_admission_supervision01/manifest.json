@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "invocation_id": "a81403cd974b4b979e1ea91cc0613a8d",
+  "timestamp": "2026-10-03T02:14:30.399842+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "-NoProfile",
+    "-Command",
+    "$ErrorActionPreference='Stop'\nSet-Location -LiteralPath 'C:\\Users\\ikuto\\projects\\conway-99-graph'\n$taskPlanPath='acceleration/results/20261003_independent_review/wave41_transition_calibration_launch01/plan.json'\nif((Get-FileHash -Algorithm SHA256 -LiteralPath $taskPlanPath).Hash.ToLower() -ne '5ec11a4efc79046dc95bb8cc7e9d98b661c5b9c2b931b9c60ea0f0224f53e682'){throw 'PLAN_HASH'}\n$p=Get-Content -Raw -LiteralPath $taskPlanPath|ConvertFrom-Json\n$pins=[ordered]@{}\nforeach($row in $p.immutable_inputs_sha256.PSObject.Properties){$h=(Get-FileHash -Algorithm SHA256 -LiteralPath $row.Name).Hash.ToLower();if($h -ne $row.Value){throw ('INPUT_HASH '+$row.Name)};$pins[$row.Name]=$h}\n$protected=[ordered]@{'CLAIMS.yaml'=(Get-FileHash -Algorithm SHA256 -LiteralPath CLAIMS.yaml).Hash.ToLower();'.git/index'=(Get-FileHash -Algorithm SHA256 -LiteralPath .git/index).Hash.ToLower()}\nif($protected['CLAIMS.yaml'] -ne '10b7636dafced40101ccf257d5f80468914f53aa2ee2d3c89db43be268bdcc09' -or $protected['.git/index'] -ne '8bcd46056145e09d225a01e553151abd1958364077a85b5c6d1bc33fe4f4cacd'){throw 'PROTECTED_HASH'}\n$ob=Get-Content -Raw -LiteralPath acceleration/results/20261003_independent_review/wave41_transition_windows_observation01.json|ConvertFrom-Json\nif(-not $ob.launch_admissible -or @($ob.unknown_recognized_workers).Count -ne 0){throw 'WORKER_OBSERVATION'}\nforeach($name in @('acceleration/results/20261003_independent_review/wave41_transition_calibration01','acceleration/results/20261003_independent_review/wave41_transition_calibration_supervision01')){if(Test-Path -LiteralPath $name){throw 'OUTPUT_EXISTS'}}\n$head=(& 'C:\\Program Files\\Git\\cmd\\git.exe' rev-parse HEAD).Trim();if($LASTEXITCODE -ne 0 -or $head -ne '00ffb6fdd7d91bd38269e1cc5e6b214ebf7591c8'){throw 'HEAD_HASH'}\n$out='acceleration/results/20261003_independent_review/wave41_transition_calibration_admission01.json';if(Test-Path -LiteralPath $out){throw 'ADMISSION_EXISTS'}\n$r=[ordered]@{schema='WAVE41_METADATA_CALIBRATION_ADMISSION_V1';timestamp=[DateTimeOffset]::UtcNow.ToString('o');status='EXACT_CALIBRATION_ADMISSION_PASS';plan=$taskPlanPath;plan_sha256='5ec11a4efc79046dc95bb8cc7e9d98b661c5b9c2b931b9c60ea0f0224f53e682';inputs_sha256=$pins;immutable_members=$pins.Count;historical_protected_execution_state=$protected;protected_observation_note='ROOT expressly authorized unchanged5ec11 after registration terminal; old plan a4 is historical observation only. Actual new10b ledger is observed/protected separately, outside immutable input pins.';HEAD=$head;windows_observation=$ob.timestamp;unknown_recognized_workers=0;mathematical_replays=0;ledger_mutations=0;index_mutations=0}\n[IO.File]::WriteAllText((Join-Path (Get-Location) $out),(($r|ConvertTo-Json -Depth 10)+\"`n\"),[Text.UTF8Encoding]::new($false))\n[pscustomobject]@{status=$r.status;immutable_members=$pins.Count;sha256=(Get-FileHash -Algorithm SHA256 -LiteralPath $out).Hash.ToLower()}|ConvertTo-Json -Compress"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 30.0,
+  "allocation_reason": "Fresh12 immutable source/runtime pins and updated historical registered10b/index8b observation before exact authorized metadata calibration; short read-only admission under supported Job",
+  "success_criterion": "All12pins/HEAD00ff/current10b/index8b agree, actual no-unknown Windows observation admissible and outputs fresh; save observation without mutation",
+  "verification_criterion": "Inspect admission/emptyJob before unchanged5ec11 calibration; no mathematical verification or source/gate transfer",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 5.0,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}
