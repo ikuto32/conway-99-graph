@@ -26,7 +26,7 @@ Counts derive from the frozen ledger.
 | New revision | Exact scope | Evidence |
 | --- | --- | --- |
 | C-UNRESTRICTED-TRIANGLE-INCIDENCE-WEIGHT5-C4-COLLISION-SUBTRACTION-LOWER-COUNT r1 | Universal finite simple graph triangle-path double-fiber injection into induced four-cycles under exactly one common neighbor per adjacent pair, with conditional unrestricted target N5>=22869 and exact shifted degree5 character row. No existence, rank or exclusion conclusion. | [Audit](../acceleration/results/20261003_independent_review/weight5_c4_raw_full02/summary.json) |
-| C-UNRESTRICTED-TRIANGLE-INCIDENCE-BINARY-RANK-LOWER87 r1 | Unrestricted target conditional necessary triangle-incidence kernel bound|C|<=12187808/2723, dimension<=12 and binary rank>=87; complete exact even13 degree4/5 endpoint certificate using strengthened N5>=22869. No generic-code or divisible-four premise. | [Audit](../acceleration/results/20261003_independent_review/c4_endpoint_full01/summary.json) |
+| C-UNRESTRICTED-TRIANGLE-INCIDENCE-BINARY-RANK-LOWER87 r1 | Unrestricted target conditional necessary triangle-incidence kernel bound \|C\|<=12187808/2723, dimension<=12 and binary rank>=87; complete exact even13 degree4/5 endpoint certificate using strengthened N5>=22869. No generic-code or divisible-four premise. | [Audit](../acceleration/results/20261003_independent_review/c4_endpoint_full01/summary.json) |
 
 **Work completed:** for every finite simple graph with exactly one common
 neighbor per adjacent pair, the complete actual-triangle binary image contains
