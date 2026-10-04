@@ -1,3 +1,14 @@
+# Latest research checkpoint — Wave47
+
+As of 2026-10-04T22:20:27.2017823Z (2026-10-05 JST), the [forty-seventh checkpoint](RESEARCH_20261004_FORTYSEVENTH_WAVE.md) records 467 claims: 458 VERIFIED, 3 CANDIDATE and 6 REFUTED, all review states CLEAR. Its exact 18 new mathematical records exclude rook count 227 under the complete SRG(99,14,1,2) hypotheses. Claim populations measure records, not graph coverage.
+
+**Target verdict: UNKNOWN.** No independently validated complete 99×99 graph or general nonexistence proof exists in this checkpoint. The ledger contains 23,956 artifact records and preserves all 6,054 earlier PUBLIC entries; new evidence stays LOCAL_ONLY until a separate availability review. The accepted copy, typed and generic checks are separate administrative evidence; historical payload hashes are skipped explicitly. Later R226 work is outside this cutoff. This notice makes no fresh process-state observation and does not assert completed publication or complete public replay of omitted engineering fixtures.
+
+This notice precedes the unchanged historical file bytes.
+
+---
+
+
 # Latest research checkpoint — Wave46
 
 As of 2026-10-04T18:56:37.9680865Z (2026-10-05 JST), the [forty-sixth checkpoint](RESEARCH_20261004_FORTYSIXTH_WAVE.md) records 449 claims: 440 VERIFIED, 3 CANDIDATE and 6 REFUTED, all review states CLEAR. It adds 27 separately scoped verified records after Wave45; these counts measure records, not graph coverage.

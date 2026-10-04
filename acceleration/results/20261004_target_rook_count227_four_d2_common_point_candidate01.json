@@ -1,0 +1,112 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T19:32:45Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle T, where r_T counts the rooks containing it. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then those four triangles do not all contain one vertex. The maximum-deficiency-two and four-d2 conditions are explicit hypotheses; this does not exclude every four-d2 population, count227, or the target.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+    "d_T=6-r_T belongs to {0,1,2} for every actual triangle",
+    "exactly four actual triangles have deficiency two"
+  ],
+  "scope": {
+    "description": "Universal conditional exclusion of a common point for all four d2 triangles at R227, with explicit maxd2 and population hypotheses. Arbitrary row and column matching triples and actual extra edges are retained until exact cycle equality and lambda1 saturation force the contradictory rook.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "all_b4_populations_excluded": false,
+    "maximum_d2_condition": "explicit hypothesis, not inherited from an unregistered descendant"
+  },
+  "dependencies": [],
+  "dependency_reason": "All local geometry, rook one-neighbor identity, fan bound, square count, labelled array and cycle identities are reconstructed from the complete target and literal boundary hypotheses. Earlier r1 candidates and the historical rook regular-set proof are preserved comparison/provenance evidence only; no approval is transferred.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md",
+    "sha256": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_EIGHT_D1_D2_BOUNDARY_V1.md": "329f6af24023eb306ba726d2cccd6eb19861aa70a75dcb726013ef8e144a00e7",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "comparison_claims_not_inherited": [
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2", "revision": 1},
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-MAXD2-D2-POPULATION-LOWER4", "revision": 1},
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-EIGHT-D1-D2-BOUNDARY", "revision": 1}
+  ],
+  "exact_boundary": {
+    "R": 227,
+    "D": 24,
+    "a_d1": 16,
+    "b_d2": 4,
+    "P": 20,
+    "F_edges": 36,
+    "actual_uncovered_squares": 36,
+    "local_high_graph_if_common_point": "C4 labelled A-B-C-D-A",
+    "fan_outer_points": 8,
+    "external_positive_triangles": 16,
+    "opposite_pair_rooks": "S1 contains A,C; S2 contains B,D",
+    "rook_intersection": "{v}",
+    "array_points": "sixteen distinct Z_xy for all x in X, y in Y, |X|=|Y|=4",
+    "matching_status_before_cycle_equality": "all row and column perfect matchings arbitrary",
+    "F1": "simple bipartite two-regular graph on sixteen d1 nodes, sixteen edges",
+    "collapsed_F4_cycles": 1,
+    "faithful_F4_cycles": 36,
+    "two_high_F4_cycles": 16,
+    "one_high_F4_cycles": "K<=16",
+    "zero_high_F4_cycles": "q<=4",
+    "cycle_equation": "36=16+K+q",
+    "equality_conclusion": "K16 and q4; every row and column matching preserves the distinguished root pairs",
+    "final_contradiction": "a forced nine-point induced rook contains adjacent actual defect roots"
+  },
+  "proof_route": [
+    "Use local triangle uniqueness and actual rook pair uniqueness to define degree d_T at each point.",
+    "R227 and maxd2/b4 give sixteen d1 and P20; U36 is an exact global square count.",
+    "Four concurrent d2 nodes force the local C4, zero d1 at v and the exact saturated sixteen outer defect incidences.",
+    "Opposite pairs give actual rooks S1/S2; outside-one-neighbor geometry proves their intersection is v and forbids cross-root outer adjacency.",
+    "Every external d1 has its remaining two points outside both rooks; local odd parity and one-neighbor bounds force exactly one row and one column incidence there.",
+    "Linearity and mu2 identify all sixteen Z_xy and arbitrary row/column perfect matchings.",
+    "The sole collapsed F4 is the local high C4; every other F4 is a faithful uncovered actual square.",
+    "Classify all cycles by their number of high nodes to get 36=16+K+q with K<=16 and q<=4.",
+    "Equality forces all matching edges to preserve root pairs, producing a nine-point actual rook grid on any adjacent high-root pair.",
+    "Two known common neighbors prevent any extra grid-nonneighbor edge; the induced rook contradicts the defining defect pair."
+  ],
+  "hand_boundaries": [
+    "A local high C4 is graphical and contributes one collapsed F cycle, not an actual uncovered square.",
+    "An all-root-preserving abstract defect graph has all37 required graph cycles; its actual triangle/rook semantics, not the scalar graph count alone, provide the contradiction.",
+    "Root-crossing row or column matchings are allowed before the exact K+q equality and reduce K.",
+    "S1/S2 existence follows only for the opposite nondefect high pairs; no arbitrary pair is presumed to complete to a rook.",
+    "The actual Z_xy labels, parity and one-neighbor property prevent hidden higher d1 incidence at those points.",
+    "All extra target edges remain until exact lambda1 saturation proves the final grid induced.",
+    "Nonconcurrent b4 and b5..7 remain outside the conclusion."
+  ],
+  "shared_origin": {
+    "Root_saturated_four_d2_fan_attack": true,
+    "Structural_labelled_array_and_cycle_count": true,
+    "historical_rook_regular_set_component": true,
+    "Structural_earlier_R227_cycle_components": true,
+    "new_candidate_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "No full b4 or R227 exclusion is claimed.",
+    "Explicit maxd2 and exactly-four population hypotheses cannot be silently dropped.",
+    "This handwritten candidate requires a different-author whole-proof challenge.",
+    "No source execution, census, registry approval or scientific worker is requested."
+  ]
+}

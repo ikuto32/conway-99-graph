@@ -1,0 +1,107 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Suppose further that every vertex used by the deficiency-one triangles lies in exactly two of them. Let S be that selected vertex support. It is impossible that exactly one outside-S vertex lies in any deficiency-two triangle.",
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "scope": {
+    "description": "Universal conditional exclusion only of multiplicity-two selected support with exactly one outside-S D2 point at R227/maxd2/b5. All actual additional support and point edges are retained. Other outside counts, fourfold support, b5 as a whole and R227 remain unresolved.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [],
+  "original_decorated_dependencies": [],
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+    "exactly five actual triangles have deficiency two",
+    "every vertex used by deficiency-one triangles lies in exactly two of them"
+  ],
+  "limitations": [
+    "Only the literal ordinary-support h1 branch is excluded; no fourfold, h2, all-b5 or R227 exclusion.",
+    "Multiplicity-two and exactly one outside point are explicit assumptions.",
+    "No induced selected support, uniform profile, finite-field, nonzero-code or graph-existence conclusion.",
+    "The a8 empty-subset case is handled before Cauchy; negative signed residue entries remain allowed.",
+    "Earlier necessary boundaries and failed metadata wrappers are not gates for this proof."
+  ],
+  "shared_components": [
+    "Structural is mathematical producer; Root pointwise neighbor-delta outline and Structural internal-increment derivation are shared discovery mechanisms.",
+    "Native independently derives the whole exact conditional statement, all target/local geometry, scaling, residue bookkeeping and pointwise Cauchy contradiction.",
+    "Agreement and shared mechanisms are not independent verification; no previous mathematical/code/matrix gate is transferred."
+  ],
+  "report": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json",
+  "report_sha256": "dbd09b074c9c8439e582fa1d089179235d05e2d2767d6b9038344e7945342d54",
+  "verification_timestamp": "2026-10-04T20:25:05.4030478Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T20:34:32.8485518+00:00",
+  "controls": {
+    "written_proof_checks": 20,
+    "written_boundary_challenges": 6,
+    "written": 26,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_SINGLE_OUTSIDE_POINT_V1.md": "2127b52a44b3f667131c357a41972e631d7c3242d22bfe59e9af46dc65932492",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_point_candidate01.json": "6b152c9bb6138078fa1324690ca64251c9deec23d6c8a4e8cbcaffd87c344819",
+    "acceleration/audit_20261004_target_rook_count227_five_d2_single_outside_native_v1.md": "27466d91662b4bf2c4032be20c699c0b9b937ddce05011373a7c4a372f045c21",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/metadata_writer_correction02.json": "c088482d85243d70b3c2b1aba93296f6171ecb401690bfdc2f3e56992fe82767",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json": "dbd09b074c9c8439e582fa1d089179235d05e2d2767d6b9038344e7945342d54"
+  },
+  "input_map_count": 8,
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_point_candidate01.json",
+    "sha256": "6b152c9bb6138078fa1324690ca64251c9deec23d6c8a4e8cbcaffd87c344819",
+    "original_timestamp": "2026-10-04T20:16:48Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count227_five_d2_single_outside_native_v1.md",
+    "sha256": "27466d91662b4bf2c4032be20c699c0b9b937ddce05011373a7c4a372f045c21"
+  },
+  "failed_outline_preserved": {
+    "path": "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json",
+    "sha256": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "wrong_message_only_formula_used": false,
+    "correct_scaling": "norm(3Qw)^2=63(w^T Qw)",
+    "theorem_refutation_claimed": false
+  },
+  "prior_weighted_metadata_history": {
+    "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/metadata_writer_correction02.json",
+    "sha256": "c088482d85243d70b3c2b1aba93296f6171ecb401690bfdc2f3e56992fe82767",
+    "invalid_prior_weighted_wrappers_preserved": true,
+    "invalid_prior_wrappers_are_gates": false,
+    "these_new_wrappers_copy_raw_with_AsHashtable_and_DateKind_String": true
+  },
+  "root_exact_new_statement_acceptance": null,
+  "five_D2_population_excluded": false,
+  "count227_excluded": false,
+  "ordinary_two_outside_point_branch_excluded": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "external_review": null,
+  "availability": "LOCAL_ONLY",
+  "registration_authorized": false,
+  "ledger_current_presence_asserted": false,
+  "publication_cutoff_inclusion": false,
+  "created_at": "2026-10-04T20:34:32.8485518+00:00",
+  "updated_at": "2026-10-04T20:34:32.8485518+00:00"
+}

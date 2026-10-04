@@ -1,0 +1,136 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T20:31:41Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Suppose every vertex used by the deficiency-one triangles lies in exactly two of them; let S be their support. It is impossible that exactly two outside-S vertices lie in deficiency-two triangles.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+    "exactly five actual triangles have deficiency two",
+    "every vertex used by deficiency-one triangles has selected incidence2"
+  ],
+  "scope": {
+    "description": "Universal conditional exclusion of the k0/h2 ordinary selected-support branch at R227/b5 via a faithful actual-square defect graph and a complete138<144 cycle-incidence bound.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "five_D2_population_excluded": false,
+    "fourfold_support_excluded": false,
+    "one_outside_point_branch_excluded": false
+  },
+  "dependencies": [],
+  "dependency_reason": "All local deficiency, fan, actual-square correspondence, repeated-label K3,3, codegree, low-node and high-root bounds are reconstructed under the literal hypotheses. Earlier numerical edge/degree ranges and descendant gates are comparison only.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_ORDINARY_TWO_OUTSIDE_POINTS_V1.md",
+    "sha256": "be3621b85bd10a5d6ca9b3b961a0b1a7bdadfa5cbece6af6f6edc96d81afe0a6"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_ORDINARY_TWO_OUTSIDE_POINTS_V1.md": "be3621b85bd10a5d6ca9b3b961a0b1a7bdadfa5cbece6af6f6edc96d81afe0a6",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "exact_boundary": {
+    "D": 24,
+    "D1_triangles": 14,
+    "D2_triangles": 5,
+    "positive_triangles": 19,
+    "S_vertices": 21,
+    "outside_D2_points": 2,
+    "shared_D2_roots": 1,
+    "distinct_D2_support_points_in_S": 9,
+    "D1_D2_support_points_max": 2,
+    "D1_root_through_shared_S_point_D2_support_points": 1
+  },
+  "exact_defect_graph": {
+    "vertices": 19,
+    "edges": 36,
+    "low_vertices": 14,
+    "low_degree": 3,
+    "high_vertices": 5,
+    "high_degree": 6,
+    "high_graph": "twoK3s sharing C: CAB and CDE",
+    "local_graphs": "K3 at p/q; P3 at the9 D2 S-points; K2 at theother12 S-points; empty elsewhere",
+    "collapsed_four_cycles": 0,
+    "faithful_uncovered_square_count": 36,
+    "required_four_cycle_incidence": 144,
+    "K33_subgraphs": 0,
+    "max_codegree": 3,
+    "every_low_has_low_neighbor": true
+  },
+  "exact_leaf_root_bound": {
+    "root": "A; symmetric for B,D,E",
+    "neighbors": "C,B and4 lows L_A",
+    "internal_neighbor_graph": "single edge CB",
+    "L_A_independent": true,
+    "m": "number of L_A lows with second high D/E, in0..4",
+    "LL_stubs": "8-m",
+    "opposite_high_common_neighbor_count": "1+t; t0..2; sumt=m",
+    "opposite_high_cycles_bound": "3m/2",
+    "opposite_low_common_neighbor_count": "I+x with I0/1",
+    "opposite_low_I1_x_max": 2,
+    "opposite_low_I0_x_max": 3,
+    "opposite_low_cycles_bound": "3(8-m)/2",
+    "complete_leaf_cycles_bound": 12
+  },
+  "exact_common_root_bound": {
+    "root": "C",
+    "neighbors": "A,B,D,E and2 lows through u",
+    "internal_neighbor_graph": "two disjointedges AB,DE",
+    "external_neighbor_incidence": "4*6+2*3-6-2*2=20",
+    "complete_common_root_cycles_bound": 20
+  },
+  "complete_contradiction": {
+    "low_contribution_max": 70,
+    "four_leaf_contribution_max": 48,
+    "common_root_contribution_max": 20,
+    "total_max": 138,
+    "required": 144
+  },
+  "proof_route": [
+    "The two outside triple fans share one root; lambda1 and triangle linearity give all9 distinct S support points.",
+    "Each selected root uses at most one p-neighbor and at most one q-neighbor; roots through u use no other D2 support point.",
+    "Exact local K3/P3/K2 graphs exclude collapsed F4s; actual labels give36 uncovered squares and144 incidences.",
+    "Repeated-label K33 needs local degree3, forbidden by maxd2; distinct-label K33 is an induced actual rook contradicting its defects.",
+    "Every low has a low neighbor and cycle contribution<=5.",
+    "Each leaf neighbor set has one internal edge and4 independent lows; opposite-high and opposite-low bounds cancel m to give12.",
+    "Common C has two internal matching edges and external incidence20.",
+    "Complete graph incidence<=70+48+20=138 contradicts144."
+  ],
+  "hand_boundaries": [
+    "t2 gives binom3,2=3=3t/2.",
+    "I1/x2 gives binom3,2=3=3x/2.",
+    "I0/x3 gives3<=9/2, a deliberately conservative bound.",
+    "m0..4 all retain identical total leaf bound12 without uniformity.",
+    "The two local high triangles are retained rather than imposing global triangle-freeness.",
+    "No generic prohibition of an even selected six-triangle rook is assumed; only a defect K33 is excluded.",
+    "Extra actual edges are retained until explicitly ruled out by the target lambda1 or distinct-intersection geometry."
+  ],
+  "shared_origin": {
+    "Root_leaf_root_cycle_incidence_outline": true,
+    "Structural_independent_actual_label_and_complete_bound_reconstruction": true,
+    "earlier_R228_R227_K33_codegree_components_disclosed": true,
+    "agreement_is_verification": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "Only literal multiplicity2/h2 is excluded; neither h1 nor fourfold support is a logical premise or conclusion.",
+    "Combining separate independently approved boundaries later requires their exact scopes and identities; this raw candidate is not a general b5 exclusion.",
+    "No R227 or target exclusion, graph realization, scientific invocation or frozen publication change is claimed."
+  ]
+}

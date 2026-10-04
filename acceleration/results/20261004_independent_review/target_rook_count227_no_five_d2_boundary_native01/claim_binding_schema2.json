@@ -1,0 +1,295 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FIVE-D2-BOUNDARY",
+  "revision": 1,
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not five.",
+  "verification_timestamp": "2026-10-04T20:46:35.7519671Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T20:54:25.8676637+00:00",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "scope": {
+    "description": "Universal conditional exclusion of exactly five actual deficiency-two triangles at R227 under explicit maximum deficiency2. Four literal r1 uses_result premises give exhaustive necessary k0/h1,k0/h2,k1/h2 coverage and matching branch contradictions. No R227, b4, another rook count or target exclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_candidate_scope": {
+    "description": "Universal conditional exclusion of exactly five deficiency-two triangles at R227 under explicit maximum deficiency2, composed from four exact r1 result statements.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "four_D2_population_excluded": false,
+    "maximum_deficiency2_inferred": false
+  },
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}"
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "The first exact statement supplies exhaustive k0/h1, k0/h2 or k1/h2 necessary coverage; the other three statements exclude precisely their matching literal branches. No other result or scope projection is used.",
+  "dependency_evidence": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES",
+      "revision": 1,
+      "relation": "uses_result",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/claim_binding_schema2_02.json",
+        "sha256": "c4fdfea30a3b70439afa682dbc4b813144b93b2abfe655e270da6528bfeaddaa"
+      },
+      "report": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/summary02.json",
+        "sha256": "8c236eb15befe2f473d6490a16ab1f16b1a5ffbf049d0c73bd6cc03449d347a4"
+      },
+      "verification_timestamp": "2026-10-04T20:14:52.2756669Z",
+      "producer": "/root/structural",
+      "verifier": "/root/native_driver",
+      "method": "independent_derivation",
+      "result": "PASS",
+      "root_scope_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_five_d2_weighted_boundaries_root_written_acceptance01.json",
+        "sha256": "d07de7ae26ba330f14cba1ff7bb50e97a28bc0bb5f62e13e85240d51cfd4864a",
+        "timestamp": "2026-10-04T20:34:12.1329576+00:00",
+        "administrative_scope_review_not_new_proof": true
+      },
+      "transitive_identities_retained_in_existing_manifests": true
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+      "revision": 1,
+      "relation": "uses_result",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/claim_binding_schema2.json",
+        "sha256": "8ad081ff7d9edb8228a88d385daec2b6a4d53215c7ff7b980646dbcddfa19bc5"
+      },
+      "report": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json",
+        "sha256": "dbd09b074c9c8439e582fa1d089179235d05e2d2767d6b9038344e7945342d54"
+      },
+      "verification_timestamp": "2026-10-04T20:25:05.4030478Z",
+      "producer": "/root/structural",
+      "verifier": "/root/native_driver",
+      "method": "independent_derivation",
+      "result": "PASS",
+      "root_scope_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_root_written_acceptance01.json",
+        "sha256": "c615dafa83018fb5c54a9958d2c6e818a418413f609a22dc2299f627ca712cd6",
+        "timestamp": "2026-10-04T20:36:54.3283488+00:00",
+        "administrative_scope_review_not_new_proof": true
+      },
+      "transitive_identities_retained_in_existing_manifests": true
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/claim_binding_schema2.json",
+        "sha256": "435ba1f1b167370f08dca364db6df29e369de21cbbbdbd97ba226fbed2bf6ef2"
+      },
+      "report": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/summary.json",
+        "sha256": "8f7686c817adac17661edd1ec2f894e7a64f403784962dd48948b06da24a327e"
+      },
+      "verification_timestamp": "2026-10-04T20:25:05.4030478Z",
+      "producer": "/root/structural",
+      "verifier": "/root/native_driver",
+      "method": "independent_derivation",
+      "result": "PASS",
+      "root_scope_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_root_written_acceptance01.json",
+        "sha256": "d328903b763312e55f0b2f69b64b48a5d0b674cf48be43710aa560a23649ee72",
+        "timestamp": "2026-10-04T20:36:54.3999424+00:00",
+        "administrative_scope_review_not_new_proof": true
+      },
+      "transitive_identities_retained_in_existing_manifests": true
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/claim_binding_schema2.json",
+        "sha256": "ce55983c0fcbf7da0a272023a056368e8956aab97a74a2a4112567a2cb43f538"
+      },
+      "report": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/summary.json",
+        "sha256": "5e662c819fcd2208589e1c5f13967b10b28e90b7111227e44b47a790e737c218"
+      },
+      "verification_timestamp": "2026-10-04T20:37:14.5938314Z",
+      "producer": "/root/structural",
+      "verifier": "/root/native_driver",
+      "method": "independent_derivation",
+      "result": "PASS",
+      "root_scope_acceptance": null,
+      "transitive_identities_retained_in_existing_manifests": true
+    }
+  ],
+  "original_fourth_dependency_verification_at_preparation": {
+    "candidate_paper_and_raw_are_frozen": true,
+    "Native_whole_challenge_report_received": false,
+    "Native_binding": null,
+    "Root_acceptance": null,
+    "future_gate_fabricated": false
+  },
+  "current_fourth_report_independently_sealed": true,
+  "current_fourth_root_acceptance": null,
+  "controls": {
+    "written_proof_checks": 18,
+    "written_failure_boundary_challenges": 8,
+    "written": 26,
+    "hand_coverage_rows": 3,
+    "exact_branch_implications": 3,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count227_no_five_d2_boundary_candidate01.json",
+    "sha256": "83d140b75c136d3ef07f32f88f1af2e84b1b747a0b8841bc8d8c97f6ead91831",
+    "original_timestamp": "2026-10-04T20:39:23Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count227_no_five_d2_boundary_native_v1.md",
+    "sha256": "fe3e83b01557af907939fcc7143a9aa54f30d0f911150d6ab7d3505182dd6a0d"
+  },
+  "prior_metadata_history": {
+    "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/metadata_writer_correction02.json",
+    "sha256": "c088482d85243d70b3c2b1aba93296f6171ecb401690bfdc2f3e56992fe82767",
+    "invalid_prior_wrappers_preserved": true,
+    "invalid_prior_wrappers_are_gates": false
+  },
+  "failed_outline_preserved": {
+    "path": "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json",
+    "sha256": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "rejected_formula_used": false,
+    "theorem_refutation_claimed": false
+  },
+  "metadata_writer_correction": {
+    "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/metadata_writer_correction01.json",
+    "sha256": "0b60aeb4f56539da9649d2f1660b07db23d393977d5dbec3d586bd1e82b37876",
+    "parser_failure_before_any_report_save": true,
+    "mathematical_failure": false
+  },
+  "shared_components": [
+    "Structural authored the composition and constituent candidates; Root weighted/pointwise/leaf discovery outlines are disclosed.",
+    "Native authored different-author independent constituent reviews and now separately derives exhaustive tuple coverage and exact hypothesis matching.",
+    "Agreement and shared mechanisms are not verification; four prior mathematical statements are explicit inherited premises, with no code or status gate transfer.",
+    "New composition verification time differs from constituent times; no computational executor exists."
+  ],
+  "root_exact_new_statement_acceptance": null,
+  "five_D2_population_excluded": true,
+  "four_D2_population_excluded": false,
+  "count227_excluded": false,
+  "maximum_deficiency2_inferred": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "availability": "LOCAL_ONLY",
+  "ledger_current_presence_asserted": false,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "Only b5 is excluded under literal R227/maxd2; no noD3 conclusion is inferred as a premise and no R227/b4/target exclusion.",
+    "All four exact revision1 uses_result scopes are required; branch reports are mathematical premises, not an existing composition gate.",
+    "Strict q>0, ordinary integral weights and identical selected support definitions are retained; q>=0 alone fails at two zero upper-bound endpoints.",
+    "No new codeword, equitable profile, induced selected support, automorphism, uniformity or literature classification assumption.",
+    "Producer preparation-time fourth-report false/null fields remain unchanged; later genuine dependency4 binding/report is recorded separately.",
+    "No erroneous scaling argument or invalid null-ID wrapper is used, and no theorem is labeled REFUTED merely from failed metadata or an outline.",
+    "No Native self-discovered e50/E56 refinement is approved or needed.",
+    "Twenty-six written checks only; no mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse or protected edit.",
+    "Registration and Root exact composition review remain separate outside closedWave46 cutoff449; transitive identities stay in immutable premise manifests."
+  ],
+  "report": "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/summary.json",
+  "report_sha256": "3620b3e3963492324f4ee967739b3487c49fec02e4af84170be2434d07bc14d7",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FIVE_D2_BOUNDARY_V1.md": "cd17ee00d44895a57797dd09e21962bfede98322053009b4e69060dcf156b25d",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "acceleration/results/20261004_target_rook_count227_five_d2_weighted_support_boundaries_candidate01.json": "eacf26e07eb2d0a77dc3f4c7b69f37ad277aaf0a1140f001df5930248bfe6e0b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_SINGLE_OUTSIDE_POINT_V1.md": "2127b52a44b3f667131c357a41972e631d7c3242d22bfe59e9af46dc65932492",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_point_candidate01.json": "6b152c9bb6138078fa1324690ca64251c9deec23d6c8a4e8cbcaffd87c344819",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_FOURFOLD_SUPPORT_V1.md": "3d711b5cda4b0b657aed1fcbf21214cfe5c44fef8ae95ae837c34ff731053bfc",
+    "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_support_candidate01.json": "62b71f4a7d088cd68d138b54db320741294173647855a1adcecef3f0b6af3d4b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_ORDINARY_TWO_OUTSIDE_POINTS_V1.md": "be3621b85bd10a5d6ca9b3b961a0b1a7bdadfa5cbece6af6f6edc96d81afe0a6",
+    "acceleration/results/20261004_target_rook_count227_five_d2_ordinary_two_outside_points_candidate01.json": "031ff160a35f2b0d06d14fd81cb24e2b0c7f0cd594042817446c5cdeae967805",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/claim_binding_schema2_02.json": "c4fdfea30a3b70439afa682dbc4b813144b93b2abfe655e270da6528bfeaddaa",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/claim_binding_schema2.json": "8ad081ff7d9edb8228a88d385daec2b6a4d53215c7ff7b980646dbcddfa19bc5",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/claim_binding_schema2.json": "435ba1f1b167370f08dca364db6df29e369de21cbbbdbd97ba226fbed2bf6ef2",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261004_target_rook_count227_no_five_d2_boundary_candidate01.json": "83d140b75c136d3ef07f32f88f1af2e84b1b747a0b8841bc8d8c97f6ead91831",
+    "acceleration/audit_20261004_target_rook_count227_no_five_d2_boundary_native_v1.md": "fe3e83b01557af907939fcc7143a9aa54f30d0f911150d6ab7d3505182dd6a0d",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/summary02.json": "8c236eb15befe2f473d6490a16ab1f16b1a5ffbf049d0c73bd6cc03449d347a4",
+    "acceleration/results/20261004_target_rook_count227_five_d2_weighted_boundaries_root_written_acceptance01.json": "d07de7ae26ba330f14cba1ff7bb50e97a28bc0bb5f62e13e85240d51cfd4864a",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json": "dbd09b074c9c8439e582fa1d089179235d05e2d2767d6b9038344e7945342d54",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_root_written_acceptance01.json": "c615dafa83018fb5c54a9958d2c6e818a418413f609a22dc2299f627ca712cd6",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/summary.json": "8f7686c817adac17661edd1ec2f894e7a64f403784962dd48948b06da24a327e",
+    "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_root_written_acceptance01.json": "d328903b763312e55f0b2f69b64b48a5d0b674cf48be43710aa560a23649ee72",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/claim_binding_schema2.json": "ce55983c0fcbf7da0a272023a056368e8956aab97a74a2a4112567a2cb43f538",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/summary.json": "5e662c819fcd2208589e1c5f13967b10b28e90b7111227e44b47a790e737c218",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/metadata_writer_correction02.json": "c088482d85243d70b3c2b1aba93296f6171ecb401690bfdc2f3e56992fe82767",
+    "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/metadata_writer_correction01.json": "0b60aeb4f56539da9649d2f1660b07db23d393977d5dbec3d586bd1e82b37876",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/summary.json": "3620b3e3963492324f4ee967739b3487c49fec02e4af84170be2434d07bc14d7"
+  },
+  "input_map_count": 27,
+  "external_review": null,
+  "registration_authorized": false,
+  "created_at": "2026-10-04T20:54:25.8676637+00:00",
+  "updated_at": "2026-10-04T20:54:25.8676637+00:00"
+}

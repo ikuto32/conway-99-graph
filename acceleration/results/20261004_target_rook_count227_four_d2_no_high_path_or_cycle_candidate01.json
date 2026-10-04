@@ -1,0 +1,27 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T20:52:35Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-PATH-OR-CYCLE",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly four triangles have deficiency2. Suppose every point used by the sixteen deficiency1 triangles lies in exactly two of them, with support S, and all four deficiency2 triangles lie in S. Their actual intersection graph cannot be P4 or C4.",
+  "assumptions": ["complete finite simple SRG(99,14,1,2)","R227 counts actual induced rook-nine vertex sets once","d_T=6-r_T in {0,1,2}","exactly four actual d2 triangles","selected d1 incidence2 at every S point","all d2 triangles lie in S"],
+  "scope": {"description": "Conditional ordinary-support exclusion of high P4 or C4 topologies at R227/b4, with actual label/defect square correspondence.","unrestricted_target": true,"graph_construction": false,"scientific_coverage": "UNKNOWN","target_resolution": "NONE","count227_excluded": false,"four_D2_population_excluded": false,"high_star_excluded": false},
+  "dependencies": [],
+  "dependency_reason": "The literal support hypotheses are explicit; all defect geometry, actual-square counts, codegrees and both opposite-node bounds are reconstructed. No topology descendant is inherited.",
+  "paper": {"path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_PATH_OR_CYCLE_V1.md","sha256": "686b6cc9a93f92f3287111171ceb001fce89b6b36767d71bf52e47db0bda4165"},
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_PATH_OR_CYCLE_V1.md": "686b6cc9a93f92f3287111171ceb001fce89b6b36767d71bf52e47db0bda4165",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md": "f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "exact_counts": {"D1":16,"D2":4,"S":24,"F_edges":36,"F_four_cycles":36,"required_cycle_incidence":144,"low_max":80,"P4_high_max":60,"C4_high_max":60,"complete_upper":140},
+  "P4_bound": {"n_AC_max":2,"n_BD_max":2,"inner_LL_stubs":"8-n_BD","I2_increment":"1+x/2 beyond3x/2; x<=1","inner_bound":"12+3n_AC/2<=15","endpoint_bound":15},
+  "C4_bound": {"n_AC_max":1,"n_BD_max":1,"opposite_high_cycles":"1+2n_AC","root_LL_stubs":"8-n_AC","I2_increment":"1+x/2 beyond3x/2; x<=1","each_high_bound":"13+n_AC/2+3n_BD/2<=15"},
+  "hand_boundaries": ["I2/x1 contributes exactly3, including its baseline1.","All LL stubs end at opposite lows because the root sets are independent.","Every opposite high is counted separately and inside-neighbor nodes have no internal cycles.","The n bounds are not assumed realized or equal across roots."],
+  "shared_origin": {"Root_inner_and_opposite_root_outlines":true,"Structural_independent_whole_reconstruction":true,"same_C4_outline_independently_derived":true,"agreement_is_verification":false},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"independent_review_required":true,"publication_cutoff_inclusion":false,
+  "limitations": ["Literal ordinary-support conditions must remain.","No star, fullb4, R227 or target exclusion is asserted.","No new gate, registry action or publication change occurred."]
+}

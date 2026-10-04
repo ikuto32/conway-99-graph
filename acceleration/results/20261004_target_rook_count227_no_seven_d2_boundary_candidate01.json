@@ -1,0 +1,151 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T19:42:04Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SEVEN-D2-BOUNDARY",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets and put d_T=6-r_T for each actual triangle, where r_T counts the rooks containing T. If R=227 and every d_T belongs to {0,1,2}, then it is impossible that exactly seven actual triangles have deficiency two. Equivalently, the positive family cannot consist of ten d1 and seven d2 triangles with every other d_T zero. The maximum-deficiency-two condition is an explicit hypothesis; this does not exclude other R227 populations or resolve the target.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+    "d_T=6-r_T belongs to {0,1,2} for every actual triangle"
+  ],
+  "scope": {
+    "description": "Universal conditional seven-d2 population exclusion at R227 with explicit maxd2. The ten d1 triangles force a fifteen-point ordinary vertex support; actual labelled triple-concurrence constraints force at least35 edges there, contradicting the strict full-target upper-Gram edge bound34.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "other_populations_excluded": false,
+    "induced_selected_support_assumed": false
+  },
+  "dependencies": [],
+  "dependency_reason": "All triangle/rook local degrees, D24, odd incidence, selected and positive fan bounds, labelled seven-triangle lemma and Q positivity/equality are reconstructed from the target and literal hypotheses. Earlier r1 descendants and their gates are comparison/provenance only.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SEVEN_D2_BOUNDARY_V1.md",
+    "sha256": "fdac5f82b885cb956f7b12b649edc7f5466c12fa055aeb6d02082862dea23f3b"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SEVEN_D2_BOUNDARY_V1.md": "fdac5f82b885cb956f7b12b649edc7f5466c12fa055aeb6d02082862dea23f3b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_EIGHT_D1_D2_BOUNDARY_V1.md": "329f6af24023eb306ba726d2cccd6eb19861aa70a75dcb726013ef8e144a00e7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "comparison_claims_not_inherited": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2",
+      "revision": 1
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-MAXD2-D2-POPULATION-LOWER4",
+      "revision": 1
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-EIGHT-D1-D2-BOUNDARY",
+      "revision": 1
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+      "revision": 1
+    }
+  ],
+  "exact_boundary": {
+    "R": 227,
+    "D": 24,
+    "a_d1": 10,
+    "b_d2": 7,
+    "P": 17,
+    "selected_point_multiplicity": 2,
+    "selected_support_points": 15,
+    "selected_actual_edges": 30,
+    "outside_S_D2_point_multiplicity": 3,
+    "outside_S_D2_triple_points_h_at_most": 3,
+    "sum_t": "3h<=9",
+    "t_domain": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "integer_edge_term": "binom(3-t,2)>=2-t",
+    "D2_edges_inside_S_at_least": 5,
+    "integer_term_equality": {
+      "h": 3,
+      "t1_count": 5,
+      "t2_count": 2,
+      "realizability_claimed": false
+    },
+    "total_edges_inside_S_at_least": 35,
+    "Q": "3I-A+J/9",
+    "Q_indicator_quadratic": "70-2e(S)",
+    "PSD_edge_upper_bound": 35,
+    "equality_outside_neighbor_count": "15/9=5/3 (impossible integer)",
+    "strict_actual_target_edge_upper_bound": 34
+  },
+  "proof_route": [
+    "R227/maxd2/b7 give ten d1, P17 and local odd-family parity.",
+    "The selected ten-triangle fan bound10>=3r forces exactly two selected triangles at every used point, hence S15 and30 unique actual edges.",
+    "At a D2 point outside S, degree2 needs at least three D2; positive P17 fan permits exactly three.",
+    "Fix one triple point of seven D2 triangles; other attached points use disjoint external pairs, detached points use three-of-four external roots.",
+    "At most two attached and one detached are possible separately, but their simultaneous maximum forces two external triangles to meet twice; hence h<=3.",
+    "With sum t=3h<=9, summing the four integer inequalities binom(3-t,2)>=2-t forces at least five additional actual edges in S.",
+    "Q PSD bounds e(S)<=35; equality would require integer neighbor count5/3 outside S, so e(S)<=34.",
+    "The incompatible actual edge bounds refute only this precise boundary."
+  ],
+  "hand_integer_terms": [
+    {
+      "t": 0,
+      "edge_term": 3,
+      "linear_lower": 2
+    },
+    {
+      "t": 1,
+      "edge_term": 1,
+      "linear_lower": 1
+    },
+    {
+      "t": 2,
+      "edge_term": 0,
+      "linear_lower": 0
+    },
+    {
+      "t": 3,
+      "edge_term": 0,
+      "linear_lower": -1
+    }
+  ],
+  "hand_boundaries": [
+    "P17 alone allows four d1 at a point; the separate ten-selected-triangle injection is essential.",
+    "Seven actual triangles can have three triple points; the chain pattern p:T1,T2,T3 q:T1,T4,T5 r:T2,T6,T7 attains the five-edge integer boundary.",
+    "Four triple points are possible in a merely linear pair-based hypergraph on four base points/six pair triangles plus one private triangle, but it contains forbidden distinct-intersection triples.",
+    "All actual D1/D2 edges counted are disjoint by lambda1 unique triangle partners.",
+    "Q positivity alone yields35; full99 integer equality improves to34.",
+    "No graph construction or extension of the integer equality distribution is claimed."
+  ],
+  "shared_origin": {
+    "Root_faithful_cycle_followup_prompt": true,
+    "Structural_support15_and_seven_triangle_lemma": true,
+    "Root_selected_fan_and_integer_equality_challenge": true,
+    "prior_parity_fan_Q_components_disclosed": true,
+    "new_candidate_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "Maximum deficiency two remains an explicit hypothesis.",
+    "No R227 or Conway99 exclusion is claimed.",
+    "The bound is about ordinary target incidence and integer neighbor counts; formal fractional Gram models are outside it.",
+    "Independent whole-proof written challenge is required; no worker or registry permission is requested."
+  ]
+}

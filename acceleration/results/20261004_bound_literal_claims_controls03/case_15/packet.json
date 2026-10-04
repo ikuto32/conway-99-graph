@@ -1,0 +1,67 @@
+{
+  "schema": "BOUND_LITERAL_APPEND_PACKET_V1",
+  "baseline": {
+    "path": "acceleration/results/20261004_bound_literal_claims_controls03/case_15/before.json",
+    "sha256": "3f7d4a93b309f0a4e0c092ba9d91426dfdf8a5683bc3f78606cfca1698ef3101",
+    "schema_version": 2,
+    "claims": 2,
+    "artifact_records": 4,
+    "public_records": 1
+  },
+  "claim_count": 1,
+  "expected_after_claims": 3,
+  "claims": [
+    {
+      "claim_core": {
+        "id": "C-NEW-0",
+        "revision": 1,
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "statement": "Synthetic administrative fixture",
+        "scope": {
+          "n": 0
+        }
+      },
+      "verification_core": {
+        "timestamp": "2026-10-04T01:02:03+00:00",
+        "outcome": "PASS",
+        "artifact_hashes": null,
+        "controls": []
+      },
+      "evidence_identity_paths": [
+        "acceleration/results/20261004_bound_literal_claims_controls03/case_15/a.json",
+        "acceleration/results/20261004_bound_literal_claims_controls03/case_15/b.json",
+        "acceleration/results/20261004_bound_literal_claims_controls03/case_15/c.json"
+      ],
+      "evidence_identity_sha256": {
+        "acceleration/results/20261004_bound_literal_claims_controls03/case_15/a.json": "28f3ecf4a57fdf1b0bfd5dbdcbd6d886c62a94b22968dd19c5a7d4b1b7d01738",
+        "acceleration/results/20261004_bound_literal_claims_controls03/case_15/b.json": "12dc5f35507626924a314f58832200932e19a43e901df2b7708db1ce78e5cb5f",
+        "acceleration/results/20261004_bound_literal_claims_controls03/case_15/c.json": "07fdaa3b86df8903d18528a0cd7d64512d5345b8ca3525ba470685a50b75635d"
+      },
+      "unknowns": [
+        "synthetic only"
+      ],
+      "external_source": null,
+      "reproducibility_manifest_path": null
+    }
+  ],
+  "evidence_union": {
+    "acceleration/results/20261004_bound_literal_claims_controls03/case_15/a.json": "28f3ecf4a57fdf1b0bfd5dbdcbd6d886c62a94b22968dd19c5a7d4b1b7d01738",
+    "acceleration/results/20261004_bound_literal_claims_controls03/case_15/b.json": "12dc5f35507626924a314f58832200932e19a43e901df2b7708db1ce78e5cb5f",
+    "acceleration/results/20261004_bound_literal_claims_controls03/case_15/c.json": "07fdaa3b86df8903d18528a0cd7d64512d5345b8ca3525ba470685a50b75635d"
+  },
+  "evidence_identity_count": 3,
+  "new_artifact_policy": {
+    "artifact_prefix": "A-CAL-ONE-",
+    "availability": "LOCAL_ONLY",
+    "unavailable_reason": "Synthetic evidence remains LOCAL_ONLY."
+  },
+  "validator": {
+    "path": "acceleration/validate_claims.py",
+    "sha256": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265"
+  },
+  "schema_definition": {
+    "path": "docs/claims.schema.json",
+    "sha256": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac"
+  }
+}

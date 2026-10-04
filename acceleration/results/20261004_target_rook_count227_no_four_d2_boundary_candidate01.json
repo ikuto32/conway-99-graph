@@ -1,0 +1,32 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T20:55:37Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not four.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R227 counts actual induced rook-nine vertex sets once","d_T=6-r_T in {0,1,2}"],
+  "scope":{"description":"Conditional exclusion of the b4 population at R227/maxd2, by exact ordinary-support topology necessity and the path/cycle/star branch results.","unrestricted_target":true,"graph_construction":false,"scientific_coverage":"UNKNOWN","target_resolution":"NONE","count227_excluded":false,"maximum_deficiency2_inferred":false},
+  "dependencies":[
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-ORDINARY-SUPPORT-TOPOLOGIES","revision":1,"relation":"uses_result"},
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-PATH-OR-CYCLE","revision":1,"relation":"uses_result"},
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-STAR","revision":1,"relation":"uses_result"}
+  ],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FOUR_D2_BOUNDARY_V1.md","sha256":"7bffd13c56188c22726f5120b2cb6ce451a22dbd6c774a1dbd6b41d87009a96b"},
+  "inputs_sha256":{
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FOUR_D2_BOUNDARY_V1.md":"7bffd13c56188c22726f5120b2cb6ce451a22dbd6c774a1dbd6b41d87009a96b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md":"f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488",
+    "acceleration/results/20261004_target_rook_count227_four_d2_ordinary_support_topologies_candidate01.json":"c4c5110d2a3dc63df431acee2ca0e619f7608bcbf09468e52e338fe8fee70e03",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_PATH_OR_CYCLE_V1.md":"686b6cc9a93f92f3287111171ceb001fce89b6b36767d71bf52e47db0bda4165",
+    "acceleration/results/20261004_target_rook_count227_four_d2_no_high_path_or_cycle_candidate01.json":"ff088e86b702732f14e8aa9887004aca475fab4e27bb84a6ff1525d4d6a9063c",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_STAR_V1.md":"bc8894fe106db65764dbe8d99fe1d53ec639e325836bea3183b128374242ff85",
+    "acceleration/results/20261004_target_rook_count227_four_d2_no_high_star_candidate01.json":"bd3e599d1067ca96968d1d53c4950d2aa0c47de2cc31da7c070d1fea49613cb1"
+  },
+  "exact_composition":["Supposeb4 under R227/maxd2.","Necessity gives selected incidence2,allD2insideS24 and highK1,3/P4/C4.","The exact ordinary-support path/cycle theorem excludes P4 andC4.","The exact ordinary-support star theorem excludes K1,3.","All necessary branches are impossible, so b4 is impossible."],
+  "pending_gates_at_preparation":{"necessity_report":null,"pathcycle_report":null,"star_report":null,"composition_report":null,"Root_acceptance":null},
+  "shared_origin":{"Structural_author_of_dependency_papers":true,"Root_outline_discovery_disclosed_in_each":true,"distinct_composition_gate_required":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"independent_review_required":true,"publication_cutoff_inclusion":false,
+  "limitations":["All exactr1 support/dependency scopes must be retained.","Pending report hashes are not fabricated or promoted.","No R227/target exclusion or publication action occurs here."]
+}

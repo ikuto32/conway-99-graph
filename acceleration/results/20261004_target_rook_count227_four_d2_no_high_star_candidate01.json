@@ -1,0 +1,27 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T20:52:35Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-STAR",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly four triangles have deficiency2. Suppose every point used by the sixteen deficiency1 triangles lies in exactly two of them, with support S, and all four deficiency2 triangles lie in S. Their actual intersection graph cannot be the four-node star K1,3.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R227 counts actual induced rook-nine vertex sets once","d_T=6-r_T in {0,1,2}","exactly four actual d2 triangles","selected d1 incidence2 at every S point","all d2 triangles lie in S"],
+  "scope":{"description":"Conditional ordinary-support exclusion of the four-high star at R227/b4, retaining exact-pair and all-three leaf profiles separately.","unrestricted_target":true,"graph_construction":false,"scientific_coverage":"UNKNOWN","target_resolution":"NONE","count227_excluded":false,"four_D2_population_excluded":false,"path_or_cycle_excluded":false},
+  "dependencies":[],
+  "dependency_reason":"Literal support hypotheses are explicit; all actual label/cycle geometry, central independent neighbor set, complete profile partition and pair capacities are reconstructed.",
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_STAR_V1.md","sha256":"bc8894fe106db65764dbe8d99fe1d53ec639e325836bea3183b128374242ff85"},
+  "inputs_sha256":{
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_STAR_V1.md":"bc8894fe106db65764dbe8d99fe1d53ec639e325836bea3183b128374242ff85",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md":"f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488",
+    "docs/COMPUTE_POLICY.md":"9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "exact_counts":{"D1":16,"D2":4,"S":24,"F_four_cycles":36,"required_cycle_incidence":144,"center_LL_stubs":6,"leaf_max_each":15,"low_max":"80+q","center_max":"18-3q/2","complete_upper":"143-q/2<144"},
+  "profile_capacities":{"q":"#lows adjacent all3leafhighs","n2":"#lows adjacent exactly2leafhighs","each_pair":"n_pair+q<=2","sum":"n2+3q<=6","q_max":2},
+  "opposite_decomposition":{"high_opposites":0,"I0_or1":"cycles<=3x/2","I2":"cycles=1+2x; x<=1","I3":"x0/cycles3","center_bound":"9+n2+X2/2+3q<=9+3n2/2+3q"},
+  "hand_boundaries":["q0/1/2 conservative totals143,285/2,142 allbelow144.","q is counted3times only in pair capacities and once in low/profile incidence.","The center root's3lows have onlycenter as high; all6LL stubs are included.","All high nodes are inside the independent center neighbor set, so none is an omitted opposite."],
+  "shared_origin":{"Root_center_profile_outline":true,"Structural_independent_whole_reconstruction":true,"agreement_is_verification":false},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"independent_review_required":true,"publication_cutoff_inclusion":false,
+  "limitations":["Literal ordinary-support conditions mustremain.","No fullb4/R227/target exclusion or realization is asserted.","No new gate, registry action or publication change occurred."]
+}

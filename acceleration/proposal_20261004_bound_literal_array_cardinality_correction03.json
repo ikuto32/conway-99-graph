@@ -1,0 +1,47 @@
+{
+  "schema": "BOUND_LITERAL_PARAMETERIZED_ARRAY_CARDINALITY_REPAIR_V3",
+  "timestamp": "2026-10-04T21:47:58.878Z",
+  "author": "/root/checkpoint_audit",
+  "status": "SOURCE_ONLY_CORRECTION",
+  "source_issue": "Pipeline ConvertTo-Json enumerated singleton unknowns arrays; ConvertFrom-Json also needs NoEnumerate to retain empty arrays. Explicit InputObject preserves outer evidence_resolution arrays of length1.",
+  "chronology": "CP independently diagnosed source cardinality before learning actual Root qualification failure. Diagnosis did not precede actual Root launch.",
+  "actual_failed_invocation": "2195f12ebdd3432fa9bc16382047c3cd",
+  "failure_Root_review": {
+    "path": "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review01.json",
+    "sha256": "d8c676016a5dc8c7328554d4d40b577a0e5e957951314de75200453c6f6cc742"
+  },
+  "old_completed_controls": 0,
+  "old_unattempted_controls": 20,
+  "preserved_old_plan": {
+    "path": "acceleration/plan_20261004_bound_literal_claims_controls_v1.json",
+    "sha256": "6aab926d701021f9696066a7b2b2d0f4911064cddebd7cb9448b9c883f175549"
+  },
+  "old_copier": {
+    "path": "acceleration/materialize_20261004_bound_literal_claims_v2.ps1",
+    "sha256": "07761391cacbc2470a5bc25adb12ebd88d29552914c4365763303f3d531e8e9a"
+  },
+  "new_copier": {
+    "path": "acceleration/materialize_20261004_bound_literal_claims_v3.ps1",
+    "sha256": "48dade5d0c49bb27351e459f3c5cf5830d0c4fdf2c8c6e3ef26ac0404640f5b3",
+    "spec_path": "acceleration/materialize_20261004_bound_literal_claims_v3_spec.md",
+    "spec_sha256": "7e8ce19b0bf34e6b8d2fe915586057de75108bdcf80edc325cefbc34cb14cb19"
+  },
+  "new_checker": {
+    "path": "acceleration/check_20261004_bound_literal_claims_v2.py",
+    "sha256": "a73eb0281173c76af4ee9b98ab296c615c6b0ef0c84b75aa0f6d68f98230d07e",
+    "spec_path": "acceleration/check_20261004_bound_literal_claims_v2_spec.md",
+    "spec_sha256": "a9caf9a14f76d40826c9f5af28baccf95ee64691f29786597aa34766e12239f8"
+  },
+  "changed_mathematics": false,
+  "live_ledger_unchanged": true,
+  "new_controls": {
+    "positive": 3,
+    "negative": 19,
+    "total": 22,
+    "includes_one_identity_empty_singleton_arrays": true
+  },
+  "old_gates_transferred": false,
+  "execution_authorized": false,
+  "target_resolution": "NONE"
+}
+

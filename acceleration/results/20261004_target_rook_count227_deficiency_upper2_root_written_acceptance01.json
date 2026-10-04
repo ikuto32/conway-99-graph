@@ -1,0 +1,83 @@
+{
+  "schema": "ROOT_EXACT_R227_WRITTEN_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T19:33:14.0264974+00:00",
+  "reviewer": "/root",
+  "result": "PASS_INDEPENDENT_WRITTEN_SCOPE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), suppose R=227 actual induced rook-nine vertex subsets occur, counted once by their vertex sets. For every actual triangle T put d_T=6-r_T, where r_T counts those subsets containing T. Then every d_T is zero, one or two; no deficiency-three triangle occurs. This does not exclude count227 or resolve the target.",
+  "independent_verifier": "/root/native_driver",
+  "producer": "/root/structural",
+  "independent_verification_timestamp": "2026-10-04T19:17:50.1127510Z",
+  "scope": {
+    "description": "Universal conditional maximum triangle deficiency2 at exactly227 actual induced rook-nine subsets, using only the three declared exact r1 premises. The complete ordinary defect-cycle correspondence is used only in the five positive-D3 cases with at mostthree high nodes; the valid local high triangle retains its exact internal-edge and residue losses.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-SINGLE-D3-D2-POPULATION-UPPER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts those actual subsets containing actual triangle T"
+  ],
+  "fresh_inputs_sha256": {
+    "acceleration/results/20261004_independent_review/target_rook_count227_deficiency_upper2_native01/summary.json": "33278da8c5663fd67f498aecdff53d2ddaa34f59ed070918b08bdb3715adb928",
+    "acceleration/results/20261004_independent_review/target_rook_count227_deficiency_upper2_native01/claim_binding_schema2.json": "61d491595a5a68daaa8b18a0a577478bd8e1830af1e53b5dfa2d2cbfaa0b1779",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "acceleration/results/20261004_target_rook_count227_deficiency_upper2_candidate01.json": "42bd5ab2c027c3f5f5f0c7beadde984f2a25908caa13750218729a25061a85a8",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_rook_deficiency_strict_second_neighbor_native01_root_written_acceptance01.json": "7b7c80c0e16492e8203a55671d366ba5d14147b90985e6e6d98bc3043920eb6d",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/summary.json": "7296830b2f55b07e00b4eda3359ce3be3572a7e8f2876f0b54832c6092a9fec1",
+    "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/claim_binding_schema2.json": "f7a5f598c1942aa181eb059f5b94cb35a155c3426f38f6a5378244cadc6a3526",
+    "acceleration/results/20261004_target_rook_count227_population_table_root_written_acceptance01.json": "cf7f70f5db3d8b473e94fcf38616593b29f816a003e40bca4e93dc732bad4c77",
+    "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/summary.json": "dace9455e57c7970724a5ce2ac205a6208a6c4055df71152d67a767252651029",
+    "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/claim_binding_schema2.json": "b1606c7c38f3837cc77187e6823bbe0f982f15177442967f45766fd20aa59ab9",
+    "acceleration/results/20261004_target_rook_count227_single_d3_root_written_acceptance01.json": "ef63f3f89d80a49f47962feaebd392eb80af419ccede3ec64f265babeeb093a5",
+    "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/summary.json": "a1c55cd5b626ff08333a4ac06d2e43681120a1a9bee5452da1492361d2a2c09a",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "acceleration/audit_20261004_target_rook_count227_deficiency_upper2_native_v1.md": "2dfb0adbb3521740e771e0f07c471e74698324be9a462a401aeceed173ec80c1"
+  },
+  "fresh_small_identities": 15,
+  "written_checks": [
+    "Whole Structural paper and Native312-line independent reconstruction read, raw/audit exact endpoints and3 declaredr1 premises freshly authenticated.",
+    "D24/strictmass plus exact16rows andsingleD3 bound leave5 positivec populations withatmost3highnodes; c0b8 isnotpremise.",
+    "Actual triangle point labels handle both adjacent/opposite C4 collapse; collapsedcycle wouldneed4highnodes. Complete inverse map counts36 uncovered squares and144cycle node incidences.",
+    "Repeatedlabel K33 forces6 concurrentD3 nodes and distinctlabels gives inducedrook ofcoveredpairs; global F triangle-free isnotassumed.",
+    "Disjointactual triangle crossmatching bounds codegree3; concurrenthighcommonpartner retained. D1bound5 or6, exception<=3/q0concurrency.",
+    "Root neighborgraphs internal maximumdegree1, exact B subtracts rootdegree+2eC; all l<=3 gives c<=B, nondivisible3 integer loss1.",
+    "Seven exact totals126,131,123,125,134,136,142 below144; graphical3321 nonstar boundary retained, B22/19/19 ->21/18/18. Loose145 wouldnotexclude.",
+    "Conclusion only maxdeficiency2 atR227; faithfulC4 map notextended to c0,b>=4 withoutnewproof."
+  ],
+  "shared_components": [
+    "Structural producer and Root shared followup/tightcase outline are disclosed; agreement is not independent verification.",
+    "Native independently reconstructs every labelled cycle/K33/crossmatching step, all root neighbor internalgraphs and the seven exact hand rows.",
+    "Native authored the two separately accepted inherited population audits, explicitly reused as named premises rather than reapproved or silently broadened.",
+    "R228 root-incidence/K33/exception/residue mechanisms are declared comparison overlap; its historical gate is not transferred."
+  ],
+  "current_ledger_sha256": "f4a1bbd17119baedcf0222745c96c0530e4f2e9e3e6c3543650b51c4d4982c93",
+  "source_commit": "9349bd83bda2c9ae72671ed6a8ab2efd3ae118f5",
+  "registration": "Pending nextWave47; frozenWave46 449 cutoff untouched.",
+  "mathematical_programs": 0,
+  "formal_reviews": 0,
+  "external_reviews": 0,
+  "ledger_Git_PUBLIC_mutations": 0,
+  "target_resolution": "UNKNOWN",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "elapsed_seconds": 0.3097358
+}

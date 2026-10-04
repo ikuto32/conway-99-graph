@@ -1,0 +1,331 @@
+{
+  "schema": "BOUND_LITERAL_FINITE_CONTROLS_V1",
+  "source_only": true,
+  "author": "/root/checkpoint_audit",
+  "actual_executor": "/root",
+  "timestamp": "2026-10-04T21:53:15.575Z",
+  "inputs_sha256": {
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/validate_claims.py": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265",
+    "docs/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/materialize_20261004_bound_literal_claims_v3.ps1": "48dade5d0c49bb27351e459f3c5cf5830d0c4fdf2c8c6e3ef26ac0404640f5b3",
+    "acceleration/materialize_20261004_bound_literal_claims_v3_spec.md": "7e8ce19b0bf34e6b8d2fe915586057de75108bdcf80edc325cefbc34cb14cb19",
+    "acceleration/check_20261004_bound_literal_claims_v2.py": "a73eb0281173c76af4ee9b98ab296c615c6b0ef0c84b75aa0f6d68f98230d07e",
+    "acceleration/check_20261004_bound_literal_claims_v2_spec.md": "a9caf9a14f76d40826c9f5af28baccf95ee64691f29786597aa34766e12239f8",
+    "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review01.json": "d8c676016a5dc8c7328554d4d40b577a0e5e957951314de75200453c6f6cc742",
+    "acceleration/exercise_20261004_bound_literal_claims_v4.py": "f114915de5fb2960a2f837ff8e7fc693588b7333e66c60b28dc0080597a5029f",
+    "acceleration/exercise_20261004_bound_literal_claims_v4_spec.md": "2612ffa80a1d58c8c8b95c6071045643c634cedf82e49e96aea1808ccff2de1e",
+    "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review02.json": "6746cd524a32fd4c9fbca56a3ac759d21c3383a3632af1903ce9363793c17a0a"
+  },
+  "copier": {
+    "path": "acceleration/materialize_20261004_bound_literal_claims_v3.ps1",
+    "sha256": "48dade5d0c49bb27351e459f3c5cf5830d0c4fdf2c8c6e3ef26ac0404640f5b3",
+    "spec_path": "acceleration/materialize_20261004_bound_literal_claims_v3_spec.md",
+    "spec_sha256": "7e8ce19b0bf34e6b8d2fe915586057de75108bdcf80edc325cefbc34cb14cb19"
+  },
+  "checker": {
+    "path": "acceleration/check_20261004_bound_literal_claims_v2.py",
+    "sha256": "a73eb0281173c76af4ee9b98ab296c615c6b0ef0c84b75aa0f6d68f98230d07e",
+    "spec_path": "acceleration/check_20261004_bound_literal_claims_v2_spec.md",
+    "spec_sha256": "a9caf9a14f76d40826c9f5af28baccf95ee64691f29786597aa34766e12239f8"
+  },
+  "pwsh": {
+    "path": "C:/Program Files/PowerShell/7/pwsh.exe",
+    "sha256": "bfb46af89433268872ddb43d1ca7a3f433452ee91ed356a9786940f90118e285"
+  },
+  "python_sha256": "f41189ee84825ffeea37fcea2dd7d3004fafa86458ce4f1243a4be59dc611907",
+  "validator": {
+    "path": "acceleration/validate_claims.py",
+    "sha256": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265"
+  },
+  "schema_definition": {
+    "path": "docs/claims.schema.json",
+    "sha256": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac"
+  },
+  "routes": [
+    {
+      "ordinal": 0,
+      "name": "positive_one",
+      "mutation": "none",
+      "population": "one",
+      "positive": true,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 1,
+      "name": "positive_two",
+      "mutation": "none",
+      "population": "two",
+      "positive": true,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 2,
+      "name": "count_bool",
+      "mutation": "count_bool",
+      "population": "one",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "NEW_CLAIM_COUNT",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 3,
+      "name": "after_mismatch",
+      "mutation": "after_mismatch",
+      "population": "two",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "EXACT_CLAIM_COUNTS",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 4,
+      "name": "union_omit",
+      "mutation": "union_omit",
+      "population": "one",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "EXACT_EVIDENCE_UNION",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 5,
+      "name": "map_hash",
+      "mutation": "map_hash",
+      "population": "two",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "CLAIM_EVIDENCE_IDENTITY",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 6,
+      "name": "prefix_invalid",
+      "mutation": "prefix_invalid",
+      "population": "one",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "ARTIFACT_POLICY",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 7,
+      "name": "public_bool",
+      "mutation": "public_bool",
+      "population": "two",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "PUBLIC_COUNT",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 8,
+      "name": "late_old_claim",
+      "mutation": "late_old_claim",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 83,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 9,
+      "name": "late_old_artifact",
+      "mutation": "late_old_artifact",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 84,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 10,
+      "name": "top_field",
+      "mutation": "top_field",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 87,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 11,
+      "name": "PUBLIC",
+      "mutation": "public",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 84,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 12,
+      "name": "bool_core",
+      "mutation": "core_bool",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 132,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 13,
+      "name": "bool_ordinal",
+      "mutation": "ordinal_bool",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 116,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 14,
+      "name": "late_identity",
+      "mutation": "late_identity",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 51,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 15,
+      "name": "wrong_reuse",
+      "mutation": "wrong_reuse",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 116,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 16,
+      "name": "wrong_reason",
+      "mutation": "wrong_reason",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 121,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 17,
+      "name": "eighth_equivalent_omission",
+      "mutation": "omission",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 82,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 18,
+      "name": "duplicate_JSON",
+      "mutation": "duplicate_json",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 15,
+      "expected_exception": "ValueError"
+    },
+    {
+      "ordinal": 19,
+      "name": "bool_summary",
+      "mutation": "summary_bool",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 29,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 20,
+      "name": "existing_output",
+      "mutation": "existing_out",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 143,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 21,
+      "name": "positive_single_identity_empty_and_singleton_arrays",
+      "mutation": "none",
+      "population": "single",
+      "positive": true,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": null,
+      "expected_exception": null
+    }
+  ],
+  "counts": {
+    "positive": 3,
+    "negative": 19,
+    "total": 22,
+    "child_calls": 38,
+    "physical_files": 307,
+    "summary_output_hashes": 306
+  },
+  "Root_ONE": null,
+  "dispatch_authorized": false,
+  "mathematical_replays": 0,
+  "parent_configuration": {
+    "path": "acceleration/configuration_20261004_bound_literal_claims_controls_v3.json",
+    "sha256": "6cc79c985be8d6ef1f97f558aca8af1c86b3b1ec4a705cc804a21ad28b997505"
+  },
+  "previous_actual_failures": [
+    {
+      "invocation": "2195f12ebdd3432fa9bc16382047c3cd",
+      "Root_review": {
+        "path": "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review01.json",
+        "sha256": "d8c676016a5dc8c7328554d4d40b577a0e5e957951314de75200453c6f6cc742"
+      },
+      "completed_controls": 0,
+      "stage": "typed checker line132 unknowns singleton array versus string",
+      "old_source_qualified": false
+    },
+    {
+      "invocation": "9333a647a38e4b7d98fa88ff88d6f17e",
+      "Root_review": {
+        "path": "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review02.json",
+        "sha256": "6746cd524a32fd4c9fbca56a3ac759d21c3383a3632af1903ce9363793c17a0a"
+      },
+      "completed_controls": 8,
+      "attempted": 9,
+      "unattempted": 13,
+      "stage": "Harness209 rejected correctly observed checker AssertionError83 due CRLF end matcher; copier array cardinality repaired, full qualification unmet."
+    }
+  ]
+}
+

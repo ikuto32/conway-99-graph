@@ -1,0 +1,192 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_WRITTEN_REPORT_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_COUNT227_NO_SEVEN_D2_BOUNDARY_WRITTEN_PASS",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SEVEN-D2-BOUNDARY",
+  "claim_revision": 1,
+  "revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets and put d_T=6-r_T for each actual triangle, where r_T counts the rooks containing T. If R=227 and every d_T belongs to {0,1,2}, then it is impossible that exactly seven actual triangles have deficiency two. Equivalently, the positive family cannot consist of ten d1 and seven d2 triangles with every other d_T zero. The maximum-deficiency-two condition is an explicit hypothesis; this does not exclude other R227 populations or resolve the target.",
+  "timestamp": "2026-10-04T19:46:24.4949744Z",
+  "verification_timestamp": "2026-10-04T19:46:24.4949744Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T19:49:52.6509431Z",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "scope": {
+    "description": "Universal conditional exclusion only of exactlyseven D2 triangles at R227 under explicit maxd2. The selected ten D1 triangles force actual support15; actual no-loose-triple geometry bounds seven-triangle outside triple points by3, giving at least35 actual edges, while full99 PSD/integer equality gives at most34. No selected-support inducedness is assumed.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_candidate_scope": {
+    "description": "Universal conditional seven-d2 population exclusion at R227 with explicit maxd2. The ten d1 triangles force a fifteen-point ordinary vertex support; actual labelled triple-concurrence constraints force at least35 edges there, contradicting the strict full-target upper-Gram edge bound34.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "other_populations_excluded": false,
+    "induced_selected_support_assumed": false
+  },
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+    "d_T=6-r_T belongs to {0,1,2} for every actual triangle"
+  ],
+  "dependencies": [],
+  "original_decorated_dependencies": [],
+  "dependency_reason": "All local geometry, R227 counts, selected parity/fan, seven-triangle no-loose-triple lemma, integer edge terms and fulltarget realQ PSD/equality are independently reconstructed from literal hypotheses. Earlier proof artifacts are comparison only.",
+  "controls": {
+    "written_proof_checks": 34,
+    "written_boundary_challenges": 10,
+    "written": 44,
+    "hand_integer_term_rows": 4,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "hand_integer_terms": [
+    {
+      "t": 0,
+      "edge_term": 3,
+      "linear_lower": 2
+    },
+    {
+      "t": 1,
+      "edge_term": 1,
+      "linear_lower": 1
+    },
+    {
+      "t": 2,
+      "edge_term": 0,
+      "linear_lower": 0
+    },
+    {
+      "t": 3,
+      "edge_term": 0,
+      "linear_lower": -1
+    }
+  ],
+  "independent_exact_data": {
+    "R": 227,
+    "D": 24,
+    "D1_population": 10,
+    "D2_population": 7,
+    "P": 17,
+    "selected_fan_bound": "10>=3r",
+    "selected_point_multiplicity": 2,
+    "S_points": 15,
+    "D1_edges_inside_S": 30,
+    "outside_D2_point_multiplicity": 3,
+    "t_domain": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "sum_t": "3h<=9",
+    "seven_triangle_triple_points_h_at_most": 3,
+    "no_loose_triple_required": true,
+    "linearity_alone_sufficient": false,
+    "D2_edges_inside_S_at_least": 5,
+    "edge_term_equality": {
+      "h": 3,
+      "t1_count": 5,
+      "t2_count": 2,
+      "target_realization_claimed": false
+    },
+    "actual_eS_lower": 35,
+    "Q": "3I-A+J/9",
+    "Q_j_eigenvalue": 0,
+    "Q_nonconstant_eigenvalues": [
+      0,
+      7
+    ],
+    "indicator_quadratic": "70-2e(S)",
+    "PSD_eS_upper": 35,
+    "full99_equality_implies": "Qchi=0",
+    "outside_S_vertices": 84,
+    "outside_equality_neighbor_count": "5/3",
+    "ordinary_integer_equality_possible": false,
+    "strict_actual_eS_upper": 34
+  },
+  "seven_D2_population_excluded": true,
+  "other_populations_excluded": false,
+  "count227_excluded": false,
+  "arbitrary_even_ten_selection_excluded": false,
+  "explicit_maximum_d2_hypothesis": true,
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count227_no_seven_d2_boundary_candidate01.json",
+    "sha256": "deb7f20d704d9396667d1a6f36c61546a33944fa1acb64648ea85d1f7dd40283",
+    "original_timestamp": "2026-10-04T19:42:04Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count227_no_seven_d2_boundary_native_v1.md",
+    "sha256": "4e6f8a1798f79493f341a16fd1299854572b6ac3af802936920de6dad9111e23"
+  },
+  "comparison_only_sources": [
+    {
+      "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md",
+      "sha256": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76"
+    },
+    {
+      "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md",
+      "sha256": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7"
+    },
+    {
+      "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_EIGHT_D1_D2_BOUNDARY_V1.md",
+      "sha256": "329f6af24023eb306ba726d2cccd6eb19861aa70a75dcb726013ef8e144a00e7"
+    },
+    {
+      "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md",
+      "sha256": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17"
+    }
+  ],
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SEVEN_D2_BOUNDARY_V1.md": "fdac5f82b885cb956f7b12b649edc7f5466c12fa055aeb6d02082862dea23f3b",
+    "acceleration/results/20261004_target_rook_count227_no_seven_d2_boundary_candidate01.json": "deb7f20d704d9396667d1a6f36c61546a33944fa1acb64648ea85d1f7dd40283",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_EIGHT_D1_D2_BOUNDARY_V1.md": "329f6af24023eb306ba726d2cccd6eb19861aa70a75dcb726013ef8e144a00e7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/audit_20261004_target_rook_count227_no_seven_d2_boundary_native_v1.md": "4e6f8a1798f79493f341a16fd1299854572b6ac3af802936920de6dad9111e23"
+  },
+  "input_map_count": 8,
+  "shared_components": [
+    "Structural mathematical producer and Root followup/selected-fan/concurrence/integer-equality discovery outline are disclosed; agreement is not verification.",
+    "Native independently derives local defect degrees/parity, selected10 injection, labelled h<=3 lemma, all four integer terms and full99 Q equality rejection.",
+    "Earlier parity/fan/upper-Gram mechanisms are freshly derived from the complete target; no old spectral, matrix, code or population gate is inherited.",
+    "Prior R227 descendant papers remain comparison only, with no registration, broader statement or current-ledger transfer."
+  ],
+  "limits": [
+    "Only the exact R227/maxd2/b7 population boundary is excluded; other R227 populations and target existence remain unresolved.",
+    "Maximum-d2 is an explicit hypothesis; logical dependencies are empty, and prior noD3/lower4/noeight/common-point claims or gates are comparison only.",
+    "The selected10 fan, not P17 alone, forces point multiplicity2. No arbitrary even-ten selection or additional left-code existence is excluded or forced.",
+    "The h<=3 lemma requires actual no-loose-triple geometry plus linearity; a merely linear pair-based hypergraph can have four triple points.",
+    "S is not presumed induced by selected triangles; all arbitrary extra actual edges are retained and only strengthen the edge lower bound.",
+    "PSD alone supplies non-strict35. Full99 Qchi0 and ordinary integer outside neighbor counts exclude equality and supply34; fractional formal Gram models are outside this theorem.",
+    "Forty-four written checks/four integer rows only; no mathematical program, source import, AST/syntax/backend/solver/census/worker, formal or external verification.",
+    "Historical bytes and closedWave46 cutoff449 remain unchanged; Root exact-scope review and future nextWave47 registration are separate."
+  ],
+  "root_exact_new_statement_acceptance": null,
+  "publication_cutoff_inclusion": false,
+  "ledger_current_presence_asserted": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "availability": "LOCAL_ONLY",
+  "metadata_operations": {
+    "workers": 0,
+    "source_imports": 0,
+    "enumerations": 0,
+    "ledger_parsed": false,
+    "protected_state_mutations": 0,
+    "historical_bytes_changed": false
+  }
+}

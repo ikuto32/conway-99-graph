@@ -1,0 +1,190 @@
+{
+  "schema": "BOUND_LITERAL_FINITE_CONTROLS_SOURCE_ONLY_PLAN_V3",
+  "timestamp": "2026-10-04T21:47:58.891Z",
+  "source": {
+    "path": "acceleration/exercise_20261004_bound_literal_claims_v3.py",
+    "sha256": "1533013b6bf00ff96ed1143d1dc1fdf86ea051ca6eb852233daa7b21e55afa0e"
+  },
+  "specification": {
+    "path": "acceleration/exercise_20261004_bound_literal_claims_v3_spec.md",
+    "sha256": "0c200fdf49e4e0f7f8a2ebb961737aff8196aca683a8a924aeb89552988909f9"
+  },
+  "configuration": {
+    "path": "acceleration/configuration_20261004_bound_literal_claims_controls_v3.json",
+    "sha256": "6cc79c985be8d6ef1f97f558aca8af1c86b3b1ec4a705cc804a21ad28b997505"
+  },
+  "copier": {
+    "path": "acceleration/materialize_20261004_bound_literal_claims_v3.ps1",
+    "sha256": "48dade5d0c49bb27351e459f3c5cf5830d0c4fdf2c8c6e3ef26ac0404640f5b3",
+    "spec_path": "acceleration/materialize_20261004_bound_literal_claims_v3_spec.md",
+    "spec_sha256": "7e8ce19b0bf34e6b8d2fe915586057de75108bdcf80edc325cefbc34cb14cb19"
+  },
+  "checker": {
+    "path": "acceleration/check_20261004_bound_literal_claims_v2.py",
+    "sha256": "a73eb0281173c76af4ee9b98ab296c615c6b0ef0c84b75aa0f6d68f98230d07e",
+    "spec_path": "acceleration/check_20261004_bound_literal_claims_v2_spec.md",
+    "spec_sha256": "a9caf9a14f76d40826c9f5af28baccf95ee64691f29786597aa34766e12239f8"
+  },
+  "inputs_sha256": {
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/validate_claims.py": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265",
+    "docs/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/materialize_20261004_bound_literal_claims_v3.ps1": "48dade5d0c49bb27351e459f3c5cf5830d0c4fdf2c8c6e3ef26ac0404640f5b3",
+    "acceleration/materialize_20261004_bound_literal_claims_v3_spec.md": "7e8ce19b0bf34e6b8d2fe915586057de75108bdcf80edc325cefbc34cb14cb19",
+    "acceleration/check_20261004_bound_literal_claims_v2.py": "a73eb0281173c76af4ee9b98ab296c615c6b0ef0c84b75aa0f6d68f98230d07e",
+    "acceleration/check_20261004_bound_literal_claims_v2_spec.md": "a9caf9a14f76d40826c9f5af28baccf95ee64691f29786597aa34766e12239f8",
+    "acceleration/exercise_20261004_bound_literal_claims_v3.py": "1533013b6bf00ff96ed1143d1dc1fdf86ea051ca6eb852233daa7b21e55afa0e",
+    "acceleration/exercise_20261004_bound_literal_claims_v3_spec.md": "0c200fdf49e4e0f7f8a2ebb961737aff8196aca683a8a924aeb89552988909f9",
+    "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review01.json": "d8c676016a5dc8c7328554d4d40b577a0e5e957951314de75200453c6f6cc742",
+    "acceleration/configuration_20261004_bound_literal_claims_controls_v3.json": "6cc79c985be8d6ef1f97f558aca8af1c86b3b1ec4a705cc804a21ad28b997505"
+  },
+  "input_count": 14,
+  "launchers": {
+    "C:/Users/ikuto/.local/bin/uv.exe": "274e36788b60cc52494b7d69bb7a69ec4f5e34d2929b1b30b1d225cede70da66",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe": "f41189ee84825ffeea37fcea2dd7d3004fafa86458ce4f1243a4be59dc611907",
+    "C:/Program Files/PowerShell/7/pwsh.exe": "bfb46af89433268872ddb43d1ca7a3f433452ee91ed356a9786940f90118e285"
+  },
+  "expected_context": {
+    "head": "155a99539b86206520d8b8cc0f002d66cdc1b3e1",
+    "index_sha256": "b7ff36caa9dc2a0233c77373be7c7bb195fab909ac4d30fdc3cb137f8dba0f2c",
+    "ledger_sha256": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1",
+    "claims": 457,
+    "artifact_records": 23892,
+    "public_records": 6054,
+    "read_scope": "Parent supplied context only; finite controls do not read live ledger."
+  },
+  "allocation": {
+    "outer": 300,
+    "worker": 270,
+    "save": 20,
+    "shutdown": 20
+  },
+  "allocation_reason": "Twenty-two finite small synthetic administrative controls, three distinct count/prefix/evidence-cardinality populations and38 sequential child calls share300outer270worker20save20shutdown. Prior failed firstpositive took11.156seconds;14older actual controls11.484seconds. This is a new source qualification, not an automatic retry; no actual ledger, math or proof payload is read.",
+  "success_criterion": "All22 literal predictions match,3positive19negative including one-identity resolution array and empty/singleton arrays;307physical306fresh nonsummary outputs. Clean Windows593 native0/deadlinefalse/errornull/reapedempty Job; no mismatches.",
+  "verification_criterion": "Root independently reviews frozen sources/configuration and allactual subject stdout/stderr/stages, type/prefix/evidence mutations and observed population. Shared CP authorship disclosed; no mathematical approval, schema proof, live install, or changed-source oldgate transfer. Preserve genuineV2 failure d8c676 and all old source/config/plan bytes; no oldgate transfer.",
+  "command": null,
+  "supervisor_argv": null,
+  "command_template": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/run_compute_command.py",
+    "--seconds",
+    "300",
+    "--shutdown-reserve-seconds",
+    "20",
+    "--allocation-reason",
+    "Twenty-two finite small synthetic administrative controls, three distinct count/prefix/evidence-cardinality populations and38 sequential child calls share300outer270worker20save20shutdown. Prior failed firstpositive took11.156seconds;14older actual controls11.484seconds. This is a new source qualification, not an automatic retry; no actual ledger, math or proof payload is read.",
+    "--success-criterion",
+    "All22 literal predictions match,3positive19negative including one-identity resolution array and empty/singleton arrays;307physical306fresh nonsummary outputs. Clean Windows593 native0/deadlinefalse/errornull/reapedempty Job; no mismatches.",
+    "--verification-criterion",
+    "Root independently reviews frozen sources/configuration and allactual subject stdout/stderr/stages, type/prefix/evidence mutations and observed population. Shared CP authorship disclosed; no mathematical approval, schema proof, live install, or changed-source oldgate transfer. Preserve genuineV2 failure d8c676 and all old source/config/plan bytes; no oldgate transfer.",
+    "--out",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261004_bound_literal_claims_controls_supervision02",
+    "--",
+    "C:/Users/ikuto/.local/bin/uv.exe",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    "C:/Users/ikuto/projects/conway-99-graph/build/uv-cache",
+    "--python",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/exercise_20261004_bound_literal_claims_v3.py",
+    "--configuration",
+    "acceleration/configuration_20261004_bound_literal_claims_controls_v3.json",
+    "--configuration-sha256",
+    "6cc79c985be8d6ef1f97f558aca8af1c86b3b1ec4a705cc804a21ad28b997505",
+    "--out",
+    "acceleration/results/20261004_bound_literal_claims_controls02",
+    "--seconds",
+    "270"
+  ],
+  "child_argv": [
+    "C:/Users/ikuto/.local/bin/uv.exe",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    "C:/Users/ikuto/projects/conway-99-graph/build/uv-cache",
+    "--python",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/exercise_20261004_bound_literal_claims_v3.py",
+    "--configuration",
+    "acceleration/configuration_20261004_bound_literal_claims_controls_v3.json",
+    "--configuration-sha256",
+    "6cc79c985be8d6ef1f97f558aca8af1c86b3b1ec4a705cc804a21ad28b997505",
+    "--out",
+    "acceleration/results/20261004_bound_literal_claims_controls02",
+    "--seconds",
+    "270"
+  ],
+  "worker_argv": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/exercise_20261004_bound_literal_claims_v3.py",
+    "--configuration",
+    "acceleration/configuration_20261004_bound_literal_claims_controls_v3.json",
+    "--configuration-sha256",
+    "6cc79c985be8d6ef1f97f558aca8af1c86b3b1ec4a705cc804a21ad28b997505",
+    "--out",
+    "acceleration/results/20261004_bound_literal_claims_controls02",
+    "--seconds",
+    "270"
+  ],
+  "word_counts": {
+    "supervisor": 35,
+    "child": 19,
+    "worker": 11
+  },
+  "executor": "/root",
+  "source_author": "/root/checkpoint_audit",
+  "Root_review": null,
+  "Root_ONE": null,
+  "actual_admission": null,
+  "actual_controls": null,
+  "Root_acceptance": null,
+  "output_directory": "acceleration/results/20261004_bound_literal_claims_controls02",
+  "supervision_directory": "acceleration/results/20261004_bound_literal_claims_controls_supervision02",
+  "expected_physical_outputs": 307,
+  "expected_nonsummary_hashes": 306,
+  "case_count": 22,
+  "expected_positive": 3,
+  "expected_negative": 19,
+  "expected_mismatches": 0,
+  "environment": {
+    "UV_PROJECT_ENVIRONMENT": "build/research-venv",
+    "preserve_and_restore": true,
+    "locked": true,
+    "offline": true,
+    "dependency_installation": false
+  },
+  "automatic_retry": false,
+  "source_only": true,
+  "dispatch_authorized": false,
+  "mathematical_replays": 0,
+  "live_ledger_write": false,
+  "Git_index_admin_write": false,
+  "target_resolution": "NONE",
+  "parent_failed_plan": {
+    "path": "acceleration/plan_20261004_bound_literal_claims_controls_v1.json",
+    "sha256": "6aab926d701021f9696066a7b2b2d0f4911064cddebd7cb9448b9c883f175549"
+  },
+  "actual_failed_qualification": {
+    "invocation": "2195f12ebdd3432fa9bc16382047c3cd",
+    "Root_review": {
+      "path": "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review01.json",
+      "sha256": "d8c676016a5dc8c7328554d4d40b577a0e5e957951314de75200453c6f6cc742"
+    },
+    "completed_controls": 0,
+    "stage": "typed checker line132 unknowns singleton array versus string",
+    "old_source_qualified": false
+  }
+}
+

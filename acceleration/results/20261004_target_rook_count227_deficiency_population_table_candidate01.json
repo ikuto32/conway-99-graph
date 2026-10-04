@@ -1,0 +1,155 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T18:42:00Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly227 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. All deficiencies are zero, one, two or three. If a,b,c count deficiency-one, deficiency-two and deficiency-three triangles, respectively, then a+2b+3c=24 and precisely the following necessary population ranges hold: c=0 with 1<=b<=8 and a=24-2b; c=1 with 0<=b<=5 and a=21-2b; or c=2 with b in {0,1} and a=18-2b. No c>=3 occurs. This does not assert realizability of a listed population, exclude count227 or resolve the target.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts those actual subsets containing T; local defect edges mean no induced rook contains both intersecting actual triangles"
+  ],
+  "scope": {
+    "description": "Universal conditional sixteen-row necessary population restriction at R227. Actual point labels, arbitrary other target edges and the parity of deficiency-one plus deficiency-three triangles are retained. No equitability, automorphism or faithful collapsed-defect-cycle-to-square assumption.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "population_realizability_claimed": false
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "Only strict D>=6m+6 and nonempty maximum>=2 are inherited. Local defect degrees, odd-family parity, point-fan incidence bound, target upper Gram, disjoint-triangle matching cap, even-six induced rook and outside-one-neighbor equality are reconstructed in the paper. Previous R228 papers and the regular-set audit are overlap/comparison sources, not approval gates for this new statement.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md",
+    "sha256": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT228_V1.md": "a716630106db4064393d5500d6e33b8db9867e0e5a1d79029f0654f2b7a0f613",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc"
+  },
+  "necessary_population_rows": [
+    {"a": 22, "b": 1, "c": 0, "P": 23},
+    {"a": 20, "b": 2, "c": 0, "P": 22},
+    {"a": 18, "b": 3, "c": 0, "P": 21},
+    {"a": 16, "b": 4, "c": 0, "P": 20},
+    {"a": 14, "b": 5, "c": 0, "P": 19},
+    {"a": 12, "b": 6, "c": 0, "P": 18},
+    {"a": 10, "b": 7, "c": 0, "P": 17},
+    {"a": 8, "b": 8, "c": 0, "P": 16},
+    {"a": 21, "b": 0, "c": 1, "P": 22},
+    {"a": 19, "b": 1, "c": 1, "P": 21},
+    {"a": 17, "b": 2, "c": 1, "P": 20},
+    {"a": 15, "b": 3, "c": 1, "P": 19},
+    {"a": 13, "b": 4, "c": 1, "P": 18},
+    {"a": 11, "b": 5, "c": 1, "P": 17},
+    {"a": 18, "b": 0, "c": 2, "P": 20},
+    {"a": 16, "b": 1, "c": 2, "P": 19}
+  ],
+  "exact_constraints": {
+    "D": 24,
+    "max_deficiency": 3,
+    "nonempty_maximum_at_least": 2,
+    "P": "24-b-2c",
+    "point_parity": "r1+r3 even; no r1-only parity when c>0",
+    "positive_fan": "P>=3r1+5r2+7r3",
+    "c_at_least_two_route": {
+      "D3_pairwise_disjoint": true,
+      "each_D3_point": {"r1": 3, "r2": 0, "r3": 1},
+      "S_size": "3c",
+      "D1_incidence_in_S": "9c",
+      "known_S_edges_at_least": "12c-a",
+      "PSD_S_edges_at_most": "(9c+c*c)/2",
+      "a_at_least": "(15c-c*c)/2",
+      "incidence_first_c_cap": 4,
+      "c3_required_a": 18,
+      "c3_available_a_at_most": 15,
+      "c4_required_a": 22,
+      "c4_available_a_at_most": 12,
+      "c2_crossmatching_cap": 3,
+      "c2_a_at_least": 15
+    },
+    "c1_b6_saturation": {
+      "central_D3_defect_neighbors": 9,
+      "C_outer_points": 18,
+      "external_D2_triangles": 6,
+      "every_external_D2_C_defect_partners": 3,
+      "contradiction": "At each saturated outerpoint unique degree-one C would need defect edges to both degree-two partners."
+    },
+    "c0_b9_rook_equality": {
+      "D1_triangles": 6,
+      "rook_points": 9,
+      "rook_edges": 18,
+      "D2_triangles": 9,
+      "D2_roots_distinct": true,
+      "indicator_Q_energy": 0,
+      "outside_Q_indicator_equation": "1-|N(z) intersect S|=0",
+      "boundary_edges": 90,
+      "outside_vertices": 90,
+      "D2_shared_outer_vertex_forbidden": "Would give two distinct rook roots adjacent to the same outside vertex.",
+      "outerpoint_contradiction": "The sole positive local node has degree two and no possible positive partner."
+    }
+  },
+  "proof_route": [
+    "D24 and inherited strict bound give maxd3; nonempty maximum>=2.",
+    "Local handshake gives even r1+r3; actual fan geometry gives P>=3r1+5r2+7r3.",
+    "For c>=2 local degree feasibility forces D3 pairwise disjoint and a degree-three star at each of their points.",
+    "D1 incidences and PSD indicator energy exclude c3/4 after incidence caps c<=4.",
+    "At c2 actual crossmatching caps D1 bridges by3, forcing b<=1.",
+    "At c1,b>=3 local stars give nine D1 partners; b6 saturates six external D2 and violates C degree one.",
+    "At c0 parity and outer mass leave b<=9; b9 gives an even-six induced rook.",
+    "Full-coordinate rook Gram equality, independently also CN plus90 boundary edges, forces one rook neighbor on every outside point.",
+    "Nine rooted D2 triangles cannot share outerpoints, leaving impossible local degree two and rejecting b9."
+  ],
+  "hand_boundaries": [
+    "Valid common-point star degrees3,1,1,1 has r1 odd and r1+r3 even.",
+    "Valid common-point graph degrees3,2,2,1 reaches c1b2 fan weight20 and remains permitted.",
+    "Common-point degrees3,3,1,1 are impossible in a simple local graph.",
+    "Disjoint actual triangles may have a three-edge crossmatching; cap3 is retained.",
+    "Target rook Gram equality applies to all99 coordinates, not only to the9 internal coordinates.",
+    "The rook9 graph alone is not a target extension and does not satisfy the target ambient Gram premise.",
+    "No ordinary local collapsed defect fourcycle is silently identified with an actual square."
+  ],
+  "shared_origin": {
+    "Root_next_R227_followup": true,
+    "Structural_prior_rook_paper_authorship": true,
+    "Root_outline_challenge_before_freeze": true,
+    "regular_set_one_neighbor_overlap_disclosed": true,
+    "candidate_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "R227 is not excluded; sixteen necessary rows are not asserted realizable.",
+    "Target resolution and scientific coverage remain UNKNOWN.",
+    "No full defect graph classification, census or future execution gate is produced.",
+    "Bounded Markdown comparison is not a whole-archive or worldwide novelty proof."
+  ]
+}

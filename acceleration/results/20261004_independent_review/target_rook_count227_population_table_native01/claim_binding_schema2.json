@@ -1,0 +1,106 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly227 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. All deficiencies are zero, one, two or three. If a,b,c count deficiency-one, deficiency-two and deficiency-three triangles, respectively, then a+2b+3c=24 and precisely the following necessary population ranges hold: c=0 with 1<=b<=8 and a=24-2b; c=1 with 0<=b<=5 and a=21-2b; or c=2 with b in {0,1} and a=18-2b. No c>=3 occurs. This does not assert realizability of a listed population, exclude count227 or resolve the target.",
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "scope": {
+    "description": "Universal conditional necessary16-row deficiency population table for exactly227 actual induced rook-nine subsets in a complete SRG(99,14,1,2). Arbitrary other target edges, actual point labels and parity of d1+d3 are retained. No realization or count227 exclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [],
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts those actual subsets containing T; local defect edges mean no induced rook contains both intersecting actual triangles"
+  ],
+  "limitations": [
+    "Necessary population table only: no retained row is asserted realizable and R227 is not excluded.",
+    "No unassigned stronger R227 follow-up, Makhnev/global Hamming exclusion or future execution gate is approved.",
+    "No equitable partition, automorphism, uniform point profile, nonconstant codeword or full positive-support inducedness is assumed.",
+    "All thirty proof checks, eight boundary challenges and16 arithmetic rows were written hand derivations; no mathematical worker, enumeration, source import, backend, formal or external proof check ran.",
+    "Old candidate/artifact bytes, ledger/index/Git/publication and frozen Wave46 roster remain unchanged; this is separate next-wave written evidence."
+  ],
+  "shared_components": [
+    "Structural is mathematical producer and authored prior rook candidates; Root suggested the follow-up/shared outline. Agreement is not verification.",
+    "Native independently reconstructed the exact new population statement and every fan/parity/PSD/rook equality step in writing; no discovery source or computational gate was imported.",
+    "Only the exactr1 strict deficiency bound and nonempty maximum-lower2 results are inherited, with their canonical bindings and distinct Root acceptances explicitly pinned.",
+    "The September17 regular-set one-neighbor overlap was read directly and rederived; no historical computation or global rook exclusion is used."
+  ],
+  "report": "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/summary.json",
+  "report_sha256": "dace9455e57c7970724a5ce2ac205a6208a6c4055df71152d67a767252651029",
+  "verification_timestamp": "2026-10-04T18:54:45.9157103Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T18:56:18.2015428Z",
+  "controls": {
+    "written_proof_checks": 30,
+    "written_boundary_challenges": 8,
+    "written": 38,
+    "population_rows_hand_checked": 16,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55",
+    "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_rook_deficiency_strict_second_neighbor_native01_root_written_acceptance01.json": "7b7c80c0e16492e8203a55671d366ba5d14147b90985e6e6d98bc3043920eb6d",
+    "acceleration/results/20261004_nonzero_rook_deficiency_maximum_lower2_native01_root_written_acceptance01.json": "fd293dd532197a48900e54c05963d1832c84769b3877e2b04b8501f2a28b46cb",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc",
+    "acceleration/audit_20261004_target_rook_count227_population_table_native_v1.md": "40879d6c0f1abc473b5cf765404889bc39edbbb7542cf5b1f2f425febc4010c6",
+    "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/summary.json": "dace9455e57c7970724a5ce2ac205a6208a6c4055df71152d67a767252651029"
+  },
+  "input_map_count": 11,
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json",
+    "sha256": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70",
+    "original_timestamp": "2026-10-04T18:42:00Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count227_population_table_native_v1.md",
+    "sha256": "40879d6c0f1abc473b5cf765404889bc39edbbb7542cf5b1f2f425febc4010c6"
+  },
+  "root_exact_new_statement_acceptance": null,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "count227_excluded": false,
+  "population_realizability_claimed": false,
+  "novelty_claimed": false,
+  "external_review": null,
+  "availability": "LOCAL_ONLY",
+  "registration_authorized": false,
+  "ledger_current_presence_asserted": false,
+  "publication_cutoff_inclusion": false,
+  "created_at": "2026-10-04T18:56:18.2015428Z",
+  "updated_at": "2026-10-04T18:56:18.2015428Z"
+}
