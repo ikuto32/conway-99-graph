@@ -1,0 +1,78 @@
+{
+  "plan": {
+    "command": [
+      "supervisor",
+      "--",
+      "uv",
+      "run",
+      "--locked",
+      "--offline",
+      "python",
+      "-B",
+      "source",
+      "singletons"
+    ],
+    "supervisor_argv": [
+      "supervisor",
+      "--",
+      "uv",
+      "run",
+      "--locked",
+      "--offline",
+      "python",
+      "-B",
+      "source",
+      "singletons"
+    ],
+    "child_argv": [
+      "uv",
+      "run",
+      "--locked",
+      "--offline",
+      "python",
+      "-B",
+      "source",
+      "singletons"
+    ],
+    "worker_argv": [
+      "python",
+      "-B",
+      "source",
+      "singletons"
+    ]
+  },
+  "manifest": {
+    "command": [
+      "uv",
+      "run",
+      "--locked",
+      "--offline",
+      "python",
+      "-B",
+      "source",
+      "singletons"
+    ],
+    "source_sha256": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+    "runtime_scope": "LOCAL_WINDOWS_SUSPENDED_JOB_V1",
+    "seconds": true,
+    "shutdown_reserve_seconds": 20.0,
+    "invocation_id": "x"
+  },
+  "terminal": {
+    "invocation_id": "x",
+    "command_exit_code": 0,
+    "error": null,
+    "cleanup": {
+      "actual_exit_code": 0,
+      "reaped": true,
+      "job_active_zero_observed": true,
+      "cleanup_errors": []
+    }
+  },
+  "summary": {
+    "command": [
+      "source",
+      "singletons"
+    ]
+  }
+}

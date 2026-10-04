@@ -1,0 +1,99 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-TARGET-EXTERIOR-TYPE-LOWER-GRAM-SCHUR",
+  "revision": 1,
+  "claim_revision": 1,
+  "source_candidate_id": "CANDIDATE-TARGET-EXTERIOR-TYPE-LOWER-GRAM-SCHUR",
+  "statement": "For an induced m-vertex subgraph H of a (99,14,1,2) graph, if K=H+4I is positive definite, every occurring exterior type t has t^T K^-1 t<=4; any two distinct exterior vertices with types t,u and adjacency a satisfy (a-t^T K^-1 u)^2<=(4-t^T K^-1 t)(4-u^T K^-1 u). The whole Schur complement is positive semidefinite of rank55-m.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "scope": {
+    "unrestricted_target": false,
+    "target_resolution": "NONE",
+    "population": "Every hypothetical finite simple order99 regular degree14 graph with adjacent CN1/nonadjacent CN2; its complete induced m-vertex H with H+4I positive definite, and actual exterior binary neighborhood columns."
+  },
+  "assumptions": [
+    "Finite simple (99,14,1,2) graph with its complete real adjacency",
+    "H is the complete induced m-vertex adjacency, not a selected subgraph omitting edges",
+    "K=H+4I is positive definite; singular K is outside this statement",
+    "A pair denotes two distinct exterior vertices, including two vertices with the same type",
+    "a is their actual binary adjacency"
+  ],
+  "dependencies": [],
+  "report": "acceleration/results/20261003_independent_review/external_type_lower_gram_schur01/target_schur/summary.json",
+  "report_sha256": "fe9d46d2e78625b43619207a9452ee45adb0f554da3664403e0b6ab97c66cbe5",
+  "verification_timestamp": "2026-10-03T22:18:18.9577175+00:00",
+  "proof": "acceleration/audit_20261003_external_type_lower_gram_schur_native_v1.md",
+  "proof_sha256": "4511c5706c037fd6c048506e7ffe646f7840e0aab14a257104a01add1b166b30",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_EXTERNAL_TYPE_LOWER_GRAM_SCHUR_V1.md": "44a382f4996d4887bed8d4eb8122dc8dee9876af55d267c1a84eaff85006cd04",
+    "acceleration/results/20261003_external_type_lower_gram_schur_candidate01.json": "9a8f2a2b50b8e409bda0147353514a32428fe8f40deb38b332564db572055dfb",
+    "docs/AUDIT_20260930_TARGET_MODULAR_RANKS.md": "c819ec41287a1a5394d84e2031b6cd2ba564ed8c9771082363dc46ad11a894ed",
+    "docs/DERIVATION_20260930_TRIANGLE39_GRAM_SOS.md": "1dead12449d33270d3adca585fc44616d4865bfe8fbe9532b7412861cbd544fb",
+    "acceleration/theory_20260930_closed28_lower_gram_redundancy.md": "2b998ef3fbdc32c4b53ddf705f36ad65c46b8645ef5773c0dca6bf1673f5acd6",
+    "acceleration/audit_20260930_rook_orbit_gram.py": "5c66e7c81c4bdddebe92cf0cabd552f096e6932959449e982acaf8e7ed44b5db",
+    "docs/CANDIDATE_20261003_SEVENTEEN_POINT_EXTERNAL_NEIGHBOR_MOMENTS_V1.md": "70ef6392e86c6b9a3c9c6eac9b5d72abb9ea25741d3649282f66ac200bb93349",
+    "docs/CANDIDATE_20261003_SEVENTEEN_POINT_UNBALANCED_TWELVE_TRIANGLE_CIRCUIT_V1.md": "f6f9e883b577d6969eafaac9239c37d637804786a08a6b5e676cebe0208e576b",
+    "acceleration/audit_20261003_external_type_lower_gram_schur_native_v1.md": "4511c5706c037fd6c048506e7ffe646f7840e0aab14a257104a01add1b166b30",
+    "acceleration/results/20261003_independent_review/external_type_lower_gram_schur01/summary_v2.json": "07b3221743540f7519f74cd10d9ee0675cf530c3f1541dd42224ec22b7843875",
+    "acceleration/results/20261003_independent_review/external_type_lower_gram_schur01/summary.json": "1b543dbdbb8a07724f2e6bdcb5a129baf554fef4e90fc46a0842d803f4639f8f",
+    "acceleration/results/20261003_independent_review/external_type_lower_gram_schur01/target_schur/summary.json": "fe9d46d2e78625b43619207a9452ee45adb0f554da3664403e0b6ab97c66cbe5",
+    "acceleration/results/20261003_independent_review/external_type_lower_gram_schur01/target_schur/claim_binding_schema2.json": "cd212854ad1a3f2d57575b4c73fd5aa0009484d66c7a0f14bbe4908171812329"
+  },
+  "controls": {
+    "independent_written_derivation": true,
+    "actual_matrix_inverse_or_type_pair_evaluations": 0,
+    "executed_controls": 0,
+    "mathematical_program_executions": 0,
+    "formal_proof": false,
+    "written_boundary_checks": 15,
+    "written_boundary_checks_scope": "Count for the shared two-statement written audit; not15 separate executed cases for each claim."
+  },
+  "shared_components": [
+    "Root proposed the mathematical question; Structural corrected/discovered the frozen source consequence; Native independently reconstructed the exact written proof.",
+    "Frozen author paper and historical Gram archives are shared written inputs; no producer import, numerical worker, formal or external checker is represented as independent.",
+    "No raw5184 replay, fixed472 inverse, target automorphism or executable gate is a premise of the new written result."
+  ],
+  "limitations": [
+    "No target occurrence, induced embedding, feasibility, nonexistence, isomorphism grouping or integer moment solution follows.",
+    "Singular K requires range conditions/generalized inversion and lies outside the stated PD scope.",
+    "Passing pair tests does not certify full PSD, rank, binary exterior adjacency or target completion.",
+    "Strict variational bound requires a nonempty nonnegative type and selected point coverage.",
+    "Rank55 pertains to real A+4I, not P/incidence rank or GF3 rank.",
+    "No numerical inverse, saved472 type universe or pair population was read or evaluated.",
+    "Historical5184 pending sentence is preserved; later accepted finite family computation is not a premise of this paper derivation.",
+    "Historical shifted-Gram and Schur archive overlap is disclosed without novelty or exhaustive-prior-search claim."
+  ],
+  "created_at": "2026-10-03T22:31:32.0373257+00:00",
+  "updated_at": "2026-10-03T22:32:09.7810150+00:00",
+  "started_at": null,
+  "started_at_null_reason": "No contemporaneous start timestamp was recorded for this written reconstruction; final report timestamp is authentic current UTC.",
+  "availability": "LOCAL_ONLY",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "registration_state": "Not registered; separate ROOT metadata review and authorized adapter/ledger action required.",
+  "metadata_mapping": {
+    "mathematical_program_executions": 0,
+    "explicit_schema2_population_projection": true,
+    "statement_scope_roles_identical_to_bound_written_derivation": true,
+    "author": "/root/native_driver",
+    "source_candidate_id_to_new_claim_id_only": true,
+    "historical_reports_preserved": true,
+    "ledger_index_git_mutations": 0,
+    "witness_alignment_preserved": false
+  },
+  "metadata_packet_revision": 2,
+  "preserved_initial_binding": {
+    "correction": "Initial metadata projection left written-boundary count null because the per-statement report did not copy the joint count. Bind the authentic joint15 written checks with explicit shared scope; no statement/report/mathematical outcome change.",
+    "path": "acceleration/results/20261003_independent_review/external_type_lower_gram_schur01/target_schur/claim_binding_schema2.json",
+    "sha256": "cd212854ad1a3f2d57575b4c73fd5aa0009484d66c7a0f14bbe4908171812329",
+    "bytes_modified": false
+  }
+}

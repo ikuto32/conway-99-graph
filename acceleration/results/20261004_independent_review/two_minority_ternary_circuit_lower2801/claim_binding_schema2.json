@@ -1,0 +1,152 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-TWO-MINORITY-CIRCUIT-LOWER28",
+  "revision": 1,
+  "claim_revision": 1,
+  "kind": "mathematical result",
+  "statement": "For every hypothetical srg(99,14,1,2) and every GF(3) circuit of distinct actual triangles whose nonzero coefficient vector after global scaling has exactly two minus coefficients and all other coefficients plus, its support size w is at least28. If its coefficient sum is nonzero in GF(3), its support size w is at least29.",
+  "scope": {
+    "unrestricted_target": true,
+    "target_resolution": "NONE",
+    "description": "Universal conditional theorem about an actual-triangle GF3 circuit with exactly two minus coefficients; primary lower28 covers balanced and unbalanced dependencies, and lower29 adds a nonzero coefficient-sum hypothesis. No such circuit, upper weight bound or realization is forced for every target.",
+    "minority_coefficients": 2,
+    "primary_weight_lower_bound": 28,
+    "unbalanced_weight_lower_bound": 29
+  },
+  "assumptions": [
+    "Complete target adjacency identity over integers: a symmetric binary zero-diagonal99by99 adjacency A satisfies A^2=12I-A+2J.",
+    "The selected triangles are actual distinct target triangles.",
+    "Circuit means rank w-1 over GF(3), with a full nonzero dependence having the stated globally scaled signs.",
+    "For the lower29 corollary only, the coefficient sum is nonzero in GF(3)."
+  ],
+  "dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root/checkpoint_audit",
+  "verifier": "/root",
+  "method": "independent_derivation",
+  "verification_timestamp": "2026-10-04T01:17:12.7976919+00:00",
+  "report": "acceleration/results/20261004_independent_review/two_minority_ternary_circuit_lower2801/summary.json",
+  "report_sha256": "69380bfcd36f2988c6d3c82897e809a83c616e06d15690eacbed22aaf75a1544",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TWO_MINORITY_TERNARY_CIRCUIT_LOWER28_V1.md": "25cf4c68b70d29346fcbb76dd4cf6ed1e1baa2be359d90e7700c2a2581872c95",
+    "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153",
+    "acceleration/results/20260930_independent_review/target_gram_support_lemma.json": "e194ca054dfe0596ae2b9ff1070ef59289c7c0401497a63c77eb62e217bd1ac6",
+    "acceleration/results/20261004_two_minority_ternary_circuit_lower28_candidate01.json": "908b557780a41326751acb905884d773228db4be8d49fb488c48889ac1acae63",
+    "acceleration/REVIEW_20261004_TWO_MINORITY_TERNARY_CIRCUIT_LOWER28_ROOT_V1.md": "10e67b5e1385a44cc059da3be6b0b9114b511cb70057cce1d9d1b29fbff5e8ba",
+    "acceleration/results/20261004_independent_review/two_minority_ternary_circuit_lower2801/summary.json": "69380bfcd36f2988c6d3c82897e809a83c616e06d15690eacbed22aaf75a1544"
+  },
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-TARGET-TERNARY-TWO-MINORITY-CIRCUIT-LOWER28",
+      "claim_revision": 1,
+      "producer": "/root/checkpoint_audit",
+      "verifier": "/root",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "timestamp": "2026-10-04T01:17:12.7976919+00:00",
+      "report": "acceleration/results/20261004_independent_review/two_minority_ternary_circuit_lower2801/summary.json",
+      "report_sha256": "69380bfcd36f2988c6d3c82897e809a83c616e06d15690eacbed22aaf75a1544",
+      "inputs_sha256": {
+        "docs/CANDIDATE_20261004_TWO_MINORITY_TERNARY_CIRCUIT_LOWER28_V1.md": "25cf4c68b70d29346fcbb76dd4cf6ed1e1baa2be359d90e7700c2a2581872c95",
+        "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153",
+        "acceleration/results/20260930_independent_review/target_gram_support_lemma.json": "e194ca054dfe0596ae2b9ff1070ef59289c7c0401497a63c77eb62e217bd1ac6",
+        "acceleration/results/20261004_two_minority_ternary_circuit_lower28_candidate01.json": "908b557780a41326751acb905884d773228db4be8d49fb488c48889ac1acae63",
+        "acceleration/REVIEW_20261004_TWO_MINORITY_TERNARY_CIRCUIT_LOWER28_ROOT_V1.md": "10e67b5e1385a44cc059da3be6b0b9114b511cb70057cce1d9d1b29fbff5e8ba"
+      },
+      "scope": {
+        "unrestricted_target": true,
+        "target_resolution": "NONE",
+        "description": "Universal conditional theorem about an actual-triangle GF3 circuit with exactly two minus coefficients; primary lower28 covers balanced and unbalanced dependencies, and lower29 adds a nonzero coefficient-sum hypothesis. No such circuit, upper weight bound or realization is forced for every target.",
+        "minority_coefficients": 2,
+        "primary_weight_lower_bound": 28,
+        "unbalanced_weight_lower_bound": 29
+      },
+      "checks": [
+        "Actual degree14, seven triangles and no shared selected edge",
+        "GF3 incidences for minus degree0,1,2 with totalcap7",
+        "Circuit used-row rankw-1 and zero columnsum implyw<=n",
+        "Disjoint incidence equation n=w+2-h-t andh+t<=2",
+        "Meeting incidence equation n=w+1-h-t andh+t<=1",
+        "Disjoint and one-point-meeting minority geometry exhausts possibilities",
+        "Actual K3 cross edges form matching, selectedc<=3",
+        "Disjoint selected B/BM/MM edge splits with all additional edges retained",
+        "Exceptional minus degree10 implies seven M neighbors, eight if selectedc0",
+        "Meeting B is induced bowtie by central neighborhood matching",
+        "Majority triangles meet meetingB at mostone point",
+        "Meeting baseline BM12 and m>=6, hencew>=10",
+        "FullG expansion yieldsG^2=63G and exact63F norm",
+        "Full outsidecut K=14m-2e andN=99-m includes unused target points",
+        "Integer identity81(k-2)(k-3)>=0 for allk0..14",
+        "Individual k>=7 andk>=8 remainders1620/2430",
+        "Alln=w branches scalar negativity through26",
+        "w27n=w zeroF forcesE0 but degree4 coordinate18",
+        "Maximal support eM=3w-18+d and polynomialw^2-35w+232",
+        "Disjoint c>=10-w excludesweights7and8; smallerweightsimpossible",
+        "Negative convex chord covers9..26 in maximalbranches",
+        "Maximalw27 outside1504>1008 without BMextra restriction",
+        "Intermediate disjoint support scalar excludes5..23",
+        "Intermediate high-majority branch negative chord excludes24..27",
+        "High-minority case allfour cut/norm/difference rows independently recomputed",
+        "Allnonnegativeintegerd covered, includingw27d0 strongerk>=8 bound4022>3276",
+        "Coefficient sumw-4 excludes28 onlyunderunbalancedhypothesis",
+        "No sign-pattern existence, realization, circuitupperbound or targetconclusion inferred"
+      ],
+      "written_checks": 28,
+      "executed_mathematical_commands": 0,
+      "formal_proof": false,
+      "external_review": null,
+      "external_review_null_reason": "No external review occurred",
+      "shared_components": [
+        "Root proposed investigating two-minus circuits following its one-minus discovery; Checkpoint authored the new case split and outside bound. Root independently reconstructed and attempted to falsify those deductions.",
+        "Target adjacency identity and existing Gram theorem r1 are explicit shared premises; no producer mathematical code or verifier code is imported.",
+        "All arithmetic and coverage review were written, not numerical executions or agent agreement."
+      ]
+    }
+  ],
+  "controls": {
+    "written_boundaries": 28,
+    "external_controls": 0,
+    "kind": "Complete written reconstruction and attempted falsification only",
+    "mathematical_program_executions": 0,
+    "formal_proof_executions": 0
+  },
+  "shared_components": [
+    "Root proposed investigating two-minus circuits following its one-minus discovery; Checkpoint authored the new case split and outside bound. Root independently reconstructed and attempted to falsify those deductions.",
+    "Target adjacency identity and existing Gram theorem r1 are explicit shared premises; no producer mathematical code or verifier code is imported.",
+    "All arithmetic and coverage review were written, not numerical executions or agent agreement."
+  ],
+  "limitations": [
+    "No two-minus circuit is forced in any target.",
+    "Weight28 is neither realized nor classified; unrestricted nonexistence and circuitupperbound remain unknown.",
+    "Extra actual BB/BM/MM edges are included; selectedc is not assumed to count every actual BBcross edge.",
+    "Prior lower23 remains true, with original evidence unchanged."
+  ],
+  "created_at": "2026-10-04T01:47:59.3516347+00:00",
+  "updated_at": "2026-10-04T01:47:59.3516347+00:00",
+  "started_at": null,
+  "started_at_null_reason": "Original start of independent written reconstruction was not separately timestamped",
+  "source_commit": null,
+  "source_commit_null_reason": "New written audit is not asserted present in a committed revision",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Literal candidate and raw candidate, complete independent Root written derivation and claim-bound raw report; metadata-only schema projection, publication/registration separate.",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "registration_state": "Unregistered. Root verifier route applicability requires separate exact adapter review; no generic role waiver or ledger operation is supplied.",
+  "metadata_mapping": {
+    "new_mathematical_commands": 0,
+    "new_bulk_replays": 0,
+    "exact_original_statement_scope_assumptions_dependencies_roles_timestamp": true,
+    "historical_bytes_preserved": true,
+    "ledger_index_status_mutations": 0
+  }
+}

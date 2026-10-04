@@ -1,0 +1,415 @@
+{
+  "positive": [
+    {
+      "case": "pairwise_without_common_Q",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "exact_one",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "below_one",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "one_edge",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "small_zero",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "empty",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "all680_zero",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "primal_header",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "runtime_calibrate",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "runtime_survey",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "own_calibration_source_snapshot",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "independent_violation_fixture_objects",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    }
+  ],
+  "precise_negative": [
+    {
+      "case": "bool_mask",
+      "expected_stage": "MASK_INTEGER",
+      "actual_stage": "MASK_INTEGER"
+    },
+    {
+      "case": "float_mask",
+      "expected_stage": "MASK_INTEGER",
+      "actual_stage": "MASK_INTEGER"
+    },
+    {
+      "case": "duplicate_mask",
+      "expected_stage": "MASK_ORDER",
+      "actual_stage": "MASK_ORDER"
+    },
+    {
+      "case": "reverse_mask",
+      "expected_stage": "MASK_ORDER",
+      "actual_stage": "MASK_ORDER"
+    },
+    {
+      "case": "outside_mask",
+      "expected_stage": "MASK_INTEGER",
+      "actual_stage": "MASK_INTEGER"
+    },
+    {
+      "case": "bool_weight",
+      "expected_stage": "WEIGHT_STRING",
+      "actual_stage": "WEIGHT_STRING"
+    },
+    {
+      "case": "float_weight",
+      "expected_stage": "WEIGHT_STRING",
+      "actual_stage": "WEIGHT_STRING"
+    },
+    {
+      "case": "unreduced",
+      "expected_stage": "WEIGHT_CANONICAL",
+      "actual_stage": "WEIGHT_CANONICAL"
+    },
+    {
+      "case": "negative",
+      "expected_stage": "WEIGHT_NONNEGATIVE",
+      "actual_stage": "WEIGHT_NONNEGATIVE"
+    },
+    {
+      "case": "zero_denominator",
+      "expected_stage": "WEIGHT_CANONICAL",
+      "actual_stage": "WEIGHT_CANONICAL"
+    },
+    {
+      "case": "wrong_length",
+      "expected_stage": "WEIGHT_SHAPE",
+      "actual_stage": "WEIGHT_SHAPE"
+    },
+    {
+      "case": "bool_domain",
+      "expected_stage": "DOMAIN_INTEGER",
+      "actual_stage": "DOMAIN_INTEGER"
+    },
+    {
+      "case": "float_domain",
+      "expected_stage": "DOMAIN_INTEGER",
+      "actual_stage": "DOMAIN_INTEGER"
+    },
+    {
+      "case": "large_domain",
+      "expected_stage": "DOMAIN_INTEGER",
+      "actual_stage": "DOMAIN_INTEGER"
+    },
+    {
+      "case": "pair_bool_intersection",
+      "expected_stage": "PAIR_VALUE",
+      "actual_stage": "PAIR_VALUE"
+    },
+    {
+      "case": "pair_float_position",
+      "expected_stage": "PAIR_VALUE",
+      "actual_stage": "PAIR_VALUE"
+    },
+    {
+      "case": "pair_wrong_columns",
+      "expected_stage": "PAIR_VALUE",
+      "actual_stage": "PAIR_VALUE"
+    },
+    {
+      "case": "pair_wrong_edge",
+      "expected_stage": "PAIR_VALUE",
+      "actual_stage": "PAIR_VALUE"
+    },
+    {
+      "case": "pair_wrong_sum",
+      "expected_stage": "PAIR_VALUE",
+      "actual_stage": "PAIR_VALUE"
+    },
+    {
+      "case": "pair_threshold_equal",
+      "expected_stage": "PAIR_VALUE",
+      "actual_stage": "PAIR_VALUE"
+    },
+    {
+      "case": "triangle_late_id",
+      "expected_stage": "TRIANGLE_VALUE",
+      "actual_stage": "TRIANGLE_VALUE"
+    },
+    {
+      "case": "triangle_wrong_mask",
+      "expected_stage": "TRIANGLE_VALUE",
+      "actual_stage": "TRIANGLE_VALUE"
+    },
+    {
+      "case": "triangle_wrong_sum",
+      "expected_stage": "TRIANGLE_VALUE",
+      "actual_stage": "TRIANGLE_VALUE"
+    },
+    {
+      "case": "triangle_threshold",
+      "expected_stage": "TRIANGLE_VALUE",
+      "actual_stage": "TRIANGLE_VALUE"
+    },
+    {
+      "case": "triangle_flag",
+      "expected_stage": "TRIANGLE_VALUE",
+      "actual_stage": "TRIANGLE_VALUE"
+    },
+    {
+      "case": "violation_wrong_weights",
+      "expected_stage": "VIOLATION_VALUE",
+      "actual_stage": "VIOLATION_VALUE"
+    },
+    {
+      "case": "pair_missing_last",
+      "expected_stage": "PAIR_ROW",
+      "actual_stage": "PAIR_ROW"
+    },
+    {
+      "case": "triangle_missing",
+      "expected_stage": "TRIANGLE_ROW",
+      "actual_stage": "TRIANGLE_ROW"
+    },
+    {
+      "case": "violation_missing",
+      "expected_stage": "VIOLATION_ROW",
+      "actual_stage": "VIOLATION_ROW"
+    },
+    {
+      "case": "pair_duplicate",
+      "expected_stage": "PAIR_EXTRA",
+      "actual_stage": "PAIR_EXTRA"
+    },
+    {
+      "case": "triangle_duplicate",
+      "expected_stage": "TRIANGLE_EXTRA",
+      "actual_stage": "TRIANGLE_EXTRA"
+    },
+    {
+      "case": "violation_duplicate",
+      "expected_stage": "VIOLATION_EXTRA",
+      "actual_stage": "VIOLATION_EXTRA"
+    },
+    {
+      "case": "equal_one_extra_violation",
+      "expected_stage": "VIOLATION_EXTRA",
+      "actual_stage": "VIOLATION_EXTRA"
+    },
+    {
+      "case": "population_bool_count",
+      "expected_stage": "POPULATION_CRITERION",
+      "actual_stage": "POPULATION_CRITERION"
+    },
+    {
+      "case": "population_missing",
+      "expected_stage": "POSITIVE_POPULATION",
+      "actual_stage": "POSITIVE_POPULATION"
+    },
+    {
+      "case": "population_reverse",
+      "expected_stage": "POSITIVE_POPULATION",
+      "actual_stage": "POSITIVE_POPULATION"
+    },
+    {
+      "case": "cut_last_Q",
+      "expected_stage": "CUT_IDENTITY",
+      "actual_stage": "CUT_IDENTITY"
+    },
+    {
+      "case": "cut_bool_row",
+      "expected_stage": "CUT_IDENTITY",
+      "actual_stage": "CUT_IDENTITY"
+    },
+    {
+      "case": "cut_float_sum",
+      "expected_stage": "CUT_VALUE",
+      "actual_stage": "CUT_VALUE"
+    },
+    {
+      "case": "cut_wrong_slack",
+      "expected_stage": "CUT_VALUE",
+      "actual_stage": "CUT_VALUE"
+    },
+    {
+      "case": "cut_integer_holds",
+      "expected_stage": "CUT_VALUE",
+      "actual_stage": "CUT_VALUE"
+    },
+    {
+      "case": "cut_missing_last",
+      "expected_stage": "CUT_POPULATION",
+      "actual_stage": "CUT_POPULATION"
+    },
+    {
+      "case": "gate_legacy_method",
+      "expected_stage": "EXACT_PRIMAL_GATE_HEADER",
+      "actual_stage": "EXACT_PRIMAL_GATE_HEADER"
+    },
+    {
+      "case": "gate_bool_version",
+      "expected_stage": "EXACT_PRIMAL_GATE_HEADER",
+      "actual_stage": "EXACT_PRIMAL_GATE_HEADER"
+    },
+    {
+      "case": "gate_wrong_verifier",
+      "expected_stage": "EXACT_PRIMAL_GATE_HEADER",
+      "actual_stage": "EXACT_PRIMAL_GATE_HEADER"
+    },
+    {
+      "case": "gate_farkas",
+      "expected_stage": "EXACT_PRIMAL_GATE_SCOPE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SCOPE"
+    },
+    {
+      "case": "gate_bool_rows",
+      "expected_stage": "EXACT_PRIMAL_GATE_SCOPE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SCOPE"
+    },
+    {
+      "case": "gate_float_variables",
+      "expected_stage": "EXACT_PRIMAL_GATE_SCOPE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SCOPE"
+    },
+    {
+      "case": "gate_old_equations",
+      "expected_stage": "EXACT_PRIMAL_GATE_SCOPE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SCOPE"
+    },
+    {
+      "case": "runtime_source",
+      "expected_stage": "SUPERVISOR_IDENTITY",
+      "actual_stage": "SUPERVISOR_IDENTITY"
+    },
+    {
+      "case": "runtime_bool_schema",
+      "expected_stage": "SUPERVISOR_IDENTITY",
+      "actual_stage": "SUPERVISOR_IDENTITY"
+    },
+    {
+      "case": "runtime_cwd",
+      "expected_stage": "SUPERVISOR_IDENTITY",
+      "actual_stage": "SUPERVISOR_IDENTITY"
+    },
+    {
+      "case": "runtime_retry",
+      "expected_stage": "SUPERVISOR_RETRY",
+      "actual_stage": "SUPERVISOR_RETRY"
+    },
+    {
+      "case": "runtime_bool_seconds",
+      "expected_stage": "SUPERVISOR_ALLOCATION",
+      "actual_stage": "SUPERVISOR_ALLOCATION"
+    },
+    {
+      "case": "runtime_changed_invocation",
+      "expected_stage": "INVOCATION",
+      "actual_stage": "INVOCATION"
+    },
+    {
+      "case": "runtime_bool_exit",
+      "expected_stage": "TERMINAL",
+      "actual_stage": "TERMINAL"
+    },
+    {
+      "case": "runtime_deadline",
+      "expected_stage": "TERMINAL",
+      "actual_stage": "TERMINAL"
+    },
+    {
+      "case": "runtime_float_inf",
+      "expected_stage": "TERMINAL_ELAPSED",
+      "actual_stage": "TERMINAL_ELAPSED"
+    },
+    {
+      "case": "cleanup_bool_exit",
+      "expected_stage": "CLEANUP",
+      "actual_stage": "CLEANUP"
+    },
+    {
+      "case": "cleanup_reaped_int",
+      "expected_stage": "CLEANUP",
+      "actual_stage": "CLEANUP"
+    },
+    {
+      "case": "cleanup_active_int",
+      "expected_stage": "CLEANUP",
+      "actual_stage": "CLEANUP"
+    },
+    {
+      "case": "cleanup_errors",
+      "expected_stage": "CLEANUP",
+      "actual_stage": "CLEANUP"
+    },
+    {
+      "case": "duplicate_json",
+      "expected_stage": "JSON_DUPLICATE",
+      "actual_stage": "JSON_DUPLICATE"
+    },
+    {
+      "case": "nonfinite_json",
+      "expected_stage": "JSON_NONFINITE",
+      "actual_stage": "JSON_NONFINITE"
+    },
+    {
+      "case": "own_gate_wrong_source",
+      "expected_stage": "CHECKER_GATE_SOURCE",
+      "actual_stage": "CHECKER_GATE_SOURCE"
+    },
+    {
+      "case": "own_gate_bool_version",
+      "expected_stage": "CHECKER_GATE_SOURCE",
+      "actual_stage": "CHECKER_GATE_SOURCE"
+    },
+    {
+      "case": "own_gate_missing_software_pin",
+      "expected_stage": "CHECKER_GATE_SOURCE",
+      "actual_stage": "CHECKER_GATE_SOURCE"
+    },
+    {
+      "case": "primal_old_source",
+      "expected_stage": "EXACT_PRIMAL_GATE_SOURCE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SOURCE"
+    },
+    {
+      "case": "primal_missing_spec_pin",
+      "expected_stage": "EXACT_PRIMAL_GATE_SOURCE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SOURCE"
+    }
+  ],
+  "actual_producer_packet_read": false,
+  "actual_scientific_primal_read": false,
+  "LP_calls": 0,
+  "RREF_calls": 0
+}

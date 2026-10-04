@@ -1,0 +1,72 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_DERIVATION_V1",
+  "status": "INDEPENDENT_FOCAL_NEIGHBOR_MATCHING_NECESSITY_V1_WRITTEN_PASS",
+  "claim_id": "C-TARGET-INDEPENDENT-SUPPORT-FOCAL-NEIGHBOR-MATCHING-CUTS",
+  "claim_revision": 1,
+  "statement": "Let G be any finite simple k-regular graph with exactly one common neighbor for adjacent vertices and two for nonadjacent vertices, S an induced support, x outside S, T=N(x) intersect S independent, W=N(x) minus S, s=|T| and U_w=N(w) intersect S. Every selected w in W meets T in at most one support vertex, and every u in T has exactly one such partner. P={w in W: |T intersect U_w|=1} has s elements and no edges to W; R=W minus P has nonnegative even size k-2s and induces a perfect matching, with every other W edge absent. Distinct selected w,z have |U_w intersect U_z|<=1; overlap1 forces nonadjacency, and matched R pairs have disjoint types. Thus a support type of size at least2 occurs at most once in W. These are conditional focal-neighborhood necessities, without uniform same-type profiles or automorphism; satisfying their qualified selector/matching constraints does not certify a full graph.",
+  "producer": "/root",
+  "verifier": "/root/structural",
+  "method": "independent_derivation",
+  "outcome": "PASS",
+  "timestamp": "2026-10-04T05:06:39.6646084+00:00",
+  "verification_timestamp": "2026-10-04T05:06:39.6646084+00:00",
+  "scope": {
+    "description": "All finite simple k-regular lambda1/mu2 graphs, induced supports S and actual exterior focal vertices whose support type T is independent; copy-labelled focal-neighborhood constraints only. Includes hypothetical99/14/1/2 target, with no fixed17 profile or target resolution.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "G is a finite simple k-regular graph; adjacent pairs have exactly1 common neighbor and distinct nonadjacent pairs exactly2.",
+    "S is induced; x is outside S; T=N(x) intersect S is independent.",
+    "Exterior copies denote distinct actual vertices, excluding the focal vertex itself.",
+    "Any proposed adjacency bits used by an application must be independently qualified necessary relations; no implementation or actual formula is approved here."
+  ],
+  "dependencies": [],
+  "proof": "acceleration/audit_20261004_focal_neighbor_matching_structural_v1.md",
+  "proof_sha256": "ee5641a7be52bce09de0e9f00078d252f8107b6461c5ddec7a2b22afc69799a5",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_FOCAL_NEIGHBOR_MATCHING_NECESSITY_V1.md": "30be5b396aadf848e73ad24ae3c49a9a2734d9b62944f756d057a95843b57858",
+    "acceleration/audit_20261004_focal_neighbor_matching_structural_v1.md": "ee5641a7be52bce09de0e9f00078d252f8107b6461c5ddec7a2b22afc69799a5"
+  },
+  "outputs_sha256": {},
+  "controls": {
+    "written_boundary_checks": 20,
+    "executed_mathematical_commands": 0,
+    "executed_controls": 0,
+    "formal": 0,
+    "external": 0
+  },
+  "checked_scope": {
+    "all_five_theorem_items": true,
+    "rook9_hand_verified": true,
+    "selected_copy_degree_and_incidence_equations_derived": true,
+    "one_regular_neighborhood_encoding_sufficiency_under_explicit_qualifications": true,
+    "printed_encoding_all_supplied_pair_bits_faithful": false,
+    "missing_mask0_clause_is_theorem_counterexample": false,
+    "actual_fixed17_profile_checked": false,
+    "implemented_formula_checked": false,
+    "full_graph_sufficiency": false
+  },
+  "shared_components": [
+    "Root authored the frozen candidate and proposed derivation; Structural separately reconstructed all five items and rook cases.",
+    "The matching-neighborhood observation follows directly from lambda1 and is not claimed novel.",
+    "Prior block/profile and fixed17 pair work is contextual overlap only, not an unverified mathematical premise or transferred code gate."
+  ],
+  "limitations": [
+    "The five-item theorem is verified by written derivation only; no executable matching/encoding checker is approved.",
+    "The frozen finite encoding paragraph omits explicit mask0 coexistence rejection and relies on a certified focal CN bit to exclude overlap>=2; exact enforcement of all supplied pair restrictions is not established by that paragraph.",
+    "Weakening a necessary relaxation does not invalidate a future sound independently checked UNSAT implication, but passing is not full local/common-neighbor or graph-completion sufficiency.",
+    "Type multiplicity<=1 applies only to selected focal W types of size>=2, not all exterior counts or empty/singleton types.",
+    "No fixed count witness excluded, no full graph or Conway99 resolution, no assumption of equitable partition or automorphism.",
+    "Written twenty boundaries; zero mathematical executions, formal checks or external review.",
+    "Outside current400 ledger and frozen18 V22 roster; no registration authorized."
+  ],
+  "actual_invocation": null,
+  "actual_invocation_null_reason": "Written proof and hand examples only; metadata reads/hashes and source authoring are not mathematical execution.",
+  "command": null,
+  "command_null_reason": "No mathematical script, solver, native worker or encoding command executed.",
+  "availability": "LOCAL_ONLY",
+  "target_resolution": "NONE",
+  "registration_authorized": false,
+  "ledger_index_mutated": false
+}

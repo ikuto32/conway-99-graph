@@ -1,0 +1,46 @@
+{
+  "schema": "SOURCE_ONLY_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T08:23:27.4085663Z",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-DIVIDED-GRAM-FORM-RANK77",
+  "revision": 1,
+  "status": "CANDIDATE",
+  "author": "/root/structural",
+  "statement": "For every simple SRG(99,14,1,2) adjacency matrix A and its complete99x231 binary triangle incidence matrix N, let H=A+7I, G=H mod3, V=ker G and j be the all-one vector. The divided form beta(x,y)=xhat^T H yhat/3 mod3 is well-defined on V, has rank43 and radical span(j); ker(N^T mod3) contains j and is beta-totally-isotropic. Consequently dim ker(N^T mod3)<=22 and77<=rank_F3 N<=98. This conditional necessary condition forces neither a nonconstant left-kernel vector nor target existence/nonexistence.",
+  "scope": {
+    "description": "Complete unrestricted target incidence only, exact integer spectrum and odd-prime local congruence; no fixed-support occurrence, small-circuit existence, binary rank transfer or target conclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is binary symmetric zero-diagonal with all row sums14 and A^2=12I-A+2J exactly over the integers.",
+    "N includes each actual triangle exactly once, with231 columns and seven entries per row; NN^T=A+7I."
+  ],
+  "proposed_dependencies": [
+    {
+      "id": "C-TARGET-MODULAR-RANKS",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "Existing exact spectral/modular target context; the new paper independently derives its needed G/E layer."
+    }
+  ],
+  "proof": {
+    "path": "docs/CANDIDATE_20261004_TARGET_TERNARY_DIVIDED_GRAM_FORM_RANK77_V1.md",
+    "sha256": "f07212fc84afe383704f782a5464cb82fb9e39f9eceef8a416c708c2ce35866a"
+  },
+  "shared_origin": "Root posed the incidence G/E investigation and reviewed an outline; Structural authors this candidate; outline agreement is not independent verification.",
+  "archive_overlap": "RankG55 is historical; the determinant-only floor77 is a subsidiary candidate sentence of the earlier upper98 note. This divided-form package does not claim novelty or reapprove that sentence.",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_DIVIDED_GRAM_FORM_RANK77_V1.md": "f07212fc84afe383704f782a5464cb82fb9e39f9eceef8a416c708c2ce35866a",
+    "docs/AUDIT_20260930_TARGET_MODULAR_RANKS.md": "c819ec41287a1a5394d84e2031b6cd2ba564ed8c9771082363dc46ad11a894ed",
+    "docs/DERIVATION_20260930_GF3_HOLLOW_RESIDUAL.md": "f8e52a669ed012a4d79e951e4ee52ea60d4d556ff16db893ff8e0508017f59ba",
+    "docs/CANDIDATE_20261003_TARGET_TERNARY_UNBALANCED_CIRCUIT_UPPER98_V1.md": "c44d774b841b1466ce7e040df261a99b15b44502a74dc2d32c71804a29682dd5"
+  },
+  "written_boundaries": 14,
+  "executed_controls": 0,
+  "mathematical_script_runs": 0,
+  "formal_checks": 0,
+  "external_checks": 0,
+  "verification_pending": true,
+  "registry_mutated": false,
+  "target_resolution": "NONE"
+}

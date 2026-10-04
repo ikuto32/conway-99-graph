@@ -1,0 +1,80 @@
+{
+  "schema": "SOURCE_ONLY_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-TWO-MINORITY-CIRCUIT-LOWER28",
+  "revision": 1,
+  "statement": "For every hypothetical srg(99,14,1,2) and every GF(3) circuit of distinct actual triangles whose nonzero coefficient vector after global scaling has exactly two minus coefficients and all other coefficients plus, its support size w is at least28. If its coefficient sum is nonzero in GF(3), its support size w is at least29.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "CANDIDATE",
+  "review_state": "CLEAR",
+  "producer": "/root/checkpoint_audit",
+  "verifier": null,
+  "verifier_null_reason": "A different author must independently reconstruct or falsify the complete written proof; no independent verification result exists at this freeze.",
+  "created_at": "2026-10-04T01:12:29.4470272+00:00",
+  "updated_at": "2026-10-04T01:12:29.4470272+00:00",
+  "scope": {
+    "unrestricted_target": true,
+    "target_resolution": "NONE",
+    "description": "Universal conditional theorem about an actual-triangle GF3 circuit with exactly two minus coefficients; primary lower28 covers balanced and unbalanced dependencies, and lower29 adds a nonzero coefficient-sum hypothesis. No such circuit, upper weight bound or realization is forced for every target.",
+    "minority_coefficients": 2,
+    "primary_weight_lower_bound": 28,
+    "unbalanced_weight_lower_bound": 29
+  },
+  "assumptions": [
+    "Complete target adjacency identity over integers: a symmetric binary zero-diagonal99by99 adjacency A satisfies A^2=12I-A+2J.",
+    "The selected triangles are actual distinct target triangles.",
+    "Circuit means rank w-1 over GF(3), with a full nonzero dependence having the stated globally scaled signs.",
+    "For the lower29 corollary only, the coefficient sum is nonzero in GF(3)."
+  ],
+  "dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "evidence": {
+    "path": "docs/CANDIDATE_20261004_TWO_MINORITY_TERNARY_CIRCUIT_LOWER28_V1.md",
+    "sha256": "25cf4c68b70d29346fcbb76dd4cf6ed1e1baa2be359d90e7700c2a2581872c95"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TWO_MINORITY_TERNARY_CIRCUIT_LOWER28_V1.md": "25cf4c68b70d29346fcbb76dd4cf6ed1e1baa2be359d90e7700c2a2581872c95",
+    "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153",
+    "acceleration/results/20260930_independent_review/target_gram_support_lemma.json": "e194ca054dfe0596ae2b9ff1070ef59289c7c0401497a63c77eb62e217bd1ac6"
+  },
+  "source_commit": null,
+  "source_commit_null_reason": "This new local written candidate is not asserted to be present in a committed source revision.",
+  "execution_count": 0,
+  "mathematical_program_executions": 0,
+  "symbolic_calculations_executed": 0,
+  "matrix_or_circuit_enumerations_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "external_reviews": 0,
+  "independent_written_review": null,
+  "independent_written_review_null_reason": "Pending genuine separate derivation and attempted falsification; producer does not approve its own candidate.",
+  "shared_components": [
+    "Root proposed the q2 direction after authoring the separately checked q1 lower28 candidate. Checkpoint authored this new q2 incidence classification, full induced-edge treatment and integer outside-coordinate bound.",
+    "The exact target identity and historical target Gram PSD theorem are shared explicit premises. Their old evidence remains unchanged.",
+    "All arithmetic and case coverage in this new candidate were written without mathematical programs; metadata hashing and document creation are not numerical proof or independent verification."
+  ],
+  "limitations": [
+    "No two-minority circuit is forced in every target, so no unrestricted target nonexistence follows.",
+    "No weight28 realization, classification, circuit upper bound, integer model solution, numerical solver result or complete graph is supplied.",
+    "All actual induced extra edges remain in edge counts, cut degrees and norm bounds; no selected-union-induced, connectivity or symmetry assumption is used.",
+    "The earlier two-minority unbalanced lower23 remains true and its original evidence is preserved.",
+    "This is an unverified candidate requiring different-author review; no ledger, index, Git or existing artifact status is changed."
+  ],
+  "candidate_verification_request": [
+    "Both disjoint and one-point-overlap minority geometry cases and all n=w,w+1,w+2 incidence/rank branches.",
+    "Every selected B-B/B-M/M-M edge split and the exceptional minority point seven/eight selected M neighbors.",
+    "Exact integer outside norm identity for k in0..14, full99-point cut count, retained remainders1620/2430 and all four endpoint table rows.",
+    "The no-extra-edge inference is used only where forced by nonnegative integer induced-edge scalar; additional B-B/B-M edges are retained everywhere else.",
+    "Coefficient sum w-4 and balancedweight28 versus unbalancedlower29 distinction."
+  ],
+  "target_resolution": "NONE",
+  "availability": "LOCAL_ONLY",
+  "ledger_index_git_mutations": 0
+}
