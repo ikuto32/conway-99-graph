@@ -1,0 +1,121 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-UNBALANCED-CIRCUIT-LE98",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every simple degree14 graph on99 vertices with adjacent common-neighbor count1 and nonadjacent count2, let B contain every actual triangle once. Over GF(3), the minimum support of a word in ker(B) having nonzero coordinate sum is at most98; its selected columns form a circuit and its nonzero coefficients are +1 or -1.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "scope": {
+    "population": "Conditional necessary implication for every unrestricted exact99-vertex degree14 adjacentCN1/nonadjacentCN2 target and its complete actual triangle incidence; minimum unbalanced right-kernel support only.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Simple degree14 graph on99 vertices",
+    "Exact adjacentCN1 and nonadjacentCN2",
+    "Every actual triangle once",
+    "Exact integer incidence identities and GF(3) linear algebra"
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-TERNARY-AFFINE-OBSTRUCTION-UNBALANCED-CIRCUIT-LE99",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "report": "acceleration/results/20261003_independent_review/target_ternary_unbalanced_circuit_upper98_01/summary.json",
+  "report_sha256": "398664a51fa6c9a5ed9e808db833e2438e3f0778109eba408779e67cb8a447b0",
+  "verification_timestamp": "2026-10-03T20:44:17.7515171+00:00",
+  "verification_started_at": null,
+  "verification_started_at_null_reason": "No instrumented written-review start timestamp was recorded; final report timestamp is the actual metadata creation time.",
+  "proof": "acceleration/audit_20261003_target_ternary_unbalanced_circuit_upper98_native_v1.md",
+  "proof_sha256": "57a8fa63fdeb64955e8a471dc147d8d50ed449ebfcdd8399236a7b28f13e24b0",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TARGET_TERNARY_UNBALANCED_CIRCUIT_UPPER98_V1.md": "c44d774b841b1466ce7e040df261a99b15b44502a74dc2d32c71804a29682dd5",
+    "acceleration/audit_20261003_target_ternary_unbalanced_circuit_upper98_native_v1.md": "57a8fa63fdeb64955e8a471dc147d8d50ed449ebfcdd8399236a7b28f13e24b0",
+    "acceleration/results/20261003_independent_review/target_ternary_affine_unbalanced_circuit01/summary.json": "985fa1cc5898f71ec38ed0644513adbb0fe1e58f7fb1eeb8af7c27ec7bca6fb0",
+    "acceleration/audit_20261003_target_ternary_affine_unbalanced_circuit_v1.md": "f3e1cffd93fe3dfc32cdb0b764c118f13b56d010d6bc6b6f0ea13ee1ba081e13",
+    "acceleration/results/20261003_independent_review/target_ternary_unbalanced_circuit_upper98_01/summary.json": "398664a51fa6c9a5ed9e808db833e2438e3f0778109eba408779e67cb8a447b0"
+  },
+  "controls": {
+    "written_case_branches": [
+      "Minimum unbalanced word circuit: proper balanced and unbalanced dependencies separately cancelled",
+      "Extra-column delta0: two ratios, support<=2 and binary negative-pair veto",
+      "Extra-column delta!=0: full nonzero basis support, no-exception and one-exception branches",
+      "Exact target affine identities independently reconstructed, without numerical rank55 premise",
+      "Distinct231 binary triangle columns and rank<=98 supply general lemma hypotheses",
+      "Rank0/zero column, strict N=r+1, duplicate-class and nonbinary ternary counterexamples derived by hand"
+    ],
+    "executed_controls": 0,
+    "executed_graphs": 0,
+    "mathematical_program_executions": 0,
+    "formal_proof": false,
+    "scope": "Complete written branches and hand boundary examples; no executed calibrated fixture claimed."
+  },
+  "supplemental_verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-TARGET-TERNARY-UNBALANCED-CIRCUIT-LE98",
+      "claim_revision": 1,
+      "producer": "/root/structural",
+      "verifier": "/root/native_driver",
+      "method": "independent_derivation",
+      "outcome": "PASS",
+      "timestamp": "2026-10-03T20:44:17.7515171+00:00",
+      "report": "acceleration/results/20261003_independent_review/target_ternary_unbalanced_circuit_upper98_01/summary.json",
+      "report_sha256": "398664a51fa6c9a5ed9e808db833e2438e3f0778109eba408779e67cb8a447b0",
+      "inputs_sha256": {
+        "docs/CANDIDATE_20261003_TARGET_TERNARY_UNBALANCED_CIRCUIT_UPPER98_V1.md": "c44d774b841b1466ce7e040df261a99b15b44502a74dc2d32c71804a29682dd5",
+        "acceleration/audit_20261003_target_ternary_unbalanced_circuit_upper98_native_v1.md": "57a8fa63fdeb64955e8a471dc147d8d50ed449ebfcdd8399236a7b28f13e24b0",
+        "acceleration/results/20261003_independent_review/target_ternary_affine_unbalanced_circuit01/summary.json": "985fa1cc5898f71ec38ed0644513adbb0fe1e58f7fb1eeb8af7c27ec7bca6fb0",
+        "acceleration/audit_20261003_target_ternary_affine_unbalanced_circuit_v1.md": "f3e1cffd93fe3dfc32cdb0b764c118f13b56d010d6bc6b6f0ea13ee1ba081e13"
+      },
+      "command": null,
+      "command_null_reason": "Complete independent written derivation; file reads, small identity hashes and metadata serialization are not mathematical program executions.",
+      "formal_proof": false,
+      "external_review": null,
+      "external_review_null_reason": "No external review occurred.",
+      "shared_components": [
+        "Structural discovery and complete upper98 candidate were read; Native independently reconstructed the complete two-branch proof and hand boundary counterexamples.",
+        "Prior affine dependency has ROOT-origin idea, Structural discovery and Native independent written verification; its exact revision1 report is an explicit mathematical prerequisite.",
+        "Ordinary exact GF(3) and literal binary incidence definitions; no producer code imports or computational checking components.",
+        "Withdrawn rank55-for-P, archive numerical ranks and subsidiary determinant calculation are not mathematical premises."
+      ]
+    }
+  ],
+  "shared_components": [
+    "Structural discovery and complete upper98 candidate were read; Native independently reconstructed the complete two-branch proof and hand boundary counterexamples.",
+    "Prior affine dependency has ROOT-origin idea, Structural discovery and Native independent written verification; its exact revision1 report is an explicit mathematical prerequisite.",
+    "Ordinary exact GF(3) and literal binary incidence definitions; no producer code imports or computational checking components.",
+    "Withdrawn rank55-for-P, archive numerical ranks and subsidiary determinant calculation are not mathematical premises."
+  ],
+  "limitations": [
+    "Conditional target consequence only; no target existence/nonexistence, particular circuit, rank<=97 or second left-kernel consequence.",
+    "General auxiliary lemma requires pairwise distinct literal binary columns and N>rank+1; those hypotheses cannot be weakened to ternary columns or a multiset count.",
+    "No executed mathematical controls, formal proof, external review, novelty or sharpness claim.",
+    "Prior dependency exact revision1 is bound; current ledger presence is not inferred from the report.",
+    "Separate lower12 statement and finite17 families are not used as premises; this report does not supply their coverage."
+  ],
+  "created_at": "2026-10-03T20:44:17.7515171+00:00",
+  "updated_at": "2026-10-03T20:44:17.7515171+00:00",
+  "source_commit": "d0c0dd7db0d3de420b1d718b59122b069df01107",
+  "source_commit_role": "Read-only metadata context observed at final report creation; new files are LOCAL_ONLY and not asserted in this commit.",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Literal workspace files pending separate ROOT review and any later immutable publication.",
+  "target_resolution": "NONE",
+  "registration_state": "Not registered; no ledger/index mutation; future exact Native-verifier role adapter required.",
+  "metadata_mapping": {
+    "author": "/root/native_driver",
+    "source": "Independent written derivation plus literal candidate, audit and prior exact revision1 report.",
+    "statement_scope_roles_identical_to_primary_report": true,
+    "mathematical_program_executions": 0,
+    "ledger_index_mutations": 0
+  }
+}

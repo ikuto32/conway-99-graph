@@ -1,3 +1,17 @@
+# Latest verified continuation checkpoint — wave44, 2026-10-04 JST
+
+The [forty-fourth milestone](RESEARCH_20261004_FORTYFOURTH_WAVE.md) freezes400 claims:392 VERIFIED/CLEAR,
+3 CANDIDATE/CLEAR and5 REFUTED/CLEAR. Eleven additions cover two exact fixed17
+rational moment witnesses, necessary CN/type constraints, one5184-label local
+family and its four classes, an unrestricted necessary circuit bound98,
+one239085-label saved-neighborhood census and finite adjacency API controls.
+None resolves the target. Overall search coverage: UNKNOWN; no validated
+denominator. Later independently reviewed results remain outside this cutoff.
+All6054 earlier PUBLIC entries are preserved; new cutoff evidence remains
+LOCAL_ONLY pending immutable confirmation. Use the linked checkpoint for the
+separate target, verification and execution states. Historical text follows
+byte for byte.
+
 # Latest verified continuation checkpoint — wave43, 2026-10-04 JST
 
 The [forty-third milestone](RESEARCH_20261003_FORTYTHIRD_WAVE.md) freezes 389 claims:

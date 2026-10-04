@@ -1,0 +1,147 @@
+{
+  "kind": "model",
+  "payload": {
+    "schema": "EXTERIOR_NEIGHBOR_MOMENT_MODEL_V1",
+    "target_order": 9,
+    "target_degree": 4,
+    "adjacent_cn": 1,
+    "nonadjacent_cn": 2,
+    "ordered_support_vertices": [
+      0,
+      1,
+      2
+    ],
+    "induced_adjacency": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "H_squared": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "vertex_rhs": [
+      2,
+      2,
+      2
+    ],
+    "pair_deficits": [
+      [
+        null,
+        0,
+        0
+      ],
+      [
+        0,
+        null,
+        0
+      ],
+      [
+        0,
+        0,
+        null
+      ]
+    ],
+    "row_labels": [
+      {
+        "kind": "total"
+      },
+      {
+        "kind": "vertex",
+        "vertex": 0
+      },
+      {
+        "kind": "vertex",
+        "vertex": 1
+      },
+      {
+        "kind": "vertex",
+        "vertex": 2
+      },
+      {
+        "kind": "pair",
+        "vertices": [
+          0,
+          1
+        ]
+      },
+      {
+        "kind": "pair",
+        "vertices": [
+          0,
+          2
+        ]
+      }
+    ],
+    "right_hand_side": [
+      6,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "gram_matrix": [
+      [
+        6,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        2
+      ]
+    ],
+    "universe_mask_range": [
+      0,
+      7
+    ],
+    "eligible_type_count": 4,
+    "decision_counts": {
+      "ELIGIBLE": 4,
+      "ZERO_PAIR_DEFICIT": 4
+    }
+  },
+  "expected_stage": "MODEL_FIELD:row_labels"
+}

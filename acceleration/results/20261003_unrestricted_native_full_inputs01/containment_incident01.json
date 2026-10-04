@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "CONFIRMED_LIVE_DESCENDANTS_AFTER_REPORTED_SUPERVISOR_CLEANUP",
+  "recorded_at": "2026-10-03T08:19:26+00:00",
+  "source_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "invocation_id": "901223e6e5b449c48c570e92f5be80d0",
+  "reporter": "/root",
+  "target_resolution": "UNKNOWN",
+  "raw_run": "acceleration/results/20261003_unrestricted_native_full01",
+  "raw_supervisor_summary_preserved": true,
+  "missed_reassessment": {
+    "required_active_seconds": 1800,
+    "supervisor_elapsed_seconds": 1800.0570223739999,
+    "stop_reason": "REASSESSMENT_REQUIRED",
+    "review_file_submitted": false,
+    "deviation": "ROOT did not submit the planned review by1750 active seconds or the required1800-second review boundary. No retrospective continuation review is being fabricated."
+  },
+  "observations": [
+    {
+      "command": ["wsl.exe", "-d", "Ubuntu-24.04", "--", "/bin/ps", "-p", "412,415,421", "-o", "pid,ppid,pgid,stat,etime,args"],
+      "timestamp": null,
+      "timestamp_null_reason": "The individual ps call did not record a UTC timestamp; it occurred after the terminal supervisor summary and before the08:19:26 kill observation.",
+      "method": "Live tool output transcribed here; not a saved raw ps file",
+      "live_processes": [
+        {"pid": 412, "ppid": 1, "pgid": 411, "stat": "S", "elapsed": "30:50", "command": "/init"},
+        {"pid": 415, "ppid": 412, "pgid": 415, "stat": "S", "elapsed": "30:49", "command_role": "Inner GNU timeout without --foreground"},
+        {"pid": 421, "ppid": 415, "pgid": 415, "stat": "R", "elapsed": "30:48", "command_role": "CaDiCaL1.9.5 unrestricted input worker"}
+      ],
+      "exact_claim_refuted": "The supervisor summary's empty observed original group established that this invocation had no live computational descendants after cleanup.",
+      "scope": "One invocation of Bashb6d3 with nested default GNU timeout; not a mathematical or universal Linux-containment claim."
+    }
+  ],
+  "manual_cleanup": {
+    "command": ["wsl.exe", "-d", "Ubuntu-24.04", "--", "/bin/kill", "-TERM", "--", "-415"],
+    "subsequent_observation_command": ["wsl.exe", "-d", "Ubuntu-24.04", "--", "/bin/ps", "-p", "412,415,421", "-o", "pid,ppid,pgid,stat,etime,args"],
+    "observed_selected_pids": [],
+    "clock_observed_after_cleanup": "2026-10-03T08:19:26+00:00",
+    "native_saved_stdout": {
+      "total_process_seconds": 1538.04,
+      "total_real_seconds": 1876.30,
+      "maximum_resident_mb": 919.37,
+      "terminal_text": "raising signal15 (SIGTERM)",
+      "interpretation": "Partial trace and UNKNOWN; no completed UNSAT proof or positive assignment."
+    }
+  },
+  "impact": {
+    "original_launcher_sha256": "b6d3dbbb2ed567d35b4d99fe9d3ec90e0dbae5dabc4a764277b9e50686d72a6c",
+    "supervisor_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "reason": "The supervisor supports local non-escaping process groups. Inner GNU timeout created a new process group, violating that supported scope. Tiny controls ended normally and did not test an active forced stop.",
+    "new_scientific_dispatch": "HELD_PENDING_CORRECTED_LAUNCHER_AND_INDEPENDENT_ACTIVE_STOP_CONTROLS",
+    "mathematical_claim_changes": 0,
+    "ledger_changes": 0,
+    "original_evidence_rewritten": false,
+    "partial_proof_sha256": null,
+    "partial_proof_sha256_null_reason": "Bulk trace hashing requires its own supported bounded invocation; currently pending."
+  },
+  "limitations": [
+    "No exact timestamp was captured for each individual live ps observation.",
+    "The empty selected-PID observation is finite; it is not a global absence proof.",
+    "The full attempt was not completed within the allocated budget. A timeout or missed review supplies no mathematical exclusion."
+  ]
+}

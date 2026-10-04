@@ -1,0 +1,90 @@
+{
+  "schema": "TERNARY_TWO_LINE_CENSUS_MANIFEST_V1",
+  "identity": {
+    "fixture": "prism9",
+    "software": {
+      "synthetic_scope": "OWN_CALIBRATION_ONLY"
+    },
+    "n": 9,
+    "point_degree": 2,
+    "total": 135,
+    "objective_version": "SRG_COMPLETE_TERNARY_PAIR_RESIDUE_V1"
+  },
+  "objective_version": "SRG_COMPLETE_TERNARY_PAIR_RESIDUE_V1",
+  "population": 135,
+  "completed_proposals": 17,
+  "starting_proposal_id": 0,
+  "proposals_evaluated_this_invocation": 17,
+  "parts": [
+    {
+      "path": "acceleration/results/20261003_independent_review/ternary_two_line_calibration01/prism9_prefix17/part_000000000.jsonl.gz",
+      "start": 0,
+      "end": 17,
+      "record_count": 17,
+      "raw_bytes": 9485,
+      "raw_sha256": "72b7e45867b87f5b340adf5a99d10c7857d6c6346c8eed4f5ce686d59c503762",
+      "gzip_bytes": 800,
+      "gzip_sha256": "12218690578e932acd1bf0f795a64e691d2954749063f5beb7623098ca9bff2b"
+    }
+  ],
+  "checkpoints": [
+    {
+      "path": "acceleration/results/20261003_independent_review/ternary_two_line_calibration01/prism9_prefix17/checkpoint_000000017.json",
+      "sha256": "180d6d16b97b00596aee5aa4a30653531a8f2f50dd02b525dd910444bf3a06c1"
+    }
+  ],
+  "aggregate": {
+    "counts": {
+      "invalid_linearity": 4,
+      "invalid_selection": 10,
+      "valid_F3_equal": 3
+    },
+    "tuple_directions": {
+      "equal": 3
+    },
+    "unique_valid_neighbor_graphs": 2,
+    "minimum_pair": [
+      12,
+      12
+    ],
+    "minimum_pair_proposal_ids": [
+      4,
+      8,
+      9
+    ],
+    "minimum_F3": 12,
+    "minimum_F3_proposal_ids": [
+      4,
+      8,
+      9
+    ],
+    "residue_zero_proposal_ids": []
+  },
+  "baseline_metrics": {
+    "F3": 12,
+    "E_lambda": 6,
+    "E_mu": 6,
+    "E": 12,
+    "scalar_weight": 577,
+    "scalar": 6936,
+    "residue_population": [
+      24,
+      6,
+      6
+    ]
+  },
+  "status": "UNKNOWN_PREFIX_ONLY",
+  "budget_stop": false,
+  "selection_rule": "Every valid proposal eligible; minimize exact(F3,E), then proposalID.",
+  "selected_proposal_id": 4,
+  "residue_zero_objects": [],
+  "producer": "/root/native_driver",
+  "independent_approval": false,
+  "target_resolution": "NONE",
+  "historical_native_state_written": false,
+  "limitations": [
+    "One exact graph/all labelled two-line proposals only; no graph-space, ergodicity or target exclusion.",
+    "No frozen root, lambda0 acceptance or stochastic search exists in this kernel.",
+    "Generic fixture residue zero is not a target99 certificate; any actual99 zero needs independent fullintegerSRG validation."
+  ]
+}

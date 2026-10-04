@@ -1,0 +1,112 @@
+# V20 SOURCE_ONLY: one exact final5184 Native route and one exact finalAPI ROOT
+# route. All V19 and inherited ordinary branches remain byte-preserved.
+V20_DESCRIPTOR = dict(
+    path='acceleration/proposal_20261003_registrar_v20_two_final_v1.json',
+    sha256='b56816abdaa8bfca6177e7a189f5e15858a4a10ba8645f537be7bc54882bf9a9')
+V20_EXACT = {
+    'C-SEVENTEEN-POINT-LABELLED-TRIANGLE-FAMILY-COMPLETE-FINITE-CENSUS':
+        (0, '1c01bee9c34ae407512270ec05c66f39e763a829f4e27102da97c86df10a70bb'),
+    'C-ADJACENCY-SWITCH-ACTUAL-API-FINITE-PACKET-ENGINEERING':
+        (1, '189a71a021c5772dc0125a35e579e6226f5347a5b4bc4e75dfd7beced916df29'),
+}
+
+
+def v20_descriptor(cid):
+    need(cid in V20_EXACT, 'v20 exact final descriptor ID')
+    need(digest(ROOT/V20_DESCRIPTOR['path']) == V20_DESCRIPTOR['sha256'],
+         'v20 immutable two-final descriptor bytes')
+    declared = json.loads((ROOT/V20_DESCRIPTOR['path']).read_bytes())
+    need(declared['schema'] == 'PROSPECTIVE_EXACT_REGISTRAR_V20_TWO_FINAL_BINDINGS_V1'
+         and [r['id'] for r in declared['adapters']] == list(V20_EXACT)
+         and type(declared['added_exact_Native_roles']) is int
+         and declared['added_exact_Native_roles'] == 1
+         and type(declared['added_exact_ROOT_roles']) is int
+         and declared['added_exact_ROOT_roles'] == 1
+         and type(declared['mathematical_replays']) is int
+         and declared['mathematical_replays'] == 0
+         and declared['generic_ROOT_or_Native_waiver'] is False
+         and declared['scope_or_dependency_projection'] is False,
+         'v20 two exact final roles without generic or scope waiver')
+    index, identity = V20_EXACT[cid]
+    record = declared['adapters'][index]
+    need(record['id'] == cid and record['binding']['sha256'] == identity
+         and record['report_top_level_statement_required'] is True
+         and record['missing_headline_waiver'] is False,
+         'v20 exact final binding routing without absence waiver')
+    return record
+
+
+def v20_role(cid, expected, binding):
+    if cid not in V20_EXACT: return False
+    record = v20_descriptor(cid); contract = record['binding_contract']
+    need(expected == V20_EXACT[cid][1], 'v20 exact frozen final binding identity')
+    need(set(binding) - {'inputs_sha256'} == set(contract)
+         and all(v15_same(binding[k], value) for k, value in contract.items()),
+         'v20 complete typed nonmap final binding contract')
+    need(binding['status'] == 'VERIFIED' and binding['review_state'] == 'CLEAR'
+         and binding['producer'] == '/root/structural'
+         and binding['producer'] == record['role_permission_producer']
+         and binding['verifier'] == record['role_permission_verifier']
+         and binding['verifier'] in {'/root/native_driver', '/root'}
+         and binding['producer'] != binding['verifier']
+         and binding['method'] == 'independent_artifact_check'
+         and binding['method'] == record['method']
+         and binding['target_resolution'] == 'NONE'
+         and 'verification_records' not in binding,
+         'v20 exact separate final role and no legacy fallback')
+    need(digest(ROOT/record['binding']['path']) == expected,
+         'v20 original immutable final binding bytes')
+    original = json.loads((ROOT/record['binding']['path']).read_bytes())
+    need(v15_same(binding, original), 'v20 complete literal final binding including input map')
+    for review in record['review_records']:
+        need(digest(ROOT/review['path']) == review['sha256'],
+             'v20 exact scoped ROOT review bytes')
+    return True
+
+
+def v20_report(cid, report_sha, binding, report):
+    if cid not in V20_EXACT: return None
+    need(v20_role(cid, V20_EXACT[cid][1], binding), 'v20 exact final bound report routing')
+    record = v20_descriptor(cid); contract = record['report_contract']
+    need(report_sha == record['primary_report']['sha256']
+         and binding['report'] == record['primary_report']['path']
+         and binding['report_sha256'] == report_sha,
+         'v20 exact final claim-bound report identity')
+    need(set(report) - {'inputs_sha256'} == set(contract)
+         and all(v15_same(report[k], value) for k, value in contract.items()),
+         'v20 complete typed nonmap final report contract')
+    need(report['claim_id'] == cid and type(report['claim_revision']) is int
+         and report['claim_revision'] == 1
+         and report['statement'] == binding['statement']
+         and v15_same(report['scope'], binding['scope'])
+         and report['producer'] == binding['producer']
+         and report['verifier'] == binding['verifier']
+         and report['method'] == binding['method']
+         and report['target_resolution'] == 'NONE'
+         and type(binding['verification_timestamp']) is str
+         and report[record['report_timestamp_field']] == binding['verification_timestamp'],
+         'v20 exact literal final statement revision scope roles method timestamp')
+    need(digest(ROOT/record['primary_report']['path']) == report_sha,
+         'v20 original immutable final report bytes')
+    original = json.loads((ROOT/record['primary_report']['path']).read_bytes())
+    need(v15_same(report, original), 'v20 complete literal final report including input map')
+    return dict(claim_id=cid, claim_revision=1,
+        recorded_binding=record['binding']['path'], recorded_binding_sha256=V20_EXACT[cid][1],
+        original_report=record['primary_report']['path'], original_report_sha256=report_sha,
+        original_report_statement_field='statement', original_report_statement=report['statement'],
+        recorded_binding_statement=binding['statement'], raw_statement_changed=False,
+        original_report_scope=report['scope'], original_binding_scope=binding['scope'],
+        original_dependencies=binding['dependencies'], schema_scope=binding['scope'],
+        schema_dependencies=binding['dependencies'],
+        original_verification_timestamp=binding['verification_timestamp'],
+        original_report_timestamp_field=record['report_timestamp_field'],
+        original_report_timestamp=report[record['report_timestamp_field']],
+        original_report_contract=contract, original_report_input_map_preserved=True,
+        original_raw_primary_report=record['original_raw_primary_report'],
+        original_raw_statement_and_scope_absence_preserved=True,
+        original_API_false_flags_and_runtime_preserved=True,
+        missing_headline_waiver=False, root_review_records=record['review_records'],
+        descriptor_path=V20_DESCRIPTOR['path'], descriptor_sha256=V20_DESCRIPTOR['sha256'],
+        reason=record['reason'], mathematical_replays=0, target_resolution='NONE')
+
+
