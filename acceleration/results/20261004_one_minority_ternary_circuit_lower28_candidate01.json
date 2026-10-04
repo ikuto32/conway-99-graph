@@ -1,0 +1,47 @@
+{
+  "schema": "SOURCE_ONLY_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-ONE-MINORITY-CIRCUIT-LOWER28",
+  "revision": 1,
+  "statement": "For every hypothetical srg(99,14,1,2) and every GF(3) circuit of distinct actual triangles whose coefficient vector after global scaling has exactly one minus coefficient and all other coefficients plus, its support size w is at least28. If w=28, the used vertex count is29, all three minority-triangle vertices have selected incidence2 and all other26 incidence3; the actual induced majority-vertex graph has at most one edge outside the selected union, and if it has one, there are exactly between1and4 additional induced edges from minority to majority vertices.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "CANDIDATE",
+  "review_state": "CLEAR",
+  "producer": "/root",
+  "verifier": null,
+  "verifier_null_reason": "Independent written derivation requested from Checkpoint; no result yet",
+  "created_at": "2026-10-04T00:45:56.4600789+00:00",
+  "updated_at": "2026-10-04T00:45:56.4633597+00:00",
+  "scope": {
+    "unrestricted_target": true,
+    "target_resolution": "NONE",
+    "description": "Universal conditional theorem about a circuit with exactly one minority coefficient; no such sign pattern or support-size upper bound forced for every target"
+  },
+  "assumptions": [
+    "Complete target adjacency identity over integers",
+    "Circuit means rank w-1 overGF(3)",
+    "The selected triangles are actual distinct target triangles"
+  ],
+  "dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "evidence": {
+    "path": "docs/CANDIDATE_20261004_ONE_MINORITY_TERNARY_CIRCUIT_LOWER28_V1.md",
+    "sha256": "e2b8bf6b2908c22cd16fc28705ba5e203758b4180628f14d8b0524f0fd200f79"
+  },
+  "source_commit": "28742325c2c4d11aec5d7c243ed560f3298368f3",
+  "execution_count": 0,
+  "formal_checks": 0,
+  "external_reviews": 0,
+  "limitations": [
+    "No one-minority circuit is forced; no target nonexistence follows",
+    "Prior one-minority lower25 remains true, strengthened notrefuted",
+    "All additionalactualinducededges retained in scalar/degrees/endpointcases"
+  ]
+}

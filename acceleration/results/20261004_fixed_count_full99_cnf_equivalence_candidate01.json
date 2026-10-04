@@ -1,0 +1,80 @@
+{
+  "schema": "CLAIM_BOUND_MATHEMATICAL_CANDIDATE_V1",
+  "status": "CANDIDATE",
+  "timestamp": "2026-10-04T03:41:58.2240004+00:00",
+  "claim_id": "C-FIXED-COUNT-LABELLED-SRG-CNF-COMPLETION-EQUIVALENCE",
+  "claim_revision": 1,
+  "statement": "For every supplied well-typed labelled profile with simple support H, fixed incidence B, valid fixed support degree/common-neighbor moments, and nonempty allowed exterior-pair bit sets, the complete construction using equivalent AND and prefix-threshold gates is satisfiable exactly when a labelled SRG(v,k,1,2) completion with that H/B/profile and those pair restrictions exists; each accepted free-edge assignment has exactly one auxiliary extension. In the 17+82 case this concerns only the one supplied count profile, and unrestricted fixed-profile equivalence additionally requires independently justified necessary pair restrictions.",
+  "producer": "/root/checkpoint_audit",
+  "discovery_author": "/root/checkpoint_audit",
+  "verifier": null,
+  "verification_method": null,
+  "independent_approval": false,
+  "target_resolution": "NONE",
+  "assumptions": [
+    "Complete well-typed supplied labelled profile and simple undirected H/B domain.",
+    "Fixed support degrees equal k and off-diagonal H^2+B B^T+H entries equal 2.",
+    "Allowed bit sets apply to distinct labelled exterior copies, including equal-type copies, and are nonempty where copies coexist.",
+    "All three cardinality families are emitted completely with the exact equivalent frozen logical semantics.",
+    "Removing pair restrictions without changing the completion family requires an independently established necessary-bit premise.",
+    "Any actual byte formula requires separate complete formula/variable/group verification and its genuine runtime receipt."
+  ],
+  "scope": {
+    "kind": "conditional_labelled_completion_equivalence",
+    "target_order": 99,
+    "target_degree": 14,
+    "support_points": 17,
+    "outside_copies": 82,
+    "type_coordinates": 472,
+    "degree_groups": 82,
+    "cross_groups": 1394,
+    "outside_pair_groups": 3321,
+    "total_groups": 4797,
+    "maximum_free_edge_variables": 3321,
+    "generic_parameters": "SRG(v,k,1,2) with supplied valid support moments",
+    "one_count_profile_only": true,
+    "equitable_profile_assumed": false,
+    "unrestricted_target_exclusion": false,
+    "graph_found": false,
+    "cnf_built": false,
+    "solver_result": null,
+    "proof_replay_result": null,
+    "unique_auxiliary_extension": "For every accepted free exterior-edge assignment in the complete logical formula."
+  },
+  "dependencies": [],
+  "mathematical_basis": "Direct block expansion of the SRG degree/common-neighbor identity and explicit Boolean-gate/threshold induction; no earlier claim is used as a proof waiver.",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_FIXED_COUNT_FULL99_CNF_EQUIVALENCE_V1.md": "950803fbbdda79e46f5680d18a9872132d1077b486d2adafc85b187ec6188c44",
+    "acceleration/encode_20261004_fixed17_count_full99_cnf_v1.py": "b98e2ec1620dcac245c71ab8f224b0e489eb810329384c47320ca2e71cb0e3e0",
+    "acceleration/encode_20261004_fixed17_count_full99_cnf_v1_spec.md": "c836a9e4253afff09999833f74e0e229438e40f4fc3c0b165862cb7a074175ed",
+    "acceleration/theory_20260930_eight_full99_cnf.py": "21c357543c9397456a911175b277da6e6caa769be31d18c12e034cc76d99074c"
+  },
+  "prospective_runtime_plan": {
+    "path": "acceleration/plan_20261004_fixed17_count_full99_cnf_v1.json",
+    "sha256": "31a918c040349dd67b312a25aae1cb541a4c5639407042cc109ad486bf3f0681",
+    "meaning": "Source-only unexecuted calibration proposal; no scientific command is authorized."
+  },
+  "scientific_input_qualification": {
+    "count_report_sha256": "37bcf42a3b5e358c4306c642e152e3e605a07dc305de71b2272e455e377bd6b8",
+    "count_root_acceptance_sha256": "3823dec446f661d87a27d2cad80b4c2f91883c786f30def4f43a25eb913bb10d",
+    "screen_independent_full_gate_sha256": null,
+    "null_reason": "Native complete saved-screen qualification is pending. The existing producer all-pass packet is not independent approval. These input records are not the logical proof of a new theorem."
+  },
+  "shared_origins": [
+    "Root proposed this lift direction; Checkpoint authored the new caller and candidate proof.",
+    "negate/Clauses/Encoder are unchanged exact historical logical components; the proof explicitly reconstructs their semantics.",
+    "The reviewer of this candidate must be a different author; discovery cannot approve itself."
+  ],
+  "programs_executed": 0,
+  "source_imports": 0,
+  "helper_executions": 0,
+  "calibration_runs": 0,
+  "formula_builds": 0,
+  "solver_calls": 0,
+  "formal_proofs": 0,
+  "external_proofs": 0,
+  "ledger_mutations": 0,
+  "git_mutations": 0,
+  "independent_review_required": true,
+  "registration_authorized": false
+}

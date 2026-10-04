@@ -1,0 +1,165 @@
+{
+  "schema": "PAPER_ONLY_TARGET_EXTERIOR_TYPE_EDGE_MOMENTS_CANDIDATE_V1",
+  "status": "CANDIDATE",
+  "timestamp": "2026-10-04T02:51:53.5365846Z",
+  "id": "C-TARGET-EXTERIOR-TYPE-NEIGHBOR-PROFILES-AND-EDGE-MOMENTS",
+  "revision": 1,
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "verification_status": "NEEDS_RECHECK",
+  "producer": "/root/structural",
+  "verifier": null,
+  "verification_method": null,
+  "independent_approval": false,
+  "statement": "For every simple99-vertex degree14 graph with adjacent common-neighbor count1 and nonadjacent count2, any actual induced subset adjacency H and exact exterior type counts n_i necessarily admit per-copy integer neighbor profiles of outside degree14-|t_i| and type-incidence vector2*1-(H+I)t_i, with own-copy capacities and justified adjacency-bit restrictions. Their directed aggregate edge totals are symmetric off diagonal and even on diagonal and satisfy the corresponding count-weighted degree/incidence equations and zero/full capacities. Mandatory/free copy selection gives exact necessary min/max overlap bounds for every subset of induced points. No equitable partition, completion sufficiency or target occurrence is asserted.",
+  "scope": {
+    "description": "Universal conditional exterior-neighbor and directed-edge constraints for any complete Conway99 target, any actual induced point subset, and complete exact exterior type universe; fixed17/834 screens are an application only",
+    "unrestricted": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Simple symmetric binary adjacency on exactly99 vertices, degree14, adjacentCN1 and nonadjacentCN2",
+    "H includes every actual induced edge on S; C and X are the actual complementary adjacency blocks",
+    "The labelled type universe contains every actual exterior type; unused types may have zero counts",
+    "Any supplied bit restrictions are independently justified for two distinct vertices, including equal types"
+  ],
+  "dependencies": [],
+  "candidate_proof": {
+    "path": "docs/CANDIDATE_20261004_TARGET_EXTERIOR_TYPE_EDGE_MOMENTS_V1.md",
+    "sha256": "cac608098a8bfee29487bce3c2b40ce86d8b2eb008cd5390b31c3a43b3d599c8"
+  },
+  "shared_origins": [
+    "ROOT proposed the CX block equation, directed edge-moment constraints and witness-screen task",
+    "Structural independently reconstructed the block proof, directed diagonal convention, mandatory/free subset bounds and the target-edge non-equitable counterattack",
+    "Checkpoint independently proposed the finite834-subset row-screen implementation; no implementation or witness was executed here"
+  ],
+  "controls": {
+    "written_falsification_boundaries": [
+      "Actual induced H rather than selected edge union",
+      "Arbitrary, empty, and full S",
+      "Complete exact exterior type universe",
+      "Zero-count types do not require per-copy profiles",
+      "Exclude exactly one own copy",
+      "Outside degree 14 minus type size",
+      "Cross-block signs and matrix dimensions",
+      "Even directed diagonal totals",
+      "One count per off-diagonal cross edge",
+      "All four adjacency bit-set cases",
+      "Equal types interpreted as distinct vertices",
+      "Mandatory and free copy capacities",
+      "Empty pool and residual degree zero",
+      "Closed min/max interval equality",
+      "Individual subset passes need not share a selection",
+      "Rook9 uses degree4 while retaining the same cross identity",
+      "Target edge forces nonuniform type00 profiles",
+      "Aggregate feasibility does not verify the outside SRG block"
+    ],
+    "written_boundary_population": 18,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "finite_enumeration": 0
+  },
+  "written_fixture": {
+    "name": "rook9 hand algebra",
+    "vertices": 9,
+    "degree": 4,
+    "S": "one row of three vertices",
+    "type_counts": [
+      2,
+      2,
+      2
+    ],
+    "directed_edge_totals": "3-by-3 all2 matrix",
+    "outside_edges": 9,
+    "fixture_executed": false,
+    "is_target": false
+  },
+  "non_equitable_boundary": {
+    "condition": "S is one actual target edge",
+    "type_order": [
+      "00",
+      "10",
+      "01",
+      "11"
+    ],
+    "type_counts": [
+      72,
+      12,
+      12,
+      1
+    ],
+    "type00_copies_neighboring_type11": 12,
+    "type00_copies_not_neighboring_type11": 60,
+    "type00_average_type11_neighbors": "1/6",
+    "directed_aggregate_rows": [
+      [
+        732,
+        132,
+        132,
+        12
+      ],
+      [
+        132,
+        12,
+        12,
+        0
+      ],
+      [
+        132,
+        12,
+        12,
+        0
+      ],
+      [
+        12,
+        0,
+        0,
+        0
+      ]
+    ],
+    "outside_edges": 666,
+    "graph_constructed": false
+  },
+  "fixed17_application": {
+    "point_population": 17,
+    "exterior_population": 82,
+    "subset_sizes": [
+      1,
+      2,
+      3,
+      17
+    ],
+    "selected_subset_population": 834,
+    "maximum_positive_type_groups": 82,
+    "maximum_unordered_group_variables": 3403,
+    "actual_count_witness_read": false,
+    "pair_bit_report": {
+      "path": "acceleration/results/20261004_independent_review/fixed17_dual_gram_pairs_full02/summary.json",
+      "sha256": "ee9fa8961415df0e5f0ca429c33fc95a1d6223b77ec68e2c9ec71cc1dec0e218"
+    },
+    "pair_root_acceptance": {
+      "path": "acceleration/results/20261004_fixed17_dual_gram_pairs_checker_root_actual_full_acceptance02.json",
+      "sha256": "39a904ee2ec0bdb4b1a28678c1842794d2abe7d05150879517265a6e7f797586"
+    },
+    "application_prerequisites_reverified_here": false
+  },
+  "limitations": [
+    "Written discovery only; no different-author approval or schema2 verified binding",
+    "Bit sets must be justified independently, and a permitted bit is not sufficient for completion",
+    "Every subset interval may be satisfied by a different selection; no common neighbor set is constructed",
+    "Aggregate feasibility need not realize individual profiles, a simple exterior graph, exterior common-neighbor identities, PSD ranks or a target",
+    "An exact screen failure excludes only the given count vector for the fixed induced H and justified bit sets",
+    "Numerical infeasibility alone is not proof; any computational veto requires complete declared scope and a sound independently checked certificate or exhaustive proof",
+    "No mathematical program, solver, count witness or scientific raw result was read or executed for this paper",
+    "Basic block multiplication and aggregate edge bookkeeping may overlap historical work; no novelty claim"
+  ],
+  "execution_authorized": false,
+  "ledger_mutated": false,
+  "index_mutated": false,
+  "publication_packet_modified": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "novelty": "UNKNOWN"
+}

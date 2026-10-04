@@ -1,0 +1,120 @@
+{
+  "schema": "TARGET_TERNARY_CIRCUIT_MINORITY_SIGN_GRAM_CANDIDATE_V1",
+  "status": "CANDIDATE",
+  "timestamp": "2026-10-03T23:47:12+00:00",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-CIRCUIT-MINORITY-SIGN-GRAM-BOUNDS",
+  "revision": 1,
+  "producer": "/root/structural",
+  "independent_verifier": null,
+  "independent_verifier_null_reason": "New discovery requires different-author exact derivation and falsification",
+  "statement": "For any unbalanced GF(3) actual-triangle circuit of a Conway99 target, let w be selected triangles, q the smaller sign population, n the used points and e the additional actual induced edges. Then w<=n<=w+q, F=n^2+27n-54w-18e>=0, and sum over used points of (n+27-9*deg_H)^2<=63F. Minority q=0,1,2,3 respectively forces w>=28,25,23,19. If q=1,w=25 then n=26,e=0, the three minority points have selected degree2, the other23 degree3, and the73 external points satisfy sum k=214 and sum k^2=638.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "scope": {
+    "description": "Universal conditional exact support/sign-imbalance Gram filter for actual GF3 triangle circuits of any complete99/degree14/lambda1/mu2 target; no forced minority population or small circuit",
+    "unrestricted": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Exactly99 vertices and simple symmetric binary degree14 adjacency with adjacentCN1/nonadjacentCN2",
+    "Selected distinct actual triangles form a GF3 matroid circuit; all dependence coefficients nonzero",
+    "After global sign reversal q=min(p,q), and w-2q is nonzero mod3",
+    "H is the actual induced graph on used points, including every extra edge"
+  ],
+  "dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result",
+      "description": "Historical exact G^2=63G/PSD property, independently reconstructed here",
+      "report": {
+        "path": "acceleration/results/20260930_independent_review/target_gram_support_lemma.json",
+        "sha256": "e194ca054dfe0596ae2b9ff1070ef59289c7c0401497a63c77eb62e217bd1ac6"
+      },
+      "written_proof": {
+        "path": "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md",
+        "sha256": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153"
+      }
+    }
+  ],
+  "candidate_proof": {
+    "path": "docs/CANDIDATE_20261004_TARGET_TERNARY_CIRCUIT_MINORITY_SIGN_GRAM_BOUNDS_V1.md",
+    "sha256": "7afdf20ef3eebc24b7d78bf965b2152bd2e45c75b695c42be03661f8d5971f53"
+  },
+  "minority_thresholds": [
+    {
+      "q": 0,
+      "minimum_weight_necessary": 28
+    },
+    {
+      "q": 1,
+      "minimum_weight_necessary": 25
+    },
+    {
+      "q": 2,
+      "minimum_weight_necessary": 23
+    },
+    {
+      "q": 3,
+      "minimum_weight_necessary": 19
+    }
+  ],
+  "first_q1_boundary": {
+    "w": 25,
+    "points": 26,
+    "extra_edges": 0,
+    "minority_triangles": 1,
+    "majority_triangles": 24,
+    "point_selected_degree2": 3,
+    "point_selected_degree3": 23,
+    "external_population": 73,
+    "external_first_moment": 214,
+    "external_second_moment": 638,
+    "histogram_negative_control": [
+      {
+        "k": 2,
+        "population": 8
+      },
+      {
+        "k": 3,
+        "population": 62
+      },
+      {
+        "k": 4,
+        "population": 3
+      }
+    ],
+    "histogram_is_graph": false
+  },
+  "controls": {
+    "written_falsification_boundaries": 12,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "finite_enumeration": 0
+  },
+  "shared_components": [
+    "Historical independently verified global Gram identity/PSD",
+    "Earlier Structural circuit discovery and different-author verifications read as context, not premise of this conditional statement",
+    "ROOT requested an unrestricted structural attack; ROOT did not supply this minority-support derivation"
+  ],
+  "limitations": [
+    "No q<=3 or particular circuit configuration is forced",
+    "Bounds are necessary only and sharpness unknown",
+    "Circuit minimality is needed for n>=w; generic dependent word excluded from that step",
+    "Actual extra edges retained, no induced-selected-union assumption except provedq1w25boundary",
+    "Scalar moment histogram survives; no exterior type or graph construction",
+    "No incidence rank<=72, symmetry, target existence/nonexistence or full12..98coverage claim"
+  ],
+  "execution_authorized": false,
+  "ledger_mutated": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "novelty": "Unknown; archive PSD/spectral support method historical",
+  "preparation_context": {
+    "head": "28742325c2c4d11aec5d7c243ed560f3298368f3",
+    "ledger_sha256": "b7d07a8be5cbbce8c2125e631d58f4035ed56a66c2b1e79db27cb56500859f8a",
+    "index_sha256": "e411963d8a7ae05b3f1076f0b5dd14a628016d4a317872fc52865ec2cde7734a"
+  }
+}

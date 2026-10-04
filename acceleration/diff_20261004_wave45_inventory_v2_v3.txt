@@ -1,0 +1,81 @@
+diff --git a/acceleration/inventory_20261004_wave45_checkpoint_v2.py b/acceleration/inventory_20261004_wave45_checkpoint_v3.py
+index 5c13a6b24..5b90b86fd 100644
+--- a/acceleration/inventory_20261004_wave45_checkpoint_v2.py
++++ b/acceleration/inventory_20261004_wave45_checkpoint_v3.py
+@@ -25,9 +25,9 @@ CLOSURE_SHA = "3f7005fa3491d0a3e38e34413b181abc7e0e1b60305622d887ed4cfbf62f5d26"
+ SELECTED = "acceleration/results/20261004_wave45_checkpoint_publication_selected01.paths0"
+ SELECTED_SHA = "9e28d88e995aeec32608b90078383e7c66cc5705f546763e4ed28ce293634ca1"
+ LEDGER_SHA = "70e5b2a3d904f168dad6ebb814615ba71f331c635bb892019d713277a24d89e2"
+-CAL_STATUS = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V2_CALIBRATION_PASS"
++CAL_STATUS = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V3_CALIBRATION_PASS"
+ MAX_MEMBER = 50 * 1024**2
+-CONTROL_COUNTS = {"positive": 7, "negative": 25, "total": 32}
++CONTROL_COUNTS = {"positive": 8, "negative": 26, "total": 34}
+ 
+ 
+ def need(ok, stage):
+@@ -165,6 +165,8 @@ def manifest(raw, names, expected):
+         hashes = row.get("declared_sha256")
+         need(type(hashes) is list and len(hashes) == 1 and type(hashes[0]) is str
+              and re.fullmatch("[0-9a-f]{64}", hashes[0]) is not None, "MANIFEST_SHA")
++    need(len({row["path"] for row in rows}) == expected, "MANIFEST_PATH_DUPLICATE")
++    rows = sorted(rows, key=lambda row: row["path"])
+     need([row["path"] for row in rows] == names, "SELECTED_MANIFEST")
+     need(type(raw.get("selected_bytes")) is int and raw["selected_bytes"] == sum(row["bytes"] for row in rows), "MANIFEST_TOTAL_BYTES")
+     return rows
+@@ -312,7 +314,15 @@ def controls(out, deadline):
+         lambda payload: fixture_reader.read(payload["path"], payload["sha"], parsed=True))
+     run("authenticated_parser_duplicate", "JSON_DUPLICATE", {"path": fixture_names[2], "sha": fixture_hashes[2]},
+         lambda payload: fixture_reader.read(payload["path"], payload["sha"], parsed=True))
+-    need(len(rows) == 32 and sum(row["expected_stage"] == "PASS" for row in rows) == 7, "CONTROL_POPULATION")
++    reversed_manifest = copy.deepcopy(raw)
++    reversed_manifest["selected"].reverse()
++    run("reversed_manifest_exact_bijection", "PASS", reversed_manifest,
++        lambda value: manifest(value, names, 2))
++    duplicate_manifest = copy.deepcopy(raw)
++    duplicate_manifest["selected"][1]["path"] = names[0]
++    run("duplicated_manifest_path", "MANIFEST_PATH_DUPLICATE", duplicate_manifest,
++        lambda value: manifest(value, names, 2))
++    need(len(rows) == 34 and sum(row["expected_stage"] == "PASS" for row in rows) == 8, "CONTROL_POPULATION")
+     save(out / "controls.json", rows, deadline)
+     return {**CONTROL_COUNTS, "stage_mismatches": [], "actual_selected_input_read": False, "git_calls": 0}
+ 
+@@ -324,12 +334,12 @@ def inventory(reader, config, out, software):
+     reader.mapping(config["inputs_sha256"])
+     cal = reader.read(config["calibration_path"], config["calibration_sha256"], True)
+     need(cal.get("status") == CAL_STATUS and cal.get("mode") == "calibrate"
+-         and type(cal.get("implementation_version")) is int and cal["implementation_version"] == 2
++         and type(cal.get("implementation_version")) is int and cal["implementation_version"] == 3
+          and cal.get("source_software") == software
+          and type(cal.get("outcome")) is dict and all(type(cal["outcome"].get(k)) is int and cal["outcome"][k] == v for k, v in CONTROL_COUNTS.items()), "CALIBRATION_GATE")
+     need(config["inputs_sha256"].get(config["calibration_path"]) == config["calibration_sha256"], "CALIBRATION_PIN")
+     cal_outputs = cal.get("outputs_sha256")
+-    need(type(cal_outputs) is dict and len(cal_outputs) == 77 and "controls.json" in cal_outputs, "CALIBRATION_POPULATION")
++    need(type(cal_outputs) is dict and len(cal_outputs) == 82 and "controls.json" in cal_outputs, "CALIBRATION_POPULATION")
+     cal_base = PurePosixPath(config["calibration_path"]).parent
+     need({p.name for p in safe(config["calibration_path"]).parent.iterdir()} == set(cal_outputs) | {"summary.json"},
+          "CALIBRATION_DIRECTORY")
+@@ -337,7 +347,7 @@ def inventory(reader, config, out, software):
+         need(type(filename) is str and PurePosixPath(filename).name == filename, "CALIBRATION_FILENAME")
+         reader.read((cal_base / filename).as_posix(), digest)
+     stages = reader.read((cal_base / "controls.json").as_posix(), cal_outputs["controls.json"], True)
+-    need(type(stages) is list and len(stages) == 32 and all(type(row) is dict and
++    need(type(stages) is list and len(stages) == 34 and all(type(row) is dict and
+          type(row.get("index")) is int and row["index"] == i and row.get("matches") is True and
+          row.get("actual_stage") == row.get("expected_stage") for i, row in enumerate(stages)), "CALIBRATION_STAGES")
+     expected = config.get("expected_protected_context")
+@@ -414,11 +424,11 @@ def main():
+             config = reader.read(Path(args.configuration).relative_to(ROOT).as_posix() if Path(args.configuration).is_absolute() else args.configuration,
+                                  args.configuration_sha256, True)
+             outcome = inventory(reader, config, out, software)
+-            status = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V2_COMPLETE_PASS" if outcome["all_identities_match"] else "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V2_COMPLETE_FAILED_IDENTITIES"
++            status = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V3_COMPLETE_PASS" if outcome["all_identities_match"] else "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V3_COMPLETE_FAILED_IDENTITIES"
+         reader.closing()
+         outputs = {path.name: hash_file(path, deadline)["sha256"] for path in sorted(out.iterdir())}
+-        need(len(outputs) == (77 if args.mode == "calibrate" else 21), "OUTPUT_POPULATION")
+-        summary = {"schema": "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_REPORT_V1", "status": status, "implementation_version": 2,
++        need(len(outputs) == (82 if args.mode == "calibrate" else 21), "OUTPUT_POPULATION")
++        summary = {"schema": "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_REPORT_V1", "status": status, "implementation_version": 3,
+             "mode": args.mode, "timestamp": datetime.now(timezone.utc).isoformat(), "source_author": "/root/checkpoint_audit",
+             "executor_declaration": args.executor, "actual_executor_requires_external_receipt": True,
+             "source_software": software, "inputs_sha256": reader.pins, "outputs_sha256": outputs,

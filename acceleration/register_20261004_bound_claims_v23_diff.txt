@@ -1,0 +1,351 @@
+diff --git a/acceleration/register_20261004_bound_claims_v22.py b/acceleration/register_20261004_bound_claims_v23.py
+index 14ef58b91..db3473211 100644
+--- a/acceleration/register_20261004_bound_claims_v22.py
++++ b/acceleration/register_20261004_bound_claims_v23.py
+@@ -1966,22 +1966,22 @@ def v20_report(cid, report_sha, binding, report):
+ 
+ 
+ 
+-# V22: exact eighteen previously independently checked bindings. This adds only
++# V23: exact eighteen previously independently checked bindings. This adds only
+ # identity/metadata adapters; no mathematical replay or generic verifier waiver.
+-V22_REFUTED_ID = 'C-FIXED-COUNT-LABELLED-SRG-CNF-COMPLETION-EQUIVALENCE'
+-V22_DESCRIPTOR = dict(
+-    path='acceleration/proposal_20261004_wave45_eighteen_bound_claims_v2.json',
+-    sha256='f79290306199ce59662fe914a2d207d0d2bd252e189481dc10fa2cc042d9a3af')
+-V22_CAPACITY_METADATA = dict(
++V23_REFUTED_ID = 'C-FIXED-COUNT-LABELLED-SRG-CNF-COMPLETION-EQUIVALENCE'
++V23_DESCRIPTOR = dict(
++    path='acceleration/proposal_20261004_wave45_eighteen_bound_claims_v3.json',
++    sha256='d80ebf22f6d0a9eea28b249568081bc9d1a16df3306aebbf5d2c4bcb268a6411')
++V23_CAPACITY_METADATA = dict(
+     path='acceleration/results/20261004_fixed17_count_neighbor_capacity_canonical_root_metadata_acceptance01.json',
+     sha256='3ad0b2bd552211b2c504a7cda31787005e2a5698ddee24559b08dd74743dfd94')
+-V22_SEVENTEEN_METADATA = dict(
++V23_SEVENTEEN_METADATA = dict(
+     path='acceleration/results/20261004_wave45_seventeen_binding_root_metadata_review01.json',
+     sha256='9f8f9c02852bd0929a0b65b0f1f40950c0e374f960b919a1e6d74dd95fd2a8d8')
+-V22_EXACT = {
++V23_EXACT = {
+     'C-TARGET-EXTERIOR-TYPE-LOWER-GRAM-SCHUR': ('7bdab2471fed6941caafcc8a6b98799281c604840ec4974683ef40d3efb3045a', 'fe9d46d2e78625b43619207a9452ee45adb0f554da3664403e0b6ab97c66cbe5'),
+     'C-SEVENTEEN-TRIANGLE-BASE-SINGLE-TYPE-SCHUR-REDUNDANCY': ('9f6813a8e7a5227cb92e58fee580bc5acd8500238553144d945ad175d6590690', '85baf16a90b8710606282895e3b7e7db10e6f944253627e66049a78eb685bb30'),
+-    'C-TARGET-DUAL-GRAM-EXTERIOR-TYPE-COMPATIBILITY': ('dac1ccf38d55b6770729fed7a2bb3698856caff64971787562e2ac2a66491ca3', '01c3e1f1740459c662f83608eac20017ce97b9ff167ed5ab45629b5475d7632a'),
++    'C-TARGET-DUAL-GRAM-EXTERIOR-TYPE-COMPATIBILITY': ('c254c40cd39c78e8b023e029545d371113625d28c3aa01ba3cd2e10e12b0b26f', '01c3e1f1740459c662f83608eac20017ce97b9ff167ed5ab45629b5475d7632a'),
+     'C-SEVENTEEN-POINT-FOUR-CLASS-UPPER-GRAM-CLASSIFICATION': ('933d8fc35774c05f480be1f699570f429a7fe3ad405586cc8ef0800aacbb4707', 'd71b5cde2749e2c382d1fbd1bf59d3fbdbb3bd04e5bfafdd1b2a64737d4e5986'),
+     'C-SEVENTEEN-POINT-CLASS-I-UPPER-GRAM-EXTRA-EDGE-BOUNDARIES': ('217b90aeb99c397d4b03d309180e3ed65b12800fa5154ea252f51c874f739b11', 'e49075971c1b64782e2bf3c790b0538ea12b8ab4f4e5bd9287450b6fc7d42da8'),
+     'C-FIXED17-TRIPLE-CAPPED-EXTERIOR-MOMENT-RATIONAL-FEASIBLE': ('7e5bfc6f48430017b9a6969174e14ddd2a280a664690c239e1497e76489a4155', 'ad5a43c7b99623da6a82d34e7f8870ae40ac27120c6c3a1fba8cb8a6368e8820'),
+@@ -2000,71 +2000,74 @@ V22_EXACT = {
+ }
+ 
+ 
+-def v22_descriptor(cid):
+-    if cid not in V22_EXACT:
++def v23_descriptor(cid):
++    if cid not in V23_EXACT:
+         return None
+-    need(digest(ROOT/V22_DESCRIPTOR['path']) == V22_DESCRIPTOR['sha256'],
+-         'v22 exact eighteen descriptor bytes')
+-    declared = json.loads((ROOT/V22_DESCRIPTOR['path']).read_bytes())
+-    need(declared['schema'] == 'SOURCE_ONLY_WAVE45_EIGHTEEN_BOUND_CLAIM_DESCRIPTOR_V2'
++    need(digest(ROOT/V23_DESCRIPTOR['path']) == V23_DESCRIPTOR['sha256'],
++         'v23 exact eighteen descriptor bytes')
++    declared = json.loads((ROOT/V23_DESCRIPTOR['path']).read_bytes())
++    need(declared['schema'] == 'SOURCE_ONLY_WAVE45_EIGHTEEN_BOUND_CLAIM_DESCRIPTOR_V3'
+          and type(declared['record_population']) is int and declared['record_population'] == 18
+-         and v15_same([r['id'] for r in declared['records']], list(V22_EXACT))
++         and v15_same([r['id'] for r in declared['records']], list(V23_EXACT))
+          and v15_same(declared['role_counts'], dict(new_exact_Native_verifier_ids=11,
+              new_exact_ROOT_verifier_ids=2, ordinary_separate_verifier_roles=5,
+-             generic_Native_or_ROOT_waiver=False)), 'v22 exact population and role contract')
++             generic_Native_or_ROOT_waiver=False)), 'v23 exact population and role contract')
+     rows = [r for r in declared['records'] if r['id'] == cid]
+-    need(len(rows) == 1, 'v22 one exact descriptor row')
++    need(len(rows) == 1, 'v23 one exact descriptor row')
+     record = rows[0]
+-    identity, report_identity = V22_EXACT[cid]
++    identity, report_identity = V23_EXACT[cid]
+     need(record['binding']['sha256'] == identity
+          and record['bound_report']['declared_sha256'] == report_identity,
+-         'v22 static binding and report identities')
++         'v23 static binding and report identities')
+     return record
+ 
+ 
+-def v22_role(cid, expected, binding):
+-    if cid not in V22_EXACT:
++def v23_role(cid, expected, binding):
++    if cid not in V23_EXACT:
+         return False
+-    record = v22_descriptor(cid)
+-    need(expected == V22_EXACT[cid][0], 'v22 exact frozen binding identity')
++    record = v23_descriptor(cid)
++    need(expected == V23_EXACT[cid][0], 'v23 exact frozen binding identity')
+     need(type(binding) is dict and {'id', 'revision', 'claim_revision', 'status',
+          'review_state', 'kind', 'basis', 'statement', 'producer', 'verifier',
+          'method', 'verification_timestamp', 'report', 'report_sha256', 'scope',
+-         'dependencies', 'target_resolution'} <= set(binding), 'v22 required binding fields')
++         'dependencies', 'target_resolution', 'assumptions', 'limitations'} <= set(binding), 'v23 required binding fields')
++    need(type(binding['assumptions']) is list
++         and all(type(item) is str for item in binding['assumptions']),
++         'v23 explicit assumption metadata')
+     need(type(binding['revision']) is int and type(binding['claim_revision']) is int
+          and binding['revision'] == binding['claim_revision'] == 1,
+-         'v22 exact integer revision')
++         'v23 exact integer revision')
+     for field in ('id', 'revision', 'status', 'review_state', 'kind', 'basis',
+                   'statement', 'producer', 'verifier', 'method'):
+-        need(v15_same(binding[field], record[field]), 'v22 literal binding core '+field)
+-    need(binding['status'] == ('REFUTED' if cid == V22_REFUTED_ID else 'VERIFIED')
++        need(v15_same(binding[field], record[field]), 'v23 literal binding core '+field)
++    need(binding['status'] == ('REFUTED' if cid == V23_REFUTED_ID else 'VERIFIED')
+          and binding['review_state'] == 'CLEAR'
+          and binding['producer'] != binding['verifier']
+          and type(binding['verification_timestamp']) is str
+          and binding['verification_timestamp'] == record['verification_timestamp_literal']
+          and binding['report'] == record['bound_report']['path']
+-         and binding['report_sha256'] == V22_EXACT[cid][1]
++         and binding['report_sha256'] == V23_EXACT[cid][1]
+          and binding.get('target_resolution') == 'NONE'
+-         and 'verification_records' not in binding, 'v22 separate exact roles and timestamp')
++         and 'verification_records' not in binding, 'v23 separate exact roles and timestamp')
+     need(v15_same(binding['scope'], record['original_scope'])
+          and v15_same(binding['dependencies'], record['original_dependencies']),
+-         'v22 original scope and dependencies')
+-    need(digest(ROOT/record['binding']['path']) == expected, 'v22 original binding bytes')
++         'v23 original scope and dependencies')
++    need(digest(ROOT/record['binding']['path']) == expected, 'v23 original binding bytes')
+     original = json.loads((ROOT/record['binding']['path']).read_bytes())
+-    need(v15_same(binding, original), 'v22 complete original typed binding')
++    need(v15_same(binding, original), 'v23 complete original typed binding')
+     return True
+ 
+ 
+-def v22_verification_outcome(cid, expected, binding):
+-    if cid not in V22_EXACT:
++def v23_verification_outcome(cid, expected, binding):
++    if cid not in V23_EXACT:
+         return None
+-    need(v22_role(cid, expected, binding), 'v22 exact status-specific role')
+-    declared = json.loads((ROOT/V22_DESCRIPTOR['path']).read_bytes())
+-    outcome = 'FAIL' if cid == V22_REFUTED_ID else 'PASS'
++    need(v23_role(cid, expected, binding), 'v23 exact status-specific role')
++    declared = json.loads((ROOT/V23_DESCRIPTOR['path']).read_bytes())
++    outcome = 'FAIL' if cid == V23_REFUTED_ID else 'PASS'
+     need(v15_same(declared['status_semantics'][cid],
+          dict(status=binding['status'], verification_outcome=outcome)),
+-         'v22 exact status-specific theorem outcome')
+-    if cid == V22_REFUTED_ID:
++         'v23 exact status-specific theorem outcome')
++    if cid == V23_REFUTED_ID:
+         contract = declared['original_generic_refutation_contract']
+         need(binding['verification_outcome'] == 'FAIL'
+              and binding['refutation']['exact_statement_disproved'] is True
+@@ -2074,104 +2077,110 @@ def v22_verification_outcome(cid, expected, binding):
+              and contract['revision'] == 1 and contract['binding_sha256'] == expected
+              and contract['theorem_verification_outcome'] == 'FAIL'
+              and contract['successful_counterexample_check_outcome'] == 'PASS',
+-             'v22 exact refutation evidence and FAIL interpretation')
++             'v23 exact refutation evidence and FAIL interpretation')
+     return outcome
+ 
+ 
+-def v22_scope(cid, expected, binding):
+-    need(v22_role(cid, expected, binding), 'v22 scoped exact binding')
+-    record = v22_descriptor(cid)
++def v23_scope(cid, expected, binding):
++    need(v23_role(cid, expected, binding), 'v23 scoped exact binding')
++    record = v23_descriptor(cid)
+     original = binding['scope']
+     text_key = 'description' if 'description' in original else 'population'
+     flag_key = 'unrestricted_target' if 'unrestricted_target' in original else 'unrestricted'
+     need(type(original[text_key]) is str and type(original[flag_key]) is bool
+          and type(original['target_resolution']) is str
+-         and original['target_resolution'] == 'NONE', 'v22 typed scope projection fields')
++         and original['target_resolution'] == 'NONE', 'v23 typed scope projection fields')
+     projected = dict(description=original[text_key], unrestricted_target=original[flag_key],
+                      target_resolution=original['target_resolution'])
+     need(v15_same(projected, record['proposed_three_key_scope']),
+-         'v22 exact three-key scope projection')
++         'v23 exact three-key scope projection')
+     return projected
+ 
+ 
+-def v22_dependencies(cid, expected, binding, claims):
+-    need(v22_role(cid, expected, binding), 'v22 dependency exact binding')
++def v23_dependencies(cid, expected, binding, claims):
++    need(v23_role(cid, expected, binding), 'v23 dependency exact binding')
+     result = []
+     for original in binding['dependencies']:
+         need(type(original) is dict and set(original) <= {'id', 'revision', 'relation', 'type', 'reason'}
+              and ('relation' in original) != ('type' in original)
+              and type(original['id']) is str and type(original['revision']) is int
+-             and original['revision'] == 1, 'v22 typed dependency projection')
++             and original['revision'] == 1, 'v23 typed dependency projection')
+         relation = original['relation'] if 'relation' in original else original['type']
+-        need(type(relation) is str and relation == 'uses_result', 'v22 exact dependency relation')
++        need(type(relation) is str and relation == 'uses_result', 'v23 exact dependency relation')
+         previous = [c for c in claims if c['id'] == original['id']]
+         need(len(previous) == 1 and type(previous[0]['revision']) is int
+              and previous[0]['revision'] == original['revision']
+              and previous[0]['status'] == 'VERIFIED' and previous[0]['review_state'] == 'CLEAR',
+-             'v22 preceding exact verified dependency revision')
++             'v23 preceding exact verified dependency revision')
+         row = dict(id=original['id'], revision=original['revision'], relation=relation)
+         if 'reason' in original:
+-            need(type(original['reason']) is str, 'v22 literal dependency reason')
++            need(type(original['reason']) is str, 'v23 literal dependency reason')
+             row['reason'] = original['reason']
+         result.append(row)
+     return result
+ 
+ 
+-def v22_evidence(cid):
+-    record = v22_descriptor(cid)
+-    need(record is not None, 'v22 exact evidence routing')
+-    declared = json.loads((ROOT/V22_DESCRIPTOR['path']).read_bytes())
+-    pins = {V22_DESCRIPTOR['path']: V22_DESCRIPTOR['sha256'],
+-            V22_CAPACITY_METADATA['path']: V22_CAPACITY_METADATA['sha256'],
+-            V22_SEVENTEEN_METADATA['path']: V22_SEVENTEEN_METADATA['sha256']}
++def v23_evidence(cid):
++    record = v23_descriptor(cid)
++    need(record is not None, 'v23 exact evidence routing')
++    declared = json.loads((ROOT/V23_DESCRIPTOR['path']).read_bytes())
++    pins = {V23_DESCRIPTOR['path']: V23_DESCRIPTOR['sha256'],
++            V23_CAPACITY_METADATA['path']: V23_CAPACITY_METADATA['sha256'],
++            V23_SEVENTEEN_METADATA['path']: V23_SEVENTEEN_METADATA['sha256']}
+     for review in declared['root_existing_metadata_reviews']:
+         need(type(review) is dict and set(review) == {'path', 'sha256'}
+              and type(review['path']) is str and type(review['sha256']) is str,
+-             'v22 typed exact Root review reference')
++             'v23 typed exact Root review reference')
+         need(review['path'] not in pins or pins[review['path']] == review['sha256'],
+-             'v22 consistent exact Root review identity')
++             'v23 consistent exact Root review identity')
+         pins[review['path']] = review['sha256']
+     proof = declared['original_generic_refutation_contract']['proof']
+     need(type(proof) is dict and set(proof) == {'path', 'sha256'},
+-         'v22 exact refutation proof reference')
++         'v23 exact refutation proof reference')
+     need(proof['path'] not in pins or pins[proof['path']] == proof['sha256'],
+-         'v22 consistent refutation proof identity')
++         'v23 consistent refutation proof identity')
+     pins[proof['path']] = proof['sha256']
++    correction = declared['metadata_correction_provenance']['receipt']
++    need(type(correction) is dict and correction == dict(
++         path='acceleration/results/20261004_wave45_dual_gram_assumptions_metadata_correction01.json',
++         sha256='fbc54e6cebdd86fdf2e881446739d55ef39ce3b1e55a551da085af97b5702530'),
++         'v23 exact assumptions correction receipt')
++    pins[correction['path']] = correction['sha256']
+     for path, identity in pins.items():
+-        need(digest(ROOT/path) == identity, 'v22 exact descriptor and Root metadata evidence')
++        need(digest(ROOT/path) == identity, 'v23 exact descriptor and Root metadata evidence')
+     return pins
+ 
+ 
+-def v22_report(cid, report_sha, binding, report):
+-    if cid not in V22_EXACT:
++def v23_report(cid, report_sha, binding, report):
++    if cid not in V23_EXACT:
+         return None
+-    need(v22_role(cid, V22_EXACT[cid][0], binding), 'v22 bound report exact role')
+-    record = v22_descriptor(cid)
+-    need(report_sha == V22_EXACT[cid][1] and digest(ROOT/binding['report']) == report_sha,
+-         'v22 exact original report bytes')
++    need(v23_role(cid, V23_EXACT[cid][0], binding), 'v23 bound report exact role')
++    record = v23_descriptor(cid)
++    need(report_sha == V23_EXACT[cid][1] and digest(ROOT/binding['report']) == report_sha,
++         'v23 exact original report bytes')
+     original = json.loads((ROOT/binding['report']).read_bytes())
+     need(v15_same(report, original) and report['status'] == record['bound_report']['headline']
+          and type(report['statement']) is str and report['statement'] == binding['statement'],
+-         'v22 complete typed original report and literal statement')
+-    outcome = v22_verification_outcome(cid, V22_EXACT[cid][0], binding)
+-    if cid == V22_REFUTED_ID:
++         'v23 complete typed original report and literal statement')
++    outcome = v23_verification_outcome(cid, V23_EXACT[cid][0], binding)
++    if cid == V23_REFUTED_ID:
+         need(report['outcome'] == 'FAIL' and report['counterexample_audit_outcome'] == 'PASS'
+              and report['proof'] == binding['refutation']['proof']
+              and report['proof_sha256'] == binding['refutation']['sha256'],
+-             'v22 successful counterexample check distinct from refuted theorem')
+-    v22_evidence(cid)
+-    return dict(adapter_version=22, descriptor=V22_DESCRIPTOR,
+-        recorded_binding=record['binding']['path'], recorded_binding_sha256=V22_EXACT[cid][0],
++             'v23 successful counterexample check distinct from refuted theorem')
++    v23_evidence(cid)
++    return dict(adapter_version=23, descriptor=V23_DESCRIPTOR,
++        recorded_binding=record['binding']['path'], recorded_binding_sha256=V23_EXACT[cid][0],
+         recorded_report=binding['report'], recorded_report_sha256=report_sha,
+         recorded_binding_statement=binding['statement'], raw_statement_changed=False,
+         original_binding_scope=copy.deepcopy(binding['scope']),
+         original_report_scope=copy.deepcopy(report.get('scope')),
+         original_dependencies=copy.deepcopy(binding['dependencies']),
+-        schema_scope=v22_scope(cid, V22_EXACT[cid][0], binding),
++        schema_scope=v23_scope(cid, V23_EXACT[cid][0], binding),
+         original_verification_timestamp=binding['verification_timestamp'],
+         theorem_verification_outcome=outcome,
+         successful_counterexample_audit_outcome=(report['counterexample_audit_outcome']
+-            if cid == V22_REFUTED_ID else None),
++            if cid == V23_REFUTED_ID else None),
+         no_new_mathematical_approval=True, generic_role_waiver=False,
+         target_resolution='NONE')
+ 
+@@ -2198,16 +2207,16 @@ def main():
+         exact_v18 = v18_role(cid, expected, binding)
+         exact_v19 = v19_role(cid, expected, binding)
+         exact_v20 = v20_role(cid, expected, binding)
+-        exact_v22 = v22_role(cid, expected, binding)
+-        exact_v22_refuted = exact_v22 and cid == V22_REFUTED_ID
+-        verification_outcome = v22_verification_outcome(cid, expected, binding) if exact_v22 else 'PASS'
++        exact_v23 = v23_role(cid, expected, binding)
++        exact_v23_refuted = exact_v23 and cid == V23_REFUTED_ID
++        verification_outcome = v23_verification_outcome(cid, expected, binding) if exact_v23 else 'PASS'
+         v16_dependency_order(cid, {c['id'] for c in data['claims']})
+-        need((binding['status']=='VERIFIED' or exact_wave37 or exact_v22_refuted) and binding['review_state']=='CLEAR','independent exact-scope checking status')
++        need((binding['status']=='VERIFIED' or exact_wave37 or exact_v23_refuted) and binding['review_state']=='CLEAR','independent exact-scope checking status')
+         witness_role=(cid==ROOTED7_WITNESS_ID and expected==ROOTED7_WITNESS_BINDING
+                       and binding['producer']=='/root/structural'
+                       and binding['verifier']=='/root/native_driver')
+         need(binding['producer']!=binding['verifier'] and
+-             (binding['verifier'] in {'/root/checkpoint_audit','/root/structural'} or witness_role or exact_wave37 or exact_v11 or exact_v12 or exact_v13 or exact_v15 or exact_v16 or exact_v17 or exact_v18 or exact_v19 or exact_v20 or exact_v22),
++             (binding['verifier'] in {'/root/checkpoint_audit','/root/structural'} or witness_role or exact_wave37 or exact_v11 or exact_v12 or exact_v13 or exact_v15 or exact_v16 or exact_v17 or exact_v18 or exact_v19 or exact_v20 or exact_v23),
+              'separate checking identity for the exact recorded discovery')
+         if 'verification_records' in binding:
+             check=binding['verification_records'][0];report_path=check['audit_path'];report_sha=check['audit_sha256']
+@@ -2250,9 +2259,9 @@ def main():
+         if wave44_final_mapping is not None:
+             need(editorial_statement_mapping is None, 'v20 disjoint exact final binding adapter')
+             editorial_statement_mapping = wave44_final_mapping
+-        wave45_statement_mapping = v22_report(cid, report_sha, binding, report)
++        wave45_statement_mapping = v23_report(cid, report_sha, binding, report)
+         if wave45_statement_mapping is not None:
+-            need(editorial_statement_mapping is None, 'v22 disjoint exact eighteen metadata adapter')
++            need(editorial_statement_mapping is None, 'v23 disjoint exact eighteen metadata adapter')
+             editorial_statement_mapping = wave45_statement_mapping
+         need(report.get('verifier',binding['verifier'])==binding['verifier'],'report checking identity')
+         if cid in NONEDGE_BINDINGS:
+@@ -2334,18 +2343,18 @@ def main():
+             binding = copy.deepcopy(binding)
+             binding['scope'] = projected_scope
+             binding['dependencies'] = projected_dependencies
+-        if cid in V22_EXACT:
++        if cid in V23_EXACT:
+             original_scope = copy.deepcopy(binding['scope'])
+-            projected_scope = v22_scope(cid, expected, binding)
+-            projected_dependencies = v22_dependencies(cid, expected, binding, data['claims'])
++            projected_scope = v23_scope(cid, expected, binding)
++            projected_dependencies = v23_dependencies(cid, expected, binding, data['claims'])
+             editorial_statement_mapping['schema_dependencies'] = copy.deepcopy(projected_dependencies)
+             binding = copy.deepcopy(binding)
+             binding['scope'] = projected_scope
+             binding['dependencies'] = projected_dependencies
+         paths={path.relative_to(ROOT).as_posix():expected,report_path:report_sha}
+-        if cid in V22_EXACT:
+-            for evidence_path, evidence_sha in v22_evidence(cid).items():
+-                need(evidence_path not in paths or paths[evidence_path] == evidence_sha, 'v22 consistent exact metadata evidence')
++        if cid in V23_EXACT:
++            for evidence_path, evidence_sha in v23_evidence(cid).items():
++                need(evidence_path not in paths or paths[evidence_path] == evidence_sha, 'v23 consistent exact metadata evidence')
+                 paths[evidence_path] = evidence_sha
+         paths.update(binding.get('inputs_sha256',{}))
+         for collection in ('artifacts','evidence'):

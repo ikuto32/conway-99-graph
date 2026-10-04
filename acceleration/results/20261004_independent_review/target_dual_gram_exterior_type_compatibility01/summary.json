@@ -1,0 +1,109 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_VERIFICATION_REPORT_V1",
+  "id": "C-TARGET-DUAL-GRAM-EXTERIOR-TYPE-COMPATIBILITY",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For an exact99/14/1/2 target and induced m-vertexH with U=3I-H+J/9 positive definite, exterior binarytypet has q=b_t^T U^-1 b_t<=28/9, b_t=1/9*1-t, and any two distinct exterior vertices with actualadjacencya satisfy(1/9-a-b_t^T U^-1 b_u)^2<=(28/9-q_t)(28/9-q_u); their entire exterior Schur matrix is PSD ofrank44-m. Separately, if K=H+4I is positive definite, l_t=t^T K^-1t<=4 and(a-t^T K^-1u)^2<=(4-l_t)(4-l_u), with exterior Schur PSDrank55-m. Equal-type necessary thresholds are uppernonadj29/18,upperadj10/9,lowernonadj2,loweradj5/2. No actual472-type evaluation or target conclusion is asserted.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "verification_timestamp": "2026-10-03T23:36:19.3318251+00:00",
+  "scope": {
+    "description": "Conditional exact99/14/1/2 target, any literal inducedm-base satisfying each stated separate PD hypothesis, actual distinct exterior endpoints including equaltypes",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "Historical exact target Gram PSD theorem used by the independently reconstructed conditional dual-Gram proof"
+    }
+  ],
+  "proof": "acceleration/REVIEW_20261004_DUAL_GRAM_EXTERIOR_TYPE_COMPATIBILITY_NATIVE_V1.md",
+  "proof_sha256": "cf2f33651c296ccf76047173825f805a5efc2cd2d88c463c336b149b1a32c838",
+  "inputs_sha256": {
+    "acceleration/results/20261003_independent_review/external_type_lower_gram_schur01/summary.json": "1b543dbdbb8a07724f2e6bdcb5a129baf554fef4e90fc46a0842d803f4639f8f",
+    "docs/CANDIDATE_20261003_DUAL_GRAM_EXTERIOR_TYPE_COMPATIBILITY_V1.md": "e07f78d1820d1fcedc87d859c3715c8e8321fa44e49fc9a1f06bf0ffe4814c05",
+    "acceleration/REVIEW_20261004_DUAL_GRAM_EXTERIOR_TYPE_COMPATIBILITY_NATIVE_V1.md": "cf2f33651c296ccf76047173825f805a5efc2cd2d88c463c336b149b1a32c838",
+    "acceleration/results/20261003_dual_gram_exterior_type_compatibility_candidate01.json": "4ea798a2d6a16926b85282a1d5f18c97be892c9bffd8007629cf2ccfb7c5e9ed",
+    "acceleration/results/20261004_dual_gram_exterior_type_compatibility_native_written_review01.json": "14aedb031728f2833ab04f391e063173910a512f726671f65dd839b9620a459b",
+    "acceleration/results/20261004_dual_gram_exterior_type_compatibility_root_independent_written_audit_acceptance01.json": "7951b0fd4fcc508e35d405946570f89c644a1296bae8f30d2cee1450f9131c6e"
+  },
+  "outputs_sha256": {},
+  "controls": {
+    "written_boundary_checks": 14,
+    "executed_mathematical_commands": 0,
+    "executed_matrix_inversions": 0,
+    "executed_type_pair_censuses": 0,
+    "formal": 0,
+    "external": 0
+  },
+  "original_independent_report": {
+    "path": "acceleration/results/20261004_dual_gram_exterior_type_compatibility_native_written_review01.json",
+    "sha256": "14aedb031728f2833ab04f391e063173910a512f726671f65dd839b9620a459b",
+    "status": "INDEPENDENT_WRITTEN_DUAL_GRAM_EXTERIOR_TYPE_DERIVATION_PASS",
+    "verification_timestamp": "2026-10-03T23:36:19.3318251+00:00",
+    "scope": {
+      "lower_full_rank": 55,
+      "upper_full_rank": 44,
+      "population": "Conditional exact99/14/1/2 target, any literal inducedm-base satisfying each stated separate PD hypothesis, actual distinct exterior endpoints including equaltypes",
+      "upper_exterior_rank": "44-m",
+      "lower_exterior_rank": "55-m",
+      "singular_principal_matrix_extension": false,
+      "actual_472_type_or_pair_calculation": false,
+      "pairwise_sufficiency_claimed": false,
+      "whole_target_resolution": "NONE"
+    },
+    "dependencies": [
+      {
+        "revision": 1,
+        "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+        "type": "uses_result"
+      }
+    ]
+  },
+  "root_scope_acceptance": {
+    "path": "acceleration/results/20261004_dual_gram_exterior_type_compatibility_root_independent_written_audit_acceptance01.json",
+    "sha256": "7951b0fd4fcc508e35d405946570f89c644a1296bae8f30d2cee1450f9131c6e",
+    "role": "Administrative exact-scope acceptance of Native written proof; Root is an originator and not the mathematical verifier"
+  },
+  "metadata_projection": {
+    "author": "/root/structural",
+    "timestamp": "2026-10-04T03:03:49.7069121Z",
+    "new_mathematical_checks": 0,
+    "new_mathematical_approval": false,
+    "original_statement_time_roles_method_preserved": true,
+    "scope_description_source": "Original accepted Native scope.population verbatim",
+    "unrestricted_target_source": "Original candidate scope.unrestricted typed boolean true, accepted conditional universal target scope",
+    "dependency_mapping": "Original type uses_result -> canonical relation uses_result only; original container retained",
+    "input_map_source": "Four original exact input identities plus original written report and Root acceptance; no transitive bulk rehash"
+  },
+  "shared_components": [
+    "Root proposed dual-Gram direction; Structural authored the candidate.",
+    "Historical lower-Schur archive contains Native own earlier written derivation; shared mathematical provenance is disclosed, not independent discovery or novelty.",
+    "Target polynomial identity is an explicit conditional premise; historical Gram theorem overlap is retained."
+  ],
+  "limitations": [
+    "Conditional exact target consequences under separate induced-principal positive-definite hypotheses only",
+    "No actual472-type evaluation, pair calculation, graph completion or target resolution",
+    "Singular principals are outside the theorem; pairwise tests do not certify entire Schur PSD or rank",
+    "Metadata wrapper only; Native original written proof remains the independent mathematical approval",
+    "Root discovery provenance and historical lower-Schur overlap remain explicit"
+  ],
+  "command": null,
+  "command_null_reason": "Metadata reads, small direct hashes and writing only",
+  "created_at": "2026-10-03T23:36:19.3318251+00:00",
+  "updated_at": "2026-10-04T03:03:49.7069121Z",
+  "availability": "LOCAL_ONLY",
+  "target_resolution": "NONE",
+  "registration_authorized": false,
+  "ledger_index_mutated": false
+}

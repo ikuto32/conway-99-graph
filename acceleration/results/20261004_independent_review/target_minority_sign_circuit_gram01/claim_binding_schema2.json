@@ -1,0 +1,116 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-CIRCUIT-MINORITY-SIGN-GRAM-BOUNDS",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For any unbalanced GF(3) actual-triangle circuit of a Conway99 target, let w be selected triangles, q the smaller sign population, n the used points and e the additional actual induced edges. Then w<=n<=w+q, F=n^2+27n-54w-18e>=0, and sum over used points of (n+27-9*deg_H)^2<=63F. Minority q=0,1,2,3 respectively forces w>=28,25,23,19. If q=1,w=25 then n=26,e=0, the three minority points have selected degree2, the other23 degree3, and the73 external points satisfy sum k=214 and sum k^2=638.",
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "scope": {
+    "description": "Every hypothetical complete finite simple99/degree14/adjacentCN1/nonadjacentCN2 graph, with any selected distinct actual triangles forming an unbalanced GF3 circuit; q is the actual smaller coefficient-sign population, H is the complete induced adjacency on its used points including all extraedges. Conditional bounds only; no minority q<=3 premise is forced.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "relation": "uses_result",
+      "description": "Historical exact G^2=63G/PSD property, independently reconstructed here",
+      "report": {
+        "path": "acceleration/results/20260930_independent_review/target_gram_support_lemma.json",
+        "sha256": "e194ca054dfe0596ae2b9ff1070ef59289c7c0401497a63c77eb62e217bd1ac6"
+      },
+      "written_proof": {
+        "path": "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md",
+        "sha256": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153"
+      }
+    }
+  ],
+  "assumptions": [
+    "Exactly99 vertices and simple symmetric binary degree14 adjacency with adjacentCN1/nonadjacentCN2",
+    "Selected distinct actual triangles form a GF3 matroid circuit; all dependence coefficients nonzero",
+    "After global sign reversal q=min(p,q), and w-2q is nonzero mod3",
+    "H is the actual induced graph on used points, including every extra edge"
+  ],
+  "limitations": [
+    "No q<=3 or particular circuit configuration is forced",
+    "Bounds are necessary only and sharpness unknown",
+    "Circuit minimality is needed for n>=w; generic dependent word excluded from that step",
+    "Actual extra edges retained, no induced-selected-union assumption except provedq1w25boundary",
+    "Scalar moment histogram survives; no exterior type or graph construction",
+    "No incidence rank<=72, symmetry, target existence/nonexistence or full12..98coverage claim",
+    "No sharpness or completion of the next allowed weights was proved",
+    "No q<=3 or one-sign circuit is asserted to occur in every target",
+    "This written gate approves no future incidence-family decoder/Gram worker/solver source",
+    "No actual target or selectedcircuit was read orconstructed",
+    "This explicit schema2 metadata projection does not execute a mathematical program, reapprove code, perform a ledger action or establish external/novelty status."
+  ],
+  "shared_components": [
+    "Historical independently checked Gram polynomial/projector premise and archive proof are shared and explicitly pinned.",
+    "Structural authored the new sign-incidence and support-budget candidate; Native whole-read it and independently reconstructed every displayed boundary.",
+    "The q1w25 second moment was reconstructed from the outside Gram-square budget, then compared with the paper pair-count route.",
+    "No producer mathematical code or previous affine/upper98 existence claim is a premise of this conditional proof."
+  ],
+  "report": "acceleration/results/20261004_independent_review/target_minority_sign_circuit_gram01/summary.json",
+  "report_sha256": "41e414a25bc3ec763c004021fbe4c1557bbbe89c58f9b8acb336fad1e771397e",
+  "verification_timestamp": "2026-10-04T00:03:05.6039309+00:00",
+  "verification_started_at": null,
+  "verification_started_at_null_reason": "Exact start of the written hand reconstruction was not contemporaneously recorded; only authentic final report UTC is supplied.",
+  "original_report_scope": {
+    "target_resolution": "NONE",
+    "unrestricted_target": true,
+    "population": "Every hypothetical complete finite simple99/degree14/adjacentCN1/nonadjacentCN2 graph, with any selected distinct actual triangles forming an unbalanced GF3 circuit; q is the actual smaller coefficient-sign population, H is the complete induced adjacency on its used points including all extraedges. Conditional bounds only; no minority q<=3 premise is forced."
+  },
+  "original_report_status": "INDEPENDENT_WRITTEN_CIRCUIT_MINORITY_SIGN_GRAM_PASS",
+  "original_report_statement": "For any unbalanced GF(3) actual-triangle circuit of a Conway99 target, let w be selected triangles, q the smaller sign population, n the used points and e the additional actual induced edges. Then w<=n<=w+q, F=n^2+27n-54w-18e>=0, and sum over used points of (n+27-9*deg_H)^2<=63F. Minority q=0,1,2,3 respectively forces w>=28,25,23,19. If q=1,w=25 then n=26,e=0, the three minority points have selected degree2, the other23 degree3, and the73 external points satisfy sum k=214 and sum k^2=638.",
+  "original_raw_report_changed": false,
+  "controls": {
+    "written_checks": 15,
+    "executed_mathematical_commands": 0,
+    "enumerations": 0,
+    "formal_proof": false,
+    "external_review": false
+  },
+  "inputs_sha256": {
+    "acceleration/REVIEW_20261004_TARGET_TERNARY_CIRCUIT_MINORITY_SIGN_GRAM_NATIVE_V1.md": "197823e5210dec3aa59074de3e4c8772bd3fb13ded1c35867e564f6e39292310",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_CIRCUIT_MINORITY_SIGN_GRAM_BOUNDS_V1.md": "7afdf20ef3eebc24b7d78bf965b2152bd2e45c75b695c42be03661f8d5971f53",
+    "acceleration/results/20261004_target_ternary_circuit_minority_sign_gram_candidate01.json": "06ea2648f6dd2e95ec982b6e47ab0e46329abb25ca4029aad9467e80b3b4d348",
+    "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153",
+    "acceleration/results/20260930_independent_review/target_gram_support_lemma.json": "e194ca054dfe0596ae2b9ff1070ef59289c7c0401497a63c77eb62e217bd1ac6",
+    "acceleration/results/20261004_independent_review/target_minority_sign_circuit_gram01/summary.json": "41e414a25bc3ec763c004021fbe4c1557bbbe89c58f9b8acb336fad1e771397e",
+    "acceleration/results/20261004_two_written_claims_root_independent_audit_acceptance01.json": "cccf235c44d2c067726257773093cb9504e5b43c902249b0f7d18f63cec96e55"
+  },
+  "input_map_count": 7,
+  "root_written_acceptance": "acceleration/results/20261004_two_written_claims_root_independent_audit_acceptance01.json",
+  "root_written_acceptance_sha256": "cccf235c44d2c067726257773093cb9504e5b43c902249b0f7d18f63cec96e55",
+  "metadata_mapping": {
+    "scope_population_to_description_explicit": true,
+    "original_decorated_dependencies_preserved": true,
+    "schema_relations_only_id_revision_relation": true,
+    "statement_roles_verification_timestamp_unchanged": true,
+    "ledger_index_git_mutations": 0
+  },
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "external_review": null,
+  "external_review_null_reason": "No external reviewer or formal checker used",
+  "availability": "LOCAL_ONLY",
+  "registration_authorized": false,
+  "created_at": "2026-10-04T00:12:11.4171147+00:00",
+  "updated_at": "2026-10-04T00:12:11.4171147+00:00"
+}

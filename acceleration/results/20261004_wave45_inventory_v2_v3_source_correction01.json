@@ -1,0 +1,85 @@
+{
+  "schema": "WAVE45_INVENTORY_V2_V3_SOURCE_ONLY_CORRECTION_V1",
+  "timestamp": "2026-10-04T09:18:54.4832500+00:00",
+  "author": "/root/checkpoint_audit",
+  "status": "SOURCE_ONLY_AWAITING_ROOT_REVIEW",
+  "inputs_sha256": {
+    "acceleration/inventory_20261004_wave45_checkpoint_v2.py": "72132c65c6fda1a6f962194adad7dc71dbf7031f2481292c2053cfc9d225d840",
+    "acceleration/inventory_20261004_wave45_checkpoint_v3.py": "d71b858f00f573632f0b748cf830d6e584252511594f98773af3f485b2534dea",
+    "acceleration/inventory_20261004_wave45_checkpoint_v3_spec.md": "29075f8acd1e618c2d6972339f7f6685ea3a18f47055b065892abcef4978385c",
+    "acceleration/plan_20261004_wave45_inventory_author_controls_root_v3.json": "12a282fa420bff79661ed6c677d5fb0e3893a093e1c8f5d17f53e1ba0c52cb88",
+    "acceleration/proposal_20261004_wave45_inventory_configuration_v3.json": "d3e43b1883263955cd8d4736885fd7eea3be52b43b07d5a9e85614b66f783a1c",
+    "acceleration/proposal_20261004_wave45_identity_inventory_full_v3.json": "4bfdc264f9b7f2fdd9f8dbedf21a70dc351aec4b9c19c9e705f20a9af892c155",
+    "acceleration/diff_20261004_wave45_inventory_v2_v3.txt": "87a24158d678a6d35350897bc346a25d00bac7c4f9f1d63157d3ac12136e388c",
+    "acceleration/results/20261004_wave45_identity_inventory_v2_failure_root_preservation01.json": "8a1a8c17e1b06c42db479dea38c8c60d7b443f5beffe94942d14f14b073ba6dc"
+  },
+  "original_failure": {
+    "member_hashes": 0,
+    "stage": "SELECTED_MANIFEST",
+    "scientific_refutation": false,
+    "invocation": "a72f4d909c564c32835ffa365d11500c"
+  },
+  "root_prior_identity_comparison": {
+    "manifest_order_differs": true,
+    "path": "acceleration/results/20261004_wave45_identity_inventory_v2_failure_root_preservation01.json",
+    "not_new_CP_bulk_work": true,
+    "sha256": "8a1a8c17e1b06c42db479dea38c8c60d7b443f5beffe94942d14f14b073ba6dc",
+    "duplicate_paths": 0,
+    "same1947_universe": true
+  },
+  "correction": "Validate each manifest row, reject duplicate paths, sort validated rows by ordinal ASCII path then require literal equality to canonical NUL. Frozen closure05/NUL unchanged",
+  "all_original32_control_names_stages_order_preserved": true,
+  "new_routes": [
+    {
+      "index": 32,
+      "name": "reversed_manifest_exact_bijection",
+      "expected_stage": "PASS",
+      "observed_stage": null,
+      "prospective_only": true
+    },
+    {
+      "index": 33,
+      "name": "duplicated_manifest_path",
+      "expected_stage": "MANIFEST_PATH_DUPLICATE",
+      "observed_stage": null,
+      "prospective_only": true
+    }
+  ],
+  "controls": {
+    "negative": 26,
+    "total": 34,
+    "positive": 8,
+    "physical": 83,
+    "nonsummary": 82
+  },
+  "word_counts": {
+    "supervisor": 38,
+    "worker": 14,
+    "child": 22
+  },
+  "allocation": {
+    "outer": 180,
+    "worker": 150,
+    "save": 20,
+    "shutdown": 20
+  },
+  "unchanged_scope": {
+    "full_outputs": 21,
+    "full_physical": 22,
+    "claims": 418,
+    "bytes": 442895627,
+    "ledger_sha256": "70e5b2a3d904f168dad6ebb814615ba71f331c635bb892019d713277a24d89e2",
+    "selection": 1947
+  },
+  "actual_V3_calibration": null,
+  "dispatches": 0,
+  "member_hashes_in_preparation": 0,
+  "source_imports": 0,
+  "Git_ledger_index_mutations": 0,
+  "gates_transfer": false,
+  "limitations": [
+    "V2 actual finite own32 qualifies only V2; V3 changed source requires genuine own34 and fresh Root review",
+    "Source-only repair is not an actual1947-byte inventory or scientific approval",
+    "Historical raw manifest order remains preserved; no selection expansion or availability mutation"
+  ]
+}

@@ -1,0 +1,280 @@
+diff --git a/acceleration/inventory_20261004_wave45_checkpoint_v3.py b/acceleration/inventory_20261004_wave45_checkpoint_v4.py
+index 5b90b86fd..cd6eedb81 100644
+--- a/acceleration/inventory_20261004_wave45_checkpoint_v3.py
++++ b/acceleration/inventory_20261004_wave45_checkpoint_v4.py
+@@ -1,4 +1,4 @@
+-"""Read-only explicit1947-member publication identity inventory; no math replay."""
++"""Read-only config-frozen publication identity inventory and staged identity check; no math replay."""
+ import argparse
+ import copy
+ from datetime import datetime, timezone
+@@ -20,14 +20,9 @@ SOFTWARE = {
+     "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+     "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+ }
+-CLOSURE = "acceleration/results/20261004_wave45_checkpoint_publication_closure05.json"
+-CLOSURE_SHA = "3f7005fa3491d0a3e38e34413b181abc7e0e1b60305622d887ed4cfbf62f5d26"
+-SELECTED = "acceleration/results/20261004_wave45_checkpoint_publication_selected01.paths0"
+-SELECTED_SHA = "9e28d88e995aeec32608b90078383e7c66cc5705f546763e4ed28ce293634ca1"
+-LEDGER_SHA = "70e5b2a3d904f168dad6ebb814615ba71f331c635bb892019d713277a24d89e2"
+-CAL_STATUS = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V3_CALIBRATION_PASS"
++CAL_STATUS = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V4_CALIBRATION_PASS"
+ MAX_MEMBER = 50 * 1024**2
+-CONTROL_COUNTS = {"positive": 8, "negative": 26, "total": 34}
++CONTROL_COUNTS = {"positive": 10, "negative": 29, "total": 39}
+ 
+ 
+ def need(ok, stage):
+@@ -153,28 +148,31 @@ def selected_paths(raw):
+     return names
+ 
+ 
+-def manifest(raw, names, expected):
+-    need(type(raw) is dict and raw.get("schema") == "WAVE45_CHECKPOINT_READ_ONLY_PUBLICATION_CLOSURE_V5", "MANIFEST_SCHEMA")
++def manifest(raw, names, expected, known_sizes=True):
++    schema = "WAVE45_CHECKPOINT_READ_ONLY_PUBLICATION_CLOSURE_V5" if known_sizes else "WAVE45_EXPLICIT_PUBLICATION_IDENTITY_MANIFEST_V1"
++    need(type(raw) is dict and raw.get("schema") == schema, "MANIFEST_SCHEMA")
+     need(type(raw.get("safe_selected_distinct")) is int and raw["safe_selected_distinct"] == expected
+          and type(raw.get("selected")) is list and len(raw["selected"]) == expected, "MANIFEST_COUNT")
+     rows = raw["selected"]
+     for row in rows:
+         need(type(row) is dict and type(row.get("path")) is str, "MANIFEST_ROW")
+         valid_path(row["path"])
+-        need(type(row.get("bytes")) is int and 0 <= row["bytes"] <= MAX_MEMBER, "MANIFEST_BYTES")
++        need((type(row.get("bytes")) is int and 0 <= row["bytes"] <= MAX_MEMBER)
++             if known_sizes else "bytes" in row and row["bytes"] is None, "MANIFEST_BYTES")
+         hashes = row.get("declared_sha256")
+         need(type(hashes) is list and len(hashes) == 1 and type(hashes[0]) is str
+              and re.fullmatch("[0-9a-f]{64}", hashes[0]) is not None, "MANIFEST_SHA")
+     need(len({row["path"] for row in rows}) == expected, "MANIFEST_PATH_DUPLICATE")
+     rows = sorted(rows, key=lambda row: row["path"])
+     need([row["path"] for row in rows] == names, "SELECTED_MANIFEST")
+-    need(type(raw.get("selected_bytes")) is int and raw["selected_bytes"] == sum(row["bytes"] for row in rows), "MANIFEST_TOTAL_BYTES")
++    need((type(raw.get("selected_bytes")) is int and raw["selected_bytes"] == sum(row["bytes"] for row in rows))
++         if known_sizes else "selected_bytes" in raw and raw["selected_bytes"] is None, "MANIFEST_TOTAL_BYTES")
+     return rows
+ 
+ 
+ def member(row, deadline):
+     observed = hash_file(safe(row["path"]), deadline)
+-    need(observed["bytes"] == row["bytes"], "MEMBER_BYTES")
++    need(row["bytes"] is None or observed["bytes"] == row["bytes"], "MEMBER_BYTES")
+     need(observed["sha256"] == row["declared_sha256"][0], "MEMBER_SHA")
+     return {"path": row["path"], "declared_sha256": row["declared_sha256"][0], **observed}
+ 
+@@ -196,7 +194,7 @@ def git_read(argv, deadline):
+ 
+ def index_rows(raw, selected):
+     need(type(raw) is bytes and (not raw or raw.endswith(b"\0")), "GIT_INDEX_NUL")
+-    entries, seen, gitlinks = {}, set(), 0
++    entries, seen, gitlinks, outside = {}, set(), 0, []
+     for item in raw.split(b"\0")[:-1]:
+         try:
+             prefix, name = item.split(b"\t", 1)
+@@ -213,7 +211,17 @@ def index_rows(raw, selected):
+             need(stage == "0", "GIT_SELECTED_STAGE")
+             need(mode in ("100644", "100755"), "GIT_SELECTED_MODE")
+             entries[name] = {"index_mode": mode, "index_blob_oid": oid}
+-    return {"selected": entries, "whole_index_rows": len(seen), "unselected_gitlinks": gitlinks}
++        else:
++            outside.append(item)
++    outside_digest = hashlib.sha256(b"\0".join(sorted(outside)) + (b"\0" if outside else b"")).hexdigest()
++    return {"selected": entries, "whole_index_rows": len(seen), "unselected_gitlinks": gitlinks,
++            "unselected_index_rows": len(outside), "unselected_index_identity_sha256": outside_digest}
++
++
++def unselected_stability(index, basis):
++    need(type(basis) is dict and all(type(basis.get(k)) is type(index[k]) and index[k] == basis[k]
++         for k in ("unselected_index_rows", "unselected_index_identity_sha256", "unselected_gitlinks")), "UNSELECTED_INDEX_CHANGED")
++    return {k: index[k] for k in ("unselected_index_rows", "unselected_index_identity_sha256", "unselected_gitlinks")}
+ 
+ 
+ def protected(deadline):
+@@ -322,24 +330,57 @@ def controls(out, deadline):
+     duplicate_manifest["selected"][1]["path"] = names[0]
+     run("duplicated_manifest_path", "MANIFEST_PATH_DUPLICATE", duplicate_manifest,
+         lambda value: manifest(value, names, 2))
+-    need(len(rows) == 34 and sum(row["expected_stage"] == "PASS" for row in rows) == 8, "CONTROL_POPULATION")
++    current = copy.deepcopy(raw)
++    current["schema"] = "WAVE45_EXPLICIT_PUBLICATION_IDENTITY_MANIFEST_V1"
++    current["selected_bytes"] = None
++    for row in current["selected"]:
++        row["bytes"] = None
++    def hash_only_helper(value):
++        checked = manifest(value, names, 2, False)
++        unknown_size_row = {**abc_row, "bytes": None}
++        observed = member(unknown_size_row, deadline)
++        need(observed["bytes"] == 3 and observed["declared_sha256"] == digest, "HASH_ONLY_HELPER_VALUE")
++        return {"manifest": checked, "actual_known_abc_member": observed}
++    run("hash_only_union_manifest", "PASS", current, hash_only_helper)
++    bad = copy.deepcopy(current)
++    bad["selected"][1]["bytes"] = True
++    run("hash_only_manifest_bytes_bool", "MANIFEST_BYTES", bad, lambda value: manifest(value, names, 2, False))
++    bad = copy.deepcopy(current)
++    bad["selected_bytes"] = 6
++    run("hash_only_manifest_total_alias", "MANIFEST_TOTAL_BYTES", bad, lambda value: manifest(value, names, 2, False))
++    original_index = index_rows(index, set(names))
++    run("same_unselected_gitlink_identity", "PASS", original_index,
++        lambda value: unselected_stability(index_rows(index, set(names)), value))
++    altered_index = index_rows(index.replace(b"1" * 40, b"2" * 40), set(names))
++    run("changed_unselected_gitlink_oid", "UNSELECTED_INDEX_CHANGED", altered_index,
++        lambda value: unselected_stability(index_rows(index, set(names)), value))
++    need(len(rows) == 39 and sum(row["expected_stage"] == "PASS" for row in rows) == 10, "CONTROL_POPULATION")
+     save(out / "controls.json", rows, deadline)
+     return {**CONTROL_COUNTS, "stage_mismatches": [], "actual_selected_input_read": False, "git_calls": 0}
+ 
+ 
+-def inventory(reader, config, out, software):
+-    need(type(config) is dict and config.get("schema") == "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_CONFIGURATION_V1", "CONFIG_SCHEMA")
+-    required = {**software, CLOSURE: CLOSURE_SHA, SELECTED: SELECTED_SHA}
++def inventory(reader, config, out, software, staged=False):
++    need(type(config) is dict and config.get("schema") == "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_CONFIGURATION_V4", "CONFIG_SCHEMA")
++    need(config.get("operation") == ("staged" if staged else "inventory"), "CONFIG_OPERATION")
++    expected_count = config.get("selected_distinct")
++    need(type(expected_count) is int and expected_count > 0 and type(config.get("frozen_claims")) is int
++         and config["frozen_claims"] > 0 and type(config.get("new_claims")) is int
++         and 0 <= config["new_claims"] <= config["frozen_claims"], "CONFIG_POPULATION")
++    closure_path, closure_sha = config.get("manifest_path"), config.get("manifest_sha256")
++    selected_path, selected_sha = config.get("selected_path"), config.get("selected_sha256")
++    valid_path(closure_path)
++    valid_path(selected_path)
++    required = {**software, closure_path: closure_sha, selected_path: selected_sha}
+     need(type(config.get("inputs_sha256")) is dict and all(config["inputs_sha256"].get(p) == h for p, h in required.items()), "CONFIG_PINS")
+     reader.mapping(config["inputs_sha256"])
+     cal = reader.read(config["calibration_path"], config["calibration_sha256"], True)
+     need(cal.get("status") == CAL_STATUS and cal.get("mode") == "calibrate"
+-         and type(cal.get("implementation_version")) is int and cal["implementation_version"] == 3
++         and type(cal.get("implementation_version")) is int and cal["implementation_version"] == 4
+          and cal.get("source_software") == software
+          and type(cal.get("outcome")) is dict and all(type(cal["outcome"].get(k)) is int and cal["outcome"][k] == v for k, v in CONTROL_COUNTS.items()), "CALIBRATION_GATE")
+     need(config["inputs_sha256"].get(config["calibration_path"]) == config["calibration_sha256"], "CALIBRATION_PIN")
+     cal_outputs = cal.get("outputs_sha256")
+-    need(type(cal_outputs) is dict and len(cal_outputs) == 82 and "controls.json" in cal_outputs, "CALIBRATION_POPULATION")
++    need(type(cal_outputs) is dict and len(cal_outputs) == 94 and "controls.json" in cal_outputs, "CALIBRATION_POPULATION")
+     cal_base = PurePosixPath(config["calibration_path"]).parent
+     need({p.name for p in safe(config["calibration_path"]).parent.iterdir()} == set(cal_outputs) | {"summary.json"},
+          "CALIBRATION_DIRECTORY")
+@@ -347,21 +388,37 @@ def inventory(reader, config, out, software):
+         need(type(filename) is str and PurePosixPath(filename).name == filename, "CALIBRATION_FILENAME")
+         reader.read((cal_base / filename).as_posix(), digest)
+     stages = reader.read((cal_base / "controls.json").as_posix(), cal_outputs["controls.json"], True)
+-    need(type(stages) is list and len(stages) == 34 and all(type(row) is dict and
++    need(type(stages) is list and len(stages) == 39 and all(type(row) is dict and
+          type(row.get("index")) is int and row["index"] == i and row.get("matches") is True and
+          row.get("actual_stage") == row.get("expected_stage") for i, row in enumerate(stages)), "CALIBRATION_STAGES")
+     expected = config.get("expected_protected_context")
+     need(type(expected) is dict and set(expected) == {"head", "index_sha256", "ledger_sha256"}
+-         and expected["ledger_sha256"] == LEDGER_SHA, "FROZEN418_CONTEXT")
++         and type(expected["head"]) is str and re.fullmatch("[0-9a-f]{40}", expected["head"])
++         and all(type(expected[k]) is str and re.fullmatch("[0-9a-f]{64}", expected[k])
++                 for k in ("index_sha256", "ledger_sha256")), "FROZEN_CONFIG_CONTEXT")
+     before = protected(reader.deadline)
+     need(before == expected, "PROTECTED_CONTEXT")
+-    closure = reader.read(CLOSURE, CLOSURE_SHA, True)
+-    names = selected_paths(reader.read(SELECTED, SELECTED_SHA, raw=True))
+-    declared = manifest(closure, names, 1947)
++    closure = reader.read(closure_path, closure_sha, True)
++    names = selected_paths(reader.read(selected_path, selected_sha, raw=True))
++    declared = manifest(closure, names, expected_count, False)
+     claims = [row for row in declared if row["path"] == "CLAIMS.yaml"]
+-    need(closure["selected_bytes"] == 442895627 and len(claims) == 1 and
+-         claims[0]["declared_sha256"] == [LEDGER_SHA], "FROZEN_CLOSURE_SCOPE")
++    need(len(claims) == 1 and claims[0]["declared_sha256"] == [expected["ledger_sha256"]], "FROZEN_CLOSURE_SCOPE")
+     index = index_rows(git_read(["ls-files", "--stage", "-z"], reader.deadline), set(names))
++    if staged:
++        base_path, base_sha = config.get("baseline_inventory_path"), config.get("baseline_inventory_sha256")
++        need(config["inputs_sha256"].get(base_path) == base_sha, "BASELINE_PIN")
++        baseline = reader.read(base_path, base_sha, True)
++        need(baseline.get("status") == "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V4_COMPLETE_PASS"
++             and baseline.get("mode") == "inventory" and type(baseline.get("implementation_version")) is int
++             and baseline["implementation_version"] == 4 and baseline.get("source_software") == software, "BASELINE_GATE")
++        basis = baseline.get("outcome")
++        need(type(basis) is dict and basis.get("all_identities_match") is True
++             and type(basis.get("selected_distinct")) is int and basis["selected_distinct"] == expected_count
++             and basis.get("manifest_sha256") == closure_sha and basis.get("selected_sha256") == selected_sha
++             and basis.get("protected_after", {}).get("head") == expected["head"]
++             and basis.get("protected_after", {}).get("ledger_sha256") == expected["ledger_sha256"], "BASELINE_SCOPE")
++        unselected_stability(index, basis)
++        need(len(index["selected"]) == expected_count, "STAGED_SELECTED_MISSING")
+     records, errors = [], []
+     from tqdm import tqdm
+     for ordinal, row in enumerate(tqdm(declared, desc="publication identity")):
+@@ -370,7 +427,7 @@ def inventory(reader, config, out, software):
+             observed = member(row, reader.deadline)
+             tracked = index["selected"].get(row["path"])
+             observed["current_index"] = tracked
+-            observed["working_raw_blob_matches_index_oid"] = blob_identity(observed, tracked)
++            observed["working_raw_blob_matches_index_oid"] = blob_identity(observed, tracked, staged)
+             observed["publication_availability_action"] = "NONE"
+             records.append(observed)
+         except ValueError as exc:
+@@ -380,32 +437,35 @@ def inventory(reader, config, out, software):
+             records.append({"path": row["path"], "declared_sha256": row["declared_sha256"][0], "error": str(exc)})
+         if (ordinal + 1) % 100 == 0 or ordinal + 1 == len(declared):
+             save(out / ("checkpoint_%03d.json" % ((ordinal + 1 - 1) // 100)),
+-                 {"completed": ordinal + 1, "expected": 1947, "errors": list(errors), "deadline": reader.deadline.status()}, reader.deadline)
++                 {"completed": ordinal + 1, "expected": expected_count, "errors": list(errors), "deadline": reader.deadline.status()}, reader.deadline)
+     save(out / "member_inventory.json", records, reader.deadline)
+     after = protected(reader.deadline)
+     need(after == before, "CLOSING_PROTECTED_CONTEXT")
+-    return {"selected_distinct": 1947, "complete_member_sha256_checks": len(records) - len(errors),
+-            "expected_bytes": 442895627, "observed_bytes_matching_members": sum(row.get("bytes", 0) for row in records),
++    return {"selected_distinct": expected_count, "complete_member_sha256_checks": len(records) - len(errors),
++            "expected_bytes": None, "expected_bytes_null_reason": "Final hash-only manifest declares no prior payload-size observation; every actual member is capped and its bytes reported",
++            "observed_bytes_matching_members": sum(row.get("bytes", 0) for row in records),
+             "errors": errors, "missing": [row["path"] for row in errors if row["stage"] == "MEMBER_MISSING"],
+             "extra_selected": [], "missing_selected": [], "all_identities_match": not errors,
+-            "tracked_current": len(index["selected"]), "untracked_current": 1947 - len(index["selected"]),
++            "tracked_current": len(index["selected"]), "untracked_current": expected_count - len(index["selected"]),
+             "raw_working_blob_oid_matches": sum(row.get("working_raw_blob_matches_index_oid", False) for row in records),
+             "whole_index_rows": index["whole_index_rows"], "unselected_gitlinks": index["unselected_gitlinks"],
+-            "protected_before": before, "protected_after": after, "frozen_claims": 418, "new_claims": 18,
++            "unselected_index_rows": index["unselected_index_rows"], "unselected_index_identity_sha256": index["unselected_index_identity_sha256"],
++            "manifest_path": closure_path, "manifest_sha256": closure_sha, "selected_path": selected_path, "selected_sha256": selected_sha,
++            "protected_before": before, "protected_after": after, "frozen_claims": config["frozen_claims"], "new_claims": config["new_claims"],
+             "old_PUBLIC_preserved_premise": 6054, "new_cutoff_artifact_availability_premise": "LOCAL_ONLY",
+             "availability_mutated": False, "math_replays": 0,
+-            "git_mutations": 0, "staging": 0, "physical_git_blob_replay": False}
++            "git_mutations": 0, "staging": 0, "staged_raw_identity_required": staged, "physical_git_blob_replay": False}
+ 
+ 
+ def main():
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("mode", choices=("calibrate", "inventory"))
++    parser.add_argument("mode", choices=("calibrate", "inventory", "staged"))
+     for name in ("seconds", "out", "self-sha256", "spec-sha256", "executor"):
+         parser.add_argument("--" + name, required=True)
+     parser.add_argument("--configuration")
+     parser.add_argument("--configuration-sha256")
+     args = parser.parse_args()
+-    deadline = CommandDeadline(float(args.seconds), allocation_reason="One explicit1947-path read-only publication inventory or fresh finite controls, including all hashes/output/closing context")
++    deadline = CommandDeadline(float(args.seconds), allocation_reason="One configuration-frozen read-only publication identity invocation or fresh finite controls, including all hashes/Git children/output/closing context")
+     need(args.executor == "/root", "EXECUTOR_DECLARATION")
+     out = Path(args.out)
+     if not out.is_absolute():
+@@ -423,12 +483,12 @@ def main():
+             need(args.configuration is not None and args.configuration_sha256 is not None, "CONFIG_ARGUMENTS")
+             config = reader.read(Path(args.configuration).relative_to(ROOT).as_posix() if Path(args.configuration).is_absolute() else args.configuration,
+                                  args.configuration_sha256, True)
+-            outcome = inventory(reader, config, out, software)
+-            status = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V3_COMPLETE_PASS" if outcome["all_identities_match"] else "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V3_COMPLETE_FAILED_IDENTITIES"
++            outcome = inventory(reader, config, out, software, args.mode == "staged")
++            status = "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V4_COMPLETE_PASS" if outcome["all_identities_match"] else "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_V4_COMPLETE_FAILED_IDENTITIES"
+         reader.closing()
+         outputs = {path.name: hash_file(path, deadline)["sha256"] for path in sorted(out.iterdir())}
+-        need(len(outputs) == (82 if args.mode == "calibrate" else 21), "OUTPUT_POPULATION")
+-        summary = {"schema": "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_REPORT_V1", "status": status, "implementation_version": 3,
++        need(len(outputs) == (94 if args.mode == "calibrate" else (outcome["selected_distinct"] + 99) // 100 + 1), "OUTPUT_POPULATION")
++        summary = {"schema": "WAVE45_EXPLICIT_PUBLICATION_INVENTORY_REPORT_V1", "status": status, "implementation_version": 4,
+             "mode": args.mode, "timestamp": datetime.now(timezone.utc).isoformat(), "source_author": "/root/checkpoint_audit",
+             "executor_declaration": args.executor, "actual_executor_requires_external_receipt": True,
+             "source_software": software, "inputs_sha256": reader.pins, "outputs_sha256": outputs,
+@@ -443,7 +503,7 @@ def main():
+         reader.closing()
+         tick(deadline)
+         print(json.dumps({"status": status, "outcome": outcome}), flush=True)
+-        if args.mode == "inventory" and not outcome["all_identities_match"]:
++        if args.mode != "calibrate" and not outcome["all_identities_match"]:
+             raise ValueError("COMPLETE_FAILED_IDENTITIES")
+     except Exception as exc:
+         try:

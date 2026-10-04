@@ -1,0 +1,88 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_DERIVATION_V1",
+  "status": "INDEPENDENT_TARGET_TERNARY_DIVIDED_GRAM_FORM_RANK77_V1_WRITTEN_PASS",
+  "claim_id": "C-UNRESTRICTED-TARGET-TERNARY-DIVIDED-GRAM-FORM-RANK77",
+  "claim_revision": 1,
+  "statement": "For every simple SRG(99,14,1,2) adjacency matrix A and its complete99x231 binary triangle incidence matrix N, let H=A+7I, G=H mod3, V=ker G and j be the all-one vector. The divided form beta(x,y)=xhat^T H yhat/3 mod3 is well-defined on V, has rank43 and radical span(j); ker(N^T mod3) contains j and is beta-totally-isotropic. Consequently dim ker(N^T mod3)<=22 and77<=rank_F3 N<=98. This conditional necessary condition forces neither a nonconstant left-kernel vector nor target existence/nonexistence.",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "outcome": "PASS",
+  "target_resolution": "NONE",
+  "scope": {
+    "description": "Complete unrestricted target incidence only, exact integer spectrum and odd-prime local congruence; no fixed-support occurrence, small-circuit existence, binary rank transfer or target conclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is binary symmetric zero-diagonal with all row sums14 and A^2=12I-A+2J exactly over the integers.",
+    "N includes each actual triangle exactly once, with231 columns and seven entries per row; NN^T=A+7I."
+  ],
+  "dependencies": [
+    {
+      "id": "C-TARGET-MODULAR-RANKS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [
+    {
+      "id": "C-TARGET-MODULAR-RANKS",
+      "revision": 1,
+      "relation": "uses_result",
+      "reason": "Existing exact spectral/modular target context; the new paper independently derives its needed G/E layer."
+    }
+  ],
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_DIVIDED_GRAM_FORM_RANK77_V1.md": "f07212fc84afe383704f782a5464cb82fb9e39f9eceef8a416c708c2ce35866a",
+    "acceleration/results/20261004_target_ternary_divided_gram_form_rank77_candidate01.json": "29184b93f2fb48451b0f1438b8ef70e4ade89312f7c5f1fa2f82322cffab64bf",
+    "docs/AUDIT_20260930_TARGET_MODULAR_RANKS.md": "c819ec41287a1a5394d84e2031b6cd2ba564ed8c9771082363dc46ad11a894ed",
+    "docs/DERIVATION_20260930_GF3_HOLLOW_RESIDUAL.md": "f8e52a669ed012a4d79e951e4ee52ea60d4d556ff16db893ff8e0508017f59ba",
+    "docs/CANDIDATE_20261003_TARGET_TERNARY_UNBALANCED_CIRCUIT_UPPER98_V1.md": "c44d774b841b1466ce7e040df261a99b15b44502a74dc2d32c71804a29682dd5",
+    "acceleration/audit_20261004_target_ternary_divided_gram_form_rank77_native_v1.md": "6a17cd4fe1593ffd08cafb9935add0c9059ab05d9409c54344be6f29f31778e3"
+  },
+  "proof": "acceleration/audit_20261004_target_ternary_divided_gram_form_rank77_native_v1.md",
+  "proof_sha256": "6a17cd4fe1593ffd08cafb9935add0c9059ab05d9409c54344be6f29f31778e3",
+  "verification_timestamp": "2026-10-04T08:27:12.3077452Z",
+  "timestamp": "2026-10-04T08:27:12.3077452Z",
+  "metadata_created_at": "2026-10-04T08:27:12.3077452Z",
+  "started_at": null,
+  "started_at_null_reason": "The start of the written review was not separately recorded; no earlier timestamp is invented.",
+  "actual_invocation": null,
+  "actual_invocation_null_reason": "Written proof and hand arithmetic only; no computational invocation.",
+  "checked_scope": {
+    "complete_triangle_factorization": true,
+    "exact_spectrum_and_v3det45": true,
+    "modular_rank55_independently_derived": true,
+    "separate_and_joint_lift_changes": true,
+    "local_rational_lift_equivalence": true,
+    "symmetric_congruence_not_smith_equivalence": true,
+    "valuation1_count43_valuation2_count1": true,
+    "beta_rank43_radical_ones": true,
+    "incidence_left_kernel_isotropy": true,
+    "quotient_dimension_bound21": true,
+    "rank_interval": [
+      77,
+      98
+    ],
+    "cauchy_binet_direction": true,
+    "written_boundaries": 20,
+    "executed_controls": 0,
+    "mathematical_programs": 0,
+    "formal_checks": 0,
+    "external_checks": 0,
+    "nonconstant_left_kernel_forced": false,
+    "target_resolution": "NONE"
+  },
+  "shared_components": [
+    "Root supplied the G/E and divided-form direction. Structural authored the frozen candidate. Native independently reconstructed the target factorization, reduced rank layer, odd-prime congruence and incidence quotient bound; common origin is disclosed, and approval is based on this written derivation.",
+    "Historical exact spectral/rank context and the subsidiary determinant floor77 in the upper98 paper were whole-read as bounded overlap. No exhaustive archive novelty review or unrelated claim approval is inferred.",
+    "Rook9 geometry and the five small diagonal/odd-prime examples are hand-derived shared mathematical data, with zero executable fixtures."
+  ],
+  "limitations": [
+    "Conditional complete-target necessity only; no target object, resolution, fixed-support occurrence, nonconstant left-kernel vector or rank upper bound below98.",
+    "The full integer SRG identity and every actual triangle exactly once are essential. Lambda-one degree14 alone is insufficient for the determinant/rank layer.",
+    "No binary-rank transfer, ordinary-dot-product self-orthogonality, automatic coding/circuit constraint or new executable qualification.",
+    "Written-only checking, no novelty, ledger/index/Git mutation, formal proof or external review."
+  ]
+}
