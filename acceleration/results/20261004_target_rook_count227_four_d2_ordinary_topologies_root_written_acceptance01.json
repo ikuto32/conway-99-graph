@@ -1,0 +1,68 @@
+{
+  "schema": "ROOT_EXACT_R227_WRITTEN_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T21:13:11.3456695+00:00",
+  "reviewer": "/root",
+  "result": "PASS_INDEPENDENT_WRITTEN_SCOPE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-ORDINARY-SUPPORT-TOPOLOGIES",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then there are sixteen deficiency-one triangles. Every vertex used by them lies in exactly two of them, so their support S has twenty-four vertices. All four deficiency-two triangles lie wholly in S, and their actual intersection graph is a four-node star K1,3, a four-node path P4, or a four-cycle C4.",
+  "independent_verifier": "/root/native_driver",
+  "producer": "/root/structural",
+  "independent_verification_timestamp": "2026-10-04T20:57:33.0462908Z",
+  "scope": {
+    "description": "Universal conditional necessary ordinary selected support and four-high topology at R227/maxd2/b4. Selected incidence is exactly2, support24, all four high triangles wholly in it, and actual high intersection graph star/path/C4. No b4, R227 or target exclusion, or survivor realizability.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+    "exactly four actual triangles have deficiency two"
+  ],
+  "fresh_inputs_sha256": {
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_ordinary_topologies_native01/summary.json": "f4cc886dbd04a79e19dba93c1c85e597bb8f398d911290c60fc74bc185724152",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_ordinary_topologies_native01/claim_binding_schema2.json": "5fd47d023ef1c18ac02c8ff3d7752fe8ef231caffec0ffcb393046a0a4d9cf80",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md": "f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/claim_binding_schema2.json": "ba845921017175de16810e69425290244762500b4c600b00e32946f56d552939",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261004_target_rook_count227_four_d2_ordinary_support_topologies_candidate01.json": "c4c5110d2a3dc63df431acee2ca0e619f7608bcbf09468e52e338fe8fee70e03",
+    "acceleration/audit_20261004_target_rook_count227_four_d2_ordinary_topologies_native_v1.md": "59917c49c8bed8dce066339c265435e61e939b8c99e5effc34780ea3804dd9b6",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/summary.json": "bdecc58d5517aa19aaba379253d1c626da4e700c2cba89dd5659e0005664522f",
+    "acceleration/results/20261004_target_rook_count227_four_d2_common_point_root_written_acceptance01.json": "b2ac211bd6915ef3ef61d358d60d8ca09cfb40b2388f40e89f55c53c33818fca"
+  },
+  "fresh_small_identities": 11,
+  "written_checks": [
+    "Root whole frozen source/raw and Native new independent written derivation read; exact R227/maxd2/b4 necessary support/topology statement, solecommonpoint r1 dependency and literal assumptions authenticated.",
+    "Fan20/selected16/parity givesinc2or4, h0or1 after exactfourcommonpoint theorem. Weightedfirstbound retains h0k0or1 andh1k0/1/2 beforeactualsquare counting.",
+    "Complete localK2/P3/P4/2K2/P3+K2 andoutsideK3 givesnocollapsedF4; faithfulactualsquare36/inc144, noK33/codegree3 andlowexception accounting reconstructed. H1K3isolated/pendant bounds137/143 excludeh1 beforeallhighSinference.",
+    "H0hightrianglefree/actualHH=FHH, complete lowedge topology bounds136/141/140/143 force star/path/C4 t>=3; no unknownrealizability implied.",
+    "K1 residuefloor198 explicitly rejectsq2; factor63 givesE68/69, peakD2/extraedgeweights excluded. BaselineS23 sums88/norm386, t distinctsharedpoints andarbitrarybaseline2/5 retained; outside76 givesfullnorm450-36z vs378-126z contradiction.",
+    "Only necessaryordinaryS24/allhighSin/starpathcycle restriction accepted. Branch/pathstar/b4/R227 results require separateexact gates. SharedRoot/Structural discovery disclosed, Native distinct derivation suppliesapproval, no programs/formal/externalreview."
+  ],
+  "shared_components": [
+    "Root supplied topology and complete-norm discovery outlines; Structural authored the frozen whole candidate. Native separately reconstructed all local labels, table bounds and residue/norm arithmetic.",
+    "The exact common-point revision1 mathematical statement is inherited openly; its original evidence closure remains in immutable manifests. Lower4 is comparison only.",
+    "Shared fan/Q/square mechanisms and historical overlap are disclosed; agreement and historical source gates are not verification.",
+    "No computational executor exists; fresh metadata time differs from authentic written verification completion."
+  ],
+  "current_ledger_sha256": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1",
+  "source_commit": "155a99539b86206520d8b8cc0f002d66cdc1b3e1",
+  "registration": "Pending successor after actual457 installation; frozenWave46 449 cutoff untouched.",
+  "mathematical_programs": 0,
+  "formal_reviews": 0,
+  "external_reviews": 0,
+  "ledger_Git_PUBLIC_mutations": 0,
+  "target_resolution": "UNKNOWN",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "elapsed_seconds": 0.2393548
+}

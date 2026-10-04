@@ -1,0 +1,205 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_WRITTEN_REPORT_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_TOPOLOGIES_WRITTEN_PASS",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-ORDINARY-SUPPORT-TOPOLOGIES",
+  "revision": 1,
+  "timestamp": "2026-10-04T20:57:33.0462908Z",
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then there are sixteen deficiency-one triangles. Every vertex used by them lies in exactly two of them, so their support S has twenty-four vertices. All four deficiency-two triangles lie wholly in S, and their actual intersection graph is a four-node star K1,3, a four-node path P4, or a four-cycle C4.",
+  "verification_timestamp": "2026-10-04T20:57:33.0462908Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T21:06:38.6436157+00:00",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "scope": {
+    "description": "Universal conditional necessary ordinary selected support and four-high topology at R227/maxd2/b4. Selected incidence is exactly2, support24, all four high triangles wholly in it, and actual high intersection graph star/path/C4. No b4, R227 or target exclusion, or survivor realizability.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_candidate_scope": {
+    "description": "Universal conditional necessary selected-support and four-high intersection topology at R227/b4. Excludes outside d2 points and selected fourfold incidence, retaining three possible ordinary-support topologies.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "four_D2_population_excluded": false,
+    "survivor_realizability_claimed": false
+  },
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+    "exactly four actual triangles have deficiency two"
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "The sole inherited result rejects all four d2 roots through an outside point. Selected parity, weighted support, local cycle map, h1/topology bounds and k1/h0 complete norm obstruction are reconstructed independently in the paper.",
+  "dependency_evidence": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+      "revision": 1,
+      "relation": "uses_result",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/claim_binding_schema2.json",
+        "sha256": "ba845921017175de16810e69425290244762500b4c600b00e32946f56d552939"
+      },
+      "report": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/summary.json",
+        "sha256": "bdecc58d5517aa19aaba379253d1c626da4e700c2cba89dd5659e0005664522f"
+      },
+      "verification_timestamp": "2026-10-04T19:39:35.1785776Z",
+      "producer": "/root/structural",
+      "verifier": "/root/native_driver",
+      "method": "independent_derivation",
+      "result": "PASS",
+      "root_scope_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_four_d2_common_point_root_written_acceptance01.json",
+        "sha256": "b2ac211bd6915ef3ef61d358d60d8ca09cfb40b2388f40e89f55c53c33818fca",
+        "administrative_scope_review_not_new_proof": true
+      },
+      "transitive_identities_retained_in_existing_manifests": true
+    }
+  ],
+  "controls": {
+    "written_proof_checks": 40,
+    "written_failure_boundary_challenges": 10,
+    "written": 50,
+    "hand_h1_table_rows": 2,
+    "hand_h0_table_rows": 4,
+    "hand_private_shared_square_cases": 4,
+    "hand_norm_endpoints": 2,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count227_four_d2_ordinary_support_topologies_candidate01.json",
+    "sha256": "c4c5110d2a3dc63df431acee2ca0e619f7608bcbf09468e52e338fe8fee70e03",
+    "original_timestamp": "2026-10-04T20:45:28Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count227_four_d2_ordinary_topologies_native_v1.md",
+    "sha256": "59917c49c8bed8dce066339c265435e61e939b8c99e5effc34780ea3804dd9b6"
+  },
+  "shared_components": [
+    "Root supplied topology and complete-norm discovery outlines; Structural authored the frozen whole candidate. Native separately reconstructed all local labels, table bounds and residue/norm arithmetic.",
+    "The exact common-point revision1 mathematical statement is inherited openly; its original evidence closure remains in immutable manifests. Lower4 is comparison only.",
+    "Shared fan/Q/square mechanisms and historical overlap are disclosed; agreement and historical source gates are not verification.",
+    "No computational executor exists; fresh metadata time differs from authentic written verification completion."
+  ],
+  "root_exact_new_statement_acceptance": null,
+  "four_D2_population_excluded": false,
+  "count227_excluded": false,
+  "maximum_deficiency2_inferred": false,
+  "survivor_realizability_claimed": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "availability": "LOCAL_ONLY",
+  "ledger_current_presence_asserted": false,
+  "publication_cutoff_inclusion": false,
+  "limits": [
+    "Only the literal necessary support/topology restriction is verified; no survivor, b4, R227, another rook count or target exclusion/construction.",
+    "Maximum deficiency2 is an explicit assumption; no noD3 or b5 result is used. Sole common-point r1 applicability is retained exactly.",
+    "h1 is rejected before asserting all high points lie in selected support. Collapsed cycles and six-cycle low exceptions are treated with their exact local hypotheses.",
+    "For k1, positive-even q alone permits2; integer-residue norm floor198 is essential to exclude it before E68/69. Factor63,23 inside and76 outside are literal.",
+    "No induced selected support, uniform/equitable profile, automorphism, simultaneous realization, codeword or novelty assertion.",
+    "Fifty written checks only; no mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse or protected/Git/index/publication mutation.",
+    "Root exact new acceptance and registration remain separate; closed Wave46 cutoff449 and historical bytes preserved."
+  ],
+  "independent_exact_data": {
+    "D": 24,
+    "D1_triangles": 16,
+    "D2_triangles": 4,
+    "positive_triangles": 20,
+    "selected_initial_multiplicities": [
+      2,
+      4
+    ],
+    "initial_outside_case_count": 2,
+    "initial_h0_peak_counts": [
+      0,
+      1
+    ],
+    "initial_h1_peak_counts": [
+      0,
+      1,
+      2
+    ],
+    "h1_cycle_bounds": [
+      137,
+      143
+    ],
+    "h0_low_edge_cycle_bounds": [
+      136,
+      141,
+      140,
+      143
+    ],
+    "required_cycle_incidence": 144,
+    "Gram_Q": "3I-A+J/9",
+    "Gram_Q_squared": "7Q",
+    "Y_norm_factor": 63,
+    "k1_residue_norm_floor": 198,
+    "k1_weighted_edges": [
+      68,
+      69
+    ],
+    "k1_actual_norms": [
+      378,
+      252
+    ],
+    "k1_lower_norms": [
+      450,
+      414
+    ],
+    "final_selected_multiplicity": 2,
+    "final_support_size": 24,
+    "final_high_graphs": [
+      "K1,3",
+      "P4",
+      "C4"
+    ]
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md": "f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/claim_binding_schema2.json": "ba845921017175de16810e69425290244762500b4c600b00e32946f56d552939",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261004_target_rook_count227_four_d2_ordinary_support_topologies_candidate01.json": "c4c5110d2a3dc63df431acee2ca0e619f7608bcbf09468e52e338fe8fee70e03",
+    "acceleration/audit_20261004_target_rook_count227_four_d2_ordinary_topologies_native_v1.md": "59917c49c8bed8dce066339c265435e61e939b8c99e5effc34780ea3804dd9b6",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/summary.json": "bdecc58d5517aa19aaba379253d1c626da4e700c2cba89dd5659e0005664522f",
+    "acceleration/results/20261004_target_rook_count227_four_d2_common_point_root_written_acceptance01.json": "b2ac211bd6915ef3ef61d358d60d8ca09cfb40b2388f40e89f55c53c33818fca"
+  },
+  "input_map_count": 9,
+  "metadata_operations": {
+    "workers": 0,
+    "source_imports": 0,
+    "enumerations": 0,
+    "ledger_parsed": false,
+    "protected_state_mutations": 0,
+    "historical_bytes_changed": false
+  }
+}

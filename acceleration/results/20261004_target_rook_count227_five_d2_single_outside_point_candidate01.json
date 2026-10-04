@@ -1,0 +1,101 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T20:16:48Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Suppose further that every vertex used by the deficiency-one triangles lies in exactly two of them. Let S be that selected vertex support. It is impossible that exactly one outside-S vertex lies in any deficiency-two triangle.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+    "exactly five actual triangles have deficiency two",
+    "every vertex used by deficiency-one triangles lies in exactly two of them"
+  ],
+  "scope": {
+    "description": "Universal conditional exclusion of the ordinary multiplicity-two selected-support branch with exactly one outside-S point on deficiency-two triangles, at R227 and b5.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "five_D2_population_excluded": false,
+    "fourfold_support_excluded": false,
+    "two_outside_point_branch_excluded": false
+  },
+  "dependencies": [],
+  "dependency_reason": "Local triangle parity and fan injection, D24, complete target Q identities, the two wholly-S root increments and the pointwise eigenvector contradiction are reconstructed in the paper. Earlier necessary boundaries are comparison only.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_SINGLE_OUTSIDE_POINT_V1.md",
+    "sha256": "2127b52a44b3f667131c357a41972e631d7c3242d22bfe59e9af46dc65932492"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_SINGLE_OUTSIDE_POINT_V1.md": "2127b52a44b3f667131c357a41972e631d7c3242d22bfe59e9af46dc65932492",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "exact_boundary": {
+    "D": 24,
+    "D1_triangles": 14,
+    "D2_triangles": 5,
+    "positive_triangles": 19,
+    "S_vertices": 21,
+    "selected_D1_edges": 42,
+    "outside_D2_points": 1,
+    "D2_roots_through_p": 3,
+    "D2_roots_wholly_S": 2,
+    "eS": "51+z, z>=0",
+    "degS_p": "6+a, 0<=a<=8"
+  },
+  "exact_identities": {
+    "Q": "3I-A+J/9; Q^2=7Q; Qj=0",
+    "Y": "3Qchi_S; AY=-4Y; Y integral and 1mod3; sumY=0",
+    "normY_squared": "630-126z",
+    "inside_Y_sum": "30-6z",
+    "inside_Y_norm_lower": "174-30z",
+    "Y_p": "-11-3a",
+    "remaining_outside_entries": 77,
+    "remaining_delta_upper": "162-90z-63a-9a^2<=162",
+    "delta_summand": "y^2+y-2=9t(t+1)>=0 for y=1+3t",
+    "p_outside_neighbors": "m=8-a",
+    "outside_neighbor_sum_lower": "38+8a",
+    "outside_neighbor_delta_lower": "405/2>162 when m>0; m0 demands an impossible positive sum"
+  },
+  "proof_route": [
+    "Three D2 roots meet at the sole outside point; two are wholly S, giving nine additional internal edges beyond the42 selected edges.",
+    "The two wholly-S D2 roots force sum k_v(k_v-1)>=12, including their possible shared-point case.",
+    "Correctly scaled Y3Qchi yields the remaining77 residue-excess bound162.",
+    "At p, six distinct S-neighbor values are at most1 and any other S-neighbor value at most4.",
+    "AY=-4Y requires at most8 outside neighbors to have sum at least38, forcing residue excess at least405/2 and a strict contradiction."
+  ],
+  "hand_boundaries": [
+    "The three p-root outer pairs are six distinct actual points by triangle linearity.",
+    "The two wholly-S roots may share one point; their increment lower bound strengthens rather than fails.",
+    "Additional S edges and p-to-S edges remain included in z and a.",
+    "Six abstract4 values and two7 values have sum38 and residue excess216, consistent with the weaker Cauchy floor405/2.",
+    "The a8 boundary has no outside neighbors and requires positive outside sum, so is separately impossible."
+  ],
+  "shared_origin": {
+    "Structural_prior_global_norm_and_internal_increment_derivation": true,
+    "Root_pointwise_neighbor_delta_outline": true,
+    "Structural_independent_reconstruction_of_delta_and_endpoint_bounds": true,
+    "agreement_is_verification": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "Only the literal h1 ordinary-support branch is excluded.",
+    "No fourfold-support, h2, b5 or R227 exclusion is claimed.",
+    "This new CANDIDATE requires distinct written verification; older gates do not approve it.",
+    "No scientific invocation, ledger action or frozen publication selection change occurred."
+  ]
+}

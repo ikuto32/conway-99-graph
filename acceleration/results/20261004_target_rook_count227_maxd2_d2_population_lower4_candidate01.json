@@ -1,0 +1,111 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T19:17:05Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-MAXD2-D2-POPULATION-LOWER4",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), suppose R=227 actual induced rook-nine vertex subsets occur, counted once by their vertex sets. Define d_T=6-r_T for each actual triangle, where r_T counts those subsets containing T. If every d_T is zero, one or two, then at least four actual triangles have deficiency two. If b counts them, the number a of deficiency-one triangles is24-2b. The maximum-deficiency-two condition is an explicit hypothesis, and this does not exclude count227 or resolve the target.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "every actual triangle has d_T=6-r_T in {0,1,2}"
+  ],
+  "scope": {
+    "description": "Universal conditional lower bound4 on the d2 population at R227 under an explicit maximum-deficiency-two hypothesis. Faithful ordinary defect-four-cycle map is proved only for the refuted b<=3 cases; concurrent local d2 triangles and internal neighbor edges are retained.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "maximum_d2_hypothesis_not_inherited_from_candidate": true
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "Only nonempty maximum>=2 is inherited to reject b0. The labeled C4 bijection, repeated-label K33 veto, high codegree bound, d1 cycle bounds and root-mass table are reconstructed. The newly frozen noD3 descendant is comparison evidence only, not a logical or approval premise.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md",
+    "sha256": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "acceleration/results/20261004_target_rook_count227_deficiency_upper2_candidate01.json": "42bd5ab2c027c3f5f5f0c7beadde984f2a25908caa13750218729a25061a85a8"
+  },
+  "exact_requirements": {
+    "D": 24,
+    "a": "24-2b",
+    "F_edges": 36,
+    "uncovered_actual_squares": 36,
+    "C4_F": 36,
+    "cycle_node_incidence_required": 144,
+    "faithful_F4_scope": "b<=3 only",
+    "concurrent_F_triangle_allowed": true,
+    "K33_veto": "repeatedlabels require localdegree3>maxd2; distinctlabels induce rook",
+    "highpair_common_F_neighbors_at_most": 3,
+    "D1_cycle_bound": "5 except allthree highneighbors gives6",
+    "D1_exception_scope": "only b3/edgelessF2, atmost3 exceptions",
+    "D2_root_B": "12+3k-2a_C",
+    "D2_root_internal_neighbor_edges_at_most": 1,
+    "sum_k": "2e_F2",
+    "b3_e3_concurrency": "allthree D2 triangles shareonepoint; each root a_C1, sum a_C3",
+    "b3_e3_B_each": 16,
+    "b3_e3_cycle_each_at_most": 15
+  },
+  "complete_hand_cycle_table": [
+    {"b": 1, "a": 22, "F2": "isolated", "D1_bound": 110, "D2_bound": 12, "total_bound": 122},
+    {"b": 2, "a": 20, "F2": "noedge", "D1_bound": 100, "D2_bound": 24, "total_bound": 124},
+    {"b": 2, "a": 20, "F2": "oneedge", "D1_bound": 100, "D2_bound": 30, "total_bound": 130},
+    {"b": 3, "a": 18, "F2": "noedge", "D1_bound": 93, "D2_bound": 36, "total_bound": 129},
+    {"b": 3, "a": 18, "F2": "oneedge", "D1_bound": 90, "D2_bound": 42, "total_bound": 132},
+    {"b": 3, "a": 18, "F2": "twoedgepath", "D1_bound": 90, "D2_bound": 48, "total_bound": 138},
+    {"b": 3, "a": 18, "F2": "concurrenttriangle", "D1_bound": 90, "D2_bound": 45, "total_bound": 135}
+  ],
+  "proof_route": [
+    "D24 and maxd2 hypothesis give a24-2b; inherited maxlower2 rejects b0.",
+    "At b<=3 a repeatedF4label forces four highnodes; allordinaryF4cycles map bijectively to uncoveredactualsquares.",
+    "K33 repeatedlabels require localdegree3 while maxd2; distinctlabels create inducedrook ofdefectpairs.",
+    "Disjoint highpair crossmatching cap3 and intersecting pair concurrency bound give commonFneighbors<=3.",
+    "EveryD1 has c<=5 unless allthree neighbors are high; atmost3exceptions andnone ifF2hasedge.",
+    "For D2 root calculate B12+3k-2a_C withinternalneighbor degree<=1, so croot<=B.",
+    "At b3/e3 allthree highnodes concurrent give sum a_C3 and eachB16 losesone.",
+    "Allseven handtable rows total below144, leaving b>=4."
+  ],
+  "hand_boundaries": [
+    "Three concurrentD2 nodes mayformlocalK3; they are retained.",
+    "Four concurrentD2 nodes mayformcollapsedF4, so nofaithful map on surviving b>=4.",
+    "The b3 path edges mayhaveequal actualpoint labels; the table needsno distinct-label assumption there.",
+    "Everyinternalneighbor edge subtracts2 fromexternalB and isnotdoublecounted.",
+    "The maxd2-atR227 candidate isnot used as atheorem premise.",
+    "No arbitrary target extraedges or nondefective samepoint triangle incidences are discarded."
+  ],
+  "shared_origin": {
+    "Root_requested_narrow_conditional_freeze": true,
+    "Structural_prior_R228_seven_graph_table_authorship": true,
+    "Root_concurrent_e3_challenge": true,
+    "new_candidate_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "R227 remains unresolved and no survivingpopulation is asserted realizable.",
+    "The literal maximum-deficiency-two hypothesis cannot be silently dropped.",
+    "Combining future accepted statements into b4..7 is separate metadata/theorem work.",
+    "No code/census/scientificworker or registry approval is requested."
+  ]
+}

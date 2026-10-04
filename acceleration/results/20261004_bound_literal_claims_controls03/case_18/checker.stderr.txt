@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\check_20261004_bound_literal_claims_v2.py", line 158, in <module>
+    main()
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\check_20261004_bound_literal_claims_v2.py", line 76, in main
+    candidate = load(base + "/CLAIMS.candidate.yaml", args.candidate_sha256)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\check_20261004_bound_literal_claims_v2.py", line 56, in load
+    return json.loads(read(path, sha), object_pairs_hook=unique,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\StabilityMatrix-win-x64\Data\Assets\Python\cpython-3.12.10-windows-x86_64-none\Lib\json\decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ikuto\projects\conway-99-graph\acceleration\check_20261004_bound_literal_claims_v2.py", line 15, in unique
+    raise ValueError("duplicate JSON key")
+ValueError: duplicate JSON key

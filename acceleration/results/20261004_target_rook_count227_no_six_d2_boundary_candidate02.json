@@ -1,0 +1,200 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T19:54:23Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SIX-D2-BOUNDARY",
+  "claim_revision": 1,
+  "paper_version": 2,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets and put d_T=6-r_T for each actual triangle, where r_T counts the rooks containing T. If R=227 and every d_T belongs to {0,1,2}, then it is impossible that exactly six actual triangles have deficiency two. Equivalently, the positive family cannot consist of twelve d1 and six d2 triangles, with every other d_T zero. The maximum-deficiency-two condition is a literal hypothesis; other R227 populations and the target remain unresolved.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+    "d_T=6-r_T belongs to {0,1,2} for every actual triangle"
+  ],
+  "scope": {
+    "description": "Universal conditional six-d2 population exclusion at R227 under explicit maxd2. Covers selected multiplicities2/4 and both shared/disjoint two-triple-point branches with ordinary integer full99 Gram norm and triangle-sum energy. Preserves the rejected unsealed V1 argument and its incorrect shared-branch neighbor count.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "other_populations_excluded": false,
+    "induced_selected_support_assumed": false
+  },
+  "dependencies": [],
+  "dependency_reason": "Local parity and fan injections, D24, the six-triangle labelled concurrence lemma, Q positivity/Q²7Q and ordinary NN^T=A+7I triangle energy are reconstructed from the target and literal hypotheses. Previous R227 descendants and their gates are comparison only.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SIX_D2_BOUNDARY_V2.md",
+    "sha256": "8355242189237d78409b9c84b1dc402267f5314135158d1ce3a8148a370def8a"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SIX_D2_BOUNDARY_V2.md": "8355242189237d78409b9c84b1dc402267f5314135158d1ce3a8148a370def8a",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SIX_D2_BOUNDARY_V1.md": "8f2394b3932193fbf1dfb5f4d7c97383581fee03fc7519882ea88e2cfcb21d92",
+    "acceleration/results/20261004_target_rook_count227_six_d2_rejected_outline01.json": "61cad3090fa7c113d22b45155650e7808d24c7b42a0ad0ffa633bbed148d86ca",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SEVEN_D2_BOUNDARY_V1.md": "fdac5f82b885cb956f7b12b649edc7f5466c12fa055aeb6d02082862dea23f3b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "comparison_claims_not_inherited": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2",
+      "revision": 1
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-MAXD2-D2-POPULATION-LOWER4",
+      "revision": 1
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SEVEN-D2-BOUNDARY",
+      "revision": 1
+    }
+  ],
+  "exact_boundary": {
+    "R": 227,
+    "D": 24,
+    "a_d1": 12,
+    "b_d2": 6,
+    "P": 18,
+    "selected_multiplicities_initial": [
+      2,
+      4
+    ],
+    "selected_support_points_initial": "18-k, k=#fourfold selected points",
+    "selected_edges": 36,
+    "outside_S_D2_point_multiplicity": 3,
+    "outside_S_triple_points_h_at_most": 2,
+    "D2_edges_inside_S_at_least": 6,
+    "total_edges_inside_S_at_least": 42,
+    "Q": "3I-A+J/9",
+    "Q_identity": "Q²=7Q",
+    "fourfold_split": {
+      "k_at_least3": "n<=15,36 selected edges make Q negative",
+      "k1": "n17,edge upper41<42",
+      "k2": "n16,edge upper38<42",
+      "conclusion": "k0/S18"
+    },
+    "h_at_most1": "D2 edges>=12, total>=48>PSD45",
+    "two_triple_points": "p,q with shared-root sets intersection0 or1"
+  },
+  "shared_root_branch": {
+    "t": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "D2_inside_edges": 7,
+    "eS_lower": 43,
+    "guaranteed_S_neighbors_each": 5,
+    "y_pair_upper": "each<=-3",
+    "pair_norm_lower": 18,
+    "e_at_least44_norm_upper": 14,
+    "eS_forced": 43,
+    "total_y_norm": 28,
+    "internal_increment": "degS=4+k_z; sum k14",
+    "whole_S_sixth_D2": "three distinct points each k_z>=2",
+    "sum_k_squared_at_least": 20,
+    "inside_y_norm_at_least": 10,
+    "inside_y_sum": 4,
+    "remaining_outside_entries": 79,
+    "remaining_y_sum_at_least": 2,
+    "remaining_y_norm_at_least": 2,
+    "total_y_norm_at_least": 30,
+    "contradiction": "30>28",
+    "invalid_V1_six_neighbor_step_used": false
+  },
+  "disjoint_root_branch": {
+    "t": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "D2_inside_edges": 6,
+    "guaranteed_S_neighbors_each": 6,
+    "y_pair_upper": "each<=-4",
+    "pair_norm_lower": 32,
+    "e_at_least43_norm_upper": 28,
+    "eS_forced": 42,
+    "total_y_norm": 42,
+    "y_p": -4,
+    "y_q": -4,
+    "inside_values": "y_z=1-r_z, r_z=0/1/2 D2 incidence",
+    "inside_y_sum": 6,
+    "inside_y_norm": "6+2ell, ell=#points r2",
+    "remaining_outside_entries": 79,
+    "remaining_y_sum": 2,
+    "remaining_y_norm": "4-2ell",
+    "ell_at_most": 1,
+    "maximum_other_y": 2,
+    "other_y_equal2_at_most": 1,
+    "N_Gram": "NN^T=A+7I",
+    "Ay": "-4y",
+    "triangle_energy_total": 126,
+    "D1_triangle_sum_total": 12,
+    "D1_triangle_energy_at_least": 12,
+    "D2_triangle_energy_at_least": 96,
+    "D0_triangle_energy_at_most": 18,
+    "shared_p_q_D0_energy_at_least": 36,
+    "nonshared_four_D0_energy_at_each_at_least": 13,
+    "nonshared_total_at_least": 26,
+    "contradiction": "36>18 if p/q adjacent; otherwise26>18"
+  },
+  "proof_route": [
+    "Odd twelve-selection has multiplicities2/4; P18 fan and the six-triangle incidence lemma give at most two outside-S triple points.",
+    "D2 edges add at least6; Q excludes all fourfold selected points, leaving S18.",
+    "h<=1 would force at least48 edges; h2 has shared or disjoint root sets.",
+    "Shared roots supply five S neighbors. The wholly-S sixth root yields internal norm>=10, pair norm>=18 and remaining norm>=2, contradicting28.",
+    "Disjoint roots supply six S neighbors. Exact e42 gives y norm42 and the complete small-norm integer boundary with at most one other value+2.",
+    "Ordinary triangle energy126 minus D1>=12 and D2>=96 leaves all D0 energy<=18.",
+    "The actual four D0 triangles through each p/q need>=26 energy if distinct, or a shared triangle alone needs>=36.",
+    "Both actual two-triple-point branches are refuted, with no equitable or matching assumptions."
+  ],
+  "hand_boundaries": [
+    "The disjoint3+3 fan attains six D2 internal edges and genuinely supplies six S neighbors at both outside points.",
+    "The shared fan supplies five, not six, S neighbors; pair norm18 fits28 until the wholly-S sixth-root and remaining-vector norms are added.",
+    "Selected multiplicity4 cannot be rejected just from P18; the n18-k actual Q edge bound is required.",
+    "The remaining disjoint-branch integer vectors sum2/norm4 permit one+2 or three+1/one-1; both are retained and then rejected by actual triangle energy.",
+    "Integer s²>=s is valid for negative D1 triangle sums as well.",
+    "A p/q shared triangle is charged once; it already exceeds the whole D0 budget.",
+    "Linearity alone cannot replace the no-distinct-intersection-triple hypothesis in the concurrence lemma."
+  ],
+  "rejected_V1_preservation": {
+    "paper_path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SIX_D2_BOUNDARY_V1.md",
+    "paper_sha256": "8f2394b3932193fbf1dfb5f4d7c97383581fee03fc7519882ea88e2cfcb21d92",
+    "receipt_path": "acceleration/results/20261004_target_rook_count227_six_d2_rejected_outline01.json",
+    "receipt_sha256": "61cad3090fa7c113d22b45155650e7808d24c7b42a0ad0ffa633bbed148d86ca",
+    "reason": "Shared-root loss of one S neighbor invalidated V1 coverage; also81/79 outside counts corrected from84/82.",
+    "V1_approval_exists": false,
+    "V1_theorem_marked_refuted": false
+  },
+  "shared_origin": {
+    "Root_fourfold_support_prompt": true,
+    "Structural_disjoint_energy_derivation": true,
+    "Root_shared_fan_neighbor_veto": true,
+    "Structural_wholly_S_sixth_root_correction": true,
+    "Root_independent_hand_challenge_not_verifier_approval": true,
+    "new_candidate_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "Maximum deficiency two remains an explicit hypothesis.",
+    "No other R227 population or Conway99 is excluded by this claim.",
+    "Every shared and disjoint branch must be whole-reviewed in these new V2 bytes; V1's proof was invalid.",
+    "No execution, census, registry approval or scientific worker is requested."
+  ]
+}

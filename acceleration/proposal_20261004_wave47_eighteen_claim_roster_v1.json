@@ -1,0 +1,1700 @@
+{
+  "schema": "WAVE47_EIGHTEEN_CLAIM_ROSTER_SOURCE_ONLY_V1",
+  "status": "SOURCE_ONLY_467_INSTALLATION_PENDING",
+  "timestamp": "2026-10-04T22:03:37Z",
+  "author": "/root/checkpoint_audit",
+  "cutoff": {
+    "mathematical_claims": 18,
+    "before_claims": 449,
+    "prospective_after_claims": 467,
+    "later_R226_excluded": true,
+    "claim_population_not_graph_coverage": true
+  },
+  "current_supplied_baseline": {
+    "path": "CLAIMS.yaml",
+    "sha256": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1",
+    "claims": 457,
+    "artifact_records": 23892,
+    "PUBLIC": 6054,
+    "source_commit": "155a99539b86206520d8b8cc0f002d66cdc1b3e1",
+    "index_sha256": "b7ff36caa9dc2a0233c77373be7c7bb195fab909ac4d30fdc3cb137f8dba0f2c",
+    "source": "Parent supplied actual installed context; no live ledger or Git inspection."
+  },
+  "packets": [
+    {
+      "path": "acceleration/proposal_20261004_wave47_eight_rook_literal_append_v2.json",
+      "sha256": "bf894f9321e6cdd46437d1413db2dd9f22ae1ad736eff779e724b095a008af1b",
+      "claims": 8,
+      "actual_installation": {
+        "path": "acceleration/results/20261004_wave47_eight_rook_exact_installation_root_receipt01.json",
+        "sha256": "a4e2eb1c75ce392bfb0e60b049c91c7985b35202dc47e8053d61858f00dc8474"
+      }
+    },
+    {
+      "path": "acceleration/proposal_20261004_wave47_ten_rook_literal_cores_v2.json",
+      "sha256": "ed17ba8d6ca6ebf0f108c0a3f9c12926cdb2121b113560ad74328cced3924610",
+      "claims": 10,
+      "actual_installation": null,
+      "null_reason": "Future exact ten-claim installation has not been supplied."
+    }
+  ],
+  "claims": [
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2) having exactly227 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. All deficiencies are zero, one, two or three. If a,b,c count deficiency-one, deficiency-two and deficiency-three triangles, respectively, then a+2b+3c=24 and precisely the following necessary population ranges hold: c=0 with 1<=b<=8 and a=24-2b; c=1 with 0<=b<=5 and a=21-2b; or c=2 with b in {0,1} and a=18-2b. No c>=3 occurs. This does not assert realizability of a listed population, exclude count227 or resolve the target.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional necessary16-row deficiency population table for exactly227 actual induced rook-nine subsets in a complete SRG(99,14,1,2). Arbitrary other target edges, actual point labels and parity of d1+d3 are retained. No realization or count227 exclusion.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+          "r_T counts those actual subsets containing T; local defect edges mean no induced rook contains both intersecting actual triangles"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Necessary population table only: no retained row is asserted realizable and R227 is not excluded.",
+          "No unassigned stronger R227 follow-up, Makhnev/global Hamming exclusion or future execution gate is approved.",
+          "No equitable partition, automorphism, uniform point profile, nonconstant codeword or full positive-support inducedness is assumed.",
+          "All thirty proof checks, eight boundary challenges and16 arithmetic rows were written hand derivations; no mathematical worker, enumeration, source import, backend, formal or external proof check ran.",
+          "Old candidate/artifact bytes, ledger/index/Git/publication and frozen Wave46 roster remain unchanged; this is separate next-wave written evidence."
+        ],
+        "created_at": "2026-10-04T18:56:18.2015428Z",
+        "updated_at": "2026-10-04T18:56:18.2015428Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_population_table_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/summary.json",
+        "timestamp": "2026-10-04T18:54:45.9157103Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2) having exactly227 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. All deficiencies are zero, one, two or three. If a,b,c count deficiency-one, deficiency-two and deficiency-three triangles, respectively, then a+2b+3c=24 and precisely the following necessary population ranges hold: c=0 with 1<=b<=8 and a=24-2b; c=1 with 0<=b<=5 and a=21-2b; or c=2 with b in {0,1} and a=18-2b. No c>=3 occurs. This does not assert realizability of a listed population, exclude count227 or resolve the target.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural is mathematical producer and authored prior rook candidates; Root suggested the follow-up/shared outline. Agreement is not verification.",
+          "Native independently reconstructed the exact new population statement and every fan/parity/PSD/rook equality step in writing; no discovery source or computational gate was imported.",
+          "Only the exactr1 strict deficiency bound and nonempty maximum-lower2 results are inherited, with their canonical bindings and distinct Root acceptances explicitly pinned.",
+          "The September17 regular-set one-neighbor overlap was read directly and rederived; no historical computation or global rook exclusion is used."
+        ],
+        "controls": [],
+        "limitations": [
+          "Necessary population table only: no retained row is asserted realizable and R227 is not excluded.",
+          "No unassigned stronger R227 follow-up, Makhnev/global Hamming exclusion or future execution gate is approved.",
+          "No equitable partition, automorphism, uniform point profile, nonconstant codeword or full positive-support inducedness is assumed.",
+          "All thirty proof checks, eight boundary challenges and16 arithmetic rows were written hand derivations; no mathematical worker, enumeration, source import, backend, formal or external proof check ran.",
+          "Old candidate/artifact bytes, ledger/index/Git/publication and frozen Wave46 roster remain unchanged; this is separate next-wave written evidence."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/claim_binding_schema2.json",
+        "sha256": "f7a5f598c1942aa181eb059f5b94cb35a155c3426f38f6a5378244cadc6a3526"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/summary.json",
+        "sha256": "dace9455e57c7970724a5ce2ac205a6208a6c4055df71152d67a767252651029"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_population_table_root_written_acceptance01.json",
+        "sha256": "cf7f70f5db3d8b473e94fcf38616593b29f816a003e40bca4e93dc732bad4c77"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-SINGLE-D3-D2-POPULATION-UPPER2",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2) having exactly227 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. If exactly one actual triangle has deficiency three, every deficiency is zero, one, two or three; the number b of deficiency-two triangles is zero, one or two; and the number a of deficiency-one triangles is21-2b. This does not exclude count227 or assert realizability of a listed population.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional R227 restriction with exactly one d3 triangle: only three necessary(a,b,c) rows, via odd-family parity cover, proved induced weighted21-point support and outside two-point degree contradiction. No realization or count227 exclusion.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+          "exactly one actual triangle has d_T=6-r_T equal to three"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Necessary c1 population restriction only; R227 is not excluded and retained rows are not claimed realizable.",
+          "Only strictmassr1 is a logical dependency. The weaker sixteen-row R227 paper/raw are comparison, not a verified premise.",
+          "No d1-only parity at the central T, uniformity, equitability, automorphism, matching coincidence, positive-support inducedness assumption or collapsed-cycle-to-square inference.",
+          "Thirty-two written hand proof/boundary checks and3 hand rows; no mathematical program, source import, backend, enumeration, formal/external check or worker ran.",
+          "No original source/report, closed Wave46 roster, ledger/index/Git or publication state is mutated; exact Root statement acceptance and registration remain separate."
+        ],
+        "created_at": "2026-10-04T19:01:59.4722659Z",
+        "updated_at": "2026-10-04T19:01:59.4722659Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_single_d3_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/summary.json",
+        "timestamp": "2026-10-04T19:01:59.4299721Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2) having exactly227 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. If exactly one actual triangle has deficiency three, every deficiency is zero, one, two or three; the number b of deficiency-two triangles is zero, one or two; and the number a of deficiency-one triangles is21-2b. This does not exclude count227 or assert realizability of a listed population.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural mathematical producer, prior rook candidate authorship and shared Root outline are disclosed. Agreement supplies no verification.",
+          "Native independently derived the entire new parity/weighted-support/outside proof in writing; no producer algorithm or code was used.",
+          "Exact strictmass canonicalr1/Root acceptance is inherited; this new proof reconstructs all remaining local facts and does not inherit the16-row result."
+        ],
+        "controls": [],
+        "limitations": [
+          "Necessary c1 population restriction only; R227 is not excluded and retained rows are not claimed realizable.",
+          "Only strictmassr1 is a logical dependency. The weaker sixteen-row R227 paper/raw are comparison, not a verified premise.",
+          "No d1-only parity at the central T, uniformity, equitability, automorphism, matching coincidence, positive-support inducedness assumption or collapsed-cycle-to-square inference.",
+          "Thirty-two written hand proof/boundary checks and3 hand rows; no mathematical program, source import, backend, enumeration, formal/external check or worker ran.",
+          "No original source/report, closed Wave46 roster, ledger/index/Git or publication state is mutated; exact Root statement acceptance and registration remain separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/claim_binding_schema2.json",
+        "sha256": "b1606c7c38f3837cc77187e6823bbe0f982f15177442967f45766fd20aa59ab9"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/summary.json",
+        "sha256": "a1c55cd5b626ff08333a4ac06d2e43681120a1a9bee5452da1492361d2a2c09a"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_single_d3_root_written_acceptance01.json",
+        "sha256": "ef63f3f89d80a49f47962feaebd392eb80af419ccede3ec64f265babeeb093a5"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-EIGHT-D1-D2-BOUNDARY",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and define d_T=6-r_T for each actual triangle. If R=227 and no triangle has deficiency three, it is impossible that exactly eight triangles have deficiency two. Equivalently, the positive deficiency family cannot consist of exactly eight deficiency-one and eight deficiency-two triangles, with every other triangle of deficiency zero. This does not exclude R227 or an arbitrary even eight-triangle incidence relation.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion of only the actual a8,b8,c0 rook-deficiency boundary at R227, with actual twelve-point odd support not assumed induced. Cubic8 squares, conditional two-triangle rook uniqueness, even symmetric difference and F2 concurrency are independently derived.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+          "no actual triangle has deficiency d_T=6-r_T equal to three"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Only the a8,b8,c0 positive-deficiency boundary is excluded; no R227 or target exclusion, remaining-population classification or arbitrary even-eight relation prohibition.",
+          "Only exact strictmassr1 is inherited. The weaker16-row R227 paper/raw are comparison and no current roster/registration presence is assumed.",
+          "No inducedness of the twelve-point odd support, equitability, automorphism, matching symmetry or faithful collapsed-cycle map is assumed.",
+          "Two-triangle rook uniqueness is conditional on a containing induced rook; crossmatching completions alone are not existence proof.",
+          "Forty written hand proof/boundary checks only; no mathematical code, import, backend, enumeration, worker, formal or external check.",
+          "Old candidate/report bytes, closed Wave46 cutoff, ledger/index/Git/publication remain unchanged; exact Root review and next-wave registration are separate."
+        ],
+        "created_at": "2026-10-04T19:08:55.3357672Z",
+        "updated_at": "2026-10-04T19:08:55.3357672Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_no_eight_boundary_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_no_eight_boundary_native01/summary.json",
+        "timestamp": "2026-10-04T19:08:55.3016506Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and define d_T=6-r_T for each actual triangle. If R=227 and no triangle has deficiency three, it is impossible that exactly eight triangles have deficiency two. Equivalently, the positive deficiency family cannot consist of exactly eight deficiency-one and eight deficiency-two triangles, with every other triangle of deficiency zero. This does not exclude R227 or an arbitrary even eight-triangle incidence relation.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural mathematical producer/prior rook and even-eight source authorship and shared Root skeptical outline are disclosed; agreement is not independent verification.",
+          "Native independently reconstructed cubic8 edge coverage, incident/disjoint rook uniqueness, symmetric-difference classification, filled D1 defects and F2 concurrent-neighbor cap in writing.",
+          "The only inherited theorem is the exact strictmassr1 binding with its distinct Root written acceptance; no historical solver, matrix or graph-census gate is transferred."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only the a8,b8,c0 positive-deficiency boundary is excluded; no R227 or target exclusion, remaining-population classification or arbitrary even-eight relation prohibition.",
+          "Only exact strictmassr1 is inherited. The weaker16-row R227 paper/raw are comparison and no current roster/registration presence is assumed.",
+          "No inducedness of the twelve-point odd support, equitability, automorphism, matching symmetry or faithful collapsed-cycle map is assumed.",
+          "Two-triangle rook uniqueness is conditional on a containing induced rook; crossmatching completions alone are not existence proof.",
+          "Forty written hand proof/boundary checks only; no mathematical code, import, backend, enumeration, worker, formal or external check.",
+          "Old candidate/report bytes, closed Wave46 cutoff, ledger/index/Git/publication remain unchanged; exact Root review and next-wave registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_eight_boundary_native01/claim_binding_schema2.json",
+        "sha256": "735adcf14a1bcc9c3c750864bd75265e2de0808bea63b4f52cc4d749a94b7a53"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_eight_boundary_native01/summary.json",
+        "sha256": "8541b131e6a9bc2ebdff8a2f255991aa5ed5bfbaad3dc2acccf2f4385cc9fb47"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_no_eight_boundary_root_written_acceptance01.json",
+        "sha256": "8ce40492fa1317dc1ab381645f9dbd37edbaff202158b7ab3b20e6a9310831f2"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), suppose R=227 actual induced rook-nine vertex subsets occur, counted once by their vertex sets. For every actual triangle T put d_T=6-r_T, where r_T counts those subsets containing T. Then every d_T is zero, one or two; no deficiency-three triangle occurs. This does not exclude count227 or resolve the target.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional maximum triangle deficiency2 at exactly227 actual induced rook-nine subsets, using only the three declared exact r1 premises. The complete ordinary defect-cycle correspondence is used only in the five positive-D3 cases with at mostthree high nodes; the valid local high triangle retains its exact internal-edge and residue losses.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+          "r_T counts those actual subsets containing actual triangle T"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-SINGLE-D3-D2-POPULATION-UPPER2",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "This excludes deficiency-three triangles at R227, not R227, the remaining D2 populations or target existence; no realization or full surviving-population classification.",
+          "Only strictmassr1, the exact16-row populationr1 and exactsingleD3r1 are inherited. Their distinct Root acceptances are evidence, and no current ledger presence is inferred.",
+          "Faithful ordinary F4cycles are proved only for at mostthree high nodes in the examined positive-D3 cases; no extension to surviving c0,b>=4 branches.",
+          "F is not assumed triangle-free: the valid concurrent threehigh triangle is retained, with B22/B19/B19 and exact21/18/18 bounds.",
+          "No positive-support inducedness, equitability, matching symmetry, automorphism, N3-free condition or cited external classification is assumed.",
+          "Fifty written checks only; zero source imports, AST/syntax checks, mathematical workers, solver/backend/enumeration, formal or external proof checks.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; Root exact-scope review and nextWave47 registration are separate."
+        ],
+        "created_at": "2026-10-04T19:22:12.5679417Z",
+        "updated_at": "2026-10-04T19:22:12.5679417Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_deficiency_upper2_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_deficiency_upper2_native01/summary.json",
+        "timestamp": "2026-10-04T19:17:50.1127510Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), suppose R=227 actual induced rook-nine vertex subsets occur, counted once by their vertex sets. For every actual triangle T put d_T=6-r_T, where r_T counts those subsets containing T. Then every d_T is zero, one or two; no deficiency-three triangle occurs. This does not exclude count227 or resolve the target.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural producer and Root shared followup/tightcase outline are disclosed; agreement is not independent verification.",
+          "Native independently reconstructs every labelled cycle/K33/crossmatching step, all root neighbor internalgraphs and the seven exact hand rows.",
+          "Native authored the two separately accepted inherited population audits, explicitly reused as named premises rather than reapproved or silently broadened.",
+          "R228 root-incidence/K33/exception/residue mechanisms are declared comparison overlap; its historical gate is not transferred."
+        ],
+        "controls": [],
+        "limitations": [
+          "This excludes deficiency-three triangles at R227, not R227, the remaining D2 populations or target existence; no realization or full surviving-population classification.",
+          "Only strictmassr1, the exact16-row populationr1 and exactsingleD3r1 are inherited. Their distinct Root acceptances are evidence, and no current ledger presence is inferred.",
+          "Faithful ordinary F4cycles are proved only for at mostthree high nodes in the examined positive-D3 cases; no extension to surviving c0,b>=4 branches.",
+          "F is not assumed triangle-free: the valid concurrent threehigh triangle is retained, with B22/B19/B19 and exact21/18/18 bounds.",
+          "No positive-support inducedness, equitability, matching symmetry, automorphism, N3-free condition or cited external classification is assumed.",
+          "Fifty written checks only; zero source imports, AST/syntax checks, mathematical workers, solver/backend/enumeration, formal or external proof checks.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; Root exact-scope review and nextWave47 registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_deficiency_upper2_native01/claim_binding_schema2.json",
+        "sha256": "61d491595a5a68daaa8b18a0a577478bd8e1830af1e53b5dfa2d2cbfaa0b1779"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_deficiency_upper2_native01/summary.json",
+        "sha256": "33278da8c5663fd67f498aecdff53d2ddaa34f59ed070918b08bdb3715adb928"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_deficiency_upper2_root_written_acceptance01.json",
+        "sha256": "758fa5df2ef5aa23b6f02046400878b9879edd15b86217dba8c6e9d5196dd98b"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-MAXD2-D2-POPULATION-LOWER4",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), suppose R=227 actual induced rook-nine vertex subsets occur, counted once by their vertex sets. Define d_T=6-r_T for each actual triangle, where r_T counts those subsets containing T. If every d_T is zero, one or two, then at least four actual triangles have deficiency two. If b counts them, the number a of deficiency-one triangles is24-2b. The maximum-deficiency-two condition is an explicit hypothesis, and this does not exclude count227 or resolve the target.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional d2-population lower4 and a24-2b at R227 under the explicit maximum-deficiency-two hypothesis. Ordinary defect-C4 correspondence is proved only for the rejected b<=3 cases; concurrent high triangles, same-point path labels and internal neighbor edges are retained.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+          "every actual triangle has d_T=6-r_T in {0,1,2}"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Maximum deficiency at mosttwo is an explicit hypothesis. No noD3, strictmass, sixteen-row or c0b8 result is imported as a logical premise.",
+          "Only nonempty-maximum-lower2 exactr1 is inherited to reject b0; its distinct Root acceptance is evidence and no current ledger presence is inferred.",
+          "The faithful ordinary F4 map is established only for b<=3; four or more concurrent high nodes may have collapsed cycles.",
+          "The local concurrent D2 triangle and equal-label two-edge path are retained; internal edges are subtracted twice and B16 losesone at each triangle root.",
+          "No R227 exclusion, surviving-population realization/classification, stronger upper population bound, target resolution or scientific coverage is asserted.",
+          "No global triangle-free graph, induced positive support, equitability, automorphism, N3-free condition or cited literature classification is assumed.",
+          "Forty written checks/seven hand rows only; no mathematical workers, source import, AST/syntax/backend/solver/enumeration, formal or external checks.",
+          "Historical bytes and closedWave46 cutoff remain unchanged; exact Root review and possible nextWave47 registration are separate."
+        ],
+        "created_at": "2026-10-04T19:35:09.6379422Z",
+        "updated_at": "2026-10-04T19:35:09.6379422Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_maxd2_population_lower4_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_maxd2_population_lower4_native01/summary.json",
+        "timestamp": "2026-10-04T19:31:17.6428213Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), suppose R=227 actual induced rook-nine vertex subsets occur, counted once by their vertex sets. Define d_T=6-r_T for each actual triangle, where r_T counts those subsets containing T. If every d_T is zero, one or two, then at least four actual triangles have deficiency two. If b counts them, the number a of deficiency-one triangles is24-2b. The maximum-deficiency-two condition is an explicit hypothesis, and this does not exclude count227 or resolve the target.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural producer/earlier R228 cycle-table authorship and Root narrow-freeze/concurrency outline are disclosed; agreement is not independent verification.",
+          "Native independently reconstructs all labelled C4/K33/codegree/lowexception/rootincidence steps and every seven-row arithmetic bound.",
+          "Native authored the separately accepted inherited nonempty-maxlower2 audit; it is explicitly reused only as the named b0 premise.",
+          "Earlier R228 seven-graph/root-residue mechanism and the separate noD3 paper/raw are comparison evidence only, not inherited gates or broader approval."
+        ],
+        "controls": [],
+        "limitations": [
+          "Maximum deficiency at mosttwo is an explicit hypothesis. No noD3, strictmass, sixteen-row or c0b8 result is imported as a logical premise.",
+          "Only nonempty-maximum-lower2 exactr1 is inherited to reject b0; its distinct Root acceptance is evidence and no current ledger presence is inferred.",
+          "The faithful ordinary F4 map is established only for b<=3; four or more concurrent high nodes may have collapsed cycles.",
+          "The local concurrent D2 triangle and equal-label two-edge path are retained; internal edges are subtracted twice and B16 losesone at each triangle root.",
+          "No R227 exclusion, surviving-population realization/classification, stronger upper population bound, target resolution or scientific coverage is asserted.",
+          "No global triangle-free graph, induced positive support, equitability, automorphism, N3-free condition or cited literature classification is assumed.",
+          "Forty written checks/seven hand rows only; no mathematical workers, source import, AST/syntax/backend/solver/enumeration, formal or external checks.",
+          "Historical bytes and closedWave46 cutoff remain unchanged; exact Root review and possible nextWave47 registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_maxd2_population_lower4_native01/claim_binding_schema2.json",
+        "sha256": "bf11dcdc15744535d7934940ec296b515450c5c30f5fe400b583af330a1bf77b"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_maxd2_population_lower4_native01/summary.json",
+        "sha256": "1e4e0ea5ca09facb81b287185a486160de3e591ab72c2c018b0f1b6a9694b43b"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_maxd2_population_lower4_root_written_acceptance01.json",
+        "sha256": "99a9e9f29c3136444563478c8c2173230aa31c102dde7172d8b4d33a91d62eef"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle T, where r_T counts the rooks containing it. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then those four triangles do not all contain one vertex. The maximum-deficiency-two and four-d2 conditions are explicit hypotheses; this does not exclude every four-d2 population, count227, or the target.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion only of a common point for all four D2 triangles at R227, under explicit maxd2/exactb4 hypotheses. The complete saturated array permits arbitrary row/column matchings until K16/q4 equality forces an actual induced rook through a defect pair; the unique collapsed local C4 is retained.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+          "d_T=6-r_T belongs to {0,1,2} for every actual triangle",
+          "exactly four actual triangles have deficiency two"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "Only the exact R227/maxd2/exactb4/common-point boundary is excluded; nonconcurrent b4, other populations, R227 and target existence remain unresolved.",
+          "Maximum-d2 and exactb4 are literal hypotheses. Logical dependencies are empty; no noD3, lower4, c0b8 or current ledger claim is imported as a premise.",
+          "All row and column matchings are arbitrary before exact U36 equality; root preservation, matching equality, automorphism and uniform point profiles are not assumed.",
+          "Exactlyone collapsed local F4 is retained; all-root-preserving abstract graph meets37 cycles and is rejected only by actual labelled induced-rook semantics.",
+          "No whole positive-support inducedness or removal of arbitrary other target edges; the final nine-grid is induced by exact lambda1 saturation.",
+          "Historical rook-one-neighbor, fan/parity and cycle mechanisms are disclosed overlap, freshly derived here without gate transfer or comprehensive novelty claim.",
+          "Fifty written hand checks only; no mathematical program, source import, AST/syntax/backend/solver/census/worker, formal or external verification.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; Root exact-scope review and future nextWave47 registration are separate."
+        ],
+        "created_at": "2026-10-04T19:43:49.2399916Z",
+        "updated_at": "2026-10-04T19:43:49.2399916Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_four_d2_common_point_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/summary.json",
+        "timestamp": "2026-10-04T19:39:35.1785776Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle T, where r_T counts the rooks containing it. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then those four triangles do not all contain one vertex. The maximum-deficiency-two and four-d2 conditions are explicit hypotheses; this does not exclude every four-d2 population, count227, or the target.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural mathematical producer and Root saturated-fan/two-opposite-rook discovery outline disclosed; agreement is not independent verification.",
+          "Native independently derives one-neighbor geometry, sixteen actual pair labels, arbitrary matching choices, complete five-category cycle counts and final nine-grid contradiction.",
+          "Whole historical rook regular-set proof read as overlap only, with its universal neighbor argument reconstructed; old computational gate not inherited.",
+          "Earlier R227 noD3/lower4/c0b8 papers are declared comparison evidence only, with no conclusion or registration transfer."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only the exact R227/maxd2/exactb4/common-point boundary is excluded; nonconcurrent b4, other populations, R227 and target existence remain unresolved.",
+          "Maximum-d2 and exactb4 are literal hypotheses. Logical dependencies are empty; no noD3, lower4, c0b8 or current ledger claim is imported as a premise.",
+          "All row and column matchings are arbitrary before exact U36 equality; root preservation, matching equality, automorphism and uniform point profiles are not assumed.",
+          "Exactlyone collapsed local F4 is retained; all-root-preserving abstract graph meets37 cycles and is rejected only by actual labelled induced-rook semantics.",
+          "No whole positive-support inducedness or removal of arbitrary other target edges; the final nine-grid is induced by exact lambda1 saturation.",
+          "Historical rook-one-neighbor, fan/parity and cycle mechanisms are disclosed overlap, freshly derived here without gate transfer or comprehensive novelty claim.",
+          "Fifty written hand checks only; no mathematical program, source import, AST/syntax/backend/solver/census/worker, formal or external verification.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; Root exact-scope review and future nextWave47 registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/claim_binding_schema2.json",
+        "sha256": "ba845921017175de16810e69425290244762500b4c600b00e32946f56d552939"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/summary.json",
+        "sha256": "bdecc58d5517aa19aaba379253d1c626da4e700c2cba89dd5659e0005664522f"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_four_d2_common_point_root_written_acceptance01.json",
+        "sha256": "b2ac211bd6915ef3ef61d358d60d8ca09cfb40b2388f40e89f55c53c33818fca"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SEVEN-D2-BOUNDARY",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets and put d_T=6-r_T for each actual triangle, where r_T counts the rooks containing T. If R=227 and every d_T belongs to {0,1,2}, then it is impossible that exactly seven actual triangles have deficiency two. Equivalently, the positive family cannot consist of ten d1 and seven d2 triangles with every other d_T zero. The maximum-deficiency-two condition is an explicit hypothesis; this does not exclude other R227 populations or resolve the target.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion only of exactlyseven D2 triangles at R227 under explicit maxd2. The selected ten D1 triangles force actual support15; actual no-loose-triple geometry bounds seven-triangle outside triple points by3, giving at least35 actual edges, while full99 PSD/integer equality gives at most34. No selected-support inducedness is assumed.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+          "d_T=6-r_T belongs to {0,1,2} for every actual triangle"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "Only the exact R227/maxd2/b7 population boundary is excluded; other R227 populations and target existence remain unresolved.",
+          "Maximum-d2 is an explicit hypothesis; logical dependencies are empty, and prior noD3/lower4/noeight/common-point claims or gates are comparison only.",
+          "The selected10 fan, not P17 alone, forces point multiplicity2. No arbitrary even-ten selection or additional left-code existence is excluded or forced.",
+          "The h<=3 lemma requires actual no-loose-triple geometry plus linearity; a merely linear pair-based hypergraph can have four triple points.",
+          "S is not presumed induced by selected triangles; all arbitrary extra actual edges are retained and only strengthen the edge lower bound.",
+          "PSD alone supplies non-strict35. Full99 Qchi0 and ordinary integer outside neighbor counts exclude equality and supply34; fractional formal Gram models are outside this theorem.",
+          "Forty-four written checks/four integer rows only; no mathematical program, source import, AST/syntax/backend/solver/census/worker, formal or external verification.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; Root exact-scope review and future nextWave47 registration are separate."
+        ],
+        "created_at": "2026-10-04T19:49:52.6509431Z",
+        "updated_at": "2026-10-04T19:49:52.6509431Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_no_seven_d2_boundary_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_no_seven_d2_boundary_native01/summary.json",
+        "timestamp": "2026-10-04T19:46:24.4949744Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets and put d_T=6-r_T for each actual triangle, where r_T counts the rooks containing T. If R=227 and every d_T belongs to {0,1,2}, then it is impossible that exactly seven actual triangles have deficiency two. Equivalently, the positive family cannot consist of ten d1 and seven d2 triangles with every other d_T zero. The maximum-deficiency-two condition is an explicit hypothesis; this does not exclude other R227 populations or resolve the target.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural mathematical producer and Root followup/selected-fan/concurrence/integer-equality discovery outline are disclosed; agreement is not verification.",
+          "Native independently derives local defect degrees/parity, selected10 injection, labelled h<=3 lemma, all four integer terms and full99 Q equality rejection.",
+          "Earlier parity/fan/upper-Gram mechanisms are freshly derived from the complete target; no old spectral, matrix, code or population gate is inherited.",
+          "Prior R227 descendant papers remain comparison only, with no registration, broader statement or current-ledger transfer."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only the exact R227/maxd2/b7 population boundary is excluded; other R227 populations and target existence remain unresolved.",
+          "Maximum-d2 is an explicit hypothesis; logical dependencies are empty, and prior noD3/lower4/noeight/common-point claims or gates are comparison only.",
+          "The selected10 fan, not P17 alone, forces point multiplicity2. No arbitrary even-ten selection or additional left-code existence is excluded or forced.",
+          "The h<=3 lemma requires actual no-loose-triple geometry plus linearity; a merely linear pair-based hypergraph can have four triple points.",
+          "S is not presumed induced by selected triangles; all arbitrary extra actual edges are retained and only strengthen the edge lower bound.",
+          "PSD alone supplies non-strict35. Full99 Qchi0 and ordinary integer outside neighbor counts exclude equality and supply34; fractional formal Gram models are outside this theorem.",
+          "Forty-four written checks/four integer rows only; no mathematical program, source import, AST/syntax/backend/solver/census/worker, formal or external verification.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; Root exact-scope review and future nextWave47 registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_seven_d2_boundary_native01/claim_binding_schema2.json",
+        "sha256": "e24f724bc54751d20f8ead9b7edc7e6430bb01d8cd2be6dad18d8d0bdf28c280"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_seven_d2_boundary_native01/summary.json",
+        "sha256": "f0dc55d8bdd7ae4e9e487ba6e17e77bb76dccd5a45be65399e9367e022aa42a7"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_no_seven_d2_boundary_root_written_acceptance01.json",
+        "sha256": "bb2b0377e0c1f265965e8095953031bed59a078b97abe13337bbf30a64a76301"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SIX-D2-BOUNDARY",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets and put d_T=6-r_T for each actual triangle, where r_T counts the rooks containing T. If R=227 and every d_T belongs to {0,1,2}, then it is impossible that exactly six actual triangles have deficiency two. Equivalently, the positive family cannot consist of twelve d1 and six d2 triangles, with every other d_T zero. The maximum-deficiency-two condition is a literal hypothesis; other R227 populations and the target remain unresolved.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion only of exactly six D2 triangles at R227 under explicit maxd2. Selected multiplicities2/4 and h0/h1/h2 shared/disjoint cases are complete: S18 is forced, the shared branch has five neighbors and norm30>28, and the disjoint branch has triangle energy26>18. All arbitrary extra actual support edges are retained until equality accounts for them.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+          "d_T=6-r_T belongs to {0,1,2} for every actual triangle"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "Only R227 with explicit maxd2 and exactly six D2 triangles is excluded. Other populations and target existence remain unresolved.",
+          "Maximum-d2 is a literal assumption; prior noD3/lower4/no8/common-point/b7 results and their gates are not premises.",
+          "S is not assumed induced by its selected triangles. Arbitrary support edges are included until e43/e42 forces exact edge exhaustion.",
+          "The h<=2 concurrence proof needs actual triangle no-loose-triple geometry as well as linearity; a merely linear six-root hypergraph can have four triple points.",
+          "Shared roots supply five S neighbors, not six. Pair norm18 alone fits28; the wholly-S sixth root and remaining signed integer norm are essential.",
+          "Disjoint scalar sum/norm patterns are retained, including a negative entry. Ordinary full99/231-triangle energy supplies the final contradiction.",
+          "All inequalities apply to ordinary signed integer coordinates and real/rational Gram identities, not arbitrary fractional Gram models or finite-field ranks.",
+          "No arbitrary even-twelve selection or nonzero code is excluded or forced, no induced/equitable/automorphism/uniform profile assumption or novelty/coverage claim.",
+          "Fifty-six written checks/four integer terms/three scalar patterns only; zero mathematical programs, source imports, AST/syntax/backend/solver/census/workers/formal/external checks.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; exact new Root review and nextWave47 registration are separate."
+        ],
+        "created_at": "2026-10-04T20:04:48.7729000Z",
+        "updated_at": "2026-10-04T20:04:48.7729000Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_no_six_d2_boundary_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_no_six_d2_boundary_native01/summary.json",
+        "timestamp": "2026-10-04T19:59:30.5072716Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), let R count actual induced nine-vertex rook subsets once by their vertex sets and put d_T=6-r_T for each actual triangle, where r_T counts the rooks containing T. If R=227 and every d_T belongs to {0,1,2}, then it is impossible that exactly six actual triangles have deficiency two. Equivalently, the positive family cannot consist of twelve d1 and six d2 triangles, with every other d_T zero. The maximum-deficiency-two condition is a literal hypothesis; other R227 populations and the target remain unresolved.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural mathematical producer and Root support-split/old shared-neighbor veto/new correction challenge are disclosed; shared discovery and agreement are not verification.",
+          "Native independently reconstructs the whole V2, both fan injections, actual six-root concurrence, all support/edge/norm branches, every scalar pattern and ordinary complete triangle energy.",
+          "No source/checker/matrix/code/earlier mathematical gate is inherited. Empty dependencies derive all mathematical premises from the complete target and exact literal maxd2/R227 hypotheses.",
+          "The unchanged rejected V1 is argument provenance, not a REFUTED theorem; earlier b7/R228/singleD3 artifacts are bounded comparison only."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only R227 with explicit maxd2 and exactly six D2 triangles is excluded. Other populations and target existence remain unresolved.",
+          "Maximum-d2 is a literal assumption; prior noD3/lower4/no8/common-point/b7 results and their gates are not premises.",
+          "S is not assumed induced by its selected triangles. Arbitrary support edges are included until e43/e42 forces exact edge exhaustion.",
+          "The h<=2 concurrence proof needs actual triangle no-loose-triple geometry as well as linearity; a merely linear six-root hypergraph can have four triple points.",
+          "Shared roots supply five S neighbors, not six. Pair norm18 alone fits28; the wholly-S sixth root and remaining signed integer norm are essential.",
+          "Disjoint scalar sum/norm patterns are retained, including a negative entry. Ordinary full99/231-triangle energy supplies the final contradiction.",
+          "All inequalities apply to ordinary signed integer coordinates and real/rational Gram identities, not arbitrary fractional Gram models or finite-field ranks.",
+          "No arbitrary even-twelve selection or nonzero code is excluded or forced, no induced/equitable/automorphism/uniform profile assumption or novelty/coverage claim.",
+          "Fifty-six written checks/four integer terms/three scalar patterns only; zero mathematical programs, source imports, AST/syntax/backend/solver/census/workers/formal/external checks.",
+          "Historical bytes and closedWave46 cutoff449 remain unchanged; exact new Root review and nextWave47 registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_six_d2_boundary_native01/claim_binding_schema2.json",
+        "sha256": "aacd3be4be547af176673d3d287f45ff4404be09da7369a8d6972b759e0fa501"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_six_d2_boundary_native01/summary.json",
+        "sha256": "dd11c97dc3000bdafd1c23a644933d867f2e06787a868d65cb91c088b59a2c89"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_no_six_d2_boundary_root_written_acceptance01.json",
+        "sha256": "36bcf80dc76a668801c96cf8624c622c9dc3ddf403c65413f68967c9f55de7f7"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced nine-vertex rook subsets once by vertex sets and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly five triangles have deficiency2. There are fourteen deficiency1 triangles. Let S be their support, k their fourfold-incidence point count, h the number of outside-S points on deficiency2 triangles, w half the deficiency1 point incidence and E_w the actual weighted edge sum. Selected multiplicities are2 or4. Exactly one necessary case occurs: k0/h1 with |S|21,e(S)51 or52 and its outside point S-degree6..8 or6..7 respectively; k0/h2 with |S|21,e(S)46..53 and shared-one-root triple fans; or k1/h2 with |S|20,shared-one-root triple fans,w2 at its unique fourfold point and E_w54,55 or56. In the last case, if the fourfold point is the joining root's only S point, E_w54 or55. No surviving case is asserted realizable and this does not exclude b5 or R227.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional necessary weighted-support, ordinary edge and outside-neighbor ranges only for R227/maxd2/exactly five D2 triangles. Retains the three k/h cases and literal e/E_w ranges, including k1/h2 weight2 and scalar equality boundaries. No surviving case is asserted realizable; no b5 or R227 exclusion.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+          "d_T=6-r_T belongs to {0,1,2} for every actual triangle",
+          "exactly five actual triangles have deficiency2"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "Only the frozen necessary-condition statement is verified, under explicit R227/maxd2/exactly-five hypotheses. No b5/R227/target exclusion or survivor realization.",
+          "Unique fourfold point and weight2 retained in k1/h2; support21 indicator formulas do not apply there.",
+          "E_w includes every actual edge; l counts selected edges only. No support-inducedness, equitability, automorphism or uniform profile assumption.",
+          "Ordinary integral weights and real/rational Q are used; no finite-field rank/nonzero code assumption.",
+          "Y=3Qw has norm63q/residue1mod3. The factor-nine rejected outline gives no gate; argument failure is not a REFUTED theorem.",
+          "Scalar z0/a2 and z1/a1 equalities are retained without graph feasibility or obstruction claims.",
+          "Later stronger survivor challenges are separate; Native discoveries need different-author review.",
+          "Forty-two written checks/three outside rows/five boundary rows only; zero mathematical program/import/AST/syntax/backend/solver/census/worker/formal/external checks.",
+          "ClosedWave46 cutoff449/historical bytes unchanged; exact Root review and nextWave47 registration are separate."
+        ],
+        "created_at": "2026-10-04T20:23:16.7241193Z",
+        "updated_at": "2026-10-04T20:23:16.7241193Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_five_d2_weighted_boundaries_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/summary02.json",
+        "timestamp": "2026-10-04T20:14:52.2756669Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced nine-vertex rook subsets once by vertex sets and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly five triangles have deficiency2. There are fourteen deficiency1 triangles. Let S be their support, k their fourfold-incidence point count, h the number of outside-S points on deficiency2 triangles, w half the deficiency1 point incidence and E_w the actual weighted edge sum. Selected multiplicities are2 or4. Exactly one necessary case occurs: k0/h1 with |S|21,e(S)51 or52 and its outside point S-degree6..8 or6..7 respectively; k0/h2 with |S|21,e(S)46..53 and shared-one-root triple fans; or k1/h2 with |S|20,shared-one-root triple fans,w2 at its unique fourfold point and E_w54,55 or56. In the last case, if the fourfold point is the joining root's only S point, E_w54 or55. No surviving case is asserted realizable and this does not exclude b5 or R227.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural producer and Root weighted-support outline are disclosed; shared discovery/agreement is not verification.",
+          "Native freshly reconstructs local degree/parity/fan, exact five-root concurrence, weighted edges/Gram/scaling/residue and all scalar ranges from literal target hypotheses.",
+          "Earlier noD3/no6/no7 artifacts are bounded comparisons only, with no old source/matrix/code or mathematical gate inherited.",
+          "Subsequent stronger Root/Structural outlines and Native new refinements remain outside this exact proof; Native does not approve its own discovery."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only the frozen necessary-condition statement is verified, under explicit R227/maxd2/exactly-five hypotheses. No b5/R227/target exclusion or survivor realization.",
+          "Unique fourfold point and weight2 retained in k1/h2; support21 indicator formulas do not apply there.",
+          "E_w includes every actual edge; l counts selected edges only. No support-inducedness, equitability, automorphism or uniform profile assumption.",
+          "Ordinary integral weights and real/rational Q are used; no finite-field rank/nonzero code assumption.",
+          "Y=3Qw has norm63q/residue1mod3. The factor-nine rejected outline gives no gate; argument failure is not a REFUTED theorem.",
+          "Scalar z0/a2 and z1/a1 equalities are retained without graph feasibility or obstruction claims.",
+          "Later stronger survivor challenges are separate; Native discoveries need different-author review.",
+          "Forty-two written checks/three outside rows/five boundary rows only; zero mathematical program/import/AST/syntax/backend/solver/census/worker/formal/external checks.",
+          "ClosedWave46 cutoff449/historical bytes unchanged; exact Root review and nextWave47 registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/claim_binding_schema2_02.json",
+        "sha256": "c4fdfea30a3b70439afa682dbc4b813144b93b2abfe655e270da6528bfeaddaa"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/summary02.json",
+        "sha256": "8c236eb15befe2f473d6490a16ab1f16b1a5ffbf049d0c73bd6cc03449d347a4"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_five_d2_weighted_boundaries_root_written_acceptance01.json",
+        "sha256": "d07de7ae26ba330f14cba1ff7bb50e97a28bc0bb5f62e13e85240d51cfd4864a"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Suppose further that every vertex used by the deficiency-one triangles lies in exactly two of them. Let S be that selected vertex support. It is impossible that exactly one outside-S vertex lies in any deficiency-two triangle.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion only of multiplicity-two selected support with exactly one outside-S D2 point at R227/maxd2/b5. All actual additional support and point edges are retained. Other outside counts, fourfold support, b5 as a whole and R227 remain unresolved.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced rook-nine vertex sets once",
+          "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+          "exactly five actual triangles have deficiency two",
+          "every vertex used by deficiency-one triangles lies in exactly two of them"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "Only the literal ordinary-support h1 branch is excluded; no fourfold, h2, all-b5 or R227 exclusion.",
+          "Multiplicity-two and exactly one outside point are explicit assumptions.",
+          "No induced selected support, uniform profile, finite-field, nonzero-code or graph-existence conclusion.",
+          "The a8 empty-subset case is handled before Cauchy; negative signed residue entries remain allowed.",
+          "Earlier necessary boundaries and failed metadata wrappers are not gates for this proof."
+        ],
+        "created_at": "2026-10-04T20:34:32.8485518+00:00",
+        "updated_at": "2026-10-04T20:34:32.8485518+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_five_d2_single_outside_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json",
+        "timestamp": "2026-10-04T20:25:05.4030478Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Suppose further that every vertex used by the deficiency-one triangles lies in exactly two of them. Let S be that selected vertex support. It is impossible that exactly one outside-S vertex lies in any deficiency-two triangle.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural is mathematical producer; Root pointwise neighbor-delta outline and Structural internal-increment derivation are shared discovery mechanisms.",
+          "Native independently derives the whole exact conditional statement, all target/local geometry, scaling, residue bookkeeping and pointwise Cauchy contradiction.",
+          "Agreement and shared mechanisms are not independent verification; no previous mathematical/code/matrix gate is transferred."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only the literal ordinary-support h1 branch is excluded; no fourfold, h2, all-b5 or R227 exclusion.",
+          "Multiplicity-two and exactly one outside point are explicit assumptions.",
+          "No induced selected support, uniform profile, finite-field, nonzero-code or graph-existence conclusion.",
+          "The a8 empty-subset case is handled before Cauchy; negative signed residue entries remain allowed.",
+          "Earlier necessary boundaries and failed metadata wrappers are not gates for this proof."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/claim_binding_schema2.json",
+        "sha256": "8ad081ff7d9edb8228a88d385daec2b6a4d53215c7ff7b980646dbcddfa19bc5"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json",
+        "sha256": "dbd09b074c9c8439e582fa1d089179235d05e2d2767d6b9038344e7945342d54"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_root_written_acceptance01.json",
+        "sha256": "c615dafa83018fb5c54a9958d2c6e818a418413f609a22dc2299f627ca712cd6"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Let S be the vertices used by the deficiency-one triangles. It is impossible that exactly one S vertex lies in four of those triangles, every other S vertex lies in exactly two of them, and exactly two outside-S vertices lie in deficiency-two triangles.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion only of the literal k1/h2 selected-support branch at R227/maxd2/b5, with exactly one fourfold selected point and two outside-S D2 points. All actual edges, arbitrary peak positions and ordinary/weighted distinctions remain included. Ordinary k0/h2, all b5 and R227 remain unresolved.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced rook-nine vertex sets once",
+          "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+          "exactly five actual triangles have deficiency two",
+          "exactly one selected S point has d1 incidence4 and all other S points have d1 incidence2",
+          "exactly two outside-S points lie on any d2 triangle"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "Only explicit k1/h2 is excluded; no ordinary k0/h2, all-b5 or R227 exclusion.",
+          "Selected multiplicity4 at exactly one point, multiplicity2 elsewhere and two outside points are explicit hypotheses.",
+          "All arbitrary peak locations and actual extra edges are retained; ordinary alpha<=weighted a is essential.",
+          "Disjoint outside-neighbor subsets follow actual lambda1, not merely high-root linearity or an unqualified defect mask.",
+          "Native earlier E56/leaf discovery is comparison only and is not approved here by its own author.",
+          "The failed scaling outline and invalid earlier weighted wrappers supply provenance, not a theorem refutation or gate."
+        ],
+        "created_at": "2026-10-04T20:34:32.8485518+00:00",
+        "updated_at": "2026-10-04T20:34:32.8485518+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_five_d2_fourfold_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/summary.json",
+        "timestamp": "2026-10-04T20:25:05.4030478Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Let S be the vertices used by the deficiency-one triangles. It is impossible that exactly one S vertex lies in four of those triangles, every other S vertex lies in exactly two of them, and exactly two outside-S vertices lie in deficiency-two triangles.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root discovered the complete pointwise k1/h2 argument; Structural independently produced the frozen whole mathematical candidate.",
+          "Native independently challenges the full Root/Structural proof, every peak location, internal incidence correction, residual inequality and disjoint subsets.",
+          "Native narrower E56 leaf observation is disclosed comparison only, not a premise or self-approved claim.",
+          "No earlier code, matrix or mathematical gate is inherited; agreement is not verification."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only explicit k1/h2 is excluded; no ordinary k0/h2, all-b5 or R227 exclusion.",
+          "Selected multiplicity4 at exactly one point, multiplicity2 elsewhere and two outside points are explicit hypotheses.",
+          "All arbitrary peak locations and actual extra edges are retained; ordinary alpha<=weighted a is essential.",
+          "Disjoint outside-neighbor subsets follow actual lambda1, not merely high-root linearity or an unqualified defect mask.",
+          "Native earlier E56/leaf discovery is comparison only and is not approved here by its own author.",
+          "The failed scaling outline and invalid earlier weighted wrappers supply provenance, not a theorem refutation or gate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/claim_binding_schema2.json",
+        "sha256": "435ba1f1b167370f08dca364db6df29e369de21cbbbdbd97ba226fbed2bf6ef2"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/summary.json",
+        "sha256": "8f7686c817adac17661edd1ec2f894e7a64f403784962dd48948b06da24a327e"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_root_written_acceptance01.json",
+        "sha256": "d328903b763312e55f0b2f69b64b48a5d0b674cf48be43710aa560a23649ee72"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Suppose every vertex used by the deficiency-one triangles lies in exactly two of them; let S be their support. It is impossible that exactly two outside-S vertices lie in deficiency-two triangles.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion only of the literal multiplicity-two/h2 selected-support branch at R227/maxd2/b5. Actual labeled defects have36 faithful uncovered-square four-cycles, requiring144 node incidences, while the complete low/leaf/common-root bounds give138. Fourfold support, h1, b5 as a whole and R227 remain outside this result.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced rook-nine vertex sets once",
+          "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+          "exactly five actual triangles have deficiency two",
+          "every vertex used by deficiency-one triangles has selected incidence2"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "Only literal selected incidence2 and two outside-S D2 points are excluded at R227/maxd2/b5; no fourfold/h1/all-b5/R227/target exclusion.",
+          "No induced selected support, equitable partition, automorphism, uniform profile, nonzero code, literature exclusion or N3-free premise.",
+          "Local high K3s are allowed; only their collapsed four-cycles are absent, so no global defect triangle-freeness is assumed.",
+          "The K3,3 obstruction uses actual point labels and local deficiency; a generic even selected six-triangle rook remains allowed.",
+          "Common F neighbors are triangle nodes, not intersection point labels; the low I<=1 and high cross-matching arguments use actual target geometry.",
+          "Finite hand inequalities retain every m0..4, t0..2 and I/x case without claiming equality patterns realizable.",
+          "Earlier weighted boundary wrappers and failed scaling outline supply preserved provenance, not gates for this exact proof.",
+          "Forty-eight written checks only; zero mathematical workers/imports/programs/AST/syntax/backend/census/solver/formal/external checks.",
+          "Historical evidence and closedWave46 cutoff449 remain unchanged; Root exact acceptance and registration are separate."
+        ],
+        "created_at": "2026-10-04T20:42:06.7797449+00:00",
+        "updated_at": "2026-10-04T20:42:06.7797449+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_five_d2_ordinary_two_outside_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/summary.json",
+        "timestamp": "2026-10-04T20:37:14.5938314Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly five actual triangles have deficiency two. Suppose every vertex used by the deficiency-one triangles lies in exactly two of them; let S be their support. It is impossible that exactly two outside-S vertices lie in deficiency-two triangles.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root discovered the leaf-root cycle-incidence decomposition; Structural independently authored the frozen complete source.",
+          "Native independently reconstructs actual square/defect correspondence, both repeated-label mechanisms, every codegree and all opposite-node classes.",
+          "Native own earlier e<=50 refinement is disclosed comparison only and is not a premise or self-approved theorem.",
+          "Prior R228/R227 square/codegree mechanisms are archival comparisons, freshly derived for these exact labels; shared agreement is not verification."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only literal selected incidence2 and two outside-S D2 points are excluded at R227/maxd2/b5; no fourfold/h1/all-b5/R227/target exclusion.",
+          "No induced selected support, equitable partition, automorphism, uniform profile, nonzero code, literature exclusion or N3-free premise.",
+          "Local high K3s are allowed; only their collapsed four-cycles are absent, so no global defect triangle-freeness is assumed.",
+          "The K3,3 obstruction uses actual point labels and local deficiency; a generic even selected six-triangle rook remains allowed.",
+          "Common F neighbors are triangle nodes, not intersection point labels; the low I<=1 and high cross-matching arguments use actual target geometry.",
+          "Finite hand inequalities retain every m0..4, t0..2 and I/x case without claiming equality patterns realizable.",
+          "Earlier weighted boundary wrappers and failed scaling outline supply preserved provenance, not gates for this exact proof.",
+          "Forty-eight written checks only; zero mathematical workers/imports/programs/AST/syntax/backend/census/solver/formal/external checks.",
+          "Historical evidence and closedWave46 cutoff449 remain unchanged; Root exact acceptance and registration are separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/claim_binding_schema2.json",
+        "sha256": "ce55983c0fcbf7da0a272023a056368e8956aab97a74a2a4112567a2cb43f538"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/summary.json",
+        "sha256": "5e662c819fcd2208589e1c5f13967b10b28e90b7111227e44b47a790e737c218"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_five_d2_ordinary_two_outside_root_written_acceptance01.json",
+        "sha256": "7bc07880cdbbc717401c90a27deb310e6295644906205c8dce2b99aaa783cfa8"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FIVE-D2-BOUNDARY",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not five.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion of exactly five actual deficiency-two triangles at R227 under explicit maximum deficiency2. Four literal r1 uses_result premises give exhaustive necessary k0/h1,k0/h2,k1/h2 coverage and matching branch contradictions. No R227, b4, another rook count or target exclusion.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced rook-nine vertex sets once",
+          "every actual triangle has deficiency d_T=6-r_T in {0,1,2}"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Only b5 is excluded under literal R227/maxd2; no noD3 conclusion is inferred as a premise and no R227/b4/target exclusion.",
+          "All four exact revision1 uses_result scopes are required; branch reports are mathematical premises, not an existing composition gate.",
+          "Strict q>0, ordinary integral weights and identical selected support definitions are retained; q>=0 alone fails at two zero upper-bound endpoints.",
+          "No new codeword, equitable profile, induced selected support, automorphism, uniformity or literature classification assumption.",
+          "Producer preparation-time fourth-report false/null fields remain unchanged; later genuine dependency4 binding/report is recorded separately.",
+          "No erroneous scaling argument or invalid null-ID wrapper is used, and no theorem is labeled REFUTED merely from failed metadata or an outline.",
+          "No Native self-discovered e50/E56 refinement is approved or needed.",
+          "Twenty-six written checks only; no mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse or protected edit.",
+          "Registration and Root exact composition review remain separate outside closedWave46 cutoff449; transitive identities stay in immutable premise manifests."
+        ],
+        "created_at": "2026-10-04T20:54:25.8676637+00:00",
+        "updated_at": "2026-10-04T20:54:25.8676637+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_no_five_d2_boundary_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/summary.json",
+        "timestamp": "2026-10-04T20:46:35.7519671Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not five.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural authored the composition and constituent candidates; Root weighted/pointwise/leaf discovery outlines are disclosed.",
+          "Native authored different-author independent constituent reviews and now separately derives exhaustive tuple coverage and exact hypothesis matching.",
+          "Agreement and shared mechanisms are not verification; four prior mathematical statements are explicit inherited premises, with no code or status gate transfer.",
+          "New composition verification time differs from constituent times; no computational executor exists."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only b5 is excluded under literal R227/maxd2; no noD3 conclusion is inferred as a premise and no R227/b4/target exclusion.",
+          "All four exact revision1 uses_result scopes are required; branch reports are mathematical premises, not an existing composition gate.",
+          "Strict q>0, ordinary integral weights and identical selected support definitions are retained; q>=0 alone fails at two zero upper-bound endpoints.",
+          "No new codeword, equitable profile, induced selected support, automorphism, uniformity or literature classification assumption.",
+          "Producer preparation-time fourth-report false/null fields remain unchanged; later genuine dependency4 binding/report is recorded separately.",
+          "No erroneous scaling argument or invalid null-ID wrapper is used, and no theorem is labeled REFUTED merely from failed metadata or an outline.",
+          "No Native self-discovered e50/E56 refinement is approved or needed.",
+          "Twenty-six written checks only; no mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse or protected edit.",
+          "Registration and Root exact composition review remain separate outside closedWave46 cutoff449; transitive identities stay in immutable premise manifests."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/claim_binding_schema2.json",
+        "sha256": "40d5975397957df435a39f8f70e5c5fd35a69f36e75d0d5c32a53e41d1ad0d05"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/summary.json",
+        "sha256": "3620b3e3963492324f4ee967739b3487c49fec02e4af84170be2434d07bc14d7"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_no_five_d2_boundary_root_written_acceptance01.json",
+        "sha256": "8614fa6ac056ecb7ca65c63d62a910dc5819a2465f753215d18d4143d35016ba"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-ORDINARY-SUPPORT-TOPOLOGIES",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then there are sixteen deficiency-one triangles. Every vertex used by them lies in exactly two of them, so their support S has twenty-four vertices. All four deficiency-two triangles lie wholly in S, and their actual intersection graph is a four-node star K1,3, a four-node path P4, or a four-cycle C4.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional necessary ordinary selected support and four-high topology at R227/maxd2/b4. Selected incidence is exactly2, support24, all four high triangles wholly in it, and actual high intersection graph star/path/C4. No b4, R227 or target exclusion, or survivor realizability.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=227 counts actual induced rook-nine vertex sets once",
+          "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+          "exactly four actual triangles have deficiency two"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Only the literal necessary support/topology restriction is verified; no survivor, b4, R227, another rook count or target exclusion/construction.",
+          "Maximum deficiency2 is an explicit assumption; no noD3 or b5 result is used. Sole common-point r1 applicability is retained exactly.",
+          "h1 is rejected before asserting all high points lie in selected support. Collapsed cycles and six-cycle low exceptions are treated with their exact local hypotheses.",
+          "For k1, positive-even q alone permits2; integer-residue norm floor198 is essential to exclude it before E68/69. Factor63,23 inside and76 outside are literal.",
+          "No induced selected support, uniform/equitable profile, automorphism, simultaneous realization, codeword or novelty assertion.",
+          "Fifty written checks only; no mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse or protected/Git/index/publication mutation.",
+          "Root exact new acceptance and registration remain separate; closed Wave46 cutoff449 and historical bytes preserved."
+        ],
+        "created_at": "2026-10-04T21:06:38.6436157+00:00",
+        "updated_at": "2026-10-04T21:06:38.6436157+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_four_d2_ordinary_topologies_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_four_d2_ordinary_topologies_native01/summary.json",
+        "timestamp": "2026-10-04T20:57:33.0462908Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then there are sixteen deficiency-one triangles. Every vertex used by them lies in exactly two of them, so their support S has twenty-four vertices. All four deficiency-two triangles lie wholly in S, and their actual intersection graph is a four-node star K1,3, a four-node path P4, or a four-cycle C4.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root supplied topology and complete-norm discovery outlines; Structural authored the frozen whole candidate. Native separately reconstructed all local labels, table bounds and residue/norm arithmetic.",
+          "The exact common-point revision1 mathematical statement is inherited openly; its original evidence closure remains in immutable manifests. Lower4 is comparison only.",
+          "Shared fan/Q/square mechanisms and historical overlap are disclosed; agreement and historical source gates are not verification.",
+          "No computational executor exists; fresh metadata time differs from authentic written verification completion."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only the literal necessary support/topology restriction is verified; no survivor, b4, R227, another rook count or target exclusion/construction.",
+          "Maximum deficiency2 is an explicit assumption; no noD3 or b5 result is used. Sole common-point r1 applicability is retained exactly.",
+          "h1 is rejected before asserting all high points lie in selected support. Collapsed cycles and six-cycle low exceptions are treated with their exact local hypotheses.",
+          "For k1, positive-even q alone permits2; integer-residue norm floor198 is essential to exclude it before E68/69. Factor63,23 inside and76 outside are literal.",
+          "No induced selected support, uniform/equitable profile, automorphism, simultaneous realization, codeword or novelty assertion.",
+          "Fifty written checks only; no mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse or protected/Git/index/publication mutation.",
+          "Root exact new acceptance and registration remain separate; closed Wave46 cutoff449 and historical bytes preserved."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_ordinary_topologies_native01/claim_binding_schema2.json",
+        "sha256": "5fd47d023ef1c18ac02c8ff3d7752fe8ef231caffec0ffcb393046a0a4d9cf80"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_ordinary_topologies_native01/summary.json",
+        "sha256": "f4cc886dbd04a79e19dba93c1c85e597bb8f398d911290c60fc74bc185724152"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_four_d2_ordinary_topologies_root_written_acceptance01.json",
+        "sha256": "73670a989726263432684a1061344e3c91306f37b89e6b455015aeffdd3cdf29"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-PATH-OR-CYCLE",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly four triangles have deficiency2. Suppose every point used by the sixteen deficiency1 triangles lies in exactly two of them, with support S, and all four deficiency2 triangles lie in S. Their actual intersection graph cannot be P4 or C4.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion of actual high P4 or C4 at R227/maxd2/b4 with literal ordinary selected incidence2 and all four high triangles in its support. Reconstructed exact square correspondence and complete opposite-node partitions give140<144 for each branch. No star, all-b4, R227 or target exclusion.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R227 counts actual induced rook-nine vertex sets once",
+          "d_T=6-r_T in {0,1,2}",
+          "exactly four actual d2 triangles",
+          "selected d1 incidence2 at every S point",
+          "all d2 triangles lie in S"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "The ordinary selected incidence2 and wholly-S high-root hypotheses remain explicit; no deduction of those hypotheses or maximum deficiency2 is claimed here.",
+          "Only the named high topology branch is excluded, not every b4, R227, another rook count or target existence.",
+          "Actual point labels and corner-rook equivalence are reconstructed; arbitrary abstract defect graphs or collapsed four-cycles do not inherit the square count.",
+          "K3,3 repeated/concurrent and distinct-grid cases, complete codegrees, low six-cycle exceptions and all opposite nodes are treated with literal local hypotheses.",
+          "Exact fractions are retained as upper bounds; scalar endpoint values are not assumed realized, equal across roots, equitable or induced support profiles.",
+          "No mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse, Git/index/publication or protected-state mutation.",
+          "Root exact new review and registration remain separate; authoritative457 baseline is known only from Root message and no current ledger presence is asserted.",
+          "The high-star branch retains a possible independent leaf triple and is not checked or excluded by this package."
+        ],
+        "created_at": "2026-10-04T21:15:20.7131672+00:00",
+        "updated_at": "2026-10-04T21:15:20.7131672+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_four_d2_path_cycle_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_four_d2_path_cycle_native01/summary.json",
+        "timestamp": "2026-10-04T21:09:51.1591567+00:00",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly four triangles have deficiency2. Suppose every point used by the sixteen deficiency1 triangles lies in exactly two of them, with support S, and all four deficiency2 triangles lie in S. Their actual intersection graph cannot be P4 or C4.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root shared discovery outlines; Structural authored the complete frozen candidate. Native independently reconstructs actual labels, complete cycle partitions and every inequality.",
+          "Historical local fan/square/K3,3 mechanisms are disclosed and rederived for the literal support hypotheses. Empty logical dependencies; the topology paper is comparison only.",
+          "Agreement, similar discoveries and earlier branch/code gates supply no verification transfer. No computational executor exists.",
+          "Authentic new written verification completion differs from metadata creation; Root acceptance remains null at creation."
+        ],
+        "controls": [],
+        "limitations": [
+          "The ordinary selected incidence2 and wholly-S high-root hypotheses remain explicit; no deduction of those hypotheses or maximum deficiency2 is claimed here.",
+          "Only the named high topology branch is excluded, not every b4, R227, another rook count or target existence.",
+          "Actual point labels and corner-rook equivalence are reconstructed; arbitrary abstract defect graphs or collapsed four-cycles do not inherit the square count.",
+          "K3,3 repeated/concurrent and distinct-grid cases, complete codegrees, low six-cycle exceptions and all opposite nodes are treated with literal local hypotheses.",
+          "Exact fractions are retained as upper bounds; scalar endpoint values are not assumed realized, equal across roots, equitable or induced support profiles.",
+          "No mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse, Git/index/publication or protected-state mutation.",
+          "Root exact new review and registration remain separate; authoritative457 baseline is known only from Root message and no current ledger presence is asserted.",
+          "The high-star branch retains a possible independent leaf triple and is not checked or excluded by this package."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_path_cycle_native01/claim_binding_schema2.json",
+        "sha256": "f889a2bc9b99f81f03a057d6029c47c47845c570eed4f38a1f746808a28131a2"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_path_cycle_native01/summary.json",
+        "sha256": "49b0040f38ad9b62eeb937aa2018b39a4f44411d92ca795ae3c69ff6e64f91bd"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_four_d2_path_cycle_root_written_acceptance01.json",
+        "sha256": "c13191d0b864e409000aee00aa565a1b86453580e76b31127f4bb92a19f6a229"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-STAR",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly four triangles have deficiency2. Suppose every point used by the sixteen deficiency1 triangles lies in exactly two of them, with support S, and all four deficiency2 triangles lie in S. Their actual intersection graph cannot be the four-node star K1,3.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion of actual high K1,3 at R227/maxd2/b4 with literal ordinary selected incidence2 and all four high triangles in its support. Exact-pair/triple profiles and all center/leaf/low contributions give143-q/2<144. No path/cycle, all-b4, R227 or target exclusion.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R227 counts actual induced rook-nine vertex sets once",
+          "d_T=6-r_T in {0,1,2}",
+          "exactly four actual d2 triangles",
+          "selected d1 incidence2 at every S point",
+          "all d2 triangles lie in S"
+        ],
+        "dependencies": [],
+        "limitations": [
+          "The ordinary selected incidence2 and wholly-S high-root hypotheses remain explicit; no deduction of those hypotheses or maximum deficiency2 is claimed here.",
+          "Only the named high topology branch is excluded, not every b4, R227, another rook count or target existence.",
+          "Actual point labels and corner-rook equivalence are reconstructed; arbitrary abstract defect graphs or collapsed four-cycles do not inherit the square count.",
+          "K3,3 repeated/concurrent and distinct-grid cases, complete codegrees, low six-cycle exceptions and all opposite nodes are treated with literal local hypotheses.",
+          "Exact fractions are retained as upper bounds; scalar endpoint values are not assumed realized, equal across roots, equitable or induced support profiles.",
+          "No mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse, Git/index/publication or protected-state mutation.",
+          "Root exact new review and registration remain separate; authoritative457 baseline is known only from Root message and no current ledger presence is asserted.",
+          "q is counted three times only in pair capacities and once in profile/low incidence. Path/cycle branches are not checked or excluded by this package."
+        ],
+        "created_at": "2026-10-04T21:15:20.7665223+00:00",
+        "updated_at": "2026-10-04T21:15:20.7665223+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_four_d2_star_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_four_d2_star_native01/summary.json",
+        "timestamp": "2026-10-04T21:11:59.5935406+00:00",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly four triangles have deficiency2. Suppose every point used by the sixteen deficiency1 triangles lies in exactly two of them, with support S, and all four deficiency2 triangles lie in S. Their actual intersection graph cannot be the four-node star K1,3.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root shared discovery outlines; Structural authored the complete frozen candidate. Native independently reconstructs actual labels, complete cycle partitions and every inequality.",
+          "Historical local fan/square/K3,3 mechanisms are disclosed and rederived for the literal support hypotheses. Empty logical dependencies; the topology paper is comparison only.",
+          "Agreement, similar discoveries and earlier branch/code gates supply no verification transfer. No computational executor exists.",
+          "Authentic new written verification completion differs from metadata creation; Root acceptance remains null at creation."
+        ],
+        "controls": [],
+        "limitations": [
+          "The ordinary selected incidence2 and wholly-S high-root hypotheses remain explicit; no deduction of those hypotheses or maximum deficiency2 is claimed here.",
+          "Only the named high topology branch is excluded, not every b4, R227, another rook count or target existence.",
+          "Actual point labels and corner-rook equivalence are reconstructed; arbitrary abstract defect graphs or collapsed four-cycles do not inherit the square count.",
+          "K3,3 repeated/concurrent and distinct-grid cases, complete codegrees, low six-cycle exceptions and all opposite nodes are treated with literal local hypotheses.",
+          "Exact fractions are retained as upper bounds; scalar endpoint values are not assumed realized, equal across roots, equitable or induced support profiles.",
+          "No mathematical program/import/AST/syntax/backend/worker/census/solver/formal/external check, ledger parse, Git/index/publication or protected-state mutation.",
+          "Root exact new review and registration remain separate; authoritative457 baseline is known only from Root message and no current ledger presence is asserted.",
+          "q is counted three times only in pair capacities and once in profile/low incidence. Path/cycle branches are not checked or excluded by this package."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_star_native01/claim_binding_schema2.json",
+        "sha256": "fcccfd3eed8c10daa33f542b9408cc449b8ef7fa8bf6a5e4113c1611b45f2c75"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_star_native01/summary.json",
+        "sha256": "fc89c72e0139e43f915745d871a80c66021405d51821d3fb99ef044b91420196"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_four_d2_star_root_written_acceptance01.json",
+        "sha256": "c353450d80218bcc060cfb112bb8e1151b5dd8c080d90b3600bd8dedfcfdebc9"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-BOUNDARY",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not four.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional exclusion of exactly four actual D2 triangles at R227 under explicit maxd2. Exact necessity r1 supplies ordinary incidence2/support24/wholly-S and three actual high types; exact path/cycle and star r1 results exclude all three. No R227 or target exclusion.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R227 counts actual induced rook-nine vertex sets once",
+          "d_T=6-r_T in {0,1,2}"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-ORDINARY-SUPPORT-TOPOLOGIES",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-PATH-OR-CYCLE",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-NO-HIGH-STAR",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Only b4 is excluded under literal R227/maxd2; no maximum deficiency2 inference, R227, R226 or target exclusion.",
+          "All three revision1 uses_result statements are explicit inherited mathematical premises, with no newly replayed branch proof or source/runtime gate transfer.",
+          "The selected family/S and actual high intersection graph are identical across the necessity and branch scopes. No topology, q-profile, concurrent case or extra branch assumption is omitted.",
+          "Producer pending reports and Root slots at20:55:37 remain preserved; newly sealed genuine bindings/reports are separately identified.",
+          "Dependency1 retains its common-point r1 transitive premise; no giant evidence-map duplication or loss of exact dependency ancestry.",
+          "No graph/equitable/uniform/induced-support realization, automorphism, codeword or novelty claim.",
+          "Twenty-six written checks only; no scientific program/import/AST/backend/worker/census/solver/formal/external check, ledger parse or protected/Git/index/publication mutation.",
+          "Root exact new acceptance and registration remain separate; authoritative457 is Root-reported, not parsed or mutated."
+        ],
+        "created_at": "2026-10-04T21:19:16.5923431+00:00",
+        "updated_at": "2026-10-04T21:19:16.5923431+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_count227_no_four_d2_boundary_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_count227_no_four_d2_boundary_native01/summary.json",
+        "timestamp": "2026-10-04T21:16:39.0409458+00:00",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not four.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural authored the composition and branch candidates; Root shared discovery outlines, all disclosed.",
+          "Native separately authored independent branch reviews and this fresh exhaustive implication; no agreement-as-verification or retrospective timestamp transfer.",
+          "Three exact mathematical results are inherited with immutable source/report/binding closures; no computational executor exists."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only b4 is excluded under literal R227/maxd2; no maximum deficiency2 inference, R227, R226 or target exclusion.",
+          "All three revision1 uses_result statements are explicit inherited mathematical premises, with no newly replayed branch proof or source/runtime gate transfer.",
+          "The selected family/S and actual high intersection graph are identical across the necessity and branch scopes. No topology, q-profile, concurrent case or extra branch assumption is omitted.",
+          "Producer pending reports and Root slots at20:55:37 remain preserved; newly sealed genuine bindings/reports are separately identified.",
+          "Dependency1 retains its common-point r1 transitive premise; no giant evidence-map duplication or loss of exact dependency ancestry.",
+          "No graph/equitable/uniform/induced-support realization, automorphism, codeword or novelty claim.",
+          "Twenty-six written checks only; no scientific program/import/AST/backend/worker/census/solver/formal/external check, ledger parse or protected/Git/index/publication mutation.",
+          "Root exact new acceptance and registration remain separate; authoritative457 is Root-reported, not parsed or mutated."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_four_d2_boundary_native01/claim_binding_schema2.json",
+        "sha256": "cbc2372e41096216b93e241357e003867a1891909976cb94ebe77c41aa89efed"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count227_no_four_d2_boundary_native01/summary.json",
+        "sha256": "15c0788e2f07ed1d8eb1236bbfc3b9f30b8afc205f5671bc5749d1213bee2b5d"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count227_no_four_d2_boundary_root_written_acceptance01.json",
+        "sha256": "8f62a712c4be045f78069f4f35c846cb8c58f814754a2369af5c2b184586df40"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-NINE-COUNT-NOT227",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), the number R of actual induced rook-nine vertex subsets, counted once by their vertex sets, is not227.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal necessary R!=227 for every complete finite simple SRG(99,14,1,2), using exactly eight revision1 results. Proven maxd2 precedes the c0 table upper8/lower4 and all five literal b4..8 boundary exclusions. R226 and general target existence remain unresolved.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R counts actual induced rook-nine vertex sets once"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-MAXD2-D2-POPULATION-LOWER4",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-EIGHT-D1-D2-BOUNDARY",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SEVEN-D2-BOUNDARY",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SIX-D2-BOUNDARY",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FIVE-D2-BOUNDARY",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-BOUNDARY",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Only exactly R227 is excluded; no R226, lower-count or higher-count exclusion, target nonexistence/construction or external cited classification follows.",
+          "All eight exact revision1 uses_result scopes are inherited mathematical statements; complete prior identities stay in immutable manifests rather than duplicated maps.",
+          "Maximum deficiency2 is proved by dependency1 before applying c0, d1-only parity or conditional branch hypotheses; it is not silently imposed on the unrestricted target.",
+          "The upper b8 comes from dependency2 population table, not the lower4 theorem. Integer coverage b4..8 and a24-2b is complete.",
+          "Whole-b5 and whole-b4 genuine composition bindings are used; necessary inequalities/support alone are not full exclusions. No scope, dependency or revision is lost.",
+          "Corrected b6 candidate02/paperV2 is the applicable source, preserving five-neighbor shared norm30>28 and disjoint energy26>18; rejected unsealed V1 outline is not a gate or theorem refutation.",
+          "Original new-b4/count227 pending slots and whole-b5-message timestamps remain unchanged; new exact implication time is not a retrospectively reused branch time.",
+          "No induced/uniform/equitable profile, automorphism, positive code, N3-free condition, simultaneous graph witness or novelty assertion.",
+          "Thirty-four written checks only; no scientific program/import/AST/backend/worker/census/solver/formal/external check, ledger parse or protected/Git/index/publication mutation.",
+          "Root exact new acceptance and registration remain separate; authoritative457 is Root-reported, not parsed or modified; scientific coverage UNKNOWN and target resolution NONE."
+        ],
+        "created_at": "2026-10-04T21:23:44.1627760+00:00",
+        "updated_at": "2026-10-04T21:23:44.1627760+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_target_rook_nine_count_not227_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_rook_nine_count_not227_native01/summary.json",
+        "timestamp": "2026-10-04T21:20:24.8076030+00:00",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), the number R of actual induced rook-nine vertex subsets, counted once by their vertex sets, is not227.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural authored this new composition and multiple constituent candidates; Root supplied disclosed discovery outlines.",
+          "Native independently derived the eight exact premise reviews and now separately reconstructs unrestricted-to-conditional implication, c0 coverage and every boundary match. Prior gates do not automatically verify this new claim.",
+          "All transitive strict-mass/common-point/branch mechanisms remain explicit in immutable manifests; no dependency uses this new count-exclusion claim.",
+          "No computational executor or repeated proof computation exists; genuine prior times and the new written verification/metadata times are distinct."
+        ],
+        "controls": [],
+        "limitations": [
+          "Only exactly R227 is excluded; no R226, lower-count or higher-count exclusion, target nonexistence/construction or external cited classification follows.",
+          "All eight exact revision1 uses_result scopes are inherited mathematical statements; complete prior identities stay in immutable manifests rather than duplicated maps.",
+          "Maximum deficiency2 is proved by dependency1 before applying c0, d1-only parity or conditional branch hypotheses; it is not silently imposed on the unrestricted target.",
+          "The upper b8 comes from dependency2 population table, not the lower4 theorem. Integer coverage b4..8 and a24-2b is complete.",
+          "Whole-b5 and whole-b4 genuine composition bindings are used; necessary inequalities/support alone are not full exclusions. No scope, dependency or revision is lost.",
+          "Corrected b6 candidate02/paperV2 is the applicable source, preserving five-neighbor shared norm30>28 and disjoint energy26>18; rejected unsealed V1 outline is not a gate or theorem refutation.",
+          "Original new-b4/count227 pending slots and whole-b5-message timestamps remain unchanged; new exact implication time is not a retrospectively reused branch time.",
+          "No induced/uniform/equitable profile, automorphism, positive code, N3-free condition, simultaneous graph witness or novelty assertion.",
+          "Thirty-four written checks only; no scientific program/import/AST/backend/worker/census/solver/formal/external check, ledger parse or protected/Git/index/publication mutation.",
+          "Root exact new acceptance and registration remain separate; authoritative457 is Root-reported, not parsed or modified; scientific coverage UNKNOWN and target resolution NONE."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_nine_count_not227_native01/claim_binding_schema2.json",
+        "sha256": "f6deaf0c206ddcf5058811519ef907b85a851e736dbde15bc2abe667f9737111"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_nine_count_not227_native01/summary.json",
+        "sha256": "8d83cf504ad6ffebb9cb845da6c1528f32ba6e3f955a62f5e763745ef4cd6339"
+      },
+      "administrative_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_nine_count_not227_root_written_acceptance01.json",
+        "sha256": "f96821c30efdd17a191ce558e2a31dcbb1f550323642046645ce0424da150aec"
+      },
+      "literal_scope_timestamp_dependency_copy": true
+    }
+  ],
+  "evidence_union": {
+    "acceleration/audit_20261004_target_rook_count227_deficiency_upper2_native_v1.md": "2dfb0adbb3521740e771e0f07c471e74698324be9a462a401aeceed173ec80c1",
+    "acceleration/audit_20261004_target_rook_count227_five_d2_fourfold_native_v1.md": "58fd09ae580317b54c0d3548c9232612532d2f0e58718fb85bc1ef5e83a7a8eb",
+    "acceleration/audit_20261004_target_rook_count227_five_d2_ordinary_two_outside_native_v1.md": "afd4e70b145e9e95417eab357260d509b36e4d70f01f0a3076527f2f31dda010",
+    "acceleration/audit_20261004_target_rook_count227_five_d2_single_outside_native_v1.md": "27466d91662b4bf2c4032be20c699c0b9b937ddce05011373a7c4a372f045c21",
+    "acceleration/audit_20261004_target_rook_count227_five_d2_weighted_boundaries_native_v1.md": "b11afb45ce6767557c9b4a9637c298bbb7714681c0322851d280fd5da686cb64",
+    "acceleration/audit_20261004_target_rook_count227_four_d2_common_point_native_v1.md": "5692708c235109b9052977a0c9ad46e6ebdb3513c416cdcfeb14160e69fad094",
+    "acceleration/audit_20261004_target_rook_count227_four_d2_ordinary_topologies_native_v1.md": "59917c49c8bed8dce066339c265435e61e939b8c99e5effc34780ea3804dd9b6",
+    "acceleration/audit_20261004_target_rook_count227_four_d2_path_cycle_native_v1.md": "5e92d9a28b20c7ab468d3f67665053f485bf080c63c2c0dcef5c4528e80971dd",
+    "acceleration/audit_20261004_target_rook_count227_four_d2_star_native_v1.md": "d0695b7f4a9de7381ccfbaecebaef9804d31cb74b25dc746b5f90a1ca701de9c",
+    "acceleration/audit_20261004_target_rook_count227_maxd2_population_lower4_native_v1.md": "5b3230214bae9f02bde67038d7b02e0b484f67a7e38f05b00beca10004856ff1",
+    "acceleration/audit_20261004_target_rook_count227_no_eight_boundary_native_v1.md": "e641349cc5bedf93b449ecec3718370245fb49325862b0eaf58a2a79a3cb90bc",
+    "acceleration/audit_20261004_target_rook_count227_no_five_d2_boundary_native_v1.md": "fe3e83b01557af907939fcc7143a9aa54f30d0f911150d6ab7d3505182dd6a0d",
+    "acceleration/audit_20261004_target_rook_count227_no_four_d2_boundary_native_v1.md": "26b6d201802f1b22363cda627fdfd8b073ca805186eeeabf18e5294b257ce84b",
+    "acceleration/audit_20261004_target_rook_count227_no_seven_d2_boundary_native_v1.md": "4e6f8a1798f79493f341a16fd1299854572b6ac3af802936920de6dad9111e23",
+    "acceleration/audit_20261004_target_rook_count227_no_six_d2_boundary_native_v1.md": "defd52c1ca49003c720a2b3f8db16bcc0399ecc0467864abf69e17b572fc7d91",
+    "acceleration/audit_20261004_target_rook_count227_population_table_native_v1.md": "40879d6c0f1abc473b5cf765404889bc39edbbb7542cf5b1f2f425febc4010c6",
+    "acceleration/audit_20261004_target_rook_count227_single_d3_native_v1.md": "404d61b740a0ea9aaddcbaeaff6b64028261aa7c7124450f0098f0f2dab222e6",
+    "acceleration/audit_20261004_target_rook_nine_count_not227_native_v1.md": "e4be6e12b8f7413e31ece751339e2a3e62d7aada4b08ce4231f9ea36b9d68948",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/summary.json": "739f69a0a940e7cca64d1c41fdb72ff486a425f622e8c109a2d5e68b52eb114b",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/summary.json": "7296830b2f55b07e00b4eda3359ce3be3572a7e8f2876f0b54832c6092a9fec1",
+    "acceleration/results/20261004_independent_review/target_rook_count227_deficiency_upper2_native01/claim_binding_schema2.json": "61d491595a5a68daaa8b18a0a577478bd8e1830af1e53b5dfa2d2cbfaa0b1779",
+    "acceleration/results/20261004_independent_review/target_rook_count227_deficiency_upper2_native01/summary.json": "33278da8c5663fd67f498aecdff53d2ddaa34f59ed070918b08bdb3715adb928",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/claim_binding_schema2.json": "435ba1f1b167370f08dca364db6df29e369de21cbbbdbd97ba226fbed2bf6ef2",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/summary.json": "8f7686c817adac17661edd1ec2f894e7a64f403784962dd48948b06da24a327e",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/claim_binding_schema2.json": "ce55983c0fcbf7da0a272023a056368e8956aab97a74a2a4112567a2cb43f538",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/summary.json": "5e662c819fcd2208589e1c5f13967b10b28e90b7111227e44b47a790e737c218",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/claim_binding_schema2.json": "8ad081ff7d9edb8228a88d385daec2b6a4d53215c7ff7b980646dbcddfa19bc5",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json": "dbd09b074c9c8439e582fa1d089179235d05e2d2767d6b9038344e7945342d54",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/claim_binding_schema2_02.json": "c4fdfea30a3b70439afa682dbc4b813144b93b2abfe655e270da6528bfeaddaa",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/metadata_writer_correction01.json": "031235656277b5c093bd24ab4199cfe1d4ced4bd50da009f42605f3c25047922",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/metadata_writer_correction02.json": "c088482d85243d70b3c2b1aba93296f6171ecb401690bfdc2f3e56992fe82767",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/summary02.json": "8c236eb15befe2f473d6490a16ab1f16b1a5ffbf049d0c73bd6cc03449d347a4",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/claim_binding_schema2.json": "ba845921017175de16810e69425290244762500b4c600b00e32946f56d552939",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/summary.json": "bdecc58d5517aa19aaba379253d1c626da4e700c2cba89dd5659e0005664522f",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_ordinary_topologies_native01/claim_binding_schema2.json": "5fd47d023ef1c18ac02c8ff3d7752fe8ef231caffec0ffcb393046a0a4d9cf80",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_ordinary_topologies_native01/summary.json": "f4cc886dbd04a79e19dba93c1c85e597bb8f398d911290c60fc74bc185724152",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_path_cycle_native01/claim_binding_schema2.json": "f889a2bc9b99f81f03a057d6029c47c47845c570eed4f38a1f746808a28131a2",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_path_cycle_native01/summary.json": "49b0040f38ad9b62eeb937aa2018b39a4f44411d92ca795ae3c69ff6e64f91bd",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_star_native01/claim_binding_schema2.json": "fcccfd3eed8c10daa33f542b9408cc449b8ef7fa8bf6a5e4113c1611b45f2c75",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_star_native01/summary.json": "fc89c72e0139e43f915745d871a80c66021405d51821d3fb99ef044b91420196",
+    "acceleration/results/20261004_independent_review/target_rook_count227_maxd2_population_lower4_native01/claim_binding_schema2.json": "bf11dcdc15744535d7934940ec296b515450c5c30f5fe400b583af330a1bf77b",
+    "acceleration/results/20261004_independent_review/target_rook_count227_maxd2_population_lower4_native01/summary.json": "1e4e0ea5ca09facb81b287185a486160de3e591ab72c2c018b0f1b6a9694b43b",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_eight_boundary_native01/claim_binding_schema2.json": "735adcf14a1bcc9c3c750864bd75265e2de0808bea63b4f52cc4d749a94b7a53",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_eight_boundary_native01/summary.json": "8541b131e6a9bc2ebdff8a2f255991aa5ed5bfbaad3dc2acccf2f4385cc9fb47",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/claim_binding_schema2.json": "40d5975397957df435a39f8f70e5c5fd35a69f36e75d0d5c32a53e41d1ad0d05",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/metadata_writer_correction01.json": "0b60aeb4f56539da9649d2f1660b07db23d393977d5dbec3d586bd1e82b37876",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/summary.json": "3620b3e3963492324f4ee967739b3487c49fec02e4af84170be2434d07bc14d7",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_four_d2_boundary_native01/claim_binding_schema2.json": "cbc2372e41096216b93e241357e003867a1891909976cb94ebe77c41aa89efed",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_four_d2_boundary_native01/summary.json": "15c0788e2f07ed1d8eb1236bbfc3b9f30b8afc205f5671bc5749d1213bee2b5d",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_seven_d2_boundary_native01/claim_binding_schema2.json": "e24f724bc54751d20f8ead9b7edc7e6430bb01d8cd2be6dad18d8d0bdf28c280",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_seven_d2_boundary_native01/summary.json": "f0dc55d8bdd7ae4e9e487ba6e17e77bb76dccd5a45be65399e9367e022aa42a7",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_six_d2_boundary_native01/claim_binding_schema2.json": "aacd3be4be547af176673d3d287f45ff4404be09da7369a8d6972b759e0fa501",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_six_d2_boundary_native01/summary.json": "dd11c97dc3000bdafd1c23a644933d867f2e06787a868d65cb91c088b59a2c89",
+    "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/claim_binding_schema2.json": "f7a5f598c1942aa181eb059f5b94cb35a155c3426f38f6a5378244cadc6a3526",
+    "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/summary.json": "dace9455e57c7970724a5ce2ac205a6208a6c4055df71152d67a767252651029",
+    "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/claim_binding_schema2.json": "b1606c7c38f3837cc77187e6823bbe0f982f15177442967f45766fd20aa59ab9",
+    "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/summary.json": "a1c55cd5b626ff08333a4ac06d2e43681120a1a9bee5452da1492361d2a2c09a",
+    "acceleration/results/20261004_independent_review/target_rook_nine_count_not227_native01/claim_binding_schema2.json": "f6deaf0c206ddcf5058811519ef907b85a851e736dbde15bc2abe667f9737111",
+    "acceleration/results/20261004_independent_review/target_rook_nine_count_not227_native01/summary.json": "8d83cf504ad6ffebb9cb845da6c1528f32ba6e3f955a62f5e763745ef4cd6339",
+    "acceleration/results/20261004_nonzero_rook_deficiency_maximum_lower2_native01_root_written_acceptance01.json": "fd293dd532197a48900e54c05963d1832c84769b3877e2b04b8501f2a28b46cb",
+    "acceleration/results/20261004_rook_deficiency_strict_second_neighbor_native01_root_written_acceptance01.json": "7b7c80c0e16492e8203a55671d366ba5d14147b90985e6e6d98bc3043920eb6d",
+    "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70",
+    "acceleration/results/20261004_target_rook_count227_deficiency_upper2_candidate01.json": "42bd5ab2c027c3f5f5f0c7beadde984f2a25908caa13750218729a25061a85a8",
+    "acceleration/results/20261004_target_rook_count227_deficiency_upper2_root_written_acceptance01.json": "758fa5df2ef5aa23b6f02046400878b9879edd15b86217dba8c6e9d5196dd98b",
+    "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_root_written_acceptance01.json": "d328903b763312e55f0b2f69b64b48a5d0b674cf48be43710aa560a23649ee72",
+    "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_support_candidate01.json": "62b71f4a7d088cd68d138b54db320741294173647855a1adcecef3f0b6af3d4b",
+    "acceleration/results/20261004_target_rook_count227_five_d2_ordinary_two_outside_points_candidate01.json": "031ff160a35f2b0d06d14fd81cb24e2b0c7f0cd594042817446c5cdeae967805",
+    "acceleration/results/20261004_target_rook_count227_five_d2_ordinary_two_outside_root_written_acceptance01.json": "7bc07880cdbbc717401c90a27deb310e6295644906205c8dce2b99aaa783cfa8",
+    "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_point_candidate01.json": "6b152c9bb6138078fa1324690ca64251c9deec23d6c8a4e8cbcaffd87c344819",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_root_written_acceptance01.json": "c615dafa83018fb5c54a9958d2c6e818a418413f609a22dc2299f627ca712cd6",
+    "acceleration/results/20261004_target_rook_count227_five_d2_weighted_boundaries_root_written_acceptance01.json": "d07de7ae26ba330f14cba1ff7bb50e97a28bc0bb5f62e13e85240d51cfd4864a",
+    "acceleration/results/20261004_target_rook_count227_five_d2_weighted_support_boundaries_candidate01.json": "eacf26e07eb2d0a77dc3f4c7b69f37ad277aaf0a1140f001df5930248bfe6e0b",
+    "acceleration/results/20261004_target_rook_count227_four_d2_common_point_candidate01.json": "30274bd4c488ab15f50c10b45a274afd4710a751a7a68f3b40bfd4db8f07b8b7",
+    "acceleration/results/20261004_target_rook_count227_four_d2_common_point_root_written_acceptance01.json": "b2ac211bd6915ef3ef61d358d60d8ca09cfb40b2388f40e89f55c53c33818fca",
+    "acceleration/results/20261004_target_rook_count227_four_d2_no_high_path_or_cycle_candidate01.json": "ff088e86b702732f14e8aa9887004aca475fab4e27bb84a6ff1525d4d6a9063c",
+    "acceleration/results/20261004_target_rook_count227_four_d2_no_high_star_candidate01.json": "bd3e599d1067ca96968d1d53c4950d2aa0c47de2cc31da7c070d1fea49613cb1",
+    "acceleration/results/20261004_target_rook_count227_four_d2_ordinary_support_topologies_candidate01.json": "c4c5110d2a3dc63df431acee2ca0e619f7608bcbf09468e52e338fe8fee70e03",
+    "acceleration/results/20261004_target_rook_count227_four_d2_ordinary_topologies_root_written_acceptance01.json": "73670a989726263432684a1061344e3c91306f37b89e6b455015aeffdd3cdf29",
+    "acceleration/results/20261004_target_rook_count227_four_d2_path_cycle_root_written_acceptance01.json": "c13191d0b864e409000aee00aa565a1b86453580e76b31127f4bb92a19f6a229",
+    "acceleration/results/20261004_target_rook_count227_four_d2_star_root_written_acceptance01.json": "c353450d80218bcc060cfb112bb8e1151b5dd8c080d90b3600bd8dedfcfdebc9",
+    "acceleration/results/20261004_target_rook_count227_maxd2_d2_population_lower4_candidate01.json": "67cbdf754da32db5282751b920c769cd29e6ac6128e6dfcf26ac3f3e3733ad90",
+    "acceleration/results/20261004_target_rook_count227_maxd2_population_lower4_root_written_acceptance01.json": "99a9e9f29c3136444563478c8c2173230aa31c102dde7172d8b4d33a91d62eef",
+    "acceleration/results/20261004_target_rook_count227_no_eight_boundary_root_written_acceptance01.json": "8ce40492fa1317dc1ab381645f9dbd37edbaff202158b7ab3b20e6a9310831f2",
+    "acceleration/results/20261004_target_rook_count227_no_eight_d1_d2_boundary_candidate01.json": "40f57cdca81126207a16dc58d96a5d31148e202ce02fb882df762907a3466814",
+    "acceleration/results/20261004_target_rook_count227_no_five_d2_boundary_candidate01.json": "83d140b75c136d3ef07f32f88f1af2e84b1b747a0b8841bc8d8c97f6ead91831",
+    "acceleration/results/20261004_target_rook_count227_no_five_d2_boundary_root_written_acceptance01.json": "8614fa6ac056ecb7ca65c63d62a910dc5819a2465f753215d18d4143d35016ba",
+    "acceleration/results/20261004_target_rook_count227_no_four_d2_boundary_candidate01.json": "37d052eacac05caa7be96e8d67a493922e7b912ff3c8756016e1babb67d747fd",
+    "acceleration/results/20261004_target_rook_count227_no_four_d2_boundary_root_written_acceptance01.json": "8f62a712c4be045f78069f4f35c846cb8c58f814754a2369af5c2b184586df40",
+    "acceleration/results/20261004_target_rook_count227_no_seven_d2_boundary_candidate01.json": "deb7f20d704d9396667d1a6f36c61546a33944fa1acb64648ea85d1f7dd40283",
+    "acceleration/results/20261004_target_rook_count227_no_seven_d2_boundary_root_written_acceptance01.json": "bb2b0377e0c1f265965e8095953031bed59a078b97abe13337bbf30a64a76301",
+    "acceleration/results/20261004_target_rook_count227_no_six_d2_boundary_candidate02.json": "23dcd0cc23b59baa13b5da1b57544e8e0e4e15b8751929edbabe0b30448a3b15",
+    "acceleration/results/20261004_target_rook_count227_no_six_d2_boundary_root_written_acceptance01.json": "36bcf80dc76a668801c96cf8624c622c9dc3ddf403c65413f68967c9f55de7f7",
+    "acceleration/results/20261004_target_rook_count227_population_table_root_written_acceptance01.json": "cf7f70f5db3d8b473e94fcf38616593b29f816a003e40bca4e93dc732bad4c77",
+    "acceleration/results/20261004_target_rook_count227_single_d3_bound_candidate01.json": "b0fbd63defa758d7531a5f81a7c10f4a926a02a9bc06c6588552953e64f60dc0",
+    "acceleration/results/20261004_target_rook_count227_single_d3_root_written_acceptance01.json": "ef63f3f89d80a49f47962feaebd392eb80af419ccede3ec64f265babeeb093a5",
+    "acceleration/results/20261004_target_rook_count227_six_d2_rejected_outline01.json": "61cad3090fa7c113d22b45155650e7808d24c7b42a0ad0ffa633bbed148d86ca",
+    "acceleration/results/20261004_target_rook_nine_count_not227_candidate01.json": "6910d9ab618e3cde5b722263e3133d7be1c58bbe3949f0d5d182e68251f48739",
+    "acceleration/results/20261004_target_rook_nine_count_not227_root_written_acceptance01.json": "f96821c30efdd17a191ce558e2a31dcbb1f550323642046645ce0424da150aec",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_FOURFOLD_SUPPORT_V1.md": "3d711b5cda4b0b657aed1fcbf21214cfe5c44fef8ae95ae837c34ff731053bfc",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_ORDINARY_TWO_OUTSIDE_POINTS_V1.md": "be3621b85bd10a5d6ca9b3b961a0b1a7bdadfa5cbece6af6f6edc96d81afe0a6",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_SINGLE_OUTSIDE_POINT_V1.md": "2127b52a44b3f667131c357a41972e631d7c3242d22bfe59e9af46dc65932492",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_PATH_OR_CYCLE_V1.md": "686b6cc9a93f92f3287111171ceb001fce89b6b36767d71bf52e47db0bda4165",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_NO_HIGH_STAR_V1.md": "bc8894fe106db65764dbe8d99fe1d53ec639e325836bea3183b128374242ff85",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md": "f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_EIGHT_D1_D2_BOUNDARY_V1.md": "329f6af24023eb306ba726d2cccd6eb19861aa70a75dcb726013ef8e144a00e7",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FIVE_D2_BOUNDARY_V1.md": "cd17ee00d44895a57797dd09e21962bfede98322053009b4e69060dcf156b25d",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FOUR_D2_BOUNDARY_V1.md": "7bffd13c56188c22726f5120b2cb6ce451a22dbd6c774a1dbd6b41d87009a96b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SEVEN_D2_BOUNDARY_V1.md": "fdac5f82b885cb956f7b12b649edc7f5466c12fa055aeb6d02082862dea23f3b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SIX_D2_BOUNDARY_V1.md": "8f2394b3932193fbf1dfb5f4d7c97383581fee03fc7519882ea88e2cfcb21d92",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SIX_D2_BOUNDARY_V2.md": "8355242189237d78409b9c84b1dc402267f5314135158d1ce3a8148a370def8a",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_SINGLE_D3_BOUND_V1.md": "c75f1295d17a9f1fee8fea30f72e30e714aae620ba33c359ac50f45ccb1917a3",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT227_V1.md": "300c413fb1ae39ce523744208be896c9a506ce022c269e805ae58d1296b89e37",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "evidence_identity_count": 125,
+  "prospective_final": {
+    "claims": 467,
+    "VERIFIED": 458,
+    "CANDIDATE": 3,
+    "REFUTED": 6,
+    "CLEAR": 467,
+    "artifact_records": null,
+    "artifact_records_null_reason": "Requires actual materialization and installation receipts.",
+    "ledger_sha256": null,
+    "ledger_sha256_null_reason": "Future installed467 digest is unavailable."
+  },
+  "target_resolution": "NONE",
+  "overall_target_verdict": "UNKNOWN",
+  "limitations": [
+    "A metadata projection of frozen exact packets; no new mathematical verification or computation.",
+    "All direct evidence identities are declared from accepted packet maps, not freshly rehashed by this preparation.",
+    "No installed467 state, current worker state, public availability or publication is inferred.",
+    "R226 claims and later research are outside this exact18 cutoff."
+  ]
+}

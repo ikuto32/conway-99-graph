@@ -1,0 +1,35 @@
+$ErrorActionPreference='Stop';$TaskWatch=[Diagnostics.Stopwatch]::StartNew()
+function TaskHash([string]$Path){if($TaskWatch.Elapsed.TotalSeconds -ge 160){throw 'SAVE_RESERVE'};(Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant()}
+function TaskLoad([string]$Path){Get-Content -Raw -LiteralPath $Path | ConvertFrom-Json -AsHashtable -DateKind String}
+$TaskExpectedHead='155a99539b86206520d8b8cc0f002d66cdc1b3e1';$TaskExpectedIndex='b7ff36caa9dc2a0233c77373be7c7bb195fab909ac4d30fdc3cb137f8dba0f2c';$TaskOldSha='f4a1bbd17119baedcf0222745c96c0530e4f2e9e3e6c3543650b51c4d4982c93';$TaskCandidate='acceleration/results/20261004_wave47_eight_rook_append_candidate01/CLAIMS.candidate.yaml';$TaskNewSha='9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1'
+$TaskPins=[ordered]@{
+ 'CLAIMS.yaml'=$TaskOldSha
+ 'acceleration/results/20261004_wave47_eight_rook_append_candidate01/CLAIMS.before.yaml'=$TaskOldSha
+ $TaskCandidate=$TaskNewSha
+ 'acceleration/results/20261004_wave47_eight_rook_typed_controls_root_actual_acceptance01.json'='09920ddf7ddb2aea5fbdde78892ad5132abf5b57053ada02f9b5b0713c57f188'
+ 'acceleration/results/20261004_wave47_eight_rook_typed_check_root_actual_acceptance01.json'='24903e928a7a0ab08bd6fd466228b68b743ebdc2e8fd635f0f8a534b68212c28'
+ 'acceleration/results/20261004_wave47_eight_rook_generic_schema_root_actual_acceptance01.json'='d450140ff908f435addbaa57d0c6b27405062418e5dcf8de389ad3434d42348c'
+ 'acceleration/results/20261004_wave47_eight_rook_candidate_schema_report01.json'='736c9b66ec0bf8fe0003ea0e94f6f9787219f4fe80fe173e95f0d6f53ad1d0dc'
+ 'acceleration/proposal_20261004_wave47_eight_rook_literal_append_v2.json'='bf894f9321e6cdd46437d1413db2dd9f22ae1ad736eff779e724b095a008af1b'
+}
+foreach($TaskPath in $TaskPins.Keys){if((TaskHash $TaskPath) -cne $TaskPins[$TaskPath]){throw ('INPUT '+$TaskPath)}}
+$TaskPacket=TaskLoad 'acceleration/proposal_20261004_wave47_eight_rook_literal_append_v2.json'
+foreach($TaskPath in $TaskPacket.evidence_union.Keys){if((TaskHash $TaskPath) -cne $TaskPacket.evidence_union[$TaskPath]){throw ('EVIDENCE '+$TaskPath)};$TaskPins[$TaskPath]=$TaskPacket.evidence_union[$TaskPath]}
+$TaskTyped=TaskLoad 'acceleration/results/20261004_wave47_eight_rook_typed_check_root_actual_acceptance01.json';$TaskGeneric=TaskLoad 'acceleration/results/20261004_wave47_eight_rook_generic_schema_root_actual_acceptance01.json'
+if($TaskTyped.result -cne 'PASS_ADMINISTRATIVE_TYPED_TRANSITION_ONLY' -or $TaskGeneric.result -cne 'PASS_GENERIC_SCHEMA_SEMANTICS_ONLY' -or $TaskTyped.candidate_sha256 -cne $TaskNewSha -or $TaskGeneric.candidate_sha256 -cne $TaskNewSha){throw 'ACTUAL_GATES'}
+$TaskData=TaskLoad $TaskCandidate
+$TaskStatus=@{};foreach($TaskRecord in $TaskData.claims){if(-not $TaskStatus.ContainsKey($TaskRecord.status)){$TaskStatus[$TaskRecord.status]=0};$TaskStatus[$TaskRecord.status]++}
+if($TaskData.claims.Count -ne 457 -or $TaskData.artifacts.Count -ne 23892 -or $TaskStatus.VERIFIED -ne 448 -or $TaskStatus.CANDIDATE -ne 3 -or $TaskStatus.REFUTED -ne 6 -or @($TaskData.claims | Where-Object {$_.review_state -cne 'CLEAR'}).Count -ne 0 -or @($TaskData.artifacts | Where-Object {$_.availability -ceq 'PUBLIC'}).Count -ne 6054){throw 'ACTUAL_COUNTS'}
+$TaskHead=(git rev-parse HEAD).Trim();$TaskIndexPath=(git rev-parse --git-path index).Trim();$TaskIdx=TaskHash $TaskIndexPath
+if($TaskHead -cne $TaskExpectedHead -or $TaskIdx -cne $TaskExpectedIndex -or (TaskHash 'CLAIMS.yaml') -cne $TaskOldSha){throw 'CONTEXT'}
+$TaskPeers=@(Get-CimInstance Win32_Process | Where-Object {$_.Name -match '^(python.*|uv|kissat|drat-trim)\.exe$' -and $_.CommandLine -match 'run_compute_command|conway-99-graph[/\\](acceleration|build)'} | Select-Object ProcessId,Name,CommandLine);if($TaskPeers.Count){throw 'WORKER'}
+$TaskLinux=@(& wsl.exe -d Ubuntu-24.04 --exec bash -lc "pgrep -af '[r]un_compute_command|[c]onway-99-graph/(acceleration|build)'");$TaskLinuxExit=$LASTEXITCODE;if($TaskLinuxExit -ne 1 -or $TaskLinux.Count){throw 'LINUX_WORKER'}
+$TaskOne='acceleration/results/20261004_wave47_eight_rook_exact_installation_root_one01.json';$TaskReceiptPath='acceleration/results/20261004_wave47_eight_rook_exact_installation_root_receipt01.json'
+foreach($TaskPath in @($TaskOne,$TaskReceiptPath)){if(Test-Path -LiteralPath $TaskPath){throw 'EXISTING'}}
+$TaskBefore=[ordered]@{schema='ROOT_EIGHT_CLAIM_EXACT_INSTALLATION_ONE_V1';timestamp=[DateTimeOffset]::UtcNow.ToString('o');reviewer='/root';authorized_action='Copy exact accepted candidate bytes to authoritative CLAIMS.yaml';candidate=@{path=$TaskCandidate;sha256=$TaskNewSha};before_ledger_sha256=$TaskOldSha;source_commit=$TaskHead;index_sha256=$TaskIdx;fresh_inputs_sha256=$TaskPins;new_claim_ids=@($TaskData.claims[449..456] | ForEach-Object {$_.id});scope='Eight exact independently reviewed r1 statements only; immutable449prefix and23842artifact prefix separately typed checked; no additional b5/b4 claims or target resolution';process_observation=@{windows=$TaskPeers;linux_exit=$TaskLinuxExit;linux=$TaskLinux};PUBLIC_unchanged=6054;publication=$null;Git_index_mutation=$false;target_resolution='UNKNOWN';admission_elapsed_seconds=$TaskWatch.Elapsed.TotalSeconds}
+[IO.File]::WriteAllText((Join-Path (Get-Location) $TaskOne),($TaskBefore | ConvertTo-Json -Depth 40)+[char]10,[Text.UTF8Encoding]::new($false))
+$TaskRaw=[IO.File]::ReadAllBytes((Join-Path (Get-Location) $TaskCandidate));[IO.File]::WriteAllBytes((Join-Path (Get-Location) 'CLAIMS.yaml'),$TaskRaw)
+if((TaskHash 'CLAIMS.yaml') -cne $TaskNewSha -or (TaskHash $TaskIndexPath) -cne $TaskExpectedIndex -or (git rev-parse HEAD).Trim() -cne $TaskExpectedHead){throw 'CLOSING'}
+$TaskReceipt=[ordered]@{schema='ROOT_EIGHT_CLAIM_EXACT_INSTALLATION_RECEIPT_V1';timestamp=[DateTimeOffset]::UtcNow.ToString('o');reviewer='/root';actual_executor='/root';result='EXACT_ACCEPTED_CANDIDATE_INSTALLED';source_commit=$TaskHead;index_sha256_unchanged=$TaskExpectedIndex;before_sha256=$TaskOldSha;installed_sha256=$TaskNewSha;candidate_path=$TaskCandidate;candidate_bytes=$TaskRaw.Length;claim_records=457;status_counts=$TaskStatus;review_state_counts=@{CLEAR=457};artifact_records=23892;PUBLIC_unchanged=6054;new_LOCAL_ONLY=50;new_claim_ids=$TaskBefore.new_claim_ids;Root_ONE=@{path=$TaskOne;sha256=TaskHash $TaskOne};fresh_admission_identity_count=$TaskPins.Count;verification='Authentic raw independent mathematical gates precede complete typed preservation,14finiteengineeringcontrols,unchanged generic schema semantics and exactbyte installation';mathematical_replays=0;Git_index_PUBLIC_mutations=0;target_resolution='UNKNOWN';overall_search_coverage='UNKNOWN; no validated denominator.';publication=$null;elapsed_seconds=$TaskWatch.Elapsed.TotalSeconds}
+[IO.File]::WriteAllText((Join-Path (Get-Location) $TaskReceiptPath),($TaskReceipt | ConvertTo-Json -Depth 40)+[char]10,[Text.UTF8Encoding]::new($false))
+@{receipt=$TaskReceiptPath;sha256=TaskHash $TaskReceiptPath;ledger_sha256=TaskNewSha;claims=457;verified=448;artifacts=23892;PUBLIC=6054} | ConvertTo-Json
