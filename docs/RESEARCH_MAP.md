@@ -1,3 +1,14 @@
+# Latest research checkpoint — Wave46
+
+As of 2026-10-04T18:56:37.9680865Z (2026-10-05 JST), the [forty-sixth checkpoint](RESEARCH_20261004_FORTYSIXTH_WAVE.md) records 449 claims: 440 VERIFIED, 3 CANDIDATE and 6 REFUTED, all review states CLEAR. It adds 27 separately scoped verified records after Wave45; these counts measure records, not graph coverage.
+
+**Target verdict: UNKNOWN.** No independently validated complete 99×99 graph or general nonexistence proof exists in this checkpoint. Overall search coverage: UNKNOWN; no validated denominator. The exact finite761 color screen retains106 necessary survivors, and the separately verified prime-five application bounds the triangle left-code dimension by24 under its declared target hypotheses. Both fixed-count local SAT runs closed UNKNOWN without a completed assignment or checked UNSAT certificate. The existing6,054 PUBLIC records are preserved; new evidence stays LOCAL_ONLY until a separate availability review. Selected publication omits large traces, proof/CNF suffixes, build artifacts and submodule member bytes, so it does not promise full public replay of every engineering control.
+
+This notice precedes the unchanged historical file bytes.
+
+---
+
+
 Latest verified continuation checkpoint — Wave45, 2026-10-04 JST. The [milestone](RESEARCH_20261004_FORTYFIFTH_WAVE.md) records 422 claims: 413 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 6 REFUTED/CLEAR. Its eighteen-plus-four additions preserve prior claim/artifact prefixes and all 6,054 prior PUBLIC entries, checked by the accepted actual POST. New evidence remains LOCAL_ONLY pending immutable availability confirmation. Target resolution and global coverage remain UNKNOWN. The frozen 1,947-path 418 inventory passed; current publication uses an explicit ledger override and later appendices. Aggregate and per-copy adjacency searches ended UNKNOWN without an exact incumbent. Historical text follows byte for byte.
 
 # Latest verified continuation checkpoint — wave44, 2026-10-04 JST

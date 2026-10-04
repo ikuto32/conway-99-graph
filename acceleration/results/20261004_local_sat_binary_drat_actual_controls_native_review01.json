@@ -1,0 +1,1288 @@
+{
+  "schema": "INDEPENDENT_LOCAL_SAT_BINARY_NATIVE_AND_DRAT_FINITE_CONTROLS_V1",
+  "status": "INDEPENDENT_LOCAL_SAT_BINARY_NATIVE_AND_DRAT_FINITE_CONTROLS_V1_COMPLETE_PASS",
+  "implementation_version": 1,
+  "timestamp": "2026-10-04T15:55:54.6856752Z",
+  "audit_timestamp": "2026-10-04T15:51:54.5637782Z",
+  "verification_timestamp": "2026-10-04T15:55:54.6856752Z",
+  "result": "PASS_EXACT_LINUX_BUILD_FIVE_NATIVE_NINE_PROOF_FINITE_CONTROLS_ONLY",
+  "source_author": "/root/structural",
+  "actual_executor": "/root",
+  "verifier": "/root/native_driver",
+  "method": "independent_artifact_check",
+  "audit": {
+    "path": "acceleration/audit_20261004_local_sat_binary_drat_actual_controls_native01.md",
+    "sha256": "d00bd4563f40278c1112a0d66ae9126ebd8fa03b48e9aaedf9b66cd2c3462a12"
+  },
+  "source_plan": {
+    "path": "acceleration/plan_20261004_fixed17_per_copy_local_sat_binary_controls_v4.json",
+    "sha256": "f82cbcc53e365a4cc1bf45fd56975cbbc8e1fff7967a598bf07fd0809f889937"
+  },
+  "actual_proof_plan": {
+    "path": "acceleration/plan_20261004_local_sat_binary_drat_proof_controls_root_actual_v1.json",
+    "sha256": "5473acf5c20a384485d43ab7c7f29070166c1c6ea61ba498d0f88c3fd0cf6524"
+  },
+  "operative_source": {
+    "launcher": {
+      "path": "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh",
+      "sha256": "4ca287aab7e41d392d83fa20fc69de495b3185287a6a537e18812149ef7b5b09"
+    },
+    "launcher_spec": {
+      "path": "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2_spec.md",
+      "sha256": "84196a3be4889b35293017fb4542d2b5c5460776405ff2ef7879dfd2446160c7"
+    },
+    "solver": {
+      "path": "build/research-cadical195/source/build/cadical",
+      "sha256": "021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7"
+    },
+    "checker": {
+      "path": "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+      "sha256": "d506ecaaee43c9f8221764cd5d92db45ea5e5a9a192227e015ad9412bc8b0e27",
+      "bytes": 51216
+    },
+    "checker_source": {
+      "path": "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim.c",
+      "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+      "bytes": 59546
+    },
+    "supervisor": {
+      "path": "acceleration/run_compute_command_v2.py",
+      "sha256": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+      "runtime_scope": "LOCAL_LINUX_GROUP_BOUNDED_CLEANUP_V2"
+    }
+  },
+  "components": {
+    "build": {
+      "result": "PASS_ACTUAL_BUILD_COMPONENT_ONLY",
+      "report": {
+        "path": "acceleration/results/20261004_local_sat_binary_drat_linux_build_native_actual_review01.json",
+        "sha256": "7886a7c0a26cd2845bd948c21e275284df744cb6bee6454bc37fbc848037b862"
+      },
+      "root_acceptance": {
+        "path": "acceleration/results/20261004_local_sat_binary_drat_linux_build_root_actual_acceptance01.json",
+        "sha256": "5ae6d562554c46e88091fb0727921c9466f8992987deac9641334ab6bd2a6276"
+      },
+      "warning": "GCC getc_unlocked implicit-declaration warning retained; no source modification/compiler rerun"
+    },
+    "native_controls": {
+      "result": "PASS_FIVE_TINY_NATIVE_CONTROL_CASES",
+      "report": {
+        "path": "acceleration/results/20261004_local_sat_binary_native_actual_controls_native_review01.json",
+        "sha256": "3d1cc3a0039a65b82086162f1f14397d1ca6d55da9f23a1f798024f33e361a87"
+      },
+      "count": 5,
+      "physical_outputs": 32,
+      "names": [
+        "sat",
+        "unsat",
+        "bad_hash",
+        "unsupported_seconds",
+        "existing_output"
+      ],
+      "actual_signed_sat_assignment": [
+        1,
+        2
+      ],
+      "actual_unsat_proof_sha256": "8bb12aadd23c17bdf36e12987c0b1b1bc32dc31b29840ea821668595602db5e2"
+    },
+    "proof_controls": {
+      "result": "PASS_NINE_EXACT_LINUX_BINARY_PROOF_CASES",
+      "count": 9,
+      "positive": 3,
+      "negative": 6,
+      "raw_physical_files": 54,
+      "authority_receipts": 9,
+      "root_observation_receipts": 9,
+      "actual_compose_direct_pins": 62,
+      "each_authority_direct_pins": 65,
+      "each_supervisor_words": 21,
+      "each_child_words": 5,
+      "outer_seconds": 60,
+      "checker_seconds": 30,
+      "shutdown_reserve_seconds": 20
+    }
+  },
+  "inputs_sha256": {
+    "acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v3.py": "c93bd1a602e40e3dfd374bfb78a677fc0545d25f6c2e9e031cef97a73017c2f1",
+    "acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v3_spec.md": "b04f7d62ff49abe1d2c012973dd86551e23886b9d3c11c6fbd1117ec510fce73",
+    "acceleration/audit_20261004_local_sat_binary_drat_actual_controls_native01.md": "d00bd4563f40278c1112a0d66ae9126ebd8fa03b48e9aaedf9b66cd2c3462a12",
+    "acceleration/audit_20261004_local_sat_binary_drat_dependency_controls_native_v4.md": "60e5fd34a0784ea7299d11a69ad39b44ab0358d26fd10e4bc5a7e23bcfc7a82f",
+    "acceleration/audit_20261004_local_sat_binary_drat_linux_build_native_actual01.md": "45584464184382b44e5b69dabae065a326aa7d8accc27fe295d882f29e2923bf",
+    "acceleration/audit_20261004_local_sat_binary_drat_linux_build_native_v1.md": "b36c7e4cf83dcb0e177ed616d78b966727d95dbd13bbc4433ffb9e545f82f3ad",
+    "acceleration/audit_20261004_local_sat_binary_drat_original_fixture_native_veto01.md": "257268122cdc0eb9de8652326b61e654fab0c95d56b61c287f7025bfd8954f6e",
+    "acceleration/audit_20261004_local_sat_binary_native_actual_controls_native01.md": "c04cbcc52d687a09187d92d1a670c2e7bf7d02126bff2a5cdd8de2e36ec3254f",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh": "0992017719e75a3696f9c96b54e2aedc4ce91618cf6493d9c5db306da17b8bf6",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1_spec.md": "bf7eb3dae04be9f6455ac4992586a98019eec8b2b716446528e307b234c4deca",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/diff_20261004_fixed17_per_copy_local_sat_native_v1_v2.txt": "a876e422b758707c83d29c8d5e3253ed3f67a7968b1763e7a91c1b333d4ca5e0",
+    "acceleration/plan_20261004_fixed17_per_copy_local_sat_binary_controls_v2.json": "657f34ed8ed2abb253055d8a21068bf80ea7973ab6ffce4a08149deb7e07da7e",
+    "acceleration/plan_20261004_fixed17_per_copy_local_sat_binary_controls_v3.json": "faaf14e7df07dc1b011d63dfa6d2a4932955d99253ac1dfb850e286c83bb843f",
+    "acceleration/plan_20261004_fixed17_per_copy_local_sat_binary_controls_v4.json": "f82cbcc53e365a4cc1bf45fd56975cbbc8e1fff7967a598bf07fd0809f889937",
+    "acceleration/plan_20261004_local_sat_binary_drat_linux_build_v1.json": "d6f54ad6829511e16f73d8eb2e927f2f272325de528b67eca070edd4293f662d",
+    "acceleration/plan_20261004_local_sat_binary_drat_proof_controls_root_actual_v1.json": "5473acf5c20a384485d43ab7c7f29070166c1c6ea61ba498d0f88c3fd0cf6524",
+    "acceleration/results/20261003_native_active_stop_descendant_hard05_root_review.json": "4f34d48f45c20947f97479d6226ae6a0402e183c6774125c1fdd6f5b659b99eb",
+    "acceleration/results/20261003_native_active_stop_descendant_reassessment05_root_review.json": "07aaf0920305ade4b2fdcfd175784f4f28ee50ffd77c47caad2a4d8446593dbf",
+    "acceleration/results/20261003_native_active_stop_mixed_hard06_root_review.json": "10fcf5e06ffa6949b92a553bb7cd4b469aa351ad836719e94ef6d45a0c9d4473",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06_root_review.json": "7879283e657bf010f75862c6362be0178bdaf0a823c6af196776392584a3d8d4",
+    "acceleration/results/20261003_native_active_stop_sat_hard05_root_review.json": "80054f703b49b11ab5e45d2d4d7c801f66c4030aa7ae7b32ca45a39dcce2b168",
+    "acceleration/results/20261003_native_active_stop_sat_reassessment05_root_review.json": "a5c13e9f15c36519fcafd75488824d92d6ae500dcd180fb5af2e104250c10257",
+    "acceleration/results/20261004_fixed17_local_sat_native_controls_root_independent_acceptance01.json": "1ad7d1f84c2a4ea58f32520124cf109316765c90447afcc9b73da154cce1be53",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/bad_hash.sha256": "125fa1362db8930ea632c8bd3ab53572b96ab227923e3d7b767b7d8158d3edd3",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/crlf_sensitive_unsat.cnf": "2f663bd86d96ec02b6ce3540361b702b903b6c9488ed09579e56069bbbb70c67",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/crlf_sensitive_valid.bdrat": "d1220f4c08431a6a3ae710d12419f09d60144247b6b6db89449b047a4e81810c",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/empty_only.bdrat": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/sat.sha256": "61892825ced0bebba5205f40cb68dda6261e78a8fc6772b844304a359066f773",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/unsat.sha256": "23ba95149ff2f2bc70a7f05968940aa2ae7e3211027c1f66cb90b950a49d7929",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_incomplete.bdrat": "a0c816b12326474e0dd9da22ff726a57dd0f7bfcbb029e0eb1bc7b6ca37bb639",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf": "7a39b93228b1366521d47e550bbb83e64b5b78ca71849424ace0c3fde48ebb59",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_valid.bdrat": "d73ee06cf7e5c4560097a7e6ce884d12f779d5c17b260684925bd0bc339c412e",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf": "d697001eb4a3ba3102c8c43ed0c37885cd9ef9c8533199d41ecdcabff1718157",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_valid.bdrat": "79f3520d763e8992f631e092f18774c1442ee97a665e5a81593623af0310e203",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_missing_lemma.bdrat": "d4e5498b46003fc51be50b238c379fa2db1b2010c5d4ce08e72ae6990ed29a13",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_translated.bdrat": "fe284d56f12cb83ae05def643c8d5bf95a716e41d101828b93ec107b533bb80b",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_first_valid.bdrat": "5577ab28304c5bae36a6f869ad75f07ea3167ccd6e06d1e8e9151e3a8ea297b4",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_truncated.bdrat": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/bad_hash/linux_cleanup_observations.jsonl": "7a902e394e0cb544ef15768f0f861a3ed8370647a3327a8179f0333b1c8a60d4",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/bad_hash/manifest.json": "3d48856cda3d3c73266ba33e046ec8c29d5b72d65e5476eed034431464adfa5b",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/bad_hash/progress.jsonl": "eb9cf31dac976edc7769e532f2c4ad635e3ad4f8597c33ac1f7699a495c5234d",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/bad_hash/stderr.log": "8290bbf1d43fccbfa046867220756f8c35a279d79613615019c75cefa9c128b2",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/bad_hash/stdout.log": "39cb314190c92c1c9f13b4e7eaa253ba36c994e04bc7f5930c4bfe5dc03c4e21",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/bad_hash/summary.json": "b352e54a7f1ad1256ab06eeac00010cb5b7dceccdb70c9f56023917ba001f319",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/existing_output/linux_cleanup_observations.jsonl": "88c2420e36b78f389d5f2be80dceb225d892801712eb889a93d8d4e137c431de",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/existing_output/manifest.json": "fb5e019ed05a123a1fb52d44b1ef697b01bb71c05ca560c3c166e0b9f087c3c8",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/existing_output/progress.jsonl": "4dcc9399315bb39db8fcedd60fd7b39a2132025c4893a82eea7c78ff6956de53",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/existing_output/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/existing_output/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/existing_output/summary.json": "eb686d342f3351f1b3d6721977abb3a95027dbd6b8242ab1e17878ad60c6a2dd",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/sat/linux_cleanup_observations.jsonl": "db2ee8c08d4692bcb5a807c2d1392ac1dc203ef750026b1a41d16ad886274552",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/sat/manifest.json": "f720153db8ecaf44357a4171d2b3df75d33687021933455c7ab0701e694454ff",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/sat/progress.jsonl": "7b19cc3573284f36c0f90b924334a929e3d68ff9cf40c5a4bcb9786f63a2be7e",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/sat/proof.drat": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/sat/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/sat/stdout.log": "ea85a193b5abfeb78d76074a33d94e0a35ce428e81505b1eea3fe01a87230fdf",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/sat/summary.json": "e10f229cbcd60986bd86a689998830a63bb66f64d48a23e7d545a37046b43f12",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/linux_cleanup_observations.jsonl": "eba5ad3be5767a201b5b1d01c60b97719edb5f9b7a09aa73932417d3ceaba2ea",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/manifest.json": "ce80f595573f01f11701a3db43161e7711abccb1333d27dc2fcdcb62f8af55f7",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/progress.jsonl": "79f00e2779f97400141729b4238d565c478850dcf5e9b3c1d91f3bd9525066cc",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/proof.drat": "8bb12aadd23c17bdf36e12987c0b1b1bc32dc31b29840ea821668595602db5e2",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/stdout.log": "001b29e66fa4eeb87bc7be553791a5d8823676c77f6751b5bd1ede770576400f",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/summary.json": "8eb0812de730b92baf84ee4cba80d39793663075b19e81ef0e15d3f58e244475",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsupported_seconds/linux_cleanup_observations.jsonl": "d31a16c1a70afd4d9ec085cf00ef099b5c461d794c065a2f47928f54633427fd",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsupported_seconds/manifest.json": "98386c29eb9a87abad4fca175f1edee9e40c45f125eb573fa8aa68611e9682b5",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsupported_seconds/progress.jsonl": "c3adabae2e5d513d7f6b3545a7327e42837503621da3c36e7c3b251306ff887f",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsupported_seconds/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsupported_seconds/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsupported_seconds/summary.json": "628dfd152fa4733d98b850d885a558d727421f568f1dcc86945683133708f2d5",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/sat.cnf": "c723087c6c5f7c739aa6f938795f888f96ddff55f6ff620953f14fb726660296",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/sentinel.drat": "b5f7e7d285029324d9b3acae19cc05099271454ac98bfc059a92b0581625cd51",
+    "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/unsat.cnf": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_missing_lemma_negative/linux_cleanup_observations.jsonl": "cc96ee62a39abc6585263abcb69a36b68457022694b54e00eb339226f365d21f",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_missing_lemma_negative/manifest.json": "95271b315a7aeb24ba6e6444c3b7e93aa7c8c6438fa9031859743b9caf1b8938",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_missing_lemma_negative/progress.jsonl": "d99d7feb8457ea8bb40ce7ff64e6ad5173208fe30173f3169a131033af3d7888",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_missing_lemma_negative/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_missing_lemma_negative/stdout.log": "9a354e0f768ae330ad3a9f56f2d91dcc4d4cb62a69d06742f7ff48832edee931",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_missing_lemma_negative/summary.json": "372fa4ab986c3319f048e48e079ab046d51b852771cdb8dd04e3a81d14d0d06a",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_translated_negative/linux_cleanup_observations.jsonl": "218793598ee76d2be0ebf865fe3873b8bd41ad45bc3f37dd037525f25ce111bd",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_translated_negative/manifest.json": "6d8855cb86b6a8dc526d0a28d2f417cb8287e6f320960ec0722dbc209117613d",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_translated_negative/progress.jsonl": "d3809ebc7f0e25fc5216250d676aa7b4e1725371da7ccae7d776b64b759dd335",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_translated_negative/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_translated_negative/stdout.log": "57dadbe408d8083c766cf5edfc26a4fb142d99588b3c17a62bb9b8dbc9738a50",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_translated_negative/summary.json": "047eb4334a5489076365e115f2a329a6130078deb212b1dc1d38b577c4b8cd8e",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/ctrl_z_truncated_negative/linux_cleanup_observations.jsonl": "52f4fee1e9e1412f58ee03ea7359b68951666283521fad2709827c035b9183de",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/ctrl_z_truncated_negative/manifest.json": "67f9befce22d78e775cc8b1d64e212582bfb90e2cc03c9d54be745544adb78c9",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/ctrl_z_truncated_negative/progress.jsonl": "d2aafd8dda83bd738b2bc7ee07d6f398f4f0048ceb712ebf70fb5bd94031c2fb",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/ctrl_z_truncated_negative/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/ctrl_z_truncated_negative/stdout.log": "85a9c3ce5c2f9ebc7c8319958a5e9b0918d128ddbddca1c25cfdac956f5b4fd7",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/ctrl_z_truncated_negative/summary.json": "647476e5f54889b773ae0e92802f4990609e75037cdfe872b744df7b2b862d11",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/empty_only_negative/linux_cleanup_observations.jsonl": "ab439975db8807c7e7ccd5c8d194181dc16a694c3962f3a159d51d9bf1ae593a",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/empty_only_negative/manifest.json": "caa802a0e7fa81fba64712ccdce68a5687122ed3d40b89e553c68bae0e355eab",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/empty_only_negative/progress.jsonl": "f1a42c1150b3b7c5f7af53a2576c55ece09e174c6b96a011a675fec97c57c05d",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/empty_only_negative/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/empty_only_negative/stdout.log": "7f7a531f2296518d7428beea2e9f3824bc036f5e13feed8af4f6f627c286e0a2",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/empty_only_negative/summary.json": "0f71d0d086c5a66c00819e8dd0d7c9fff3d402eee218c1868cdecec37e4072c1",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/genuine_native/linux_cleanup_observations.jsonl": "711d55fa2e6a98c2d065f912980e7bde62614b2addb64ba870aa73f18491b2d9",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/genuine_native/manifest.json": "3fb2fc5fb03ca8809f9fc5e153ce4767ddd65a3f3343baa24c70b49854eae67f",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/genuine_native/progress.jsonl": "c160e48564ee6e5608a05022c90087885f952fdb0d7fac29bb984203919e8c7e",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/genuine_native/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/genuine_native/stdout.log": "e1788a4d908b5d0c53320fd05bd446f3b22a478e57173b622cf1e87e6f62edf1",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/genuine_native/summary.json": "8029c376d5d6c78ab6c6cd80f2c22f228f82898eb4368e0af4e07bfa0c695b04",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_crlf_sensitive/linux_cleanup_observations.jsonl": "673f3d40abc910d303a68a1c3f39dce4c5c11bcee401ffdc822f81185812b508",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_crlf_sensitive/manifest.json": "a1b497c0becd722866d7e39947827edb9304e3b835c092f7b7d2c08a06817c41",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_crlf_sensitive/progress.jsonl": "d1466d4c56c3237a7091e7a3e1202ef81d53e032436c2d0e1e5af1a9a60a60fa",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_crlf_sensitive/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_crlf_sensitive/stdout.log": "39584a946e554577d651f16264aa05200bf406d5eddffd1c68a71caefa39e065",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_crlf_sensitive/summary.json": "6ce6e09afe2deedce16fe1e4f96e79028095b26e2b6415336b3a721ce90e240d",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_ctrl_z/linux_cleanup_observations.jsonl": "3bed82a31fdd2be2c2ff215cd9e360fdeb63ac5c7989d2cc60597ccb769cb9af",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_ctrl_z/manifest.json": "2fa4d9b7df0c6d70ca76a68d2851f86e3e1d4b4a16dce96b8301d675b65f5e52",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_ctrl_z/progress.jsonl": "b0a86f43518831fd9f458e8768ff42833d508c98ee1a63d18f3a50f04a50e280",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_ctrl_z/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_ctrl_z/stdout.log": "338fb178705e5c1bf7da304954cc6fbd8361f07042907aa26e7a02a5d57d85d7",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_ctrl_z/summary.json": "cfb7cd984b3fddd1bfd28632dad1525dd1a07af117af715f8c09c75af8cff64d",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/incomplete_hand_negative/linux_cleanup_observations.jsonl": "b80545763b88b5a4d1f258dc1e563fc81c02a9d96a90da8e3cd652f434ecc3e4",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/incomplete_hand_negative/manifest.json": "4304bd5a27fa7e25bf67756a522627831a4e809ff3926ffa27bde3187ccd8897",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/incomplete_hand_negative/progress.jsonl": "4d7dc99816df49a571dddb01b5d88d8b237d257f39512ee98e6a60c5b7a6db50",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/incomplete_hand_negative/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/incomplete_hand_negative/stdout.log": "669f2b6bb5b63dc412e4a4d926932df43b80adef4426a730c730a1104667d506",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/incomplete_hand_negative/summary.json": "7b40f4b41dd30c2280269587925f1f6d141812564b6d79bf2db31f5dd5ef9a12",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/native_on_sat_negative/linux_cleanup_observations.jsonl": "9d4a8722e2d582101105b540a35a2257a5c5482895b5c73b6f15ad6b710ef684",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/native_on_sat_negative/manifest.json": "959a60f643a5a232e08a3397d1d006810bda0ac857ed4360bd77cbe0bc4c0142",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/native_on_sat_negative/progress.jsonl": "b3ee7d54930266cfffa01e54e2b237f788d5415575e71e2880340164e89daba8",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/native_on_sat_negative/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/native_on_sat_negative/stdout.log": "ee842f6714e4b734c45c998caada1b7592917a2faf0cd18522bcce367cb8ff9b",
+    "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/native_on_sat_negative/summary.json": "b37cf2294dae407fc4dd2deeb71fcb830a27a2da65a8243cdce59ce6a32bc76a",
+    "acceleration/results/20261004_local_sat_binary_controls_vector_correction01.json": "0ca99e3046de842bff9b54ecaa25038c5dada00892c600f73b6009f851db3db8",
+    "acceleration/results/20261004_local_sat_binary_drat_dependency_controls_native_v4_review01.json": "ad724a3ec82ed08e3b83224a98e739524c54141ecb121e68fa6924b5f5bb113e",
+    "acceleration/results/20261004_local_sat_binary_drat_hand_fixture_boundaries01.json": "07c96e1af4a34e8edd1eb3d1878513c88a810100a36aa35d07725df427528e24",
+    "acceleration/results/20261004_local_sat_binary_drat_hand_fixture_boundaries02.json": "6a99ec0332d7e888d04e9cce10d0e82b78901279f84ee1e4fff376352eab7f79",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_native_actual_review01.json": "7886a7c0a26cd2845bd948c21e275284df744cb6bee6454bc37fbc848037b862",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_native_static_review01.json": "03f8c93f4dcce41632da8ac87d0246a42475043ecf67ac11ae1f6011a0f67072",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_root_actual_acceptance01.json": "5ae6d562554c46e88091fb0727921c9466f8992987deac9641334ab6bd2a6276",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_root_one01.json": "df758d41d1c7fbe58f0e74a8eca580ae42effbcd612fbd7f50bc8359660812fd",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01/linux_cleanup_observations.jsonl": "a0121900af0a906b856839b11f181b35257259133fd79f7778e65cfcb6d685ff",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01/manifest.json": "8279c43cf03c10083c2e912d39bef72c95516aa53bf4b7051f724b261d7875f6",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01/progress.jsonl": "a67b92d4617e2b673a741e09ecdb72dc791a963ebe1647096cc2f57dd4a0a33a",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01/stderr.log": "1d6017b9b36839dd9f24635d0bfbc9be53958bb0b00c34aeb3190a53abaefbe3",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01/stdout.log": "9bad164ffd244226ecd137eaab90bb3ff844b9b779d693e71737672ac9949d64",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01/summary.json": "673654e44b4442ff03618fab14963e2a6b24aa468bf573688fb91af82966e16e",
+    "acceleration/results/20261004_local_sat_binary_drat_original_fixture_native_veto01.json": "5caec9f1cb6e62d1de07ed212f7b304cbea8594968d5000d6f88b4a30e09057e",
+    "acceleration/results/20261004_local_sat_binary_drat_source_freeze01.json": "53639697d3e0913fb7cea71d4ff1d94147f75664fd411690b82cf48e15a9e3c8",
+    "acceleration/results/20261004_local_sat_binary_native_actual_controls_native_review01.json": "3d1cc3a0039a65b82086162f1f14397d1ca6d55da9f23a1f798024f33e361a87",
+    "acceleration/results/20261004_local_sat_binary_native_bad_hash_root_one01.json": "336be8ef10b4b66f09f5a83c9c7e43e6b2dbc1d49845f1b7dc070790fe7cc621",
+    "acceleration/results/20261004_local_sat_binary_native_existing_output_root_one01.json": "c3af17a4c8bb4c07dc2338f5d1e2040449d99e741f5b36400f53c97930e4f462",
+    "acceleration/results/20261004_local_sat_binary_native_sat_root_one01.json": "1a1db0db1f6d55096c56956ea6f4b5e3fa2ceab9969ed9946414123c8d65af94",
+    "acceleration/results/20261004_local_sat_binary_native_unsat_root_one01.json": "4eb2102a765550d56c95bac1cbe2bb64f191dbf3f40b523210e75a45aab4c42e",
+    "acceleration/results/20261004_local_sat_binary_native_unsupported_seconds_root_one01.json": "33b59c45567fc9a887857760d31dcf7d9150cabeb36308b89838a625b3733ae3",
+    "acceleration/results/20261004_local_sat_binary_proof_crlf_missing_lemma_negative_root_observation01.json": "155af4049c58a0efc8c58f256c2592dcba2616c30b04d7633c76470f48cd0f57",
+    "acceleration/results/20261004_local_sat_binary_proof_crlf_missing_lemma_negative_root_one01.json": "f8797f26b467aaff37e2d89acd5f7cbbd6987a564e98cd3c17fdd6b44fdad9ca",
+    "acceleration/results/20261004_local_sat_binary_proof_crlf_translated_negative_root_observation01.json": "cf59ddd8dad5c3313261a104914dda311dc74b3ccd492c54abeb175ad79674a1",
+    "acceleration/results/20261004_local_sat_binary_proof_crlf_translated_negative_root_one01.json": "45bd65e5d80350a09861ae64f0b1dbbbffed6646b8f88f2386adb671fafce583",
+    "acceleration/results/20261004_local_sat_binary_proof_ctrl_z_truncated_negative_root_observation01.json": "38672dce767b3b64d3ffd5c03def267e54df145fedcb72f3ca390256b0f08f62",
+    "acceleration/results/20261004_local_sat_binary_proof_ctrl_z_truncated_negative_root_one01.json": "f20e5b66c63d1f34c6631643a890665a60a2de5712f8872ad10661dcbf0f4dbc",
+    "acceleration/results/20261004_local_sat_binary_proof_empty_only_negative_root_observation01.json": "327455f955ba647f449657f158c7d1c2dffae1c368a3432d043a76a448313c88",
+    "acceleration/results/20261004_local_sat_binary_proof_empty_only_negative_root_one01.json": "01f3e4b161d89820dea362494ebbef8751cbe6b7f746ff47f57e9fae9df2011a",
+    "acceleration/results/20261004_local_sat_binary_proof_genuine_native_root_observation01.json": "de39fd9257171276988dfc0f083c3e3edcf2f23da359cf9aecf309afab27db25",
+    "acceleration/results/20261004_local_sat_binary_proof_genuine_native_root_one01.json": "c1ed26eaca4384aeb724aabcbfd8385765eb80f53035d3cafe2c462dccd3db7f",
+    "acceleration/results/20261004_local_sat_binary_proof_hand_crlf_sensitive_root_observation01.json": "ba97d92b51fb508d5afc5018c5e67c06819df1c25f7c7961d7db777f8cf04522",
+    "acceleration/results/20261004_local_sat_binary_proof_hand_crlf_sensitive_root_one01.json": "d2fd75e44f2c32fd12ed358333d4807a81b3181a4b4d415482ebc24b7af8d7b6",
+    "acceleration/results/20261004_local_sat_binary_proof_hand_ctrl_z_root_observation01.json": "f0d7f22b8080a91af2c587a77747ae3636d4989f1c3c5e906fcb1aca6187a049",
+    "acceleration/results/20261004_local_sat_binary_proof_hand_ctrl_z_root_one01.json": "4291019de488f8050e60da3bc64b2301ea7d83c880e3f63962d2785267423cf8",
+    "acceleration/results/20261004_local_sat_binary_proof_incomplete_hand_negative_root_observation01.json": "1bc14eb76cc7a9954b4895451668ade918f6c76437c694f569b424426816562b",
+    "acceleration/results/20261004_local_sat_binary_proof_incomplete_hand_negative_root_one01.json": "def16673ba7b7709529878092dcc5d3c661bff5cb815e57d2b7f333fba935813",
+    "acceleration/results/20261004_local_sat_binary_proof_native_on_sat_negative_root_observation01.json": "8466a5bee9213f7af8d8b3cb77aa876082403cae2d956b0b16c32d9ec31be480",
+    "acceleration/results/20261004_local_sat_binary_proof_native_on_sat_negative_root_one01.json": "4776af6bcaeb03b326a13473d81685aeca5d095628db33354d2189e1806c5683",
+    "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh": "5d4b351e91997fda5fdc9d0767a08fa6a47d5b7d6def35ad288c581cf3d6ffb1",
+    "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1_spec.md": "dbc7335c17902b524cf86e8b3674bdb6df560bfdf63673367fd9cdef8a5cab8d",
+    "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh": "4ca287aab7e41d392d83fa20fc69de495b3185287a6a537e18812149ef7b5b09",
+    "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2_spec.md": "84196a3be4889b35293017fb4542d2b5c5460776405ff2ef7879dfd2446160c7",
+    "acceleration/run_compute_command_v2.py": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+    "acceleration/run_compute_command_v2_spec.md": "33e242b6dc28fa783b29825b76311fdc36d16f5cdf1897ca3b41671cafc1acc1",
+    "acceleration/spec_20261004_local_sat_binary_drat_dependency_controls_v1.md": "b95ecc203fb1b6643756687717a33b523a4b9b5ccecbbf58c971c750f5255890",
+    "build/fixed17-local-sat-binary-drat-linux-v1/build.sha256": "02abe65e1af7ac2abb8e4e25c895bb30c09bcb5efe90b2728572a2eb1c6d4571",
+    "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim": "d506ecaaee43c9f8221764cd5d92db45ea5e5a9a192227e015ad9412bc8b0e27",
+    "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "build/research-cadical195/source/build/cadical": "021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7",
+    "build/research-cadical195/source/src/drattracer.cpp": "5c68206694684bd1183a1704d21c376a42528e0788eb7ad40fcfb6014fc85149",
+    "build/research-cadical195/source/src/options.hpp": "fdcb59870f62214555ca22cef49f8e4c2355a357946581fa7d1f3b5a0bf8d2d3",
+    "build/rook-drat-checker/build_manifest.json": "219e14aeb9efb7df5629cb45405b08d45b2613133207e92bd4f7c09a5b2211b7",
+    "build/rook-drat-checker/build_receipt.json": "4862b4cc61fe2832943c988c5418cd85ae795924fd83a40482c0da4fb03b7e4b",
+    "build/rook-drat-checker/drat-trim.c": "82835512d4eda7dee1e0e3f610a0672fa1d216ea91246bcb576022020fe18f4c",
+    "build/rook-drat-checker/upstream-drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "build/rook-drat-checker/windows-portability.patch": "2050f0b7ce9d4878944eecf6d94c414d8d60941a3e9f2df353ad30cd5316676c",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "input_count": 187,
+  "fresh_hash_observation_timestamp": "2026-10-04T15:49:43.5038810Z",
+  "all_inputs_fresh_match": true,
+  "all_54_proof_raw_files_whole_read": true,
+  "all_18_proof_root_receipts_logical_fields_read": true,
+  "all_nine_commands_and_suffixes_exact": true,
+  "all_nine_authority_pin_unions_exact": true,
+  "root_observation_terminal_matches_originals_after_timestamp_UTC_normalization": true,
+  "raw_terminal_cleanup_and_progress_preserved": true,
+  "each_raw_directory_exact_six_files": true,
+  "all_stderr_empty": true,
+  "all_unique_statuses_match": true,
+  "all_commands_exit_without_deadline_or_error": true,
+  "all_original_groups_reaped_observed_empty_without_unreadable_members": true,
+  "nonzero_supervisor_status_literal_preserved": true,
+  "nonzero_supervisor_status_does_not_infer_timeout": true,
+  "cases": [
+    {
+      "name": "genuine_native",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_genuine_native_root_one01.json",
+        "sha256": "c1ed26eaca4384aeb724aabcbfd8385765eb80f53035d3cafe2c462dccd3db7f"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_genuine_native_root_observation01.json",
+        "sha256": "de39fd9257171276988dfc0f083c3e3edcf2f23da359cf9aecf309afab27db25"
+      },
+      "actual_invocation": "40c799774afe4c85aa865e6e973bf674",
+      "manifest_timestamp": "2026-10-05T00:36:27.598766+09:00",
+      "supervisor_literal_status": "COMMAND_COMPLETED_VERIFICATION_PENDING",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 0,
+      "elapsed_seconds": 0.15154990999999995,
+      "original_group": 409,
+      "expected_unique_statuses": [
+        "s VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s VERIFIED"
+      ],
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/unsat.cnf",
+        "sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58"
+      },
+      "formula_exact_text": "p cnf 2 4\n1 2 0\n1 -2 0\n-1 2 0\n-1 -2 0\n",
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/proof.drat",
+        "sha256": "8bb12aadd23c17bdf36e12987c0b1b1bc32dc31b29840ea821668595602db5e2",
+        "bytes": 8
+      },
+      "proof_bytes": 8,
+      "proof_hex": "61 05 00 61 02 00 61 00",
+      "decoded_additions": [
+        [
+          -2
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "First -2 is RUP under assumption 2, producing 1 and -1. After -2 unit propagation already refutes; the later 1 and empty additions are RUP. All three records and exact EOF independently checked.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "711d55fa2e6a98c2d065f912980e7bde62614b2addb64ba870aa73f18491b2d9",
+        "manifest.json": "3fb2fc5fb03ca8809f9fc5e153ce4767ddd65a3f3343baa24c70b49854eae67f",
+        "progress.jsonl": "c160e48564ee6e5608a05022c90087885f952fdb0d7fac29bb984203919e8c7e",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "e1788a4d908b5d0c53320fd05bd446f3b22a478e57173b622cf1e87e6f62edf1",
+        "summary.json": "8029c376d5d6c78ab6c6cd80f2c22f228f82898eb4368e0af4e07bfa0c695b04"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer0 and statuses exactly[s VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/genuine_native",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/proof.drat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/proof.drat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "hand_ctrl_z",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_hand_ctrl_z_root_one01.json",
+        "sha256": "4291019de488f8050e60da3bc64b2301ea7d83c880e3f63962d2785267423cf8"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_hand_ctrl_z_root_observation01.json",
+        "sha256": "f0d7f22b8080a91af2c587a77747ae3636d4989f1c3c5e906fcb1aca6187a049"
+      },
+      "actual_invocation": "493d616ae2464db48177e925c53c75ac",
+      "manifest_timestamp": "2026-10-05T00:39:25.710099+09:00",
+      "supervisor_literal_status": "COMMAND_COMPLETED_VERIFICATION_PENDING",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 0,
+      "elapsed_seconds": 0.13221131699999988,
+      "original_group": 407,
+      "expected_unique_statuses": [
+        "s VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s VERIFIED"
+      ],
+      "formula": {
+        "bytes": 47,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "sha256": "7a39b93228b1366521d47e550bbb83e64b5b78ca71849424ace0c3fde48ebb59"
+      },
+      "formula_exact_text": "p cnf 14 4\n13 14 0\n13 -14 0\n-13 14 0\n-13 -14 0\n",
+      "proof": {
+        "bytes": 5,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_first_valid.bdrat",
+        "sha256": "5577ab28304c5bae36a6f869ad75f07ea3167ccd6e06d1e8e9151e3a8ea297b4"
+      },
+      "proof_bytes": 5,
+      "proof_hex": "61 1a 00 61 00",
+      "decoded_additions": [
+        [
+          13
+        ],
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "13 is RUP under -13 producing 14 and -14. Then 13 makes the opposite pair produce 14 and -14. Essential 0x1a occurs before any completed lemma. Two records and exact EOF checked.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "3bed82a31fdd2be2c2ff215cd9e360fdeb63ac5c7989d2cc60597ccb769cb9af",
+        "manifest.json": "2fa4d9b7df0c6d70ca76a68d2851f86e3e1d4b4a16dce96b8301d675b65f5e52",
+        "progress.jsonl": "b0a86f43518831fd9f458e8768ff42833d508c98ee1a63d18f3a50f04a50e280",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "338fb178705e5c1bf7da304954cc6fbd8361f07042907aa26e7a02a5d57d85d7",
+        "summary.json": "cfb7cd984b3fddd1bfd28632dad1525dd1a07af117af715f8c09c75af8cff64d"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer0 and statuses exactly[s VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_ctrl_z",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_first_valid.bdrat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_first_valid.bdrat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "hand_crlf_sensitive",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_hand_crlf_sensitive_root_one01.json",
+        "sha256": "d2fd75e44f2c32fd12ed358333d4807a81b3181a4b4d415482ebc24b7af8d7b6"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_hand_crlf_sensitive_root_observation01.json",
+        "sha256": "ba97d92b51fb508d5afc5018c5e67c06819df1c25f7c7961d7db777f8cf04522"
+      },
+      "actual_invocation": "7d8ab07531534d228729f972f6216bd3",
+      "manifest_timestamp": "2026-10-05T00:39:28.255727+09:00",
+      "supervisor_literal_status": "COMMAND_COMPLETED_VERIFICATION_PENDING",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 0,
+      "elapsed_seconds": 0.13559596200000001,
+      "original_group": 415,
+      "expected_unique_statuses": [
+        "s VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s VERIFIED"
+      ],
+      "formula": {
+        "bytes": 57,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "sha256": "d697001eb4a3ba3102c8c43ed0c37885cd9ef9c8533199d41ecdcabff1718157"
+      },
+      "formula_exact_text": "p cnf 6 6\n-6 5 2 0\n-6 5 -2 0\n-5 3 0\n-5 -3 0\n6 1 0\n6 -1 0\n",
+      "proof": {
+        "bytes": 9,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_valid.bdrat",
+        "sha256": "79f3520d763e8992f631e092f18774c1442ee97a665e5a81593623af0310e203"
+      },
+      "proof_bytes": 9,
+      "proof_hex": "61 0d 0a 00 61 0d 00 61 00",
+      "decoded_additions": [
+        [
+          -6,
+          5
+        ],
+        [
+          -6
+        ],
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "C=(-6,5) is RUP under 6,-5 producing 2,-2; -6 is RUP using C then 5 and 3,-3; after -6 originals produce 1,-1. C is indispensable marked dependency. All records and exact EOF checked.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "673f3d40abc910d303a68a1c3f39dce4c5c11bcee401ffdc822f81185812b508",
+        "manifest.json": "a1b497c0becd722866d7e39947827edb9304e3b835c092f7b7d2c08a06817c41",
+        "progress.jsonl": "d1466d4c56c3237a7091e7a3e1202ef81d53e032436c2d0e1e5af1a9a60a60fa",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "39584a946e554577d651f16264aa05200bf406d5eddffd1c68a71caefa39e065",
+        "summary.json": "6ce6e09afe2deedce16fe1e4f96e79028095b26e2b6415336b3a721ce90e240d"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer0 and statuses exactly[s VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/hand_crlf_sensitive",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_valid.bdrat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_valid.bdrat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "empty_only_negative",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_empty_only_negative_root_one01.json",
+        "sha256": "01f3e4b161d89820dea362494ebbef8751cbe6b7f746ff47f57e9fae9df2011a"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_empty_only_negative_root_observation01.json",
+        "sha256": "327455f955ba647f449657f158c7d1c2dffae1c368a3432d043a76a448313c88"
+      },
+      "actual_invocation": "e47a6983f1c34d688f1d1175eab192fb",
+      "manifest_timestamp": "2026-10-05T00:39:56.012026+09:00",
+      "supervisor_literal_status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 1,
+      "elapsed_seconds": 0.16584037199999813,
+      "original_group": 385,
+      "expected_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/unsat.cnf",
+        "sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58"
+      },
+      "formula_exact_text": "p cnf 2 4\n1 2 0\n1 -2 0\n-1 2 0\n-1 -2 0\n",
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/empty_only.bdrat",
+        "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+        "bytes": 2
+      },
+      "proof_bytes": 2,
+      "proof_hex": "61 00",
+      "decoded_additions": [
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "Initial four nonunit clauses do not unit-propagate a conflict; empty is not RUP and has no RAT pivot. Record EOF is well formed.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "ab439975db8807c7e7ccd5c8d194181dc16a694c3962f3a159d51d9bf1ae593a",
+        "manifest.json": "caa802a0e7fa81fba64712ccdce68a5687122ed3d40b89e553c68bae0e355eab",
+        "progress.jsonl": "f1a42c1150b3b7c5f7af53a2576c55ece09e174c6b96a011a675fec97c57c05d",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "7f7a531f2296518d7428beea2e9f3824bc036f5e13feed8af4f6f627c286e0a2",
+        "summary.json": "0f71d0d086c5a66c00819e8dd0d7c9fff3d402eee218c1868cdecec37e4072c1"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer1 and statuses exactly[s NOT VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/empty_only_negative",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/empty_only.bdrat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/empty_only.bdrat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "native_on_sat_negative",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_native_on_sat_negative_root_one01.json",
+        "sha256": "4776af6bcaeb03b326a13473d81685aeca5d095628db33354d2189e1806c5683"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_native_on_sat_negative_root_observation01.json",
+        "sha256": "8466a5bee9213f7af8d8b3cb77aa876082403cae2d956b0b16c32d9ec31be480"
+      },
+      "actual_invocation": "3e65034cdbae407a971991177fc68c61",
+      "manifest_timestamp": "2026-10-05T00:39:58.612764+09:00",
+      "supervisor_literal_status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 1,
+      "elapsed_seconds": 0.14648473199999756,
+      "original_group": 393,
+      "expected_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/sat.cnf",
+        "sha256": "c723087c6c5f7c739aa6f938795f888f96ddff55f6ff620953f14fb726660296"
+      },
+      "formula_exact_text": "p cnf 2 2\n1 2 0\n-1 2 0\n",
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/proof.drat",
+        "sha256": "8bb12aadd23c17bdf36e12987c0b1b1bc32dc31b29840ea821668595602db5e2",
+        "bytes": 8
+      },
+      "proof_bytes": 8,
+      "proof_hex": "61 05 00 61 02 00 61 00",
+      "decoded_additions": [
+        [
+          -2
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "-2 is neither RUP nor RAT on the SAT two-clause formula. Pivot -2 resolvents 1 and -1 each fail RUP. The invalid unit creates a conflict when added and is marked; actual proof line 1 rejection agrees.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "9d4a8722e2d582101105b540a35a2257a5c5482895b5c73b6f15ad6b710ef684",
+        "manifest.json": "959a60f643a5a232e08a3397d1d006810bda0ac857ed4360bd77cbe0bc4c0142",
+        "progress.jsonl": "b3ee7d54930266cfffa01e54e2b237f788d5415575e71e2880340164e89daba8",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "ee842f6714e4b734c45c998caada1b7592917a2faf0cd18522bcce367cb8ff9b",
+        "summary.json": "b37cf2294dae407fc4dd2deeb71fcb830a27a2da65a8243cdce59ce6a32bc76a"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer1 and statuses exactly[s NOT VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/native_on_sat_negative",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/sat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/proof.drat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_native_controls_inputs01/sat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_supervision01/unsat/proof.drat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "incomplete_hand_negative",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_incomplete_hand_negative_root_one01.json",
+        "sha256": "def16673ba7b7709529878092dcc5d3c661bff5cb815e57d2b7f333fba935813"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_incomplete_hand_negative_root_observation01.json",
+        "sha256": "1bc14eb76cc7a9954b4895451668ade918f6c76437c694f569b424426816562b"
+      },
+      "actual_invocation": "51a817c6406147c78ff700c7b3430444",
+      "manifest_timestamp": "2026-10-05T00:40:01.249466+09:00",
+      "supervisor_literal_status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 1,
+      "elapsed_seconds": 0.13862337999999852,
+      "original_group": 401,
+      "expected_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "sha256": "7a39b93228b1366521d47e550bbb83e64b5b78ca71849424ace0c3fde48ebb59"
+      },
+      "formula_exact_text": "p cnf 14 4\n13 14 0\n13 -14 0\n-13 14 0\n-13 -14 0\n",
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_incomplete.bdrat",
+        "sha256": "a0c816b12326474e0dd9da22ff726a57dd0f7bfcbb029e0eb1bc7b6ca37bb639",
+        "bytes": 6
+      },
+      "proof_bytes": 6,
+      "proof_hex": "61 1a 1c 00 61 00",
+      "decoded_additions": [
+        [
+          13,
+          14
+        ],
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "Original duplicate (13,14) is valid but creates no units; empty has no unit-propagation conflict. File name means inadequate refutation; both binary records are well formed.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "b80545763b88b5a4d1f258dc1e563fc81c02a9d96a90da8e3cd652f434ecc3e4",
+        "manifest.json": "4304bd5a27fa7e25bf67756a522627831a4e809ff3926ffa27bde3187ccd8897",
+        "progress.jsonl": "4d7dc99816df49a571dddb01b5d88d8b237d257f39512ee98e6a60c5b7a6db50",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "669f2b6bb5b63dc412e4a4d926932df43b80adef4426a730c730a1104667d506",
+        "summary.json": "7b40f4b41dd30c2280269587925f1f6d141812564b6d79bf2db31f5dd5ef9a12"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer1 and statuses exactly[s NOT VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/incomplete_hand_negative",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_incomplete.bdrat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_incomplete.bdrat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "ctrl_z_truncated_negative",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_ctrl_z_truncated_negative_root_one01.json",
+        "sha256": "f20e5b66c63d1f34c6631643a890665a60a2de5712f8872ad10661dcbf0f4dbc"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_ctrl_z_truncated_negative_root_observation01.json",
+        "sha256": "38672dce767b3b64d3ffd5c03def267e54df145fedcb72f3ca390256b0f08f62"
+      },
+      "actual_invocation": "8482fa8a37f94a268f0a159c4524f67a",
+      "manifest_timestamp": "2026-10-05T00:40:21.912226+09:00",
+      "supervisor_literal_status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 1,
+      "elapsed_seconds": 0.12898617499999432,
+      "original_group": 368,
+      "expected_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "formula": {
+        "bytes": 47,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "sha256": "7a39b93228b1366521d47e550bbb83e64b5b78ca71849424ace0c3fde48ebb59"
+      },
+      "formula_exact_text": "p cnf 14 4\n13 14 0\n13 -14 0\n-13 14 0\n-13 -14 0\n",
+      "proof": {
+        "bytes": 1,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_truncated.bdrat",
+        "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+      },
+      "proof_bytes": 1,
+      "proof_hex": "61",
+      "decoded_additions": null,
+      "strict_finite_records_domain_terminator_EOF_checked": false,
+      "intentionally_truncated_record": true,
+      "hand_result": "Only 0x61 is present; EOF before the first literal. Source does not append any lemma and initial nonunit formula cannot unit-refute. Intentional malformed record rejects; stdout read-count 2 includes an EOF read and is not file length.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "52f4fee1e9e1412f58ee03ea7359b68951666283521fad2709827c035b9183de",
+        "manifest.json": "67f9befce22d78e775cc8b1d64e212582bfb90e2cc03c9d54be745544adb78c9",
+        "progress.jsonl": "d2aafd8dda83bd738b2bc7ee07d6f398f4f0048ceb712ebf70fb5bd94031c2fb",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "85a9c3ce5c2f9ebc7c8319958a5e9b0918d128ddbddca1c25cfdac956f5b4fd7",
+        "summary.json": "647476e5f54889b773ae0e92802f4990609e75037cdfe872b744df7b2b862d11"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer1 and statuses exactly[s NOT VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/ctrl_z_truncated_negative",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_truncated.bdrat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_truncated.bdrat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "crlf_translated_negative",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_crlf_translated_negative_root_one01.json",
+        "sha256": "45bd65e5d80350a09861ae64f0b1dbbbffed6646b8f88f2386adb671fafce583"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_crlf_translated_negative_root_observation01.json",
+        "sha256": "cf59ddd8dad5c3313261a104914dda311dc74b3ccd492c54abeb175ad79674a1"
+      },
+      "actual_invocation": "11114253c08d438bba05e03f7c95568a",
+      "manifest_timestamp": "2026-10-05T00:40:24.554356+09:00",
+      "supervisor_literal_status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 1,
+      "elapsed_seconds": 0.18525796000000128,
+      "original_group": 376,
+      "expected_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "formula": {
+        "bytes": 57,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "sha256": "d697001eb4a3ba3102c8c43ed0c37885cd9ef9c8533199d41ecdcabff1718157"
+      },
+      "formula_exact_text": "p cnf 6 6\n-6 5 2 0\n-6 5 -2 0\n-5 3 0\n-5 -3 0\n6 1 0\n6 -1 0\n",
+      "proof": {
+        "bytes": 8,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_translated.bdrat",
+        "sha256": "fe284d56f12cb83ae05def643c8d5bf95a716e41d101828b93ec107b533bb80b"
+      },
+      "proof_bytes": 8,
+      "proof_hex": "61 0a 00 61 0d 00 61 00",
+      "decoded_additions": [
+        [
+          5
+        ],
+        [
+          -6
+        ],
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "First 5 is not RUP; sole RAT pivot 5 resolvents +/-3 are not RUP. Adding bad 5 creates 3/-3 conflict and marks it, preventing unused-clause skipping. Actual pivot 5 rejection agrees.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "218793598ee76d2be0ebf865fe3873b8bd41ad45bc3f37dd037525f25ce111bd",
+        "manifest.json": "6d8855cb86b6a8dc526d0a28d2f417cb8287e6f320960ec0722dbc209117613d",
+        "progress.jsonl": "d3809ebc7f0e25fc5216250d676aa7b4e1725371da7ccae7d776b64b759dd335",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "57dadbe408d8083c766cf5edfc26a4fb142d99588b3c17a62bb9b8dbc9738a50",
+        "summary.json": "047eb4334a5489076365e115f2a329a6130078deb212b1dc1d38b577c4b8cd8e"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer1 and statuses exactly[s NOT VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_translated_negative",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_translated.bdrat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_translated.bdrat",
+        "-t",
+        "30"
+      ]
+    },
+    {
+      "name": "crlf_missing_lemma_negative",
+      "authority": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_crlf_missing_lemma_negative_root_one01.json",
+        "sha256": "f8797f26b467aaff37e2d89acd5f7cbbd6987a564e98cd3c17fdd6b44fdad9ca"
+      },
+      "root_observation": {
+        "path": "acceleration/results/20261004_local_sat_binary_proof_crlf_missing_lemma_negative_root_observation01.json",
+        "sha256": "155af4049c58a0efc8c58f256c2592dcba2616c30b04d7633c76470f48cd0f57"
+      },
+      "actual_invocation": "e7267cfad3b44a8db6714e335c25e86c",
+      "manifest_timestamp": "2026-10-05T00:40:27.182501+09:00",
+      "supervisor_literal_status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+      "stop_reason": "COMMAND_EXITED",
+      "child_exit": 1,
+      "elapsed_seconds": 0.14223219699999845,
+      "original_group": 384,
+      "expected_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "observed_unique_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "formula": {
+        "bytes": 57,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "sha256": "d697001eb4a3ba3102c8c43ed0c37885cd9ef9c8533199d41ecdcabff1718157"
+      },
+      "formula_exact_text": "p cnf 6 6\n-6 5 2 0\n-6 5 -2 0\n-5 3 0\n-5 -3 0\n6 1 0\n6 -1 0\n",
+      "proof": {
+        "bytes": 5,
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_missing_lemma.bdrat",
+        "sha256": "d4e5498b46003fc51be50b238c379fa2db1b2010c5d4ce08e72ae6990ed29a13"
+      },
+      "proof_bytes": 5,
+      "proof_hex": "61 0d 00 61 00",
+      "decoded_additions": [
+        [
+          -6
+        ],
+        []
+      ],
+      "strict_finite_records_domain_terminator_EOF_checked": true,
+      "intentionally_truncated_record": false,
+      "hand_result": "First -6 without C is not RUP; sole RAT pivot -6 resolvents +/-1 are not RUP. Adding bad -6 creates 1/-1 conflict and marks it. Actual pivot -6 rejection agrees.",
+      "all_expected_observations_match": true,
+      "root_one_input_count": 65,
+      "raw_outputs_sha256": {
+        "linux_cleanup_observations.jsonl": "cc96ee62a39abc6585263abcb69a36b68457022694b54e00eb339226f365d21f",
+        "manifest.json": "95271b315a7aeb24ba6e6444c3b7e93aa7c8c6438fa9031859743b9caf1b8938",
+        "progress.jsonl": "d99d7feb8457ea8bb40ce7ff64e6ad5173208fe30173f3169a131033af3d7888",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "9a354e0f768ae330ad3a9f56f2d91dcc4d4cb62a69d06742f7ff48832edee931",
+        "summary.json": "372fa4ab986c3319f048e48e079ab046d51b852771cdb8dd04e3a81d14d0d06a"
+      },
+      "raw_physical_inventory": [
+        "linux_cleanup_observations.jsonl",
+        "manifest.json",
+        "progress.jsonl",
+        "stderr.log",
+        "stdout.log",
+        "summary.json"
+      ],
+      "exact_command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "ONE fresh Linux binary-DRAT tiny qualification;30 checker within60 outer20shutdown inclusive input/proof hashes, logs and seals. No solver/scientific formula or retry.",
+        "--success-criterion",
+        "Exact integer1 and statuses exactly[s NOT VERIFIED], binary records/EOF authenticated, clean supported original Linux group/no deadline.",
+        "--verification-criterion",
+        "Different-author hand RUP/RAT plus raw literal/byte0x1a/CRLF-sensitive clause checks; new actual Linux binary/build identity and fresh pre/post proof/formula seals mandatory.",
+        "--out",
+        "acceleration/results/20261004_independent_review/local_sat_binary_drat_controls02/crlf_missing_lemma_negative",
+        "--",
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_missing_lemma.bdrat",
+        "-t",
+        "30"
+      ],
+      "exact_child": [
+        "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_missing_lemma.bdrat",
+        "-t",
+        "30"
+      ]
+    }
+  ],
+  "independent_closure_checks": [
+    {
+      "case": "genuine_native",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "hand_ctrl_z",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "hand_crlf_sensitive",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "empty_only_negative",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "native_on_sat_negative",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "incomplete_hand_negative",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "ctrl_z_truncated_negative",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "crlf_translated_negative",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    },
+    {
+      "case": "crlf_missing_lemma_negative",
+      "entire_terminal_matches_after_timestamp_UTC_normalization": true,
+      "exact_65_pin_key_union": true
+    }
+  ],
+  "original_veto": {
+    "path": "acceleration/results/20261004_local_sat_binary_drat_original_fixture_native_veto01.json",
+    "sha256": "5caec9f1cb6e62d1de07ed212f7b304cbea8594968d5000d6f88b4a30e09057e",
+    "preserved": true,
+    "rehabilitated": false
+  },
+  "shared_components": [
+    "Authenticated CaDiCaL binary and upstream binary trace format.",
+    "Authenticated upstream Linux drat-trim source and actual ELF; no Native independent implementation of general DRAT checking.",
+    "Previously reviewed supported Linux supervisor/deadline and original-group receipts; observed cleanup only.",
+    "Structural authored launcher/build/templates; Root and Structural shared corrective fixture outlines; Native performed adversarial derivation and actual byte/receipt review.",
+    "Native authored the historical assignment V3 code; its exact V1 applicability is inspected here as a boundary, not independently requalified."
+  ],
+  "changed_driver_applicability": {
+    "historical_assignment_source": {
+      "path": "acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v3.py",
+      "sha256": "c93bd1a602e40e3dfd374bfb78a677fc0545d25f6c2e9e031cef97a73017c2f1"
+    },
+    "historical_assignment_spec": {
+      "path": "acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v3_spec.md",
+      "sha256": "b04f7d62ff49abe1d2c012973dd86551e23886b9d3c11c6fbd1117ec510fce73"
+    },
+    "exact_V1_pin_and_native_prefix_and_three_row_checksum": true,
+    "approves_new_V2_binary_science": false,
+    "required_successor": "A newly versioned, exact source-bound and freshly qualified assignment/runtime/checksum applicability path; old text-source gates cannot transfer.",
+    "prospective_interface_only": {
+      "supervisor_words": 24,
+      "child_words": 6,
+      "child": [
+        "/usr/bin/bash",
+        "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh",
+        "FORMULA",
+        "PROOF",
+        "CHECKSUM",
+        "1800"
+      ],
+      "checksum_rows": 3,
+      "review_json_flag": true,
+      "concrete_science_authority": null
+    },
+    "future_SAT_requirement": "Actual native 10 with clean original group/status/deadline/error plus complete assignment/all clauses/model/local rows and any graph diagnostic.",
+    "future_UNSAT_requirement": "Actual native 20 plus separately contained complete scientific proof verification and actual byte/format/formula/provenance requirements.",
+    "timeout_or_partial_trace_proves_neither": true
+  },
+  "finite_gate_qualified": true,
+  "arbitrary_binary_parser_approval": false,
+  "historical_Windows_text_gate_transferred": false,
+  "scientific_formula_or_certificate_approval": false,
+  "graph_object_approval": false,
+  "mathematical_claim_or_target_resolution_approval": false,
+  "execution_authority": false,
+  "actual_root_call_counts": {
+    "compiler": 1,
+    "native_invocations": 5,
+    "actual_solver_calls": 2,
+    "guard_only_native_cases": 3,
+    "proof_checker_calls": 9
+  },
+  "actual_native_call_counts": {
+    "compiler": 0,
+    "solver": 0,
+    "checker": 0,
+    "imports": 0,
+    "AST": 0,
+    "syntax_tests": 0,
+    "scientific_population_reads": 0
+  },
+  "owned_worker": null,
+  "protected_context_source": "Root per-case receipts only; no Native fresh process/ledger/index/HEAD query",
+  "ledger_or_Git_mutations": false,
+  "target_resolution": "UNKNOWN",
+  "limitations": [
+    "These finite binary fixtures test single-byte literal records, essential 0x1a and 0x0d0a, specific valid RUP traces and explicit malformed/corrupted negatives; they do not qualify all continuation/overflow varints or deletion streams.",
+    "Default backward checker may skip unmarked additions and stop after conflict; all exact tiny records were decoded/hand checked independently, but no whole scientific proof or large EOF condition is approved.",
+    "Require unique exact VERIFIED, strict code 0 and clean supported original group; upstream TIMEOUT can exit 0.",
+    "One-byte truncation stdout read-count is 2 because read_lit counts the EOF read. Physical bytes and all identity seals are 1.",
+    "Strict real-time stopping/resource accounting is not inferred from short observed completions.",
+    "Current assignment V3 exact V1 caller pin cannot transfer to changed binary launcher science.",
+    "Initial anchored status regex omitted upstream leading carriage return on the three positive status lines. Corrected optional single leading CR; raw files were unchanged and this was not a checker failure.",
+    "An ordered key-array display comparison used PowerShell collation versus JavaScript code-point sort and reported false. Complete key-set comparison then proved all nine exact 65-key unions; no raw inputs changed."
+  ]
+}

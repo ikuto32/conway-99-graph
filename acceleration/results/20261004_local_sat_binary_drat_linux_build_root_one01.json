@@ -1,0 +1,91 @@
+{
+  "schema": "ROOT_LINUX_BINARY_DRAT_BUILD_ADMISSION_V1",
+  "timestamp": "2026-10-04T15:19:45.2888554+00:00",
+  "result": "PASS_ROOT_DISPATCH_BUILD_ONLY",
+  "source_author": "/root/structural",
+  "executor": "/root",
+  "plan": "acceleration/plan_20261004_local_sat_binary_drat_linux_build_v1.json",
+  "plan_sha256": "d6f54ad6829511e16f73d8eb2e927f2f272325de528b67eca070edd4293f662d",
+  "fresh_inputs_sha256": {
+    "acceleration/run_compute_command_v2.py": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+    "acceleration/run_compute_command_v2_spec.md": "33e242b6dc28fa783b29825b76311fdc36d16f5cdf1897ca3b41671cafc1acc1",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261003_native_active_stop_sat_hard05_root_review.json": "80054f703b49b11ab5e45d2d4d7c801f66c4030aa7ae7b32ca45a39dcce2b168",
+    "acceleration/results/20261003_native_active_stop_sat_reassessment05_root_review.json": "a5c13e9f15c36519fcafd75488824d92d6ae500dcd180fb5af2e104250c10257",
+    "acceleration/results/20261003_native_active_stop_descendant_hard05_root_review.json": "4f34d48f45c20947f97479d6226ae6a0402e183c6774125c1fdd6f5b659b99eb",
+    "acceleration/results/20261003_native_active_stop_descendant_reassessment05_root_review.json": "07aaf0920305ade4b2fdcfd175784f4f28ee50ffd77c47caad2a4d8446593dbf",
+    "acceleration/results/20261003_native_active_stop_mixed_hard06_root_review.json": "10fcf5e06ffa6949b92a553bb7cd4b469aa351ad836719e94ef6d45a0c9d4473",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06_root_review.json": "7879283e657bf010f75862c6362be0178bdaf0a823c6af196776392584a3d8d4",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh": "0992017719e75a3696f9c96b54e2aedc4ce91618cf6493d9c5db306da17b8bf6",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1_spec.md": "bf7eb3dae04be9f6455ac4992586a98019eec8b2b716446528e307b234c4deca",
+    "build/rook-drat-checker/upstream-drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "build/rook-drat-checker/build_manifest.json": "219e14aeb9efb7df5629cb45405b08d45b2613133207e92bd4f7c09a5b2211b7",
+    "build/rook-drat-checker/build_receipt.json": "4862b4cc61fe2832943c988c5418cd85ae795924fd83a40482c0da4fb03b7e4b",
+    "acceleration/audit_20261004_local_sat_binary_drat_linux_build_native_v1.md": "b36c7e4cf83dcb0e177ed616d78b966727d95dbd13bbc4433ffb9e545f82f3ad",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_native_static_review01.json": "03f8c93f4dcce41632da8ac87d0246a42475043ecf67ac11ae1f6011a0f67072",
+    "acceleration/plan_20261004_local_sat_binary_drat_linux_build_v1.json": "d6f54ad6829511e16f73d8eb2e927f2f272325de528b67eca070edd4293f662d"
+  },
+  "fresh_input_count": 18,
+  "supervisor_argv": [
+    "/usr/bin/python3",
+    "-B",
+    "acceleration/run_compute_command_v2.py",
+    "--seconds",
+    "180",
+    "--shutdown-reserve-seconds",
+    "20",
+    "--allocation-reason",
+    "ONE fresh single-source Linux DRAT checker build;90 compiler seconds plus5 grace within180 outer20shutdown, inclusive source copy/hash/version/build seals. No proof/solver or retry.",
+    "--success-criterion",
+    "Compiler exit0, fresh executable/source/build.sha256 and clean supported original Linux group, no deadline. Build success is not binary-proof qualification.",
+    "--verification-criterion",
+    "Root authenticates actual GCC/utilities versions and hashes, pinned d834 source/copy and literal flags; separate binary0x1a/CRLF positive and corrupt proof controls plus different-author raw review before use.",
+    "--out",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01",
+    "--",
+    "/usr/bin/bash",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh"
+  ],
+  "child_argv": [
+    "/usr/bin/bash",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh"
+  ],
+  "whole_build_source_spec_plan_review": true,
+  "independent_static_component_review": {
+    "acceleration/audit_20261004_local_sat_binary_drat_linux_build_native_v1.md": "b36c7e4cf83dcb0e177ed616d78b966727d95dbd13bbc4433ffb9e545f82f3ad",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_native_static_review01.json": "03f8c93f4dcce41632da8ac87d0246a42475043ecf67ac11ae1f6011a0f67072"
+  },
+  "linux_tool_hashes": {
+    "/usr/bin/gcc": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26",
+    "/usr/bin/python3": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "/usr/bin/bash": "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1",
+    "/usr/bin/sha256sum": "4d2db56c867e5324e0084c9e897f6360d37517de77ac96f2bd31494223d69a60",
+    "/usr/bin/timeout": "12690a043dfd555a6c14ccc1564f5649c18f1762c0d6ff66729948130898ec52",
+    "/usr/bin/prlimit": "17064f67e650d6152a6902b013aab496b54c87587c8eea6f5023aafee6154069"
+  },
+  "gcc_version": [
+    "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "Copyright (C) 2023 Free Software Foundation, Inc.",
+    "This is free software; see the source for copying conditions.  There is NO",
+    "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    ""
+  ],
+  "python_version": [
+    "Python 3.12.3"
+  ],
+  "uid1000": true,
+  "windows_scoped_workers": [],
+  "linux_scoped_workers": [],
+  "head": "9349bd83bda2c9ae72671ed6a8ab2efd3ae118f5",
+  "ledger_sha256": "bf03bdff787c08a989061fdd59a9ef867a9c04444cee98fb562f24ba0579d563",
+  "index_sha256": "3ceb7b2e8b98c7b0dac05e193b328b00d55666ceecad8a9d5e9799159fe5c56c",
+  "available_windows_memory_bytes": 68485271552,
+  "available_linux_memory_bytes": 49354108928,
+  "available_C_disk_bytes": 108349603840,
+  "transport": "wsl.exe is transport only; authoritative SUP464 runs inside Ubuntu-24.04 original Linux process group",
+  "proofs_checked": 0,
+  "binary_controls_approved": false,
+  "native_science_approved": false,
+  "target_resolution": "UNKNOWN"
+}

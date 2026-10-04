@@ -1,0 +1,43 @@
+{
+  "schema": "WRITTEN_STRUCTURAL_CANDIDATE_V1",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-SECOND-NEIGHBOR-MASS",
+  "claim_revision": 1,
+  "timestamp": "2026-10-04T15:33:31.4985372+00:00",
+  "producer": "/root/structural",
+  "status": "CANDIDATE",
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets by R and define d_T=6-r_T for each of its231 actual triangles, with D=sum_Td_T=6(231-R). For every T, D>=6d_T. More precisely, for d_T=m>0 its3m defect neighbors have deficiency sumK>=3m and D>=m+K+ceil(2K/3). If D=6m, all positive deficiencies are exactlyT(m),3m first neighbors(1),2m further triangles(1); they form a forced induced(3+6m)-point,(1+5m)-triangle edge union. The vector w=m onT,1 on its6m outer points,0 elsewhere satisfiesAw=3w+mj; outside it, exactly36-6m vertices have oneT neighbor and zeroouter neighbors, while exactly60 have zeroT neighbors and mouter neighbors. ThusR=229 allows either12 deficiency-one triangles or exactlyone deficiency-two andten deficiency-one triangles with the stated15-point geometry; neither branch norR=231 is excluded.",
+  "scope": {
+    "description": "Universal conditional necessary rook/triangle incidence screen in complete simple SRG(99,14,1,2), with equality geometry and positive weighted regular-set identity; no realization or target exclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "The graph is a complete finite simple strongly regular graph with parameters(99,14,1,2).",
+    "R counts actual induced nine-vertex subsets once, not embeddings, automorphisms or disjoint packs.",
+    "All triangles and all rook incidences are actual complete-graph objects; no approximate census is substituted."
+  ],
+  "dependencies": [],
+  "primary_source": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_SECOND_NEIGHBOR_BOUND_V1.md",
+    "sha256": "ba046522585d5a59a857251928d05c0ac59e69425bf58f420e8cd63be83f210c"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_SECOND_NEIGHBOR_BOUND_V1.md": "ba046522585d5a59a857251928d05c0ac59e69425bf58f420e8cd63be83f210c",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "acceleration/results/20261004_target_rook_nine_deficiency_gap_root_written_acceptance01.json": "db4fe5e9fb76b36d606b1c9ccced737210d270777679316a6a5a3fab8e7fafc7",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc"
+  },
+  "shared_discovery": "Root received preliminary6d_T andm2 outline before freezing; agreement is not independent verification.",
+  "bounded_overlap": "Complete earlier rook-gap paper and September17 regular-set audit plus targeted Markdown phrase search; m1 identity known. No archive-wide novelty claim.",
+  "proof_method": "Written distinct second-neighbor incidence counting; equality rigidity; exact target upper-Gram PSD forces inducedness and full outside incidence.",
+  "actual_mathematical_executions": 0,
+  "independent_verification": null,
+  "root_acceptance": null,
+  "ledger_or_Git_mutations": false,
+  "failed_shortcuts": [
+    "NoR229 exclusion: equality may still admit a conditional15-point core.",
+    "NoR231 exclusion and no positive deficiency or nonconstant codeword forced.",
+    "No arbitrary three-matching choice or equitable target partition assumed.",
+    "Linearity withoutlambda1does not forbid Berge3, so it does not justify the3-leaf capacity."
+  ]
+}

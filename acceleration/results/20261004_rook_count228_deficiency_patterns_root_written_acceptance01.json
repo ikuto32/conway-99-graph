@@ -1,0 +1,66 @@
+{
+  "schema": "ROOT_ROOK228_INDEPENDENT_WRITTEN_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T18:29:52.0784743+00:00",
+  "reviewer": "/root",
+  "producer": "/root/structural",
+  "verifier": "/root/checkpoint_audit",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-PATTERN-RESTRICTION",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, set d_T=6-r_T for every actual triangle T. All d_T lie in{0,1,2}; if h counts deficiency-two triangles, then1<=h<=5 and exactly18-2h>=8 triangles have deficiency one. Every deficiency-two triangle has at most three deficiency-two defect partners across its three points; if it has three, then h=4. Thus at h=5 the deficiency-two defect graph has maximum degree two; if a degree-three node occurs, the graph is a three-leaf star or that star with one leaf edge. No count228 or target exclusion follows.",
+  "result": "PASS_INDEPENDENT_WRITTEN_SCOPE",
+  "primary_verification_timestamp": "2026-10-04T18:14:25.5998263+00:00",
+  "method": "independent_derivation",
+  "proof_whole_read": true,
+  "independent_audit_whole_read": true,
+  "raw_statement_roles_revisions_dependencies_and_scope_reviewed": true,
+  "derivation_written_checks": 15,
+  "falsification_written_boundaries": 12,
+  "mathematical_programs": 0,
+  "source_commit": "9349bd83bda2c9ae72671ed6a8ab2efd3ae118f5",
+  "ledger_snapshot_claims": 444,
+  "ledger_snapshot_sha256": "0e871adb48cab76b79bc46032100ffc9bf3e855824afa2de2c1759cd30101b81",
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "prerequisite": null,
+  "fresh_inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md": "4e72a1d287145cf6ee944ed9a1e5929160d6ef2a69ba9c389e8f94c480593adc",
+    "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json": "fb517be28e709aaec2c68419488bbf2eb38e42f094b4721231c1ac035ee26353",
+    "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/claim_binding_schema2.json": "420bbd8a51c058c9017c0990c6579bb0f169e92788498c9286b98eb30a6bfa45"
+  },
+  "fresh_identity_count": 10,
+  "shared_components": [
+    "Root proposed gap-six discovery outline and independently reconstructed geometry",
+    "Structural authored immutable proofs; CP independently reconstructed/falsified them",
+    "Written review only, no computational census"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "target_resolution": "UNKNOWN",
+  "metadata_ceiling_seconds": 180,
+  "limitations": [
+    "Only the exact recorded conditional necessary restriction or single rook-count exclusion",
+    "No automorphism, full-support inducedness premise, codeword assumption or general target proof",
+    "Original creation-time null prerequisite/Root slots retained; these new receipts supply genuine later acceptance",
+    "No liveledger/Git/index mutation or public availability promotion"
+  ]
+}

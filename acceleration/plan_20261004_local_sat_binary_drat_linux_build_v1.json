@@ -1,0 +1,143 @@
+{
+  "schema": "LOCAL_SAT_BINARY_DRAT_LINUX_SOURCE_ONLY_BUILD_PLAN_V1",
+  "timestamp": "2026-10-04T14:56:04Z",
+  "status": "SOURCE_ONLY_NOT_AUTHORIZED",
+  "source": {
+    "path": "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh",
+    "sha256": "0992017719e75a3696f9c96b54e2aedc4ce91618cf6493d9c5db306da17b8bf6"
+  },
+  "specification": {
+    "path": "acceleration/build_20261004_local_sat_binary_drat_linux_v1_spec.md",
+    "sha256": "bf7eb3dae04be9f6455ac4992586a98019eec8b2b716446528e307b234c4deca"
+  },
+  "source_author": "/root/structural",
+  "proposed_executor": "/root",
+  "proposed_independent_verifier": "/root/native_driver",
+  "runtime_scope": "LOCAL_LINUX_GROUP_BOUNDED_CLEANUP_V2",
+  "working_directory": "/mnt/c/Users/ikuto/projects/conway-99-graph",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "acceleration/run_compute_command_v2.py",
+    "--seconds",
+    "180",
+    "--shutdown-reserve-seconds",
+    "20",
+    "--allocation-reason",
+    "ONE fresh single-source Linux DRAT checker build;90 compiler seconds plus5 grace within180 outer20shutdown, inclusive source copy/hash/version/build seals. No proof/solver or retry.",
+    "--success-criterion",
+    "Compiler exit0, fresh executable/source/build.sha256 and clean supported original Linux group, no deadline. Build success is not binary-proof qualification.",
+    "--verification-criterion",
+    "Root authenticates actual GCC/utilities versions and hashes, pinned d834 source/copy and literal flags; separate binary0x1a/CRLF positive and corrupt proof controls plus different-author raw review before use.",
+    "--out",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01",
+    "--",
+    "/usr/bin/bash",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh"
+  ],
+  "supervisor_argv": [
+    "/usr/bin/python3",
+    "-B",
+    "acceleration/run_compute_command_v2.py",
+    "--seconds",
+    "180",
+    "--shutdown-reserve-seconds",
+    "20",
+    "--allocation-reason",
+    "ONE fresh single-source Linux DRAT checker build;90 compiler seconds plus5 grace within180 outer20shutdown, inclusive source copy/hash/version/build seals. No proof/solver or retry.",
+    "--success-criterion",
+    "Compiler exit0, fresh executable/source/build.sha256 and clean supported original Linux group, no deadline. Build success is not binary-proof qualification.",
+    "--verification-criterion",
+    "Root authenticates actual GCC/utilities versions and hashes, pinned d834 source/copy and literal flags; separate binary0x1a/CRLF positive and corrupt proof controls plus different-author raw review before use.",
+    "--out",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01",
+    "--",
+    "/usr/bin/bash",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh"
+  ],
+  "child_argv": [
+    "/usr/bin/bash",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh"
+  ],
+  "word_counts": {
+    "supervisor": 18,
+    "child": 2
+  },
+  "compiler": {
+    "path": "/usr/bin/gcc",
+    "sha256": null,
+    "version": null,
+    "actual_argv": [
+      "/usr/bin/gcc",
+      "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim.c",
+      "-std=c99",
+      "-O2",
+      "-o",
+      "build/fixed17-local-sat-binary-drat-linux-v1/drat-trim"
+    ]
+  },
+  "allocation": {
+    "outer_seconds": 180,
+    "compiler_seconds": 90,
+    "TERM_KILL_grace_seconds": 5,
+    "shutdown_reserve_seconds": 20
+  },
+  "resource_guards": {
+    "min_available_memory_GiB": 4,
+    "min_free_disk_GiB": 2,
+    "address_space_bytes": 8589934592,
+    "single_file_limit_bytes": 134217728,
+    "core_bytes": 0
+  },
+  "protected_context": {
+    "uid": "1000",
+    "working_directory": "/mnt/c/Users/ikuto/projects/conway-99-graph",
+    "HEAD": null,
+    "CLAIMS_sha256": null,
+    "index_sha256": null,
+    "fresh_root_saved_read_admission_required": true,
+    "known_peer_note": "Root text local-SAT was live at task assignment; fresh exact owner/state attribution is required, not historical PID inference"
+  },
+  "must_be_absent": [
+    "build/fixed17-local-sat-binary-drat-linux-v1",
+    "acceleration/results/20261004_local_sat_binary_drat_linux_build_supervision01"
+  ],
+  "direct_input_pins_sha256": {
+    "acceleration/run_compute_command_v2.py": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+    "acceleration/run_compute_command_v2_spec.md": "33e242b6dc28fa783b29825b76311fdc36d16f5cdf1897ca3b41671cafc1acc1",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261003_native_active_stop_sat_hard05_root_review.json": "80054f703b49b11ab5e45d2d4d7c801f66c4030aa7ae7b32ca45a39dcce2b168",
+    "acceleration/results/20261003_native_active_stop_sat_reassessment05_root_review.json": "a5c13e9f15c36519fcafd75488824d92d6ae500dcd180fb5af2e104250c10257",
+    "acceleration/results/20261003_native_active_stop_descendant_hard05_root_review.json": "4f34d48f45c20947f97479d6226ae6a0402e183c6774125c1fdd6f5b659b99eb",
+    "acceleration/results/20261003_native_active_stop_descendant_reassessment05_root_review.json": "07aaf0920305ade4b2fdcfd175784f4f28ee50ffd77c47caad2a4d8446593dbf",
+    "acceleration/results/20261003_native_active_stop_mixed_hard06_root_review.json": "10fcf5e06ffa6949b92a553bb7cd4b469aa351ad836719e94ef6d45a0c9d4473",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06_root_review.json": "7879283e657bf010f75862c6362be0178bdaf0a823c6af196776392584a3d8d4",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1.sh": "0992017719e75a3696f9c96b54e2aedc4ce91618cf6493d9c5db306da17b8bf6",
+    "acceleration/build_20261004_local_sat_binary_drat_linux_v1_spec.md": "bf7eb3dae04be9f6455ac4992586a98019eec8b2b716446528e307b234c4deca",
+    "build/rook-drat-checker/upstream-drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "build/rook-drat-checker/build_manifest.json": "219e14aeb9efb7df5629cb45405b08d45b2613133207e92bd4f7c09a5b2211b7",
+    "build/rook-drat-checker/build_receipt.json": "4862b4cc61fe2832943c988c5418cd85ae795924fd83a40482c0da4fb03b7e4b"
+  },
+  "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "windows_portability_patch_applied": false,
+  "expected_build_files": [
+    "drat-trim.c",
+    "drat-trim",
+    "build.sha256"
+  ],
+  "actual_binary": null,
+  "actual_invocation": null,
+  "actual_terminal": null,
+  "actual_completion": null,
+  "root_authority": null,
+  "root_acceptance": null,
+  "proofs_checked": 0,
+  "scientific_solver_authorized": false,
+  "automatic_retry": false,
+  "limitations": [
+    "Historical guard controls are unchanged component qualification only.",
+    "Compiler and produced binary identity require fresh Root admission/completion.",
+    "No binary format gate or proof acceptance exists until genuine new controls pass."
+  ]
+}

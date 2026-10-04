@@ -1,0 +1,70 @@
+--- acceleration/materialize_20261004_nine_bound_mathematical_claims_v1.ps1
++++ acceleration/materialize_20261004_five_mathematical_claims_v1.ps1
+@@ -55,21 +55,21 @@
+     Require ($TaskOutPath.StartsWith((Join-Path $TaskRoot 'acceleration/results')+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) -and -not (Test-Path -LiteralPath $TaskOutPath)) 'FRESH_OUTPUT_ROOT'
+     [IO.Directory]::CreateDirectory($TaskOutPath) | Out-Null
+     $TaskOutCreated = $true
+-    ReadPinned 'acceleration/materialize_20261004_nine_bound_mathematical_claims_v1.ps1' $SourceSha256 | Out-Null
++    ReadPinned 'acceleration/materialize_20261004_five_mathematical_claims_v1.ps1' $SourceSha256 | Out-Null
+-    ReadPinned 'acceleration/materialize_20261004_nine_bound_mathematical_claims_v1_spec.md' $SpecSha256 | Out-Null
++    ReadPinned 'acceleration/materialize_20261004_five_mathematical_claims_v1_spec.md' $SpecSha256 | Out-Null
+-    Require ($Packet -ceq 'acceleration/proposal_20261004_nine_bound_mathematical_literal_append_v2.json' -and $PacketSha256 -ceq '47bf0eb7189059585078c4d2219d06fac2dc8c5532867f81512c537b6935cf88') 'LITERAL_PACKET'
++    Require ($Packet -ceq 'acceleration/proposal_20261004_five_bound_mathematical_literal_append_v1.json' -and $PacketSha256 -ceq '1bbdbe2ac867ae8f67e269fc5b7de30d311fb185d52a9926b3684138b547f43a') 'LITERAL_PACKET'
+     $Data=JsonObject (ReadPinned $Packet $PacketSha256)
+-    Require ($Data.schema -ceq 'NINE_BOUND_MATHEMATICAL_LITERAL_APPEND_SOURCE_ONLY_V2' -and $Data.claims.Count -eq 9) 'PACKET_SHAPE'
++    Require ($Data.schema -ceq 'FIVE_BOUND_MATHEMATICAL_LITERAL_APPEND_SOURCE_ONLY_V1' -and $Data.claims.Count -eq 5) 'PACKET_SHAPE'
+     ReadPinned 'acceleration/run_compute_command.py' '593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a' | Out-Null
+     ReadPinned 'acceleration/command_deadline.py' '9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9' | Out-Null
+     ReadPinned $Data.validator.path $Data.validator.sha256 | Out-Null
+     ReadPinned $Data.schema_definition.path $Data.schema_definition.sha256 | Out-Null
+     ReadPinned 'pyproject.toml' '273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339' | Out-Null
+     ReadPinned 'uv.lock' 'a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db' | Out-Null
+-    Require ($Data.baseline.path -ceq 'CLAIMS.yaml' -and $Data.baseline.sha256 -ceq '95e8ffba7f7a8554c0de753495b3aba3a8eae0b8d238aecba81d3f1213db704c') 'BASELINE_IDENTITY'
++    Require ($Data.baseline.path -ceq 'CLAIMS.yaml' -and $Data.baseline.sha256 -ceq '0e871adb48cab76b79bc46032100ffc9bf3e855824afa2de2c1759cd30101b81') 'BASELINE_IDENTITY'
+     $BeforeBytes=ReadPinned $Data.baseline.path $Data.baseline.sha256
+     $Ledger=JsonObject $BeforeBytes
+-    Require ($Ledger.claims.Count -eq 435 -and $Ledger.artifacts.Count -eq 23695 -and $Ledger.updated_at -is [string]) 'BASELINE_COUNTS'
++    Require ($Ledger.claims.Count -eq 444 -and $Ledger.artifacts.Count -eq 23802 -and $Ledger.updated_at -is [string]) 'BASELINE_COUNTS'
+     $Outputs=[ordered]@{'CLAIMS.before.yaml'=(SaveBytes 'CLAIMS.before.yaml' $BeforeBytes)}
+     $OldArtifacts=@($Ledger.artifacts)
+     $Artifacts=[Collections.Generic.List[object]]::new(); foreach ($Item in $OldArtifacts) { $Artifacts.Add($Item) }
+@@ -87,7 +87,7 @@
+     }
+     foreach ($Item in $Ledger.claims) { Require ($Item.id -is [string] -and $ClaimIds.Add($Item.id)) 'OLD_CLAIM_IDS' }
+     $Paths=[string[]]@($Data.evidence_union.Keys); [Array]::Sort($Paths,[StringComparer]::Ordinal)
+-    Require ($Paths.Count -eq 115 -and $Data.evidence_identity_count -eq 115) 'EXACT_EVIDENCE_UNION'
++    Require ($Paths.Count -eq 54 -and $Data.evidence_identity_count -eq 54) 'EXACT_EVIDENCE_UNION'
+     Require (-not ($Paths -contains 'acceleration/results/20261004_fixed17_per_copy_local_sat_native01/proof.drat')) 'OLD_PARTIAL_PROOF_FORBIDDEN'
+     $Resolved=[Collections.Generic.Dictionary[string,string]]::new([StringComparer]::Ordinal)
+     $Rows=[Collections.Generic.List[object]]::new(); $Ordinal=0
+@@ -97,7 +97,7 @@
+         ReadPinned $Identity.path $Identity.sha256 | Out-Null
+         $Key=$Identity.path+[char]0+$Identity.sha256; $Reused=$Existing.ContainsKey($Key)
+         if ($Reused) { $Id=$Existing[$Key].Min } else {
+-            $Id=('A-NINE-MATH-20261004-{0:0000}' -f $Ordinal); Require ($ArtifactIds.Add($Id)) 'NEW_ARTIFACT_ID_COLLISION'
++            $Id=('A-FIVE-MATH-20261004-{0:0000}' -f $Ordinal); Require ($ArtifactIds.Add($Id)) 'NEW_ARTIFACT_ID_COLLISION'
+             $Artifacts.Add([ordered]@{id=$Id;path=$Identity.path;sha256=$Identity.sha256;availability='LOCAL_ONLY';retrieval=$Identity.path;unavailable_reason='Exact mathematical evidence remains LOCAL_ONLY pending separate publication.'})
+         }
+         $Resolved.Add($Identity.path,$Id)
+@@ -117,18 +117,18 @@
+         $Claims.Add($Claim)
+     }
+     $Ledger.claims=$Claims.ToArray(); $Ledger.artifacts=$Artifacts.ToArray(); $Ledger.updated_at=[DateTimeOffset]::UtcNow.ToString('o')
+-    Require ($Ledger.claims.Count -eq 444) 'CANDIDATE_COUNT'
++    Require ($Ledger.claims.Count -eq 449) 'CANDIDATE_COUNT'
+     $Outputs['CLAIMS.candidate.yaml']=SaveJson 'CLAIMS.candidate.yaml' $Ledger
+     $Outputs['evidence_resolution.json']=SaveJson 'evidence_resolution.json' $Rows.ToArray()
+     foreach ($Path in @($TaskPins.Keys)) { ReadPinned $Path $TaskPins[$Path] | Out-Null }
+     $StatusCounts=[ordered]@{}; $ReviewCounts=[ordered]@{}; $ReuseCount=0
+     foreach ($Claim in $Ledger.claims) { if (-not $StatusCounts.Contains($Claim.status)) {$StatusCounts[$Claim.status]=0};$StatusCounts[$Claim.status]++; if (-not $ReviewCounts.Contains($Claim.review_state)) {$ReviewCounts[$Claim.review_state]=0};$ReviewCounts[$Claim.review_state]++ }
+     foreach ($Row in $Rows) { if ($Row.reused) {$ReuseCount++} }
+-    $Summary=[ordered]@{schema='NINE_BOUND_MATHEMATICAL_LITERAL_MATERIALIZATION_V1';timestamp=[DateTimeOffset]::UtcNow.ToString('o');status='CANDIDATE_ADMINISTRATIVE_UNVERIFIED';source_author='/root/checkpoint_audit';actual_executor=$Executor;before_claims=435;candidate_claims=444;before_artifacts=$OldArtifacts.Count;candidate_artifacts=$Artifacts.Count;evidence_identities=115;reused=$ReuseCount;appended=(115-$ReuseCount);candidate_status_counts=$StatusCounts;candidate_review_state_counts=$ReviewCounts;inputs_sha256=$TaskPins;outputs_sha256=$Outputs;elapsed_seconds=$TaskWatch.Elapsed.TotalSeconds;typed_preservation_independently_checked=$false;schema_semantics_checked=$false;live_ledger_mutated=$false;Git_index_mutated=$false;mathematical_replays=0;parser_scope='Frozen JSON-object subset only; native ConvertFrom-Json -AsHashtable -DateKind String. This is not a general YAML parser.';target_resolution='UNKNOWN';availability='LOCAL_ONLY';next_required='Separate Root typed prefix/core/evidence checking and unchanged generic validator; final Root exact installation remains separate.'}
++    $Summary=[ordered]@{schema='FIVE_BOUND_MATHEMATICAL_LITERAL_MATERIALIZATION_V1';timestamp=[DateTimeOffset]::UtcNow.ToString('o');status='CANDIDATE_ADMINISTRATIVE_UNVERIFIED';source_author='/root/checkpoint_audit';actual_executor=$Executor;before_claims=444;candidate_claims=449;before_artifacts=$OldArtifacts.Count;candidate_artifacts=$Artifacts.Count;evidence_identities=54;reused=$ReuseCount;appended=(54-$ReuseCount);candidate_status_counts=$StatusCounts;candidate_review_state_counts=$ReviewCounts;inputs_sha256=$TaskPins;outputs_sha256=$Outputs;elapsed_seconds=$TaskWatch.Elapsed.TotalSeconds;typed_preservation_independently_checked=$false;schema_semantics_checked=$false;live_ledger_mutated=$false;Git_index_mutated=$false;mathematical_replays=0;parser_scope='Frozen JSON-object subset only; native ConvertFrom-Json -AsHashtable -DateKind String. This is not a general YAML parser.';target_resolution='UNKNOWN';availability='LOCAL_ONLY';next_required='Separate Root typed prefix/core/evidence checking and unchanged generic validator; final Root exact installation remains separate.'}
+     SaveJson 'summary.json' $Summary | Out-Null; Tick; exit 0
+ } catch {
+     if ($TaskOutCreated -and (Test-Path -LiteralPath $TaskOutPath)) {
+-        $Failure=[ordered]@{schema='NINE_BOUND_MATHEMATICAL_LITERAL_MATERIALIZATION_V1';status='FAILED_PRESERVED';error=$_.Exception.Message;timestamp=[DateTimeOffset]::UtcNow.ToString('o');inputs_sha256=$TaskPins;elapsed_seconds=$TaskWatch.Elapsed.TotalSeconds;live_ledger_mutated=$false;mathematical_replays=0;target_resolution='UNKNOWN'}
++        $Failure=[ordered]@{schema='FIVE_BOUND_MATHEMATICAL_LITERAL_MATERIALIZATION_V1';status='FAILED_PRESERVED';error=$_.Exception.Message;timestamp=[DateTimeOffset]::UtcNow.ToString('o');inputs_sha256=$TaskPins;elapsed_seconds=$TaskWatch.Elapsed.TotalSeconds;live_ledger_mutated=$false;mathematical_replays=0;target_resolution='UNKNOWN'}
+         $FailurePath=Join-Path $TaskOutPath 'failure.json'; if (-not (Test-Path -LiteralPath $FailurePath)) { [IO.File]::WriteAllText($FailurePath,($Failure | ConvertTo-Json -Depth 100)+[char]10,$TaskUtf8) }
+     }
+     Write-Error $_ -ErrorAction Continue; exit 1

@@ -1,0 +1,161 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T17:51:20Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-PATTERN-RESTRICTION",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, set d_T=6-r_T for every actual triangle T. All d_T lie in{0,1,2}; if h counts deficiency-two triangles, then1<=h<=5 and exactly18-2h>=8 triangles have deficiency one. Every deficiency-two triangle has at most three deficiency-two defect partners across its three points; if it has three, then h=4. Thus at h=5 the deficiency-two defect graph has maximum degree two; if a degree-three node occurs, the graph is a three-leaf star or that star with one leaf edge. No count228 or target exclusion follows.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=228 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts actual such subsets containing T; a defect pair means no actual induced rook contains both intersecting actual triangles"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "target_resolution": "NONE",
+    "scientific_coverage": "UNKNOWN",
+    "count228_excluded": false
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "The two accepted conditional results imply maximum deficiency exactly two atR228. Local defect degrees, parity and the even-six rook classification are reconstructed directly in this new paper; prior R230/R229/R231 statements are not approval transfer.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md",
+    "sha256": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533"
+  },
+  "local_integer_constraints": {
+    "D": 18,
+    "d_max": 2,
+    "h_values": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "d1_count": "18-2h",
+    "C_triangle_count": 6,
+    "C_mass": "6+k",
+    "external_mass": "10-k",
+    "external_d2_count": "ell=h-1-k",
+    "outer_defect_incidences": "12+2k",
+    "capacity_inequality": "3ell+5k<=18",
+    "rejected_saturated_case": {
+      "h": 5,
+      "k": 3,
+      "ell": 1,
+      "K": 9,
+      "M": 7,
+      "external_positive_triangles": 6
+    },
+    "table": [
+      {
+        "k": 0,
+        "K": 6,
+        "M": 10,
+        "outer_incidences": 12,
+        "ell_bound_from_capacity": 6,
+        "allowed_h": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "k": 1,
+        "K": 7,
+        "M": 9,
+        "outer_incidences": 14,
+        "ell_bound_from_capacity": 4,
+        "allowed_h": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "k": 2,
+        "K": 8,
+        "M": 8,
+        "outer_incidences": 16,
+        "ell_bound_from_capacity": 2,
+        "allowed_h": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "k": 3,
+        "K": 9,
+        "M": 7,
+        "outer_incidences": 18,
+        "ell_bound_from_capacity": 1,
+        "allowed_h": [
+          4
+        ]
+      }
+    ]
+  },
+  "proof_route": [
+    "Accepted bounds give maxd2 andD18",
+    "Odd-degree parity gives an even family of18-2h actuald1 triangles",
+    "Six neighbor triangles C around a d2 root give3ell+5k<=18",
+    "No even selection of2/4 actual triangles; all-d2 contradictsk6",
+    "An even six selection is an actual induced rook; nine required d2-covered points exceedsix available external triangles",
+    "At(h,k)=(5,3), allsix external triangles saturate three outer incidences; soleexternald2 lacks second localpartner",
+    "Same-bucket intersections allowatmostone leafedge whenh4,k3"
+  ],
+  "hand_boundaries": [
+    "Even-sixrook is permitted; contradiction requiresd1 degrees andonlysix externald2",
+    "Cube-star even8selection showsparityalone doesnotexcludeh5",
+    "k3,h4 hasslackthree; k2,h5 hasslacktwo andneitherisexcluded",
+    "Local three-d2 triangle atoneactualpoint isallowed; differentintersectionpoints forbidden",
+    "Extra support edgesarenotassumedabsent; onlyh6rook isforcedinduced"
+  ],
+  "shared_origin": {
+    "Root_gap_six_scope_question": true,
+    "Structural_prior_rook_paper_authorship": true,
+    "Native_accepted_two_dependency_reviews": true,
+    "independent_approval_of_new_candidate": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "limitations": [
+    "Necessary pattern screen only; R228 remains unresolved on this proof.",
+    "The finite table is hand-derived, not an enumeration or full coverage gate.",
+    "No automorphism, uniform profile, induced full positive support or nonconstant-codeword premise is used.",
+    "Bounded current-rook comparison is not a whole-archive novelty check."
+  ]
+}
+

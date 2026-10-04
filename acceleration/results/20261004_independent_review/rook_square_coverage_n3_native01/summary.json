@@ -1,0 +1,98 @@
+{
+  "schema": "INDEPENDENT_WRITTEN_MATHEMATICAL_REVIEW_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_SQUARE_COVERAGE_N3_V1_WRITTEN_PASS",
+  "implementation_version": 1,
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-SQUARE-COVERAGE-N3-EQUIVALENCE",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count induced rook-nine subsets, U count induced C4 subsets in no such rook, and n3 count induced six-subsets consisting of two disjoint triangles joined by exactly two independent cross edges. Then U=2079-9R, R=231 iff U=0 iff the graph is N3-free, and 0<=n3<=2U=4158-18R.",
+  "timestamp": "2026-10-04T16:28:28Z",
+  "verification_timestamp": "2026-10-04T16:28:28Z",
+  "verification_started_at": "2026-10-04T16:25:24Z",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "scope": {
+    "description": "Exact target rook/square/subset counts and parameter-free local lambda1/mu2 square-grid equivalence. No cited global exclusion is approved by this derivation.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "The graph is complete, finite and simple with exact SRG(99,14,1,2) parameters.",
+    "R,U,n3 count actual vertex subsets once, rather than embeddings or automorphism classes."
+  ],
+  "dependencies": [],
+  "dependency_reason": "Every required local triangle, square and target spectral identity is independently reconstructed in the written audit; other frozen papers provide exact comparison context without gate transfer.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md",
+    "sha256": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72"
+  },
+  "candidate": {
+    "path": "acceleration/results/20261004_target_rook_square_coverage_n3_candidate01.json",
+    "sha256": "e9dd7c981af6b04e17bb5b9b432d6542beb9004c2229312440d89fab42128738",
+    "claim_id": "C-UNRESTRICTED-TARGET-ROOK-SQUARE-COVERAGE-N3-EQUIVALENCE",
+    "revision": 1
+  },
+  "proof": "acceleration/audit_20261004_rook_deficiency_and_n3_native_v1.md",
+  "proof_sha256": "338eabe14478f0b80f8527268c4267e474f72c979149943e61ed0bf224ffdd58",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_SECOND_NEIGHBOR_BOUND_V1.md": "ba046522585d5a59a857251928d05c0ac59e69425bf58f420e8cd63be83f210c",
+    "acceleration/results/20261004_target_rook_deficiency_second_neighbor_candidate01.json": "d860c4e34ec704a6749a4e51603f86d895b36a693b79ed5c379602b4be719c86",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72",
+    "acceleration/results/20261004_target_rook_square_coverage_n3_candidate01.json": "e9dd7c981af6b04e17bb5b9b432d6542beb9004c2229312440d89fab42128738",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "acceleration/results/20261004_target_rook_deficiency_strict_second_neighbor_candidate01.json": "976e676fc75eec3c81870770852c26ab9de6cd88b0f87613152dec019ebcdaed",
+    "acceleration/audit_20261004_rook_deficiency_and_n3_native_v1.md": "338eabe14478f0b80f8527268c4267e474f72c979149943e61ed0bf224ffdd58"
+  },
+  "input_map_count": 7,
+  "written_checks": 21,
+  "written_check_boundaries": [
+    "Cross edges between disjoint triangles form matching",
+    "Square edge-partners outside corners",
+    "All four edge-partners distinct",
+    "No unintended corner-partner edges",
+    "Square contained in at most one rook",
+    "N3-free forces first opposite-partner edge",
+    "N3-free forces second opposite-partner edge",
+    "Ninth partners outside initial eight points",
+    "Forced e-j by third triangle-pair",
+    "Forced f-j by fourth triangle-pair",
+    "Unique partner on ef identifies ninth points",
+    "All six rook triples present",
+    "No extra non-grid edge by lambda1",
+    "N3 has exactly one square",
+    "N3 square uncovered by absent partner edge",
+    "Every N3 maps to actual uncovered subset",
+    "Only two opposite-edge choices per preimage square",
+    "Unique partners bound each direction to one N3",
+    "4158 nonedges count2079 squares",
+    "Nine rook squares and U=2079-9R",
+    "Exact28839/5941 relabeling and conditional literature boundary"
+  ],
+  "controls": {
+    "written": 21,
+    "executed": 0,
+    "formal": 0,
+    "external": 0
+  },
+  "verification_started_at_is_worker_start": false,
+  "command": null,
+  "runtime": null,
+  "executed_worker_start_time": null,
+  "shared_components": [
+    "Root proposed portions of discovery/equality outline; Structural produced all candidate bytes.",
+    "The same Native written audit explicitly separates three exact claim scopes and uses direct set/Gram arguments.",
+    "Previously archived rook identities and scope notes are comparison history; no novelty or external theorem approval."
+  ],
+  "limitations": [
+    "No graph or matching computation or census was executed.",
+    "R229 and R231 remain unexcluded; necessary conditions do not construct completions.",
+    "Makhnev global exclusion and Hamming universal cover are not approved premises.",
+    "No hypothetical equitable profile, automorphism or nonconstant codeword is assumed.",
+    "Current ledger/index/Git and original evidence bytes are untouched."
+  ],
+  "root_acceptance": null
+}

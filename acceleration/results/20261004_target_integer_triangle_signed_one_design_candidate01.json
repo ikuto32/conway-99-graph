@@ -1,0 +1,77 @@
+{
+  "schema": "TARGET_INTEGER_TRIANGLE_SIGNED_ONE_DESIGN_WRITTEN_CANDIDATE_V1",
+  "timestamp": "2026-10-04T13:37:13Z",
+  "claim_id": "C-UNRESTRICTED-TARGET-INTEGER-TRIANGLE-SIGNED-ONE-DESIGN",
+  "claim_revision": 1,
+  "status": "CANDIDATE",
+  "producer": "/root/structural",
+  "planned_verifier": "/root/native_driver",
+  "kind": "mathematical result",
+  "basis": ["DERIVED"],
+  "statement": "For every complete finite simple SRG(99,14,1,2), let N be the ordinary integer binary99x231 incidence matrix containing every actual triangle exactly once. The finite group Z^99/NZ^231 is killed by30. There exists an ordinary integer231-vector w with Nw=j_99 and sum(w)=33. Every such w has odd squared norm at least33; squared norm33 holds exactly for a0/1 indicator of33 pairwise vertex-disjoint actual triangles partitioning all99 points. The equality case, a positive exact cover, a nonconstant left kernel and target existence or exclusion are not asserted.",
+  "scope": {
+    "target_resolution": "NONE",
+    "description": "Every hypothetical complete simple99/degree14/adjacentCN1/nonadjacentCN2 graph and its complete ordinary integer actual-triangle incidence. Exact cokernel exponent, signed integer covering and equality-case characterization only; no formal3-adic, exterior-count-only or symmetry transfer.",
+    "unrestricted_target": true
+  },
+  "assumptions": [
+    "A is symmetric binary zero-diagonal with Aj=14j and A^2=12I-A+2J over the ordinary integers.",
+    "N contains all231 actual triangles once, with column sums3, row sums7 and NN^T=A+7I.",
+    "All matrices used for the cokernel and integer signed design are ordinary integer matrices; a formal local-ring incidence is insufficient."
+  ],
+  "dependencies": [],
+  "dependency_reason": "All identities and determinant valuations used are derived from the complete target hypotheses in the paper. Named prior documents are comparison and provenance, not unchecked modular-rank premises.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_INTEGER_TRIANGLE_SIGNED_ONE_DESIGN_V1.md",
+    "sha256": "ba19198241e3523ab0bf25dfbdc67bd522552668f420f0f63af4d3735a25b95d"
+  },
+  "proof_boundaries": {
+    "integer_right_inverse": "P=7N^T(6I-A)+2qj^T; NP=210I",
+    "prime7_overlap": "rank_F7(N)=99 is already explicit in the pinned Wave23 source",
+    "removing7": "NB=I+7C; R=30B-PC; NR=30I",
+    "cokernel_exponent_divides": 30,
+    "signed_integer_design": "w=13q-3Rj; Nw=j; sum(w)=33",
+    "norm_conditions": "||w||^2>=33 and ||w||^2=33 mod2; equality iff every coordinate is0 or1",
+    "real_minimum": "q/7 with squared norm33/7 does not force the integer minimum to equal33",
+    "prime_minor_energy_overlap": {"F2_lower": 72, "F3_lower": 77, "F5_lower": 72},
+    "hand_positivity_counterexample": {
+      "points": 6,
+      "columns": ["123", "124", "135", "236", "125", "136", "234"],
+      "integer_weights": [-1, 1, 1, 1, 0, 0, 0],
+      "weight_sum": 2,
+      "squared_norm": 4,
+      "full_real_row_rank": 6,
+      "binary_exact_cover": false,
+      "target_or_row7_example": false,
+      "reason_no_binary_exact_cover": "Each column contains at least two of points1,2,3, so any two meet."
+    }
+  },
+  "shared_components": [
+    "Root requested the ordinary integer prime2/5/7 follow-up; Structural authored this signed-design corollary separately from the frozen support54 paper.",
+    "The denominator210 identity is retained in the accepted mod9 proof; prime-seven full incidence rank is historical overlap, not a new rank improvement.",
+    "The six-point example falsifies only a positivity deduction from binary triple columns, full real row rank and an integer signed cover. It has neither row degree7 nor target geometry."
+  ],
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_INTEGER_TRIANGLE_SIGNED_ONE_DESIGN_V1.md": "ba19198241e3523ab0bf25dfbdc67bd522552668f420f0f63af4d3735a25b95d",
+    "docs/AUDIT_20260930_TARGET_MODULAR_RANKS.md": "c819ec41287a1a5394d84e2031b6cd2ba564ed8c9771082363dc46ad11a894ed",
+    "external_conway99_research/attempts/wave23-index-pranks/failed-routes.md": "1371323a35959482a888fd3eaf226995eaae99e05800cde889ad239dcccabc65",
+    "external_conway99_research/attempts/wave168-incidence-minor-energy/derivation.md": "bee35fdbcbb31e0d09e0f446ec32cafeaa03f72cbf935aa3a073497130dfca05",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_INCIDENCE_MOD9_NONLIFT_PAIRING_V1.md": "0d7a6dfc0a7520ae43046675105666381da5adbcb6b75e2caeec068d6cbfa82a",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_3ADIC_GRAM_RANK98_NONOBSTRUCTION_V1.md": "e696616dd5d9e7bb52debaa9b4a8cf8d9bc1675c46229ebd61b809d969426309"
+  },
+  "mathematical_executions": 0,
+  "enumerated_target_instances": 0,
+  "actual_target_read": false,
+  "verification_outcome": null,
+  "verification_timestamp": null,
+  "root_acceptance": null,
+  "ledger_or_Git_mutations": false,
+  "automatic_next_run": false,
+  "limitations": [
+    "A signed ordinary integer design is not a positive exact cover; no triangle factor or norm33 solution is forced.",
+    "The established prime-seven rank and Cauchy-Binet prime2/3/5 floors overlap known results and do not force any left dependency.",
+    "No target existence, exclusion, automorphism, equitable partition or transfer to a bare fixed17 count witness follows.",
+    "Targeted archive comparison is bounded, not exhaustive novelty verification.",
+    "Different-author written derivation and Root scope review remain pending; no numerical program, backend, source import or executable gate exists for this note."
+  ]
+}

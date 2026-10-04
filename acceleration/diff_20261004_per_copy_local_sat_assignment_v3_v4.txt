@@ -1,0 +1,145 @@
+--- a/acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v3.py
++++ b/acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v4.py
+@@ -17,8 +17,8 @@
+ from command_deadline import CommandDeadline
+ 
+ ROOT=Path(__file__).resolve().parents[1]
+-SELF='acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v3.py'
+-SPEC='acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v3_spec.md'
++SELF='acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v4.py'
++SPEC='acceleration/audit_20261004_fixed17_per_copy_local_sat_assignment_v4_spec.md'
+ MODEL_SCHEMA='FIXED17_COPY_ADJACENCY_MODEL_V1'
+ CAL_STATUS='INDEPENDENT_FIXED17_PER_COPY_LOCAL_SAT_ASSIGNMENT_V1_CALIBRATION_PASS'
+ FULL_STATUS='INDEPENDENT_FIXED17_PER_COPY_LOCAL_SAT_ASSIGNMENT_V1_COMPLETE_PASS'
+@@ -33,8 +33,8 @@
+  'acceleration/audit_20261004_fixed17_per_copy_local_sat_v6_spec.md':'4d1aadd130ce1924fa9eb338577eace210460e36cb3e07faeda9bfcb956625ae',
+  'acceleration/command_deadline.py':'9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9',
+  'acceleration/run_compute_command_v2.py':SUP_SHA,
+- 'acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh':'5d4b351e91997fda5fdc9d0767a08fa6a47d5b7d6def35ad288c581cf3d6ffb1',
+- 'acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1_spec.md':'dbc7335c17902b524cf86e8b3674bdb6df560bfdf63673367fd9cdef8a5cab8d',
++ 'acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh':'4ca287aab7e41d392d83fa20fc69de495b3185287a6a537e18812149ef7b5b09',
++ 'acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2_spec.md':'84196a3be4889b35293017fb4542d2b5c5460776405ff2ef7879dfd2446160c7',
+  'build/research-cadical195/source/build/cadical':'021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7',
+  'pyproject.toml':'273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339',
+  'uv.lock':'a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db',
+@@ -435,7 +435,7 @@
+          typed_equal(plan.get('supervisor_argv'),plan['command']) and type(plan.get('child_argv')) is list,'NATIVE_PLAN')
+     command,child=plan['command'],plan['child_argv']
+     need(all(type(word) is str for word in command+child) and len(child)==6 and
+-         child[:2]==['/usr/bin/bash','acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh'] and
++         child[:2]==['/usr/bin/bash','acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh'] and
+          child[2]==formula_path and re.fullmatch('[0-9]+',child[5]) is not None and
+          child[5] in ('10','1800') and command[-6:]==child,'NATIVE_PLAN')
+     prefix=command[:-6]
+@@ -565,7 +565,7 @@
+ 
+ 
+ def checksum_bytes(formula_ref):
+-    caller='acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh'
++    caller='acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh'
+     solver='build/research-cadical195/source/build/cadical'
+     return ''.join(digest+'  '+name+'\n' for name,digest in
+       ((formula_ref['path'],formula_ref['sha256']),(caller,PINS[caller]),(solver,PINS[solver]))).encode('ascii')
+@@ -573,12 +573,12 @@
+ 
+ def checksum_list(data,formula_ref):
+     need(type(data) is bytes and data==checksum_bytes(formula_ref),'NATIVE_CHECKSUM_LIST')
+-    return {'formula':formula_ref,'caller_sha256':PINS['acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh'],
++    return {'formula':formula_ref,'caller_sha256':PINS['acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh'],
+       'solver_sha256':PINS['build/research-cadical195/source/build/cadical'],'exact_three_checksum_lines':True}
+ 
+ 
+ def synthetic_runtime(scientific=False):
+-    child=['/usr/bin/bash','acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh',
++    child=['/usr/bin/bash','acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh',
+       'fixture/local.cnf','fixture/proof.drat','fixture/sha256.txt','1800' if scientific else '10']
+     prefix=['/usr/bin/python3','-B','acceleration/run_compute_command_v2.py',
+       '--seconds','1900' if scientific else '60','--shutdown-reserve-seconds','20',
+@@ -795,14 +795,21 @@
+           'fixture/native/manifest.json','fixture/native/summary.json'))
+     damaged_gate('encoding_old_source_code4','ENCODING_GATE_HEADER',lambda p:p.__setitem__('code_version',4))
+     damaged_gate('encoding_old_source_code5','ENCODING_GATE_HEADER',lambda p:p.__setitem__('code_version',5))
++    old_text=copy.deepcopy(current)
++    old_caller='acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh'
++    old_text['plan']['child_argv'][1]=old_caller
++    old_text['plan']['command'][-5]=old_caller
++    old_text['plan']['supervisor_argv'][-5]=old_caller
++    old_text['manifest']['command'][1]=old_caller
++    run('native_old_text_V1_caller','NATIVE_PLAN',old_text,lambda:rt(old_text))
+     return rows
+ 
+ 
+ def calibrate(out,budget):
+     rows=own_routes(out,budget);positive=sum(row['expected_stage']=='PASS' for row in rows)
+-    need(len(rows)==82 and positive==17,'OWN_POPULATION');write(out/'controls.json',rows,budget)
++    need(len(rows)==83 and positive==17,'OWN_POPULATION');write(out/'controls.json',rows,budget)
+     need(all(row['matches'] for row in rows),'OWN_STAGE_MISMATCH')
+-    return {'positive':17,'negative':65,'total':82,'all_precise_stages_match':True,
++    return {'positive':17,'negative':66,'total':83,'all_precise_stages_match':True,
+       'actual_scientific_formula_read':False,'actual_native_assignment_read':False,
+       'known_rook_full_graph_checks':1,'switched_rook_local_pass_graph_failure_retained':True,
+       'complete_tiny_rook_local_rows':21,'solver_calls':0,'graph_object_approved':False}
+@@ -812,28 +819,28 @@
+     raw,base=packet(reader,ref)
+     need(raw.get('status')==CAL_STATUS and raw.get('mode')=='calibrate' and
+          type(raw.get('implementation_version')) is int and raw['implementation_version']==1 and
+-         type(raw.get('code_version')) is int and raw['code_version']==3 and
++         type(raw.get('code_version')) is int and raw['code_version']==4 and
+          raw.get('producer')=='/root' and raw.get('verifier')=='/root/native_driver' and
+          raw.get('method')=='independent_artifact_check' and raw.get('target_resolution')=='NONE' and
+          typed_equal(raw.get('source_software'),software),'OWN_HEADER')
+     scope=raw.get('outcome')
+     need(type(scope) is dict and all(type(scope.get(name)) is int and scope[name]==value for name,value in
+-         (('positive',17),('negative',65),('total',82))) and scope.get('all_precise_stages_match') is True and
++         (('positive',17),('negative',66),('total',83))) and scope.get('all_precise_stages_match') is True and
+          scope.get('actual_scientific_formula_read') is False and scope.get('actual_native_assignment_read') is False,
+          'OWN_SCOPE')
+     need(type(raw.get('inputs_sha256')) is dict and all(raw['inputs_sha256'].get(name)==digest for name,digest in software.items()),
+          'OWN_SOFTWARE')
+-    outputs=raw['outputs_sha256'];need(len(outputs)==86,'OWN_OUTPUT_POPULATION')
++    outputs=raw['outputs_sha256'];need(len(outputs)==87,'OWN_OUTPUT_POPULATION')
+     for name,digest in outputs.items():reader.read(name,digest)
+     table=reader.read(base/'controls.json',outputs[key(base/'controls.json')])
+-    need(type(table) is list and len(table)==82 and all(type(row) is dict and type(row.get('index')) is int and
++    need(type(table) is list and len(table)==83 and all(type(row) is dict and type(row.get('index')) is int and
+          row['index']==i and row.get('matches') is True and row.get('actual_stage')==row.get('expected_stage')
+          for i,row in enumerate(table)),'OWN_STAGES')
+     for i,row in enumerate(table):
+         record=reader.read(base/f'control_{i:03d}.json',outputs[key(base/f'control_{i:03d}.json')])
+         need(type(record) is dict and all(typed_equal(record.get(name),value) for name,value in row.items()),'OWN_RECORD_IDENTITY')
+-    return {'qualified_positive':17,'qualified_negative':65,'qualified_total':82,
+-      'all_saved_stage_records_authenticated':True,'own82_actions_rerun':False}
++    return {'qualified_positive':17,'qualified_negative':66,'qualified_total':83,
++      'all_saved_stage_records_authenticated':True,'own83_actions_rerun':False}
+ 
+ 
+ def review_identity(raw,terminal):
+@@ -937,7 +944,7 @@
+       'first_graph_failure':witness['full_graph_diagnostic']['first_failure'],
+       'graph_object_approved':False,'count_profile_excluded':False,'target_resolution':'NONE',
+       'encoding_correspondence_inherited':True,'copy_model_prerequisite_inherited':True,
+-      'own82_actions_rerun':False,'ancestor_bulk_or_actions_replayed':False,'solver_calls':0,
++      'own83_actions_rerun':False,'ancestor_bulk_or_actions_replayed':False,'solver_calls':0,
+       'discovery_encoder_imports':0,'discovery_solver_imports':0,'discovery_AST_executed':False,
+       'native_review_policy_inherited':True}
+ 
+@@ -961,15 +968,16 @@
+             outcome=full(reader,config,out,software);status=FULL_STATUS
+         reader.close();outputs={name:reader.digest(safe(name),BODY_LIMIT if name.endswith('.cnf') else JSON_LIMIT)
+           for name in inventory(out,budget)}
+-        need(len(outputs)==(86 if args.mode=='calibrate' else 9),'CHECKER_OUTPUT_POPULATION')
+-        report={'status':status,'implementation_version':1,'code_version':3,'mode':args.mode,
++        need(len(outputs)==(87 if args.mode=='calibrate' else 9),'CHECKER_OUTPUT_POPULATION')
++        report={'status':status,'implementation_version':1,'code_version':4,'mode':args.mode,
+           'producer':'/root','verifier':'/root/native_driver','checking_implementation_author':'/root/native_driver',
+           'actual_executor':'See separate genuine supported supervisor receipt','encoding_producer':'/root/structural',
++          'applicability_successor_author':'/root/checkpoint_audit',
+           'method':'independent_artifact_check','timestamp':datetime.now(timezone.utc).isoformat(),
+           'source_sha256':args.self_sha256,'specification_sha256':args.spec_sha256,'source_software':software,
+           'inputs_sha256':dict(reader.inputs),'outputs_sha256':outputs,'outcome':outcome,
+           'elapsed_seconds':budget.deadline.status()['elapsed_seconds'],'target_resolution':'NONE',
+-          'own_actions_rerun':82 if args.mode=='calibrate' else 0,'automatic_retry':False,
++          'own_actions_rerun':83 if args.mode=='calibrate' else 0,'automatic_retry':False,
+           'shared_components':['Exact pinned Native777838 profile/model/set-CN/rook functions are copied unchanged; no module/AST import.',
+             'Pinned Native local-SAT V6 unchanged IO conventions are reused with a new budget rationale; assignment/clause/runtime decoders are newly authored.',
+             'Accepted exact profile/copy-model and future code6 full encoding correspondence are declared inherited premises.',

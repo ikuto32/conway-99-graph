@@ -1,0 +1,190 @@
+{
+  "schema": "LOCAL_SAT_BINARY_DRAT_HAND_FIXTURE_BOUNDARIES_V2",
+  "timestamp": "2026-10-04T15:22:43.2129294+00:00",
+  "status": "SOURCE_ONLY_CORRECTED_EXPECTATIONS_NOT_EXECUTED",
+  "producer": "/root/structural",
+  "planned_independent_verifier": "/root/native_driver",
+  "original_fixture_boundary": {
+    "path": "acceleration/results/20261004_local_sat_binary_drat_hand_fixture_boundaries01.json",
+    "sha256": "07c96e1af4a34e8edd1eb3d1878513c88a810100a36aa35d07725df427528e24",
+    "bytes": 5212
+  },
+  "control_specification": {
+    "path": "acceleration/spec_20261004_local_sat_binary_drat_dependency_controls_v1.md",
+    "sha256": "b95ecc203fb1b6643756687717a33b523a4b9b5ccecbbf58c971c750f5255890",
+    "bytes": 5127
+  },
+  "unchanged_launcher": {
+    "path": "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh",
+    "sha256": "4ca287aab7e41d392d83fa20fc69de495b3185287a6a537e18812149ef7b5b09",
+    "bytes": 696
+  },
+  "unchanged_linux_build_plan": {
+    "path": "acceleration/plan_20261004_local_sat_binary_drat_linux_build_v1.json",
+    "sha256": "d6f54ad6829511e16f73d8eb2e927f2f272325de528b67eca070edd4293f662d",
+    "bytes": 7154
+  },
+  "source_only_repair_reason": [
+    "Old CRLF addition can be unmarked/skipped during default backward checking.",
+    "Old Ctrl-Z occurs after a unit already creates a propagation conflict.",
+    "New hand positives force the sensitive bytes into necessary proof dependencies; no source/execution delta."
+  ],
+  "intermediate_candidate_rejection": "Native rejected an intervening Root six-clause proposal because translated +5 was RAT; that rejected proposal is not rehabilitated or used here.",
+  "hand_cases": [
+    {
+      "name": "hand_ctrl_z",
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "sha256": "7a39b93228b1366521d47e550bbb83e64b5b78ca71849424ace0c3fde48ebb59",
+        "bytes": 47
+      },
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_first_valid.bdrat",
+        "sha256": "5577ab28304c5bae36a6f869ad75f07ea3167ccd6e06d1e8e9151e3a8ea297b4",
+        "bytes": 5
+      },
+      "hex": "61 1a 00 61 00",
+      "decoded_additions": [
+        [
+          13
+        ],
+        []
+      ],
+      "expected_child_exit": 0,
+      "expected_exact_statuses": [
+        "s VERIFIED"
+      ],
+      "written_check": "Assume -13: first two original clauses force +/-14; after +13 the last two force +/-14. The sensitive byte occurs before any completed lemma."
+    },
+    {
+      "name": "hand_crlf_sensitive",
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "sha256": "d697001eb4a3ba3102c8c43ed0c37885cd9ef9c8533199d41ecdcabff1718157",
+        "bytes": 57
+      },
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_valid.bdrat",
+        "sha256": "79f3520d763e8992f631e092f18774c1442ee97a665e5a81593623af0310e203",
+        "bytes": 9
+      },
+      "hex": "61 0d 0a 00 61 0d 00 61 00",
+      "decoded_additions": [
+        [
+          -6,
+          5
+        ],
+        [
+          -6
+        ],
+        []
+      ],
+      "expected_child_exit": 0,
+      "expected_exact_statuses": [
+        "s VERIFIED"
+      ],
+      "written_check": "RUP C under 6,-5 forces +/-2; RUP -6 under 6 uses C to force5 then +/-3; empty after -6 forces +/-1."
+    },
+    {
+      "name": "ctrl_z_truncated_negative",
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+        "sha256": "7a39b93228b1366521d47e550bbb83e64b5b78ca71849424ace0c3fde48ebb59",
+        "bytes": 47
+      },
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/ctrl_z_truncated.bdrat",
+        "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+        "bytes": 1
+      },
+      "hex": "61",
+      "decoded_additions": [],
+      "malformed_record": "Addition prefix then EOF before first literal/terminator",
+      "expected_child_exit": 1,
+      "expected_exact_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "written_check": "Pinned read_lit returns EOF at shift zero, so no lemma is inserted. Original nonunit formula has no propagation conflict. Independently require raw malformed-record rejection."
+    },
+    {
+      "name": "crlf_translated_negative",
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "sha256": "d697001eb4a3ba3102c8c43ed0c37885cd9ef9c8533199d41ecdcabff1718157",
+        "bytes": 57
+      },
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_translated.bdrat",
+        "sha256": "fe284d56f12cb83ae05def643c8d5bf95a716e41d101828b93ec107b533bb80b",
+        "bytes": 8
+      },
+      "hex": "61 0a 00 61 0d 00 61 00",
+      "decoded_additions": [
+        [
+          5
+        ],
+        [
+          -6
+        ],
+        []
+      ],
+      "expected_child_exit": 1,
+      "expected_exact_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "written_check": "Unit5 notRUP under -5; RAT resolvents +/-3 also notRUP because only -5 is forced. Invalid5 is marked by immediate conflict with(-5,+/-3)."
+    },
+    {
+      "name": "crlf_missing_lemma_negative",
+      "formula": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_dependency_unsat.cnf",
+        "sha256": "d697001eb4a3ba3102c8c43ed0c37885cd9ef9c8533199d41ecdcabff1718157",
+        "bytes": 57
+      },
+      "proof": {
+        "path": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs02/crlf_missing_lemma.bdrat",
+        "sha256": "d4e5498b46003fc51be50b238c379fa2db1b2010c5d4ce08e72ae6990ed29a13",
+        "bytes": 5
+      },
+      "hex": "61 0d 00 61 00",
+      "decoded_additions": [
+        [
+          -6
+        ],
+        []
+      ],
+      "expected_child_exit": 1,
+      "expected_exact_statuses": [
+        "s NOT VERIFIED"
+      ],
+      "written_check": "Unit-6 notRUP under6; RAT resolvents +/-1 notRUP after only6 is forced. Invalid-6 is marked by immediate conflict with(6,+/-1)."
+    }
+  ],
+  "retained_original_negatives": [
+    "empty_only_negative",
+    "native_on_sat_negative",
+    "incomplete_hand_negative"
+  ],
+  "counts": {
+    "native_cases": 5,
+    "proof_positive": 3,
+    "proof_negative": 6,
+    "proof_total": 9,
+    "hand_cases_in_this_receipt": 5
+  },
+  "default_backward_mode_preserved": true,
+  "forward_or_RUP_only_flags_added": false,
+  "actual_compiler_calls": 0,
+  "actual_native_calls": 0,
+  "actual_proof_checker_calls": 0,
+  "scientific_input_read": false,
+  "ledger_or_Git_mutations": false,
+  "root_authority": null,
+  "independent_outcome": null,
+  "limitations": [
+    "Written stage expectations only; no actual compiler/checker qualification.",
+    "Original source/specifications/plans and defective fixtures preserved.",
+    "Actual binary/Root build acceptance and genuine-native proof identities stay null.",
+    "No scientific SAT/UNSAT, target, or performance claim."
+  ]
+}

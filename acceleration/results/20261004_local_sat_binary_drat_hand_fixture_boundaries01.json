@@ -1,0 +1,85 @@
+{
+  "schema": "LOCAL_SAT_BINARY_DRAT_HAND_FIXTURE_BOUNDARIES_V1",
+  "timestamp": "2026-10-04T15:01:41Z",
+  "status": "SOURCE_ONLY_EXPECTATIONS_NOT_EXECUTED",
+  "producer": "/root/structural",
+  "planned_independent_verifier": "/root/native_driver",
+  "binary_convention": "Each record is ASCII a(add) or d(delete), base128 unsigned literal2*abs(lit)+(lit<0), then zero; require exact record/EOF decoding. No UTF8/text/CRLF transformation.",
+  "hand_ctrl_z_positive": {
+    "formula": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_unsat.cnf",
+    "formula_sha256": "7a39b93228b1366521d47e550bbb83e64b5b78ca71849424ace0c3fde48ebb59",
+    "proof": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_valid.bdrat",
+    "proof_sha256": "d73ee06cf7e5c4560097a7e6ce884d12f779d5c17b260684925bd0bc339c412e",
+    "bytes": 8,
+    "hex": "61 1d 00 61 1a 00 61 00",
+    "decoded_additions": [[-14], [13], []],
+    "written_RUP": [
+      "Assume14 to test(-14): clauses(13,-14) and(-13,-14) imply13 and-13.",
+      "After(-14), assume-13 to test(13): original(13,14) is false.",
+      "With units-14 and13, original(-13,14) is false, validating empty."
+    ],
+    "parser_sensitive_byte": "0x1a is the valid payload for literal+13; never an EOF marker."
+  },
+  "hand_crlf_positive": {
+    "formula": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/crlf_sensitive_unsat.cnf",
+    "formula_sha256": "2f663bd86d96ec02b6ce3540361b702b903b6c9488ed09579e56069bbbb70c67",
+    "proof": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/crlf_sensitive_valid.bdrat",
+    "proof_sha256": "d1220f4c08431a6a3ae710d12419f09d60144247b6b6db89449b047a4e81810c",
+    "bytes": 12,
+    "hex": "61 0d 0a 00 61 05 00 61 02 00 61 00",
+    "decoded_additions": [[-6, 5], [-2], [1], []],
+    "written_RUP": [
+      "First(-6,5) is an original clause; assumptions6,-5 immediately falsify it.",
+      "For(-2), assumption2 makes original(1,-2),(-1,-2) imply1,-1.",
+      "After(-2), assumption-1 falsifies original(1,2), validating(1).",
+      "Units-2 and1 falsify original(-1,2), validating empty."
+    ],
+    "translation_falsification": [
+      "If payload0x0d0a is translated to0x0a, first addition becomes(5).",
+      "Assumption-5 forces only-6 in the auxiliary component; no propagation occurs in the independent four-clause1,2 component, so(5) is notRUP.",
+      "The sole opposite-pivot clause is(-5,8). Its resolvent with(5) is(8). Assumption-8 forces-5 and then-6, with no propagation conflict in the1,2 component, so the resolvent is notRUP. Thus(5) is notRAT either."
+    ]
+  },
+  "empty_only_negative": {
+    "proof": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/empty_only.bdrat",
+    "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+    "bytes": 2,
+    "hex": "61 00",
+    "decoded_additions": [[]],
+    "reason": "The four binary clauses on1,2 have no initial unit or empty clause. Unit propagation does not conflict, so the empty addition is notRUP and has noRAT pivot. Semantic UNSAT does not validate an empty-only trace."
+  },
+  "incomplete_hand_negative": {
+    "proof": "acceleration/results/20261004_fixed17_per_copy_local_sat_binary_controls_inputs01/vars13_incomplete.bdrat",
+    "sha256": "a0c816b12326474e0dd9da22ff726a57dd0f7bfcbb029e0eb1bc7b6ca37bb639",
+    "bytes": 6,
+    "hex": "61 1a 1c 00 61 00",
+    "decoded_additions": [[13,14], []],
+    "reason": "The first addition only duplicates an original nonunit clause. No unit propagation conflict is created, so empty is notRUP and has noRAT pivot."
+  },
+  "genuine_native_and_changed_formula": {
+    "new_native_proof_hash": null,
+    "native_output_encoding_observed": false,
+    "positive_required": "Fresh actual binary proof with complete added-empty closure,0/unique s VERIFIED from the new Linux checker.",
+    "changed_formula_negative_required": "The same fresh native trace on the satisfiable two-clause formula must produce1/unique s NOT VERIFIED; Root preserves unexpected outcomes rather than weakening this gate."
+  },
+  "source_delta_observation": {
+    "old_native_source_bytes": 708,
+    "new_native_source_bytes": 696,
+    "new_bytes_equal_old_with_only_no_binary_flag_removed": true,
+    "syntax_or_native_execution": false
+  },
+  "portability_reference": "https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/fopen-wfopen?view=msvc-170",
+  "actual_native_calls": 0,
+  "actual_compiler_calls": 0,
+  "actual_proof_checker_calls": 0,
+  "actual_scientific_input_read": false,
+  "ledger_or_Git_mutations": false,
+  "root_authority": null,
+  "independent_outcome": null,
+  "limitations": [
+    "These are hand expectations, not executed binary proof qualification.",
+    "Existing Windows text checker source/binary remain preserved and are not approved for arbitrary binary DRAT.",
+    "The new POSIX build, compiler/runtime identity and every finite actual outcome need fresh Root authorization and different-author review.",
+    "No causal I/O, performance, scientific SAT/UNSAT or target conclusion is established."
+  ]
+}

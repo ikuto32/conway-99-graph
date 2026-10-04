@@ -1,0 +1,190 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T18:06:22Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-TWO-POPULATION-FOUR-OR-FIVE",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. Exactly four or five actual triangles have deficiency two, exactly ten or eight respectively have deficiency one, and all remaining triangles have deficiency zero. This does not exclude count228 or a target graph.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=228 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts actual such subsets containing T; defect edges mean no actual induced rook contains both intersecting actual triangles"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary population restriction for an R228 target. Ordinary global defect-four-cycle to uncovered-square correspondence is used only for at most three deficiency-two triangles; no extension to the surviving four/five cases, actual extra edges retained.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count228_excluded": false
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "Only the strict bound and nonempty maximum bound are inherited to force maximum deficiency exactly two. All global defect graph, cycle labeling, K3,3 exclusion, population and saturation steps are reconstructed. Prior weaker R228 candidate is preserved comparison evidence, not an approval or an assumed theorem gate.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md",
+    "sha256": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533"
+  },
+  "defect_graph_constraints": {
+    "D": 18,
+    "edges": 27,
+    "U": 27,
+    "cycle_incidence_required": 108,
+    "faithful_fourcycle_scope": "h<=3 only",
+    "K33_subgraph_forbidden_scope": "all maximum-deficiency-two configurations",
+    "node_degrees": {
+      "d1": 3,
+      "d2": 6
+    },
+    "preliminary_h_range": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "conclusion_h_range": [
+      4,
+      5
+    ],
+    "corresponding_d1_populations": [
+      10,
+      8
+    ]
+  },
+  "cycle_bound_table": [
+    {
+      "h": 1,
+      "F2": "isolated",
+      "p": 16,
+      "d1_bound": 80,
+      "d2_bound": 12,
+      "total": 92,
+      "C4_bound": 23
+    },
+    {
+      "h": 2,
+      "F2": "no edge",
+      "p": 14,
+      "d1_bound": 70,
+      "d2_bound": 24,
+      "total": 94,
+      "C4_bound": 23
+    },
+    {
+      "h": 2,
+      "F2": "one edge",
+      "p": 14,
+      "d1_bound": 70,
+      "d2_bound": 30,
+      "total": 100,
+      "C4_bound": 25
+    },
+    {
+      "h": 3,
+      "F2": "no edge",
+      "p": 12,
+      "d1_bound": 63,
+      "d2_bound": 36,
+      "total": 99,
+      "C4_bound": 24
+    },
+    {
+      "h": 3,
+      "F2": "one edge",
+      "p": 12,
+      "d1_bound": 60,
+      "d2_bound": 42,
+      "total": 102,
+      "C4_bound": 25
+    },
+    {
+      "h": 3,
+      "F2": "two-edge path",
+      "p": 12,
+      "d1_bound": 60,
+      "d2_bound": 48,
+      "total": 108,
+      "C4_bound": 27
+    },
+    {
+      "h": 3,
+      "F2": "triangle at one actual point",
+      "p": 12,
+      "d1_bound": 60,
+      "d2_bound": 45,
+      "total": 105,
+      "C4_bound": 26
+    }
+  ],
+  "path_saturation_contradiction": {
+    "center_cycle_bound": 18,
+    "center_neighbors": "two d2 endnodes andfour d1 nodes",
+    "external_d1_nodes": 8,
+    "active_external_d1_nodes": 6,
+    "each_end_external_degree": 5,
+    "forced_common_external_d1_nodes_at_least": 4,
+    "actual_disjoint_triangle_common_F_nodes_at_most": 3
+  },
+  "proof_route": [
+    "Reconstruct h1..5 from parity/outer mass/nine-point rook cover",
+    "At h<=3 every F4cycle has four distinct actualpointlabels and corresponds bijectively to an uncovered square",
+    "For maxd2 a K3,3 subgraph forces localdegree3 on repeatedlabels or an actual inducedrook ondistinctlabels; bothfail",
+    "CommonFneighbors ofdisjoint actualtriangles areatmost3 via crossmatching",
+    "Eachd1 node cyclecount<=5 unlessallthree neighborsared2; atmost3exceptional onlyinedgelessh3",
+    "Rootneighbor incidence B=12+3k-2a with alloutside l<=3; localtriangle B16 losesatleast1",
+    "Seven exacthand table rows excludeall buth3path",
+    "Path equality givesfive-of-six sharedneighbor contradiction",
+    "Thus h4or5 and p10or8"
+  ],
+  "hand_boundaries": [
+    "Actual even-six rook relation is allowed and its row/column pairs are nondefects.",
+    "Three local d2 nodes may form a D_v triangle; it is not forbidden by distinct-intersection triangle rule.",
+    "Four local d2 nodes may form a D_v fourcycle with all labels equal; the faithful square map is not asserted for h4.",
+    "The h3path scalar table reaches108; actual matching geometry, not unlabeled counting, excludes it.",
+    "No induced fullpositive support, equitablepartition or automorphism is assumed."
+  ],
+  "shared_origin": {
+    "Root_gap_six_followup": true,
+    "Structural_prior_rook_paper_authorship": true,
+    "Native_two_dependency_reviews": true,
+    "prior_weaker_pattern_preserved": true,
+    "new_candidate_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "limitations": [
+    "R228 and target existence/nonexistence remain unresolved.",
+    "No h4/h5 defect classification or faithful ordinary-cycle correspondence is claimed.",
+    "Hand seven-row table is not a graph census or execution gate.",
+    "No novelty conclusion follows from bounded prior-paper comparison."
+  ]
+}
+

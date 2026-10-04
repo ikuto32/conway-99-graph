@@ -1,0 +1,1155 @@
+{
+  "schema": "FIVE_BOUND_MATHEMATICAL_LITERAL_APPEND_SOURCE_ONLY_V1",
+  "status": "SOURCE_ONLY_LITERAL_METADATA_REQUIRES_ROOT_ONE",
+  "timestamp": "2026-10-04 18:45:11 UTC",
+  "author": "/root/checkpoint_audit",
+  "baseline": {
+    "path": "CLAIMS.yaml",
+    "sha256": "0e871adb48cab76b79bc46032100ffc9bf3e855824afa2de2c1759cd30101b81",
+    "claims": 444,
+    "artifact_records": 23802,
+    "public_records": 6054,
+    "status_counts": {
+      "CANDIDATE": 3,
+      "REFUTED": 6,
+      "VERIFIED": 435
+    },
+    "review_state_counts": {
+      "CLEAR": 444
+    },
+    "source_commit": "9349bd83bda2c9ae72671ed6a8ab2efd3ae118f5",
+    "index_sha256": "3ceb7b2e8b98c7b0dac05e193b328b00d55666ceecad8a9d5e9799159fe5c56c",
+    "observation_source": {
+      "path": "acceleration/results/20261004_nine_mathematical_live_install_root_receipt01.json",
+      "sha256": "cf9ea163e7d3e074b7ac186bb7f253725a26adcb286f4fc36312ccf15508bcfe"
+    },
+    "live_ledger_parsed": false,
+    "observation_not_refreshed_at_packet_preparation": true
+  },
+  "claims": [
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-PATTERN-RESTRICTION",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, set d_T=6-r_T for every actual triangle T. All d_T lie in{0,1,2}; if h counts deficiency-two triangles, then1<=h<=5 and exactly18-2h>=8 triangles have deficiency one. Every deficiency-two triangle has at most three deficiency-two defect partners across its three points; if it has three, then h=4. Thus at h=5 the deficiency-two defect graph has maximum degree two; if a degree-three node occurs, the graph is a three-leaf star or that star with one leaf edge. No count228 or target exclusion follows.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=228 counts actual induced9-vertex rook subsets once by their vertex sets",
+          "r_T counts actual such subsets containing T; a defect pair means no actual induced rook contains both intersecting actual triangles"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Exact r1 conditional statement only; no R228 or target exclusion.",
+          "No construction, automorphism, equitable profile or nonconstant-codeword assumption.",
+          "Written checks are not executed controls, a formal proof or a computation gate.",
+          "No whole-archive or worldwide novelty assertion.",
+          "Root administrative review, registration and availability remain separate."
+        ],
+        "created_at": "2026-10-04T18:14:25.5998263+00:00",
+        "updated_at": "2026-10-04T18:14:25.5998263+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/checkpoint_audit",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json",
+        "timestamp": "2026-10-04T18:14:25.5998263+00:00",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, set d_T=6-r_T for every actual triangle T. All d_T lie in{0,1,2}; if h counts deficiency-two triangles, then1<=h<=5 and exactly18-2h>=8 triangles have deficiency one. Every deficiency-two triangle has at most three deficiency-two defect partners across its three points; if it has three, then h=4. Thus at h=5 the deficiency-two defect graph has maximum degree two; if a degree-three node occurs, the graph is a three-leaf star or that star with one leaf edge. No count228 or target exclusion follows.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root suggested the gap-six direction before the Structural freeze",
+          "Structural authored both R228 papers and prior rook arguments",
+          "Native independently reviewed the two inherited r1 dependencies",
+          "CP reconstructed the exact conditional proof and attempted actual-point falsification",
+          "Same disclosed strategy does not constitute independent discovery",
+          "No previous R229/R230/R231 or computation gate transferred"
+        ],
+        "controls": [
+          "Unique edge triangle and seven incident triangles give 231 actual triangles",
+          "Triangle linearity and no three different pairwise intersection points",
+          "Unique possible containing rook makes local defect degree d at each point",
+          "Six triangle incidences per rook give D18",
+          "Two accepted r1 bounds force d0/1/2 with h positive",
+          "Handshake at each actual point makes the d1 selection even",
+          "Six root defect neighbors and twelve distinct outer points",
+          "External incidences 12+2k and external positive population 10-k-ell",
+          "At most three per external triangle gives 3ell+5k<=18",
+          "Even selections of two or four actual triangles impossible",
+          "Even six selection is induced rook via cubic triangle-free six-node dual",
+          "Nine rook points cannot be covered by six external d2 triangles at h6",
+          "All-d2 h9 contradicts k6 versus k<=3",
+          "Saturated h5/k3 leaves unique external d2 without second local partner",
+          "Same-bucket leaf intersections give star or star with one leaf edge",
+          "Actual vertex-subset rook count rather than embeddings",
+          "External incidence multiplicity is not distinct-point cardinality",
+          "Parity permits high actual point multiplicities",
+          "Even-six rook relation itself remains allowed",
+          "Cube-star even-eight selection is not ruled out by parity",
+          "Six-versus-nine argument requires d1 defect degrees",
+          "External d1 saturation prevents an extra local edge to O",
+          "h4/k3 has three slack slots and is not rejected",
+          "h5/k2 has two slack slots and is not rejected",
+          "Three d2 triangles at one point remain allowed",
+          "Different-bucket intersections alone use the three-point prohibition",
+          "No R228 exclusion, induced positive support or realization"
+        ],
+        "limitations": [
+          "Exact r1 conditional statement only; no R228 or target exclusion.",
+          "No construction, automorphism, equitable profile or nonconstant-codeword assumption.",
+          "Written checks are not executed controls, a formal proof or a computation gate.",
+          "No whole-archive or worldwide novelty assertion.",
+          "Root administrative review, registration and availability remain separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/claim_binding_schema2.json",
+        "sha256": "420bbd8a51c058c9017c0990c6579bb0f169e92788498c9286b98eb30a6bfa45"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json",
+        "sha256": "fb517be28e709aaec2c68419488bbf2eb38e42f094b4721231c1ac035ee26353"
+      },
+      "administrative_acceptance": {
+        "sha256": "e17e41e88090c31490773c3da3a394bb1d0c5c5bd4371127a554f05c5a44f07b",
+        "path": "acceleration/results/20261004_rook_count228_deficiency_patterns_root_written_acceptance01.json"
+      },
+      "administrative_acceptance_scope": "Exact written claim scope accepted by Root; original binding creation-time null slot remains unchanged.",
+      "authorship_and_executor": {
+        "discovery_producer": "/root/structural",
+        "independent_verifier": "/root/checkpoint_audit",
+        "metadata_projection_author": "/root/checkpoint_audit",
+        "checking_source_author": null,
+        "actual_executor": null,
+        "actual_executor_null_reason": "Written primary derivation; supporting artifact execution is separately disclosed.",
+        "supporting_artifact_actual_executor": null
+      },
+      "external_source": null,
+      "reproducibility": null,
+      "reproducibility_manifest_path": null,
+      "unknowns": {
+        "external_source": "Not applicable: this is a separately derived repository-local mathematical result; no external source archive is asserted.",
+        "reproducibility": "Written independent derivation only; no COMPUTED basis or replay command is claimed.",
+        "coverage": "Exact universal conditional statement only; overall target search coverage UNKNOWN.",
+        "external_review": "No formal or third-party proof review is claimed beyond the separately disclosed independent derivation.",
+        "hardware": "Not applicable to written mathematics; no hardware/runtime generalization."
+      },
+      "evidence_identity_sha256": {
+        "acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md": "4e72a1d287145cf6ee944ed9a1e5929160d6ef2a69ba9c389e8f94c480593adc",
+        "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+        "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/claim_binding_schema2.json": "420bbd8a51c058c9017c0990c6579bb0f169e92788498c9286b98eb30a6bfa45",
+        "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json": "fb517be28e709aaec2c68419488bbf2eb38e42f094b4721231c1ac035ee26353",
+        "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+        "acceleration/results/20261004_rook_count228_deficiency_patterns_root_written_acceptance01.json": "e17e41e88090c31490773c3da3a394bb1d0c5c5bd4371127a554f05c5a44f07b",
+        "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+        "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c"
+      },
+      "evidence_identity_paths": [
+        "acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md",
+        "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json",
+        "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json",
+        "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_rook_count228_deficiency_patterns_root_written_acceptance01.json",
+        "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json",
+        "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md"
+      ],
+      "evidence_identity_count": 11,
+      "evidence_artifact_ids": null,
+      "evidence_artifact_ids_null_reason": "Ordinary copying resolves exact first existing PUBLIC/LOCAL_ONLY identities and new LOCAL_ONLY IDs.",
+      "verification_artifact_hashes_null_reason": "Exact path/hash evidence must be resolved to schema artifact IDs.",
+      "original_binding_scope": {
+        "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_report_scope": {
+        "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+        "unrestricted_target": true,
+        "graph_construction": false,
+        "target_resolution": "NONE",
+        "scientific_coverage": "UNKNOWN",
+        "count228_excluded": false
+      },
+      "original_binding_shared_components": [
+        "Root suggested the gap-six direction before the Structural freeze",
+        "Structural authored both R228 papers and prior rook arguments",
+        "Native independently reviewed the two inherited r1 dependencies",
+        "CP reconstructed the exact conditional proof and attempted actual-point falsification",
+        "Same disclosed strategy does not constitute independent discovery",
+        "No previous R229/R230/R231 or computation gate transferred"
+      ],
+      "schema_projection": {
+        "scope_three_required_fields_only": true,
+        "scientific_statement_assumptions_roles_timestamp_and_dependencies_literal": true,
+        "original_scope_and_shared_metadata_retained": true
+      },
+      "literal_original_statement_scope_roles_and_verification_timestamp_preserved": true,
+      "Root_exact_projection_review": null
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-TWO-POPULATION-FOUR-OR-FIVE",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. Exactly four or five actual triangles have deficiency two, exactly ten or eight respectively have deficiency one, and all remaining triangles have deficiency zero. This does not exclude count228 or a target graph.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional necessary population restriction for an R228 target. Ordinary global defect-four-cycle to uncovered-square correspondence is used only for at most three deficiency-two triangles; no extension to the surviving four/five cases, actual extra edges retained.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R=228 counts actual induced9-vertex rook subsets once by their vertex sets",
+          "r_T counts actual such subsets containing T; defect edges mean no actual induced rook contains both intersecting actual triangles"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Exact r1 conditional statement only; no R228 or target exclusion.",
+          "No construction, automorphism, equitable profile or nonconstant-codeword assumption.",
+          "Written checks are not executed controls, a formal proof or a computation gate.",
+          "No whole-archive or worldwide novelty assertion.",
+          "Root administrative review, registration and availability remain separate."
+        ],
+        "created_at": "2026-10-04T18:14:25.5998263+00:00",
+        "updated_at": "2026-10-04T18:14:25.5998263+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/checkpoint_audit",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/summary.json",
+        "timestamp": "2026-10-04T18:14:25.5998263+00:00",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. Exactly four or five actual triangles have deficiency two, exactly ten or eight respectively have deficiency one, and all remaining triangles have deficiency zero. This does not exclude count228 or a target graph.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root suggested the gap-six direction before the Structural freeze",
+          "Structural authored both R228 papers and prior rook arguments",
+          "Native independently reviewed the two inherited r1 dependencies",
+          "CP reconstructed the exact conditional proof and attempted actual-point falsification",
+          "Same disclosed strategy does not constitute independent discovery",
+          "No previous R229/R230/R231 or computation gate transferred"
+        ],
+        "controls": [
+          "Reconstruct h1..5 using only two accepted r1 bounds",
+          "2079 target squares counted twice by opposite nonedges",
+          "Unique containing rook and nine squares per rook give U27",
+          "Global defect graph degree3d and 27 edges",
+          "Any F triangle has one actual point and only d2 nodes",
+          "Repeated cycle labels require four d2 nodes",
+          "Faithful ordinary F four-cycle and uncovered square bijection only h<=3",
+          "K33 repeated labels force forbidden local degree3",
+          "K33 distinct labels force actual rook nondefect edges",
+          "Disjoint actual triangles have at most three common F neighbors via cross matching",
+          "d1 root neighbors at distinct points make any d2 pair disjoint",
+          "d1 cycle count at most6 and at most5 with a d1 neighbor",
+          "At most three exceptions only edgeless h3",
+          "Root C incidence B12+3k-2a and all external l<=3",
+          "Local d2 triangle B16 gives c<=15 by mod-three loss",
+          "Seven table totals 92/94/100/99/102/108/105 versus required108",
+          "Path equality gives six active external nodes, endpoint five-subsets and four common neighbors",
+          "Ordinary cycles not a selected induced-cycle catalog",
+          "Four coincident local labels at h4 remain allowed",
+          "Local d2 triangle is retained, not incorrectly triangle-free",
+          "Common-neighbor bound requires actual disjoint triangles",
+          "F K33 prohibition does not forbid nondefective actual rook",
+          "K33 sides are disjoint because d1 cannot lie on F triangle",
+          "External d2 l<=3 uses at most one d2 in C for h<=3",
+          "Binomial equality requires only l0/l3",
+          "Table path row is not excluded by scalar counts alone",
+          "Both endpoints need five distinct nodes among the same six active nodes",
+          "High point multiplicities and extra target edges retained",
+          "No h4/h5 classification, R228 exclusion or target graph conclusion"
+        ],
+        "limitations": [
+          "Exact r1 conditional statement only; no R228 or target exclusion.",
+          "No construction, automorphism, equitable profile or nonconstant-codeword assumption.",
+          "Written checks are not executed controls, a formal proof or a computation gate.",
+          "No whole-archive or worldwide novelty assertion.",
+          "Root administrative review, registration and availability remain separate."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/claim_binding_schema2.json",
+        "sha256": "af6d96819a07be8588910722d0e089080de629e3ef5c4c47fa24d4dc4cffd534"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/summary.json",
+        "sha256": "5e3c1a1e762c5043d02a656cbe9e776f33bbe72a27f3c7667ae972b583e21c07"
+      },
+      "administrative_acceptance": {
+        "sha256": "d1bf187b918980976d19a5c2988dfed154c853b5de0353ac194c5f02cdd7b966",
+        "path": "acceleration/results/20261004_rook_count228_d2_four_or_five_root_written_acceptance01.json"
+      },
+      "administrative_acceptance_scope": "Exact written claim scope accepted by Root; original binding creation-time null slot remains unchanged.",
+      "authorship_and_executor": {
+        "discovery_producer": "/root/structural",
+        "independent_verifier": "/root/checkpoint_audit",
+        "metadata_projection_author": "/root/checkpoint_audit",
+        "checking_source_author": null,
+        "actual_executor": null,
+        "actual_executor_null_reason": "Written primary derivation; supporting artifact execution is separately disclosed.",
+        "supporting_artifact_actual_executor": null
+      },
+      "external_source": null,
+      "reproducibility": null,
+      "reproducibility_manifest_path": null,
+      "unknowns": {
+        "external_source": "Not applicable: this is a separately derived repository-local mathematical result; no external source archive is asserted.",
+        "reproducibility": "Written independent derivation only; no COMPUTED basis or replay command is claimed.",
+        "coverage": "Exact universal conditional statement only; overall target search coverage UNKNOWN.",
+        "external_review": "No formal or third-party proof review is claimed beyond the separately disclosed independent derivation.",
+        "hardware": "Not applicable to written mathematics; no hardware/runtime generalization."
+      },
+      "evidence_identity_sha256": {
+        "acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md": "c7269281cddac6432a65d81a441a23a9e4d5faa99dc15c29ab33467f613d1a95",
+        "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/claim_binding_schema2.json": "af6d96819a07be8588910722d0e089080de629e3ef5c4c47fa24d4dc4cffd534",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/summary.json": "5e3c1a1e762c5043d02a656cbe9e776f33bbe72a27f3c7667ae972b583e21c07",
+        "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+        "acceleration/results/20261004_rook_count228_d2_four_or_five_root_written_acceptance01.json": "d1bf187b918980976d19a5c2988dfed154c853b5de0353ac194c5f02cdd7b966",
+        "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json": "22826b9350197f1dab780ef71574585ba6d8dfb8d61fea4c5d8421cfe5052d16",
+        "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+        "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c"
+      },
+      "evidence_identity_paths": [
+        "acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md",
+        "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/summary.json",
+        "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_rook_count228_d2_four_or_five_root_written_acceptance01.json",
+        "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json",
+        "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json",
+        "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md"
+      ],
+      "evidence_identity_count": 13,
+      "evidence_artifact_ids": null,
+      "evidence_artifact_ids_null_reason": "Ordinary copying resolves exact first existing PUBLIC/LOCAL_ONLY identities and new LOCAL_ONLY IDs.",
+      "verification_artifact_hashes_null_reason": "Exact path/hash evidence must be resolved to schema artifact IDs.",
+      "original_binding_scope": {
+        "description": "Universal conditional necessary population restriction for an R228 target. Ordinary global defect-four-cycle to uncovered-square correspondence is used only for at most three deficiency-two triangles; no extension to the surviving four/five cases, actual extra edges retained.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_report_scope": {
+        "description": "Universal conditional necessary population restriction for an R228 target. Ordinary global defect-four-cycle to uncovered-square correspondence is used only for at most three deficiency-two triangles; no extension to the surviving four/five cases, actual extra edges retained.",
+        "unrestricted_target": true,
+        "graph_construction": false,
+        "scientific_coverage": "UNKNOWN",
+        "target_resolution": "NONE",
+        "count228_excluded": false
+      },
+      "original_binding_shared_components": [
+        "Root suggested the gap-six direction before the Structural freeze",
+        "Structural authored both R228 papers and prior rook arguments",
+        "Native independently reviewed the two inherited r1 dependencies",
+        "CP reconstructed the exact conditional proof and attempted actual-point falsification",
+        "Same disclosed strategy does not constitute independent discovery",
+        "No previous R229/R230/R231 or computation gate transferred"
+      ],
+      "schema_projection": {
+        "scope_three_required_fields_only": true,
+        "scientific_statement_assumptions_roles_timestamp_and_dependencies_literal": true,
+        "original_scope_and_shared_metadata_retained": true
+      },
+      "literal_original_statement_scope_roles_and_verification_timestamp_preserved": true,
+      "Root_exact_projection_review": null
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-ROOK-NINE-COUNT-NOT228",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), the number R of actual induced rook-nine vertex subsets, counted once by their vertex sets, is not228.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Universal conditional necessary rook-count exclusion only; the supposition R228 is discharged using the explicit four-or-five deficiency-two population prerequisite, actual fan partners and the weighted upper-Gram equality. No induced support or automorphism is assumed in the ambient target.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "complete finite simple SRG(99,14,1,2)",
+          "R counts actual induced9-vertex rook subsets once by their vertex sets"
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-TWO-POPULATION-FOUR-OR-FIVE",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Exact R!=228 only; no broader target nonexistence or another count conclusion.",
+          "The exact four-or-five r1 prerequisite is essential and genuinely independently reviewed.",
+          "Written proof is not a formal proof, graph census or execution gate.",
+          "Root administrative review, registration and availability remain separate.",
+          "No global N3-free/Hamming assumption, induced support hypothesis or code-rank premise."
+        ],
+        "created_at": "2026-10-04T18:18:30Z",
+        "updated_at": "2026-10-04T18:18:30Z"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/checkpoint_audit",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_rook_nine_count_not228_checkpoint_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/summary.json",
+        "timestamp": "2026-10-04T18:18:30Z",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), the number R of actual induced rook-nine vertex subsets, counted once by their vertex sets, is not228.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Root suggested surviving h4/h5 extension and independently reconstructed an outline",
+          "Structural authored this paper and its exact prerequisite",
+          "CP authored the separate genuine prerequisite audit and reconstructed this extension",
+          "Shared strategy does not imply independent discovery or approval by agent agreement",
+          "No old R229/R230/R231, Hamming or computation gate transferred"
+        ],
+        "controls": [
+          "Genuine independent four-or-five r1 population prerequisite reconstructed",
+          "Actual triangle linearity and no three distinct pairwise intersection points",
+          "Local defect degree and even d1 incidence",
+          "Positive fan has 2r1+4r2 outer defect incidences",
+          "External actual triangle supplies at most one incidence in entire fan",
+          "Distinct external partners give P>=3r1+5r2",
+          "Even d1 repair independently gives p>=3r1",
+          "Small p and parity force every d1 support multiplicity exactly2",
+          "r2>=3 ruled out by P13/14",
+          "r2=2 forces r1=0 and impossible degree2 on two positive nodes",
+          "D2 triangles are disjoint and every d2 point has two d1 triangles",
+          "h5 demands15 distinct points in12-point d1 support",
+          "h4 d1 support has15 points and all d2 points lie in it",
+          "Chosen T and six C triangles have12 distinct outer points and exhaust S",
+          "Four V triangles partition outer12",
+          "Target equation and regularity make Q=3I-A+J/9 PSD",
+          "Known edge products12+30+12=54 are disjoint by lambda1",
+          "Weights sum18/norm24 give quadratic72-108+36=0",
+          "Positive additional support edges contradict PSD",
+          "Other three d2 triangles violate unique triangle partner of every known S edge",
+          "Fan uses every positive triangle through point, not selected subset",
+          "External d2 cannot count twice at one outer point or meet two fan points",
+          "Even-family multiplicity2 is derived from small p, not assumed generally",
+          "Zero-deficiency nodes cannot supply local defect edges",
+          "Three local d2 nodes require P15 and four require P20",
+          "Previous local collapsed-cycle examples are not current global populations",
+          "T/C/V support exhaustion retains exact actual point labels",
+          "Known eleven-triangle edge union itself is not forbidden",
+          "No induced support assumption before PSD conclusion",
+          "Extra edges subtract2/4/8 and edges outside support contribute0",
+          "Additional actual triangle cannot reuse known edge with a different third partner",
+          "No other rook count, graph realization, code rank or target exclusion"
+        ],
+        "limitations": [
+          "Exact R!=228 only; no broader target nonexistence or another count conclusion.",
+          "The exact four-or-five r1 prerequisite is essential and genuinely independently reviewed.",
+          "Written proof is not a formal proof, graph census or execution gate.",
+          "Root administrative review, registration and availability remain separate.",
+          "No global N3-free/Hamming assumption, induced support hypothesis or code-rank premise."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/claim_binding_schema2.json",
+        "sha256": "edc7607e3aa774a91ff52ab5417c5b4f4753a00a0708db70b11bec7577a54e27"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/summary.json",
+        "sha256": "cdfed185acbb9e3145b8c33ea2727cd8bd56bff9a1e2b97f0104d86f90bf27fd"
+      },
+      "administrative_acceptance": {
+        "sha256": "6cb8297d5adb8407f8f9bfb2f09d816e667e088815d411df61a6a9c4a39aa1ed",
+        "path": "acceleration/results/20261004_rook_nine_count_not228_root_written_acceptance01.json"
+      },
+      "administrative_acceptance_scope": "Exact written claim scope accepted by Root; original binding creation-time null slot remains unchanged.",
+      "authorship_and_executor": {
+        "discovery_producer": "/root/structural",
+        "independent_verifier": "/root/checkpoint_audit",
+        "metadata_projection_author": "/root/checkpoint_audit",
+        "checking_source_author": null,
+        "actual_executor": null,
+        "actual_executor_null_reason": "Written primary derivation; supporting artifact execution is separately disclosed.",
+        "supporting_artifact_actual_executor": null
+      },
+      "external_source": null,
+      "reproducibility": null,
+      "reproducibility_manifest_path": null,
+      "unknowns": {
+        "external_source": "Not applicable: this is a separately derived repository-local mathematical result; no external source archive is asserted.",
+        "reproducibility": "Written independent derivation only; no COMPUTED basis or replay command is claimed.",
+        "coverage": "Exact universal conditional statement only; overall target search coverage UNKNOWN.",
+        "external_review": "No formal or third-party proof review is claimed beyond the separately disclosed independent derivation.",
+        "hardware": "Not applicable to written mathematics; no hardware/runtime generalization."
+      },
+      "evidence_identity_sha256": {
+        "acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md": "c7269281cddac6432a65d81a441a23a9e4d5faa99dc15c29ab33467f613d1a95",
+        "acceleration/audit_20261004_rook_nine_count_not228_checkpoint_v1.md": "ccb31097c0c4a1916bf7f750af152f7a9d373e71070d9f1bc1f71338ddbaf560",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/claim_binding_schema2.json": "af6d96819a07be8588910722d0e089080de629e3ef5c4c47fa24d4dc4cffd534",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/summary.json": "5e3c1a1e762c5043d02a656cbe9e776f33bbe72a27f3c7667ae972b583e21c07",
+        "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/claim_binding_schema2.json": "edc7607e3aa774a91ff52ab5417c5b4f4753a00a0708db70b11bec7577a54e27",
+        "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/summary.json": "cdfed185acbb9e3145b8c33ea2727cd8bd56bff9a1e2b97f0104d86f90bf27fd",
+        "acceleration/results/20261004_rook_nine_count_not228_root_written_acceptance01.json": "6cb8297d5adb8407f8f9bfb2f09d816e667e088815d411df61a6a9c4a39aa1ed",
+        "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json": "22826b9350197f1dab780ef71574585ba6d8dfb8d61fea4c5d8421cfe5052d16",
+        "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+        "acceleration/results/20261004_target_rook_nine_count_not228_candidate01.json": "7f1cda4ad66515c18d8158fe53114b54919ccbb7ded4e380d7b4c0730ff1c56a",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT228_V1.md": "a716630106db4064393d5500d6e33b8db9867e0e5a1d79029f0654f2b7a0f613",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c"
+      },
+      "evidence_identity_paths": [
+        "acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md",
+        "acceleration/audit_20261004_rook_nine_count_not228_checkpoint_v1.md",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/summary.json",
+        "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/summary.json",
+        "acceleration/results/20261004_rook_nine_count_not228_root_written_acceptance01.json",
+        "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json",
+        "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json",
+        "acceleration/results/20261004_target_rook_nine_count_not228_candidate01.json",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT228_V1.md",
+        "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md"
+      ],
+      "evidence_identity_count": 15,
+      "evidence_artifact_ids": null,
+      "evidence_artifact_ids_null_reason": "Ordinary copying resolves exact first existing PUBLIC/LOCAL_ONLY identities and new LOCAL_ONLY IDs.",
+      "verification_artifact_hashes_null_reason": "Exact path/hash evidence must be resolved to schema artifact IDs.",
+      "original_binding_scope": {
+        "description": "Universal conditional necessary rook-count exclusion only; the supposition R228 is discharged using the explicit four-or-five deficiency-two population prerequisite, actual fan partners and the weighted upper-Gram equality. No induced support or automorphism is assumed in the ambient target.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_report_scope": {
+        "description": "Universal conditional necessary rook-count exclusion only; the supposition R228 is discharged using the explicit four-or-five deficiency-two population prerequisite, actual fan partners and the weighted upper-Gram equality. No induced support or automorphism is assumed in the ambient target.",
+        "unrestricted_target": true,
+        "graph_construction": false,
+        "scientific_coverage": "UNKNOWN",
+        "target_resolution": "NONE"
+      },
+      "original_binding_shared_components": [
+        "Root suggested surviving h4/h5 extension and independently reconstructed an outline",
+        "Structural authored this paper and its exact prerequisite",
+        "CP authored the separate genuine prerequisite audit and reconstructed this extension",
+        "Shared strategy does not imply independent discovery or approval by agent agreement",
+        "No old R229/R230/R231, Hamming or computation gate transferred"
+      ],
+      "schema_projection": {
+        "scope_three_required_fields_only": true,
+        "scientific_statement_assumptions_roles_timestamp_and_dependencies_literal": true,
+        "original_scope_and_shared_metadata_retained": true
+      },
+      "literal_original_statement_scope_roles_and_verification_timestamp_preserved": true,
+      "Root_exact_projection_review": null
+    },
+    {
+      "claim_core": {
+        "id": "C-PRIME5-ANALYTIC-DELSARTE-FINITE384-EXACT-FAMILY-AUDIT",
+        "revision": 1,
+        "statement": "The frozen384 ordered analytic cases t=8,...,15 with s=121,...,160 then243/2,485/4,969/8,1937/16,3873/32,7745/64,15489/128,30977/256 have been completely independently checked:48 construction cases yield96 exact rational certificate branches and336 are rejected at the first declared construction condition (133 RECURRENCE_SIGN,203 TRUNCATED_SIGN). All recurrence/rejection prefixes, accepted product identities,384 checkpoints,32 multipliers/45 tails/46 values per certificate, exact size/powers and first-minimum ties agree. Both first exact minima occur at case96,t10/s121: baseline size36120065840222210842361921407178558668800/98281904204607924163 with dimension ceiling29, and the branch using separately justified dual-image counts size64477408246590462487753388936704696678716171878400/483520114859812120308332405578177 with dimension ceiling24. This is an exact finite construction audit; rejections do not prove code infeasibility and the minima are not global polynomial optima.",
+        "kind": "mathematical result",
+        "basis": [
+          "COMPUTED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Exactly the frozen384 analytic construction cases, their384 prefixes/checkpoints and96 exact certificate branches; conditional interpretation under accepted code-support/image-count/renormalization premises. Rejected cases fail the construction only.",
+          "unrestricted_target": false,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "Frozen ordered384-case construction and q5/n99/minimum-distance55 certificate wire.",
+          "Low-image-count bounds are conditional on separately accepted actual dual counts924,8316,24948,391776 at weights3,4,5,6.",
+          "Distinct exact source qualification and genuine complete813-input artifact check remain applicable to the saved objects."
+        ],
+        "dependencies": [
+          {
+            "id": "C-UNRESTRICTED-TARGET-PRIME5-LEFT-CODE-SUPPORT-LOWER55",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-PRIME5-LINEAR-TRIPLE-IMAGE-WEIGHT-COUNTS",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-CODE-DELSARTE-IMAGE-LOWER-COUNT-RENORMALIZATION",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Finite selected family only; no all-parameter, all-polynomial or all-method optimum or infeasibility theorem.",
+          "Own68/old15/familyown27 actions were authenticated and0 were reexecuted in FULL; four author actions were genuinely replayed with declared stage correspondence.",
+          "No graph object, target existence/exclusion, nonzero left code, formal proof or external peer review is asserted.",
+          "Exact existing manifest identities preserve all813 inputs and4 outputs; selected new evidence is compact. No historic source/report/candidate, ledger/index/Git bytes changed.",
+          "Root discovery/actual executor, Native checking implementation author/verifier and Structural mathematical producer roles are distinct and disclosed."
+        ],
+        "created_at": "2026-10-04T18:36:52.6193258+00:00",
+        "updated_at": "2026-10-04T18:36:52.6193258+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_artifact_check",
+        "command_or_audit": "Independent actual artifact check acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py; authentic claim-bound report acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/summary.json",
+        "timestamp": "2026-10-04T18:24:02.611697+00:00",
+        "outcome": "PASS",
+        "scope": "The frozen384 ordered analytic cases t=8,...,15 with s=121,...,160 then243/2,485/4,969/8,1937/16,3873/32,7745/64,15489/128,30977/256 have been completely independently checked:48 construction cases yield96 exact rational certificate branches and336 are rejected at the first declared construction condition (133 RECURRENCE_SIGN,203 TRUNCATED_SIGN). All recurrence/rejection prefixes, accepted product identities,384 checkpoints,32 multipliers/45 tails/46 values per certificate, exact size/powers and first-minimum ties agree. Both first exact minima occur at case96,t10/s121: baseline size36120065840222210842361921407178558668800/98281904204607924163 with dimension ceiling29, and the branch using separately justified dual-image counts size64477408246590462487753388936704696678716171878400/483520114859812120308332405578177 with dimension ceiling24. This is an exact finite construction audit; rejections do not prove code infeasibility and the minima are not global polynomial optima.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural authored analytic producerV2 and all384 raw construction objects; Root supplied the shared discovery outline.",
+          "Native authored distinct familyae825 with qualified Native0333 coordinate folds and literal Native3d431 Reader; no Structural functions/module/AST/backend used to establish arithmetic.",
+          "Root executed the contained complete numerical checker139843 and independently accepted actual small outputs/all384 secondary rows and fresh identity closure.",
+          "Current metadata/written deduction reads selected accepted objects and immutable manifests; it launches no worker, reexecutes no prior qualification and does not duplicate or bulk-rehash813 prior inputs."
+        ],
+        "controls": [
+          "complete_cases: 384",
+          "valid_cases: 48",
+          "rejected_construction_cases: 336",
+          "RECURRENCE_SIGN: 133",
+          "TRUNCATED_SIGN: 203",
+          "complete_certificate_branches: 96",
+          "producer_actions_replayed: 4",
+          "own68_actions_rerun: 0",
+          "old15_actions_rerun: 0",
+          "own27_actions_rerun: 0",
+          "first_tie_minimum_case: 96",
+          "target_computational_invocations_in_metadata: 0"
+        ],
+        "limitations": [
+          "Finite selected family only; no all-parameter, all-polynomial or all-method optimum or infeasibility theorem.",
+          "Own68/old15/familyown27 actions were authenticated and0 were reexecuted in FULL; four author actions were genuinely replayed with declared stage correspondence.",
+          "No graph object, target existence/exclusion, nonzero left code, formal proof or external peer review is asserted.",
+          "Exact existing manifest identities preserve all813 inputs and4 outputs; selected new evidence is compact. No historic source/report/candidate, ledger/index/Git bytes changed.",
+          "Root discovery/actual executor, Native checking implementation author/verifier and Structural mathematical producer roles are distinct and disclosed."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/claim_binding_schema2.json",
+        "sha256": "36d655e32d1ddf41453d39e7adb2a8c55241cd35e28de231c9796395e05b0b9d"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/summary.json",
+        "sha256": "24927d1082ea4765ab301995037f83bb1e29f0e2d01622be6dd49ebacb0a449d"
+      },
+      "administrative_acceptance": {
+        "sha256": "1bc72d8472a4e3bb91a22701cacea15345c44ceaade5b3b78b69bbbae0dee595",
+        "path": "acceleration/results/20261004_prime5_analytic_family_full_root_acceptance01.json"
+      },
+      "administrative_acceptance_scope": "Genuine supporting complete numerical artifact acceptance only; exact new claim-ID metadata Root review is separately pending and must not be inferred from this field.",
+      "authorship_and_executor": {
+        "discovery_producer": "/root/structural",
+        "independent_verifier": "/root/native_driver",
+        "metadata_projection_author": "/root/checkpoint_audit",
+        "checking_source_author": "/root/native_driver",
+        "actual_executor": "/root",
+        "actual_executor_null_reason": null,
+        "supporting_artifact_actual_executor": "/root"
+      },
+      "external_source": null,
+      "reproducibility": null,
+      "reproducibility_manifest_path": "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/summary.json",
+      "unknowns": {
+        "external_source": "Repository-local derivation or exact certificate; no external source archive mapping is asserted.",
+        "reproducibility": "The accepted complete numerical report is the reproducibility manifest; compact evidence references preserve its immutable complete maps without duplication.",
+        "coverage": "Only the exact frozen claim scope; overall target search coverage UNKNOWN.",
+        "external_review": "No formal or third-party proof review is asserted beyond the disclosed independent path.",
+        "hardware": "Actual contained receipts retain process facts; no normalized hardware or performance generalization is invented."
+      },
+      "evidence_identity_sha256": {
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py": "ae82538770a314f5aa2fc7c698ba2ff305b92e59a27d5de9cfb69798ebbdc977",
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1_spec.md": "523c6419a3139f6153dc8ab303c38dbef51ee707cba992d7370f3977294c29e9",
+        "acceleration/audit_20261004_prime5_analytic_family_and_target_dimension24_native_v1.md": "bda840c49bcd0c14b43df0c1065ab83e7581e623fec2d76c2d58ebd3609e6861",
+        "acceleration/configuration_20261004_prime5_analytic_delsarte_family_independent_v1.json": "e90ecbbb3a4aecdbee545d71676ba66fba29db31e63d5cff4f3bc8ffef867c39",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2.py": "a4294996414f86337e1726628d337319a0f3c3b85b9afd6f37713a09cb91b624",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2_spec.md": "cae1a819d0b603f1243393cab0a4f86401a943d6b19fa1c7527aeea114d3b4f4",
+        "acceleration/plan_20261004_prime5_analytic_delsarte_family_independent_full_v1.json": "f064e5b68f53d17625f692830eabb1cc54377dde0eab5066b9dcaab578487c98",
+        "acceleration/results/20261004_code_delsarte_image_count_renormalization_root_written_acceptance01.json": "ae4bb06d688e722d555003e849631f7a4dec32daaf4323b84450836639293389",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/claim_binding_schema2.json": "a11104e4e9a3f4e3a511a563b949e5689b06bf94b22ca5bb6776b110ef3a241c",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/summary.json": "da90958c41bdc88e69c53f12f04663888f571888fe31536d74022b383c6b8b61",
+        "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/claim_binding_schema2.json": "36d655e32d1ddf41453d39e7adb2a8c55241cd35e28de231c9796395e05b0b9d",
+        "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/summary.json": "24927d1082ea4765ab301995037f83bb1e29f0e2d01622be6dd49ebacb0a449d",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration01/summary.json": "e85e19a6d5cc72665211441b829f66721a7554cad408486d180a30cb7063bb50",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_author_stages.json": "21207de9ff34f638ca1e7231023e295db62598df1b775902825d3613e158695f",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_baseline.json": "c0fe4a9f1341dead39803763a4d05adb7564b0172f0cbc2827a7ce9bbc3d3666",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_low_image_counts.json": "3794dc3ed7884ee244873d2409057c18ddb3eb4ace0a289250da4ed6f7c511da",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_case_checks.json": "fe658aba952695f7e4cb7434cd68bbdf07a90d05b61b44af1558ecc9fdb4a45e",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/summary.json": "a452a61feee45c18387dbdc788f3aab555ff2fa3b35117bd70e0b3f22ff3f4f8",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/manifest.json": "9ad13dbed331f51e336b198edf735715edc9ae4335e594a8fa9f4be566186533",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/summary.json": "0c854e8e116fe1c98df23e27144f92bb916120c11c4ba001fd6676323567c72c",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/claim_binding_schema2.json": "a2c8c707e79e985c9959f576dd0f5690267967a16586c852a6ada8228261129c",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/summary.json": "f43cb87b3de159e6d6e65a56f8943a63d2609afadc9869519b95649e9d0e8e19",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/claim_binding_schema2.json": "277f203d4aadec95182ed8a6195128a7978710be8b79922d6984566cbd7229eb",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/summary.json": "448cb1b9b4925cac3a51bba2fd05c26d1a394aa1dccb1de78f5389db931f3d1f",
+        "acceleration/results/20261004_prime5_analytic_delsarte_family01/summary.json": "c7c63dcfd419d620cee786abf6c2bc8a5adb103c4dc30bb36b3805431f9629a8",
+        "acceleration/results/20261004_prime5_analytic_family_checker_root_acceptance01.json": "511a36527047bf589ac0cda8918d0bc38f29c751250fc082cea41aad3cd0cb7e",
+        "acceleration/results/20261004_prime5_analytic_family_full_root_acceptance01.json": "1bc72d8472a4e3bb91a22701cacea15345c44ceaade5b3b78b69bbbae0dee595",
+        "acceleration/results/20261004_prime5_triangle_image_weight_counts_root_written_acceptance01.json": "0ca9cd13d1ce1877bfced1325677c83c9c283c31b3a872688d4423c09a3da081",
+        "acceleration/results/20261004_target_prime5_left_code_support55_root_written_acceptance01.json": "2e01da9ae94d42ff931074f91e6cb973e8ba8165110bfa9598187deaa8b4aa38"
+      },
+      "evidence_identity_paths": [
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py",
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1_spec.md",
+        "acceleration/audit_20261004_prime5_analytic_family_and_target_dimension24_native_v1.md",
+        "acceleration/configuration_20261004_prime5_analytic_delsarte_family_independent_v1.json",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2.py",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2_spec.md",
+        "acceleration/plan_20261004_prime5_analytic_delsarte_family_independent_full_v1.json",
+        "acceleration/results/20261004_code_delsarte_image_count_renormalization_root_written_acceptance01.json",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_author_stages.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_baseline.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_low_image_counts.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_case_checks.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/manifest.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/summary.json",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/summary.json",
+        "acceleration/results/20261004_prime5_analytic_delsarte_family01/summary.json",
+        "acceleration/results/20261004_prime5_analytic_family_checker_root_acceptance01.json",
+        "acceleration/results/20261004_prime5_analytic_family_full_root_acceptance01.json",
+        "acceleration/results/20261004_prime5_triangle_image_weight_counts_root_written_acceptance01.json",
+        "acceleration/results/20261004_target_prime5_left_code_support55_root_written_acceptance01.json"
+      ],
+      "evidence_identity_count": 29,
+      "evidence_artifact_ids": null,
+      "evidence_artifact_ids_null_reason": "Ordinary copying resolves exact first existing PUBLIC/LOCAL_ONLY identities and new LOCAL_ONLY IDs.",
+      "verification_artifact_hashes_null_reason": "Exact path/hash evidence must be resolved to schema artifact IDs.",
+      "original_binding_scope": {
+        "description": "Exactly the frozen384 analytic construction cases, their384 prefixes/checkpoints and96 exact certificate branches; conditional interpretation under accepted code-support/image-count/renormalization premises. Rejected cases fail the construction only.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_report_scope": {
+        "description": "Exactly the frozen384 analytic construction cases, their384 prefixes/checkpoints and96 exact certificate branches; conditional interpretation under accepted code-support/image-count/renormalization premises. Rejected cases fail the construction only.",
+        "unrestricted_target": false,
+        "target_resolution": "NONE"
+      },
+      "original_binding_shared_components": [
+        "Structural authored analytic producerV2 and all384 raw construction objects; Root supplied the shared discovery outline.",
+        "Native authored distinct familyae825 with qualified Native0333 coordinate folds and literal Native3d431 Reader; no Structural functions/module/AST/backend used to establish arithmetic.",
+        "Root executed the contained complete numerical checker139843 and independently accepted actual small outputs/all384 secondary rows and fresh identity closure.",
+        "Current metadata/written deduction reads selected accepted objects and immutable manifests; it launches no worker, reexecutes no prior qualification and does not duplicate or bulk-rehash813 prior inputs."
+      ],
+      "schema_projection": {
+        "scope_three_required_fields_only": true,
+        "scientific_statement_assumptions_roles_timestamp_and_dependencies_literal": true,
+        "original_scope_and_shared_metadata_retained": true
+      },
+      "literal_original_statement_scope_roles_and_verification_timestamp_preserved": true,
+      "Root_exact_projection_review": null
+    },
+    {
+      "claim_core": {
+        "id": "C-UNRESTRICTED-TARGET-PRIME5-LEFT-CODE-DIMENSION-UPPER24",
+        "revision": 1,
+        "statement": "For every complete finite simple SRG(99,14,1,2), let N be its ordinary integer binary99x231 incidence matrix containing all actual triangles exactly once, and let L5=ker(N^T mod5). Then dim_F5(L5)<=24, equivalently rank_F5(N)>=75. More precisely |L5|<=64477408246590462487753388936704696678716171878400/483520114859812120308332405578177<5^25, from the independently checked t10/s121 low-image-count certificate3794dc3ed7884ee244873d2409057c18ddb3eb4ace0a289250da4ed6f7c511da and the exact support55/image-count/renormalization premises. The zero left code and rank_F5(N)=99 remain allowed; no target existence or exclusion, graph realization, nonzero code or ordinary rational/ternary rank claim is asserted.",
+        "kind": "mathematical result",
+        "basis": [
+          "DERIVED",
+          "COMPUTED"
+        ],
+        "status": "VERIFIED",
+        "review_state": "CLEAR",
+        "scope": {
+          "description": "Every hypothetical complete target and its99x231 actual-triangle incidence overF5; accepted minimum-support55 and actual image3..6 counts, shifted MacWilliams dual and exact linear-code cardinality/rank-nullity. No fixed17 or partial incidence transfer.",
+          "unrestricted_target": true,
+          "target_resolution": "NONE"
+        },
+        "assumptions": [
+          "Complete finite simple SRG(99,14,1,2), all actual triangles once; N has99 rows and231 columns.",
+          "All kernels, images, dimensions and ranks in the statement are overF5.",
+          "Accepted exact support55 for nonzero L5 words and lower image counts924/8316/24948/391776 at weights3/4/5/6.",
+          "Nondegenerate finite-field coordinate pairing implies L5^perp=im(N), and exact MacWilliams character orthogonality in the K0=1 normalization.",
+          "The accepted saved low certificate has32 nonnegative rational multipliers and all45 permitted nonzero weight values nonpositive."
+        ],
+        "dependencies": [
+          {
+            "id": "C-PRIME5-ANALYTIC-DELSARTE-FINITE384-EXACT-FAMILY-AUDIT",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-UNRESTRICTED-TARGET-PRIME5-LEFT-CODE-SUPPORT-LOWER55",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-PRIME5-LINEAR-TRIPLE-IMAGE-WEIGHT-COUNTS",
+            "revision": 1,
+            "relation": "uses_result"
+          },
+          {
+            "id": "C-CODE-DELSARTE-IMAGE-LOWER-COUNT-RENORMALIZATION",
+            "revision": 1,
+            "relation": "uses_result"
+          }
+        ],
+        "limitations": [
+          "Zero L5 remains allowed; the minimum-support hypothesis is vacuous in that case.",
+          "No additional assumptions at image weights96/99 or j in the image are used.",
+          "rank_F5(N)>=75 does not refer to ordinary rational rank or the separate ternary rank77 theorem.",
+          "The target deduction is newly written at its primary timestamp; original18:24 numerical artifact verification is recorded separately and is not backdated as this derivation.",
+          "No graph object, target existence/exclusion, nonzero left code, formal proof or external peer review is asserted.",
+          "Exact existing manifest identities preserve all813 inputs and4 outputs; selected new evidence is compact. No historic source/report/candidate, ledger/index/Git bytes changed.",
+          "Root discovery/actual executor, Native checking implementation author/verifier and Structural mathematical producer roles are distinct and disclosed."
+        ],
+        "created_at": "2026-10-04T18:36:52.6193258+00:00",
+        "updated_at": "2026-10-04T18:36:52.6193258+00:00"
+      },
+      "verification_core": {
+        "claim_revision": 1,
+        "verifier": "/root/native_driver",
+        "method": "independent_derivation",
+        "command_or_audit": "Independent written audit acceleration/audit_20261004_prime5_analytic_family_and_target_dimension24_native_v1.md; authentic claim-bound report acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/summary.json",
+        "timestamp": "2026-10-04T18:36:52.6193258+00:00",
+        "outcome": "PASS",
+        "scope": "For every complete finite simple SRG(99,14,1,2), let N be its ordinary integer binary99x231 incidence matrix containing all actual triangles exactly once, and let L5=ker(N^T mod5). Then dim_F5(L5)<=24, equivalently rank_F5(N)>=75. More precisely |L5|<=64477408246590462487753388936704696678716171878400/483520114859812120308332405578177<5^25, from the independently checked t10/s121 low-image-count certificate3794dc3ed7884ee244873d2409057c18ddb3eb4ace0a289250da4ed6f7c511da and the exact support55/image-count/renormalization premises. The zero left code and rank_F5(N)=99 remain allowed; no target existence or exclusion, graph realization, nonzero code or ordinary rational/ternary rank claim is asserted.",
+        "artifact_hashes": null,
+        "shared_components": [
+          "Structural authored analytic producerV2 and all384 raw construction objects; Root supplied the shared discovery outline.",
+          "Native authored distinct familyae825 with qualified Native0333 coordinate folds and literal Native3d431 Reader; no Structural functions/module/AST/backend used to establish arithmetic.",
+          "Root executed the contained complete numerical checker139843 and independently accepted actual small outputs/all384 secondary rows and fresh identity closure.",
+          "Current metadata/written deduction reads selected accepted objects and immutable manifests; it launches no worker, reexecutes no prior qualification and does not duplicate or bulk-rehash813 prior inputs."
+        ],
+        "controls": [
+          "written_application_checks: 12",
+          "new_executed_checks: 0",
+          "formal: 0",
+          "external: 0",
+          "support_premise_authenticated: true",
+          "image_premise_authenticated: true",
+          "renormalization_premise_authenticated: true",
+          "new_813_input_rehash: false"
+        ],
+        "limitations": [
+          "Zero L5 remains allowed; the minimum-support hypothesis is vacuous in that case.",
+          "No additional assumptions at image weights96/99 or j in the image are used.",
+          "rank_F5(N)>=75 does not refer to ordinary rational rank or the separate ternary rank77 theorem.",
+          "The target deduction is newly written at its primary timestamp; original18:24 numerical artifact verification is recorded separately and is not backdated as this derivation.",
+          "No graph object, target existence/exclusion, nonzero left code, formal proof or external peer review is asserted.",
+          "Exact existing manifest identities preserve all813 inputs and4 outputs; selected new evidence is compact. No historic source/report/candidate, ledger/index/Git bytes changed.",
+          "Root discovery/actual executor, Native checking implementation author/verifier and Structural mathematical producer roles are distinct and disclosed."
+        ]
+      },
+      "producer": "/root/structural",
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/claim_binding_schema2.json",
+        "sha256": "87b610bd665695caca8402fc74014fe0d565f8ae616748299176d2fb7da2c1af"
+      },
+      "raw_primary_verification": {
+        "path": "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/summary.json",
+        "sha256": "0e1243a027da67afcb05db0c02cabfd7f971787df75613dc6766451b7fcdecaf"
+      },
+      "administrative_acceptance": {
+        "sha256": "1bc72d8472a4e3bb91a22701cacea15345c44ceaade5b3b78b69bbbae0dee595",
+        "path": "acceleration/results/20261004_prime5_analytic_family_full_root_acceptance01.json"
+      },
+      "administrative_acceptance_scope": "Genuine supporting complete numerical artifact acceptance only; exact new claim-ID metadata Root review is separately pending and must not be inferred from this field.",
+      "authorship_and_executor": {
+        "discovery_producer": "/root/structural",
+        "independent_verifier": "/root/native_driver",
+        "metadata_projection_author": "/root/checkpoint_audit",
+        "checking_source_author": "/root/native_driver",
+        "actual_executor": null,
+        "actual_executor_null_reason": "Written primary derivation; supporting artifact execution is separately disclosed.",
+        "supporting_artifact_actual_executor": "/root"
+      },
+      "external_source": null,
+      "reproducibility": null,
+      "reproducibility_manifest_path": "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/summary.json",
+      "unknowns": {
+        "external_source": "Repository-local derivation or exact certificate; no external source archive mapping is asserted.",
+        "reproducibility": "The accepted complete numerical report is the reproducibility manifest; compact evidence references preserve its immutable complete maps without duplication.",
+        "coverage": "Only the exact frozen claim scope; overall target search coverage UNKNOWN.",
+        "external_review": "No formal or third-party proof review is asserted beyond the disclosed independent path.",
+        "hardware": "Actual contained receipts retain process facts; no normalized hardware or performance generalization is invented."
+      },
+      "evidence_identity_sha256": {
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py": "ae82538770a314f5aa2fc7c698ba2ff305b92e59a27d5de9cfb69798ebbdc977",
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1_spec.md": "523c6419a3139f6153dc8ab303c38dbef51ee707cba992d7370f3977294c29e9",
+        "acceleration/audit_20261004_prime5_analytic_family_and_target_dimension24_native_v1.md": "bda840c49bcd0c14b43df0c1065ab83e7581e623fec2d76c2d58ebd3609e6861",
+        "acceleration/configuration_20261004_prime5_analytic_delsarte_family_independent_v1.json": "e90ecbbb3a4aecdbee545d71676ba66fba29db31e63d5cff4f3bc8ffef867c39",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2.py": "a4294996414f86337e1726628d337319a0f3c3b85b9afd6f37713a09cb91b624",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2_spec.md": "cae1a819d0b603f1243393cab0a4f86401a943d6b19fa1c7527aeea114d3b4f4",
+        "acceleration/plan_20261004_prime5_analytic_delsarte_family_independent_full_v1.json": "f064e5b68f53d17625f692830eabb1cc54377dde0eab5066b9dcaab578487c98",
+        "acceleration/results/20261004_code_delsarte_image_count_renormalization_root_written_acceptance01.json": "ae4bb06d688e722d555003e849631f7a4dec32daaf4323b84450836639293389",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/claim_binding_schema2.json": "a11104e4e9a3f4e3a511a563b949e5689b06bf94b22ca5bb6776b110ef3a241c",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/summary.json": "da90958c41bdc88e69c53f12f04663888f571888fe31536d74022b383c6b8b61",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration01/summary.json": "e85e19a6d5cc72665211441b829f66721a7554cad408486d180a30cb7063bb50",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_author_stages.json": "21207de9ff34f638ca1e7231023e295db62598df1b775902825d3613e158695f",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_baseline.json": "c0fe4a9f1341dead39803763a4d05adb7564b0172f0cbc2827a7ce9bbc3d3666",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_low_image_counts.json": "3794dc3ed7884ee244873d2409057c18ddb3eb4ace0a289250da4ed6f7c511da",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_case_checks.json": "fe658aba952695f7e4cb7434cd68bbdf07a90d05b61b44af1558ecc9fdb4a45e",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/summary.json": "a452a61feee45c18387dbdc788f3aab555ff2fa3b35117bd70e0b3f22ff3f4f8",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/manifest.json": "9ad13dbed331f51e336b198edf735715edc9ae4335e594a8fa9f4be566186533",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/summary.json": "0c854e8e116fe1c98df23e27144f92bb916120c11c4ba001fd6676323567c72c",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/claim_binding_schema2.json": "a2c8c707e79e985c9959f576dd0f5690267967a16586c852a6ada8228261129c",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/summary.json": "f43cb87b3de159e6d6e65a56f8943a63d2609afadc9869519b95649e9d0e8e19",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/claim_binding_schema2.json": "87b610bd665695caca8402fc74014fe0d565f8ae616748299176d2fb7da2c1af",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/summary.json": "0e1243a027da67afcb05db0c02cabfd7f971787df75613dc6766451b7fcdecaf",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/claim_binding_schema2.json": "277f203d4aadec95182ed8a6195128a7978710be8b79922d6984566cbd7229eb",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/summary.json": "448cb1b9b4925cac3a51bba2fd05c26d1a394aa1dccb1de78f5389db931f3d1f",
+        "acceleration/results/20261004_prime5_analytic_delsarte_family01/summary.json": "c7c63dcfd419d620cee786abf6c2bc8a5adb103c4dc30bb36b3805431f9629a8",
+        "acceleration/results/20261004_prime5_analytic_family_checker_root_acceptance01.json": "511a36527047bf589ac0cda8918d0bc38f29c751250fc082cea41aad3cd0cb7e",
+        "acceleration/results/20261004_prime5_analytic_family_full_root_acceptance01.json": "1bc72d8472a4e3bb91a22701cacea15345c44ceaade5b3b78b69bbbae0dee595",
+        "acceleration/results/20261004_prime5_triangle_image_weight_counts_root_written_acceptance01.json": "0ca9cd13d1ce1877bfced1325677c83c9c283c31b3a872688d4423c09a3da081",
+        "acceleration/results/20261004_target_prime5_left_code_support55_root_written_acceptance01.json": "2e01da9ae94d42ff931074f91e6cb973e8ba8165110bfa9598187deaa8b4aa38"
+      },
+      "evidence_identity_paths": [
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py",
+        "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1_spec.md",
+        "acceleration/audit_20261004_prime5_analytic_family_and_target_dimension24_native_v1.md",
+        "acceleration/configuration_20261004_prime5_analytic_delsarte_family_independent_v1.json",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2.py",
+        "acceleration/construct_20261004_prime5_analytic_delsarte_v2_spec.md",
+        "acceleration/plan_20261004_prime5_analytic_delsarte_family_independent_full_v1.json",
+        "acceleration/results/20261004_code_delsarte_image_count_renormalization_root_written_acceptance01.json",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_author_stages.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_baseline.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_low_image_counts.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_case_checks.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/manifest.json",
+        "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/summary.json",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/summary.json",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/summary.json",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/claim_binding_schema2.json",
+        "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/summary.json",
+        "acceleration/results/20261004_prime5_analytic_delsarte_family01/summary.json",
+        "acceleration/results/20261004_prime5_analytic_family_checker_root_acceptance01.json",
+        "acceleration/results/20261004_prime5_analytic_family_full_root_acceptance01.json",
+        "acceleration/results/20261004_prime5_triangle_image_weight_counts_root_written_acceptance01.json",
+        "acceleration/results/20261004_target_prime5_left_code_support55_root_written_acceptance01.json"
+      ],
+      "evidence_identity_count": 29,
+      "evidence_artifact_ids": null,
+      "evidence_artifact_ids_null_reason": "Ordinary copying resolves exact first existing PUBLIC/LOCAL_ONLY identities and new LOCAL_ONLY IDs.",
+      "verification_artifact_hashes_null_reason": "Exact path/hash evidence must be resolved to schema artifact IDs.",
+      "original_binding_scope": {
+        "description": "Every hypothetical complete target and its99x231 actual-triangle incidence overF5; accepted minimum-support55 and actual image3..6 counts, shifted MacWilliams dual and exact linear-code cardinality/rank-nullity. No fixed17 or partial incidence transfer.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_report_scope": {
+        "description": "Every hypothetical complete target and its99x231 actual-triangle incidence overF5; accepted minimum-support55 and actual image3..6 counts, shifted MacWilliams dual and exact linear-code cardinality/rank-nullity. No fixed17 or partial incidence transfer.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "original_binding_shared_components": [
+        "Structural authored analytic producerV2 and all384 raw construction objects; Root supplied the shared discovery outline.",
+        "Native authored distinct familyae825 with qualified Native0333 coordinate folds and literal Native3d431 Reader; no Structural functions/module/AST/backend used to establish arithmetic.",
+        "Root executed the contained complete numerical checker139843 and independently accepted actual small outputs/all384 secondary rows and fresh identity closure.",
+        "Current metadata/written deduction reads selected accepted objects and immutable manifests; it launches no worker, reexecutes no prior qualification and does not duplicate or bulk-rehash813 prior inputs."
+      ],
+      "schema_projection": {
+        "scope_three_required_fields_only": true,
+        "scientific_statement_assumptions_roles_timestamp_and_dependencies_literal": true,
+        "original_scope_and_shared_metadata_retained": true
+      },
+      "literal_original_statement_scope_roles_and_verification_timestamp_preserved": true,
+      "Root_exact_projection_review": null
+    }
+  ],
+  "claim_count": 5,
+  "evidence_union": {
+    "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py": "ae82538770a314f5aa2fc7c698ba2ff305b92e59a27d5de9cfb69798ebbdc977",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1_spec.md": "523c6419a3139f6153dc8ab303c38dbef51ee707cba992d7370f3977294c29e9",
+    "acceleration/audit_20261004_prime5_analytic_family_and_target_dimension24_native_v1.md": "bda840c49bcd0c14b43df0c1065ab83e7581e623fec2d76c2d58ebd3609e6861",
+    "acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md": "c7269281cddac6432a65d81a441a23a9e4d5faa99dc15c29ab33467f613d1a95",
+    "acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md": "4e72a1d287145cf6ee944ed9a1e5929160d6ef2a69ba9c389e8f94c480593adc",
+    "acceleration/audit_20261004_rook_nine_count_not228_checkpoint_v1.md": "ccb31097c0c4a1916bf7f750af152f7a9d373e71070d9f1bc1f71338ddbaf560",
+    "acceleration/configuration_20261004_prime5_analytic_delsarte_family_independent_v1.json": "e90ecbbb3a4aecdbee545d71676ba66fba29db31e63d5cff4f3bc8ffef867c39",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v2.py": "a4294996414f86337e1726628d337319a0f3c3b85b9afd6f37713a09cb91b624",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v2_spec.md": "cae1a819d0b603f1243393cab0a4f86401a943d6b19fa1c7527aeea114d3b4f4",
+    "acceleration/plan_20261004_prime5_analytic_delsarte_family_independent_full_v1.json": "f064e5b68f53d17625f692830eabb1cc54377dde0eab5066b9dcaab578487c98",
+    "acceleration/results/20261004_code_delsarte_image_count_renormalization_root_written_acceptance01.json": "ae4bb06d688e722d555003e849631f7a4dec32daaf4323b84450836639293389",
+    "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/claim_binding_schema2.json": "a11104e4e9a3f4e3a511a563b949e5689b06bf94b22ca5bb6776b110ef3a241c",
+    "acceleration/results/20261004_independent_review/code_delsarte_image_lower_count_renormalization_native01/summary.json": "da90958c41bdc88e69c53f12f04663888f571888fe31536d74022b383c6b8b61",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/claim_binding_schema2.json": "36d655e32d1ddf41453d39e7adb2a8c55241cd35e28de231c9796395e05b0b9d",
+    "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_finite384_exact_audit01/summary.json": "24927d1082ea4765ab301995037f83bb1e29f0e2d01622be6dd49ebacb0a449d",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration01/summary.json": "e85e19a6d5cc72665211441b829f66721a7554cad408486d180a30cb7063bb50",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_author_stages.json": "21207de9ff34f638ca1e7231023e295db62598df1b775902825d3613e158695f",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_baseline.json": "c0fe4a9f1341dead39803763a4d05adb7564b0172f0cbc2827a7ce9bbc3d3666",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_best_low_image_counts.json": "3794dc3ed7884ee244873d2409057c18ddb3eb4ace0a289250da4ed6f7c511da",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/independent_case_checks.json": "fe658aba952695f7e4cb7434cd68bbdf07a90d05b61b44af1558ecc9fdb4a45e",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_full01/summary.json": "a452a61feee45c18387dbdc788f3aab555ff2fa3b35117bd70e0b3f22ff3f4f8",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/manifest.json": "9ad13dbed331f51e336b198edf735715edc9ae4335e594a8fa9f4be566186533",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_full_supervision01/summary.json": "0c854e8e116fe1c98df23e27144f92bb916120c11c4ba001fd6676323567c72c",
+    "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/claim_binding_schema2.json": "a2c8c707e79e985c9959f576dd0f5690267967a16586c852a6ada8228261129c",
+    "acceleration/results/20261004_independent_review/prime5_triangle_image_weight_counts_native01/summary.json": "f43cb87b3de159e6d6e65a56f8943a63d2609afadc9869519b95649e9d0e8e19",
+    "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/claim_binding_schema2.json": "af6d96819a07be8588910722d0e089080de629e3ef5c4c47fa24d4dc4cffd534",
+    "acceleration/results/20261004_independent_review/rook_count228_d2_four_or_five_checkpoint01/summary.json": "5e3c1a1e762c5043d02a656cbe9e776f33bbe72a27f3c7667ae972b583e21c07",
+    "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/claim_binding_schema2.json": "420bbd8a51c058c9017c0990c6579bb0f169e92788498c9286b98eb30a6bfa45",
+    "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json": "fb517be28e709aaec2c68419488bbf2eb38e42f094b4721231c1ac035ee26353",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/claim_binding_schema2.json": "edc7607e3aa774a91ff52ab5417c5b4f4753a00a0708db70b11bec7577a54e27",
+    "acceleration/results/20261004_independent_review/rook_nine_count_not228_checkpoint01/summary.json": "cdfed185acbb9e3145b8c33ea2727cd8bd56bff9a1e2b97f0104d86f90bf27fd",
+    "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/claim_binding_schema2.json": "87b610bd665695caca8402fc74014fe0d565f8ae616748299176d2fb7da2c1af",
+    "acceleration/results/20261004_independent_review/target_prime5_left_code_dimension_upper24_native01/summary.json": "0e1243a027da67afcb05db0c02cabfd7f971787df75613dc6766451b7fcdecaf",
+    "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/claim_binding_schema2.json": "277f203d4aadec95182ed8a6195128a7978710be8b79922d6984566cbd7229eb",
+    "acceleration/results/20261004_independent_review/target_prime5_left_code_support55_native01/summary.json": "448cb1b9b4925cac3a51bba2fd05c26d1a394aa1dccb1de78f5389db931f3d1f",
+    "acceleration/results/20261004_prime5_analytic_delsarte_family01/summary.json": "c7c63dcfd419d620cee786abf6c2bc8a5adb103c4dc30bb36b3805431f9629a8",
+    "acceleration/results/20261004_prime5_analytic_family_checker_root_acceptance01.json": "511a36527047bf589ac0cda8918d0bc38f29c751250fc082cea41aad3cd0cb7e",
+    "acceleration/results/20261004_prime5_analytic_family_full_root_acceptance01.json": "1bc72d8472a4e3bb91a22701cacea15345c44ceaade5b3b78b69bbbae0dee595",
+    "acceleration/results/20261004_prime5_triangle_image_weight_counts_root_written_acceptance01.json": "0ca9cd13d1ce1877bfced1325677c83c9c283c31b3a872688d4423c09a3da081",
+    "acceleration/results/20261004_rook_count228_d2_four_or_five_root_written_acceptance01.json": "d1bf187b918980976d19a5c2988dfed154c853b5de0353ac194c5f02cdd7b966",
+    "acceleration/results/20261004_rook_count228_deficiency_patterns_root_written_acceptance01.json": "e17e41e88090c31490773c3da3a394bb1d0c5c5bd4371127a554f05c5a44f07b",
+    "acceleration/results/20261004_rook_nine_count_not228_root_written_acceptance01.json": "6cb8297d5adb8407f8f9bfb2f09d816e667e088815d411df61a6a9c4a39aa1ed",
+    "acceleration/results/20261004_target_prime5_left_code_support55_root_written_acceptance01.json": "2e01da9ae94d42ff931074f91e6cb973e8ba8165110bfa9598187deaa8b4aa38",
+    "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json": "22826b9350197f1dab780ef71574585ba6d8dfb8d61fea4c5d8421cfe5052d16",
+    "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "acceleration/results/20261004_target_rook_nine_count_not228_candidate01.json": "7f1cda4ad66515c18d8158fe53114b54919ccbb7ded4e380d7b4c0730ff1c56a",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT228_V1.md": "a716630106db4064393d5500d6e33b8db9867e0e5a1d79029f0654f2b7a0f613",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c"
+  },
+  "evidence_identity_count": 54,
+  "small_projection_endpoints_freshly_matched": true,
+  "small_projection_endpoint_count": 14,
+  "declared_raw_evidence_rehashed_at_preparation": false,
+  "new_artifact_policy": {
+    "availability": "LOCAL_ONLY",
+    "reuse": "First existing ordinal artifact ID with exact same path/hash and availability PUBLIC or LOCAL_ONLY.",
+    "new_IDs": "Fresh reviewed ordinal IDs for sorted new exact path/hash identities.",
+    "PUBLIC_upgrade": false
+  },
+  "prospective_after": {
+    "claims": 449,
+    "status_counts": {
+      "CANDIDATE": 3,
+      "REFUTED": 6,
+      "VERIFIED": 440
+    },
+    "review_state_counts": {
+      "CLEAR": 449
+    },
+    "artifact_records": null,
+    "artifact_records_null_reason": "Exact identity reuse and append counts must be observed by actual contained ordinary copying.",
+    "sha256": null,
+    "sha256_null_reason": "No candidate or live449 installation exists at preparation."
+  },
+  "ordinary_transition_recipe": [
+    "Preserve every existing444 claim,23802 artifact object and6054 PUBLIC object and unaffected top-level fields.",
+    "Copy only these five exact claim/verification cores with original roles, times, assumptions, dependencies and scope.",
+    "Resolve first ordinal existing PUBLIC/LOCAL_ONLY path/hash identity or append LOCAL_ONLY IDs; no availability promotion.",
+    "Require different-path complete Root typed prefix/core/evidence comparison and unchanged generic schema/semantic validation before guarded installation."
+  ],
+  "materialization": null,
+  "generic_validation": null,
+  "typed_validation": null,
+  "installation": null,
+  "Root_ONE": null,
+  "dispatch_authorized": false,
+  "source_only": true,
+  "excluded_claims": [
+    "Any target existence/nonexistence claim",
+    "Numerical q5 guide infeasibility or completeness claim",
+    "Global polynomial optimum or all-parameter coverage",
+    "Unrelated later claims"
+  ],
+  "limitations": [
+    "Metadata integration only; no mathematical replay, old813-input bulk rehash, proof stream hash, solver or census.",
+    "The finite384 mathematical artifact and new conditional target deduction have different genuine primary verification timestamps.",
+    "Original binding null Root slots and historical sources/reports remain immutable; Root exact-ID metadata review remains separate.",
+    "Target UNKNOWN and no graph realization inferred."
+  ],
+  "target_resolution": "UNKNOWN",
+  "ancestry": {
+    "ordinary_nine_packet": {
+      "path": "acceleration/proposal_20261004_nine_bound_mathematical_literal_append_v2.json",
+      "sha256": "47bf0eb7189059585078c4d2219d06fac2dc8c5532867f81512c537b6935cf88"
+    },
+    "old_packet_unchanged": true
+  },
+  "validator": {
+    "path": "acceleration/validate_claims.py",
+    "sha256": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265"
+  },
+  "schema_definition": {
+    "path": "docs/claims.schema.json",
+    "sha256": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac"
+  }
+}

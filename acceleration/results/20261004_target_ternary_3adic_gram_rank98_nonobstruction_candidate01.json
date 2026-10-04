@@ -1,0 +1,59 @@
+{
+  "schema": "WRITTEN_STRUCTURAL_CANDIDATE_V1",
+  "status": "CANDIDATE_PENDING_INDEPENDENT_WRITTEN_REVIEW",
+  "created_at": "2026-10-04T12:35:36+00:00",
+  "producer": "Structural",
+  "discovery_shared_context": "Root requested an attempted exclusion of the constant-only ternary left kernel; Structural derived this unrestricted-entry non-obstruction construction. Root has not independently verified this candidate.",
+  "claim_id": null,
+  "revision": null,
+  "statement": "For every symmetric integer 99-by-99 matrix H with Hj=21j whose ternary reduction G satisfies Gj=0, G^2-G=2J and rank(G)=55, there exists a 99-by-231 matrix M over the 3-adic integers with MM^T=H, M1=7j, M^Tj=3*1 and rank_F3(M)=98. For every m>=1 an ordinary integer matrix with the same exact margins and rank98 can be chosen whose Gram is H modulo3^m, with coherent successive residues. This does not require or assert binary entries, nonnegative entries, triangle supports, or an ordinary integer exact-Gram factor.",
+  "scope": {
+    "description": "Formal unrestricted-entry ternary and 3-adic Gram-and-margin relaxation, applied conditionally to H=A+7I of a hypothetical SRG(99,14,1,2).",
+    "unrestricted_target": false,
+    "target_resolution": "NONE",
+    "constructs_target_graph": false,
+    "constructs_binary_incidence": false,
+    "ordinary_integer_exact_gram_claimed": false,
+    "excludes_constant_only_left_kernel": false,
+    "forces_nonconstant_left_kernel": false
+  },
+  "assumptions": [
+    "H is symmetric integer 99-by-99 and Hj=21j.",
+    "Over F3, G=H mod3 satisfies Gj=0, G^2-G=2J and rank(G)=55.",
+    "The relaxed factor may have arbitrary 3-adic integer entries; at finite precision arbitrary ordinary integer entries are allowed."
+  ],
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_TERNARY_3ADIC_GRAM_RANK98_NONOBSTRUCTION_V1.md",
+    "sha256": "e696616dd5d9e7bb52debaa9b4a8cf8d9bc1675c46229ebd61b809d969426309"
+  },
+  "failed_argument": "The target ternary Gram, incidence margins, determinant/divided-form data and perfect mod9 pairing by themselves force a left ternary dependency outside span(j). The constructed 3-adic factor retains these algebraic properties for the actual hypothetical target H while its left ternary kernel is exactly span(j); an additional incidence restriction is necessary.",
+  "method": "Written symbolic construction, congruence diagonalization over F3, elementary orthogonal reflections, and coherent linear lifting. No scripts perform mathematical arithmetic.",
+  "independent_verifier": null,
+  "independent_outcome": null,
+  "mathematical_executions": 0,
+  "actual_matrix_export": null,
+  "actual_calibration": null,
+  "inputs_sha256": {
+    "docs/DESIGN_20261003_TERNARY_REDUCED_GRAM_FULL_RANK_COUNTERMODEL_V1.md": "5a5c564e052a46c4958b5e07c3d318d61e3a6fd6e84b86011866080ddc33d95a",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_INCIDENCE_MOD9_NONLIFT_PAIRING_V1.md": "0d7a6dfc0a7520ae43046675105666381da5adbcb6b75e2caeec068d6cbfa82a",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_DIVIDED_GRAM_FORM_RANK77_V1.md": "f07212fc84afe383704f782a5464cb82fb9e39f9eceef8a416c708c2ce35866a",
+    "external_conway99_research/attempts/wave170-block-profile-ternary-code/derivation.md": "67c293ccdff944aeb59b44ad297b7db876a0ceb9df50c876f559cb63ef20123f",
+    "external_conway99_research/attempts/wave171-pq-centered-code/derivation.md": "0ff4280e782acccfb76e2ca093291be3e3a1c4ca08225ccb763b113c5ac286e3",
+    "external_conway99_research/attempts/wave172-weight3-dual-rigidity/derivation.md": "6ae2def6f72ace4fb1e1e4e7b991f02f2d842d13f551c0a9089705f78fcce1b0"
+  },
+  "overlap": {
+    "old_single_gram_ternary_countermodel_preserved": true,
+    "old_mod9_constant_only_boundary_preserved": true,
+    "generalization": "Every prescribed target-compatible ternary Gram, exact margins, and all 3-adic precisions, rather than one special formal ternary example.",
+    "novelty_claim": false,
+    "search_scope": "Bounded Markdown comparison and whole reads of the six pinned derivations; no exhaustive archive or literature novelty claim.",
+    "read_scope_limitation": "An initial overbroad read-only rg search accidentally included large JSON evidence and yielded truncated unrelated output; it was terminal before restricted Markdown searches. No result verification was inferred from that output."
+  },
+  "protected_state": {
+    "ledger_mutated": false,
+    "index_mutated": false,
+    "git_mutated": false,
+    "research_resumed": false,
+    "owned_computational_worker": false
+  }
+}

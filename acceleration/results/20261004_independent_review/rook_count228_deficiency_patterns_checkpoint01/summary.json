@@ -1,0 +1,150 @@
+{
+  "schema": "INDEPENDENT_WRITTEN_MATHEMATICAL_REVIEW_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1_WRITTEN_PASS",
+  "implementation_version": 1,
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-PATTERN-RESTRICTION",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, set d_T=6-r_T for every actual triangle T. All d_T lie in{0,1,2}; if h counts deficiency-two triangles, then1<=h<=5 and exactly18-2h>=8 triangles have deficiency one. Every deficiency-two triangle has at most three deficiency-two defect partners across its three points; if it has three, then h=4. Thus at h=5 the deficiency-two defect graph has maximum degree two; if a degree-three node occurs, the graph is a three-leaf star or that star with one leaf edge. No count228 or target exclusion follows.",
+  "timestamp": "2026-10-04T18:14:25.5998263+00:00",
+  "verification_timestamp": "2026-10-04T18:14:25.5998263+00:00",
+  "verification_started_at": null,
+  "verification_started_at_null_reason": "The written review start was not durably timestamped; no start is inferred.",
+  "producer": "/root/structural",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=228 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts actual such subsets containing T; a defect pair means no actual induced rook contains both intersecting actual triangles"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "target_resolution": "NONE",
+    "scientific_coverage": "UNKNOWN",
+    "count228_excluded": false
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "The two accepted conditional results imply maximum deficiency exactly two atR228. Local defect degrees, parity and the even-six rook classification are reconstructed directly in this new paper; prior R230/R229/R231 statements are not approval transfer.",
+  "candidate": {
+    "path": "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json",
+    "sha256": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "producer_timestamp": "2026-10-04T17:51:20Z",
+    "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-PATTERN-RESTRICTION",
+    "claim_revision": 1
+  },
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md",
+    "sha256": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8"
+  },
+  "proof": {
+    "path": "acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md",
+    "sha256": "4e72a1d287145cf6ee944ed9a1e5929160d6ef2a69ba9c389e8f94c480593adc"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md": "4e72a1d287145cf6ee944ed9a1e5929160d6ef2a69ba9c389e8f94c480593adc"
+  },
+  "written_derivation_checks": [
+    "Unique edge triangle and seven incident triangles give 231 actual triangles",
+    "Triangle linearity and no three different pairwise intersection points",
+    "Unique possible containing rook makes local defect degree d at each point",
+    "Six triangle incidences per rook give D18",
+    "Two accepted r1 bounds force d0/1/2 with h positive",
+    "Handshake at each actual point makes the d1 selection even",
+    "Six root defect neighbors and twelve distinct outer points",
+    "External incidences 12+2k and external positive population 10-k-ell",
+    "At most three per external triangle gives 3ell+5k<=18",
+    "Even selections of two or four actual triangles impossible",
+    "Even six selection is induced rook via cubic triangle-free six-node dual",
+    "Nine rook points cannot be covered by six external d2 triangles at h6",
+    "All-d2 h9 contradicts k6 versus k<=3",
+    "Saturated h5/k3 leaves unique external d2 without second local partner",
+    "Same-bucket leaf intersections give star or star with one leaf edge"
+  ],
+  "written_falsification_boundaries": [
+    "Actual vertex-subset rook count rather than embeddings",
+    "External incidence multiplicity is not distinct-point cardinality",
+    "Parity permits high actual point multiplicities",
+    "Even-six rook relation itself remains allowed",
+    "Cube-star even-eight selection is not ruled out by parity",
+    "Six-versus-nine argument requires d1 defect degrees",
+    "External d1 saturation prevents an extra local edge to O",
+    "h4/k3 has three slack slots and is not rejected",
+    "h5/k2 has two slack slots and is not rejected",
+    "Three d2 triangles at one point remain allowed",
+    "Different-bucket intersections alone use the three-point prohibition",
+    "No R228 exclusion, induced positive support or realization"
+  ],
+  "controls": {
+    "written_derivation": 15,
+    "written_boundaries": 12,
+    "total_written": 27,
+    "executed_mathematical": 0,
+    "solver_calls": 0,
+    "formal": 0
+  },
+  "shared_components": [
+    "Root suggested the gap-six direction before the Structural freeze",
+    "Structural authored both R228 papers and prior rook arguments",
+    "Native independently reviewed the two inherited r1 dependencies",
+    "CP reconstructed the exact conditional proof and attempted actual-point falsification",
+    "Same disclosed strategy does not constitute independent discovery",
+    "No previous R229/R230/R231 or computation gate transferred"
+  ],
+  "coverage": {
+    "candidate_and_raw_whole_read": true,
+    "dependency_papers_whole_read": true,
+    "cycle_and_point_arguments_written": true,
+    "mathematical_programs_executed": 0,
+    "computational_coverage_claimed": false
+  },
+  "runtime": {
+    "command": null,
+    "invocation_id": null,
+    "worker_start": null,
+    "worker_terminal": null,
+    "mathematical_programs_executed": 0
+  },
+  "root_acceptance": null,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "operational_context": {
+    "basis": "Root-supplied protected context, not a new ledger parse or process census",
+    "ledger_count": 435,
+    "ledger_sha256": "95e8ffba7f7a8554c0de753495b3aba3a8eae0b8d238aecba81d3f1213db704c",
+    "HEAD": "9349bd83bda2c9ae72671ed6a8ab2efd3ae118f5",
+    "index_sha256": "3ceb7b2e8b98c7b0dac05e193b328b00d55666ceecad8a9d5e9799159fe5c56c",
+    "owned_computational_worker": null
+  },
+  "limitations": [
+    "Exact r1 conditional statement only; no R228 or target exclusion.",
+    "No construction, automorphism, equitable profile or nonconstant-codeword assumption.",
+    "Written checks are not executed controls, a formal proof or a computation gate.",
+    "No whole-archive or worldwide novelty assertion.",
+    "Root administrative review, registration and availability remain separate."
+  ]
+}

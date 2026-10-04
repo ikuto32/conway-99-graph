@@ -1,0 +1,55 @@
+{
+  "schema": "ROOT_WRITTEN_CLAIM_SCOPE_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T16:49:50.4133631+00:00",
+  "result": "PASS_WRITTEN_SCOPE_AND_EXACT_BINDING",
+  "reviewer": "/root",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex subsets once, r_T count those containing actual triangle T, d_T=6-r_T and D=sum_T d_T=6(231-R). Whenever D>0, every d_T=m>0 satisfies D>6m and therefore D>=6m+6. Equivalently d_T<=230-R for every T whenever R<231. In particular R=229 forces exactly twelve deficiency-one triangles and zero deficiency on every other triangle.",
+  "scope": {
+    "description": "Exact unrestricted target rook-deficiency necessary condition, eliminating the complete equality boundary of the earlier second-neighbor mass bound. R229 and R231 remain unexcluded.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "binding": {
+    "path": "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json",
+    "sha256": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf"
+  },
+  "report": {
+    "path": "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/summary.json",
+    "sha256": "7296830b2f55b07e00b4eda3359ce3be3572a7e8f2876f0b54832c6092a9fec1"
+  },
+  "fresh_inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_SECOND_NEIGHBOR_BOUND_V1.md": "ba046522585d5a59a857251928d05c0ac59e69425bf58f420e8cd63be83f210c",
+    "acceleration/results/20261004_target_rook_deficiency_second_neighbor_candidate01.json": "d860c4e34ec704a6749a4e51603f86d895b36a693b79ed5c379602b4be719c86",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72",
+    "acceleration/results/20261004_target_rook_square_coverage_n3_candidate01.json": "e9dd7c981af6b04e17bb5b9b432d6542beb9004c2229312440d89fab42128738",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "acceleration/results/20261004_target_rook_deficiency_strict_second_neighbor_candidate01.json": "976e676fc75eec3c81870770852c26ab9de6cd88b0f87613152dec019ebcdaed",
+    "acceleration/audit_20261004_rook_deficiency_and_n3_native_v1.md": "338eabe14478f0b80f8527268c4267e474f72c979149943e61ed0bf224ffdd58",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/summary.json": "7296830b2f55b07e00b4eda3359ce3be3572a7e8f2876f0b54832c6092a9fec1",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf"
+  },
+  "fresh_count": 9,
+  "independent_reviewer": "/root/native_driver",
+  "independent_verification_timestamp": "2026-10-04T16:28:28Z",
+  "independent_writing_started": "2026-10-04T16:25:24Z",
+  "written_checks": 15,
+  "executed_checks": 0,
+  "root_shared_discovery_context": true,
+  "root_approval_type": "Exact statement/scope/evidence administrative review after full separate Native derivation; Root discovery participation prevents Root from being sole mathematical approver.",
+  "audit_whole_read": true,
+  "raw_report_whole_read": true,
+  "root_challenges": [
+    "Every disjoint triangle cross-edge set is a matching under lambda1.",
+    "N3 opposite-edge preimage directions are only two; uniqueness uses actual edge partners.",
+    "Equality support extra edges are excluded by zero upper-Gram quadratic value.",
+    "Every square pair classification counted twice as opposite pairs; all-matchings-identical creates actual rook."
+  ],
+  "target_resolution": "UNKNOWN",
+  "limitations": [
+    "No Makhnev cited theorem, R229/R231 exclusion, new graph, automorphism or unrestricted resolution is approved.",
+    "The non-strict screen keeps its exact historical weaker necessary OR; it asserts no realization or current open-branch status.",
+    "No formal/external or computational check is asserted."
+  ]
+}

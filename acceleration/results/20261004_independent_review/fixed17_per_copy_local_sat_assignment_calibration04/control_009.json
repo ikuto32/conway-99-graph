@@ -1,0 +1,130 @@
+{
+  "actual_stage": "PASS",
+  "expected_stage": "PASS",
+  "index": 9,
+  "matches": true,
+  "name": "positive_native_legacy_22_6",
+  "payload": {
+    "manifest": {
+      "automatic_retry": false,
+      "command": [
+        "/usr/bin/bash",
+        "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh",
+        "fixture/local.cnf",
+        "fixture/proof.drat",
+        "fixture/sha256.txt",
+        "10"
+      ],
+      "cumulative_across_commands": false,
+      "cwd": "/mnt/c/Users/ikuto/projects/conway-99-graph",
+      "invocation_id": "synthetic-only",
+      "runtime_scope": "LOCAL_LINUX_GROUP_BOUNDED_CLEANUP_V2",
+      "schema_version": 1,
+      "seconds": 60.0,
+      "shutdown_reserve_seconds": 20.0,
+      "source_sha256": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17"
+    },
+    "plan": {
+      "child_argv": [
+        "/usr/bin/bash",
+        "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh",
+        "fixture/local.cnf",
+        "fixture/proof.drat",
+        "fixture/sha256.txt",
+        "10"
+      ],
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "Finite actual-shaped runtime control",
+        "--success-criterion",
+        "native10",
+        "--verification-criterion",
+        "complete assignment",
+        "--out",
+        "fixture/native",
+        "--",
+        "/usr/bin/bash",
+        "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh",
+        "fixture/local.cnf",
+        "fixture/proof.drat",
+        "fixture/sha256.txt",
+        "10"
+      ],
+      "formula": {
+        "path": "fixture/local.cnf",
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "stdout": {
+        "path": "fixture/native/stdout.log",
+        "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      "supervisor_argv": [
+        "/usr/bin/python3",
+        "-B",
+        "acceleration/run_compute_command_v2.py",
+        "--seconds",
+        "60",
+        "--shutdown-reserve-seconds",
+        "20",
+        "--allocation-reason",
+        "Finite actual-shaped runtime control",
+        "--success-criterion",
+        "native10",
+        "--verification-criterion",
+        "complete assignment",
+        "--out",
+        "fixture/native",
+        "--",
+        "/usr/bin/bash",
+        "acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh",
+        "fixture/local.cnf",
+        "fixture/proof.drat",
+        "fixture/sha256.txt",
+        "10"
+      ]
+    },
+    "terminal": {
+      "cleanup": {
+        "actual_exit_code": 10,
+        "cleanup_errors": [],
+        "cleanup_observations": [
+          {
+            "live_pids": [],
+            "original_group": 123,
+            "unreadable_pids": []
+          }
+        ],
+        "job_active_zero_observed": true,
+        "process_group_live_pids": [],
+        "reaped": true
+      },
+      "command_exit_code": 10,
+      "deadline_reached": false,
+      "elapsed_seconds": 0.1,
+      "error": null,
+      "hard_limit_observed": true,
+      "invocation_id": "synthetic-only",
+      "status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+      "stop_reason": "COMMAND_EXITED"
+    }
+  },
+  "result": {
+    "clean_group_observed": true,
+    "elapsed_seconds": 0.1,
+    "formula_path": "fixture/local.cnf",
+    "literal_supervisor_status": "NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET",
+    "native_exit": 10,
+    "native_seconds": 10,
+    "original_group": 123,
+    "out": "fixture/native",
+    "review_path": null,
+    "timely_review_policy_inherited_from_root_runtime_acceptance": true
+  }
+}
