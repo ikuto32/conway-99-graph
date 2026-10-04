@@ -1,0 +1,18 @@
+{
+  "schema": "LOCAL_SAT_BINARY_CONTROLS_VECTOR_SOURCE_ONLY_CORRECTION_V1",
+  "timestamp": "2026-10-04T15:01:41Z",
+  "preserved_draft": {
+    "path": "acceleration/plan_20261004_fixed17_per_copy_local_sat_binary_controls_v2.json",
+    "sha256": "657f34ed8ed2abb253055d8a21068bf80ea7973ab6ffce4a08149deb7e07da7e"
+  },
+  "issue": "Metadata construction omitted the child argument when calling the vector composer for five native and six proof templates, leaving a null word after the16-word supervisor prefix. No command was launched.",
+  "exact_change": "Preserve first16 supervisor words and append each explicitly declared child vector; update word counts. Build18/2 vector was already correct and remains unchanged.",
+  "affected_native_cases": 5,
+  "affected_proof_templates": 6,
+  "expected_native_words": 22,
+  "expected_proof_words": 21,
+  "source_changed": false,
+  "actual_invocations": 0,
+  "mathematical_execution": false,
+  "ledger_or_Git_mutation": false
+}

@@ -1,0 +1,13 @@
+# Ordinary nine-record candidate copying
+
+This source copies exactly the frozen packet `47bf0eb7189059585078c4d2219d06fac2dc8c5532867f81512c537b6935cf88` against the literal JSON-subset baseline `CLAIMS.yaml` identity `95e8ffba7f7a8554c0de753495b3aba3a8eae0b8d238aecba81d3f1213db704c`. The baseline has435 claims and23695 artifact objects. It writes a separate candidate with444 claims and preserves every previous object. Actual new/reused artifact counts are observed at execution;6054 PUBLIC objects are preserved without availability promotion.
+
+It reuses the standard PowerShell copying path from `materialize_20261004_two_finite_engineering_claims_v3.ps1`. Native `ConvertFrom-Json -AsHashtable -DateKind String` applies only to this frozen JSON object baseline, not arbitrary YAML. The subject does no mathematical derivation, certificate replay or scientific execution. The schema2 packet already retains each different-author report and literal verification timestamp. All115 evidence identities are authenticated inside the bounded command and checked again before closing.
+
+Existing artifact identity reuse chooses the ordinal first exact path/SHA with availability PUBLIC or LOCAL_ONLY. New IDs use a new ordinal prefix and remain LOCAL_ONLY. Claim evidence and verification hashes resolve the complete per-record path map. Only the computed exact-dual record receives its genuine independent full report as a reproducibility manifest. The eight written records retain null reproducibility with explicit reasons.
+
+Required CLI: -Packet (repository-relative), -PacketSha256, -SourceSha256, -SpecSha256, -Out (fresh repository-relative output directory), -Seconds150 and -Executor/root. A supported Windows593 supervisor has180 outer seconds and20 shutdown reserve. The script reserves20 seconds for saving, retains failures and makes no retries. No live ledger, Git, index or documentation target is written.
+
+Successful worker output is4 physical files: exact `CLAIMS.before.yaml`, JSON-subset `CLAIMS.candidate.yaml`, `evidence_resolution.json` and `summary.json`; the latter binds3 output hashes. Its status remains CANDIDATE_ADMINISTRATIVE_UNVERIFIED. Root must separately compare the full435 typed claim prefix,23695 artifact prefix,6054 PUBLIC objects, unchanged top fields, nine literal canonical cores and resolved evidence, then run the unchanged generic validator. Installation remains a separate Root action.
+
+No bespoke registrar or control framework is introduced. Prior source, two-record packet/receipts and the six-record packet remain immutable. The source is prepared only; no launch authority or result is implied. Target resolution remains UNKNOWN.

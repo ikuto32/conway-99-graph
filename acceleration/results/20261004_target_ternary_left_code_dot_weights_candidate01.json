@@ -1,0 +1,68 @@
+{
+  "schema": "SOURCE_ONLY_MATHEMATICAL_CANDIDATE_V1",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-DOT-FORM-WEIGHTS42-78",
+  "revision": 1,
+  "timestamp": "2026-10-04T10:33:24.5302263+00:00",
+  "author": "/root/structural",
+  "producer": "/root/structural",
+  "status": "CANDIDATE",
+  "statement": "For every simple SRG(99,14,1,2) with complete actual-triangle incidence N and H=NN^T=A+7I, the lift-independent divided form beta(x,y)=X^T H Y/3 mod3 on V=ker(H mod3) is exactly the ordinary coordinate dot product x dot y. The ternary left code L=ker(N^T mod3) is therefore ordinary self-orthogonal. Constants have weights0 or99. Every nonconstant x in L uses all three vertex colors, each color class has size divisible by3 between21 and57, and its Hamming weight is one of42,45,48,51,54,57,60,63,66,69,72,75,78. No nonconstant dependency, rank improvement, circuit bound or target exclusion is asserted.",
+  "proof": {
+    "sha256": "653a21966651c9bf47fab5bdbaec4d9299d8faea3e6cc81c6a511ab3338161d8",
+    "path": "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_DOT_WEIGHTS_V1.md"
+  },
+  "scope": {
+    "description": "Every hypothetical complete simple99/degree14/lambda1/mu2 graph and its full231 actual-triangle columns; ternary point-code form, colors and weights only. No fixed17 occurrence, automorphism, extra left dependency or target conclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is symmetric binary zero-diagonal, Aj=14j and A^2=12I-A+2J over the integers.",
+    "N contains every actual triangle exactly once; each row has7 ones, each column3, and NN^T=A+7I.",
+    "Weights42..78 apply only to nonconstant words; the constant line span(j) is permitted."
+  ],
+  "dependencies": [],
+  "logical_premises_derived_in_paper": true,
+  "comparison_pins_are_not_transferred_approvals": true,
+  "key_steps": [
+    "H^2=13H-30I+2J and kerG subset sumzero make beta=ordinarydot by reduction modulo9.",
+    "Every triangle is monochromatic or rainbow; connectedness forces all3 colors for a nonconstant word.",
+    "Indicator Rayleigh upper3 plus rainbow degree7 gives min color>=18.",
+    "The18,18,63 boundary forces independent7-regular18+18 bipartite sectors with42 two-step walks versus34 permitted common neighbors.",
+    "Color populations divisible3 then give each>=21/<=57 and the thirteen nonconstant weights."
+  ],
+  "overlap": [
+    "Accepted beta-isotropy/rank77 already exists; dot identification is a coordinate interpretation, not a second independent form or rank improvement.",
+    "Existing nonconstant-kernel design45c27c already contains triangle-color counts and exact second moments that imply population congruences.",
+    "Wave171 is a231-coordinate block-polynomial ternary code; Wave191 is conditional prism-free and not an unrestricted premise.",
+    "Binary self-orthogonality/rank87 and minority-sign right-circuit constraints remain separate; no parameter transfer."
+  ],
+  "written_boundaries": 6,
+  "executed_mathematical_commands": 0,
+  "enumerations": 0,
+  "imports": 0,
+  "formal_checks": 0,
+  "external_checks": 0,
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_DOT_WEIGHTS_V1.md": "653a21966651c9bf47fab5bdbaec4d9299d8faea3e6cc81c6a511ab3338161d8",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_DIVIDED_GRAM_FORM_RANK77_V1.md": "f07212fc84afe383704f782a5464cb82fb9e39f9eceef8a416c708c2ce35866a",
+    "docs/DESIGN_20261003_TERNARY_INCIDENCE_NONCONSTANT_KERNEL_V1.md": "45c27c5dcd2217c1f2b09252efa3fa5f9c0242494178c9a0fa4ee50a34b56f67",
+    "docs/CANDIDATE_20261003_TRIANGLE_KERNEL_SELF_ORTHOGONAL_V1.md": "a9d47e7ff9a77fbd402d98dd2e5f20b6c38b0e62b376987b9433701bbb6440d7",
+    "external_conway99_research/attempts/wave170-block-profile-ternary-code/derivation.md": "67c293ccdff944aeb59b44ad297b7db876a0ceb9df50c876f559cb63ef20123f",
+    "external_conway99_research/attempts/wave171-pq-centered-code/derivation.md": "0ff4280e782acccfb76e2ca093291be3e3a1c4ca08225ccb763b113c5ac286e3",
+    "external_conway99_research/attempts/wave191-global-star-module-proof-b/derivation.md": "5bf0758c7a4620364738225f6da1c27b428f82bd10274c9a9d21a015277e30db",
+    "external_conway99_research/attempts/wave174-no-weight3-dual/derivation.md": "455b85435252f9b19311b048575536c13dcdfa470c095bb79039dcf2ed381ac9"
+  },
+  "limitations": [
+    "No nonconstant ternary left dependency is forced; L=span(j) remains compatible.",
+    "No universal right-circuit weight bridge, fixed-count exclusion, constructed code or graph follows.",
+    "A code/enumerator screen requires a new exact source, controls, independent path and separate authorization.",
+    "Bounded archive text comparison is not exhaustive novelty or literature review.",
+    "No new worker, source gate, frozen roster, ledger/index/Git mutation."
+  ],
+  "verification_pending": true,
+  "target_resolution": "NONE",
+  "coverage": "UNKNOWN",
+  "novelty": "UNKNOWN",
+  "registry_mutated": false
+}

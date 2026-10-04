@@ -1,0 +1,134 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T18:15:45Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-NINE-COUNT-NOT228",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), the number R of actual induced rook-nine vertex subsets, counted once by their vertex sets, is not228.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R counts actual induced9-vertex rook subsets once by their vertex sets"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary rook-count exclusion only; the supposition R228 is discharged using the explicit four-or-five deficiency-two population prerequisite, actual fan partners and the weighted upper-Gram equality. No induced support or automorphism is assumed in the ambient target.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-TWO-POPULATION-FOUR-OR-FIVE",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "This proof uses exactly the four-or-five population reduction. Its whole separate defect-cycle proof and this extension need a joint different-author review; agreement with a shared outline or an accepted weaker h1..5 result is insufficient.",
+  "prerequisite": {
+    "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-TWO-POPULATION-FOUR-OR-FIVE",
+    "claim_revision": 1,
+    "paper": {
+      "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md",
+      "sha256": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1"
+    },
+    "raw": {
+      "path": "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json",
+      "sha256": "22826b9350197f1dab780ef71574585ba6d8dfb8d61fea4c5d8421cfe5052d16"
+    },
+    "independent_report": null,
+    "independent_report_null_reason": "A genuine final independent prerequisite artifact identity has not yet been supplied to this writer; no source or shared review message is converted into a fabricated gate.",
+    "Root_acceptance": null
+  },
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT228_V1.md",
+    "sha256": "a716630106db4064393d5500d6e33b8db9867e0e5a1d79029f0654f2b7a0f613"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT228_V1.md": "a716630106db4064393d5500d6e33b8db9867e0e5a1d79029f0654f2b7a0f613",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json": "22826b9350197f1dab780ef71574585ba6d8dfb8d61fea4c5d8421cfe5052d16",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0"
+  },
+  "fan_constraints": {
+    "positive_family": "P=p+h=18-h",
+    "local_counts": "r1 deficiency-one andr2 deficiency-two triangles through v",
+    "odd_degree_parity": "r1 even",
+    "positive_fan_inequality": "P>=3r1+5r2",
+    "even_d1_fan_inequality": "p>=3r1",
+    "derived_point_rules": "r2<=1; ifr2=1 thenr1=2; wheneverr1>0 it equals2",
+    "d2_triangles_pairwise_disjoint": true
+  },
+  "branches": {
+    "h5": {
+      "p": 8,
+      "P": 13,
+      "required_distinct_d2_points": 15,
+      "available_d1_support_points": 12
+    },
+    "h4": {
+      "p": 10,
+      "P": 14,
+      "d1_support_points": 15,
+      "chosen_T_points": 3,
+      "C_triangles": 6,
+      "C_outer_points": 12,
+      "V_triangles": 4,
+      "other_d2_triangles": 3,
+      "weighted_Gram": {
+        "T_weight": 2,
+        "outer_weight": 1,
+        "sum_w": 18,
+        "norm_squared": 24,
+        "T_edge_products": 12,
+        "C_edge_products": 30,
+        "V_edge_products": 12,
+        "total_known_edge_products": 54,
+        "quadratic_value_known_union": 0,
+        "extra_edges_forbidden": true
+      }
+    }
+  },
+  "proof_route": [
+    "Exactpopulation prerequisite givesh4/p10 orh5/p8",
+    "External positive triangle meetsatmostone outerpoint ofentirepointfan",
+    "Fan countsP>=3r1+5r2; even d1 incidencegivesp>=3r1",
+    "LocalDv rules forceone D2 plusexactlytwo D1 atanyD2 point andpairwise disjoint D2 triangles",
+    "h5 requires15D2 points insided1support ofsize12",
+    "h4 chosenT/sixC outerpoints exhaust15pointD1support; fourV partitionouter12",
+    "UpperGram3I-A+J/9 PSD; weightedknowntriangle edgeunion q72-108+36=0",
+    "Positiveweights prohibit anyextraedgeon support",
+    "OtherthreeD2 triangles whollyinside support contradictlambda1 fixedpartners ofeveryknownedge"
+  ],
+  "hand_boundaries": [
+    "Three localD2 triangles needP>=15; atoldh3P15 equality isnotautomaticallyforbidden.",
+    "Four localD2 collapsedcycle needsP>=20; priorlocal labelboundary isnotaglobalR228 realization.",
+    "Exact15pointknownedgeunion hasq0 foranyactualmatching arrangement; itisnotitselfexcluded.",
+    "Extra outer/outer, center/outer, center/center edgesdecreaseq by2/4/8 respectively.",
+    "Actual triangle notknownT/C/V needsan extraedge bylambda1; no inducedfullsupportwasassumed."
+  ],
+  "shared_origin": {
+    "Root_surviving_h4_h5_scope_question": true,
+    "Structural_prior_rook_candidate_authorship": true,
+    "Root_independent_outline_reconstruction_before_freeze": true,
+    "agreement_not_new_claim_verification": true
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "limitations": [
+    "New R228 exclusion is CANDIDATE until joint independent prerequisite andextensionreview.",
+    "No other count or Conway99 target resolution is promoted.",
+    "No globalN3free/Hamming cover, inducedsupport assumption, automorphism or code-rank premise.",
+    "No mathematical execution or scientific coverage census."
+  ]
+}
+

@@ -1,0 +1,7 @@
+--- acceleration/run_20261004_fixed17_per_copy_local_sat_native_v1.sh
++++ acceleration/run_20261004_fixed17_per_copy_local_sat_native_v2.sh
+@@ -19,3 +19,3 @@
+ exec /usr/bin/prlimit --as=8589934592:8589934592 --fsize=4294967296:4294967296 --core=0:0 \
+     /usr/bin/timeout --foreground --signal=TERM --kill-after=5s "${4}s" \
+-    build/research-cadical195/source/build/cadical --no-binary --seed=0 "$1" "$2"
++    build/research-cadical195/source/build/cadical --seed=0 "$1" "$2"
