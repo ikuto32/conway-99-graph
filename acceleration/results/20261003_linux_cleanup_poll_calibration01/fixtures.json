@@ -1,0 +1,125 @@
+[
+  {
+    "label": "initial_empty",
+    "frames": [
+      []
+    ],
+    "remaining": 2,
+    "reaped": true,
+    "scans": 1,
+    "empty": true
+  },
+  {
+    "label": "zombie_only",
+    "frames": [
+      [
+        {
+          "pid": 5000,
+          "state": "Z"
+        }
+      ]
+    ],
+    "remaining": 2,
+    "reaped": true,
+    "scans": 1,
+    "empty": true
+  },
+  {
+    "label": "live_then_empty",
+    "frames": [
+      [
+        {
+          "pid": 5000,
+          "state": "D"
+        }
+      ],
+      []
+    ],
+    "remaining": 2,
+    "reaped": true,
+    "scans": 2,
+    "empty": true
+  },
+  {
+    "label": "unreadable_then_empty",
+    "frames": [
+      [
+        {
+          "pid": 5000,
+          "unreadable": true
+        }
+      ],
+      []
+    ],
+    "remaining": 2,
+    "reaped": true,
+    "scans": 2,
+    "empty": true
+  },
+  {
+    "label": "bad_stat_then_empty",
+    "frames": [
+      [
+        {
+          "pid": 5000,
+          "bad_stat": true
+        }
+      ],
+      []
+    ],
+    "remaining": 2,
+    "reaped": true,
+    "scans": 2,
+    "empty": true
+  },
+  {
+    "label": "persistent_live_budget",
+    "frames": [
+      [
+        {
+          "pid": 5000,
+          "state": "D"
+        }
+      ]
+    ],
+    "remaining": 0.14,
+    "reaped": true,
+    "scans": 3,
+    "empty": false
+  },
+  {
+    "label": "persistent_unknown_budget",
+    "frames": [
+      [
+        {
+          "pid": 5000,
+          "unreadable": true
+        }
+      ]
+    ],
+    "remaining": 0.14,
+    "reaped": true,
+    "scans": 3,
+    "empty": false
+  },
+  {
+    "label": "leader_not_reaped",
+    "frames": [
+      []
+    ],
+    "remaining": 0.08,
+    "reaped": false,
+    "scans": 1,
+    "empty": true
+  },
+  {
+    "label": "leader_wait_clamped",
+    "frames": [
+      []
+    ],
+    "remaining": 0.08,
+    "reaped": true,
+    "scans": 1,
+    "empty": true
+  }
+]

@@ -1,0 +1,643 @@
+{
+  "positive": [
+    {
+      "case": "rook9",
+      "metrics": {
+        "F3": 0,
+        "E_lambda": 0,
+        "E_mu": 0,
+        "E": 0,
+        "scalar_weight": 577,
+        "scalar": 0,
+        "residue_population": [
+          36,
+          0,
+          0
+        ]
+      },
+      "scalar_complete_pairs": 36
+    },
+    {
+      "case": "prism9",
+      "metrics": {
+        "F3": 12,
+        "E_lambda": 6,
+        "E_mu": 6,
+        "E": 12,
+        "scalar_weight": 577,
+        "scalar": 6936,
+        "residue_population": [
+          24,
+          6,
+          6
+        ]
+      },
+      "scalar_complete_pairs": 36
+    },
+    {
+      "case": "cube12",
+      "metrics": {
+        "F3": 30,
+        "E_lambda": 0,
+        "E_mu": 48,
+        "E": 48,
+        "scalar_weight": 1057,
+        "scalar": 31758,
+        "residue_population": [
+          36,
+          6,
+          24
+        ]
+      },
+      "scalar_complete_pairs": 66
+    },
+    {
+      "case": "target99",
+      "metrics": {
+        "F3": 2871,
+        "E_lambda": 6930,
+        "E_mu": 12870,
+        "E": 19800,
+        "scalar_weight": 819820,
+        "scalar": 2353723020,
+        "residue_population": [
+          1980,
+          2475,
+          396
+        ]
+      },
+      "scalar_complete_pairs": 4851
+    },
+    {
+      "case": "handwritten_rng_and_seed"
+    },
+    {
+      "case": "bounded_word_rejections_three_bounds_and_handwritten_three_xoshiro_words"
+    },
+    {
+      "case": "rook9_complete12_synthetic_replay"
+    },
+    {
+      "case": "cube12_complete12_synthetic_replay"
+    },
+    {
+      "case": "complete522_own_probes_and_valid_scalar_comparisons",
+      "records": 522
+    },
+    {
+      "case": "invented_raw_metadata_cost_archive_checkpoint_receipt_guards"
+    }
+  ],
+  "strict_negative": [
+    {
+      "case": "magic",
+      "expected_stage": "WIRE_FIELD:HYPERGRAPH_TERNARY_MIXED_STATE_V1",
+      "actual_stage": "WIRE_FIELD:HYPERGRAPH_TERNARY_MIXED_STATE_V1"
+    },
+    {
+      "case": "objective",
+      "expected_stage": "STATE_VERSION",
+      "actual_stage": "STATE_VERSION"
+    },
+    {
+      "case": "weight",
+      "expected_stage": "STATE_SCALAR_WEIGHT",
+      "actual_stage": "STATE_SCALAR_WEIGHT"
+    },
+    {
+      "case": "integer_bool",
+      "expected_stage": "WIRE_INTEGER",
+      "actual_stage": "WIRE_INTEGER"
+    },
+    {
+      "case": "integer_float",
+      "expected_stage": "WIRE_INTEGER",
+      "actual_stage": "WIRE_INTEGER"
+    },
+    {
+      "case": "integer_negative",
+      "expected_stage": "WIRE_INTEGER",
+      "actual_stage": "WIRE_INTEGER"
+    },
+    {
+      "case": "integer_overflow",
+      "expected_stage": "WIRE_INTEGER_OVERFLOW",
+      "actual_stage": "WIRE_INTEGER_OVERFLOW"
+    },
+    {
+      "case": "forced",
+      "expected_stage": "STATE_FORCED",
+      "actual_stage": "STATE_FORCED"
+    },
+    {
+      "case": "real_nonfinite",
+      "expected_stage": "WIRE_REAL",
+      "actual_stage": "WIRE_REAL"
+    },
+    {
+      "case": "counter",
+      "expected_stage": "STATE_COUNTERS",
+      "actual_stage": "STATE_COUNTERS"
+    },
+    {
+      "case": "cache",
+      "expected_stage": "STATE_CN_CACHE",
+      "actual_stage": "STATE_CN_CACHE"
+    },
+    {
+      "case": "zero_rng",
+      "expected_stage": "RNG_ZERO",
+      "actual_stage": "RNG_ZERO"
+    },
+    {
+      "case": "initial_words",
+      "expected_stage": "STATE_INITIAL_RESET",
+      "actual_stage": "STATE_INITIAL_RESET"
+    },
+    {
+      "case": "zero_population",
+      "expected_stage": "STATE_ZERO_POPULATION",
+      "actual_stage": "STATE_ZERO_POPULATION"
+    },
+    {
+      "case": "trailing",
+      "expected_stage": "WIRE_TRAILING",
+      "actual_stage": "WIRE_TRAILING"
+    },
+    {
+      "case": "truncated",
+      "expected_stage": "WIRE_TRUNCATED",
+      "actual_stage": "WIRE_TRUNCATED"
+    },
+    {
+      "case": "source",
+      "expected_stage": "SOURCE_GRAPH_HASH",
+      "actual_stage": "SOURCE_GRAPH_HASH"
+    },
+    {
+      "case": "config",
+      "expected_stage": "RESUME_CONFIG_MISMATCH",
+      "actual_stage": "RESUME_CONFIG_MISMATCH"
+    },
+    {
+      "case": "bound_zero",
+      "expected_stage": "RNG_BOUND",
+      "actual_stage": "RNG_BOUND"
+    },
+    {
+      "case": "bound_bool",
+      "expected_stage": "RNG_BOUND",
+      "actual_stage": "RNG_BOUND"
+    },
+    {
+      "case": "draw_bool",
+      "expected_stage": "RNG_WORD_TYPE",
+      "actual_stage": "RNG_WORD_TYPE"
+    },
+    {
+      "case": "draw_overflow",
+      "expected_stage": "RNG_WORD_TYPE",
+      "actual_stage": "RNG_WORD_TYPE"
+    },
+    {
+      "case": "real_python_underscore",
+      "expected_stage": "WIRE_REAL",
+      "actual_stage": "WIRE_REAL"
+    },
+    {
+      "case": "bad_metrics",
+      "expected_stage": "STATE_SCORES",
+      "actual_stage": "STATE_SCORES"
+    },
+    {
+      "case": "bad_scalar",
+      "expected_stage": "STATE_METRIC_TYPES",
+      "actual_stage": "STATE_METRIC_TYPES"
+    },
+    {
+      "case": "bad_schedule",
+      "expected_stage": "CONFIG_SCHEDULE",
+      "actual_stage": "CONFIG_SCHEDULE"
+    },
+    {
+      "case": "zero_snapshot_rng",
+      "expected_stage": "STATE_ZERO_INITIAL_RESET",
+      "actual_stage": "STATE_ZERO_INITIAL_RESET"
+    },
+    {
+      "case": "zero_completeness",
+      "expected_stage": "STATE_ZERO_COMPLETENESS",
+      "actual_stage": "STATE_ZERO_COMPLETENESS"
+    },
+    {
+      "case": "trace_schema",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_objective",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_move_kernel",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_distribution",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_step",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_ti",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_tj",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_pi",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_pj",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_old_triples",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_proposed_triples",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_disjoint",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_exclusive",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_absent_after_removal",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_admissible",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_accepted",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_mixing",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_temperature",
+      "expected_stage": "TRACE_TEMPERATURE",
+      "actual_stage": "TRACE_TEMPERATURE"
+    },
+    {
+      "case": "trace_delta_scalar",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_before",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_candidate",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_after",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_best",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_draw",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_rng_words_before",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_rng_words_after",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_rng_before",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_rng_after",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_retained_zero_objects",
+      "expected_stage": "TRACE_CONTENT",
+      "actual_stage": "TRACE_CONTENT"
+    },
+    {
+      "case": "trace_extra",
+      "expected_stage": "TRACE_FIELDS",
+      "actual_stage": "TRACE_FIELDS"
+    },
+    {
+      "case": "json_58",
+      "expected_stage": "JSON",
+      "actual_stage": "JSON"
+    },
+    {
+      "case": "json_59",
+      "expected_stage": "JSON",
+      "actual_stage": "JSON"
+    },
+    {
+      "case": "manifest_float_positive_calls",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_float_strict_negative_calls",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_float_native_calls",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_float_whole_prefix_resume_equalities",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_float_complete_generic_probe_records",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_float_attempted_ordinary_proposals",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_bool_actual_scientific_input_read",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_bool_scientific_search_launched",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_bool_target_resolution",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_bool_independent_approval",
+      "expected_stage": "FULL_FINITE_SCOPE",
+      "actual_stage": "FULL_FINITE_SCOPE"
+    },
+    {
+      "case": "manifest_missing_call",
+      "expected_stage": "FULL_83_POPULATION",
+      "actual_stage": "FULL_83_POPULATION"
+    },
+    {
+      "case": "manifest_duplicate_call",
+      "expected_stage": "FULL_83_POPULATION",
+      "actual_stage": "FULL_83_POPULATION"
+    },
+    {
+      "case": "manifest_schema",
+      "expected_stage": "FULL_83_POPULATION",
+      "actual_stage": "FULL_83_POPULATION"
+    },
+    {
+      "case": "cost_missing",
+      "expected_stage": "COMPLETE596_PAIR_COSTS",
+      "actual_stage": "COMPLETE596_PAIR_COSTS"
+    },
+    {
+      "case": "cost_coefficient",
+      "expected_stage": "COMPLETE596_PAIR_COSTS",
+      "actual_stage": "COMPLETE596_PAIR_COSTS"
+    },
+    {
+      "case": "cost_bool_alias",
+      "expected_stage": "COMPLETE596_PAIR_COSTS",
+      "actual_stage": "COMPLETE596_PAIR_COSTS"
+    },
+    {
+      "case": "probe_omission",
+      "expected_stage": "PROBE_POPULATION",
+      "actual_stage": "PROBE_POPULATION"
+    },
+    {
+      "case": "probe_extra",
+      "expected_stage": "PROBE_POPULATION",
+      "actual_stage": "PROBE_POPULATION"
+    },
+    {
+      "case": "probe_proposal_id",
+      "expected_stage": "PROBE_RECORD",
+      "actual_stage": "PROBE_RECORD"
+    },
+    {
+      "case": "probe_rollback",
+      "expected_stage": "PROBE_RECORD",
+      "actual_stage": "PROBE_RECORD"
+    },
+    {
+      "case": "probe_delta_scalar",
+      "expected_stage": "PROBE_RECORD",
+      "actual_stage": "PROBE_RECORD"
+    },
+    {
+      "case": "zero_selection_first_step",
+      "expected_stage": "ZERO_SELECTION",
+      "actual_stage": "ZERO_SELECTION"
+    },
+    {
+      "case": "zero_selection_retained_distinct_objects",
+      "expected_stage": "ZERO_SELECTION",
+      "actual_stage": "ZERO_SELECTION"
+    },
+    {
+      "case": "zero_selection_found",
+      "expected_stage": "ZERO_SELECTION",
+      "actual_stage": "ZERO_SELECTION"
+    },
+    {
+      "case": "zero_selection_carried_from_resume",
+      "expected_stage": "ZERO_SELECTION",
+      "actual_stage": "ZERO_SELECTION"
+    },
+    {
+      "case": "zero_selection_selection_rule",
+      "expected_stage": "ZERO_SELECTION",
+      "actual_stage": "ZERO_SELECTION"
+    },
+    {
+      "case": "zero_export_missing",
+      "expected_stage": "COMPLETE_ZERO_EXPORT_POPULATION",
+      "actual_stage": "COMPLETE_ZERO_EXPORT_POPULATION"
+    },
+    {
+      "case": "zero_export_extra",
+      "expected_stage": "COMPLETE_ZERO_EXPORT_POPULATION",
+      "actual_stage": "COMPLETE_ZERO_EXPORT_POPULATION"
+    },
+    {
+      "case": "zero_export_bool_count",
+      "expected_stage": "ZERO_POPULATION_DOMAIN",
+      "actual_stage": "ZERO_POPULATION_DOMAIN"
+    },
+    {
+      "case": "checkpoint_omission",
+      "expected_stage": "SAVED_STATE_POPULATION",
+      "actual_stage": "SAVED_STATE_POPULATION"
+    },
+    {
+      "case": "capture_omission",
+      "expected_stage": "SAVED_STATE_POPULATION",
+      "actual_stage": "SAVED_STATE_POPULATION"
+    },
+    {
+      "case": "state_extra_name",
+      "expected_stage": "SAVED_STATE_FILENAME",
+      "actual_stage": "SAVED_STATE_FILENAME"
+    },
+    {
+      "case": "artifact_omission",
+      "expected_stage": "EXACT_CASE_ARTIFACT_POPULATION",
+      "actual_stage": "EXACT_CASE_ARTIFACT_POPULATION"
+    },
+    {
+      "case": "receipt_actual_exit_code",
+      "expected_stage": "NATIVE_RECEIPT",
+      "actual_stage": "NATIVE_RECEIPT"
+    },
+    {
+      "case": "receipt_observed_euid",
+      "expected_stage": "NATIVE_RECEIPT",
+      "actual_stage": "NATIVE_RECEIPT"
+    },
+    {
+      "case": "receipt_reaped",
+      "expected_stage": "NATIVE_RECEIPT",
+      "actual_stage": "NATIVE_RECEIPT"
+    },
+    {
+      "case": "receipt_error",
+      "expected_stage": "NATIVE_RECEIPT",
+      "actual_stage": "NATIVE_RECEIPT"
+    },
+    {
+      "case": "receipt_child_pid",
+      "expected_stage": "NATIVE_RECEIPT",
+      "actual_stage": "NATIVE_RECEIPT"
+    },
+    {
+      "case": "launch_bool",
+      "expected_stage": "NATIVE_LAUNCH",
+      "actual_stage": "NATIVE_LAUNCH"
+    },
+    {
+      "case": "command_0",
+      "expected_stage": "NATIVE_CONTAINED_COMMAND",
+      "actual_stage": "NATIVE_CONTAINED_COMMAND"
+    },
+    {
+      "case": "command_4",
+      "expected_stage": "NATIVE_LIMITS",
+      "actual_stage": "NATIVE_LIMITS"
+    },
+    {
+      "case": "command_6",
+      "expected_stage": "NATIVE_LIMITS",
+      "actual_stage": "NATIVE_LIMITS"
+    },
+    {
+      "case": "command_13",
+      "expected_stage": "NATIVE_LIMITS",
+      "actual_stage": "NATIVE_LIMITS"
+    },
+    {
+      "case": "command_11",
+      "expected_stage": "NATIVE_OUTPUT_IDENTITY",
+      "actual_stage": "NATIVE_OUTPUT_IDENTITY"
+    },
+    {
+      "case": "outer_process_group_live_pids",
+      "expected_stage": "ACTUAL_LINUX_CLEANUP",
+      "actual_stage": "ACTUAL_LINUX_CLEANUP"
+    },
+    {
+      "case": "outer_job_active_zero_observed",
+      "expected_stage": "ACTUAL_LINUX_CLEANUP",
+      "actual_stage": "ACTUAL_LINUX_CLEANUP"
+    },
+    {
+      "case": "outer_reaped",
+      "expected_stage": "ACTUAL_LINUX_CLEANUP",
+      "actual_stage": "ACTUAL_LINUX_CLEANUP"
+    },
+    {
+      "case": "outer_source",
+      "expected_stage": "ACTUAL_OUTER_COMMAND",
+      "actual_stage": "ACTUAL_OUTER_COMMAND"
+    },
+    {
+      "case": "branch_bool_int_alias",
+      "expected_stage": "ACTUAL_BRANCH_POPULATION",
+      "actual_stage": "ACTUAL_BRANCH_POPULATION"
+    },
+    {
+      "case": "harness_wrong_stage",
+      "expected_stage": "WRONG_CONTROL_STAGE:harness",
+      "actual_stage": "WRONG_CONTROL_STAGE:harness"
+    }
+  ]
+}

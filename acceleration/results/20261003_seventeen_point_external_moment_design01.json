@@ -1,0 +1,59 @@
+{
+  "schema": "SEVENTEEN_POINT_EXTERNAL_NEIGHBOR_MOMENT_CANDIDATE_DESIGN_V1",
+  "timestamp": "2026-10-03T15:24:02.6926778+00:00",
+  "producer": "/root/structural",
+  "question_origin": "/root",
+  "status": "SOURCE_ONLY_CANDIDATE_NOT_INDEPENDENTLY_VERIFIED",
+  "literal_statement": "For any simple (99,14,1,2) graph and any specified17-vertex induced adjacency H, with b_v=14-d_H(v) and delta_uv=2-H_uv-(H^2)_uv, its82 exterior-neighborhood types have nonnegative integer multiplicities x_T satisfying sum x=82, each vertex moment b_v, and each unordered-pair moment delta_uv. Every occurring type T has all pair deficits positive, H[T] a matching, and |T|-e(H[T])<=7. Thus this154-row system on every such eligible type is necessary, as is PSD of Z=[[82,b^T],[b,12I+2J-H-H^2]]. No feasibility or embedding assertion is made.",
+  "domain": {
+    "target_vertices": 99,
+    "target_degree": 14,
+    "adjacent_common_neighbors": 1,
+    "nonadjacent_common_neighbors": 2,
+    "ordered_support_vertices": 17,
+    "outside_vertices": 82,
+    "requires_complete_induced_adjacency": true,
+    "fixed_base_edges_are_completed": true
+  },
+  "model": {
+    "type_masks": "All0..131071 on fixed17pointorder, increasing, without symmetry quotient",
+    "pair_relaxation": "All pairs delta>0 and cardinality<=14, including empty/singletons",
+    "matching_refinement": "Induced matching and cardinality-minus-induced-edgecount<=7",
+    "rows": 154,
+    "vertex_rows": 17,
+    "pair_rows": 136,
+    "validated_type_population": null,
+    "type_population_null_reason": "No enumeration has run",
+    "base_cut_budget": 166,
+    "base_pair_budget": 116,
+    "exact_farkas_convention": "A^T y>=0 on every type-column and r^T y<0",
+    "exact_farkas_length": 154,
+    "LP_executed": false,
+    "integer_feasibility_decided": false,
+    "exact_Graham_certificate_exists": null,
+    "certificate_null_reason": "PSD consequence derived, no negative direction or LP certificate computed"
+  },
+  "known_fixture_control_design": "Five handwritten rook9 induced-set moment profiles, complete independent adjacency/type reconstruction required before execution",
+  "strict_control_design": "Empty/missing/duplicate/type/product/deficit/order/zero-row/primal/certificate/matching-corrupt families, counts not executable promises",
+  "combined_additions_checked": false,
+  "combined_additions_scope": "Recompute H_F, all H_F^2/demand/deficits/types for each compatible inducedsupergraph. Baseplus24singleedge ancestor checks do not cover combined subsets.",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_SEVENTEEN_POINT_EXTERNAL_NEIGHBOR_MOMENTS_V1.md": "70ef6392e86c6b9a3c9c6eac9b5d72abb9ea25741d3649282f66ac200bb93349",
+    "docs/CANDIDATE_20261003_SEVENTEEN_POINT_UNBALANCED_TWELVE_TRIANGLE_CIRCUIT_V1.md": "f6f9e883b577d6969eafaac9239c37d637804786a08a6b5e676cebe0208e576b",
+    "acceleration/audit_20261003_seventeen_point_circuit_root_v1.md": "812b4a825941e952eaa8131072cb0d5a5fb2ae6ee52d0336f4683dce0c761e5e",
+    "acceleration/results/20261003_seventeen_point_circuit_root_actual_acceptance01.json": "0c2abf39f87d9eb02d853e2ea90ab2f0f2a031cb7818047c83d1b64cc6b4cc90"
+  },
+  "discovery_verification": null,
+  "null_reason": "Different-author full derivation and source/control/verifier gates required",
+  "executed_commands": 0,
+  "formal_checks": 0,
+  "external_review": false,
+  "target_resolution": "NONE",
+  "novelty": "UNKNOWN",
+  "ledger_index_mutated": false,
+  "source_context": {
+    "head": "d0c0dd7db0d3de420b1d718b59122b069df01107",
+    "ledger_sha256": "23ee170c0f7250843ec2852758f0dd7d1324e85647c44e1907a62f062db47da9",
+    "index_sha256": "618367410b57562be69a658a96c48f7dd1908bd3f58bac806d050cdab0c72632"
+  }
+}

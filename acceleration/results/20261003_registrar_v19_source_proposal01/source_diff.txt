@@ -1,0 +1,200 @@
+diff --git a/acceleration/register_20261003_bound_claims_v18.py b/acceleration/register_20261003_bound_claims_v19.py
+index ed92ef5ce..1e5494f73 100644
+--- a/acceleration/register_20261003_bound_claims_v18.py
++++ b/acceleration/register_20261003_bound_claims_v19.py
+@@ -1705,6 +1705,154 @@ def v18_scope(cid, expected, binding):
+     return copy.deepcopy(scope)
+ 
+ 
++# V19 SOURCE_ONLY: six exact existing Native-verifier bindings and one ordinary
++# four-class scope projection. Missing wrappers gain no executable route.
++V19_DESCRIPTOR = dict(
++    path='acceleration/proposal_20261003_registrar_v19_exact_existing_v1.json',
++    sha256='2254b33bb130e6a9c409a1dda334279b4906a5d6a2c2623c7287a33caf60d275')
++V19_EXACT = {
++    'C-FIXED17-EXTERIOR-MOMENT-RELAXATION-RATIONAL-FEASIBLE':
++        (0, '1834df526949501ed6c7767d0b9ba4d52fc06f02b85c6b50ea44704ddf1451f1'),
++    'C-LOCAL-CN-EXTERIOR-TYPE-CROSS-COMMON-NEIGHBOR-CAP':
++        (1, 'ce592293782b207739ac87c34929c6c6417f69c2e71e2f49a5c53a6d0ed352d7'),
++    'C-FIXED17-EXTERIOR-MOMENT-OUTSIDE-CN-FILTER-472':
++        (2, '82d77964934cade61b9e10296d649584c01174c29460675a63dde25523f4280e'),
++    'C-EXTERIOR-TYPE-PAIR-AND-TRIPLE-COMMON-NEIGHBOR-CAPS':
++        (3, 'a1ed4e4dd1b039a2aeb8e94df4b05be182285cb8c7ef83940986d2ec3d706151'),
++    'C-SEVENTEEN-POINT-LABELLED-TRIANGLE-FAMILY-FOUR-ISOMORPHISM-CLASSES':
++        (4, '99573f66be7be07e0ec22867e250b7395537f82fe07b6d9ea941839540cc9fe4'),
++    'C-UNRESTRICTED-TARGET-TERNARY-AFFINE-OBSTRUCTION-UNBALANCED-CIRCUIT-LE99':
++        (5, '967691cde75d57d5ae4c28f40861ae49e074695312531a146a60d9d7de425fa5'),
++    'C-UNRESTRICTED-TARGET-TERNARY-UNBALANCED-CIRCUIT-LE98':
++        (6, 'e9128774855a9c9e7eae3265e7919b631bacab08f303dbd511d6473f988bcda3'),
++}
++
++
++def v19_descriptor(cid):
++    need(cid in V19_EXACT, 'v19 exact descriptor ID')
++    need(digest(ROOT/V19_DESCRIPTOR['path']) == V19_DESCRIPTOR['sha256'],
++         'v19 immutable reviewed descriptor bytes')
++    declared = json.loads((ROOT/V19_DESCRIPTOR['path']).read_bytes())
++    need(declared['schema'] == 'PROSPECTIVE_EXACT_REGISTRAR_V19_EXISTING_BINDING_DESCRIPTORS_V1'
++         and [r['id'] for r in declared['adapters']] == list(V19_EXACT)
++         and type(declared['mathematical_replays']) is int
++         and declared['mathematical_replays'] == 0
++         and type(declared['new_Native_role_permissions']) is int
++         and declared['new_Native_role_permissions'] == 6
++         and declared['generic_ROOT_or_Native_waiver'] is False,
++         'v19 exact six role permissions and seven scope records')
++    index, identity = V19_EXACT[cid]
++    record = declared['adapters'][index]
++    need(record['id'] == cid and record['binding']['sha256'] == identity
++         and record['report_top_level_statement_required'] is True
++         and record['missing_headline_waiver'] is False,
++         'v19 exact existing binding routing without absence waiver')
++    return record
++
++
++def v19_role(cid, expected, binding):
++    if cid not in V19_EXACT: return False
++    record = v19_descriptor(cid); contract = record['binding_contract']
++    need(expected == V19_EXACT[cid][1], 'v19 exact frozen binding identity')
++    need(set(binding) - {'inputs_sha256'} == set(contract)
++         and all(v15_same(binding[k], value) for k, value in contract.items()),
++         'v19 complete typed nonmap binding contract')
++    need(binding['status'] == 'VERIFIED' and binding['review_state'] == 'CLEAR'
++         and binding['producer'] != binding['verifier']
++         and binding['target_resolution'] == 'NONE'
++         and 'verification_records' not in binding,
++         'v19 exact separate recorded role and no legacy fallback')
++    native_role = record['role_permission_added']
++    need(type(native_role) is bool
++         and native_role is (binding['verifier'] == '/root/native_driver')
++         and (native_role or binding['verifier'] == '/root/structural'),
++         'v19 six exact Native roles or ordinary Structural scope only')
++    need(digest(ROOT/record['binding']['path']) == expected,
++         'v19 original immutable binding bytes')
++    original = json.loads((ROOT/record['binding']['path']).read_bytes())
++    need(v15_same(binding, original), 'v19 complete literal binding including input map')
++    for review in record['review_records']:
++        need(digest(ROOT/review['path']) == review['sha256'],
++             'v19 exact prior scoped ROOT review bytes')
++    return True
++
++
++def v19_report(cid, report_sha, binding, report):
++    if cid not in V19_EXACT: return None
++    need(v19_role(cid, V19_EXACT[cid][1], binding), 'v19 exact bound report routing')
++    record = v19_descriptor(cid); contract = record['report_contract']
++    need(report_sha == record['primary_report']['sha256']
++         and binding['report'] == record['primary_report']['path']
++         and binding['report_sha256'] == report_sha,
++         'v19 exact claim-bound report identity')
++    need(set(report) - {'inputs_sha256'} == set(contract)
++         and all(v15_same(report[k], value) for k, value in contract.items()),
++         'v19 complete typed nonmap report contract')
++    need(report['claim_id'] == cid and type(report['claim_revision']) is int
++         and report['claim_revision'] == 1
++         and report['statement'] == binding['statement']
++         and report['producer'] == binding['producer']
++         and report['verifier'] == binding['verifier']
++         and report['method'] == binding['method']
++         and report['target_resolution'] == 'NONE'
++         and type(binding['verification_timestamp']) is str
++         and report[record['report_timestamp_field']] == binding['verification_timestamp'],
++         'v19 exact literal statement revision roles method and timestamp spelling')
++    need(digest(ROOT/record['primary_report']['path']) == report_sha,
++         'v19 original immutable report bytes')
++    original = json.loads((ROOT/record['primary_report']['path']).read_bytes())
++    need(v15_same(report, original), 'v19 complete literal report including input map')
++    return dict(claim_id=cid, claim_revision=1,
++        recorded_binding=record['binding']['path'], recorded_binding_sha256=V19_EXACT[cid][1],
++        original_report=record['primary_report']['path'], original_report_sha256=report_sha,
++        original_report_statement_field='statement', original_report_statement=report['statement'],
++        recorded_binding_statement=binding['statement'], raw_statement_changed=False,
++        original_report_scope=report['scope'], original_binding_scope=binding['scope'],
++        schema_scope=record['schema_scope'], original_dependencies=binding['dependencies'],
++        schema_dependencies=record['schema_dependencies'],
++        original_verification_timestamp=binding['verification_timestamp'],
++        original_report_timestamp_field=record['report_timestamp_field'],
++        original_report_timestamp=report[record['report_timestamp_field']],
++        original_report_contract=contract, original_report_input_map_preserved=True,
++        missing_headline_waiver=False, root_review_records=record['review_records'],
++        descriptor_path=V19_DESCRIPTOR['path'], descriptor_sha256=V19_DESCRIPTOR['sha256'],
++        reason=record['reason'], mathematical_replays=0, target_resolution='NONE')
++
++
++def v19_scope(cid, expected, binding):
++    need(v19_role(cid, expected, binding), 'v19 exact bound scope routing')
++    record = v19_descriptor(cid); scope = record['schema_scope']
++    need(set(scope) == {'description', 'unrestricted_target', 'target_resolution'}
++         and type(scope['description']) is str and len(scope['description']) > 0
++         and type(scope['unrestricted_target']) is bool
++         and scope['target_resolution'] == 'NONE'
++         and v15_same(binding['scope'], record['original_scope']),
++         'v19 exact schema scope and preserved original quantifiers')
++    original = binding['scope']
++    description = original.get('description', original.get('population'))
++    unrestricted = original.get('unrestricted_target', original.get('unrestricted'))
++    need(v15_same(scope['description'], description)
++         and v15_same(scope['unrestricted_target'], unrestricted),
++         'v19 literal scope key projection only')
++    return copy.deepcopy(scope)
++
++
++def v19_dependencies(cid, expected, binding, claims):
++    need(v19_role(cid, expected, binding), 'v19 exact bound dependency routing')
++    record = v19_descriptor(cid); proposed = record['schema_dependencies']
++    need(type(proposed) is list
++         and v15_same(binding['dependencies'], record['original_dependencies']),
++         'v19 exact original and projected dependencies')
++    present = {claim['id']: claim['revision'] for claim in claims}
++    for dep in proposed:
++        need(type(dep) is dict and set(dep) == {'id', 'revision', 'relation'}
++             and type(dep['id']) is str and type(dep['revision']) is int
++             and dep['revision'] == 1 and dep['relation'] == 'uses_result'
++             and type(present.get(dep['id'])) is int and present[dep['id']] == 1,
++             'v19 exact prerequisite revision present before dependent')
++    return copy.deepcopy(proposed)
++
++
+ def main():
+     ap=argparse.ArgumentParser(description=__doc__)
+     ap.add_argument('--out',type=Path,required=True);ap.add_argument('--previous-sha256',required=True)
+@@ -1725,13 +1873,14 @@ def main():
+         exact_v16 = v16_role(cid, expected, binding)
+         exact_v17 = v17_role(cid, expected, binding)
+         exact_v18 = v18_role(cid, expected, binding)
++        exact_v19 = v19_role(cid, expected, binding)
+         v16_dependency_order(cid, {c['id'] for c in data['claims']})
+         need((binding['status']=='VERIFIED' or exact_wave37) and binding['review_state']=='CLEAR','independent exact-scope checking status')
+         witness_role=(cid==ROOTED7_WITNESS_ID and expected==ROOTED7_WITNESS_BINDING
+                       and binding['producer']=='/root/structural'
+                       and binding['verifier']=='/root/native_driver')
+         need(binding['producer']!=binding['verifier'] and
+-             (binding['verifier'] in {'/root/checkpoint_audit','/root/structural'} or witness_role or exact_wave37 or exact_v11 or exact_v12 or exact_v13 or exact_v15 or exact_v16 or exact_v17 or exact_v18),
++             (binding['verifier'] in {'/root/checkpoint_audit','/root/structural'} or witness_role or exact_wave37 or exact_v11 or exact_v12 or exact_v13 or exact_v15 or exact_v16 or exact_v17 or exact_v18 or exact_v19),
+              'separate checking identity for the exact recorded discovery')
+         if 'verification_records' in binding:
+             check=binding['verification_records'][0];report_path=check['audit_path'];report_sha=check['audit_sha256']
+@@ -1766,6 +1915,10 @@ def main():
+         if wave43_statement_mapping is not None:
+             need(editorial_statement_mapping is None, 'v18 disjoint exact written metadata adapter')
+             editorial_statement_mapping = wave43_statement_mapping
++        wave44_statement_mapping = v19_report(cid, report_sha, binding, report)
++        if wave44_statement_mapping is not None:
++            need(editorial_statement_mapping is None, 'v19 disjoint exact existing binding adapter')
++            editorial_statement_mapping = wave44_statement_mapping
+         need(report.get('verifier',binding['verifier'])==binding['verifier'],'report checking identity')
+         if cid in NONEDGE_BINDINGS:
+             need(expected==NONEDGE_BINDINGS[cid] and report_sha==NONEDGE_REPORT,
+@@ -1839,6 +1992,13 @@ def main():
+             projected_scope = v18_scope(cid, expected, binding)
+             binding = copy.deepcopy(binding)
+             binding['scope'] = projected_scope
++        if cid in V19_EXACT:
++            original_scope = copy.deepcopy(binding['scope'])
++            projected_scope = v19_scope(cid, expected, binding)
++            projected_dependencies = v19_dependencies(cid, expected, binding, data['claims'])
++            binding = copy.deepcopy(binding)
++            binding['scope'] = projected_scope
++            binding['dependencies'] = projected_dependencies
+         paths={path.relative_to(ROOT).as_posix():expected,report_path:report_sha}
+         paths.update(binding.get('inputs_sha256',{}))
+         for collection in ('artifacts','evidence'):

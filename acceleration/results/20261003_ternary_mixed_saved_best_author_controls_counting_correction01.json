@@ -1,0 +1,54 @@
+{
+  "schema": "TERNARY_MIXED_SAVED_BEST_AUTHOR_CONTROLS_PRESERVED_COUNTING_CORRECTION_V1",
+  "producer": "/root/native_driver",
+  "method": "metadata_scope_correction_from_literal_source_review",
+  "computational_invocations": 0,
+  "preserved_source": {
+    "path": "acceleration/calibrate_20261003_ternary_mixed_saved_best_v1.py",
+    "sha256": "a9dc7cf5f4849080a5c6713dc11ac7e8c917a3027568983d90d8d7db1079f077"
+  },
+  "preserved_spec": {
+    "path": "acceleration/calibrate_20261003_ternary_mixed_saved_best_v1_spec.md",
+    "sha256": "f5e9799e2f789055f62c79c281d9352c3e824d0195dbc7a3da3393b9bd80e595"
+  },
+  "preserved_summary": {
+    "path": "acceleration/results/20261003_ternary_mixed_saved_best_author_controls01/summary.json",
+    "sha256": "76683ab0fa8b7fd1d9eca8165e4a3a786323b706c88b37450c1011766ea97ccd"
+  },
+  "preserved_controls": {
+    "path": "acceleration/results/20261003_ternary_mixed_saved_best_author_controls01/controls.json",
+    "sha256": "7cbc19a2c3891d85abab22ed2387ea5e94c0711cccc3398ceaf5b0fa43dad109"
+  },
+  "preserved_terminal": {
+    "path": "acceleration/results/20261003_ternary_mixed_saved_best_author_controls_supervision01/summary.json",
+    "sha256": "651b68f88ca6976b5e7279d7ce98c543c070acc9c7d8d70e769f97b87db63e85"
+  },
+  "correction": {
+    "overclaimed_field": "positives[*].scalar_products=n*n",
+    "overclaimed_spec_text": "10026 matrix products",
+    "literal_loop": "for i in range(n): for j in range(i+1,n): sum(a[i][k]*a[j][k] for k in range(n))",
+    "actual_binary_matrix_entries": 10026,
+    "actual_unordered_pair_dot_products": 4953,
+    "actual_unordered_pair_scores": 4953,
+    "fixtures": [
+      {"name": "rook9", "n": 9, "binary_matrix_entries": 81, "unordered_pair_dot_products": 36},
+      {"name": "cube12", "n": 12, "binary_matrix_entries": 144, "unordered_pair_dot_products": 66},
+      {"name": "cyclic99_initializer", "n": 99, "binary_matrix_entries": 9801, "unordered_pair_dot_products": 4851}
+    ],
+    "symmetric_diagonal_scope": "The helper constructs a symmetric binary adjacency matrix with zero diagonal. Its scoring loop computes the i<j common-neighbor dot products only; it does not directly recompute all ordered or diagonal common-neighbor products.",
+    "required_future_full_input_scope": "The separate independent actual input checker must directly check all 9801 common-neighbor entries of the actual 99-vertex matrix. This author helper does not establish that full-product claim."
+  },
+  "unchanged": [
+    "All original V1 source/spec/result/receipt bytes remain preserved.",
+    "The literal projector, graph formatter and scoring algorithm are unchanged.",
+    "Three geometry positives, one synthetic report relation, three opaque-history equalities and 42 strict rejection outcomes remain the actual finite execution population."
+  ],
+  "limitations": [
+    "This annotation corrects the description and field interpretation; it is not a new control execution or independent source gate.",
+    "No actual research graph, saved report, projection or native process was read by these author controls.",
+    "ROOT identified the counting overclaim by literal source review. Future independent gates must bind this correction or state the actual narrower counting scope explicitly."
+  ],
+  "scientific_launched": false,
+  "target_resolution": "NONE",
+  "ledger_or_index_mutations": false
+}

@@ -1,0 +1,495 @@
+{
+  "status": "AUTHOR_LINUX_CLEANUP_V2_SYNTHETIC_CONTROLS_PASS",
+  "timestamp": "2026-10-03T09:55:06.879977+00:00",
+  "complete_synthetic_cases": 10,
+  "expected_unmet_cleanup_cases": 3,
+  "results": [
+    {
+      "label": "initial_empty",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        2
+      ],
+      "sleeps": [],
+      "simulated_elapsed_seconds": 0,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": true,
+        "actual_exit_code": -9,
+        "cleanup_errors": [],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.739242+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 2,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 1,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "zombie_only",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        2
+      ],
+      "sleeps": [],
+      "simulated_elapsed_seconds": 0,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": true,
+        "actual_exit_code": -9,
+        "cleanup_errors": [],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.748933+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 2,
+            "original_group": 4242,
+            "members": [
+              {
+                "pid": 5000,
+                "ppid": 1,
+                "pgid": 4242,
+                "session": 4242,
+                "state": "Z",
+                "start_ticks": 123
+              }
+            ],
+            "live_pids": [],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 1,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "live_then_empty",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        2
+      ],
+      "sleeps": [
+        0.02
+      ],
+      "simulated_elapsed_seconds": 0.02,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": true,
+        "actual_exit_code": -9,
+        "cleanup_errors": [],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.759602+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 2,
+            "original_group": 4242,
+            "members": [
+              {
+                "pid": 5000,
+                "ppid": 1,
+                "pgid": 4242,
+                "session": 4242,
+                "state": "D",
+                "start_ticks": 123
+              }
+            ],
+            "live_pids": [
+              5000
+            ],
+            "unreadable_pids": []
+          },
+          {
+            "timestamp": "2026-10-03T09:55:06.762023+00:00",
+            "elapsed_seconds": 0.02,
+            "remaining_seconds": 1.98,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 2,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "unreadable_then_empty",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        2
+      ],
+      "sleeps": [
+        0.02
+      ],
+      "simulated_elapsed_seconds": 0.02,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": true,
+        "actual_exit_code": -9,
+        "cleanup_errors": [],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.776128+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 2,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": [
+              5000
+            ]
+          },
+          {
+            "timestamp": "2026-10-03T09:55:06.778868+00:00",
+            "elapsed_seconds": 0.02,
+            "remaining_seconds": 1.98,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 2,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "bad_stat_then_empty",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        2
+      ],
+      "sleeps": [
+        0.02
+      ],
+      "simulated_elapsed_seconds": 0.02,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": true,
+        "actual_exit_code": -9,
+        "cleanup_errors": [],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.792637+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 2,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": [
+              5000
+            ]
+          },
+          {
+            "timestamp": "2026-10-03T09:55:06.795092+00:00",
+            "elapsed_seconds": 0.02,
+            "remaining_seconds": 1.98,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 2,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "persistent_live_budget",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        0.14
+      ],
+      "sleeps": [
+        0.02,
+        0.01999999999999999
+      ],
+      "simulated_elapsed_seconds": 0.04,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": false,
+        "actual_exit_code": -9,
+        "cleanup_errors": [
+          "Live Linux process-group members remain"
+        ],
+        "process_group_live_pids": [
+          5000
+        ],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.810916+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 0.14,
+            "original_group": 4242,
+            "members": [
+              {
+                "pid": 5000,
+                "ppid": 1,
+                "pgid": 4242,
+                "session": 4242,
+                "state": "D",
+                "start_ticks": 123
+              }
+            ],
+            "live_pids": [
+              5000
+            ],
+            "unreadable_pids": []
+          },
+          {
+            "timestamp": "2026-10-03T09:55:06.813530+00:00",
+            "elapsed_seconds": 0.02,
+            "remaining_seconds": 0.12,
+            "original_group": 4242,
+            "members": [
+              {
+                "pid": 5000,
+                "ppid": 1,
+                "pgid": 4242,
+                "session": 4242,
+                "state": "D",
+                "start_ticks": 123
+              }
+            ],
+            "live_pids": [
+              5000
+            ],
+            "unreadable_pids": []
+          },
+          {
+            "timestamp": "2026-10-03T09:55:06.821046+00:00",
+            "elapsed_seconds": 0.04,
+            "remaining_seconds": 0.1,
+            "original_group": 4242,
+            "members": [
+              {
+                "pid": 5000,
+                "ppid": 1,
+                "pgid": 4242,
+                "session": 4242,
+                "state": "D",
+                "start_ticks": 123
+              }
+            ],
+            "live_pids": [
+              5000
+            ],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 3,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "persistent_unknown_budget",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        0.14
+      ],
+      "sleeps": [
+        0.02,
+        0.01999999999999999
+      ],
+      "simulated_elapsed_seconds": 0.04,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": false,
+        "actual_exit_code": -9,
+        "cleanup_errors": [
+          "Linux process state unreadable at cleanup boundary"
+        ],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.835029+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 0.14,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": [
+              5000
+            ]
+          },
+          {
+            "timestamp": "2026-10-03T09:55:06.838299+00:00",
+            "elapsed_seconds": 0.02,
+            "remaining_seconds": 0.12,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": [
+              5000
+            ]
+          },
+          {
+            "timestamp": "2026-10-03T09:55:06.844610+00:00",
+            "elapsed_seconds": 0.04,
+            "remaining_seconds": 0.1,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": [
+              5000
+            ]
+          }
+        ],
+        "cleanup_observation_count": 3,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "leader_not_reaped",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        0.08
+      ],
+      "sleeps": [],
+      "simulated_elapsed_seconds": 0.08,
+      "actual": {
+        "reaped": false,
+        "job_active_zero_observed": true,
+        "actual_exit_code": null,
+        "cleanup_errors": [
+          "Timeout leader not reaped within invocation deadline"
+        ],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.855184+00:00",
+            "elapsed_seconds": 0.08,
+            "remaining_seconds": 0.0,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 1,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "leader_wait_clamped",
+      "kill_calls": [
+        [
+          4242,
+          9
+        ]
+      ],
+      "leader_wait_timeouts": [
+        0.08
+      ],
+      "sleeps": [],
+      "simulated_elapsed_seconds": 0,
+      "actual": {
+        "reaped": true,
+        "job_active_zero_observed": true,
+        "actual_exit_code": -9,
+        "cleanup_errors": [],
+        "process_group_live_pids": [],
+        "cleanup_observations": [
+          {
+            "timestamp": "2026-10-03T09:55:06.865976+00:00",
+            "elapsed_seconds": 0,
+            "remaining_seconds": 0.08,
+            "original_group": 4242,
+            "members": [],
+            "live_pids": [],
+            "unreadable_pids": []
+          }
+        ],
+        "cleanup_observation_count": 1,
+        "cleanup_poll_interval_seconds": 0.02,
+        "receipt_reserve_seconds": 0.1,
+        "cleanup_budget_scope": "Original invocation deadline; no retries, relaunch or extension"
+      }
+    },
+    {
+      "label": "windows_branch_ast_preserved",
+      "identical": true
+    }
+  ],
+  "elapsed_seconds": 0.18233460600000484,
+  "inputs_sha256": {
+    "acceleration/run_compute_command_v2.py": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/calibrate_20261003_linux_cleanup_poll_v1.py": "d02b1303afcf65bb5657d224663ba1336f8d74d1e92cc4a884110b23b060990f"
+  },
+  "fixtures_sha256": "ac25c0a896f6b30f756b8942ef1b1a6d4ca5636b03f48ab0cb91fbe0922b1b25",
+  "actual_proc_read": false,
+  "real_signal_calls": 0,
+  "native_calls": 0,
+  "scientific_launched": false,
+  "independent_approval": false,
+  "limitation": "Same-author mocked control path; no kernel or live containment guarantee. ROOT raw/source review required"
+}

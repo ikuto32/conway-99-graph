@@ -1,0 +1,68 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_WRITTEN_VERIFICATION_V1",
+  "status": "INDEPENDENT_EXTERIOR_TYPE_CROSS_CN_CAP_WRITTEN_PASS",
+  "claim_id": "C-LOCAL-CN-EXTERIOR-TYPE-CROSS-COMMON-NEIGHBOR-CAP",
+  "claim_revision": 1,
+  "statement": "For every finite simple graph G with adjacent common-neighbor count exactly1 and nonadjacent common-neighbor count exactly2, every induced H=G[S], every x outside S, and T=N_G(x) intersect S, every u in S satisfies |N_H(u) intersect T|<=1 if u belongs to T and <=2 otherwise.",
+  "producer": "/root",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "outcome": "PASS",
+  "target_resolution": "NONE",
+  "scope": {
+    "population": "Every finite simple graph with exact adjacentCN1/nonadjacentCN2, every induced support subset and every exterior vertex; all support vertices, no degree/order/regularity restriction.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Finite simple graph",
+    "Adjacent common-neighbor count exactly1",
+    "Nonadjacent common-neighbor count exactly2",
+    "H is the induced graph on S, x outside S and T=N_G(x) intersect S"
+  ],
+  "dependencies": [],
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_SEVENTEEN_POINT_EXTERNAL_NEIGHBOR_MOMENTS_V1.md": "70ef6392e86c6b9a3c9c6eac9b5d72abb9ea25741d3649282f66ac200bb93349",
+    "acceleration/audit_20261003_external_type_cross_cn_cap_native_v1.md": "9336f741cb8088d09924de2074f70c3232d059ea387fc3f7f914fb67a75c3793"
+  },
+  "proof": "acceleration/audit_20261003_external_type_cross_cn_cap_native_v1.md",
+  "proof_sha256": "9336f741cb8088d09924de2074f70c3232d059ea387fc3f7f914fb67a75c3793",
+  "verification_timestamp": "2026-10-03T18:12:06.5396137+00:00",
+  "completed_at": "2026-10-03T18:12:06.5396137+00:00",
+  "started_at": null,
+  "started_at_null_reason": "The original written derivation start was not instrumented; current timestamp records completion of this claim-bound report only.",
+  "command": null,
+  "command_null_reason": "Written independent derivation; file reading, small hashing and metadata serialization are not mathematical program executions.",
+  "controls": {
+    "written_theorem_proof": "Identity injection into the common-neighbor set of the distinct pair u,x; adjacency equivalent to u in T.",
+    "known_valid_written_rook_exterior_examples": 6,
+    "deliberate_bad_written_mathematical_examples": 2,
+    "mask44_old_eligibility_independently_derived": true,
+    "mask44_outside_u0_h": 3,
+    "executed_controls": 0,
+    "mathematical_program_executions": 0,
+    "enumerated_masks": 0,
+    "code_runs": 0,
+    "formal_proof": false
+  },
+  "shared_components": [
+    "ROOT proposed the cross-common-neighbor cap theorem and mask44 example; Native independently reconstructed the injection proof and literal fixtures.",
+    "Original Structural/ROOT fixed17 moment note is shared input for the separate finite example, not a premise restricting the universal theorem.",
+    "No discovery producer/checker executable or mathematical program imported or run for this written theorem audit."
+  ],
+  "limitations": [
+    "Necessary type inequalities only; retaining a type does not prove occurrence, compatibility, integer moment feasibility or graph completion.",
+    "No full534-mask enumeration or removed-type count; the original weaker relaxation is not refuted.",
+    "Known-valid rook fixtures and mask44 calculation are written literal examples, with no computational fixture gate.",
+    "No target existence/nonexistence, novelty, external review or formal verification claim."
+  ],
+  "formal_proof": false,
+  "external_review": null,
+  "external_review_null_reason": "No external review occurred.",
+  "novelty_claimed": false,
+  "source_commit": "d0c0dd7db0d3de420b1d718b59122b069df01107",
+  "source_commit_role": "Historical workspace context only; this new LOCAL_ONLY audit/report is not asserted to be present in that commit.",
+  "availability": "LOCAL_ONLY",
+  "registration_state": "Not registered; new exact ROOT-producer/Native-verifier ordinary adapter would require separate editorial review.",
+  "ledger_index_mutations": 0
+}

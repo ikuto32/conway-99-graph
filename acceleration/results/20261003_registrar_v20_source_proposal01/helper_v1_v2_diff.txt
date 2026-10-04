@@ -1,0 +1,30 @@
+diff --git a/acceleration/calibrate_20261003_registrar_v20_helpers_v1.py b/acceleration/calibrate_20261003_registrar_v20_helpers_v2.py
+index 4f23e88cf..39be58bc6 100644
+--- a/acceleration/calibrate_20261003_registrar_v20_helpers_v1.py
++++ b/acceleration/calibrate_20261003_registrar_v20_helpers_v2.py
+@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
+ OLD = 'acceleration/register_20261003_bound_claims_v18.py'
+ V19 = 'acceleration/register_20261003_bound_claims_v19.py'
+ NEW = 'acceleration/register_20261003_bound_claims_v20.py'
+-SPEC = 'acceleration/calibrate_20261003_registrar_v20_helpers_v1_spec.md'
++SPEC = 'acceleration/calibrate_20261003_registrar_v20_helpers_v2_spec.md'
+ REGISTRAR_SPEC = 'acceleration/register_20261003_bound_claims_v20_spec.md'
+ DESCRIPTOR = 'acceleration/proposal_20261003_registrar_v19_exact_existing_v1.json'
+ FINAL_DESCRIPTOR = 'acceleration/proposal_20261003_registrar_v20_two_final_v1.json'
+@@ -222,14 +222,14 @@ def main():
+    need(subject.v15_same((binding['dependencies'] if final else subject.v19_dependencies(cid,identity,binding,present)),(record['dependencies'] if final else record['schema_dependencies'])),'positive exact dependencies');positives.append(dict(label=cid+':dependencies',outcome='PASS'))
+    role=lambda b:role_fn(cid,identity,b)
+    reject(cid+':wrong_binding_hash',prefix+(' exact frozen final binding identity' if final else ' exact frozen binding identity'),lambda:role_fn(cid,'0'*64,binding))
+-   mutations=[('id','C-UNRELATED'),('revision',2),('claim_revision',True),('claim_revision',1.0),('status','CANDIDATE'),('review_state','NEEDS_RECHECK'),('producer',binding['verifier']),('verifier','/root'),('method','UNKNOWN'),('kind','exclusion'),('basis',[]),('scope',{}),('dependencies',[dict(id='C-UNRELATED')]),('statement','Broader.'),('report','fake.json'),('report_sha256','0'*64),('verification_timestamp','2000-01-01T00:00:00+00:00'),('availability','PUBLIC')]
++   mutations=[('id','C-UNRELATED'),('revision',2),('claim_revision',True),('claim_revision',1.0),('status','CANDIDATE'),('review_state','NEEDS_RECHECK'),('producer',binding['verifier']),('verifier','/root/checkpoint_audit' if binding['verifier']=='/root' else '/root'),('method','UNKNOWN'),('kind','exclusion'),('basis',[]),('scope',{}),('dependencies',[dict(id='C-UNRELATED')]),('statement','Broader.'),('report','fake.json'),('report_sha256','0'*64),('verification_timestamp','2000-01-01T00:00:00+00:00'),('availability','PUBLIC')]
+    for n,(key,value) in enumerate(mutations):reject(cid+':binding_'+key+':'+str(n),nonmap_binding_stage,lambda key=key,value=value:role(changed(binding,key,value)))
+    extra=changed(binding,'unexpected',True);missing=copy.deepcopy(binding);del missing['scope']
+    for label,bad in [('extra_binding_field',extra),('missing_binding_scope',missing)]:reject(cid+':'+label,nonmap_binding_stage,lambda bad=bad:role(bad))
+    reject(cid+':binding_map',prefix+(' complete literal final binding including input map' if final else ' complete literal binding including input map'),lambda:role(changed(binding,'inputs_sha256',{})))
+    rep=lambda r:report_fn(cid,report_sha,binding,r)
+    reject(cid+':wrong_report_hash',prefix+(' exact final claim-bound report identity' if final else ' exact claim-bound report identity'),lambda:report_fn(cid,'0'*64,binding,report))
+-   rm=[('status','UNKNOWN'),('claim_id','C-UNRELATED'),('claim_revision',True),('claim_revision',1.0),('statement','Broader.'),('scope',{}),('producer',binding['verifier']),('verifier','/root'),('method','UNKNOWN'),('target_resolution','POSITIVE'),(record['report_timestamp_field'],'2000-01-01T00:00:00+00:00')]
++   rm=[('status','UNKNOWN'),('claim_id','C-UNRELATED'),('claim_revision',True),('claim_revision',1.0),('statement','Broader.'),('scope',{}),('producer',binding['verifier']),('verifier','/root/checkpoint_audit' if binding['verifier']=='/root' else '/root'),('method','UNKNOWN'),('target_resolution','POSITIVE'),(record['report_timestamp_field'],'2000-01-01T00:00:00+00:00')]
+    for n,(key,value) in enumerate(rm):reject(cid+':report_'+key+':'+str(n),nonmap_report_stage,lambda key=key,value=value:rep(changed(report,key,value)))
+    missing=copy.deepcopy(report);del missing['statement'];reject(cid+':missing_report_statement',nonmap_report_stage,lambda:rep(missing))
+    reject(cid+':report_map',prefix+(' complete literal final report including input map' if final else ' complete literal report including input map'),lambda:rep(changed(report,'inputs_sha256',{})))
