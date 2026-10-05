@@ -1,0 +1,100 @@
+{
+  "schema": "ROOT_EXACT_R226_WRITTEN_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T22:17:27.5918386+00:00",
+  "reviewer": "/root",
+  "result": "PASS_INDEPENDENT_WRITTEN_SCOPE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-NO-TWO-D3-BOUNDARY",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle. Suppose R=226 and every d_T belongs to {0,1,2,3}. Then the number of actual triangles with deficiency three is not two.",
+  "independent_verifier": "/root/native_driver",
+  "producer": "/root/structural",
+  "independent_verification_timestamp": "2026-10-04T22:10:35.7016506+00:00",
+  "scope": {
+    "description": "Exact five-r1-result finite composition: under actual R226 and literal maximum deficiency3, c2 forces b2..6, intersection is excluded using corrected whole V2, and all five disjoint integer values are excluded. Only c!=2, with no maxd3/population-upper1 or R226 inference.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-D2-BOUNDARIES",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-B2-NO-INTERSECTION",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-TWO-D2-BOUNDARY",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-THREE-D2-BOUNDARY",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-FOUR-THROUGH-SIX-D2-BOUNDARY",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=226 counts actual induced rook-nine vertex sets once",
+    "d_T=6-r_T belongs to {0,1,2,3} for every actual triangle"
+  ],
+  "fresh_inputs_sha256": {
+    "acceleration/results/20261004_independent_review/target_rook_count226_maxd3_no_two_d3_native01/summary.json": "b5ab383eec1ac827dbb2e9e0c2e56f7945a9b1d4c0d17c43bb96e7afc087d632",
+    "acceleration/results/20261004_independent_review/target_rook_count226_maxd3_no_two_d3_native01/claim_binding_schema2.json": "bdaeef9dc72d52ef380b7591a4d8918aa844991d5459026714e2f9a6c6798407",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_NO_TWO_D3_BOUNDARY_V1.md": "f52390265082a0afaa18f5a0d3f6c787c6d4a422552754284dcb05f610e9e0e4",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_D2_BOUNDARIES_V1.md": "5f61d9abceed621ab6cd5b011fb1056eae89f0ce1b64451917de914097334ba4",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_d2_boundaries_candidate01.json": "da07f67deb74fd8f7c89d0f869b84c0a686460563c24e6b10e0670fe4c590b1a",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_B2_NO_INTERSECTION_V2.md": "deea56556dd520bffffbf484e6b2efef5469e5eb092567ac2d6d974661412279",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_b2_no_intersection_candidate02.json": "9eba53d256a1b19b84ac685c2304e6de473ebe8307e19528c71475f187136a77",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_TWO_D2_BOUNDARY_V1.md": "c2dcb60409b9ad42e4baaf1aad0e42ab3b04e887fdc212ecb0863ad993b74069",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_no_two_d2_boundary_candidate01.json": "547d64b978304c37c6a8f5feb2ee70978a4cb2108cf58f6dcbb6f6f660138d2f",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_THREE_D2_BOUNDARY_V1.md": "504d0387a68375519cd3b6415dc974a76dc83d19791d88657bf2c9edf42c1420",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_no_three_d2_boundary_candidate01.json": "2d36c30a63fd54c2b22d5b43edbb523757013e1479e94a0eb136dfc57f959ae1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_FOUR_THROUGH_SIX_D2_V1.md": "b1431c80962d0a8b65dd12d9fdf5f2a2ad057261954d38757b735cff48b5861d",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_no_four_through_six_d2_candidate01.json": "da7620d4e2d7f1eaf028accb60335fead8cfc7dfd8982e53706ae63f7c6b4b4c",
+    "acceleration/results/20261004_target_rook_count226_two_d3_b2_external_opposite_native_veto01.json": "a3144351d3de865e04d5635c4fb2844ebb0496b3a023dc0134ac3a5cb33e81c0",
+    "acceleration/results/20261004_target_rook_count226_maxd3_no_two_d3_boundary_candidate01.json": "6414738f3f3e84df3db4b4ac742f81c92ae80add4d47d3828d895a0680d96600",
+    "acceleration/audit_20261004_target_rook_count226_maxd3_no_two_d3_native_v1.md": "f22b7232a232eddc799a122a3b30d853c0c9e4aaae0887391322772bba95767d",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_d2_boundaries_native01/claim_binding_schema2.json": "d767323b5705fbe8fad0fe2338fb735d657c703c5d9a1a4d4a1c13b4f6bbece1",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_d2_boundaries_native01/summary.json": "51d437bcf9663c6aad38162340a90e4ea8e39a9d1cec9ab5fdb55fe074c01b99",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_b2_intersection_v2_native01/claim_binding_schema2.json": "be324309067a5f5079e4249d04af4d7d4eef5f5a7ed4f296bcd6eb44af70a8dd",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_b2_intersection_v2_native01/summary.json": "76049708e919950a7431fa92fede93022a6e76d9c0c1718c62c8e7172163679c",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_no_two_d2_native01/claim_binding_schema2.json": "add356675aaaeaa0e36cea76138bc07e13ca385a83434208b7ec3f8328863be8",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_no_two_d2_native01/summary.json": "e43351146a59f680529a95c6d82429cce6c618d073a5bacbd42ab46cd3a9cb6d",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_no_three_d2_native01/claim_binding_schema2.json": "a83dc482d1839a565f2e3c8bfe1c5a6d53f3a6ae840eb4815189d69063224949",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_no_three_d2_native01/summary.json": "5bead23a957d102a4267c08c56819a7efe850eb9550af2cc8e4163076c638bf4",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_no_four_through_six_d2_native01/claim_binding_schema2.json": "618b63333a502eb12cf5cd3d1153a44721f64c3a1f38bedfa35dc597099e37fa",
+    "acceleration/results/20261004_independent_review/target_rook_count226_two_d3_no_four_through_six_d2_native01/summary.json": "11c1c8ae3865631588037f8acf3e1b5e3832ae1867bd5a1c42d819801094d574"
+  },
+  "fresh_small_identities": 27,
+  "written_checks": [
+    "Root whole f523 composition and Native writtenaudit read. Literal R226/maxd3 =>D3population not2, exactlyfive ordered uses_result r1 dependencies, no inferredmax3/c<=1/R226 conclusion.",
+    "Necessary b2..6; intersecting roots forceb2 beforecorrectedV2 disjointnessapplies. Withproveddisjointness everyb2/3/4/5/6 matches the exact remainingthreeexclusions.",
+    "GenuineV2 deea/9eba with164 and independent760497 used, rejectedV1 omitted HIGH argument nevergate. Fullfive report/binding premise pairs freshlybound.",
+    "Thirty-four written checks/five integer coverage rows, zeroexecuted/formal/external. Differentwholeimplication, no gatebyagreement."
+  ],
+  "shared_components": [
+    "Structural produced the whole candidate from disclosed Structural/Root outlines.",
+    "Native independently reconstructed the whole exact implication or actual geometric argument, including all hypothesis transfers and relevant opposite pools. Shared agreement is not verification or independent discovery.",
+    "Earlier fan/Gram/cycle mechanisms overlap. Genuine five Native written premises are explicitly inherited only for the composition; the single-D3 theorem has empty logical dependencies."
+  ],
+  "current_ledger_sha256": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1",
+  "source_commit": "155a99539b86206520d8b8cc0f002d66cdc1b3e1",
+  "registration": "Pending later milestone; mathematical467 candidate remains uninstalled/current457 fixed, Wave47 cutoff excludes R226.",
+  "mathematical_programs": 0,
+  "formal_reviews": 0,
+  "external_reviews": 0,
+  "ledger_Git_PUBLIC_mutations": 0,
+  "target_resolution": "UNKNOWN",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "elapsed_seconds": 0.242956
+}
