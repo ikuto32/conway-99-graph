@@ -1,0 +1,30 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:49:43Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-B2-NO-INTERSECTION",
+  "claim_revision":1,
+  "proof_source_version":2,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle. Suppose R=226, every d_T belongs to {0,1,2,3}, exactly two actual triangles have deficiency three, and exactly two have deficiency two. Then the two deficiency-three triangles are disjoint.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle","exactly two actual triangles have deficiency three","exactly two actual triangles have deficiency two"],
+  "scope":{"description":"Conditional rejection of the valid but collapsed common-point graph in the c2/b2 R226/maxd3 lane.","unrestricted_target":true,"disjoint_c2_b2_excluded":false,"two_D3_lane_excluded":false,"count226_excluded":false,"maximum_deficiency3_inferred":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_B2_NO_INTERSECTION_V2.md","sha256":"deea56556dd520bffffbf484e6b2efef5469e5eb092567ac2d6d974661412279"},
+  "preserved_original_candidate":{"path":"acceleration/results/20261004_target_rook_count226_maxd3_two_d3_b2_no_intersection_candidate01.json","sha256":"f1e74751281adfd10e87358e102fbfc05067cc416103751aa31bf36fe7188b36","status":"CANDIDATE","proof_bound_vetoed":true,"theorem_REFUTED":false},
+  "genuine_independent_proof_veto":{"path":"acceleration/results/20261004_target_rook_count226_two_d3_b2_external_opposite_native_veto01.json","sha256":"a3144351d3de865e04d5635c4fb2844ebb0496b3a023dc0134ac3a5cb33e81c0","reviewer":"/root/native_driver","timestamp":"2026-10-04T21:47:58.6826968+00:00"},
+  "inputs_sha256":{
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_B2_NO_INTERSECTION_V2.md":"deea56556dd520bffffbf484e6b2efef5469e5eb092567ac2d6d974661412279",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_B2_NO_INTERSECTION_V1.md":"988a38515ef867625dd937df6bc475979b3da53b5fa1310a0cb6d13e08d87d50",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_b2_no_intersection_candidate01.json":"f1e74751281adfd10e87358e102fbfc05067cc416103751aa31bf36fe7188b36",
+    "acceleration/results/20261004_target_rook_count226_two_d3_b2_external_opposite_native_veto01.json":"a3144351d3de865e04d5635c4fb2844ebb0496b3a023dc0134ac3a5cb33e81c0",
+    "acceleration/audit_20261004_target_rook_count226_two_d3_b2_external_opposite_veto_native_v1.md":"40f3156ca013d8d68485ba84ff053553190046eba1eb666c6614bf77772b58e2"
+  },
+  "source_correction":{"original_D2_bounds":[12,12],"original_total":162,"omitted_external_highs":["D external to N(C), common A/B","C external to N(D), common A/B"],"each_external_high_contribution":1,"corrected_D2_bounds":[13,13],"corrected_total":164,"D3_bounds_unchanged":[19,19],"actual_square_injection_lower":180,"literal_statement_revision_scope_unchanged":true,"old_gate_transferred":false},
+  "exact_cycle_bounds":{"positive_low_roots":20,"local_high_graph":"K4 minus the d2-d2 edge","low_high_neighbors_maximum":1,"D3_internal_collapsed_contribution_each":1,"D2_external_high_collapsed_contribution_each":1,"low_total_incidence_bound":100,"complete_incidence_upper_bound":164},
+  "pending_gates_at_preparation":{"V2_whole_written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Structural_original_proof_authorship":true,"Native_independent_omitted_high_discovery":true,"Root_and_Structural_acknowledgment_not_verification":true,"fresh_whole_V2_gate_required":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["V1's no-omitted-high assertion and12/12/162 bounds are rejected, without refuting its literal proposed theorem.","Each of one collapsed cycle's four root incidences is counted once, internally at A/B and externally at C/D.","The V2 scalar repair is not self-verification and requires a fresh different-author whole written gate.","The disjoint c2/b2 case, R226 and target are not excluded by this statement."]
+}

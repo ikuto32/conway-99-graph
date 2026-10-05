@@ -1,0 +1,21 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T22:11:38Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD2-D2-POPULATION-UPPER10",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle T. Suppose R=226 and every d_T belongs to {0,1,2}. If b counts actual deficiency-two triangles, then b<=10.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2} for every actual triangle"],
+  "scope":{"description":"Exact necessary upper10 condition on the d2 population at R226 with literal maximum deficiency2.","unrestricted_target":true,"maximum_deficiency2_inferred":false,"maxd2_lane_excluded":false,"count226_excluded":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD2_D2_POPULATION_UPPER10_V1.md","sha256":"8752bc4a1a8452234f6dcc18e9bd633f8f519f73d58104925c72d35ea21787d2"},
+  "inputs_sha256":{"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD2_D2_POPULATION_UPPER10_V1.md":"8752bc4a1a8452234f6dcc18e9bd633f8f519f73d58104925c72d35ea21787d2"},
+  "exact_hand_coverage":{"b_domain_before_bound":"integers0..15","excluded_b_values":[11,12,13,14,15],"selected_fourfold_incidence_boundary":"s>=3r; s6/8 and even r forbid r>=4","b11_selected_size":8,"b11_selected_support_size":12,"b11_positive_population":19,"b11_D2_at_selected_support_required_fan":21,"b11_remaining_D2_two_step_left":30,"b11_remaining_D2_two_step_upper":18,"b12_selected_size":6,"b12_selected_rook_size":9,"b12_bridge_incidence_minimum":9,"b12_outside_D2_capacity_identity":"3b-t>=6t","b12_3b":36,"b12_7t_minimum":63,"b13_b14_even_selection_Gram_base":-2,"b15_D2_support_size":15,"b15_known_internal_edges":45,"b15_Gram_upper_bound":-20},
+  "actual_local_boundaries":["The six/eight selected multiplicity4 boundary is explicitly counted and rejected, not assumed absent.","Every cubic-eight edge lies in a square by a hand two-four-cycle argument, without graph enumeration.","Even-XOR rook overlap and any-two-triangle rook uniqueness are rederived for the current scope; no R227 gate transfer occurs.","The b12 outside-neighbor equation follows from the full target upper Gram, then actual bridge outer labels must be distinct.","The zero-selected-size b15 branch is treated separately and extra support edges only strengthen its inequality."],
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Structural_bridge_capacity_and_eleven_node_two_step_derivation":true,"Root_selected_multiplicity_boundary_challenge":true,"earlier_R227_cubic_eight_even_six_uniqueness_overlap_disclosed":true,"no_pending_or_old_gate_used":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["No remaining b<=10 population is asserted realizable or excluded.","No whole maxd2, R226 or target exclusion is claimed.","No automorphism, equitable partition, induced positive support or assumed nonconstant codeword is used.","A different exact whole written gate is required before VERIFIED or ledger use."]
+}

@@ -1,0 +1,25 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T22:40:57Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-NO-SEVEN-D2-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle T. Suppose R=226, every d_T belongs to {0,1,2,3}, and exactly one actual triangle has deficiency three. The number b of actual deficiency-two triangles is not seven.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle","exactly one actual triangle has deficiency three"],
+  "scope":{"description":"Exact no-b7 implication from the separately frozen one-d3/seven-d2 profile r1.","unrestricted_target":true,"single_D3_lane_excluded":false,"maximum_deficiency3_inferred":false,"count226_excluded":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[{"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SEVEN-D2-PROFILE","revision":1,"relation":"uses_result"}],
+  "dependency_evidence":[{"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SEVEN-D2-PROFILE","revision":1,"paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SEVEN_D2_PROFILE_V1.md","sha256":"b98e0a6438880c9d7bb60fd37ee250650b954477050b17237e83a40951997d09"},"candidate":{"path":"acceleration/results/20261004_target_rook_count226_maxd3_single_d3_seven_d2_profile_candidate01.json","sha256":"1f7c67e9f3a5cf3d6a084bfa6f2ef2a17636af023b80157c792240d770ed4ebb"},"written_report":null,"binding":null,"Root_acceptance":null,"old_pending_bytes_changed":false}],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_NO_SEVEN_D2_V1.md","sha256":"8f4327d1cc0f1c122e361743fdfa17d3bc7764536d871d2e683bf52e11518c96"},
+  "inputs_sha256":{
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_NO_SEVEN_D2_V1.md":"8f4327d1cc0f1c122e361743fdfa17d3bc7764536d871d2e683bf52e11518c96",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SEVEN_D2_PROFILE_V1.md":"b98e0a6438880c9d7bb60fd37ee250650b954477050b17237e83a40951997d09",
+    "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_seven_d2_profile_candidate01.json":"1f7c67e9f3a5cf3d6a084bfa6f2ef2a17636af023b80157c792240d770ed4ebb"
+  },
+  "exact_hand_coverage":{"attached_d2_roots":2,"distinct_outer_points_outside_selected_support":4,"required_d2_partners_at_each_outer_point":2,"unattached_root_outer_point_capacity":1,"required_distinct_unattached_d2_roots":8,"available_unattached_d2_roots":5,"both_H_options_covered":[0,1]},
+  "pending_gates_at_preparation":{"new_implication_written_report":null,"new_implication_binding":null,"new_implication_Root_acceptance":null},
+  "shared_origin":{"Root_two_root_fan_injection_discovery":true,"Structural_independent_partner_type_and_label_challenge":true,"profile_and_implication_approval_separate":true,"predecessor_candidate_automatically_promoted":false},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_parses":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["The profile's all-four-outer-points-outside conclusion is essential; the count is not applied to other local profiles.","Exactly one revision1 uses_result is inherited; new profile and implication written gates are separately required.","No whole single-D3, R226 or target exclusion is claimed.","No uniform exterior profile, automorphism, target construction or scientific execution is assumed."]
+}

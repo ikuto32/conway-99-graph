@@ -1,0 +1,32 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:22:56Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-NO-THREE-D3-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle. Suppose R=226 and every d_T belongs to {0,1,2,3}. Then the number of actual triangles with deficiency three is not three.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle"],
+  "scope":{"description":"Conditional exclusion of exactly three deficiency-three triangles at R226/maxd3.","unrestricted_target":true,"maximum_deficiency3_inferred":false,"D3_population_upper2_inferred":false,"count226_excluded":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_NO_THREE_D3_BOUNDARY_V1.md","sha256":"27686ffa7e5d775bdef8bf24ad33a40c18a21c656f88dd2777debc6c7d4be5f8"},
+  "inputs_sha256":{"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_NO_THREE_D3_BOUNDARY_V1.md":"27686ffa7e5d775bdef8bf24ad33a40c18a21c656f88dd2777debc6c7d4be5f8"},
+  "exact_case_coverage":{
+    "integer_b_domain":[0,1,2,3,4,5,6,7,8,9,10],
+    "D3_roots_pairwise_disjoint":true,
+    "selected_family":"O=D1 union D3, s=24-2b, all point incidences even",
+    "exact_weighted_identity":"q=s(s-6)/4-5K-2ell-2H",
+    "b0":{"K_minimum":18,"ell_minimum":15,"q_upper_bound":-12},
+    "b1":{"bad_points_maximum":0,"K_minimum":18,"q_upper_bound":-2},
+    "b2":{"bad_points_maximum":1,"K_minimum":16,"q_upper_bound":-10},
+    "b3":{"bad_points_maximum":3,"K_minimum":12,"q_upper_bound":-6},
+    "b4":{"bad_points_minimum":3,"bad_points_maximum":6,"K_minimum":6,"internal_even_root_edge_weight_minimum":6,"q_upper_bound":-2},
+    "b5_through10":{"bad_points":0,"necessary_a_minimum":18,"actual_a_maximum":11}
+  },
+  "preserved_outline_boundaries":["Selected incidences need not all be two or four; larger values are retained and strengthen K.","The b0 tentative equality route is replaced by the strict actual selected-edge lower bound ell>=15.","A four-D2 outside point is excluded by the independently forced bad-point count, not an assumed absence."],
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Root_even_selected_family_case_outline":true,"Structural_independent_weighted_identity_and_point_coverage_challenge":true,"Structural_strict_b0_ell_refinement":true,"earlier_fan_matching_Gram_overlap_disclosed":true,"no_pending_R226_or_R227_gate_used":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["This statement does not supply the separate c<=3 theorem or the separate maxd3 conclusion.","No incidence equitability, automorphism, selected inducedness, positivity of unknown edges or forced nonconstant codeword is assumed.","The exact new full proof requires a different written gate; Root discovery agreement is not verification.","No R226 or target exclusion is claimed."]
+}

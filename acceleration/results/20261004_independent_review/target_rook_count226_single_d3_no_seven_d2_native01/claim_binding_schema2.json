@@ -1,0 +1,209 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "schema_version": 2,
+  "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-NO-SEVEN-D2-BOUNDARY",
+  "revision": 1,
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical_result",
+  "basis": [
+    "DERIVED"
+  ],
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle T. Suppose R=226, every d_T belongs to {0,1,2,3}, and exactly one actual triangle has deficiency three. The number b of actual deficiency-two triangles is not seven.",
+  "verification_timestamp": "2026-10-04T22:45:34.5783846Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T22:48:25.0392104+00:00",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "scope": {
+    "description": "Exact b7 exclusion only under actual R226, literal maxd3 and exactly one d3 triangle. Sole exact seven-d2 profile r1 gives two attached roots and four distinct outer points outside every selected d1/T root. Independently derived local degree-two partner types and actual whole-fan root injection require eight distinct unattached d2 roots versus five. Both optional42/43-edge predecessor profiles are covered; no whole one-d3/R226 exclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_candidate_scope": {
+    "description": "Exact no-b7 implication from the separately frozen one-d3/seven-d2 profile r1.",
+    "unrestricted_target": true,
+    "single_D3_lane_excluded": false,
+    "maximum_deficiency3_inferred": false,
+    "count226_excluded": false,
+    "graph_construction": false,
+    "target_resolution": "NONE",
+    "scientific_coverage": "UNKNOWN"
+  },
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=226 counts actual induced rook-nine vertex sets once",
+    "d_T=6-r_T belongs to {0,1,2,3} for every actual triangle",
+    "exactly one actual triangle has deficiency three"
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SEVEN-D2-PROFILE",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SEVEN-D2-PROFILE",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_dependency_evidence": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SEVEN-D2-PROFILE",
+      "revision": 1,
+      "paper": {
+        "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SEVEN_D2_PROFILE_V1.md",
+        "sha256": "b98e0a6438880c9d7bb60fd37ee250650b954477050b17237e83a40951997d09"
+      },
+      "candidate": {
+        "path": "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_seven_d2_profile_candidate01.json",
+        "sha256": "1f7c67e9f3a5cf3d6a084bfa6f2ef2a17636af023b80157c792240d770ed4ebb"
+      },
+      "written_report": null,
+      "binding": null,
+      "Root_acceptance": null,
+      "old_pending_bytes_changed": false
+    }
+  ],
+  "dependency_evidence": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SEVEN-D2-PROFILE",
+      "revision": 1,
+      "relation": "uses_result",
+      "report": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_seven_d2_profile_native01/summary.json",
+        "sha256": "e5890cba825228a77e240312810b9d16fa4e2bf4852a557d29c076db6b0bc940"
+      },
+      "binding": {
+        "path": "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_seven_d2_profile_native01/claim_binding_schema2.json",
+        "sha256": "bca709b2cb4e82c6920a2bf8f1a887fc0a1bbebb1dcd74daba79d093b0d36184"
+      },
+      "Root_acceptance": {
+        "path": "acceleration/results/20261004_target_rook_count226_single_d3_seven_d2_profile_root_written_acceptance01.json",
+        "sha256": "d205853c605fb6c55fbbc190de729bfd36fba4875eadd04d7d2c9f8790c3bbb3"
+      },
+      "used_result": "Under exactly the b7 contradiction hypotheses, two attached d2 roots meet at the bad point and their four distinct actual outer points are outside all selected d1/T support.",
+      "producer": "/root/structural",
+      "verifier": "/root/native_driver",
+      "method": "independent_derivation",
+      "verification_timestamp": "2026-10-04T22:37:53.9644142Z",
+      "Root_acceptance_timestamp": "2026-10-04T22:45:08.5654333+00:00",
+      "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T. Suppose R=226, every d_T belongs to {0,1,2,3}, exactly one actual triangle T has deficiency three, and exactly seven actual triangles have deficiency two. Then T has two points each incident to exactly three d1 and no d2 triangles, and one point incident to exactly one d1 and two d2 triangles. The even selected family O=D1 union {T} consists of fourteen actual triangles, supported on nineteen actual points: the first two T points each have selected incidence four, and all seventeen other support points have selected incidence two. The induced support has exactly42 or43 edges, consisting of the42 selected triangle edges and at most one further edge. Any further edge joins ordinary points and avoids the third T point. The two d2 triangles through that third T point have four distinct outer points, all outside the selected support.",
+      "scope": {
+        "description": "Exact necessary profile only at actual R226 with literal maxd3, one d3 and seven d2 triangles: fourteen selected roots on nineteen actual points, exactly two peaks of incidence four, remaining seventeen points incidence two, exactly42/43 actual support edges with any extra edge ordinary and avoiding the bad T point, and four distinct attached outer points outside support. Surviving profile is neither constructed nor excluded.",
+        "unrestricted_target": true,
+        "target_resolution": "NONE"
+      },
+      "new_mathematical_replay": false
+    }
+  ],
+  "original_pending_gates_at_preparation": {
+    "new_implication_written_report": null,
+    "new_implication_binding": null,
+    "new_implication_Root_acceptance": null
+  },
+  "controls": {
+    "written_proof_checks": 15,
+    "written_failure_boundary_challenges": 10,
+    "written": 25,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_no_seven_d2_candidate01.json",
+    "sha256": "05e12eaacdb9b83bb57c80a853ec088db7c95561805be954e7ef7ccd9b7431be",
+    "original_timestamp": "2026-10-04T22:40:57Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count226_single_d3_no_seven_d2_native_v1.md",
+    "sha256": "63ff7f7f450d4b8dcc761d39037dd5760a3fffa44619aef8c36bdbeaebef293c"
+  },
+  "shared_components": [
+    "Root discovered the whole two-root fan injection; Structural produced and challenged the complete frozen implication, as preserved in original_shared_origin.",
+    "Native independently reconstructed the local covered-pair degree interpretation, every partner type and same/cross-root label-reuse contradiction. Shared agreement is not verification or independent discovery.",
+    "The separately verified exact r1 necessary profile is an explicit premise, retaining its own authentic time and Root receipt. It does not automatically approve this new implication."
+  ],
+  "original_shared_origin": {
+    "Root_two_root_fan_injection_discovery": true,
+    "Structural_independent_partner_type_and_label_challenge": true,
+    "profile_and_implication_approval_separate": true,
+    "predecessor_candidate_automatically_promoted": false
+  },
+  "root_exact_new_statement_acceptance": null,
+  "maximum_deficiency3_inferred": false,
+  "single_D3_lane_excluded": false,
+  "count226_excluded": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "availability": "LOCAL_ONLY",
+  "ledger_current_presence_asserted": false,
+  "publication_cutoff_inclusion": false,
+  "limits": [
+    "Only b!=7 under literal R226/maxd3/one-d3 is verified. Neither the whole one-d3 lane nor R226 or the target is excluded.",
+    "Exactly one revision1 uses_result profile premise is used; no previous b8, c1 range or pending lane composition is smuggled in.",
+    "All four outer points outside selected support is essential. Without it d1 partners could occur and the d2-only count would not follow.",
+    "Actual whole-fan injection forbids one external triangle meeting two outer points on either root or one on each; a weaker pair-only budget is not sufficient.",
+    "Covered intersections, zero-degree roots and optional extra support edges are retained and handled explicitly. No uniformity, selected inducedness or automorphism is assumed.",
+    "Original candidate dependency/Root nulls, historical bytes and times remain. New completed implication verification differs from earlier profile verification and later metadata creation.",
+    "Written only: no mathematical program/import/AST/backend/worker/enumeration/solver/formal/external checking or ledger/Git/index/protected/publication mutation.",
+    "Root-reported live467 is context only; new Root exact acceptance and registration remain separate."
+  ],
+  "metadata_operations": {
+    "workers": 0,
+    "source_imports": 0,
+    "enumerations": 0,
+    "ledger_parsed": false,
+    "protected_state_mutations": 0,
+    "historical_bytes_changed": false
+  },
+  "exact_hand_coverage": {
+    "attached_d2_roots": 2,
+    "distinct_outer_points_outside_selected_support": 4,
+    "required_d2_partners_at_each_outer_point": 2,
+    "unattached_root_outer_point_capacity": 1,
+    "required_distinct_unattached_d2_roots": 8,
+    "available_unattached_d2_roots": 5,
+    "both_H_options_covered": [
+      0,
+      1
+    ]
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_NO_SEVEN_D2_V1.md": "8f4327d1cc0f1c122e361743fdfa17d3bc7764536d871d2e683bf52e11518c96",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SEVEN_D2_PROFILE_V1.md": "b98e0a6438880c9d7bb60fd37ee250650b954477050b17237e83a40951997d09",
+    "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_seven_d2_profile_candidate01.json": "1f7c67e9f3a5cf3d6a084bfa6f2ef2a17636af023b80157c792240d770ed4ebb",
+    "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_no_seven_d2_candidate01.json": "05e12eaacdb9b83bb57c80a853ec088db7c95561805be954e7ef7ccd9b7431be",
+    "acceleration/audit_20261004_target_rook_count226_single_d3_no_seven_d2_native_v1.md": "63ff7f7f450d4b8dcc761d39037dd5760a3fffa44619aef8c36bdbeaebef293c",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_seven_d2_profile_native01/summary.json": "e5890cba825228a77e240312810b9d16fa4e2bf4852a557d29c076db6b0bc940",
+    "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_seven_d2_profile_native01/claim_binding_schema2.json": "bca709b2cb4e82c6920a2bf8f1a887fc0a1bbebb1dcd74daba79d093b0d36184",
+    "acceleration/results/20261004_target_rook_count226_single_d3_seven_d2_profile_root_written_acceptance01.json": "d205853c605fb6c55fbbc190de729bfd36fba4875eadd04d7d2c9f8790c3bbb3",
+    "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_no_seven_d2_native01/summary.json": "0d66505f9d3618fe625b1207018df562e1856c81d8dbeb6e97684d49be9ca417"
+  },
+  "input_map_count": 10,
+  "report": {
+    "path": "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_no_seven_d2_native01/summary.json",
+    "sha256": "0d66505f9d3618fe625b1207018df562e1856c81d8dbeb6e97684d49be9ca417",
+    "original_report_status": "INDEPENDENT_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_NO_SEVEN_D2_WRITTEN_PASS",
+    "original_report_statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle T. Suppose R=226, every d_T belongs to {0,1,2,3}, and exactly one actual triangle has deficiency three. The number b of actual deficiency-two triangles is not seven.",
+    "original_report_scope": {
+      "description": "Exact b7 exclusion only under actual R226, literal maxd3 and exactly one d3 triangle. Sole exact seven-d2 profile r1 gives two attached roots and four distinct outer points outside every selected d1/T root. Independently derived local degree-two partner types and actual whole-fan root injection require eight distinct unattached d2 roots versus five. Both optional42/43-edge predecessor profiles are covered; no whole one-d3/R226 exclusion.",
+      "unrestricted_target": true,
+      "target_resolution": "NONE"
+    }
+  },
+  "registration_authorized": false,
+  "created_at": "2026-10-04T22:48:25.0392104+00:00",
+  "updated_at": "2026-10-04T22:48:25.0392104+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:39:44Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-THREE-D2-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T. Suppose R=226, every d_T is in {0,1,2,3}, exactly two actual triangles have deficiency three, those two triangles are disjoint, and b counts deficiency-two triangles. Then b is not three.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle","exactly two actual d3 triangles, pairwise disjoint"],
+  "scope":{"description":"Conditional exclusion of disjoint c2/b3 at R226/maxd3.","unrestricted_target":true,"two_D3_lane_excluded":false,"count226_excluded":false,"maximum_deficiency3_inferred":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_THREE_D2_BOUNDARY_V1.md","sha256":"504d0387a68375519cd3b6415dc974a76dc83d19791d88657bf2c9edf42c1420"},
+  "inputs_sha256":{"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_THREE_D2_BOUNDARY_V1.md":"504d0387a68375519cd3b6415dc974a76dc83d19791d88657bf2c9edf42c1420"},
+  "exact_case_coverage":{"bad_point_domain":[0,1,2],"h0_q_upper_bound":-2,"h1_q_upper_bound":-6,"h2_high_graph":"two actual high triangles sharing the middle d2 root","h2_low_incidence_upper_bound":90,"h2_D3_each_incidence_upper_bound":21,"h2_leaf_D2_each_incidence_upper_bound":12,"h2_middle_D2_incidence_upper_bound":16,"h2_complete_incidence_upper_bound":172,"required_incidence":180},
+  "outline_correction":{"rejected_middle_high_bound":14,"safe_middle_high_bound":16,"reason":"I2/x1 opposite low contributes binom(3,2)=3, exceeding1+1.5x; use q_I2+2*sumx<=8+8."},
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Root_weighted_h0_h1_and_bowtie_outline":true,"Structural_complete_actual_label_and_opposite_pool_reconstruction":true,"middle_high_14_to16_correction_disclosed":true,"earlier_fan_Gram_cycle_overlap_disclosed":true,"no_pending_gate_used":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["Literal disjointness and maxd3 are assumptions, not inferred here.","The valid local high triangle and all allowed selected incidences/extra edges are retained.","No faithful-cycle argument is used before actual-label collapse exclusion.","No full two-d3, R226 or target exclusion is claimed."]
+}

@@ -1,0 +1,104 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T23:06:55Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-SINGLE-D3-SIX-D2-ONE-BAD-NO-GOOD-ATTACHMENTS",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_U=6-r_U for actual triangles U. Suppose R=226, every d_U belongs to {0,1,2,3}, exactly one triangle T has deficiency three, and exactly six triangles have deficiency two. Suppose exactly one point p of T is incident to one d1 and two d2 triangles, while each of the other two points is incident to three d1 and zero or one d2 triangle. Then both of the latter two d2 incidences are zero.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=226 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency in {0,1,2,3}",
+    "exactly one actual triangle T has deficiency three",
+    "exactly six actual triangles have deficiency two",
+    "exactly one T point has r1one/r2two and the other two have r1three/r2zero-or-one"
+  ],
+  "scope": {
+    "description": "Zero good D2 attachment necessity in the literal one-bad-point one-D3/six-D2 R226 profile.",
+    "unrestricted_target": true,
+    "local_profile_is_explicit_hypothesis": true,
+    "one_bad_point_branch_excluded": false,
+    "six_D2_lane_excluded": false,
+    "count226_excluded": false,
+    "graph_construction": false,
+    "target_resolution": "NONE",
+    "scientific_coverage": "UNKNOWN"
+  },
+  "dependencies": [],
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_SINGLE_D3_SIX_D2_ONE_BAD_NO_GOOD_ATTACHMENTS_V1.md",
+    "sha256": "f6ef8451312b072c92e4a22704b76d12fe8c9e60057ba120647d2e4ef5f43b2e"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_SINGLE_D3_SIX_D2_ONE_BAD_NO_GOOD_ATTACHMENTS_V1.md": "f6ef8451312b072c92e4a22704b76d12fe8c9e60057ba120647d2e4ef5f43b2e"
+  },
+  "exact_hand_coverage": {
+    "selected_size": 16,
+    "weight_sum": 24,
+    "Gram_base": 40,
+    "two_good_attachments_outer_points": 8,
+    "two_good_attachments_outside_points_upper": 1,
+    "two_good_attachments_H_lower": 13,
+    "two_good_attachments_Gram_upper": -8,
+    "one_good_attachment_K": 4,
+    "one_good_attachment_support_size": 22,
+    "one_good_attachment_ordinary_points": 19,
+    "one_good_attachment_good_central_ordinary_points": 12,
+    "one_good_attachment_other_ordinary_points": 7,
+    "one_good_attachment_bad_central_ordinary_points": 2,
+    "one_good_attachment_noncentral_ordinary_points": 5,
+    "one_good_attachment_H_upper": 8,
+    "two_inner_bad_roots_Y_p": -13,
+    "two_inner_bad_roots_single_square": 169,
+    "two_inner_bad_roots_total_norm_upper": 126,
+    "remaining_H_baseline": 6,
+    "remaining_inside_Y_counts": {"minus10": 1, "minus4": 1, "minus1": 4, "two": 13, "five": 3},
+    "remaining_inside_norm": 247,
+    "remaining_inside_sum": 23,
+    "outside_count": 77,
+    "outside_norm_lower": 131,
+    "norm_lower_with_extra_weighted_edges": "378-42z",
+    "actual_norm_with_extra_weighted_edges": "378-126z",
+    "forced_z": 0,
+    "outside_Y_options": [-1, 2],
+    "bad_point_support_neighbors": 7,
+    "bad_point_support_neighbor_Y_sum": 5,
+    "bad_point_exterior_neighbors": 7,
+    "bad_point_neighbor_Y_sum_upper": 19,
+    "bad_point_required_neighbor_Y_sum": 40
+  },
+  "retained_corrections_and_boundaries": [
+    "The nineteen ordinary support points consist of twelve good central points and seven others; the latter include two bad central points, leaving five noncentral points.",
+    "An unsealed larger norm addition was rejected before freeze. The correct 247+131=378 is equality; the eigenvector contradiction is essential.",
+    "Larger selected incidences remain allowed until K4 is forced.",
+    "Additional actual internal edges are all charged through z, and outside adjacency is retained until the exact AY contradiction.",
+    "The earlier six-D2 profile is not a premise; the required focal profiles are explicit hypotheses.",
+    "No zero-good-attachment configuration is constructed or excluded."
+  ],
+  "pending_gates_at_preparation": {
+    "different_author_written_report": null,
+    "canonical_binding": null,
+    "Root_acceptance": null
+  },
+  "shared_origin": {
+    "Structural_attached_capacity_and_residue_equality_derivation": true,
+    "Root_received_unsealed_outline_without_approval": true,
+    "earlier_fan_and_Gram_overlap_disclosed": true,
+    "no_pending_profile_gate_transfer": true
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "Only the good attachment incidences are eliminated under explicit one-bad-point hypotheses.",
+    "The retained zero-good-attachment branch and whole six-D2 lane remain unresolved.",
+    "No automorphism, assumed equity, prescribed induced support or numerical outcome is used.",
+    "A different exact whole written challenge is required before VERIFIED or ledger use."
+  ]
+}
