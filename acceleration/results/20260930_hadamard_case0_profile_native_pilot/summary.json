@@ -1,0 +1,163 @@
+{
+  "status": "CASE0_PROFILE_NATIVE_PENDING_INDEPENDENT_REVIEW",
+  "timestamp": "2026-09-30T06:28:25.263965+00:00",
+  "receipt": {
+    "timestamp": "2026-09-30T06:28:25.253458+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "60s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "1000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_case0_profile_cnf/instance.cnf",
+      "/tmp/conway99-case0-profile-yLhwr8/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 20,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 70,
+    "wall_seconds": 1.875,
+    "stdout": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "2221bc007367a7d4fe1f9ec3ecece79a427fac57738212694a25e11ae3af103c",
+    "stderr": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-case0-profile-yLhwr8/proof.drat",
+    "sha256": "01ee3198778714f32bf0e7e0c4a89ab3d29ecceb088ccf392ee0e2749418d07d",
+    "bytes": 9139513,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T06:28:25.340879+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-case0-profile-yLhwr8/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.07800000021234155,
+      "stdout": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "d8f2957de292e4e57a4fe6611d9aaaae3276cba58d2c0ef12b1224e62308964e",
+      "stderr": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T06:28:25.449736+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-case0-profile-yLhwr8/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 0.0940000000409782,
+      "stdout": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.01500000013038516
+  },
+  "fresh_process_observation": {
+    "timestamp": "2026-09-30T06:28:25.536788+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/ps",
+      "-C",
+      "cadical",
+      "-o",
+      "pid,ppid,comm,pcpu,rss,args"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 1,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 10,
+    "wall_seconds": 0.06299999984912574,
+    "stdout": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/processes_after.stdout.log",
+    "stdout_sha256": "266e9b4bf5552ca62bca2570eeae80ae7ce23b8a831e8513c3aaa3e1f7c4840f",
+    "stderr": "acceleration/results/20260930_hadamard_case0_profile_native_pilot/processes_after.stderr.log",
+    "stderr_sha256": "b9295050338450e1f2fe7f4bd4411764002b46d9dfe5fea0bc86c964e426bc8c",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "interpreted_result": "CASE0_PROFILE_UNSAT_TRACE_UNCHECKED",
+  "outputs_sha256": {
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/launch.json": "da146d5efd0cce888cc1e6f1dce89b13314b66306fd4aa6c700840d0fb2c8db5",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/proof.drat": "01ee3198778714f32bf0e7e0c4a89ab3d29ecceb088ccf392ee0e2749418d07d",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/solver.receipt.json": "c2ac03e26bc0e84af3d9037a16c787d60ef3c16bcf8bf6a29d49dbcf30bc9aca",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/solver.stdout.log": "2221bc007367a7d4fe1f9ec3ecece79a427fac57738212694a25e11ae3af103c",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_copy.receipt.json": "2115d085efa77c164af3463b656c2167607b272cd8d9f23bdaa6534b444b9645",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_hash.receipt.json": "175f8a7490a190b1f71a7c937b78d067e4da8514b5f8346cb46214e87d944bf8",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_case0_profile_native_pilot/main/transfer_hash.stdout.log": "d8f2957de292e4e57a4fe6611d9aaaae3276cba58d2c0ef12b1224e62308964e"
+  },
+  "limitations": [
+    "SAT requires the separate complete-assignment/actual-clause/raw-factor checker; producer safeguards are not independent approval.",
+    "Cross-group outside-column caps were omitted; diagnostic failures preserve a weaker Gram factor. No residualD/full99 graph follows even if caps pass.",
+    "UNSAT requires complete independent proof replay and the exact case0 profile equivalence; no unrestricted nonexistence follows.",
+    "UNKNOWN excludes nothing. Full trace hashing/copy time is separately recorded outside the native wall allocation."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-09-30T13:58:41.432272+00:00",
+  "source_commit": "a800835459a99a3d062b75292fca309e51bbcd30",
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "recorder": "/root",
+  "environment": {
+    "UV_PROJECT_ENVIRONMENT": "build/research-venv",
+    "execution_prefix": [
+      "uv",
+      "run",
+      "--locked",
+      "--offline",
+      "--cache-dir",
+      ".uv-cache-20260917",
+      "python",
+      "-B"
+    ]
+  },
+  "checks": [
+    {
+      "command_tail": [
+        "acceleration/validate_claims.py",
+        "--hashes",
+        "available",
+        "--previous",
+        "acceleration/results/20260930_twentyseventh_inventory_registration/CLAIMS.before.yaml",
+        "--out",
+        "acceleration/results/20260930_resume/twentyseventh_precommit_validation.json"
+      ],
+      "exit_code": 0,
+      "tool_output_chunks": [
+        "2afcbf"
+      ],
+      "output_path": "acceleration/results/20260930_resume/twentyseventh_precommit_validation.json",
+      "output_sha256": "205c53df20c766575184f372448827aa143167191555e0b1808945c92fe2559d",
+      "skipped": [
+        "hash nineteenth-phase-batch-missing-trace0: artifact declared MISSING",
+        "hash nineteenth-phase-batch-missing-trace1: artifact declared MISSING",
+        "hash nineteenth-phase-batch-missing-trace2: artifact declared MISSING",
+        "hash nineteenth-phase-batch-missing-trace3: artifact declared MISSING",
+        "expensive mathematical replay, SAT/UNSAT proof checking, literature review, and reviewer-independence audit: not performed by registry validation"
+      ]
+    },
+    {
+      "command_tail": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "acceleration",
+        "-p",
+        "test_validate_claims.py"
+      ],
+      "exit_code": 0,
+      "tests": 56,
+      "reported_seconds": 15.406,
+      "tool_output_chunks": [
+        "42942c",
+        "3131c6"
+      ]
+    },
+    {
+      "command_tail": [
+        "check_python_syntax.py"
+      ],
+      "exit_code": 0,
+      "selected_sources": 1828,
+      "compiled_sources": 1827,
+      "authenticated_preserved_failures": [
+        "acceleration/theory_20260930_count_interval_frechet.py"
+      ],
+      "tool_output_chunks": [
+        "afc63b"
+      ],
+      "warnings": [
+        "Two previously preserved invalid-decimal SyntaxWarnings in theory_20260930_modular_rank_screen.py lines45/47."
+      ]
+    }
+  ],
+  "limitations": [
+    "Registry tests/schema/hash checks and compilation are not mathematical verification.",
+    "The source census is a timestamped syntax observation; later wave28 files are outside the wave27 publication selection."
+  ]
+}

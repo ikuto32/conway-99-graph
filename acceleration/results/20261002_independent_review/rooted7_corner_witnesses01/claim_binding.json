@@ -1,0 +1,307 @@
+{
+  "id": "C-ROOTED7-LITERAL-AFFINE-RATIONAL-WITNESS-RECTANGLE",
+  "revision": 1,
+  "claim_revision": 1,
+  "kind": "construction",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For the exact2766-coordinate11749-row integer affine system identified by model SHA21eb899c3606727ef4e452d518316957cf9eb76e5e85c5a79af82421f4004595, the four supplied corner vectors at(a,b)=(0,0),(20,0),(0,9),(20,9) are nonnegative integer solutions. For every integer(a,b) in{0,...,20}x{0,...,9}, the recorded denominator180 bilinear interpolation of those corners is a nonnegative rational solution of all11749 literal rows. Exactly the four corner interpolation vectors are integral; the other206 recorded interpolation vectors are nonintegral.",
+  "scope": {
+    "description": "Fixed literal affine system and210 explicit rational witness vectors only; use as a necessary relaxation of the target is conditional on the separately pinned prism-free encoding implication.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Exact fixed input model and raw corner artifacts are immutable.",
+    "Affine rows are checked as literal integer terms/RHS, not reconstructed by this witness verifier.",
+    "Any interpretation as necessary SRG relations uses the independently checked encoding r1 and its explicit UNKNOWN no-induced-triangular-prism premise."
+  ],
+  "dependencies": [
+    {
+      "id": "C-PRISMFREE-ROOTED7-MARKED-REROOT-NECESSARY-ENCODING",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "Pins the precise fixed model and its separately verified conditional necessary interpretation; literal witness arithmetic does not need the prism-free premise.",
+  "verifier": "/root/native_driver",
+  "producer": "/root/structural",
+  "method": "independent_artifact_check",
+  "created_at": "2026-10-02T11:59:32.223272+00:00",
+  "updated_at": "2026-10-02T11:59:32.223272+00:00",
+  "verification_timestamp": "2026-10-02T11:31:06.367103+00:00",
+  "source_commit": "5308d0d08085e71e1c3ace316e6e692d6b5c636a",
+  "producer_source_commit": "28440b31f4effee3b25e30259110acc734695bf0",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261002_rooted7_corner_witnesses_v1.py",
+    "--seconds",
+    "270",
+    "--allocation-reason",
+    "About18million sparse integer term products plus JSON IO;270s includes20s worker reserve and complete controls.",
+    "--source-commit",
+    "5308d0d08085e71e1c3ace316e6e692d6b5c636a",
+    "--out",
+    "acceleration/results/20261002_independent_review/rooted7_corner_witnesses01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20261002_independent_review/rooted7_corner_witnesses01/summary.json": "382459c568c8e5f9251746f60376e07c82ba981d1bab68ae2c0bc22790f04ca1",
+    "acceleration/results/20261002_rooted7_extension_model/model.json": "21eb899c3606727ef4e452d518316957cf9eb76e5e85c5a79af82421f4004595",
+    "acceleration/results/20261002_rooted7_corner_certificates02/corner_0_0.json": "71f30c7108cdcae7df865974270ea20ff0c9020fda7f1cfb05a8bdb2bfd7a62f",
+    "acceleration/results/20261002_rooted7_corner_certificates02/corner_20_0.json": "233d9505e9fb7c8edeea4d7e92a9b4d34397613a91cc051f4776d917f4c33842",
+    "acceleration/results/20261002_rooted7_corner_certificates02/corner_0_9.json": "7539fa5df54dcc2f86826147ae5d12a3054b94941fa405f3c4ee778c4f1efd61",
+    "acceleration/results/20261002_rooted7_corner_certificates02/corner_20_9.json": "28f22f119f1eb5240a76cbed01f3c540f6e7f87bcecccac9bbcc3df49b92bcad",
+    "acceleration/audit_20261002_rooted7_corner_witnesses_v1.py": "5c268df5fe4c679fffdf25553e763524220f1d580b71db732a187145c6c6adb5",
+    "acceleration/audit_20261002_rooted7_corner_witnesses_v1_spec.md": "dfbf346bfaa2caa7e7ae9ed06dae3e484a9cec539f149f9d6aae9039b738d4e7",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20261002_independent_review/rooted7_corner_witnesses01/all210_scaled_witnesses.jsonl": "4ad87639e037195be7e515f76830a425afc5773559fef1418227433243493432",
+    "acceleration/results/20261002_independent_review/rooted7_corner_witnesses01/controls.json": "edd994c70bfeb53fd190604f6eb34a0ee17c2d56d80181001bb645d7e1cc7e5a",
+    "acceleration/results/20261002_independent_review/rooted7_model01/claim_binding.json": "96d139186fd243a84831abb92d4d611cfe001043309719b998f563979a311b25",
+    "acceleration/results/20261002_independent_review/rooted7_model01/summary.json": "df0a614a76d4cc6365468993c9cb7b2ad836484946e00da059977642b37db76f",
+    "acceleration/results/20261002_rooted7_corner_certificates02/manifest.json": "06b2982ecdc68d6232eec7d2cc1190e41e6be441d83d8cc781db443e0371fdc3",
+    "acceleration/theory_20261002_rooted7_corner_certificates_v2.py": "acae7d605313c1b7742ba8c572e854c7502c323a7858b595fcda16916fedd90a",
+    "acceleration/results/20261002_independent_review/rooted7_corner_witnesses_supervision01/manifest.json": "12274c3bbdec8ad31c0d178368cd66161b3c6131d4efe2ff01fcb552ab4e2447",
+    "acceleration/results/20261002_independent_review/rooted7_corner_witnesses_supervision01/summary.json": "7bc3cd0b7a7c3533e4900b0eaf1a6b4709ddffeea65b92202a7c69e2a44970b0",
+    "acceleration/record_20261002_rooted7_rational_witness_binding_v1.py": "ffc02abb39ea3d9b7a85174e11c331339feb20ee609dfe2f4c3f134e29bde0e4"
+  },
+  "report": "acceleration/results/20261002_independent_review/rooted7_corner_witnesses01/summary.json",
+  "report_sha256": "382459c568c8e5f9251746f60376e07c82ba981d1bab68ae2c0bc22790f04ca1",
+  "evidence": {
+    "all210_witnesses": "acceleration/results/20261002_independent_review/rooted7_corner_witnesses01/all210_scaled_witnesses.jsonl",
+    "all210_witnesses_sha256": "4ad87639e037195be7e515f76830a425afc5773559fef1418227433243493432",
+    "controls": "acceleration/results/20261002_independent_review/rooted7_corner_witnesses01/controls.json",
+    "controls_sha256": "edd994c70bfeb53fd190604f6eb34a0ee17c2d56d80181001bb645d7e1cc7e5a"
+  },
+  "controls": {
+    "arithmetic_controls": [
+      {
+        "label": "positive_nonsingular",
+        "expected_acceptance": true,
+        "actual_acceptance": true,
+        "result": {
+          "nonnegative": true,
+          "negative_coordinates": [],
+          "row_mismatch_count": 0,
+          "mismatch_examples": [],
+          "rows_checked": 2
+        }
+      },
+      {
+        "label": "positive_singular_with_zero_row",
+        "expected_acceptance": true,
+        "actual_acceptance": true,
+        "result": {
+          "nonnegative": true,
+          "negative_coordinates": [],
+          "row_mismatch_count": 0,
+          "mismatch_examples": [],
+          "rows_checked": 3
+        }
+      },
+      {
+        "label": "negative_vector_but_exact_rows",
+        "expected_acceptance": false,
+        "actual_acceptance": false,
+        "result": {
+          "nonnegative": false,
+          "negative_coordinates": [
+            0
+          ],
+          "row_mismatch_count": 0,
+          "mismatch_examples": [],
+          "rows_checked": 1
+        }
+      },
+      {
+        "label": "full_corner_coordinate_corruption",
+        "expected_acceptance": false,
+        "actual_acceptance": false,
+        "result": {
+          "nonnegative": true,
+          "negative_coordinates": [],
+          "row_mismatch_count": 4,
+          "mismatch_examples": [
+            {
+              "row": 0,
+              "actual": 64446025,
+              "expected": 64446024
+            },
+            {
+              "row": 1,
+              "actual": 33981461,
+              "expected": 33981456
+            },
+            {
+              "row": 8689,
+              "actual": 24481269,
+              "expected": 24481264
+            },
+            {
+              "row": 10215,
+              "actual": 24481269,
+              "expected": 24481264
+            }
+          ],
+          "rows_checked": 11749
+        }
+      },
+      {
+        "label": "full_corner_coefficient_corruption",
+        "expected_acceptance": false,
+        "actual_acceptance": false,
+        "result": {
+          "nonnegative": true,
+          "negative_coordinates": [],
+          "row_mismatch_count": 1,
+          "mismatch_examples": [
+            {
+              "row": 0,
+              "actual": 66935555,
+              "expected": 64446024
+            }
+          ],
+          "rows_checked": 11749
+        }
+      },
+      {
+        "label": "full_corner_rhs_constant_corruption",
+        "expected_acceptance": false,
+        "actual_acceptance": false,
+        "result": {
+          "nonnegative": true,
+          "negative_coordinates": [],
+          "row_mismatch_count": 1,
+          "mismatch_examples": [
+            {
+              "row": 0,
+              "actual": 64446024,
+              "expected": 64446025
+            }
+          ],
+          "rows_checked": 11749
+        }
+      }
+    ],
+    "malformed_controls": [
+      {
+        "label": "zero_rational_denominator",
+        "rejected": true,
+        "error": "recorded corner denominator exactly1"
+      },
+      {
+        "label": "noninteger_corner_denominator",
+        "rejected": true,
+        "error": "recorded corner denominator exactly1"
+      },
+      {
+        "label": "truncated_coordinates",
+        "rejected": true,
+        "error": "complete exact rational coordinate population"
+      },
+      {
+        "label": "floating_row_coefficient",
+        "rejected": true,
+        "error": "integer index/coefficient pair"
+      },
+      {
+        "label": "floating_rhs",
+        "rejected": true,
+        "error": "three integer affine RHS coefficients"
+      },
+      {
+        "label": "out_of_range_column",
+        "rejected": true,
+        "error": "variable index range"
+      }
+    ]
+  },
+  "shared_components": [
+    "Python integer arithmetic, JSON parser, hashes and common deadline/supervisor only; producer model raw artifact is input, never trusted as a semantic derivation."
+  ],
+  "statement_evidence": {
+    "corner_vectors": 4,
+    "interpolated_vectors": 210,
+    "integer_interpolated_vectors": 4,
+    "nonintegral_interpolated_vectors": 206,
+    "coordinates_per_vector": 2766,
+    "rows_per_vector": 11749,
+    "scaled_denominator": 180,
+    "bilinear_numerators": [
+      "(20-a)*(9-b)",
+      "a*(9-b)",
+      "(20-a)*b",
+      "a*b"
+    ],
+    "corner_order": [
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        0
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        20,
+        9
+      ]
+    ],
+    "every_recorded_coordinate_and_row_checked": true,
+    "no_lp_solver_or_producer_import": true
+  },
+  "limitations": [
+    "Nonintegrality of one recorded witness does not imply integer infeasibility, nor does a rational witness establish integer feasibility at that point.",
+    "No graph construction, target exclusion, sufficient realization or unrestricted nonexistence proof.",
+    "The original witness report accurately records row-semantic verification as unavailable at that time; its bytes remain unchanged. A separate later encoding audit supplies the pinned conditional interpretation.",
+    "No new row-semantic derivation or expensive witness replay in this bookkeeping invocation."
+  ],
+  "unknowns": {
+    "integer_feasibility_at_other206_points": null,
+    "integer_feasibility_null_reason": "Only nonintegrality of the supplied interpolation witnesses is checked; existence of other integer solutions remains unresolved.",
+    "graph_realization": null,
+    "graph_realization_null_reason": "Literal affine feasibility is not sufficient for graph realization."
+  },
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval": "Exact repository workspace paths and raw hashes; public replay requires a separate publication check.",
+  "binding_creation": {
+    "script": "acceleration/record_20261002_rooted7_rational_witness_binding_v1.py",
+    "sha256": "ffc02abb39ea3d9b7a85174e11c331339feb20ee609dfe2f4c3f134e29bde0e4",
+    "command": [
+      "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+      "acceleration/record_20261002_rooted7_rational_witness_binding_v1.py",
+      "--seconds",
+      "90",
+      "--allocation-reason",
+      "Complete immutable report/source/raw hashing and scope-limited exact-r1 binding;10s shutdown reserve, no scientific recomputation."
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "timestamp": "2026-10-02T11:59:32.223272+00:00",
+    "source_commit": "f7834874ad7a9c1ef3ba9daabd09fc18fe24a76a",
+    "scope": "Exact-r1 bookkeeping only; original independently authored producer/verifier evidence preserved.",
+    "deadline": {
+      "elapsed_seconds": 0.2659999999741558,
+      "remaining_seconds": 89.73400000002584,
+      "review_remaining_seconds": 1799.7340000000258,
+      "review_due": false,
+      "review_overdue_seconds": 0.0,
+      "deadline_reached": false,
+      "stop_required": false,
+      "deadline_at": 147478.89,
+      "review_deadline_at": 149188.89,
+      "completed_reviews": 0
+    }
+  }
+}

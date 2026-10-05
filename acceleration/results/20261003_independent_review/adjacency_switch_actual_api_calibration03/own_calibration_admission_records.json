@@ -1,0 +1,72 @@
+{
+  "positive": {
+    "case": "software15_summary16_then_full97_closure",
+    "software_inputs": 15,
+    "inputs_after_summary_pin": 16,
+    "complete_output_closure_files": 97,
+    "final_identity_map_entries": 113,
+    "actual_stage": "PASS"
+  },
+  "negatives": [
+    {
+      "case": "wrong_status",
+      "expected_stage": "API_CALIBRATION_HEADER",
+      "actual_stage": "API_CALIBRATION_HEADER"
+    },
+    {
+      "case": "wrong_verifier",
+      "expected_stage": "API_CALIBRATION_HEADER",
+      "actual_stage": "API_CALIBRATION_HEADER"
+    },
+    {
+      "case": "native_calls_bool",
+      "expected_stage": "API_CALIBRATION_SCOPE:native_calls",
+      "actual_stage": "API_CALIBRATION_SCOPE:native_calls"
+    },
+    {
+      "case": "negative_count_float",
+      "expected_stage": "API_CALIBRATION_SCOPE:strict_negative_cases",
+      "actual_stage": "API_CALIBRATION_SCOPE:strict_negative_cases"
+    },
+    {
+      "case": "missing_software",
+      "expected_stage": "API_CALIBRATION_SOURCE",
+      "actual_stage": "API_CALIBRATION_SOURCE"
+    },
+    {
+      "case": "wrong_software_hash",
+      "expected_stage": "API_CALIBRATION_SOURCE",
+      "actual_stage": "API_CALIBRATION_SOURCE"
+    },
+    {
+      "case": "extra_software",
+      "expected_stage": "API_CALIBRATION_SOURCE",
+      "actual_stage": "API_CALIBRATION_SOURCE"
+    },
+    {
+      "case": "self_summary_in_software",
+      "expected_stage": "API_CALIBRATION_SOURCE",
+      "actual_stage": "API_CALIBRATION_SOURCE"
+    },
+    {
+      "case": "invalid_output_hash",
+      "expected_stage": "API_CALIBRATION_MAP_ENTRY",
+      "actual_stage": "API_CALIBRATION_MAP_ENTRY"
+    },
+    {
+      "case": "wrong_output_hash",
+      "expected_stage": "INPUT_SHA:acceleration/results/20261003_independent_review/adjacency_switch_actual_api_calibration03/corrupt_after_E_bool.json",
+      "actual_stage": "INPUT_SHA:acceleration/results/20261003_independent_review/adjacency_switch_actual_api_calibration03/corrupt_after_E_bool.json"
+    },
+    {
+      "case": "empty_output_map",
+      "expected_stage": "API_CALIBRATION_MAPS",
+      "actual_stage": "API_CALIBRATION_MAPS"
+    },
+    {
+      "case": "nonmap_software",
+      "expected_stage": "API_CALIBRATION_MAPS",
+      "actual_stage": "API_CALIBRATION_MAPS"
+    }
+  ]
+}

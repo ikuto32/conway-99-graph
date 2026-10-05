@@ -1,0 +1,134 @@
+{
+  "status": "HADAMARD_PARITY_SUPPORT_CUT_NATIVE_ARTIFACTS_PENDING_INDEPENDENT_REVIEW",
+  "actual_exit_code": 10,
+  "receipt": {
+    "timestamp": "2026-09-30T04:26:45.473861+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "60s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "100000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_parity_support_cuts/instance.cnf",
+      "/tmp/conway99-hadamard-support-cuts-6IHZkt/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 10,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 80,
+    "wall_seconds": 0.25,
+    "stdout": "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "7d4a0848c7cc5cf3cfbb2b2005b1b825c32ff4cda2ca048595cdc37380e43c5a",
+    "stderr": "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "scope": "Balanced/noncyclic necessary parity projection with60 support cuts; no full factor, whole-core or target conclusion.",
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-hadamard-support-cuts-6IHZkt/proof.drat",
+    "sha256": "bae0da68ec6c45f3e6d22058ecb1f900bfa7e6a3678c3d16c01325a830d00161",
+    "bytes": 1514570,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T04:26:45.554126+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-hadamard-support-cuts-6IHZkt/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.06300000008195639,
+      "stdout": "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "fd70622a039a318b013f4da1d9215241d1a01c998248162c65604b211bfc6468",
+      "stderr": "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T04:26:45.635505+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-hadamard-support-cuts-6IHZkt/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 0.06300000008195639,
+      "stdout": "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.01500000013038516
+  },
+  "interpreted_result": "PARITY_PROJECTION_SAT_RAW_UNCHECKED",
+  "outputs_sha256": {
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/decoded_projection.json": "2e5ec5fc6ef7c6b756332c09870cc9b1d0e89d2a04093cae1af5ddba27d3143e",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/launch.json": "f849e836df56649e472657b1667866fe761d40210d3818a399feac0901a53e10",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/parsed_model.json": "66f9f15d1e521c848ae41d4dcf95d28f5d0f11234e32fcdb796bf267e0fc6c5b",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/proof.drat": "bae0da68ec6c45f3e6d22058ecb1f900bfa7e6a3678c3d16c01325a830d00161",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/solver.receipt.json": "a6f758662edf1296e4577a023832d06c7572eed359f86a0e6a2bf34866aaa88a",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/solver.stdout.log": "7d4a0848c7cc5cf3cfbb2b2005b1b825c32ff4cda2ca048595cdc37380e43c5a",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_copy.receipt.json": "7136dd932368e2b2628e006c8aed437074a97ff25fb50aab10421652c78555b4",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_hash.receipt.json": "eb2a7aa539eccb7d94024d76ce4c3da717c80773f5ea582a6eac30b4de25b654",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_parity_support_cuts_native_pilot/main/transfer_hash.stdout.log": "fd70622a039a318b013f4da1d9215241d1a01c998248162c65604b211bfc6468"
+  },
+  "limitations": [
+    "SAT supplies parity patterns satisfying60 necessary support cuts only; independent all-assignment/clause/projection checking is mandatory, and no fullGram factor or residualD follows.",
+    "UNSAT requires a full independent trace replay and exact projection reduction. A balanced-factor exclusion additionally uses allYcaps and the separately checked cyclic-factor exclusion.",
+    "Balance is an extra assumption, not WLOG. No whole-support, core or target exclusion follows directly.",
+    "No UNKNOWN result or incomplete trace is an exclusion."
+  ]
+}

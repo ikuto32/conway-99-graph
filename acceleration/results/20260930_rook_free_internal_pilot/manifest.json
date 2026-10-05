@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-09-29T19:37:10.016685+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-sat-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_rook_sat_runner.py",
+    "--cnf",
+    "acceleration/results/20260930_rook_free_internal_sat/instance.cnf",
+    "--encoding-model",
+    "acceleration/results/20260930_rook_free_internal_sat/model.json",
+    "--audit",
+    "acceleration/results/20260930_rook_free_internal_sat/independent_cnf_encoding.json",
+    "--out",
+    "acceleration/results/20260930_rook_free_internal_pilot"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.12",
+  "pysat_version": "1.9.dev15",
+  "native_module_path": "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-sat-venv\\Lib\\site-packages\\pysolvers.cp312-win_amd64.pyd",
+  "native_module_sha256": "96b7325a76b78d1509e86bd454cd309d467307fb573fc01ddbfea6dabf8b3104",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_sat_runner.py": "965f32e5a58cf9529021cab656ac1d1d1c3c6de30e548cedc9e87ae0047467ae",
+    "acceleration/environments/rook-sat/uv.lock": "a38ec6c1bb56c33eb5fba0e1fbc770f7d479d8d5dc380a3e013c4f09fbf419e2",
+    "acceleration/environments/rook-sat/pyproject.toml": "193413ec708aaaa81f121d94af20747e013696b677e8f8b3202cb1a02e490aee",
+    "tools/drat-trim/drat-trim.exe": "10d317df526c36453986ef09495864bcabd9d02d72d7b772ee78f07939870620",
+    "tools/drat-trim/drat-trim.c": "57df8efd73fc4fd81c4f255a8a7a1659c80c73ab0829cc8194a65f3432cd3e88",
+    "acceleration/results/20260930_rook_free_internal_sat/instance.cnf": "ed9d0e102b16481fdbcecef34240b5be2b8a357af8c219606bb688dcb5fe9403",
+    "acceleration/results/20260930_rook_free_internal_sat/model.json": "26908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e",
+    "acceleration/results/20260930_rook_free_internal_sat/independent_cnf_encoding.json": "a74e821f70680187e0ee14fb956d51928e6aa9517acc1bc0186448b32c985ba0"
+  },
+  "scope": "Solver/proof producer only; main CNF is a fixed-star local rook window, not target-level nonexistence.",
+  "question": "Can CaDiCaL195 resolve the independently reviewed fixed-star local CNF within the predeclared cap?",
+  "resource_limits": {
+    "main_wall_seconds_including_parse_load_proof": 300,
+    "main_conflicts": 1000000,
+    "per_calibration_wall_seconds": 30
+  },
+  "success_criteria": "SAT requires independent decoded-window checking; UNSAT requires independent encoding and raw DRAT replay before promotion.",
+  "falsification_criteria": "Reject broken SAT/UNSAT controls and require rejection of a deliberately invalid empty-only proof.",
+  "solver_seed": null,
+  "solver_seed_reason": "Default engine configuration; no seed option changed.",
+  "status": "CANDIDATE",
+  "independent_review_pending": true
+}

@@ -1,0 +1,11 @@
+# Proposed Wave45 current-document edits, revision6
+
+This is unapplied review text, preserving [revision5](PROPOSED_20261004_WAVE45_DOCUMENTATION_EDITS_V5.md) and every earlier proposal. [Milestone draft V6](DRAFT_RESEARCH_20261004_FORTYFIFTH_WAVE_V6.md) binds genuine accepted MAIN and POST, current 422 and the two UNKNOWN adjacency results. Root must approve its editorial cutoff and every publication path before applying anything.
+
+Proposed README.md / ACTIVE_RESEARCH.md prefix:
+
+> Latest verified continuation checkpoint — Wave45, 2026-10-04 JST. The [milestone](docs/RESEARCH_20261004_FORTYFIFTH_WAVE.md) records 422 claims: 413 VERIFIED/CLEAR, 3 CANDIDATE/CLEAR and 6 REFUTED/CLEAR. Its eighteen-plus-four additions preserve prior claim/artifact prefixes and all 6,054 prior PUBLIC entries, checked by the accepted actual POST. New evidence remains LOCAL_ONLY pending immutable availability confirmation. Target resolution and global coverage remain UNKNOWN. The frozen 1,947-path 418 inventory passed; current publication uses an explicit ledger override and later appendices. Aggregate and per-copy adjacency searches ended UNKNOWN without an exact incumbent. Historical text follows byte for byte.
+
+Use the same prefix for docs/RESEARCH_MAP.md and docs/REPRODUCING.md with the milestone link changed to RESEARCH_20261004_FORTYFIFTH_WAVE.md. The final writer must append each complete existing document as an exact byte suffix and record actual new hashes; old reproduction commands/receipts stay unchanged. This is proposed prose, not an executed interpolation.
+
+Root separately approves explicit current CLAIMS override, useful later appendices and all required hash-bound document -text exceptions. Fresh bounded physical/member and staged raw-blob checking must follow final editorial writes. Preserve frozen 1947 metadata and old 418 snapshot; never rewrite their accepted identities to pretend they describe current 422. No partial DRAT, private environment/build binaries, unexecuted fallback outcome or overlapping triangle-row paper is silently promoted or added as new progress. This proposal performs no current-document edit, staging, ledger operation or scientific execution.

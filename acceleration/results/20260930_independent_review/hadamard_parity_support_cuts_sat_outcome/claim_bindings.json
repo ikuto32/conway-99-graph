@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-09-30T04:30:13.229332+00:00",
+  "encoding": {
+    "id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-PROJECTION",
+    "revision": 1,
+    "statement": "Every coordinatewise balanced full-prescribed-Gram factor on the fixed six-prism Hadamard support that satisfies all outside-column caps induces a satisfying assignment of the authenticated 520-variable, 4541-clause formula consisting of the original parity projection and all sixty constant-group support cuts.",
+    "kind": "encoding",
+    "basis": [
+      "DERIVED",
+      "COMPUTED"
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "scope": "Necessary projection only for the balanced-triplet fixed-support family with outside-column caps; no full factor equivalence.",
+    "assumptions": [
+      "The explicit fixed support, full Gram, coordinatewise balance and outside-column caps.",
+      "No nontrivial target automorphism is assumed."
+    ],
+    "dependencies": [
+      {
+        "id": "C-FIXED-HADAMARD-SIX-PRISM-BALANCED-PARITY-PROJECTION",
+        "revision": 1,
+        "relation": "premise"
+      },
+      {
+        "id": "C-FIXED-HADAMARD-BALANCED-PARITY-CONSTANT-GROUP-NECESSITY",
+        "revision": 1,
+        "relation": "uses_result"
+      }
+    ],
+    "verifier": "/root/state_literature_audit",
+    "method": "Full independent original-clause reconstruction plus independent proved-extension mapping; complete raw projection checking",
+    "evidence": [
+      {
+        "path": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_encoding/summary.json",
+        "sha256": "7a9b76b9e139f065c850194b6968ebf4a98c0211668e1f824d2ac75640b7dd12",
+        "availability": "LOCAL_ONLY"
+      }
+    ],
+    "limitations": [
+      "Necessary projection only for the balanced-triplet fixed-support family with outside-column caps; no full factor equivalence.",
+      "No proof that arbitrary factors are balanced; no other support covered.",
+      "A SAT projection is neither a Gram factor nor a target graph; residual D is absent.",
+      "UNSAT needs separate complete proof replay; the complete semantic premise includes the earlier cyclic-factor exclusion through the original nonconstant-group clause.",
+      "No solver called by this checker; no full research-positive projection for the new formula is invented."
+    ],
+    "created_at": "2026-09-30T04:23:44.895438+00:00",
+    "updated_at": "2026-09-30T04:23:44.895438+00:00",
+    "artifact_availability": "LOCAL_ONLY",
+    "verification_records": [
+      {
+        "claim_id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-PROJECTION",
+        "claim_revision": 1,
+        "verifier": "/root/state_literature_audit",
+        "method": "Independent exact full-CNF reconstruction and proved-clause mapping",
+        "report_path": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_encoding/summary.json",
+        "report_sha256": "7a9b76b9e139f065c850194b6968ebf4a98c0211668e1f824d2ac75640b7dd12",
+        "outcome": "PASS",
+        "timestamp": "2026-09-30T04:23:44.895438+00:00",
+        "scope": "Necessary strengthened projection with explicit balanced support, full Gram and outside-column caps; no converse factor construction."
+      }
+    ]
+  },
+  "projection_witness": {
+    "id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-SAT-WITNESS",
+    "revision": 1,
+    "statement": "The authenticated saved 520-variable assignment satisfies all 4541 clauses of the strengthened support-cut parity formula and decodes to twenty nonconstant group patterns, all sixty coordinate-pair disagreement counts equal to three, and all sixty raw-pattern support cuts satisfied.",
+    "kind": "construction",
+    "basis": [
+      "COMPUTED"
+    ],
+    "recommendation": "VERIFIED",
+    "review_state": "CLEAR",
+    "scope": "One exact parity-projection witness on the fixed support; not a full Gram factor or graph.",
+    "assumptions": [
+      "Exact assignment, CNF, model and raw-projection hashes bound in the independent object gate.",
+      "No nontrivial target automorphism is assumed."
+    ],
+    "dependencies": [
+      {
+        "id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-PROJECTION",
+        "revision": 1,
+        "relation": "encoding_equivalence"
+      }
+    ],
+    "evidence": [
+      {
+        "path": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat/summary.json",
+        "sha256": "02ae20d479a0d2589c02f435e2a8fdd781ec0459b60095d130b68b5f2721a04a",
+        "availability": "LOCAL_ONLY"
+      },
+      {
+        "path": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_object_calibration/summary.json",
+        "sha256": "31ee1edda7ac30c17bc1d2287da9c7b81222ad7f50ae761da2e1761199c88eb4",
+        "availability": "LOCAL_ONLY"
+      },
+      {
+        "path": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat_outcome/summary.json",
+        "sha256": "66d21a6be04f471c870ab9fac40c0aaa8cd64717924582ae4520e0f2e3fadc39",
+        "availability": "LOCAL_ONLY"
+      }
+    ],
+    "verification_records": [
+      {
+        "claim_id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-SAT-WITNESS",
+        "claim_revision": 1,
+        "verifier": "/root/state_literature_audit",
+        "method": "Independent complete native/JSON assignment, all actual clauses and raw pattern checks",
+        "report_path": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat/summary.json",
+        "report_sha256": "02ae20d479a0d2589c02f435e2a8fdd781ec0459b60095d130b68b5f2721a04a",
+        "timestamp": "2026-09-30T04:27:19.384005+00:00",
+        "outcome": "PASS",
+        "scope": "Every520 assignment ID, every4541 actual clause, all20 patterns/all60 disagreements/all60 support cuts and producer decoded comparison.",
+        "shared_components": [
+          "Frozen independently authored Eight v2 reconstruction/native/assignment/projection helpers, exact source hash bound.",
+          "Own separate universal constant-group necessity audit and literal-map checker.",
+          "Standard library only; no producer encoder/decoder/native-wrapper import."
+        ]
+      }
+    ],
+    "limitations": [
+      "No converse from parity SAT to a full Gram factor, full column caps, or residual D.",
+      "The earlier cyclic exclusion is a premise for necessity of the formula, not evidence that this witness lifts.",
+      "The old projection remains a valid witness for its old formula.",
+      "No external review or novelty claim."
+    ],
+    "artifact_availability": "LOCAL_ONLY",
+    "created_at": "2026-09-30T04:30:13.229332+00:00",
+    "updated_at": "2026-09-30T04:30:13.229332+00:00"
+  },
+  "ledger_modified": false
+}

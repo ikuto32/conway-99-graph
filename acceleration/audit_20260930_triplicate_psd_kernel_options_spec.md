@@ -1,0 +1,13 @@
+# Independent PSD-kernel option review
+
+Freeze source/spec/doc before execution. Authenticate candidate summary `aff53c2da24b39375d5675e5618a6bb24ff62b8e952a4c82a6da71d431cacaec`, its complete input/output identities and the earlier independent three-profile PSD gate. No producer imports, native calls, ledger or Git mutation. Use fresh output, preserving any failed audit.
+
+Reconstruct the literal core, Gram, support groups, all90 words and all31110 initial triples. Rebuild balanced N0 and each of the three profile count matrices. Recompute M=3G-NN^T. Exact reverse-column rank/nullspace arithmetic may reuse our frozen independent PSD checker, and local-catalogue reconstruction may reuse our frozen independent block checker; authenticate/disclose both source identities. Neither imports producer code.
+
+Use a distinct explicit structural basis W: twelve coordinate indicators across all fibres, and fibre1/fibre2 indicators. Its14 basis vectors are independent (the minor on fibre0's12 coordinates plus fibre1-coordinate0 and fibre2-coordinate0 is nonsingular). Check literal M annihilation and rank22 for the baseline and all three profiles. A saved kernel vector must uniquely decompose as v[f,a]=alpha[a]+beta[f], with beta0=0. Check this coordinate identity, complete saved basis ranks, primitive normalization, and raw products rather than accepting producer span-comparison telemetry.
+
+For each support S and every word choosing two vertices per fibre, the projection is sum_(a in S)alpha[a]+2beta1+2beta2. Independently verify all20×90×14 saved baseline dot products, raw support/word order and constancy. Then reconstruct every original profile class and check all6444 local-option records: raw columns,14×3 projections,14×3 differences, retained ranks and empty-group lists. No AC-pruned classes or removed options may be hidden.
+
+Derive the necessary kernel rule from the real SOS identity, calibrate it on exact synthetic factor partitions and the authentic SRG243 factor with its own Gram, and attack the structural-space and raw-record checks with malformed/dependent/null-vector, changed-matrix/count/projection/residual and missing-option controls. No synthetic positive is described as a research36 factor.
+
+One ordinary120-second cooperative audit allocation. Save complete source/environment/provenance, independent structural basis/decomposition records, counts and controls, precise report and canonical claim binding. The exact claim is that the three kernels equal the balanced-baseline kernel and the resulting necessary local screen removes zero of6444 initial options. It does not assert every other count profile has that kernel, global feasibility, target existence/exclusion or novelty. Initial availability LOCAL_ONLY.

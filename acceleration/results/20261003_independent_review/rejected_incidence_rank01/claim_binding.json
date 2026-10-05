@@ -1,0 +1,108 @@
+{
+  "id": "C-GENERIC-BINARY-PROJECTION-CODOMAIN-ISOTROPY-RANK-LEMMA",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every binary99x231 matrix B and symmetric binary99x99 idempotent P of rank54 with zero diagonal, if M=I+P has rank45, BB^T=M, and C=PB, then CC^T=0 implies rank(C)<=27 and rank(B)<=72.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "REFUTED",
+  "review_state": "CLEAR",
+  "scope": {
+    "description": "Only this universal generic binary projection/factor implication. No incidence regularity, weight3 columns, target adjacency identity over the integers, or hypothetical graph is included in its assumptions.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "All displayed products and ranks are overGF(2).",
+    "The precise quantified generic matrix assumptions in the statement."
+  ],
+  "dependencies": [],
+  "created_at": "2026-10-02T15:55:44.151443+00:00",
+  "updated_at": "2026-10-02T15:55:44.151443+00:00",
+  "producer": "/root",
+  "original_false_argument_originator": "/root/structural",
+  "verifier": "/root/structural",
+  "method": "independent_artifact_check",
+  "verification_timestamp": "2026-10-02T15:49:20.443802+00:00",
+  "source_commit": "51a0c019178add446941d920ae0d3da63c58ac29",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20261003_rejected_incidence_rank_v1.py",
+    "--seconds",
+    "20",
+    "--out",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank01"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "report": "acceleration/results/20261003_independent_review/rejected_incidence_rank01/summary.json",
+  "report_sha256": "b61f14f953c34396bf410d443964a4e549753bcdc6b2efbd9e71256eec7aa071",
+  "inputs_sha256": {
+    "acceleration/audit_20261003_rejected_incidence_rank_v1.py": "7108b54118b9005def3c3b4d1242544b635443fcf1603c353afb3b489b49ab3a",
+    "docs/AUDIT_20261003_REJECTED_INCIDENCE_RANK_V1.md": "d86b421ef834f54edc7e6743639d01f74a6463a07598404b28c5ef663e1495b1",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank01/summary.json": "b61f14f953c34396bf410d443964a4e549753bcdc6b2efbd9e71256eec7aa071",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank01/raw_counterexample.json": "94d4c5331f30bf86db9d0cac0fb7821ee37d3d770536880429b55267a1d33faf",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank_supervisor01/manifest.json": "a3ed5688db04217b350bbb80cb88370e031fb562fd8adcd49355922c973b27ba",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank_supervisor01/summary.json": "24612045837564fb24d4d29b25e2cff5ca94ab46a23c3bb702fed45c83bb3d15",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank_supervisor01/progress.jsonl": "067f3f40075d9f8c47503d5cac0cfe973f31a634ed2b213560e3625dd9a0a9b7",
+    "acceleration/record_20261003_rejected_incidence_rank_binding_v1.py": "b8d40a1bd2ee0c5073ea5afc8c40504ba281d314f8a85922c82005e93e631dfb"
+  },
+  "shared_components": [
+    "Standard-library exact scalar GF2 products and bitset elimination; only pinned command_deadline.py and run_compute_command.py provide execution containment. No producer checker/source is imported."
+  ],
+  "refutation": {
+    "raw_artifact": "acceleration/results/20261003_independent_review/rejected_incidence_rank01/raw_counterexample.json",
+    "sha256": "94d4c5331f30bf86db9d0cac0fb7821ee37d3d770536880429b55267a1d33faf",
+    "ranks": {
+      "P": 54,
+      "M": 45,
+      "B": 99,
+      "C": 54
+    },
+    "exact_identities": [
+      "P symmetric, diagonalzero, P^2=P",
+      "M=I+P, M^2=M, PM=0",
+      "BB^T=M",
+      "C=PB, CC^T=0",
+      "rank(P)=54,rank(M)=45,rank(B)=99,rank(C)=54"
+    ],
+    "controls": [
+      "I54-I54 has rank54 and zero Gram",
+      "Changed duplicate factor column breaks BB^T=M",
+      "Changed projection diagonal breaks P^2=P"
+    ]
+  },
+  "provenance": {
+    "original_proposal_sender": "/root/structural",
+    "original_message_timestamp": null,
+    "original_message_timestamp_null_reason": "The delivered collaboration text did not expose a timestamp; none is invented.",
+    "original_producer_source": null,
+    "original_producer_source_null_reason": "No source, code-size experiment or target claim binding was produced before the parent veto.",
+    "original_proposal_verbatim": "While GF2 awaits your scalarcheck, found a potentially different unrestricted coding route beyond archived wave102 (which only records45\u2264rank2B\u226499): with M=BB\u1d40=I+A overF2, rankM45 and P=I\u2212M=A projects to54dim nondegenerate alternating kerM. C=PB satisfies CC\u1d40=0, so rankC\u226427 and rankB=45+rankC\u226472. Thus K=kerB\u1d40 has dimension\u226527, even nonzero weights36..60 by archived7-regular support/eigenbounds. Candidate necessary even binary[99,\u226527,\u226536]code, additionally coisotropic in ImA. No proof promotion/novelty claim; quick archive exact-term search found no72bound. A separately declared small exact Krawtchouk weight-enumerator LP (allunknown evenweights36..60, MacWilliams positivity) could cheap-falsify code feasibility, with exactdual certificates if negative. I can prepare candidate written derivation/controlprotocol without costlybuild while standing by weight60.",
+    "parent_counterexample_originator": "/root",
+    "parent_veto": "CC^T=0 bounds rowspace isotropy in the231-dimensional domain, not columnspace rank in the54-dimensional codomain. The generic projector/factor counterexample has rankC54,rankB99. It does not satisfy the actual linear3uniform7regular incidence constraints, so it does not refute a target-specific72bound."
+  },
+  "limitations": [
+    "Synthetic B contains columns of weights0,1,2,3 and is not a linear3uniform7regular target triangle-incidence matrix.",
+    "The proposed target-specific rank(B)<=72 statement remains UNKNOWN, rather than REFUTED.",
+    "The refuted inference was never used as a verified target premise or in a scientific code-feasibility run.",
+    "No novelty, literature completeness, graph existence or general nonexistence is asserted."
+  ],
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Raw counterexample, checker, report, written preserved argument and actual receipts are present at the pinned workspace paths; public replay availability follows publication separately.",
+  "ledger_mutations": 0,
+  "writer_source_sha256": "b8d40a1bd2ee0c5073ea5afc8c40504ba281d314f8a85922c82005e93e631dfb",
+  "writer_command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20261003_rejected_incidence_rank_binding_v1.py",
+    "--out",
+    "acceleration/results/20261003_independent_review/rejected_incidence_rank01/claim_binding.json"
+  ]
+}

@@ -1,0 +1,10 @@
+# Parameterized ordinary literal copier V3
+
+Narrow repair of preserved V2 and its actual failed first qualification2195f12: CopyObject now uses ConvertTo-Json -InputObject, ConvertFrom-Json -NoEnumerate, and unary-comma non-enumerating return. SaveJson uses explicit ConvertTo-Json -InputObject. Empty/singleton arrays and the one-identity evidence_resolution array remain literal arrays. Source/spec self pins and summary schema advance to V3; all count, path, complete union, reuse, prefix, LOCAL_ONLY, closing reserve, containment and no-live-write contracts are unchanged from V2.
+
+Actual failure review: acceleration/results/20261004_bound_literal_claims_controls_root_failed_review01.json, SHAd8c676016a5dc8c7328554d4d40b577a0e5e957951314de75200453c6f6cc742. It preserves14first-case/5SUPfiles, zero completed controls and20unattempted. The CP independent static cardinality diagnosis preceded learning of actual Root failure, not actual launch. This is an administrative serialization defect; it does not invalidate unrelated previously typed-installed mathematics.
+
+New qualification must run all19old negatives plus3positives: original two count/prefix populations, and one old claim/two appended claims/one evidence identity with empty and singleton arrays. Fresh V3 source, typed-checkerV2 applicability, harnessV3, inputs and actual Root terminal/gate are required. No automatic retry or oldgate transfer.
+
+Packet schema BOUND_LITERAL_APPEND_PACKET_V1 and exact baseline/counts/schema/claimcores/evidence/prefix policy unchanged. Native JSON-object-subset parser only; separate typed checker rejects duplicate keys and bool aliases. All previous objects retain literal types and values; only updated_at and append arrays change. Four physical outputs/three output hashes, or retained failure/nonzero. CP authored shared copier/checker adaptations; Root separately checks whole typed projections and generic schema before installation. No mathematical verification, solver, proof replay, ledger/Git/admin mutation or scientific execution. Outer Job receipt and closing20reserve remain required.
+

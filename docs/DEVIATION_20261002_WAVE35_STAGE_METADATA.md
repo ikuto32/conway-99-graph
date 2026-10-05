@@ -1,0 +1,3 @@
+# Stage01 prose correction
+
+The stage01 supervisor's success-criterion prose contains the literal size typo `504? checkpoint`. Preserve its original manifest and receipts. The executed stager independently guarded the exact494930751-byte GF3 native checkpoint and SHA256c2c13e6e83079264344f9610ba31ebe254544b501d9b95e9cafea9ff2d66b0b8, then omitted it as LOCAL_ONLY. The recorded stage01 manifest has298direct members/112723318bytes and two omitted objects (that checkpoint and the previously packaged57414699-byte raw model). The typo changes no executable guard, frozen source, artifact, mathematical statement or availability. This correction supplies the intended prose scope and does not rewrite the executed evidence.

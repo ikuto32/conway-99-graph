@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-09-29T20:24:38.557543+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_local_redundancy_v1.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "numpy": "2.5.3",
+  "verifier": "/root independent written and exact raw-matrix review",
+  "recommendation": "VERIFIED",
+  "claim_revision": 1,
+  "external_review": false,
+  "target_resolution": false,
+  "status": "INDEPENDENT_MATCHING_CAP_COMPOSITION_LEMMA_PASS",
+  "claim_id": "C-INDEPENDENT-SET-MATCHING-CAP-COMPOSITION",
+  "statement": "For every finite simple graph G, independent set R and matching M with endpoints in R, if G and every single-edge extension G+e for e in M have common-neighbor counts at most 2-adjacency for all distinct pairs, then G+M has the same caps.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "scope": "Universal finite-graph implication under independent-endpoint and matching hypotheses; only common-neighbor upper caps, not graph completion.",
+  "dependencies": [],
+  "inputs_sha256": {
+    "acceleration/theory_20260930_matching_cap_composition.md": "fa21974d2b403d004d5c781f5cf21e1af01116b20c739bc2d06ea948c885794c",
+    "acceleration/audit_20260930_local_redundancy_v1.py": "2107b8e136f94de72559b2cfc3ea7471513f5b0d98b57bb0ff0b7ecd69f20388",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "controls": {
+    "exhaustive_four_vertex_base_graphs": 64,
+    "independent_endpoint_partial_matching_cases": 259,
+    "satisfying_premises": 216,
+    "removed_independence_counterexample": true,
+    "overlapping_added_edges_counterexample": true,
+    "windmill_positive": true
+  },
+  "derivation": "With adjacency matrices A and matching M, the off-diagonal change in (A+M)^2 is AM+MA because M^2 is diagonal. For two matched endpoints both cross terms vanish by independence of R. For exactly one matched endpoint the rows/count are the same as its single-edge extension; for no matched endpoint nothing changes. The changed adjacency cap occurs only on a matching edge and is covered by its single-edge hypothesis. These cases exhaust every distinct pair.",
+  "application_review": "For a cap-admissible complete center star, known edges induced on its neighborhood have maximum degree one (otherwise a center-neighbor adjacent pair has at least two common neighbors). Removing all known-edge endpoints leaves an independent set. Thus the theorem applies to the residual matching in the existing filter whenever its separately checked individual-edge premises hold.",
+  "shared_components": [
+    "Python exact integers and standard library"
+  ],
+  "limitations": [
+    "The producer 21,504-star sample is not independently replayed by this report and is not a premise for this general proof.",
+    "No claim that different centers can choose their matchings consistently.",
+    "No degree completion, SRG construction, or exclusion is established."
+  ]
+}

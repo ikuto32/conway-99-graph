@@ -1,0 +1,296 @@
+{
+  "schema": "BOUND_LITERAL_FINITE_CONTROLS_V1",
+  "source_only": true,
+  "author": "/root/checkpoint_audit",
+  "actual_executor": "/root",
+  "timestamp": "2026-10-04T21:38:36.442Z",
+  "inputs_sha256": {
+    "acceleration/check_20261004_bound_literal_claims_v1.py": "4fbcd1f6d01f82caf6124819969a665d7b52ca054bae0429c97462cb9ced0d03",
+    "acceleration/check_20261004_bound_literal_claims_v1_spec.md": "0634d68fb9a7397b30082f1f716c511e1dcd85cfd8831f11cf3bbc824f375af5",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/materialize_20261004_bound_literal_claims_v2.ps1": "07761391cacbc2470a5bc25adb12ebd88d29552914c4365763303f3d531e8e9a",
+    "acceleration/materialize_20261004_bound_literal_claims_v2_spec.md": "4a2445ca35e8d7ce8c19a44e1df486e79ebe02dd2a6127f5dd8efc1732d96385",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/validate_claims.py": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265",
+    "docs/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/exercise_20261004_bound_literal_claims_v2.py": "a1d579c39f07112951e22f724e9165180c3f4e830e026efda7a3cd136f857fbe",
+    "acceleration/exercise_20261004_bound_literal_claims_v2_spec.md": "29b8fd3c95831d7c7e75acd9996557109fbcd6548e9aea2607b101eee982bce5"
+  },
+  "copier": {
+    "path": "acceleration/materialize_20261004_bound_literal_claims_v2.ps1",
+    "sha256": "07761391cacbc2470a5bc25adb12ebd88d29552914c4365763303f3d531e8e9a",
+    "spec_path": "acceleration/materialize_20261004_bound_literal_claims_v2_spec.md",
+    "spec_sha256": "4a2445ca35e8d7ce8c19a44e1df486e79ebe02dd2a6127f5dd8efc1732d96385"
+  },
+  "checker": {
+    "path": "acceleration/check_20261004_bound_literal_claims_v1.py",
+    "sha256": "4fbcd1f6d01f82caf6124819969a665d7b52ca054bae0429c97462cb9ced0d03",
+    "spec_path": "acceleration/check_20261004_bound_literal_claims_v1_spec.md",
+    "spec_sha256": "0634d68fb9a7397b30082f1f716c511e1dcd85cfd8831f11cf3bbc824f375af5"
+  },
+  "pwsh": {
+    "path": "C:/Program Files/PowerShell/7/pwsh.exe",
+    "sha256": "bfb46af89433268872ddb43d1ca7a3f433452ee91ed356a9786940f90118e285"
+  },
+  "python_sha256": "f41189ee84825ffeea37fcea2dd7d3004fafa86458ce4f1243a4be59dc611907",
+  "validator": {
+    "path": "acceleration/validate_claims.py",
+    "sha256": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265"
+  },
+  "schema_definition": {
+    "path": "docs/claims.schema.json",
+    "sha256": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac"
+  },
+  "routes": [
+    {
+      "ordinal": 0,
+      "name": "positive_one",
+      "mutation": "none",
+      "population": "one",
+      "positive": true,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 1,
+      "name": "positive_two",
+      "mutation": "none",
+      "population": "two",
+      "positive": true,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 2,
+      "name": "count_bool",
+      "mutation": "count_bool",
+      "population": "one",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "NEW_CLAIM_COUNT",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 3,
+      "name": "after_mismatch",
+      "mutation": "after_mismatch",
+      "population": "two",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "EXACT_CLAIM_COUNTS",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 4,
+      "name": "union_omit",
+      "mutation": "union_omit",
+      "population": "one",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "EXACT_EVIDENCE_UNION",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 5,
+      "name": "map_hash",
+      "mutation": "map_hash",
+      "population": "two",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "CLAIM_EVIDENCE_IDENTITY",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 6,
+      "name": "prefix_invalid",
+      "mutation": "prefix_invalid",
+      "population": "one",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "ARTIFACT_POLICY",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 7,
+      "name": "public_bool",
+      "mutation": "public_bool",
+      "population": "two",
+      "positive": false,
+      "subject": "copier",
+      "expected_stage": "PUBLIC_COUNT",
+      "expected_line": null,
+      "expected_exception": null
+    },
+    {
+      "ordinal": 8,
+      "name": "late_old_claim",
+      "mutation": "late_old_claim",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 83,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 9,
+      "name": "late_old_artifact",
+      "mutation": "late_old_artifact",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 84,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 10,
+      "name": "top_field",
+      "mutation": "top_field",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 87,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 11,
+      "name": "PUBLIC",
+      "mutation": "public",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 84,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 12,
+      "name": "bool_core",
+      "mutation": "core_bool",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 132,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 13,
+      "name": "bool_ordinal",
+      "mutation": "ordinal_bool",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 116,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 14,
+      "name": "late_identity",
+      "mutation": "late_identity",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 51,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 15,
+      "name": "wrong_reuse",
+      "mutation": "wrong_reuse",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 116,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 16,
+      "name": "wrong_reason",
+      "mutation": "wrong_reason",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 121,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 17,
+      "name": "eighth_equivalent_omission",
+      "mutation": "omission",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 82,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 18,
+      "name": "duplicate_JSON",
+      "mutation": "duplicate_json",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 15,
+      "expected_exception": "ValueError"
+    },
+    {
+      "ordinal": 19,
+      "name": "bool_summary",
+      "mutation": "summary_bool",
+      "population": "two",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 29,
+      "expected_exception": "AssertionError"
+    },
+    {
+      "ordinal": 20,
+      "name": "existing_output",
+      "mutation": "existing_out",
+      "population": "one",
+      "positive": false,
+      "subject": "checker",
+      "expected_stage": null,
+      "expected_line": 143,
+      "expected_exception": "AssertionError"
+    }
+  ],
+  "counts": {
+    "positive": 2,
+    "negative": 19,
+    "total": 21,
+    "child_calls": 36,
+    "physical_files": 291,
+    "summary_output_hashes": 290
+  },
+  "Root_ONE": null,
+  "dispatch_authorized": false,
+  "mathematical_replays": 0,
+  "parent_configuration": {
+    "path": "acceleration/configuration_20261004_bound_literal_claims_controls_v1.json",
+    "sha256": "9db7d551d8a530aff931ebc26cfabdcc914ed5848bf6e958dc857e62b5274362",
+    "status": "SOURCE_ONLY_UNEXECUTED"
+  }
+}
+

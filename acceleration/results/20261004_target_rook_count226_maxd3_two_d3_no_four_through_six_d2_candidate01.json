@@ -1,0 +1,31 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:42:49Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-FOUR-THROUGH-SIX-D2-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T. Suppose R=226, every d_T belongs to {0,1,2,3}, and exactly two actual deficiency-three triangles occur and are disjoint. Then the number b of actual deficiency-two triangles does not belong to {4,5,6}.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle","exactly two actual d3 triangles, pairwise disjoint"],
+  "scope":{"description":"Conditional exclusion of b4..6 in the disjoint c2 R226/maxd3 lane by actual-label bad-pair components and weighted Gram.","unrestricted_target":true,"two_D3_lane_excluded":false,"count226_excluded":false,"maximum_deficiency3_inferred":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_FOUR_THROUGH_SIX_D2_V1.md","sha256":"b1431c80962d0a8b65dd12d9fdf5f2a2ad057261954d38757b735cff48b5861d"},
+  "inputs_sha256":{"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_FOUR_THROUGH_SIX_D2_V1.md":"b1431c80962d0a8b65dd12d9fdf5f2a2ad057261954d38757b735cff48b5861d"},
+  "exact_bad_pair_components":["singleton","K2","P3"],
+  "actual_label_veto":"A-B-A three-edge path forces the first D3 and the two middle D2 roots to meet at three distinct actual points, violating lambda1.",
+  "outside_point_rule":"A local outside degree-two root needs at least3 positive roots, at most1 from each bad-pair component; two components imply all D2 roots wholly in selected support.",
+  "hand_table":[
+    {"b":4,"h":"0","K_minimum":12,"ell_minimum":6,"H_minimum":0,"q_upper_bound":-18},
+    {"b":4,"h":"1","K_minimum":10,"ell_minimum":4,"H_minimum":0,"q_upper_bound":-4},
+    {"b":4,"h":"2","K_minimum":8,"ell_minimum":2,"H_minimum":12,"q_upper_bound":-14},
+    {"b":5,"h":"0..2","K_minimum":8,"ell_minimum":2,"H_minimum":0,"q_upper_bound":-4},
+    {"b":5,"h":"3","K_minimum":6,"ell_minimum":1,"H_minimum":15,"q_upper_bound":-22},
+    {"b":6,"h":"0..3","K_minimum":6,"ell_minimum":0,"H_minimum":0,"q_upper_bound":-2},
+    {"b":6,"h":"4","K_minimum":4,"ell_minimum":0,"H_minimum":18,"q_upper_bound":-28}
+  ],
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Root_and_Structural_actual_label_bad_graph_outline":true,"Structural_complete_component_and_weighted_table_challenge":true,"earlier_weighted_fan_components_disclosed":true,"no_pending_gate_used":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["The valid P3 component is retained; only a three-edge path is forbidden by these actual labels.","Larger even selected incidences and all extra support edges remain in the exact weighted identity.","No absence of outside D2 points is presumed in nonmaximal-h rows.","No complete c2, R226 or target exclusion, realization, automorphism or equitability is claimed."]
+}

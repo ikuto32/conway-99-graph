@@ -1,0 +1,7 @@
+# Wave30 followup registration, frozen before use
+
+Start only from exact303 ledger0fd27c9fe019247eded6509f4c228141ce350e3cf387d98314742c89ecc1d56d. Register exactly batch04 encoding v4 and complete proof, batch05 encoding v3 and complete proof, and the independently derived Z82 conditional identity/one-row redundancy. Require all128 exact literal cases complete, disjoint, chained after252 then316 prior cases, same formula/hash populations, correct independent verifier, and actual complete DRAT PASS. For Z82 require the exact arithmetic report and completed written normalization/source-panel review; no imported historical premise and no exclusion.
+
+Authenticate every bound artifact before editing. Preserve all303 prior claim and artifact records unchanged. Reject malformed status/revision/verifier/report/formula controls. Validate schema, current dependencies, promotions and available artifact hashes. Expected308 claims301VERIFIED3CANDIDATE4REFUTED. The universal conditional Z82 implication sets unrestricted_target true but target_resolution NONE; fixed-support batch claims remain false/NONE. This registrar does no mathematical replay.
+
+Retain the previously reviewed same-volume temporary ledger, fsync, prepared receipt/journal, atomic rename, and observed-hash failure recovery. On interruption compare immutable before/after/live bytes; do not rerun or overwrite the transaction. Freeze source/spec and preserve source-only reviews. Preparation alone never executes this registrar.

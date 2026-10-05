@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-09-29T20:50:36.332872+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_orbit_replay_record.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "inputs_sha256": {
+    "acceleration/audit_20260930_rook_orbit_sat.py": "5b1a2369e1fc2c6ccef8958aec882a50a463357b03d572deee8ba98dc30ce5a7",
+    "acceleration/audit_20260930_rook_orbit_sat_v2.py": "487f6d3a5d88107361d381daeb9f7c7bf1062584b1cd2cd9723c4bf6a275b35f",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_calibration/summary.json": "2bc5c6689640bbc0eee981a080da6b049319f8d08f9158a25067f8276681b61e",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_calibration_v2/summary.json": "456ee2dbe90cae79bfad78a521e570c1297fe5c4b1f35be30ee723dde88c0365",
+    "acceleration/results/20260930_rook_orbit_solver_pilot/independent_sat.log": "b6d8e88c83ee5cb172506fe3613e2bc91e17b5be6763c850cea38e0fb6ae9f6b",
+    "acceleration/results/20260930_rook_orbit_solver_pilot/summary.json": "7e18bd71440f7cbe1498022705b5c058ebf4066e01160eb8466f5cc39049db71",
+    "acceleration/results/20260930_rook_orbit_solver_pilot/main/model.json": "c2ffc1de085251f4588f2da845ceaa0566be6132bf5f5e58dc85ee0cbb45778a",
+    "acceleration/results/20260930_rook_orbit_solver_pilot/instance.cnf": "03816edf1d5ac3afafbd856a049703499b1306e79700728f68c06ac0205429c1",
+    "acceleration/results/20260930_independent_review/rook_cut_orbits/summary.json": "9abc83c032bc5454c6f05d6cab0146fd39775f9f994d4f4dc3579dfccf6ef6ac",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/summary.json": "511aa9b61eb913b84d3e6d8be1adc71d889897a28538669bcf41e8521b1cb8a8",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_replay_v2/independent_full59.json": "989cb3d10e7985cfa11958b579f0ede4ffa8e3d94fc8ed73c43ffbde26effbdc",
+    "acceleration/audit_20260930_rook_orbit_replay_record.py": "f0357eba8080238915377168e9e663afc764da830665601718fa82ec54647cd2",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "original_attempt": "CHECKER_INPUT_METADATA_ERROR_BEFORE_SAT_VALIDATION",
+  "original_failure": "The exact encoding audit stored Windows backslash paths while the initial checker looked up normalized forward-slash keys.",
+  "correction": "New version normalizes absolute/relative and slash conventions, checks conflicting aliases, and pins exact base/model hashes from the original independent encoding gate.",
+  "preserved": [
+    "Original source and successful finite controls",
+    "Original failed invocation/log",
+    "Actual solver cleanup exit3221226505",
+    "Raw complete SAT assignment"
+  ],
+  "impact": "No mathematical orbit cut was invalidated. The first replay established no SAT conclusion. The new replay checks the same saved complete assignment without launching or retrying the solver.",
+  "corrected_replay": "INDEPENDENT_ORBIT_AUGMENTED_ROOK_WINDOW_SAT_PASS",
+  "clause_checks": 3690172,
+  "assignment_variables": 30420,
+  "added_orbit_clauses": 352,
+  "raw_local_graph_sha256": "989cb3d10e7985cfa11958b579f0ede4ffa8e3d94fc8ed73c43ffbde26effbdc",
+  "solver_launched": false,
+  "target_resolution": false,
+  "external_review": false,
+  "statement": "A59vertex local witness satisfies the exact pinned base and all352 independently checked orbit clauses; no target completion or family exclusion follows."
+}

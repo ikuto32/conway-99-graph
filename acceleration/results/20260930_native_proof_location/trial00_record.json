@@ -1,0 +1,79 @@
+{
+  "location": "windows",
+  "native_receipt": {
+    "timestamp": "2026-09-29T21:19:45.170138+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "15s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "1000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_proof_location/pigeonhole9into8.cnf",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_proof_location/trial00_windows/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 20,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 35,
+    "wall_seconds": 0.9690000000409782,
+    "stdout": "acceleration/results/20260930_native_proof_location/trial00_windows/solver.stdout.log",
+    "stdout_sha256": "1b22af6b67c189dfd101a13442161e71f7fde3afefeaefbd7f7e2c597d7497b2",
+    "stderr": "acceleration/results/20260930_native_proof_location/trial00_windows/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "copy": null,
+  "proof": "acceleration/results/20260930_native_proof_location/trial00_windows/proof.drat",
+  "proof_sha256": "997943286ed0604ced76a54fd01c5af2b1329e0425860717a3f853053efa12dd",
+  "proof_bytes": 2729103,
+  "solver_plus_copy_seconds": 0.9690000000409782,
+  "index": 0,
+  "status": "COMPLETED_UNSAT",
+  "proof_check": {
+    "accepted": true,
+    "proof_sha256": "997943286ed0604ced76a54fd01c5af2b1329e0425860717a3f853053efa12dd",
+    "receipt": {
+      "timestamp": "2026-09-29T21:19:45.508135+00:00",
+      "command": [
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_proof_location\\pigeonhole9into8.cnf",
+        "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_proof_location\\trial00_windows\\proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 30,
+      "wall_seconds": 0.32800000021234155,
+      "stdout": "acceleration/results/20260930_native_proof_location/trial00_checker.stdout.log",
+      "stdout_sha256": "1a3deddb049761d45e4479a1f3830bf5010166a0954f503fb3de3a5673e335a4",
+      "stderr": "acceleration/results/20260930_native_proof_location/trial00_checker.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    }
+  }
+}

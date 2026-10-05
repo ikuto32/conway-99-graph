@@ -1,0 +1,220 @@
+{
+  "tiny_CSPs": [
+    {
+      "name": "satisfiable_equal",
+      "initial": [
+        1,
+        3
+      ],
+      "relations": [
+        {
+          "source": 0,
+          "target": 1,
+          "supports": [
+            1,
+            2
+          ]
+        },
+        {
+          "source": 1,
+          "target": 0,
+          "supports": [
+            1,
+            2
+          ]
+        }
+      ],
+      "complete_solutions": [
+        [
+          0,
+          0
+        ]
+      ],
+      "result": {
+        "initial_domains": [
+          "0000000000000000000000000000000001",
+          "0000000000000000000000000000000003"
+        ],
+        "removals": [
+          {
+            "domain": 1,
+            "value": 1,
+            "neighbor": 0,
+            "support_mask": "0000000000000000000000000000000002",
+            "neighbor_current_mask": "0000000000000000000000000000000001",
+            "intersection_mask": "0000000000000000000000000000000000"
+          }
+        ],
+        "final_domains": [
+          "0000000000000000000000000000000001",
+          "0000000000000000000000000000000001"
+        ],
+        "arc_queue_visits": 2,
+        "final_live_value_arc_checks": 2,
+        "empty_domains": []
+      }
+    },
+    {
+      "name": "empty_equal",
+      "initial": [
+        1,
+        2
+      ],
+      "relations": [
+        {
+          "source": 0,
+          "target": 1,
+          "supports": [
+            1,
+            2
+          ]
+        },
+        {
+          "source": 1,
+          "target": 0,
+          "supports": [
+            1,
+            2
+          ]
+        }
+      ],
+      "complete_solutions": [],
+      "result": {
+        "initial_domains": [
+          "0000000000000000000000000000000001",
+          "0000000000000000000000000000000002"
+        ],
+        "removals": [
+          {
+            "domain": 0,
+            "value": 0,
+            "neighbor": 1,
+            "support_mask": "0000000000000000000000000000000001",
+            "neighbor_current_mask": "0000000000000000000000000000000002",
+            "intersection_mask": "0000000000000000000000000000000000"
+          },
+          {
+            "domain": 1,
+            "value": 1,
+            "neighbor": 0,
+            "support_mask": "0000000000000000000000000000000002",
+            "neighbor_current_mask": "0000000000000000000000000000000000",
+            "intersection_mask": "0000000000000000000000000000000000"
+          }
+        ],
+        "final_domains": [
+          "0000000000000000000000000000000000",
+          "0000000000000000000000000000000000"
+        ],
+        "arc_queue_visits": 2,
+        "final_live_value_arc_checks": 0,
+        "empty_domains": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "name": "arc_consistent_unsat_triangle",
+      "initial": [
+        3,
+        3,
+        3
+      ],
+      "relations": [
+        {
+          "source": 0,
+          "target": 1,
+          "supports": [
+            2,
+            1
+          ]
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "supports": [
+            2,
+            1
+          ]
+        },
+        {
+          "source": 1,
+          "target": 0,
+          "supports": [
+            2,
+            1
+          ]
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "supports": [
+            2,
+            1
+          ]
+        },
+        {
+          "source": 2,
+          "target": 0,
+          "supports": [
+            2,
+            1
+          ]
+        },
+        {
+          "source": 2,
+          "target": 1,
+          "supports": [
+            2,
+            1
+          ]
+        }
+      ],
+      "complete_solutions": [],
+      "result": {
+        "initial_domains": [
+          "0000000000000000000000000000000003",
+          "0000000000000000000000000000000003",
+          "0000000000000000000000000000000003"
+        ],
+        "removals": [],
+        "final_domains": [
+          "0000000000000000000000000000000003",
+          "0000000000000000000000000000000003",
+          "0000000000000000000000000000000003"
+        ],
+        "arc_queue_visits": 6,
+        "final_live_value_arc_checks": 12,
+        "empty_domains": []
+      }
+    }
+  ],
+  "corrupted_traces": [
+    {
+      "name": "wrong_support",
+      "rejected": true
+    },
+    {
+      "name": "wrong_neighbor_state",
+      "rejected": true
+    },
+    {
+      "name": "wrong_value",
+      "rejected": true
+    },
+    {
+      "name": "missing_removal",
+      "rejected": true
+    },
+    {
+      "name": "duplicate_removal",
+      "rejected": true
+    },
+    {
+      "name": "false_terminal_domain",
+      "rejected": true
+    }
+  ],
+  "independent_research_verification": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:11:10Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-DEFICIENCY4-BOUNDARIES",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and d_T=6-r_T for each actual triangle. Suppose R=226 and some actual triangle has deficiency four. Then exactly one triangle has deficiency four. If a,b,c count the deficiency-one, two and three triangles, then a=26-2b-3c and 3<=b+2c<=6. At each of the unique d4 triangle's three points the positive local defect graph is K1,4: that d4 root and precisely four d1 roots, with no d2, d3 or other d4 root. In particular that d4 triangle is disjoint from every other positive triangle of deficiency at least two.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T for each actual triangle","some actual triangle has d_T=4"],
+  "scope":{"description":"Exact necessary population and local-point boundary for the deficiency-four lane at R226.","unrestricted_target":true,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN","count226_excluded":false,"deficiency4_excluded":false},
+  "dependencies":[{"id":"C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND","revision":1,"relation":"uses_result"}],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_DEFICIENCY4_BOUNDARIES_V1.md","sha256":"ba19a46fdf1fc24e5173ca905a52b1f2ab7d2f2440415b1536c1150c441dfe8b"},
+  "inputs_sha256":{
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_DEFICIENCY4_BOUNDARIES_V1.md":"ba19a46fdf1fc24e5173ca905a52b1f2ab7d2f2440415b1536c1150c441dfe8b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md":"85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json":"edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf"
+  },
+  "proof_route":["Strict mass gives maximum deficiency at most four at D30.","Complete parity, fan and graphical-degree checks give four possible d4 point profiles.","The pair matching moment excludes three or more d4 roots and fixes the two-root population to a22,b=c0.","Complete actual-F cycle incidence bounds exclude that two-root population and all four single-root cases with b+2c<=2.","The remaining single root has P<=24 and therefore pure K1,4 at all three points, while its fan21 forces b+2c<=6."],
+  "small_cycle_incidence_upper_bounds":{"two_d4_a22":158,"single_d4_b0_c0":154,"single_d4_b1_c0_disjoint":156,"single_d4_b1_c0_intersecting":168,"single_d4_b2_c0_high_triangle":179,"single_d4_b2_c0_disjoint_high_pair":161,"single_d4_b2_c0_adjacent_high_pair":164,"single_d4_b0_c1":157,"required_incidence":180},
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Root_degree4_and_pair_moment_outlines":true,"Structural_independent_reconstruction_and_cycle_bounds":true,"earlier_R227_fan_cycle_codegree_components_disclosed":true,"distinct_written_review_required":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["This is not a realization of any listed population.","Neither R226 nor all deficiency-four triangles are excluded by this necessary statement.","The twelve scalar pairs are hand-listed necessary possibilities, not a computational census.","The bounded current filename comparison makes no whole-archive or novelty claim."]
+}

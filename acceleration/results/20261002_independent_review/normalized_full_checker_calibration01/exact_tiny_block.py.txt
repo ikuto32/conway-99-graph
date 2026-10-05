@@ -1,0 +1,13 @@
+tiny = {'variables': [0], 'equations': [{'terms': [[0, 2]], 'rhs_affine': [2, 0, 0]}, {'terms': [[0, 4]], 'rhs_affine': [4, 0, 0]}]}
+independent.check_vectors(tiny, [[1], [0], [0]])
+rejected('tiny_flipped_vector', lambda: independent.check_vectors(tiny, [[0], [0], [0]]), 'PRIMAL_SCALAR_ROW')
+bad = json.loads(json.dumps(tiny))
+bad['equations'][0]['rhs_affine'][0] = 4
+rejected('tiny_changed_RHS', lambda: independent.check_vectors(bad, [[1], [0], [0]]), 'PRIMAL_SCALAR_ROW')
+bad = json.loads(json.dumps(tiny))
+bad['equations'][0]['terms'][0][1] = 0
+rejected('tiny_changed_coefficient', lambda: independent.check_vectors(bad, [[1], [0], [0]]), 'PRIMAL_SCALAR_ROW')
+inconsistent = {'variables': [0], 'equations': [{'terms': [[0, 2]], 'rhs_affine': [0, 0, 0]}, {'terms': [[0, 1]], 'rhs_affine': [1, 0, 0]}]}
+relation = {'format': 'NORMALIZED_LITERAL_GF2_ROW_XOR_CANDIDATE_V1', 'matrix_rows': 2, 'matrix_columns': 1, 'original_row_indices': [0, 1], 'rhs_affine_mask': 1}
+independent.check_relation(inconsistent, relation)
+rejected('tiny_changed_XORmask', lambda: independent.check_relation(inconsistent, dict(relation, rhs_affine_mask=2)), 'XOR_SCALAR_ROW')

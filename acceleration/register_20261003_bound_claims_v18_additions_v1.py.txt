@@ -1,0 +1,155 @@
+# V18 admits only eight frozen ROOT-verifier written metadata records.
+V18_DESCRIPTOR = dict(
+    path='acceleration/proposal_20261003_registrar_v18_exact_written_v1.json',
+    sha256='2692248d4274793d5fb162503d1eb3b9e5b02a517ef13f5fd6080ffc80f49629')
+V18_EXACT = json.loads(r'''{
+  "C-UNRESTRICTED-DEGREE14-TERNARY-PROPER-SUPPORT-NULLITY-LOWER3": {
+    "descriptor_index": 0,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_proper_support_nullity3_01/proper_nullity3/claim_binding_schema2.json",
+    "binding_sha256": "2f61ece7163676b90d069b6e50007d9f0b71a2dacd62659ee5c561ab87fea8ec"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-NULLITY2-PROPER-SUPPORT-EXCEPTION98": {
+    "descriptor_index": 1,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_proper_support_nullity3_01/nullity2_exception98/claim_binding_schema2.json",
+    "binding_sha256": "f5de0f71edc6d833c34e252040c0d44de854b2eefede78141e749dd96042f786"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-EQUAL-OUTSIDE-ROW-BUDGET-FILTER": {
+    "descriptor_index": 2,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_equal_outside_nine_01/equal_outside_filter/claim_binding_schema2.json",
+    "binding_sha256": "103ac4be11643eef9660c60dea5fa08b6c1c1d9cb4efaa0d61f54f81d26ae1e1"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-NINE-DEFECT-NONREALIZABILITY": {
+    "descriptor_index": 3,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_equal_outside_nine_01/nine_defect/claim_binding_schema2.json",
+    "binding_sha256": "07432ba970adc3793d8772cb323b7b3d2388b1090b1cabc8501343c1220dfff2"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-NONZERO-DEFECT-LOWER12": {
+    "descriptor_index": 4,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_nonzero_defect_lower12_01/claim_binding_schema2.json",
+    "binding_sha256": "1aa6f97c2808aa65a5e10ebb6ab16b65bde67896651acdf05371bae0a47895f8"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-TWELVE-DEFECT-SUPPORT-CLASSIFICATION": {
+    "descriptor_index": 5,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_twelve_defect_support_classification01/claim_binding_schema2.json",
+    "binding_sha256": "949354d6193616bad1538ef4fb8bad34cd85d512738a522d75ed8245915ed131"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUAL-LIFT-EIGEN1-PARITY": {
+    "descriptor_index": 6,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_lift_parity_global_subcubic24_01/lift_parity/claim_binding_schema2_v3.json",
+    "binding_sha256": "89d19828fe00a204fd38ebf6b5752f1d483e50b581181e469c3cf732dcfd49bd"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-GLOBAL-SUBCUBIC-SUPPORT-LOWER24": {
+    "descriptor_index": 7,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_lift_parity_global_subcubic24_01/global_subcubic24/claim_binding_schema2_v3.json",
+    "binding_sha256": "d84812cc17e23e01a0eece434565ffb92c3229ce0d04ba3ba2c1d5911a438f77"
+  }
+}''')
+
+
+def v18_descriptor(cid):
+    need(cid in V18_EXACT, 'v18 exact descriptor ID')
+    need(digest(ROOT/V18_DESCRIPTOR['path']) == V18_DESCRIPTOR['sha256'],
+         'v18 immutable reviewed descriptor bytes')
+    declared = json.loads((ROOT/V18_DESCRIPTOR['path']).read_bytes())
+    need(declared['schema'] == 'PROSPECTIVE_EXACT_REGISTRAR_V18_WRITTEN_ADAPTER_DESCRIPTORS_V1'
+         and [r['id'] for r in declared['adapters']] == list(V18_EXACT)
+         and type(declared['mathematical_replays']) is int and declared['mathematical_replays'] == 0,
+         'v18 exact eight written descriptor records')
+    exact = V18_EXACT[cid]
+    record = declared['adapters'][exact['descriptor_index']]
+    need(record['id'] == cid and record['binding'] ==
+         dict(path=exact['binding_path'], sha256=exact['binding_sha256']),
+         'v18 exact descriptor binding routing')
+    return record
+
+
+def v18_role(cid, expected, binding):
+    if cid not in V18_EXACT: return False
+    exact = V18_EXACT[cid]
+    need(expected == exact['binding_sha256'], 'v18 exact frozen binding identity')
+    record = v18_descriptor(cid); contract = record['binding_contract']
+    keys = ['id', 'revision', 'claim_revision', 'status', 'review_state',
+            'kind', 'basis', 'producer', 'verifier', 'method']
+    need(all(k in binding and v15_same(binding[k], contract[k]) for k in keys),
+         'v18 exact typed revision status roles method kind basis')
+    need(all(k in binding and v15_same(binding[k], contract[k])
+             for k in ['scope', 'dependencies', 'target_resolution']),
+         'v18 exact original scope dependencies and nonresolution')
+    need('verification_records' not in binding
+         and binding.get('statement') == contract['statement']
+         and binding.get('report') == record['primary_report']['path']
+         and binding.get('report_sha256') == record['primary_report']['sha256']
+         and binding.get('proof') == record['proof']['path']
+         and binding.get('proof_sha256') == record['proof']['sha256']
+         and 'controls' in binding and v15_same(binding['controls'], contract['controls']),
+         'v18 exact literal statement report proof controls and no legacy fallback')
+    need(digest(ROOT/exact['binding_path']) == exact['binding_sha256'],
+         'v18 original immutable binding bytes')
+    original = json.loads((ROOT/exact['binding_path']).read_bytes())
+    need(v15_same(binding, original), 'v18 complete literal binding metadata')
+    need(binding['inputs_sha256'].get(record['proof']['path']) == record['proof']['sha256']
+         and digest(ROOT/record['proof']['path']) == record['proof']['sha256'],
+         'v18 exact independently written proof bytes')
+    return True
+
+
+def v18_report(cid, report_sha, binding, report):
+    if cid not in V18_EXACT: return None
+    exact = V18_EXACT[cid]
+    need(v18_role(cid, exact['binding_sha256'], binding), 'v18 exact bound report routing')
+    record = v18_descriptor(cid); contract = record['report_contract']
+    need(report_sha == record['primary_report']['sha256'],
+         'v18 exact primary report identity')
+    keys = ['status', 'claim_id', 'claim_revision', 'producer', 'verifier',
+            'method', 'target_resolution']
+    need(all(k in report and v15_same(report[k], contract[k]) for k in keys),
+         'v18 exact typed independent report identity and method')
+    headline = record['report_headlines']
+    need(all(k in report and v15_same(report[k], v) for k, v in headline['present'].items())
+         and all(k not in report for k in headline['absent']),
+         'v18 exact literal report headlines and absences')
+    need(all(k in report and v15_same(report[k], contract[k])
+             for k in ['statement', 'scope', 'assumptions', 'dependencies'])
+         and report['statement'] == binding['statement'],
+         'v18 exact written statement original scope assumptions dependencies')
+    need(all(k in report and v15_same(report[k], v) for k, v in record['explicit_null_fields'].items())
+         and all(k in report and report[k] == v and type(v) is str and len(v) > 0
+                 for k, v in record['explicit_null_reason_fields'].items()),
+         'v18 exact written command null and reason')
+    need(all(k in report and v15_same(report[k], v)
+             for k, v in record['written_control_fields'].items()),
+         'v18 exact nonexecuted written control metadata')
+    need(digest(ROOT/record['primary_report']['path']) == report_sha,
+         'v18 original immutable report bytes')
+    original = json.loads((ROOT/record['primary_report']['path']).read_bytes())
+    need(v15_same(report, original), 'v18 complete literal report metadata')
+    return dict(claim_id=cid, claim_revision=1,
+        recorded_binding=exact['binding_path'], recorded_binding_sha256=exact['binding_sha256'],
+        original_report=record['primary_report']['path'], original_report_sha256=report_sha,
+        original_report_statement_field='statement', original_report_statement=report['statement'],
+        recorded_binding_statement=binding['statement'],
+        raw_statement_changed=False, original_report_scope=report['scope'],
+        original_binding_scope=binding['scope'], schema_scope=record['schema_scope'],
+        original_report_headline_fields=headline['present'],
+        original_report_absent_headline_fields={k: None for k in headline['absent']},
+        original_report_absent_headline_null_reason=record['missing_headline_mapping'],
+        original_report_command=report['command'],
+        original_report_command_null_reason=report['command_null_reason'],
+        original_report_controls=record['written_control_fields'],
+        original_independent_report_method=report['method'], schema_method=binding['method'],
+        descriptor_path=V18_DESCRIPTOR['path'], descriptor_sha256=V18_DESCRIPTOR['sha256'],
+        reason='Only the exact eight frozen written metadata bindings: keep literal statement equality, complete original scope, every conditional/whole-support premise and explicit raw report absences. Three schema-scope fields are projected in memory. No original report/binding is rewritten and no mathematics or target inference is performed.',
+        mathematical_replays=0, target_resolution='NONE')
+
+
+def v18_scope(cid, expected, binding):
+    need(cid in V18_EXACT and v18_role(cid, expected, binding),
+         'v18 exact bound scope routing')
+    record = v18_descriptor(cid); scope = record['schema_scope']
+    need(set(scope) == {'description', 'unrestricted_target', 'target_resolution'}
+         and type(scope['description']) is str and len(scope['description']) > 0
+         and scope['unrestricted_target'] is True and scope['target_resolution'] == 'NONE'
+         and v15_same(binding['scope'], record['original_scope']),
+         'v18 exact three schema fields with original scope retained')
+    return copy.deepcopy(scope)
+

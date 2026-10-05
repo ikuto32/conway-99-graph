@@ -1,0 +1,108 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2023 A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt
+c 
+c Version 1.9.5 146207318796f094dcded87349a64f0c6927309e
+c g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 -Wall -Wextra -O3 -DNDEBUG
+c Wed Sep 30 06:02:32 JST 2026 Linux ikutoPC 6.6.87.2-microsoft-standard-WSL2 x86_64
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting conflict limit to 1000000 conflicts (due to '1000000')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/tmp/conway99-triangle-fWEtMm/proof.drat'
+c writing non-binary proof trace to '/tmp/conway99-triangle-fWEtMm/proof.drat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_triangle_wave151_full99_cnf/instance.cnf'
+c opening file to read '/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_triangle_wave151_full99_cnf/instance.cnf'
+c found 'p cnf 429779 1487778' header
+c parsed 1487778 clauses in 0.70 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds   reductions  redundant   irredundant
+c          MB    restarts       trail        variables
+c           level   conflicts       glue           remaining
+c 
+c *  0.70 225  0 0   0    0    0  0% 0 1479168 301687 70%
+c {  0.71 226  0 0   0    0    0  0% 0 1479168 301687 70%
+c i  0.72 228 116 0   0    9    7 33% 1 1479168 301685 70%
+c i  0.72 228 108 0   0   10    7 33% 1 1479168 301684 70%
+c i  0.72 228 96 0   0   12    8 33% 1 1479168 301683 70%
+c i  0.73 230 60 0   0   35   22 32% 2 1479168 301679 70%
+c i  0.74 231 32 0   9   95   72 32% 2 1479168 301547 70%
+c i  0.74 231 32 0   9   96   72 32% 2 1479168 301425 70%
+c i  0.74 231 30 0   9  103   78 31% 2 1479168 299020 70%
+c i  0.74 231 29 0   9  104   78 31% 2 1479168 298862 70%
+c i  0.74 231 29 0   9  105   78 31% 2 1479168 298759 70%
+c i  0.74 231 29 0   9  107   79 31% 2 1479168 297290 69%
+c }  0.74 231 28 0   9  109   79 31% 2 1479168 296287 69%
+c 0  0.75 231 28 0   9  109   79 31% 2 1479168 296287 69%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c DRAT proof file '/tmp/conway99-triangle-fWEtMm/proof.drat' closed
+c DRAT 124977 added clauses 99.99%
+c DRAT 15 deleted clauses 0.01%
+c DRAT 1227250 bytes (1.17 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.70 1238.75% parse
+c         0.05   80.25% search
+c         0.04   64.68% unstable
+c         0.01   15.53% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.06    7.46% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:                31        28.44 %  of conflicts
+c conflicts:                   109      1940.02    per second
+c decisions:                   284      5054.73    per second
+c fixed:                    133492        31.06 %  of all variables
+c learned:                     106        97.25 %  per conflict
+c learned_lits:                696       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                    182        26.15 %  learned literals
+c minishrunken:                 29         4.17 %  learned literals
+c otfs:                          1         0.92 %  of conflict
+c propagations:             406693         7.24 M  per second
+c restarts:                      9        12.11    interval
+c subsumed:                     14         0.00 %  of all clauses
+c strengthened:                  1         0.00 %  of all clauses
+c trail reuses:                  0         0.00 %  of incremental calls
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.75    seconds
+c total real time since initialization:            6.75    seconds
+c maximum resident set size of process:          230.96    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

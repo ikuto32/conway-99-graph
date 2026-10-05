@@ -1,0 +1,40 @@
+# Twenty-second resumed milestone, 2026-09-30 JST
+
+Ten independently checked claims were added since the [twenty-first milestone](RESEARCH_20260930_TWENTYFIRST_WAVE.md). Complete proofs and an exact coverage audit exclude the exactly-four-unbalanced family on one literal support. Together with prior results, any factor in this fixed-support Gram-plus-column-cap family must have at least six unbalanced groups. Conway-99 remains unresolved.
+
+**As of:** 2026-09-30T07:45:40.693608+00:00; source commit c31b42ffc2d0ac1dd3d905ac8f80afe1e094663e. [Checkpoint](../acceleration/results/20260930_resume/twentysecond_milestone_checkpoint.json), [frozen ledger](../acceleration/results/20260930_resume/claims_at_twentysecond_milestone.yaml); previous report: twenty-first milestone.
+
+**Verdict:** target resolution UNKNOWN. This repository has no independently validated target graph or general nonexistence proof. No target-resolution artifact is under external review. This is not a worldwide literature verdict; PR3 remains draft and unmerged.
+
+**Verified changes:**
+
+| Claim | Exact scope and evidence |
+| --- | --- |
+| C-FIXED-HADAMARD-SIX-EXCEPTION-LOCAL-DOMAIN-FILTER r1 | All984 literal marginal profiles and5904 individual group domains only; no cross-group compatibility, full factor, D, or global fibre-orbit reduction is established. [Evidence](../acceleration/results/20260930_independent_review/hadamard_six_profile_local_domains/summary.json). |
+| C-FIXED-HADAMARD-FIFTEEN-FOUR-EXCEPTION-GRAM-ENCODINGS r1 | Fifteen specified literal profiles; cross-group column caps and residualD omitted. The aggregate audit does not prove satisfiability, nonexistence, or coverage of unrestricted target graphs. [Evidence](../acceleration/results/20260930_independent_review/hadamard_fifteen_profile_cnfs/summary.json). |
+| C-FIXED-HADAMARD-MATCHING-COORDINATE-RELABELING-CENSUS r1 | Complete specified matching-preserving coordinate-action family on one fixed support; not all possible36-row actions or target automorphisms. [Evidence](../acceleration/results/20260930_independent_review/hadamard_input_relabeling/summary.json). |
+| C-FIXED-HADAMARD-SEVEN-EXCEPTION-KERNEL-CENSUS r1 | Complete septet census and necessary exactly-seven-exception reduction on this one fixed support. The200 retained subsets are not asserted marginally feasible or realizable. [Evidence](../acceleration/results/20260930_independent_review/hadamard_seven_exception_census/summary.json). |
+| C-FIXED-HADAMARD-SEVEN-EXCEPTION-INTEGER-MARGINAL-CENSUS r1 | Complete necessary integer/count marginal relaxation for the200 fixed septets; no local triple, quadratic Gram, outside-column-cap or graph feasibility claim. [Evidence](../acceleration/results/20260930_independent_review/hadamard_seven_rank5_profiles/summary.json). |
+| C-FIXED-HADAMARD-SIX-EXCEPTION-PAIRWISE-PROFILE-SCREEN r1 | All984 literal exactly-six-exception profiles on one fixed support, using complete locally cap-filtered domains. Both exclusion counts require outside-column caps; first relation omits only cross-group caps. No joint or complete factor feasibility. [Evidence](../acceleration/results/20260930_independent_review/hadamard_six_profile_arc_v3/summary.json). |
+| C-FIXED-HADAMARD-SIX-EXCEPTION-FIBRE-NORMALIZATION r1 | Exactly the pinned984-profile fixed-support universe; no hypothetical target automorphism is assumed. The raw654 empty labels form109 orbits and330 nonempty labels form55 orbits, but their exclusion validity requires a separate AC correctness audit. [Evidence](../acceleration/results/20260930_independent_review/hadamard_six_fibre_orbits/summary.json). |
+| C-FIXED-HADAMARD-FIFTEEN-FOUR-EXCEPTION-EXCLUSIONS r1 | Exactly the15 literal profiles listed; fibre-orbit transfer and complete profile coverage require a separate audit. [Evidence](../acceleration/results/20260930_independent_review/hadamard_fifteen_profile_unsat_v2/summary.json). |
+| C-FIXED-HADAMARD-EXACTLY-FOUR-UNBALANCED-GROUPS-EXCLUSION r1 | Exactly-four-unbalanced subfamily on this literal fixed support;108 labelled necessary profiles are partitioned into12 local-screen exclusions and96 members of16 separately proof-excluded representative orbits. [Evidence](../acceleration/results/20260930_independent_review/hadamard_four_profile_union/summary.json). |
+| C-FIXED-HADAMARD-AT-MOST-FIVE-UNBALANCED-GROUPS-EXCLUSION r1 | At-most-five-unbalanced subfamily excluded; six or more unbalanced groups remain unresolved by this statement. [Evidence](../acceleration/results/20260930_independent_review/hadamard_four_profile_union/summary.json). |
+
+**Work completed:** all fifteen selected formulas were independently reconstructed, attempted once and proved UNSAT. All 149,571,922 complete proof bytes were independently replayed. The union audit checks exactly 108 necessary profiles: 12 local exclusions and 96 disjoint members of 16 proof-excluded representative orbits, with no missing or multiply covered profile. The prior case0 proof supplies the sixteenth representative. No target automorphism is assumed.
+
+For six exceptions, all 984 labelled profiles have nonempty individual local domains. Independent checking reconstructed all 12,648 relations over 12,846,624 option pairs, replayed 208,608 deletions and checked 815,040 surviving supports. The first pair relation empties 582 profiles; adding cross-group caps empties 654, including the 582, leaving 330 nonempty fixed points in 55 relabelling classes. Both stages start with within-group cap-filtered domains. The counts are overlapping stages, not additive coverage.
+
+For seven exceptions, all 77,520 group subsets were checked. Necessary kernel conditions leave 200; complete marginal enumeration excludes 162 and leaves 38 with 1,608 labelled profiles. The independent path checked every one of 154,214 full sequences, 2,400 saved layers and 101,146 state witnesses. Positive marginal counts and AC fixed points do not establish full factors.
+
+**Coverage:** zero new whole-support, core or unrestricted exclusions. Overall search coverage: UNKNOWN; no validated denominator. The ledger contains 216 claims: 213 VERIFIED/CLEAR, two CANDIDATE/CLEAR and one REFUTED/CLEAR. Registry totals are not a measure of Conway-99 solved.
+
+**Best result:** a verified lower bound of six unbalanced groups, conditional on this one fixed support, its prescribed full integer Gram and outside-column overlap caps. No complete factor or target graph was produced in this milestone.
+
+**Problems:** two AC checker metadata assumptions and the first fifteen-proof wrapper's manifest-field assumption were corrected in new versions; original failures remain. Recovery-helper v1 also stopped before writes on a manifest-field mismatch and is preserved. None changed producer evidence or thresholds. The fifteen raw models and proofs retain LOCAL_ONLY raw paths with public lossless recovery; the historical checker executable remains LOCAL_ONLY with public source/build provenance. Four older missing traces and earlier privacy omissions remain unchanged.
+
+**Execution:** the fifteen native calls and complete proof replays finished. Targeted observation at 2026-09-30T07:45:40.713854+00:00: NO_CADICAL_PROCESS_OBSERVED. The aggregate wrapped-solver time was 25.904 seconds, versus 41.219 seconds end to end; these are one campaign's measurements. Later six-profile work and the all-triple heuristic are outside this frozen report.
+
+**Next experiment:** Independently gate and evaluate the remaining54 six-exception full-Gram profile representatives, preserving each complete outcome and proof; treat the separately checked first literal profile in the next milestone.
+
+**References:** [source commit](https://github.com/ikuto32/conway-99-graph/commit/c31b42ffc2d0ac1dd3d905ac8f80afe1e094663e), [draft PR3](https://github.com/ikuto32/conway-99-graph/pull/3), [catalog](../acceleration/results/20260930_twentysecond_artifact_packaging/catalog.json), [replay guide](REPRODUCING_20260930_TWENTYSECOND_WAVE.md). Immutable publication pointers follow remote confirmation.

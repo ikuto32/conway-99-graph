@@ -1,0 +1,38 @@
+$ErrorActionPreference='Stop';$TaskWatch=[Diagnostics.Stopwatch]::StartNew()
+function TaskHash([string]$Path){if($TaskWatch.Elapsed.TotalSeconds -ge 160){throw 'SAVE_RESERVE'};(Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant()}
+function TaskLoad([string]$Path){Get-Content -Raw -LiteralPath $Path | ConvertFrom-Json -AsHashtable -DateKind String}
+function TaskJson($Value){$Value | ConvertTo-Json -Depth 100 -Compress}
+$TaskPlanPath='acceleration/plan_20261004_eight_rook_typed_controls_v1.json';$TaskPlanSha='36c692947f6bb3dbf984737c0ebf8d10c8e16801de6a31581e68aa04c67696cd'
+if((TaskHash $TaskPlanPath) -cne $TaskPlanSha){throw 'PLAN'}
+$TaskP=TaskLoad $TaskPlanPath;$TaskPins=[ordered]@{}
+foreach($TaskMap in @($TaskP.inputs_sha256,$TaskP.launchers)){foreach($TaskPath in $TaskMap.Keys){if((TaskHash $TaskPath) -cne $TaskMap[$TaskPath]){throw ('INPUT '+$TaskPath)};$TaskPins[$TaskPath]=$TaskMap[$TaskPath]}}
+$TaskBase=$TaskP.output_directory;$TaskSup=$TaskP.supervision_directory
+$TaskS=TaskLoad ($TaskBase+'/summary.json');$TaskT=TaskLoad ($TaskSup+'/summary.json');$TaskM=TaskLoad ($TaskSup+'/manifest.json');$TaskC=TaskLoad $TaskP.configuration.path;$TaskRows=TaskLoad ($TaskBase+'/controls.json')
+if($TaskT.invocation_id -cne '53aaa989df624250bbf8428a9531f4fd' -or $TaskT.command_exit_code -ne 0 -or $TaskT.deadline_reached -ne $false -or $null -ne $TaskT.error -or $TaskT.cleanup.reaped -ne $true -or $TaskT.cleanup.job_active_zero_observed -ne $true -or $TaskT.cleanup.cleanup_errors.Count -ne 0 -or $TaskT.cleanup.actual_exit_code -ne 0){throw 'TERMINAL'}
+if((TaskJson $TaskM.command) -cne (TaskJson $TaskP.child_argv) -or $TaskM.seconds -ne 300 -or $TaskM.source_sha256 -cne $TaskP.inputs_sha256['acceleration/run_compute_command.py']){throw 'VECTOR'}
+if($TaskS.result -cne 'PASS_FINITE_ADMINISTRATIVE_CONTROLS_ONLY' -or $TaskS.controls -ne 14 -or $TaskS.positive -ne 1 -or $TaskS.negative -ne 13 -or $TaskS.mismatches -ne 0 -or $TaskS.inputs_sha256.Count -ne 15 -or $TaskS.outputs_sha256.Count -ne 114 -or $TaskRows.Count -ne 14){throw 'COUNTS'}
+foreach($TaskPath in $TaskS.inputs_sha256.Keys){if($TaskS.inputs_sha256[$TaskPath] -cne $TaskP.wrapper_inputs_sha256[$TaskPath]){throw 'DIRECT_INPUT'}}
+$TaskBytes=[int64]0
+foreach($TaskRel in $TaskS.outputs_sha256.Keys){$TaskPath=$TaskBase+'/'+$TaskRel;if((TaskHash $TaskPath) -cne $TaskS.outputs_sha256[$TaskRel]){throw ('OUTPUT '+$TaskRel)};$TaskPins[$TaskPath]=$TaskS.outputs_sha256[$TaskRel];$TaskBytes+=(Get-Item -LiteralPath $TaskPath).Length}
+$TaskFiles=@(Get-ChildItem -LiteralPath $TaskBase -File -Recurse)
+if($TaskFiles.Count -ne 115){throw 'PHYSICAL'}
+$TaskSubject=(Join-Path (Get-Location) $TaskP.subject.path)
+foreach($TaskI in 0..13){
+ $TaskRow=$TaskRows[$TaskI];$TaskCase=$TaskC.cases[$TaskI];$TaskDir=$TaskBase+'/case_'+$TaskI.ToString('00')
+ if($TaskRow.index -ne $TaskI -or $TaskRow.name -cne $TaskCase.name -or (TaskJson $TaskRow.expected) -cne (TaskJson $TaskCase) -or $TaskRow.prediction_matched -ne $true){throw 'CASE'}
+ if((TaskHash ($TaskDir+'/packet.json')) -cne $TaskRow.fixture_packet_sha256 -or (TaskHash ($TaskDir+'/CLAIMS.candidate.yaml')) -cne $TaskRow.fixture_candidate_sha256 -or (TaskHash ($TaskDir+'/CLAIMS.before.yaml')) -cne $TaskP.expected_context.live_ledger_sha256){throw 'RAW_FIXTURE'}
+ $TaskErr=Get-Content -Raw -LiteralPath ($TaskDir+'/stderr.txt')
+ if($TaskCase.positive){if($TaskRow.returncode -ne 0 -or $TaskErr){throw 'POSITIVE'};$TaskPos=TaskLoad ($TaskDir+'/checker_report/summary.json');if($TaskPos.result -cne 'PASS_ADMINISTRATIVE_ONLY' -or $TaskPos.fresh_inputs_sha256.Count -ne 66 -or $TaskPos.new_claims -ne 8 -or $TaskPos.old_claims_preserved -ne 449 -or $TaskPos.old_artifacts_preserved -ne 23842 -or $TaskPos.public_records_unchanged -ne 6054){throw 'POSITIVE_DATA'}}
+ else{$TaskFrames=@([regex]::Matches($TaskErr,'File "([^"]+)", line ([0-9]+)') | Where-Object {$_.Groups[1].Value -ceq $TaskSubject});$TaskTail=($TaskErr.TrimEnd() -split '\r?\n')[-1];if($TaskRow.returncode -eq 0 -or -not $TaskFrames.Count -or [int]$TaskFrames[-1].Groups[2].Value -ne $TaskCase.line -or -not $TaskTail.StartsWith($TaskCase.exception)){throw ('RAW_REJECTION '+$TaskCase.name)}}
+}
+$TaskBool=TaskLoad ($TaskBase+'/case_04/CLAIMS.candidate.yaml');if($TaskBool.claims[-1].revision -isnot [bool]){throw 'BOOL_CORE'};$TaskBool=$null
+$TaskOrdinal=TaskLoad ($TaskBase+'/case_05/evidence_resolution.json');if($TaskOrdinal[-1].ordinal -isnot [bool]){throw 'BOOL_ORDINAL'}
+$TaskLate=TaskLoad ($TaskBase+'/case_06/packet.json');$TaskOriginal=TaskLoad 'acceleration/proposal_20261004_wave47_eight_rook_literal_append_v2.json';$TaskKey=@($TaskOriginal.evidence_union.Keys | Sort-Object -CaseSensitive)[-1];if($TaskLate.evidence_union[$TaskKey] -ceq $TaskOriginal.evidence_union[$TaskKey] -or (TaskHash $TaskKey) -cne $TaskOriginal.evidence_union[$TaskKey]){throw 'LATE_IDENTITY'}
+foreach($TaskPath in @($TaskPlanPath,$TaskBase+'/summary.json',$TaskSup+'/summary.json',$TaskSup+'/manifest.json','acceleration/results/20261004_wave47_eight_rook_typed_controls_root_one01.json')){$TaskPins[$TaskPath]=TaskHash $TaskPath}
+$TaskHead=(git rev-parse HEAD).Trim();$TaskIdx=TaskHash ((git rev-parse --git-path index).Trim());$TaskLedger=TaskHash 'CLAIMS.yaml'
+if($TaskHead -cne $TaskP.expected_context.HEAD -or $TaskIdx -cne $TaskP.expected_context.index_sha256 -or $TaskLedger -cne $TaskP.expected_context.live_ledger_sha256){throw 'CLOSING_CONTEXT'}
+$TaskOut='acceleration/results/20261004_wave47_eight_rook_typed_controls_root_actual_acceptance01.json';if(Test-Path -LiteralPath $TaskOut){throw 'EXISTING'}
+$TaskReceipt=[ordered]@{schema='ROOT_EIGHT_TYPED_FINITE_CONTROLS_ACTUAL_ACCEPTANCE_V1';timestamp=[DateTimeOffset]::UtcNow.ToString('o');reviewer='/root';actual_executor='/root';result='PASS_FINITE_ADMINISTRATIVE_CONTROLS_ONLY';invocation_id=$TaskT.invocation_id;outer_elapsed_seconds=$TaskT.elapsed_seconds;terminal=$TaskT.cleanup;controls=14;positive=1;negative=13;mismatches=0;direct_inputs=15;physical_outputs=115;nonsummary_hashes=114;hashed_payload_bytes=$TaskBytes;fresh_inputs_outputs_sha256=$TaskPins;fresh_identity_count=$TaskPins.Count;source_commit=$TaskHead;index_sha256=$TaskIdx;live_ledger_sha256=$TaskLedger;review=@('Root whole harness/subject/config/spec/delta and exactpredicates read; frozen77admission+2launchers fresh and wrapper15directprojection checked.','Every114raw outputhash and115physicalfiles observed; all14fixture commands/outcomes/raw stderr checked against exact subjectline andexception,1positive66input typed report counts checked.','Root separately parsed eighth boolrevision andlast boolordinal and authenticated unchangedoriginal evidence with latefixturewrongexpectation. Negative controls prove only their exact tested boundaries; full actualtypedtransition/genericsemantics remain separate.','Supported WindowsJob native0/no deadline/error/cleanup errors,reapedempty53460; lockedofflineUV preserved original inputs andlive155a/b7ff/f4a1 context.','CP authored harness/copier/checker adaptation; Rootrawreview is administrative, no mathematical approval from these controls.');typed_transition=$null;generic_schema_validation=$null;installation=$null;mathematical_replays=0;live_ledger_Git_PUBLIC_mutations=0;target_resolution='UNKNOWN';elapsed_seconds=$TaskWatch.Elapsed.TotalSeconds}
+$TaskReceipt.typed_transition=$null;$TaskReceipt.generic_schema_validation=$null;$TaskReceipt.installation=$null
+[IO.File]::WriteAllText((Join-Path (Get-Location) $TaskOut),($TaskReceipt | ConvertTo-Json -Depth 60)+[char]10,[Text.UTF8Encoding]::new($false))
+@{path=$TaskOut;sha256=TaskHash $TaskOut;identities=$TaskPins.Count;payload_bytes=$TaskBytes} | ConvertTo-Json

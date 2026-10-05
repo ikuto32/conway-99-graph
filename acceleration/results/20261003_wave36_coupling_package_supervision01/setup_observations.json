@@ -1,0 +1,27 @@
+{
+  "schema": "WAVE36_PACKAGE_SETUP_OBSERVATIONS_V1",
+  "observation_timestamp": null,
+  "observation_timestamp_reason": "Read-only setup observations returned in the tool transcript without a saved wall-clock timestamp; these values were recorded after the package command completed.",
+  "wsl_distribution": "Ubuntu-24.04",
+  "user_observation": "uid=1000(ikuto) gid=1000(ikuto) groups=1000(ikuto),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),1001(docker)",
+  "memory_command": ["wsl", "-d", "Ubuntu-24.04", "--", "/usr/bin/free", "-m"],
+  "memory_available_displayed_mib": 47077,
+  "disk_command": ["wsl", "-d", "Ubuntu-24.04", "--", "/usr/bin/df", "-B1", "/", "/mnt/c"],
+  "ext4_available_bytes": 317434150912,
+  "host_available_bytes": 131189657600,
+  "failed_process_observation": {
+    "powershell_command": "wsl -d Ubuntu-24.04 -- /usr/bin/pgrep -a -f 'hypergraph_weight60_anneal|gf3_affine|cadical|drat-trim'",
+    "result": "The WSL shell interpreted the unprotected alternation pipes as shell pipelines, so this observation did not establish worker state.",
+    "actual_errors": ["/bin/bash: line 1: gf3_affine: command not found", "/bin/bash: line 1: drat-trim: command not found", "/bin/bash: line 1: cadical: command not found"],
+    "launch_scope": "Read-only process metadata attempt; no scientific solver or CPU/GPU search launched."
+  },
+  "replacement_process_observation": {
+    "command": ["wsl", "-d", "Ubuntu-24.04", "--", "/usr/bin/ps", "-eo", "pid,ppid,uid,stat,comm,args"],
+    "exit_code": 0,
+    "unexpected_output": "your 131072x1 screen size is bogus. expect trouble",
+    "observed_scientific_workers": [],
+    "scope": "Complete displayed Linux process table read immediately before package launch, no observed CaDiCaL, DRAT, GF3, or annealer worker. This is a current read-only observation, not an absolute historical or future process guarantee."
+  },
+  "package_invocation_id": "a9f89a50c17848b49aafbb671db5bc0d",
+  "limitations": ["Raw setup command output is preserved in the conversation tool transcript; no invented observation timestamp.", "Package correctness and public availability remain pending independent recovery and publication review."]
+}

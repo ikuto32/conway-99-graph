@@ -1,0 +1,21 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T22:16:47Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-NO-EIGHT-D2-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle T. Suppose R=226, every d_T belongs to {0,1,2,3}, and exactly one actual triangle has deficiency three. The number b of actual deficiency-two triangles is not eight.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle","exactly one actual triangle has deficiency three"],
+  "scope":{"description":"Exact exclusion only of the b8 boundary in the one-d3 R226/maxd3 lane.","unrestricted_target":true,"single_D3_lane_excluded":false,"maximum_deficiency3_inferred":false,"count226_excluded":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_NO_EIGHT_D2_V1.md","sha256":"c837df53fdc78ba4da4ea1cd247bbf1b66446c8468cc0ca5b76f88b177fd23aa"},
+  "inputs_sha256":{"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_NO_EIGHT_D2_V1.md":"c837df53fdc78ba4da4ea1cd247bbf1b66446c8468cc0ca5b76f88b177fd23aa"},
+  "exact_hand_coverage":{"b_assumed_for_contradiction":8,"a":11,"positive_population":20,"selected_odd_family_size":12,"selected_Gram_base":18,"bad_point_values":[0,1,2,3],"h0_Gram_upper":-18,"h1_Gram_upper":-4,"h2_attached_roots":4,"h2_unattached_roots":4,"h2_distinct_outer_points":8,"h2_outside_outer_point_upper":4,"h2_H_lower":4,"h2_equality_K_ell_H":[2,0,4],"h2_bad_point_selected_weighted_neighbor_sum":5,"h2_Qzero_required_bad_point_weighted_neighbor_sum":5,"h3_attached_roots":6,"h3_unattached_roots":2,"h3_distinct_outer_points":12,"h3_outside_outer_point_upper":1,"h3_H_lower":16,"h3_Gram_upper":-14},
+  "actual_local_boundaries":["Attached roots at different actual T points cannot intersect; roots at the same point cannot meet twice.","Unattached-pair injection uses actual intersection edges, including covered pairs.","Four outside outer points remain allowed by the pair budget; q0 is rejected separately through the bad-point coordinate.","sum w/9=2 is integral and is not used as a false strict-positivity argument.","Larger selected incidences, extra internal edges and differing attached profiles remain allowed until exact equality forces K2."],
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Structural_attached_pair_and_equality_coordinate_derivation":true,"Root_pair_injection_and_equality_challenge":true,"earlier_fan_parity_Gram_overlap_disclosed":true,"no_pending_gate_used":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["The remaining one-d3 populations are neither classified nor asserted realizable.","No whole single-D3, R226 or target exclusion is claimed.","No automorphism, equitable partition, induced positive support or numerical feasibility assumption is used.","A different exact whole written gate is required before VERIFIED or ledger use."]
+}

@@ -1,0 +1,143 @@
+{
+  "arithmetic_controls": [
+    {
+      "label": "positive_nonsingular",
+      "expected_acceptance": true,
+      "actual_acceptance": true,
+      "result": {
+        "nonnegative": true,
+        "negative_coordinates": [],
+        "row_mismatch_count": 0,
+        "mismatch_examples": [],
+        "rows_checked": 2
+      }
+    },
+    {
+      "label": "positive_singular_with_zero_row",
+      "expected_acceptance": true,
+      "actual_acceptance": true,
+      "result": {
+        "nonnegative": true,
+        "negative_coordinates": [],
+        "row_mismatch_count": 0,
+        "mismatch_examples": [],
+        "rows_checked": 3
+      }
+    },
+    {
+      "label": "negative_vector_but_exact_rows",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "result": {
+        "nonnegative": false,
+        "negative_coordinates": [
+          0
+        ],
+        "row_mismatch_count": 0,
+        "mismatch_examples": [],
+        "rows_checked": 1
+      }
+    },
+    {
+      "label": "full_corner_coordinate_corruption",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "result": {
+        "nonnegative": true,
+        "negative_coordinates": [],
+        "row_mismatch_count": 4,
+        "mismatch_examples": [
+          {
+            "row": 0,
+            "actual": 64446025,
+            "expected": 64446024
+          },
+          {
+            "row": 1,
+            "actual": 33981461,
+            "expected": 33981456
+          },
+          {
+            "row": 8689,
+            "actual": 24481269,
+            "expected": 24481264
+          },
+          {
+            "row": 10215,
+            "actual": 24481269,
+            "expected": 24481264
+          }
+        ],
+        "rows_checked": 11749
+      }
+    },
+    {
+      "label": "full_corner_coefficient_corruption",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "result": {
+        "nonnegative": true,
+        "negative_coordinates": [],
+        "row_mismatch_count": 1,
+        "mismatch_examples": [
+          {
+            "row": 0,
+            "actual": 66935555,
+            "expected": 64446024
+          }
+        ],
+        "rows_checked": 11749
+      }
+    },
+    {
+      "label": "full_corner_rhs_constant_corruption",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "result": {
+        "nonnegative": true,
+        "negative_coordinates": [],
+        "row_mismatch_count": 1,
+        "mismatch_examples": [
+          {
+            "row": 0,
+            "actual": 64446024,
+            "expected": 64446025
+          }
+        ],
+        "rows_checked": 11749
+      }
+    }
+  ],
+  "malformed_controls": [
+    {
+      "label": "zero_rational_denominator",
+      "rejected": true,
+      "error": "recorded corner denominator exactly1"
+    },
+    {
+      "label": "noninteger_corner_denominator",
+      "rejected": true,
+      "error": "recorded corner denominator exactly1"
+    },
+    {
+      "label": "truncated_coordinates",
+      "rejected": true,
+      "error": "complete exact rational coordinate population"
+    },
+    {
+      "label": "floating_row_coefficient",
+      "rejected": true,
+      "error": "integer index/coefficient pair"
+    },
+    {
+      "label": "floating_rhs",
+      "rejected": true,
+      "error": "three integer affine RHS coefficients"
+    },
+    {
+      "label": "out_of_range_column",
+      "rejected": true,
+      "error": "variable index range"
+    }
+  ]
+}

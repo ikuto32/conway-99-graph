@@ -1,0 +1,266 @@
+"""Independent Wave36 availability-only checking; no producer imports or ledger writes."""
+import argparse,copy,gzip,hashlib,json,platform,re,subprocess,sys,tarfile,time
+from datetime import datetime,timezone
+from pathlib import Path,PurePosixPath
+import yaml
+from command_deadline import CommandDeadline
+
+ROOT=Path(__file__).resolve().parents[1]
+COMMIT='43175e0a96ed4abbf6b03e16b67adff6f6f40b20'
+BEFORE='8f8d39f5e4fcaf8cb8ec2681e0a9ec795439c80e2c8bd1d8a5903ef1087d342d'
+BASE='acceleration/results/20261003_wave36_registration02/CLAIMS.before.yaml'
+FROZEN='acceleration/results/20261003_wave36_milestone01/CLAIMS.yaml'
+STAGE='acceleration/results/20261003_wave36_allowlist02/manifest.json'
+STAGE_SHA='83e995d249766549450f46e92b0a2bc9c27038eafb96af82352eb7fc2802c5b4'
+FINAL='acceleration/results/20261003_wave36_finalize01/summary.json'
+FINAL_SHA='de677cad0280350e23ad50329fc407229a53727363ed9f0e00009de5f949b95a'
+PACKAGES=[
+ ('acceleration/results/20261002_wave33_model_package01/manifest.json','c3efa198c5f48eddb5ead69a4bb130a3dc55567bb298856143c6fb62eb0e0145',
+  'acceleration/results/20261002_independent_review/wave33_model_recovery01/summary.json','b9352a5e5810f20ff9187c06f5e00636f2f3abad2810ed3d7c23df655b76f583'),
+ ('acceleration/results/20261002_wave33_reconstruction_package01/manifest.json','f639431b7ea9ce0f1500ea48b002629d2523271eead700217dd512e8ade66989',
+  'acceleration/results/20261002_independent_review/wave33_reconstruction_recovery01/summary.json','09623c7c36a6b6b4d7905992361721f38b9ea7778fe7493f01455a4de90d1ba5'),
+ ('acceleration/results/20261003_wave36_coupling_package01/manifest.json','38f641ec21ec3d1d617515e8b3e578e098886863f7016ad640ac1906e8b0988f',
+  'acceleration/results/20261003_independent_review/wave36_census_recovery01/summary.json','659827807687970e2ca5ab714ba779a703fc9223f84bbe29fd4edc1c7259079b')]
+
+class AuditError(ValueError):
+    def __init__(self,stage,detail=''):
+        self.stage=stage;super().__init__(stage+(': '+detail if detail else ''))
+
+def need(ok,stage,detail=''):
+    if not ok:raise AuditError(stage,detail)
+
+class UniqueLoader(yaml.SafeLoader):pass
+def unique(loader,node,deep=False):
+    result={}
+    for key,value in node.value:
+        key=loader.construct_object(key,deep=deep)
+        need(key not in result,'DUPLICATE_YAML_KEY',str(key))
+        result[key]=loader.construct_object(value,deep=deep)
+    return result
+UniqueLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG,unique)
+
+def digest(path):
+    with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
+
+def indexed(rows):
+    result={}
+    for row in rows:
+        need(row['id'] not in result,'DUPLICATE_ID');result[row['id']]=row
+    return result
+
+def guard(deadline):need(deadline.status()['remaining_seconds']>20,'DEADLINE','shutdown reserve')
+
+def archive_hashes(names,deadline):
+    result={};commands=[]
+    for start in range(0,len(names),40):
+        guard(deadline);batch=names[start:start+40]
+        command=['git','archive','--format=tar',COMMIT,'--',*batch];commands.append(command)
+        child=subprocess.Popen(command,cwd=ROOT,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        try:
+            with tarfile.open(fileobj=child.stdout,mode='r|') as archive:
+                for member in archive:
+                    guard(deadline)
+                    if not member.isfile():continue
+                    need(member.name in batch and member.name not in result,'ARCHIVE_MEMBER_POPULATION',member.name)
+                    h=hashlib.sha256();count=0;stream=archive.extractfile(member)
+                    for block in iter(lambda:stream.read(1024*1024),b''):h.update(block);count+=len(block)
+                    need(count==member.size,'ARCHIVE_COMPLETE_MEMBER')
+                    result[member.name]={'sha256':h.hexdigest(),'bytes':count}
+            # Retain the independently calibrated stdout-drain fix. No Git
+            # archive stderr/wait before consuming its residual tar padding.
+            for block in iter(lambda:child.stdout.read(65536),b''):need(not any(block),'ARCHIVE_TRAILING_PADDING')
+            stderr=child.stderr.read().decode('utf8',errors='replace')
+            need(child.wait(timeout=10)==0,'ARCHIVE_EXIT',stderr)
+            need(set(batch)<=set(result),'ARCHIVE_NO_OMITTED_MEMBER')
+        finally:
+            if child.poll() is None:child.kill();child.wait(timeout=5)
+    return result,commands
+
+def decoded_records(package,name,identity,blobs,deadline):
+    result={};parts=compressed=0
+    for row in package['records']:
+        guard(deadline);path=row['raw_path'];need(path not in result,'DUPLICATE_RAW_PATH')
+        whole=hashlib.sha256();offset=0
+        for part in row['parts']:
+            guard(deadline);need(part['raw_offset']==offset,'RAW_CONTIGUOUS_OFFSET')
+            need(blobs[part['path']]=={'sha256':part['gzip_sha256'],'bytes':part['gzip_bytes']},'IMMUTABLE_GZIP_HASH')
+            need(digest(ROOT/part['path'])==part['gzip_sha256'],'LOCAL_GZIP_IMMUTABLE_IDENTITY')
+            chunk=hashlib.sha256();count=0
+            with gzip.open(ROOT/part['path'],'rb') as stream:
+                for block in iter(lambda:stream.read(1024*1024),b''):
+                    need(count+len(block)<=part['raw_bytes'],'RAW_PART_DECLARED_LENGTH')
+                    whole.update(block);chunk.update(block);count+=len(block)
+            need(count==part['raw_bytes'] and chunk.hexdigest()==part['raw_sha256'],'RAW_PART_IDENTITY')
+            offset+=count;parts+=1;compressed+=part['gzip_bytes']
+        need(offset==row['raw_bytes'] and whole.hexdigest()==row['raw_sha256'],'RAW_WHOLE_IDENTITY')
+        need(path not in blobs,'RAW_INTENTIONALLY_ABSENT_FROM_GIT')
+        result[path]={'sha256':whole.hexdigest(),'bytes':offset,'manifest':name,'manifest_sha256':identity}
+    return result,parts,compressed
+
+def transition(before,after,baseline,direct,raw):
+    need(before['claims']==after['claims'],'CLAIMS_AND_VERIFICATION_UNCHANGED')
+    need(len(after['claims'])==337,'EXACT_CLAIM_POPULATION')
+    for key in set(before)|set(after):
+        if key not in ('artifacts','updated_at'):need(before[key]==after[key],'TOPLEVEL_UNCHANGED',key)
+    need(after['target']['status']=='UNKNOWN' and after['target']['overall_search_coverage'] is None,'TARGET_UNKNOWN')
+    old,new,prior=map(indexed,(before['artifacts'],after['artifacts'],baseline['artifacts']))
+    need(set(old)==set(new),'ARTIFACT_ID_POPULATION_UNCHANGED')
+    need([new[row['id']] for row in before['artifacts']]==after['artifacts'],'ARTIFACT_ORDER_UNCHANGED')
+    need(all(old[aid]==value==new[aid] for aid,value in prior.items()),'ALL_PRIOR_ARTIFACTS_UNCHANGED')
+    changed=[];retained=[];prefix='https://github.com/ikuto32/conway-99-graph/blob/'+COMMIT+'/'
+    for aid,a in old.items():
+        if aid in prior:continue
+        b=new[aid]
+        excluded=('availability','retrieval','unavailable_reason')
+        need({k:v for k,v in a.items() if k not in excluded}=={k:v for k,v in b.items() if k not in excluded},'ARTIFACT_IDENTITY_UNCHANGED',aid)
+        path=a['path'];entry=raw.get(path) or direct.get(path)
+        if entry is None:
+            need(a==b,'UNAUTHENTICATED_ARTIFACT_NOT_PROMOTED',aid);retained.append(aid);continue
+        need(entry['sha256']==a['sha256'],'AUTHENTICATED_ARTIFACT_HASH',aid)
+        need(b['availability']=='PUBLIC' and b['unavailable_reason'] is None,'EXACT_PUBLIC_AVAILABILITY',aid)
+        need(isinstance(b['retrieval'],str),'RETRIEVAL_TEXT')
+        links=re.findall(r'https://[^\s;]+',b['retrieval'])
+        if path in raw:
+            need(links==[prefix+entry['manifest']] and path in b['retrieval'] and a['sha256'] in b['retrieval'] and 'fresh destination' in b['retrieval'] and 'not mathematical replay' in b['retrieval'],'LOSSLESS_IMMUTABLE_RETRIEVAL',aid)
+        else:need(links==[prefix+path] and 'Historical transitive' in b['retrieval'],'DIRECT_IMMUTABLE_RETRIEVAL',aid)
+        changed.append(aid)
+    return changed,retained
+
+def rejection(rows,label,expected,call):
+    try:call()
+    except AuditError as error:
+        need(error.stage==expected,'CONTROL_EXACT_STAGE',str(error));rows.append({'label':label,'stage':error.stage,'diagnostic':str(error)})
+    else:raise AuditError('CONTROL_ACCEPTED',label)
+
+def calibration(before,baseline,out,deadline):
+    """Metadata-only synthetic transitions and tiny real gzip/raw controls."""
+    prior=indexed(baseline['artifacts']);new=[a for a in before['artifacts'] if a['id'] not in prior]
+    direct={a['path']:{'sha256':a['sha256']} for a in new if a['path'] is not None}
+    # This table calibrates logic only. It does not establish real publication.
+    after=copy.deepcopy(before);prefix='https://github.com/ikuto32/conway-99-graph/blob/'+COMMIT+'/'
+    for a in after['artifacts']:
+        if a['id'] not in prior and a['path'] in direct:a.update(availability='PUBLIC',retrieval=prefix+a['path']+'; Historical transitive closure remains separate.',unavailable_reason=None)
+    changed,retained=transition(before,after,baseline,direct,{})
+    controls=[]
+    for label,stage,mutate in [
+        ('statement','CLAIMS_AND_VERIFICATION_UNCHANGED',lambda a:a['claims'][0].update(statement='corrupted')),
+        ('verification','CLAIMS_AND_VERIFICATION_UNCHANGED',lambda a:a['claims'][0]['verification'][0].update(outcome='FAIL')),
+        ('target','TOPLEVEL_UNCHANGED',lambda a:a['target'].update(status='NONEXISTENCE')),
+        ('prior_hash','ALL_PRIOR_ARTIFACTS_UNCHANGED',lambda a:a['artifacts'][0].update(sha256='0'*64)),
+        ('omitted_claim','CLAIMS_AND_VERIFICATION_UNCHANGED',lambda a:a['claims'].pop()),
+        ('omitted_artifact','ARTIFACT_ID_POPULATION_UNCHANGED',lambda a:a['artifacts'].pop())]:
+        damaged=copy.deepcopy(after);mutate(damaged)
+        rejection(controls,label,stage,lambda:transition(before,damaged,baseline,direct,{}))
+    synthetic={'id':'synthetic-missing-control','path':'build/synthetic-missing-publication.bin','sha256':'0'*64,'availability':'LOCAL_ONLY','retrieval':None,'unavailable_reason':'Synthetic control only.'}
+    b=copy.deepcopy(before);a=copy.deepcopy(after);b['artifacts'].append(synthetic);a['artifacts'].append(copy.deepcopy(synthetic))
+    need(transition(b,a,baseline,direct,{})[1]==['synthetic-missing-control'],'MISSING_POSITIVE_RETAINED')
+    a['artifacts'][-1]['availability']='PUBLIC'
+    rejection(controls,'missing_false_public','UNAUTHENTICATED_ARTIFACT_NOT_PROMOTED',lambda:transition(b,a,baseline,direct,{}))
+    name=out.relative_to(ROOT).as_posix()+'/tiny.raw';payload=b'wave36 calibration raw bytes\n'*3;rawhash=hashlib.sha256(payload).hexdigest()
+    parts=[];blobs={}
+    for index,(offset,piece) in enumerate(((0,payload[:20]),(20,payload[20:]))):
+        path=out.relative_to(ROOT).as_posix()+'/tiny_'+str(index)+'.gz';data=gzip.compress(piece,mtime=0);(ROOT/path).write_bytes(data)
+        parts.append({'path':path,'gzip_sha256':hashlib.sha256(data).hexdigest(),'gzip_bytes':len(data),'raw_offset':offset,'raw_sha256':hashlib.sha256(piece).hexdigest(),'raw_bytes':len(piece)})
+        blobs[path]={'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data)}
+    package={'records':[{'raw_path':name,'raw_sha256':rawhash,'raw_bytes':len(payload),'parts':parts}]}
+    raw,pc,gc=decoded_records(package,'synthetic-package.json','1'*64,blobs,deadline)
+    need(raw[name]['sha256']==rawhash and pc==2,'TINY_COMPLETE_DECODE')
+    entry={'id':'synthetic-raw-control','path':name,'sha256':rawhash,'availability':'LOCAL_ONLY','retrieval':None,'unavailable_reason':'Synthetic control only.'}
+    b=copy.deepcopy(before);a=copy.deepcopy(after);b['artifacts'].append(entry);a['artifacts'].append(copy.deepcopy(entry))
+    a['artifacts'][-1].update(availability='PUBLIC',unavailable_reason=None,retrieval='Lossless public package: '+prefix+'synthetic-package.json; restore into a fresh destination; '+name+'; '+rawhash+'; not mathematical replay.')
+    transition(b,a,baseline,direct,raw);a['artifacts'][-1]['retrieval']='https://github.com/ikuto32/conway-99-graph/blob/main/unknown'
+    rejection(controls,'mutable_raw_retrieval','LOSSLESS_IMMUTABLE_RETRIEVAL',lambda:transition(b,a,baseline,direct,raw))
+    for label,stage,mutate in [
+        ('dropped_part','RAW_WHOLE_IDENTITY',lambda p:p['records'][0]['parts'].pop()),
+        ('raw_hash','RAW_WHOLE_IDENTITY',lambda p:p['records'][0].update(raw_sha256='0'*64)),
+        ('offset','RAW_CONTIGUOUS_OFFSET',lambda p:p['records'][0]['parts'][1].update(raw_offset=1)),
+        ('compressed_hash','IMMUTABLE_GZIP_HASH',lambda p:p['records'][0]['parts'][0].update(gzip_sha256='0'*64))]:
+        damaged=copy.deepcopy(package);mutate(damaged)
+        rejection(controls,label,stage,lambda:decoded_records(damaged,'synthetic-package.json','1'*64,blobs,deadline))
+    damaged=copy.deepcopy(after);indexed(damaged['artifacts'])[changed[0]]['retrieval']=prefix+'wrong'
+    rejection(controls,'wrong_direct_retrieval','DIRECT_IMMUTABLE_RETRIEVAL',lambda:transition(before,damaged,baseline,direct,{}))
+    return {'controls':controls,'new_artifact_population':len(new),'new_artifacts':new,'synthetic_direct_logic_only':True,'positive_tiny_gzip':{'raw_bytes':len(payload),'gzip_parts':pc,'gzip_bytes':gc}}
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=('calibration','full'))
+    ap.add_argument('--seconds',type=float,required=True);ap.add_argument('--out',type=Path,required=True)
+    ap.add_argument('--publication-dir',type=Path);ap.add_argument('--receipt-sha256');ap.add_argument('--after-sha256')
+    ap.add_argument('--producer-source');ap.add_argument('--producer-source-sha256');ap.add_argument('--producer-supervisor',type=Path)
+    ap.add_argument('--calibration',type=Path);ap.add_argument('--calibration-sha256')
+    args=ap.parse_args();start=time.monotonic();deadline=CommandDeadline(args.seconds,allocation_reason='Independent337-claim publication bookkeeping and bounded immutable archive/242MiB streaming recovery')
+    out=args.out.resolve();need(out.is_relative_to(ROOT),'BOUNDED_OUTPUT');out.mkdir(parents=True,exist_ok=False);pins={}
+    def pin(name,identity=None):
+        name=Path(name).as_posix();actual=digest(ROOT/name);need(identity is None or identity==actual,'INPUT_PIN',name);pins[name]=actual;return actual
+    def read(name,identity=None):pin(name,identity);return json.loads((ROOT/name).read_bytes())
+    def ledger(name,identity=None):pin(name,identity);return yaml.load((ROOT/name).read_text(encoding='utf8'),Loader=UniqueLoader)
+    before=ledger(FROZEN,BEFORE);baseline=ledger(BASE,'4b7470f6e2bd183d355a2247e28a354159681f0b12c10fcb90181bff94e91ea5')
+    need(len(before['claims'])==337 and len(baseline['claims'])==334,'FROZEN337_AND334_POPULATIONS')
+    stage=read(STAGE,STAGE_SHA);final=read(FINAL,FINAL_SHA)
+    need(stage['direct_record_count']==len(stage['records'])==1836 and sum(r['bytes'] for r in stage['records'])==159182472,'EXACT_STAGE_COUNT')
+    need(len(final['records'])==final['late_metadata_records']==24,'EXACT_FINAL_COUNT')
+    records={r['path']:r for r in stage['records']}
+    need(len(records)==len(stage['records']),'UNIQUE_STAGE_MEMBERS')
+    for r in final['records']:
+        need(r['path'] not in records or all(records[r['path']][k]==r[k] for k in ('sha256','bytes')),'STAGE_FINAL_OVERLAP_IDENTITY')
+        records[r['path']]=r
+    for name in (Path(__file__).relative_to(ROOT).as_posix(),'acceleration/audit_20261003_wave36_availability_v1_spec.md','acceleration/audit_20261003_wave35_availability_v1.py','acceleration/command_deadline.py','acceleration/run_compute_command.py','uv.lock','pyproject.toml'):
+        pin(name)
+    controls=calibration(before,baseline,out,deadline)
+    blobs,reader_commands=archive_hashes([STAGE,FINAL],deadline)
+    need(blobs[STAGE]['sha256']==STAGE_SHA and blobs[FINAL]['sha256']==FINAL_SHA,'NEW_READER_LITERAL_ANCHORS')
+    report={'timestamp':datetime.now(timezone.utc).isoformat(),'verifier':'/root/checkpoint_audit','producer':'/root','source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'command':[sys.executable,*sys.argv],'cwd':str(ROOT),'python':platform.python_version(),'publication_commit':COMMIT,'inputs_sha256':pins,'before_ledger_sha256':BEFORE,'unchanged_claims':337,'new_claims':0,'mathematical_replays':0,'new_exclusions':0,'target_resolution':'UNKNOWN','overall_search_coverage':'UNKNOWN; no validated denominator.','calibration':controls,'reader_calibration':{'commands':reader_commands,'literal_records':blobs,'outcome':'PASS'},'shared_components':['Prior independent Wave35 archive/streaming and exact-transition implementations evolved into new337-record scope; no publication producer imported.','Git archive/tree implementations, Python gzip/SHA256, duplicate-key rejecting YAML loader, command_deadline and supported Job supervisor.'],'limitations':['Byte-publication checking only; no mathematical replay or target resolution.','Calibration synthetic metadata tests transition logic, not real availability.','Historical complete transitive evidence/platform-binary availability remains separately recorded.']}
+    if args.mode=='calibration':report['status']='INDEPENDENT_WAVE36_AVAILABILITY_V1_PREOUTPUT_CALIBRATION_PASS'
+    else:
+        need(all((args.publication_dir,args.receipt_sha256,args.after_sha256,args.producer_source,args.producer_source_sha256,args.producer_supervisor,args.calibration,args.calibration_sha256)),'FULL_EXACT_ARGUMENTS')
+        prior_cal=read(args.calibration,args.calibration_sha256)
+        need(prior_cal['status']=='INDEPENDENT_WAVE36_AVAILABILITY_V1_PREOUTPUT_CALIBRATION_PASS' and prior_cal['inputs_sha256'][Path(__file__).relative_to(ROOT).as_posix()]==pins[Path(__file__).relative_to(ROOT).as_posix()],'APPLICABLE_PREOUTPUT_CALIBRATION')
+        pub=args.publication_dir.as_posix();after=ledger(pub+'/CLAIMS.after.yaml',args.after_sha256)
+        need(ledger(pub+'/CLAIMS.before.yaml',BEFORE)==before,'EXACT_FROZEN_BEFORE')
+        receipt=read(pub+'/receipt.json',args.receipt_sha256);pin(args.producer_source,args.producer_source_sha256)
+        supervisor=read(args.producer_supervisor/'summary.json')
+        need(supervisor['command_exit_code']==0 and supervisor['cleanup']['reaped'] is True and supervisor['cleanup']['job_active_zero_observed'] is True,'PRODUCER_TERMINAL_CONTAINMENT')
+        need(receipt['publication_commit']==COMMIT and receipt['before_ledger_sha256']==BEFORE and receipt['after_ledger_sha256']==args.after_sha256,'EXACT_PUBLICATION_RECEIPT')
+        need(receipt['changed_material_claims']==0 and receipt['new_exclusions']==0 and receipt['mathematical_replay'] is False,'NO_MATHEMATICAL_PROMOTION')
+        remote=subprocess.check_output(['git','ls-remote','origin','refs/heads/codex/eight-coordinate-continuation-20260930'],cwd=ROOT,text=True,timeout=30).strip()
+        need(subprocess.run(['git','merge-base','--is-ancestor',COMMIT,remote.split()[0]],cwd=ROOT,timeout=20).returncode==0,'IMMUTABLE_PUBLICATION_REACHABLE')
+        public=json.loads(subprocess.check_output(['gh','api','repos/ikuto32/conway-99-graph','--jq','{private:.private,html_url:.html_url}'],cwd=ROOT,text=True,timeout=30))
+        remote_commit=json.loads(subprocess.check_output(['gh','api',f'repos/ikuto32/conway-99-graph/git/commits/{COMMIT}','--jq','{sha:.sha,tree:.tree.sha}'],cwd=ROOT,text=True,timeout=30))
+        need(public['private'] is False and public['html_url']=='https://github.com/ikuto32/conway-99-graph' and remote_commit['sha']==COMMIT,'PUBLIC_REMOTE_OBSERVATION')
+        wanted=set(records)|{STAGE,FINAL,'acceleration/results/20261003_wave36_allowlist02/stage_paths.nul'}
+        wanted.update(a['path'] for a in controls['new_artifacts'] if a['path'] is not None)
+        packages=[];raw_paths=set()
+        for name,identity,review,review_hash in PACKAGES:
+            package=read(name,identity);recovery=read(review,review_hash);packages.append((name,identity,package,recovery))
+            wanted.update([name,review]);wanted.update(part['path'] for row in package['records'] for part in row['parts']);raw_paths.update(row['raw_path'] for row in package['records'])
+        wanted.update(raw_paths)
+        clean=read('acceleration/results/20261003_independent_review/wave36_clean_six_recovery01/summary.json','cae1f5efc6d525feb9d44b6e2fad7924fa596cb45f95bdfa81dbf9c3427eb30e')
+        wanted.add('acceleration/results/20261003_independent_review/wave36_clean_six_recovery01/summary.json')
+        available=set();tree_commands=[];ordered=sorted(wanted)
+        for path in ordered:
+            p=PurePosixPath(path);need(not p.is_absolute() and '..' not in p.parts and '\n' not in path,'LITERAL_PATH')
+        for i in range(0,len(ordered),40):
+            guard(deadline);command=['git','ls-tree','-r','--name-only',COMMIT,'--',*ordered[i:i+40]];tree_commands.append(command)
+            available.update(subprocess.check_output(command,cwd=ROOT,text=True,timeout=20).splitlines())
+        need(available<=wanted and not (available&raw_paths),'GIT_EXACT_POPULATION_AND_SIX_RAW_ABSENCE')
+        blobs,archive_commands=archive_hashes(sorted(available),deadline)
+        for path,r in records.items():need(blobs.get(path)=={'sha256':r['sha256'],'bytes':r['bytes']},'STAGED_AND_LATE_IMMUTABLE_BYTES',path)
+        need(blobs[STAGE]['sha256']==STAGE_SHA and blobs[FINAL]['sha256']==FINAL_SHA,'IMMUTABLE_STAGE_AND_FINAL_ANCHORS')
+        raw={};parts=compressed=0
+        for name,identity,package,recovery in packages:
+            need(blobs[name]['sha256']==identity,'IMMUTABLE_PACKAGE_ANCHOR')
+            decoded,pc,gc=decoded_records(package,name,identity,blobs,deadline)
+            need(not(set(decoded)&set(raw)),'DISJOINT_RAW_POPULATION');raw.update(decoded);parts+=pc;compressed+=gc
+            checked={r['path']:r for r in recovery['records']};need(set(checked)==set(decoded),'EXACT_RECOVERY_REVIEW_POPULATION')
+            for path,row in decoded.items():need(checked[path]['sha256']==row['sha256'] and checked[path]['bytes']==row['bytes'] and checked[path]['restored_every_byte_matches'] is True,'BOUND_PRIOR_INDEPENDENT_RECOVERY')
+        need((len(raw),parts,sum(r['bytes'] for r in raw.values()),compressed)==(6,32,242396575,7306880),'EXACT_SIX_RAW_POPULATION')
+        need(clean['status']=='WAVE36_SIX_PUBLIC_INPUTS_RECOVERED' and clean['child_action_counts']==[{'RESTORED_MISSING':4},{'RESTORED_MISSING':1},{'RESTORED_MISSING':1}],'FRESH_SIX_RESTORE_IDENTITY')
+        changed,retained=transition(before,after,baseline,blobs,raw)
+        need(changed==receipt['changed_artifact_ids'] and retained==[a['id'] for a in receipt['retained_artifacts']],'PRODUCER_RECEIPT_COUNTS_MATCH_CALCULATION')
+        need(len(changed)+len(retained)==controls['new_artifact_population'],'COMPLETE_NEW_AVAILABILITY_POPULATION')
+        report.update(status='INDEPENDENT_WAVE36_AVAILABILITY_ONLY_PUBLIC_TRANSITION_PASS',after_ledger_sha256=args.after_sha256,changed_public_artifact_records=len(changed),changed_artifact_ids=changed,retained_artifact_ids=retained,immutable_git_blob_records=blobs,immutable_git_blob_count=len(blobs),stage_record_count=len(stage['records']),late_metadata_record_count=len(final['records']),stage_final_union_count=len(records),raw_records=raw,raw_population={'raw_members':len(raw),'gzip_parts':parts,'raw_bytes':sum(r['bytes'] for r in raw.values()),'gzip_bytes':compressed},git_tree_commands=tree_commands,git_archive_commands=archive_commands,remote_branch_observation=remote,public_repository_observation=public,remote_commit_observation=remote_commit)
+        report['limitations'].extend(['Immutable Git archive bytes authenticated to independently observed public commit; no separate full clean-clone network retransmission.','Original six raw paths absent in Git and publicly recovered from32 literal parts; complete bytes checked, mathematics not replayed.','Wave36 first index check found pre-existing policy Git EOL difference; raw working policy unchanged, exact attribute override and single-path renormalization repaired index02. Original failed/successful receipts preserved.'])
+    report.update(elapsed_seconds=time.monotonic()-start,deadline=deadline.status())
+    with (out/'summary.json').open('x',encoding='utf8',newline='\n') as stream:json.dump(report,stream,indent=2);stream.write('\n')
+    print(json.dumps({'path':str(out/'summary.json'),'sha256':digest(out/'summary.json'),'status':report['status'],'new_artifact_population':controls['new_artifact_population'],'strict_controls':len(controls['controls'])}))
+
+if __name__=='__main__':main()

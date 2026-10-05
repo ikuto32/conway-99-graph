@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-30T10:52:34.531954+00:00",
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "60s",
+    "/usr/bin/prlimit",
+    "--as=4294967296:4294967296",
+    "--fsize=10737418240:10737418240",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "-c",
+    "1000000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_direct_cell_lex/at_least_seven/instance.cnf",
+    "/tmp/conway99-direct-cell-lex-auG9AI/proof.drat"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "actual_exit_code": 124,
+  "outer_windows_guard_expired": false,
+  "outer_windows_guard_seconds": 70,
+  "wall_seconds": 60.04700000002049,
+  "stdout": "acceleration/results/20260930_direct_cell_lex_coupled_native_pilot/main/solver.stdout.log",
+  "stdout_sha256": "915482495003171466e43751f44cc55abe418758dd4eba6f6b0fe32676e301e6",
+  "stderr": "acceleration/results/20260930_direct_cell_lex_coupled_native_pilot/main/solver.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+  "exit_interpretation": {
+    "10": "native SAT",
+    "20": "native UNSAT",
+    "0": "native UNKNOWN or non-solver success",
+    "124": "GNU timeout deadline",
+    "137": "forced kill; inspect stderr and receipt"
+  }
+}

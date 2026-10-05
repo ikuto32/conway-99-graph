@@ -1,0 +1,130 @@
+{
+  "actual_exit_code": 0,
+  "receipt": {
+    "timestamp": "2026-09-29T23:57:07.456826+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "300s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "1000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_triangle_factor_column_caps/instance.cnf",
+      "/tmp/conway99-column-cap-factor-zFOqqB/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 0,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 320,
+    "wall_seconds": 83.21899999980815,
+    "stdout": "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "17d6664a2bf7ca5f1beae68e18c6e1acc3bfe0b17da0569e71f1e372fd336eef",
+    "stderr": "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "status": "LOCAL_FACTOR_ARTIFACTS_PENDING_INDEPENDENT_REVIEW",
+  "target_resolution": false,
+  "scope": "Binary factors with necessary target column caps for one fixed39core only",
+  "automatic_retry": false,
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-column-cap-factor-zFOqqB/proof.drat",
+    "sha256": "ef85eb33ba7188f2a0db5030f15268a92bd4b966f4c0cad8b4432455d4b236f5",
+    "bytes": 657451587,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-29T23:57:07.836056+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-column-cap-factor-zFOqqB/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.375,
+      "stdout": "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "2aa6900749e6b9dab595c8aa6cf109e6f574e16d735542cf0c1f905afd816c7b",
+      "stderr": "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-29T23:57:10.731005+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-column-cap-factor-zFOqqB/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 2.890000000130385,
+      "stdout": "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.46899999980814755
+  },
+  "interpreted_result": "UNKNOWN_NATIVE_OR_RESOURCE_OUTCOME",
+  "outputs_sha256": {
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/launch.json": "1ef3f9982955743e4560089fce7c1fa3d93572a9a04cee85c50af43c8f9d6d7a",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/proof.drat": "ef85eb33ba7188f2a0db5030f15268a92bd4b966f4c0cad8b4432455d4b236f5",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/solver.receipt.json": "2c514bc1bdd33b3fa192a9d76fd56e55cb97af26eb366d2a811fefaee32cd2a5",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/solver.stdout.log": "17d6664a2bf7ca5f1beae68e18c6e1acc3bfe0b17da0569e71f1e372fd336eef",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_copy.receipt.json": "1910a216783cddaff881fd6a5f11b24ac9ce10bb8e02c9f1c176dbd517d738ad",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_hash.receipt.json": "ff418bb33340db41ebc4b82c2b7f1eabe0c960f198f901567b344c28632de3aa",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_column_cap_factor_native_pilot/main/transfer_hash.stdout.log": "2aa6900749e6b9dab595c8aa6cf109e6f574e16d735542cf0c1f905afd816c7b"
+  },
+  "limitations": [
+    "SAT requires independent complete assignment/clause/integer36x60factor checking and does not construct99vertices.",
+    "UNSAT requires independent complete proof replay; any exclusion is this fixed core only."
+  ]
+}

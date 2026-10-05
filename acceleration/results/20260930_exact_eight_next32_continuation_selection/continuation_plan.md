@@ -1,0 +1,3 @@
+# Explicit next32 build continuation
+
+The original120-second invocation completed22 of32 formulas and preserved ten pending IDs. This fresh invocation selects exactly those pending IDs in original order, with a fresh120-second budget and output directory. It does not extend the earlier deadline or change any mathematical acceptance criterion. All32 require a new complete independent encoding audit before native execution. Preserve original partial records and any unfinished files. No automatic retry or skip; any subsequent failure needs another explicit decision. The original native allocation and limits remain unchanged.

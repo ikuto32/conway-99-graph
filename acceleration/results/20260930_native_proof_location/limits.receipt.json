@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-09-29T21:19:43.093691+00:00",
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "10s",
+    "/usr/bin/prlimit",
+    "--as=4294967296:4294967296",
+    "--fsize=10737418240:10737418240",
+    "--core=0:0",
+    "/usr/bin/prlimit",
+    "--noheadings",
+    "--raw",
+    "--output",
+    "RESOURCE,SOFT,HARD"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "actual_exit_code": 0,
+  "outer_windows_guard_expired": false,
+  "outer_windows_guard_seconds": 30,
+  "wall_seconds": 0.09300000010989606,
+  "stdout": "acceleration/results/20260930_native_proof_location/limits.stdout.log",
+  "stdout_sha256": "a8d6f9af080a7ebf77e3a792db0a37ae8b6f7e79bd34a93f5174b7e06ff2ec3c",
+  "stderr": "acceleration/results/20260930_native_proof_location/limits.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+  "exit_interpretation": {
+    "10": "native SAT",
+    "20": "native UNSAT",
+    "0": "native UNKNOWN or non-solver success",
+    "124": "GNU timeout deadline",
+    "137": "forced kill; inspect stderr and receipt"
+  }
+}

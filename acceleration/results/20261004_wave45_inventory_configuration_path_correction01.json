@@ -1,0 +1,60 @@
+{
+  "schema": "WAVE45_INVENTORY_APPEND_ONLY_CONFIGURATION_PATH_CORRECTION_V1",
+  "timestamp": "2026-10-04T09:28:57.8198465+00:00",
+  "author": "/root/checkpoint_audit",
+  "cause": "The source-only V3 metadata writer used broad _v2 to _v3 text replacement, accidentally changing two inherited registrar_v23 path keys to registrar_v33. A metadata-only small-pin check stopped before writing any new full plan or launching any command.",
+  "preserved": [
+    {
+      "path": "acceleration/configuration_20261004_wave45_identity_inventory_v2.json",
+      "sha256": "48064543e73f47e5e9757783f0c7520f286488ad8631e3e3106bd49edba8b26e",
+      "bytes": 6286
+    },
+    {
+      "path": "acceleration/proposal_20261004_wave45_inventory_configuration_v3.json",
+      "sha256": "d3e43b1883263955cd8d4736885fd7eea3be52b43b07d5a9e85614b66f783a1c",
+      "bytes": 3254
+    },
+    {
+      "path": "acceleration/proposal_20261004_wave45_identity_inventory_full_v3.json",
+      "sha256": "4bfdc264f9b7f2fdd9f8dbedf21a70dc351aec4b9c19c9e705f20a9af892c155",
+      "bytes": 10797
+    },
+    {
+      "path": "acceleration/results/20261004_wave45_inventory_source_preparation03.ps1",
+      "sha256": "07504ea0b0aaf5a00e5aafc492fe69da4f811c3545f146b34ff33c8c0cbcdd36",
+      "bytes": 14888
+    }
+  ],
+  "path_key_corrections": [
+    {
+      "old": "acceleration/results/20261004_registrar_v33_actual_transition01/summary.json",
+      "path": "acceleration/results/20261004_registrar_v23_actual_transition01/summary.json",
+      "sha256": "2797e2021b9335d370d89a56313b9ec33aeae2de34667a38083488e7e9de7ced"
+    },
+    {
+      "old": "acceleration/results/20261004_registrar_v33_actual_transition_root_actual_acceptance01.json",
+      "path": "acceleration/results/20261004_registrar_v23_actual_transition_root_actual_acceptance01.json",
+      "sha256": "c0ac375df04e7c475a85cd0709d53bc42c779d56c834b4d72c6e3c0671c831b4"
+    }
+  ],
+  "unchanged_source": {
+    "path": "acceleration/inventory_20261004_wave45_checkpoint_v3.py",
+    "sha256": "d71b858f00f573632f0b748cf830d6e584252511594f98773af3f485b2534dea"
+  },
+  "unchanged_specification": {
+    "path": "acceleration/inventory_20261004_wave45_checkpoint_v3_spec.md",
+    "sha256": "29075f8acd1e618c2d6972339f7f6685ea3a18f47055b065892abcef4978385c"
+  },
+  "actual_calibration_acceptance": {
+    "path": "acceleration/results/20261004_wave45_inventory_author_controls_root_actual_acceptance03.json",
+    "sha256": "7484e3fb51844133e548f09f938e5e8ffa9da59d913dfabcb5c6fad3af0e1530",
+    "actual_invocation": "10636aeaafb447edb36eb1c8707625ec"
+  },
+  "changes": "Exactly two inherited metadata path keys are corrected; new concrete configuration and plan bind genuine V3 calibration and the preserved V2 full failure. Source, scientific scope,1947 selection,418 ledger,all deadlines and scientific/member bytes are unchanged.",
+  "source_imports": 0,
+  "worker_dispatches": 0,
+  "selected_member_hashes": 0,
+  "git_ledger_index_mutations": 0,
+  "target_resolution": "NONE",
+  "full_authority": null
+}

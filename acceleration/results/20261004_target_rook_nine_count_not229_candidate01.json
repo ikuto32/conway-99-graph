@@ -1,0 +1,110 @@
+{
+  "schema": "WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "status": "CANDIDATE",
+  "id": "C-UNRESTRICTED-TARGET-ROOK-NINE-COUNT-NOT229",
+  "revision": 1,
+  "created_at": "2026-10-04T16:41:01+00:00",
+  "producer": "/root/structural",
+  "statement": "For every complete finite simple strongly regular graph with parameters (99,14,1,2), let R count the actual nine-vertex subsets inducing the 3-by-3 rook graph, each subset once. Then R is not 229.",
+  "scope": {
+    "description": "Unrestricted target necessary condition excluding exactly the actual induced-rook count R=229. No exclusion of R=231 or of all target graphs is claimed.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Complete finite simple SRG(99,14,1,2).",
+    "R is the count of actual induced nine-vertex rook subsets, not embeddings, row orderings or automorphism orbits."
+  ],
+  "dependencies": [],
+  "proof": {
+    "paper": "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT229_V1.md",
+    "sha256": "c82d070e585e3e4cd14e1c6de0b5272c6cc06c8827b15a4f28fb3145696f2c7a",
+    "self_contained": true,
+    "steps": [
+      "Reconstruct unique triangle-edge partners, the local defect graphs, D=6(231-R) and U=2079-9R.",
+      "At D=12, second-neighbor mass bounds force m<=2; complete weighted equality and square counts exclude m=2.",
+      "Exactly twelve positive triangles have deficiency one; their positive point multiplicities are even.",
+      "The fan-incidence count 12-r>=2r excludes multiplicity six without a cubic-dual assumption.",
+      "At multiplicity four, the eight remaining triangles each use one fan point; pair-common-neighbor limits force eight new points of multiplicity two.",
+      "Nondefective fan colors transport a rook to a required defect pair, so the new cycles alternate only between the two defect color pairs.",
+      "The two forced four-cycles each produce an induced rook across its fan defect pair, excluding multiplicity four.",
+      "Only now form the simple triangle-free cubic dual F on twelve triangle nodes and eighteen shared-point edges.",
+      "Uncovered target squares use selected triangle edges; induced squares of their line graph are exactly those uncovered squares, regardless of possible extra target edges.",
+      "C4(F)=18 saturates the cubic twelve-node bound; every component is K3,3.",
+      "Each K3,3 component is an actual induced rook containing a designated defect pair, a contradiction."
+    ],
+    "operational_claim": "No graph enumeration, matrix arithmetic program, source import or solver execution."
+  },
+  "R229_reconstruction": {
+    "deficiency_mass": 12,
+    "uncovered_squares": 18,
+    "positive_triangles": 12,
+    "positive_deficiency_each": 1,
+    "point_multiplicities_initially": [
+      2,
+      4,
+      6
+    ],
+    "multiplicity6_exclusion": "12-r>=2r",
+    "multiplicity4_exclusion": "Defect-colored four-cycle creates an induced rook",
+    "positive_points_after_both_exclusions": 18,
+    "cubic_dual_vertices": 12,
+    "cubic_dual_edges": 18,
+    "dual_squares_required": 18,
+    "dual_square_upper_bound": 18,
+    "equality_components": "Two K3,3 components, forbidden by the defect rule",
+    "all_point_multiplicities_two_assumed": false,
+    "selected_edge_union_assumed_induced": false
+  },
+  "hand_boundaries": [
+    {
+      "name": "Two rook-nine graphs joined at a point",
+      "result": "Twelve actual row/column triangles form an even selection with one multiplicity-four point; this refutes any unconditional multiplicity-two assertion.",
+      "target_completion": false,
+      "why_not_counterexample": "The selected triangle pairs are rook-covered, so the required all-deficiency-one condition fails."
+    },
+    {
+      "name": "Two abstract K3,3 components",
+      "result": "The cubic twelve-node square bound is sharp at eighteen.",
+      "target_completion": false,
+      "why_not_counterexample": "The line graphs are rooks and violate the selected defect-pair requirement."
+    },
+    {
+      "name": "Hexagonal prism",
+      "result": "Simple cubic triangle-free twelve-node graph with six four-cycles.",
+      "target_completion": false,
+      "why_relevant": "Cubic local geometry alone does not supply the necessary eighteen squares."
+    },
+    {
+      "name": "Multiplicity-four fan",
+      "result": "Eight fan points force each remaining triangle to use exactly one; new-point pair common-neighbors force multiplicity two.",
+      "expected_first_contradiction": "A forced four-cycle produces a rook containing a designated defect pair."
+    }
+  ],
+  "evidence_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_COUNT_NOT229_V1.md": "c82d070e585e3e4cd14e1c6de0b5272c6cc06c8827b15a4f28fb3145696f2c7a",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "acceleration/results/20261004_target_rook_deficiency_strict_second_neighbor_candidate01.json": "976e676fc75eec3c81870770852c26ab9de6cd88b0f87613152dec019ebcdaed",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c"
+  },
+  "overlap": {
+    "earlier_strict_mass_result": "The needed D12 reduction is reconstructed in this proof. Earlier candidate and verification bytes remain unchanged; no approval transfer.",
+    "archive_comparison": "Bounded written comparison of Wave17's different n3=54 / 27-point line-graph reduction and Wave102/Wave112 code notes; no archived census gate imported.",
+    "new_step": "Deficiency-one fan color transport, derived exclusion of multiplicity four/six, and exact eighteen-square cubic saturation."
+  },
+  "sharing": "Root requested the multiplicity-four/six challenge and received the outline before freeze; this does not constitute independent approval.",
+  "verification": {
+    "different_author_review": null,
+    "written_candidate_only": true,
+    "source_or_mathematical_executions": 0,
+    "graph_enumerations": 0
+  },
+  "limitations": [
+    "R=231 remains possible on this proof.",
+    "No Makhnev, N3-free or global Hamming-cover conclusion is used.",
+    "No arbitrary binary right relation of weight twelve is excluded.",
+    "Possible actual extra edges on the eighteen-point support are not discarded; the uncovered-square bijection explicitly handles them.",
+    "No ledger, index, Git, historical candidate or execution gate is modified."
+  ]
+}

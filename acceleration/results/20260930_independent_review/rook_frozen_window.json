@@ -1,0 +1,2111 @@
+{
+  "status": "INDEPENDENT_FROZEN_ROOK_WINDOW_EXCLUSION_PASS",
+  "claim_id": "C-ROOK-FROZEN-WINDOW-ROW-EXCLUSION",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "statement": "No completion of the exact saved 50-vertex external adjacency window, with its five prescribed rook cells and the induced rook-nine scaffold fixed, can satisfy the rook-cell degree-two requirements and all target common-neighbor caps: all 200 possible edges in the two missing opposite-cell blocks were independently checked, 167 fail a monotone cap, and eight rows have fewer than two permissible neighbors.",
+  "scope": "Only the hash-bound raw partial graph with cell labels [0,4,5,7,8]; not all joint matching assignments, not all rook-containing graphs, and not the unrestricted target.",
+  "dependencies": [
+    {
+      "id": "C-ROOK-NINE-REGULAR-SET-ENCODING",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "timestamp": "2026-09-29T19:16:47.869043+00:00",
+  "source_commit": "048ff18824f076898652da87f4213d74147a0a95",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_frozen_window_v1.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root independent checker of structural_attack discovery",
+  "method": "Full set-based adjacency reconstruction on59 vertices; enumerate all1711 pairs after each of200 prospective edges, independent of producer incremental checking.",
+  "inputs_sha256": {
+    "acceleration/results/20260930_rook_joint/joint_witness.json": "ada6539e1860952381337468e234602eeaf0c83af5ed0d7f5546538fde7cc817",
+    "acceleration/results/20260930_rook_complete_window/single_edge_filter.json": "52827227f8188f86f82e0d3681f435e43d592930282e3d1a662e4e8abd97b556",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/audit_20260930_rook_frozen_window_v1.py": "0144b87fb60639b1d06502fd6622dca910f11b2cd2bda1bc3119819995038916",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260917_independent_review/rook_regular_set_recheck.json": "203f8f314cb4d1b6452eec04955c71a05d48bf76088abd0145c0d07f15b5c6f3"
+  },
+  "candidate_edges": 200,
+  "rejected_edges": 167,
+  "retained_edges": 33,
+  "raw_weaker_window_caps_pass": true,
+  "row_obstructions": [
+    {
+      "vertex": 10,
+      "possible_neighbors": [
+        41
+      ],
+      "required_degree_in_block": 2
+    },
+    {
+      "vertex": 12,
+      "possible_neighbors": [],
+      "required_degree_in_block": 2
+    },
+    {
+      "vertex": 17,
+      "possible_neighbors": [
+        44
+      ],
+      "required_degree_in_block": 2
+    },
+    {
+      "vertex": 18,
+      "possible_neighbors": [
+        42
+      ],
+      "required_degree_in_block": 2
+    },
+    {
+      "vertex": 22,
+      "possible_neighbors": [],
+      "required_degree_in_block": 2
+    },
+    {
+      "vertex": 23,
+      "possible_neighbors": [
+        34
+      ],
+      "required_degree_in_block": 2
+    },
+    {
+      "vertex": 27,
+      "possible_neighbors": [
+        31
+      ],
+      "required_degree_in_block": 2
+    },
+    {
+      "vertex": 28,
+      "possible_neighbors": [],
+      "required_degree_in_block": 2
+    }
+  ],
+  "records": [
+    {
+      "edge": [
+        10,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        9
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        10,
+        42
+      ],
+      "full59_violating_pair": [
+        51,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        10,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        10,
+        44
+      ],
+      "full59_violating_pair": [
+        19,
+        53
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        10,
+        45
+      ],
+      "full59_violating_pair": [
+        54,
+        11
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        10,
+        46
+      ],
+      "full59_violating_pair": [
+        55,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        10,
+        47
+      ],
+      "full59_violating_pair": [
+        56,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        10,
+        48
+      ],
+      "full59_violating_pair": [
+        57,
+        44
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        10,
+        49
+      ],
+      "full59_violating_pair": [
+        19,
+        44
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        11,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        9
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        11,
+        41
+      ],
+      "full59_violating_pair": [
+        20,
+        33
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        11,
+        42
+      ],
+      "full59_violating_pair": [
+        51,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        11,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        11,
+        44
+      ],
+      "full59_violating_pair": [
+        53,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        11,
+        45
+      ],
+      "full59_violating_pair": [
+        54,
+        43
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        11,
+        49
+      ],
+      "full59_violating_pair": [
+        58,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        12,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        12,
+        41
+      ],
+      "full59_violating_pair": [
+        50,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        12,
+        42
+      ],
+      "full59_violating_pair": [
+        51,
+        10
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        12,
+        43
+      ],
+      "full59_violating_pair": [
+        21,
+        52
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        12,
+        44
+      ],
+      "full59_violating_pair": [
+        53,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        12,
+        45
+      ],
+      "full59_violating_pair": [
+        54,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        12,
+        46
+      ],
+      "full59_violating_pair": [
+        55,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        12,
+        47
+      ],
+      "full59_violating_pair": [
+        21,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        12,
+        48
+      ],
+      "full59_violating_pair": [
+        21,
+        45
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        12,
+        49
+      ],
+      "full59_violating_pair": [
+        58,
+        45
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        13,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        13,
+        41
+      ],
+      "full59_violating_pair": [
+        50,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        13,
+        42
+      ],
+      "full59_violating_pair": [
+        51,
+        10
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        13,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        10
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        13,
+        44
+      ],
+      "full59_violating_pair": [
+        53,
+        14
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        13,
+        46
+      ],
+      "full59_violating_pair": [
+        55,
+        14
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        13,
+        48
+      ],
+      "full59_violating_pair": [
+        57,
+        14
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        13,
+        49
+      ],
+      "full59_violating_pair": [
+        22,
+        34
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        14,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        30
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        14,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        41
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        14,
+        44
+      ],
+      "full59_violating_pair": [
+        53,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        14,
+        45
+      ],
+      "full59_violating_pair": [
+        54,
+        11
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        14,
+        46
+      ],
+      "full59_violating_pair": [
+        55,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        14,
+        47
+      ],
+      "full59_violating_pair": [
+        56,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        14,
+        48
+      ],
+      "full59_violating_pair": [
+        23,
+        13
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        14,
+        49
+      ],
+      "full59_violating_pair": [
+        58,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        15,
+        40
+      ],
+      "full59_violating_pair": [
+        24,
+        30
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        15,
+        41
+      ],
+      "full59_violating_pair": [
+        50,
+        46
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        15,
+        44
+      ],
+      "full59_violating_pair": [
+        53,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        15,
+        45
+      ],
+      "full59_violating_pair": [
+        54,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        15,
+        46
+      ],
+      "full59_violating_pair": [
+        55,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        15,
+        47
+      ],
+      "full59_violating_pair": [
+        24,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        15,
+        48
+      ],
+      "full59_violating_pair": [
+        57,
+        14
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        16,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        16,
+        41
+      ],
+      "full59_violating_pair": [
+        50,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        16,
+        42
+      ],
+      "full59_violating_pair": [
+        51,
+        28
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        16,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        16,
+        45
+      ],
+      "full59_violating_pair": [
+        25,
+        56
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        16,
+        47
+      ],
+      "full59_violating_pair": [
+        25,
+        56
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        16,
+        48
+      ],
+      "full59_violating_pair": [
+        57,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        16,
+        49
+      ],
+      "full59_violating_pair": [
+        58,
+        15
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        17,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        17,
+        41
+      ],
+      "full59_violating_pair": [
+        50,
+        18
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        17,
+        42
+      ],
+      "full59_violating_pair": [
+        51,
+        18
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        17,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        18
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        17,
+        45
+      ],
+      "full59_violating_pair": [
+        26,
+        54
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        17,
+        46
+      ],
+      "full59_violating_pair": [
+        26,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        17,
+        47
+      ],
+      "full59_violating_pair": [
+        56,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        17,
+        48
+      ],
+      "full59_violating_pair": [
+        57,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        17,
+        49
+      ],
+      "full59_violating_pair": [
+        58,
+        15
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        18,
+        40
+      ],
+      "full59_violating_pair": [
+        27,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        18,
+        41
+      ],
+      "full59_violating_pair": [
+        50,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        18,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        18,
+        44
+      ],
+      "full59_violating_pair": [
+        27,
+        40
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        18,
+        45
+      ],
+      "full59_violating_pair": [
+        54,
+        16
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        18,
+        46
+      ],
+      "full59_violating_pair": [
+        55,
+        29
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        18,
+        47
+      ],
+      "full59_violating_pair": [
+        27,
+        16
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        18,
+        48
+      ],
+      "full59_violating_pair": [
+        57,
+        16
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        18,
+        49
+      ],
+      "full59_violating_pair": [
+        58,
+        16
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        19,
+        40
+      ],
+      "full59_violating_pair": [
+        49,
+        18
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        19,
+        41
+      ],
+      "full59_violating_pair": [
+        50,
+        18
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        19,
+        42
+      ],
+      "full59_violating_pair": [
+        28,
+        51
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        19,
+        43
+      ],
+      "full59_violating_pair": [
+        52,
+        18
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        19,
+        45
+      ],
+      "full59_violating_pair": [
+        54,
+        16
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        19,
+        47
+      ],
+      "full59_violating_pair": [
+        56,
+        25
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        19,
+        48
+      ],
+      "full59_violating_pair": [
+        57,
+        16
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        19,
+        49
+      ],
+      "full59_violating_pair": [
+        58,
+        16
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        20,
+        31
+      ],
+      "full59_violating_pair": [
+        29,
+        40
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        20,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        20,
+        33
+      ],
+      "full59_violating_pair": [
+        42,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        20,
+        34
+      ],
+      "full59_violating_pair": [
+        43,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        20,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        20,
+        36
+      ],
+      "full59_violating_pair": [
+        45,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        20,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        20,
+        39
+      ],
+      "full59_violating_pair": [
+        48,
+        31
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        21,
+        30
+      ],
+      "full59_violating_pair": [
+        30,
+        9
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        21,
+        31
+      ],
+      "full59_violating_pair": [
+        40,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        21,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        21,
+        33
+      ],
+      "full59_violating_pair": [
+        42,
+        9
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        21,
+        37
+      ],
+      "full59_violating_pair": [
+        30,
+        24
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        21,
+        38
+      ],
+      "full59_violating_pair": [
+        30,
+        47
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        21,
+        39
+      ],
+      "full59_violating_pair": [
+        48,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        22,
+        30
+      ],
+      "full59_violating_pair": [
+        39,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        22,
+        31
+      ],
+      "full59_violating_pair": [
+        40,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        22,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        10
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        22,
+        33
+      ],
+      "full59_violating_pair": [
+        42,
+        10
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        22,
+        34
+      ],
+      "full59_violating_pair": [
+        43,
+        11
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        22,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        11
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        22,
+        36
+      ],
+      "full59_violating_pair": [
+        45,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        22,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        22,
+        38
+      ],
+      "full59_violating_pair": [
+        31,
+        48
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        22,
+        39
+      ],
+      "full59_violating_pair": [
+        31,
+        48
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        23,
+        30
+      ],
+      "full59_violating_pair": [
+        39,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        23,
+        31
+      ],
+      "full59_violating_pair": [
+        40,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        23,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        10
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        23,
+        33
+      ],
+      "full59_violating_pair": [
+        42,
+        10
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        23,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        57
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        23,
+        36
+      ],
+      "full59_violating_pair": [
+        32,
+        57
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        23,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        24
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        23,
+        38
+      ],
+      "full59_violating_pair": [
+        47,
+        16
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        23,
+        39
+      ],
+      "full59_violating_pair": [
+        48,
+        16
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        24,
+        31
+      ],
+      "full59_violating_pair": [
+        40,
+        16
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        24,
+        33
+      ],
+      "full59_violating_pair": [
+        42,
+        16
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        24,
+        34
+      ],
+      "full59_violating_pair": [
+        43,
+        11
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        24,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        11
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        24,
+        36
+      ],
+      "full59_violating_pair": [
+        45,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        24,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        24,
+        38
+      ],
+      "full59_violating_pair": [
+        47,
+        16
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        24,
+        39
+      ],
+      "full59_violating_pair": [
+        48,
+        16
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        25,
+        31
+      ],
+      "full59_violating_pair": [
+        40,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        25,
+        33
+      ],
+      "full59_violating_pair": [
+        34,
+        15
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        25,
+        34
+      ],
+      "full59_violating_pair": [
+        43,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        25,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        12
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        25,
+        36
+      ],
+      "full59_violating_pair": [
+        45,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        25,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        12
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        25,
+        38
+      ],
+      "full59_violating_pair": [
+        47,
+        15
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        25,
+        39
+      ],
+      "full59_violating_pair": [
+        48,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        26,
+        30
+      ],
+      "full59_violating_pair": [
+        35,
+        39
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        26,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        13
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        26,
+        34
+      ],
+      "full59_violating_pair": [
+        35,
+        17
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        26,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        26,
+        36
+      ],
+      "full59_violating_pair": [
+        35,
+        17
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        26,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        26,
+        39
+      ],
+      "full59_violating_pair": [
+        48,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        27,
+        30
+      ],
+      "full59_violating_pair": [
+        39,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        27,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        13
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        27,
+        33
+      ],
+      "full59_violating_pair": [
+        36,
+        15
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        27,
+        34
+      ],
+      "full59_violating_pair": [
+        43,
+        18
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        27,
+        35
+      ],
+      "full59_violating_pair": [
+        36,
+        18
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        27,
+        36
+      ],
+      "full59_violating_pair": [
+        45,
+        18
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        27,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        18
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        27,
+        38
+      ],
+      "full59_violating_pair": [
+        36,
+        47
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        27,
+        39
+      ],
+      "full59_violating_pair": [
+        48,
+        13
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        30
+      ],
+      "full59_violating_pair": [
+        37,
+        14
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        28,
+        31
+      ],
+      "full59_violating_pair": [
+        37,
+        53
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        28,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        14
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        33
+      ],
+      "full59_violating_pair": [
+        42,
+        53
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        34
+      ],
+      "full59_violating_pair": [
+        37,
+        11
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        36
+      ],
+      "full59_violating_pair": [
+        45,
+        19
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        17
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        38
+      ],
+      "full59_violating_pair": [
+        47,
+        14
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        28,
+        39
+      ],
+      "full59_violating_pair": [
+        37,
+        14
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        29,
+        30
+      ],
+      "full59_violating_pair": [
+        39,
+        35
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        29,
+        32
+      ],
+      "full59_violating_pair": [
+        41,
+        14
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        29,
+        33
+      ],
+      "full59_violating_pair": [
+        38,
+        10
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        29,
+        34
+      ],
+      "full59_violating_pair": [
+        43,
+        18
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        29,
+        35
+      ],
+      "full59_violating_pair": [
+        44,
+        21
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        29,
+        36
+      ],
+      "full59_violating_pair": [
+        45,
+        18
+      ],
+      "common": 3,
+      "cap": 2
+    },
+    {
+      "edge": [
+        29,
+        37
+      ],
+      "full59_violating_pair": [
+        46,
+        18
+      ],
+      "common": 2,
+      "cap": 1
+    },
+    {
+      "edge": [
+        29,
+        38
+      ],
+      "full59_violating_pair": [
+        47,
+        14
+      ],
+      "common": 3,
+      "cap": 2
+    }
+  ],
+  "derivation": "Every external vertex in cell i has exactly two neighbors in each rook-nonadjacent cell j by the independently established TH equation. Added edges can only increase common-neighbor counts and can only decrease a pair cap from2to1. Thus a row with fewer than2 individually permissible missing-block neighbors cannot be completed, regardless of edges to other cells.",
+  "controls": [
+    "Known-valid rook9 caps pass",
+    "Rook9 with extra diagonal-cell edge fails",
+    "All producer violating-pair arithmetic reconstructed from full graph",
+    "Corrupt count and fabricated permitted-edge controls rejected"
+  ],
+  "producer_imported": false,
+  "shared_components": [
+    "Python standard library and input JSON only; no discovery modules"
+  ],
+  "limitations": [
+    "No exact matching-domain counts or random attempt counts audited.",
+    "Weaker cap-compatible witness remains valid for its own weaker statement.",
+    "No general nonexistence, automorphism assumption or target-wide coverage fraction."
+  ],
+  "target_resolution": false
+}

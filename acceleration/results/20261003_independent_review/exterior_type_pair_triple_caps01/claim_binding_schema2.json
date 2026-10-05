@@ -1,0 +1,75 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-EXTERIOR-TYPE-PAIR-AND-TRIPLE-COMMON-NEIGHBOR-CAPS",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every simple undirected graph G of order99 regular degree14 with adjacent common-neighbor count exactly1 and nonadjacent count exactly2, every subset S and exterior types T(x)=N_G(x) intersect S: distinct exterior vertices have type intersection at most2, at most1 if adjacent, and intersection2 forces a nonedge with no exterior common neighbor; n_T<=1 when |T|>=3 and n_T+n_U<=1 for distinct types with |T intersect U|>=3; for every three-element Q subset S, sum over T containing Q of n_T<=1. For |S|=17 there are680 such labelled triple inequalities.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "producer": "/root/checkpoint_audit",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "scope": {
+    "population": "Every order99 degree14 finite simple graph with exact adjacentCN1/nonadjacentCN2; arbitrary support subset S and actual nonnegative integer exact-type multiplicities. Linear inequalities also hold for convex combinations of realizable vectors on the same labelled type universe.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Finite simple undirected graph of order99 regular degree14",
+    "Distinct adjacent pairs have exactly1 common neighbor; distinct nonadjacent pairs have exactly2",
+    "S arbitrary, x and y exterior and distinct when a pair is used",
+    "n_T counts actual exterior vertices of exact type T"
+  ],
+  "dependencies": [],
+  "report": "acceleration/results/20261003_independent_review/exterior_type_pair_triple_caps01/summary.json",
+  "report_sha256": "d3e2f27aca979839edb3e612cd825d2cce18346d81ca2bfa868e86b6b1baffee",
+  "verification_timestamp": "2026-10-03T20:18:36.3476398+00:00",
+  "proof": "acceleration/audit_20261003_external_type_pair_triple_caps_native_v1.md",
+  "proof_sha256": "d8f659709d4323e6b534e0cf0b3690c3cdf5096f81f8b593f7e21765c3f8446c",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_EXTERNAL_TYPE_PAIR_AND_TRIPLE_CAPS_V1.md": "f7aefb0628c9da0741f0c8f43b444a30e5d5042eb60c1db23735f024286125a4",
+    "acceleration/audit_20261003_external_type_pair_triple_caps_native_v1.md": "d8f659709d4323e6b534e0cf0b3690c3cdf5096f81f8b593f7e21765c3f8446c",
+    "acceleration/results/20261003_independent_review/exterior_type_pair_triple_caps01/summary.json": "d3e2f27aca979839edb3e612cd825d2cce18346d81ca2bfa868e86b6b1baffee"
+  },
+  "controls": {
+    "independent_counting_proof": true,
+    "written_rook_type_examples": 3,
+    "written_boundary_checks": 8,
+    "fractional_clique_limitation_example": 1,
+    "labelled_triple_inequality_count_for17": 680,
+    "all680_rows_enumerated": false,
+    "mathematical_program_executions": 0,
+    "executed_controls": 0,
+    "actual_primal_files_read": 0,
+    "formal_proof": false
+  },
+  "shared_components": [
+    "ROOT proposed the tightening direction; Checkpoint authored the frozen candidate f7aefb. Native independently reconstructed the common-set identity and counted-pair contradiction.",
+    "Written rook and fractional examples are hand derivations, not computational fixture gates.",
+    "No producer/checker import, numerical optimizer, executable model or previous mathematical gate used as a premise."
+  ],
+  "limitations": [
+    "Necessary type caps only; no integer realization, exterior-edge reconstruction, graph completion, target existence/nonexistence or fixed17 exclusion.",
+    "The680 triple caps do not assert polyhedral completeness, row independence or all incompatibility clique inequalities.",
+    "No actual model/certificate/primal or program output checked.",
+    "No novelty, external review or formal verification claim."
+  ],
+  "created_at": "2026-10-03T20:18:36.3476398+00:00",
+  "updated_at": "2026-10-03T20:18:36.3476398+00:00",
+  "started_at": null,
+  "started_at_null_reason": "Original written derivation start was not instrumented; timestamp records this report completion.",
+  "availability": "LOCAL_ONLY",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "registration_state": "Not registered; separate ROOT metadata review required before any ordinary adapter/ledger action.",
+  "metadata_mapping": {
+    "ledger_index_mutations": 0,
+    "author": "/root/native_driver",
+    "statement_scope_roles_identical_to_primary_report": true,
+    "mathematical_program_executions": 0
+  }
+}

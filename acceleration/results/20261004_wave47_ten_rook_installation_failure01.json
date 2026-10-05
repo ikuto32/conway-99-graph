@@ -1,0 +1,16 @@
+{
+  "schema": "ROOT_INSTALLATION_PRE_REPLACE_FAILURE_V1",
+  "timestamp": "2026-10-04T22:20:25.2208742+00:00",
+  "reviewer": "/root",
+  "result": "NO_LIVE_INSTALLATION",
+  "stage": "File.Replace null backup path",
+  "observed_error": "The path is empty. (Parameter path)",
+  "cause": "PowerShell string overload converted null backup to empty path; atomic replacement raised before replacing target",
+  "ledger_sha256": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1",
+  "temporary_candidate_sha256": "32418255444775febd70512bdac6a62e8e3b33de1b540fba03d9a167032faa49",
+  "failed_command": "acceleration/results/20261004_wave47_ten_rook_installation_failed_command01.ps1",
+  "failed_command_sha256": "9b77f6f51b66d2fddfa53da50fec80849e81fba347dcec4e545ea09a68cbb7a1",
+  "correction": "Use a fresh explicit absolute backup path and guard existing exact temporary candidate before replacement",
+  "mathematical_replays": 0,
+  "target_resolution": "UNKNOWN"
+}

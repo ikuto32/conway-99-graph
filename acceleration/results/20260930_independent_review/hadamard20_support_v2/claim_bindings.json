@@ -1,0 +1,136 @@
+{
+  "claims": [
+    {
+      "revision": 1,
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "verifier": "/root/eight_domain_audit",
+      "assumptions": [
+        "Identity cross matchings are an explicit premise, not an unrestricted normalization.",
+        "No hypothetical target automorphism is assumed."
+      ],
+      "limitations": [
+        "No full incidence factor, residual graph or SRG99 is constructed.",
+        "No novelty claim."
+      ],
+      "id": "C-IDENTITY-P-AGGREGATE-INCIDENCE-NECESSITY",
+      "kind": "mathematical result",
+      "basis": [
+        "DERIVED"
+      ],
+      "statement": "For every binary36x60 prescribed-Gram factor with row sums10 and two entries per fibre per column in an identity-cross core, L[a,d]=sum_gF[12g+a,d] is binary with row sums30,column sums6 and LL^T=15I+15J-5S; X=2L-J satisfies XX^T=20(3I-S), where S=M0+M1+M2.",
+      "scope": "All three internal perfect matchings on12coordinates; necessary aggregate condition for this identity-cross family only.",
+      "dependencies": [
+        {
+          "id": "C-IDENTITY-P-FACTOR-DISTINCT-COORDINATES-MIXED-CAP-REDUNDANCY",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-UNRESTRICTED-TRIANGLE-CORE-FACTOR-NORMALIZATION",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "created_at": "2026-09-30T02:52:29.863193+00:00",
+      "updated_at": "2026-09-30T02:52:30.598947+00:00"
+    },
+    {
+      "revision": 1,
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "verifier": "/root/eight_domain_audit",
+      "assumptions": [
+        "Identity cross matchings are an explicit premise, not an unrestricted normalization.",
+        "No hypothetical target automorphism is assumed."
+      ],
+      "limitations": [
+        "No full incidence factor, residual graph or SRG99 is constructed.",
+        "No novelty claim."
+      ],
+      "id": "C-HADAMARD20-UNIVERSAL-AGGREGATE-SUPPORT-CONSTRUCTION",
+      "kind": "construction",
+      "basis": [
+        "DERIVED",
+        "COMPUTED"
+      ],
+      "statement": "For every triple of perfect matchings on12coordinates, the recorded orthogonal20x20sign matrix supplies a binary12x60 matrix L with row sums30,column sums6 and LL^T=15I+15J-5(M0+M1+M2), by concatenating opposite sign columns at each matching edge and taking (X+J)/2.",
+      "scope": "Universal construction of the aggregate matrix alone; selected firstsix Hadamard columns yield one explicit construction per matching triple.",
+      "dependencies": [],
+      "created_at": "2026-09-30T02:52:29.863193+00:00",
+      "updated_at": "2026-09-30T02:52:30.598947+00:00"
+    },
+    {
+      "revision": 1,
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "verifier": "/root/eight_domain_audit",
+      "assumptions": [
+        "Identity cross matchings are an explicit premise, not an unrestricted normalization.",
+        "No hypothetical target automorphism is assumed."
+      ],
+      "limitations": [
+        "No full incidence factor, residual graph or SRG99 is constructed.",
+        "No novelty claim."
+      ],
+      "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+      "kind": "empirical/engineering result",
+      "basis": [
+        "COMPUTED"
+      ],
+      "statement": "The five exact saved support matrices pass their aggregate identities; complete90-colouring-per-column enumeration and all1770pair projections match the saved records. Connected00 has empty column41,one Gram-capacity deficit and59incompatible columnpairs with three singleton Hall obstructions; connected01,02,03 and six_prism have nonempty columns,no capacity or pair deficits and three independently checked perfect-matching projections each.",
+      "scope": "Exactly these five hash-bound supports,27000 local colouring candidates,8850columnpair cases and15fibre projections; projection choices are not asserted jointly compatible.",
+      "dependencies": [
+        {
+          "id": "C-FOUR-CONNECTED-IDENTITY-CORE-PORTFOLIO",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-HADAMARD20-UNIVERSAL-AGGREGATE-SUPPORT-CONSTRUCTION",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "created_at": "2026-09-30T02:52:29.863193+00:00",
+      "updated_at": "2026-09-30T02:52:30.598947+00:00"
+    },
+    {
+      "revision": 1,
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "verifier": "/root/eight_domain_audit",
+      "assumptions": [
+        "Identity cross matchings are an explicit premise, not an unrestricted normalization.",
+        "No hypothetical target automorphism is assumed."
+      ],
+      "limitations": [
+        "No full incidence factor, residual graph or SRG99 is constructed.",
+        "No novelty claim."
+      ],
+      "id": "C-CONNECTED00-HADAMARD20-COLUMN41-NONLIFT",
+      "kind": "exclusion",
+      "basis": [
+        "DERIVED",
+        "COMPUTED"
+      ],
+      "statement": "No binary prescribed-Gram factor for connected00 with two entries per fibre per column has the exact saved Hadamard aggregate L: its column41 support{2,3,4,5,10,11} contains three M0=M1pairs,each requiring a fibre2endpoint despite onlytwo fibre2slots.",
+      "scope": "Only the exact saved connected00 aggregate support; neither the core nor other Hadamard/support choices are excluded.",
+      "dependencies": [
+        {
+          "id": "C-FOUR-CONNECTED-IDENTITY-CORE-PORTFOLIO",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-IDENTITY-P-AGGREGATE-INCIDENCE-NECESSITY",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "created_at": "2026-09-30T02:52:29.863193+00:00",
+      "updated_at": "2026-09-30T02:52:30.598947+00:00"
+    }
+  ],
+  "ledger_changed": false
+}

@@ -1,0 +1,98 @@
+{
+  "id": "C-FIXED-HADAMARD-SIX-PRISM-BINARY-MIP-ENCODING",
+  "revision": 1,
+  "statement": "The authenticated exact 5,400-binary-variable, 766-row MIP model is feasible if and only if the frozen six-prism Hadamard support L admits a binary 36 by 60 factor F with the prescribed full Gram and strictly increasing saved coloring ranks along all 40 specified adjacent identical-support column pairs; outside-column overlap caps and residual D are not encoded in this base model.",
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status_recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "One exact frozen six-prism support L and its 90 colorings per column. This is an exact binary linear encoding equivalence, not a numerical feasibility result or target-level coverage claim.",
+  "applicability_to_unrestricted_target": "Conditional fixed-support class only; no unrestricted exclusion or construction.",
+  "assumptions": [
+    "Exact raw six-prism core/support hashes listed below.",
+    "Binary choices, exact integer coefficients and equalities; lower=null means negative infinity in the forty order rows.",
+    "No nontrivial target automorphism is assumed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-IDENTICAL-SUPPORT-ORDER-NORMALIZATION",
+      "revision": 1,
+      "relation": "normalization"
+    },
+    {
+      "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+      "revision": 1,
+      "relation": "verification_dependency"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "acceleration/results/20260930_independent_review/hadamard_prism_binary_mip_calibration/summary.json",
+      "sha256": "4c27ffee59dbfae792e6776cb5d6175750e31c7f65c9f5e14337d07b3acab6ca",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "acceleration/results/20260930_hadamard_prism_binary_mip_model/exact_model.json",
+      "sha256": "8311440e1d4300f70bcdcc32e3c73baef34c9b58b8e15c54179a3a53ac4ae3ad",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "acceleration/results/20260930_hadamard20_support/six_prism.json",
+      "sha256": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "acceleration/results/20260930_hadamard_support_remaining_lp/six_prism/exact_model.json",
+      "sha256": "f5ac7adc289d6ca3cc7ce77394565919813138f6322e5ae2dc1856684eef6ae2",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "acceleration/results/20260930_independent_review/hadamard_six_prism_column_order/summary.json",
+      "sha256": "0ce1be9ca11a3e860aa97791cfb4f42c1660d937a69ac7a9b7d96ca37640c9d2",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "acceleration/results/20260930_independent_review/hadamard20_support_v2/summary.json",
+      "sha256": "a8477256446e3e402a2a21241dc383a515162dc9c8c07a9a8e26326c07b0f58f",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "acceleration/results/20260930_independent_review/hadamard_mip_raw_controls/summary.json",
+      "sha256": "fe472fcf0b9b7d43698f7e523144475f847103e8cc42d6e82b8efb54836698eb",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "verification_records": [
+    {
+      "claim_id": "C-FIXED-HADAMARD-SIX-PRISM-BINARY-MIP-ENCODING",
+      "claim_revision": 1,
+      "verifier": "/root/state_literature_audit",
+      "method": "Independent artifact checking and independent derivation",
+      "report_path": "acceleration/results/20260930_independent_review/hadamard_prism_binary_mip_calibration/summary.json",
+      "report_sha256": "4c27ffee59dbfae792e6776cb5d6175750e31c7f65c9f5e14337d07b3acab6ca",
+      "outcome": "PASS",
+      "scope": "All 5,400 option columns, 726 equality rows, forty exact order rows, binary bounds/integrality/objective; soundness checks for a proposed lazy cut are separate from the base equivalence.",
+      "timestamp": "2026-09-30T03:53:20.191301+00:00",
+      "shared_components": [
+        "Frozen independently authored ordered-domain reconstruction, raw integer factor helpers and exact rounding/linear helpers.",
+        "Highs/native conversion control uses highspy/numpy only; no solver.run call in this audit.",
+        "No producer matrix/decoder/cut function imported."
+      ],
+      "controls": "Raw-helper genuine nonempty SRG243 fixture and corrupted controls; actual-model local codec explicitly fails research Gram; eleven base-model corruptions, five cut corruptions and local-codec rejection; independent native sparse-model roundtrip without a solve."
+    }
+  ],
+  "limitations": [
+    "The initial model omits all outside-column overlap caps; a Gram-feasible factor may violate them.",
+    "No full research factor was available as a positive control; the known-valid SRG243 fixture has different parameters.",
+    "No cyclic restriction is imposed, and no residual D is encoded.",
+    "Numerical time limits, infeasibility labels, objective gaps, and absence of an incumbent are not certificates.",
+    "The separate timeout run is not a premise for this encoding claim.",
+    "No external review or novelty claim."
+  ],
+  "created_at": "2026-09-30T04:06:12.804054+00:00",
+  "updated_at": "2026-09-30T04:06:12.804054+00:00",
+  "artifact_availability": "LOCAL_ONLY"
+}

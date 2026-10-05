@@ -1,0 +1,36 @@
+{
+  "schema": "APPEND_ONLY_SOURCE_PREPARATION_DISCLOSURE_V1",
+  "timestamp": "2026-10-04T11:03:23.7370222+00:00",
+  "author": "/root/checkpoint_audit",
+  "source": {
+    "path": "acceleration/inventory_20261004_wave45_checkpoint_v4.py",
+    "sha256": "250346b8521f82cfbc24bbe2926f65f1cd285786ba5eb3acdda1f7a410c278e9"
+  },
+  "specification": {
+    "path": "acceleration/inventory_20261004_wave45_checkpoint_v4_spec.md",
+    "sha256": "bf302214d06abcdfa907858bf102c3dd040558d5bf4d5c7bbf597324cc31f956"
+  },
+  "literal_diff": {
+    "path": "acceleration/diff_20261004_wave45_inventory_v3_v4.txt",
+    "sha256": "165023f5a926e5f9366f776756eed466d66dd2b413de786f4803fcaa0b06dbd1"
+  },
+  "correction": "Opening spec no-Git-command sentence is too broad for source preparation: exactly one read-only git diff --no-index on the two small source text files generated this literal diff. No application inventory/Git index reads occurred; no Git mutation, source import or worker occurred. Preserve original spec bytes and bind this explicit correction.",
+  "actual_readonly_source_diff_argv": [
+    "git",
+    "diff",
+    "--no-index",
+    "--",
+    "acceleration/inventory_20261004_wave45_checkpoint_v3.py",
+    "acceleration/inventory_20261004_wave45_checkpoint_v4.py"
+  ],
+  "command_exit": 1,
+  "exit_meaning": "The two text sources differ; expected git --no-index difference code",
+  "source_imports": 0,
+  "computational_workers": 0,
+  "member_payload_hashes": 0,
+  "application_git_reads": 0,
+  "git_ledger_index_mutations": 0,
+  "dispatch_authority": null,
+  "mathematical_approval": false,
+  "target_resolution": "NONE"
+}

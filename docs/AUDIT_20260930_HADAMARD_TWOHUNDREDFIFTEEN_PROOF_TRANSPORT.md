@@ -1,0 +1,5 @@
+# Independent215 proof transport audit
+
+Authenticate the frozen manifest, complete215-proof gate and standalone recovery receipt. Decode all223 gzip parts through a separately authored zlib member checker, enforce single-member termination/CRC/offset/size/hash identity, and compare every recovered byte with the original independently replayed raw proof. Bind each exact CNF and raw execution receipt. Confirm complete ordered215-case inventory,577482170 raw bytes and90689391 gzip bytes, largest part1732088 bytes. Originals remain unchanged. No producer or recovery helper is imported.
+
+Reuse the frozen54-stream transport checker logic with the explicit new population, hashes, schema and standalone receipt field names. Test a multi-part binary positive and16 missing/reordered/changed/CRC/truncated/path-corrupted fixtures. No new DRAT replay or solver invocation is performed; mathematical validity remains an explicit dependency on the independent proof gate. Availability is LOCAL_ONLY until publication. Record command, source commit, Python/zlib versions and all inputs/outputs. This does not establish a profile union or target result.

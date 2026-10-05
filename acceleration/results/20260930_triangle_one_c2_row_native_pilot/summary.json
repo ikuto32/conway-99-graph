@@ -1,0 +1,137 @@
+{
+  "actual_exit_code": 10,
+  "receipt": {
+    "timestamp": "2026-09-29T23:32:39.128390+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "300s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "1000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_triangle_one_c2_row_cnf/instance.cnf",
+      "/tmp/conway99-one-c2-row-gC1Lyj/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 10,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 320,
+    "wall_seconds": 17.391000000061467,
+    "stdout": "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "62eef814110e3a3f0ca108ff69df313f7a4024c218c93d94b070b4c50ce7367f",
+    "stderr": "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "status": "LOCAL_PROJECTION_ARTIFACTS_PENDING_INDEPENDENT_REVIEW",
+  "target_resolution": false,
+  "scope": "Target-necessary 25-row projection of one fixed core only",
+  "automatic_retry": false,
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-one-c2-row-gC1Lyj/proof.drat",
+    "sha256": "95d00b33abc0e37b74d8a72f84f4aaee7d33e7910950e306de733c18b4cf0b68",
+    "bytes": 97685312,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-29T23:32:39.227246+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-one-c2-row-gC1Lyj/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.0940000000409782,
+      "stdout": "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "f8bdb4913ba6c759b73e5e31b1b3920d0c2377dc473fad4134c89dd448d95ade",
+      "stderr": "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-29T23:32:39.741229+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-one-c2-row-gC1Lyj/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 0.5,
+      "stdout": "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.06199999991804361
+  },
+  "producer_local_projection_check": {
+    "valid": true,
+    "error_count": 0,
+    "first_errors": []
+  },
+  "interpreted_result": "LOCAL_PROJECTION_SAT_RAW_UNCHECKED",
+  "outputs_sha256": {
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/decoded_factor.json": "e81ee7f51591ee2de265ddf9d64892fa7bad9fe176502a450cc6db29c304263c",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/launch.json": "e97a8fe43e1166fac3643476eb0fc156147045ab9f4b994e68264a8fdbe9690e",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/parsed_model.json": "e1dc2f1923b5892758413d9d234fcd77013760fdd380d305326a7b937acbc96c",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/proof.drat": "95d00b33abc0e37b74d8a72f84f4aaee7d33e7910950e306de733c18b4cf0b68",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/solver.receipt.json": "26a2194bba572ab7d2fabf652e4310ef80794c9648cc5f4a7e7bbc7117347fe3",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/solver.stdout.log": "62eef814110e3a3f0ca108ff69df313f7a4024c218c93d94b070b4c50ce7367f",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_copy.receipt.json": "3aa8d57c04c2cd25e10d8b3d5d22eb670b8c131c5e5651d5f8e5a95076ca7d3a",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_hash.receipt.json": "fccf477cd8107fb51e6018c7361f6ca2ba19b1ea1a06828cb45cc2b2e1c5f892",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_triangle_one_c2_row_native_pilot/main/transfer_hash.stdout.log": "f8bdb4913ba6c759b73e5e31b1b3920d0c2377dc473fad4134c89dd448d95ade"
+  },
+  "limitations": [
+    "SAT requires independent complete assignment/clause/raw-25-row checking and does not construct a full factor or target graph.",
+    "UNSAT requires complete independent proof replay; any exclusion concerns this fixed core only."
+  ]
+}

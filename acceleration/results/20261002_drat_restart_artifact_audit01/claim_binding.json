@@ -1,0 +1,90 @@
+{
+  "schema": "IMMUTABLE_RESEARCH_CLAIM_BINDING_V1",
+  "id": "C-UNRESTRICTED-PARTIAL-DRAT-CANDIDATE-STATE-TRANSFORM",
+  "revision": 1,
+  "kind": "empirical/engineering result",
+  "basis": ["COMPUTED"],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For the exact preserved original 1186500-variable 4136454-clause CNF and 346616832-byte partial DRAT trace, the exact frozen parser output is the complete active clause multiset under PINNED_BACKWARD_UNSAT_SINGLE_COPY_IGNORE_SMALL_DELETE_V1 after every complete retained trace record: all 3069024 live occurrences match a separate exact Counter reconstruction, all 346616796 retained proof bytes preserve the original byte and pivot order, exactly the final 36-byte unterminated record is omitted, no boundary LF is added, and the original 1186500-variable universe is unchanged.",
+  "scope": "Exact syntactic state transformation of these raw artifacts under the stated checking profile only.",
+  "applicability_to_unrestricted_target": "Engineering preparation for a possible continuation of the preserved unrestricted encoding; no graph or exclusion is established.",
+  "mathematical_scope": {
+    "rat_rup_prefix_validity_established": false,
+    "equisatisfiability_established": false,
+    "model_reconstruction_established": false,
+    "target_encoding_or_coverage_reverified": false,
+    "mathematical_exclusions_established": 0,
+    "target_resolution": false,
+    "reason": "Every claim here concerns exact integers, multiplicities and bytes. A subsequent UNSAT requires independently checked complete combined proof replay against the original CNF; a derivative SAT assignment requires independent checking against the original CNF and full SRG validator."
+  },
+  "assumptions": [
+    "The exact pinned default backward DRAT-trim profile: normalize duplicate literals for clause identity, preserve clause multiplicities and tautologies, remove one matching nonunit occurrence, ignore normalized clauses of size at most one when deleting, and treat missing deletions as no-ops.",
+    "Finite source/calibration review and the Python/runtime/OS implementation are trusted; no formal parser-correctness claim is made."
+  ],
+  "dependencies": [],
+  "dependencies_reason": "This exact transformation check does not rely on any mathematical encoding or exclusion claim. Source/profile/control review dependencies are pinned as verification evidence below.",
+  "producer": "/root/native_driver",
+  "verifier": "/root/structural",
+  "source_commit_at_audit": "28440b31f4effee3b25e30259110acc734695bf0",
+  "source_commit_at_original_preparation": "2fdd9354d04641c64260d0221c7867b07c4b7405",
+  "artifacts": [
+    {"role": "original_cnf", "path": "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf", "sha256": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138", "bytes": 84919934},
+    {"role": "original_partial_proof", "path": "acceleration/results/20260930_unrestricted_native_pilot/main/proof.drat", "sha256": "11abdc29b502b8b09d4dc6ac3e9f03fa7ea8947496bc8e538a5043d113272f22", "bytes": 346616832},
+    {"role": "restart_cnf", "path": "acceleration/results/20261002_drat_restart_prepare01/candidate/restart.cnf", "sha256": "59698435dfd8954dc3420098d43a9e9c94eb3175190c3cc1133ef7a5b6fdad9e", "bytes": 71451166},
+    {"role": "retained_prefix", "path": "acceleration/results/20261002_drat_restart_prepare01/candidate/retained_prefix.drat", "sha256": "4b966350baab1677ae37c4104d5cd48ad76641e3f5974e3f9757591b298bcf80", "bytes": 346616796},
+    {"role": "parser_summary", "path": "acceleration/results/20261002_drat_restart_prepare01/candidate/parser_summary.json", "sha256": "01956c2df33f05ba761bed508a2a53e86e27312cba7159d5e75194b8df9b0268", "bytes": 795}
+  ],
+  "verification_records": [
+    {
+      "claim_id": "C-UNRESTRICTED-PARTIAL-DRAT-CANDIDATE-STATE-TRANSFORM",
+      "claim_revision": 1,
+      "verifier": "/root/structural",
+      "type": "independent artifact checking",
+      "timestamp": "2026-10-02T10:33:47.042727+00:00",
+      "outcome": "PASS_COMPLETE_SYNTACTIC_STATE",
+      "method": "Separate compact signed32-bit byte-key insertion-ordered Counter, with every original/add/delete record reconstructed, every active occurrence and retained proof byte compared, repeated calibrated controls and final unchanged-input hash checks. No parser or producer module imported.",
+      "audit_path": "acceleration/results/20261002_drat_restart_artifact_audit01/summary.json",
+      "audit_sha256": "429026fd035e429ba8f16c0f92a02e9fdfab51cf2fb773321b112b95b3af2e89",
+      "checker_source_path": "acceleration/audit_20261002_drat_restart_artifact_v2.py",
+      "checker_source_sha256": "3693f1d77b60f9c095cd6afa0f6b67a9c048b4ad6336b9454f30ce459eb6156e",
+      "artifact_binding": "The five exact raw artifact hashes listed above, also in the immutable audit inputs_sha256 map.",
+      "scope": "Complete declared raw syntactic transformation, not proof validity or mathematical coverage.",
+      "elapsed_worker_seconds": 90.14000000001397,
+      "shared_components": ["Frozen independent stage-one oracle for tiny-control calibration only.", "CommandDeadline and containment supervisor policy shared with producer."]
+    }
+  ],
+  "evidence": [
+    {"role": "parser_controls_gate", "path": "acceleration/results/20261002_drat_restart_controls_audit01/summary.json", "sha256": "0abe2311462f6821913231e42dbd0861c4fe3d2b75f2be1017af9c7e6fb34134"},
+    {"role": "streaming_v2_calibration", "path": "acceleration/results/20261002_drat_restart_stream_calibration02/summary.json", "sha256": "e4013fdff6233f36b603666fd846946e73b7b0a446e3c267b0b131b6fbb6f8f9"},
+    {"role": "independent_source_profile_calibration_review", "path": "acceleration/results/20261002_independent_review/restart_streaming_review01/summary.json", "sha256": "e8c8ae0c2ee9362da48bf610cf8c49f7da3fdf83f9ca55ae86b5d77e672f99b6"},
+    {"role": "full_audit", "path": "acceleration/results/20261002_drat_restart_artifact_audit01/summary.json", "sha256": "429026fd035e429ba8f16c0f92a02e9fdfab51cf2fb773321b112b95b3af2e89"}
+  ],
+  "counters": {
+    "variables": 1186500,
+    "original_clause_occurrences": 4136454,
+    "proof_additions": 4369303,
+    "proof_deletions": 5436733,
+    "effective_single_copy_deletions": 5436733,
+    "missing_deletions": 0,
+    "ignored_small_deletions": 0,
+    "historically_recorded_unique_clauses": 8502107,
+    "active_clause_occurrences": 3069024,
+    "original_proof_bytes": 346616832,
+    "retained_original_bytes": 346616796,
+    "final_unterminated_bytes_dropped": 36,
+    "appended_boundary_lf": false
+  },
+  "artifact_availability": "LOCAL_ONLY",
+  "retrieval_instructions": "Exact local repository-relative paths above; complete public retrieval has not been established by this audit. Hashes are identity checks, not substitutes for artifacts.",
+  "limitations": [
+    "A syntactically reconstructed state alone is not a checked proof or target-level resolution.",
+    "The original historical prefix remains unverified as a RAT/RUP derivation.",
+    "No equisatisfiability, model reconstruction or fresh encoding/coverage review is asserted.",
+    "Finite controls and code review do not establish general formal parser correctness."
+  ],
+  "external_review": null,
+  "external_review_reason": "No external or peer review asserted.",
+  "created_at": "2026-10-02T10:41:45+00:00",
+  "updated_at": "2026-10-02T10:41:45+00:00"
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "timestamp": "2026-09-29T19:14:08.188288+00:00",
+  "verifier": "Codex subagent /root/state_literature_audit",
+  "source_commit": "048ff18824f076898652da87f4213d74147a0a95",
+  "command_argv": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_cell_independent.py",
+    "--input",
+    "acceleration/results/20260930_rook_cell_factors",
+    "--out",
+    "acceleration/results/20260930_rook_cell_independent/audit.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "versions": {
+    "python": "3.12.10",
+    "tqdm": "4.67.1"
+  },
+  "checker_sha256": "ed259bfcca9144d43d8c04a8aacb7b248e3bc4e2eb8ab3211d5798e296f07094",
+  "input_hashes": {
+    "acceleration/results/20260930_rook_cell_factors/manifest.json": "d3f457acaca90667f530652a13a0dd3ea718abf57e382e16c32527d38d12bfce",
+    "acceleration/results/20260930_rook_cell_factors/summary.json": "d905daa2a0cf791f2b92edd8a23235fc2aacef62956d355e074da6c3497ac012",
+    "acceleration/results/20260930_rook_cell_factors/factor_masks.txt": "36a1f67a6bdf7ca9889c02882541b17b0a6d57ce8d5da95a077a1e2196865e11",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration/theory_20260930_rook_cell_factors.md": "bc2b40263329ab474bc7f9d4a2b59e16ae2acc4d7d749c7a3f4af26d9ee51873",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260917_independent_review/rook_regular_set_recheck.json": "203f8f314cb4d1b6452eec04955c71a05d48bf76088abd0145c0d07f15b5c6f3"
+  },
+  "witness": {
+    "identity": "sum C_j C_j^T = 7 I + J - F",
+    "matrix_entries_checked": 100,
+    "factor_cycle_partitions": [
+      [
+        3,
+        3,
+        4
+      ],
+      [
+        3,
+        3,
+        4
+      ],
+      [
+        3,
+        3,
+        4
+      ],
+      [
+        3,
+        3,
+        4
+      ]
+    ],
+    "right_matchings_checked": 4,
+    "residual_nonzero_count": 0
+  },
+  "independent_census": {
+    "factor_count": 89000,
+    "counts_by_cycle_partition": {
+      "3+3+4": 1960,
+      "3+7": 13440,
+      "4+6": 11680,
+      "5+5": 5664,
+      "10": 56256
+    }
+  },
+  "positive_count_controls": {
+    "K3": 1,
+    "K4": 3,
+    "K5": 12,
+    "K6": 70,
+    "K10": 286884
+  },
+  "corrupted_controls": [
+    {
+      "label": "missing factor edge",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "bad edge listing"
+    },
+    {
+      "label": "changed incidence entry",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "wrong incidence row sum"
+    },
+    {
+      "label": "overlapping factors",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "factors overlap"
+    },
+    {
+      "label": "matching repeated vertex",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "matching is not a partition"
+    },
+    {
+      "label": "wrong recorded matrix",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "saved total does not reproduce"
+    },
+    {
+      "label": "right matching triangle",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "right matching forms a triangle"
+    },
+    {
+      "label": "duplicate factor list",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "duplicate raw factor"
+    },
+    {
+      "label": "missing factors",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "raw census differs from independent exact counts"
+    },
+    {
+      "label": "out-of-domain bit",
+      "outcome": "REJECTED_AS_REQUIRED",
+      "reason": "mask outside allowed universe"
+    }
+  ],
+  "claim_bindings": [
+    {
+      "id": "C-ROOK-CELL-LOCAL-FACTOR-COMPATIBILITY",
+      "revision": 1,
+      "statement": "For every target containing an induced rook9, at each ten-vertex outside cell the four degree-two incidence blocks necessarily obey sum C_j C_j^T=7I+J-F, and the pinned raw witness satisfies this identity with simple binary degree-two blocks and compatible individual right-cell perfect matchings.",
+      "scope": "Necessity conditional on rook9 containment, and satisfiability of this one-cell subsystem only."
+    },
+    {
+      "id": "C-ROOK-CELL-TWO-FACTOR-CENSUS",
+      "revision": 1,
+      "statement": "Exactly 89000 labelled simple spanning two-factors of K10 avoid the fixed matching {(0,1),(2,3),(4,5),(6,7),(8,9)}, and the pinned factor_masks.txt contains each exactly once.",
+      "scope": "Complete finite labelled local two-factor universe; not a target graph universe."
+    }
+  ],
+  "independence": [
+    "No producer or repository research modules imported.",
+    "Raw incidence matrices are multiplied with Python integer dot products.",
+    "Census uses subset Hamilton-path DP and anchored set partition convolution; all raw masks are separately validated.",
+    "Shared trusted components: Python standard library and tqdm progress only; prior verified rook encoding supplies the conditional premise."
+  ],
+  "limitations": [
+    "No complete H, cross-cell consistency, off-diagonal H^2 equations, target spectrum, target graph, or exclusion is established.",
+    "The local witness does not establish that any rook-containing target exists.",
+    "No nontrivial automorphism assumption; no target-wide coverage measure.",
+    "The written necessity derivation is separate from finite calibration fixtures."
+  ],
+  "wall_seconds": 0.5348003001417965
+}

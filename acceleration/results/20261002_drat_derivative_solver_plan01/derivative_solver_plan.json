@@ -1,0 +1,107 @@
+{
+  "schema": "POLICY_NATIVE_SINGLE_PLAN_V2",
+  "created_at": "2026-10-02T10:35:25.246447+00:00",
+  "source_commit": "28440b31f4effee3b25e30259110acc734695bf0",
+  "question": "Can a new bounded proof-producing native attempt resolve the exact candidate restart state extracted from the historical unrestricted full99 partialDRAT?",
+  "scope": "Candidate derivative active-clause multiset in the unchanged1,186,500-variable universe. Original full99 encoding is independently checked; derivative equivalence and prefix RAT validity remainUNKNOWN. No automorphism assumption. A derivative result alone is not a Conway-99 resolution.",
+  "selection_rule": "Use exactly the whole independently reconstructed active multiset of all complete records from the preserved original300-second trace; do not select favorable learned clauses or omit failed cases.",
+  "success_criterion": "Preserve a complete decoded raw SAT assignment or a complete UNSAT proof suffix, exact derivative/prefix/original identities and contained stopping observation. Any target claim must pass the independently declared original-input checks.",
+  "falsification_criterion": "Unknown/live process state, resource/deadline stop, corrupted transformed state, invalid full combined proof, or SAT assignment failing original CNF/complete99 matrix vetoes promotion.",
+  "independent_verification_criterion": "UNSAT: byte-authenticated retained-prefix+new-suffix complete DRAT replay against original full99 CNF, plus its independent encoding/normalization coverage. SAT: independently satisfy original CNF, decode full99 adjacency and check integer SRG identity. State gate checks syntax/multiset only; prefix validity remains explicit.",
+  "allocation_reason": "A1800-second continuation can retain useful historicallearned clause state rather than repeating300seconds of inference. Actual extraction size/cost and native CPU/RSS/proof growth guide reassessment; reserve150seconds for possible4GiB transfer/hashing, with exact independently calibrated resource guards. This is not a calibrated success probability.",
+  "numerical_acceptance": "EXACT_INTEGER_CNF_AND_RAW_PROOF_OR_COMPLETE_ASSIGNMENT",
+  "baseline_and_uncertainty": "Original300-second attempt wasUNKNOWN with346.6MB incomplete trace. Fresh state reconstruction must complete before execution. Hard restart loses decision trail/activity/reconstruction witnesses and may be slower; any observed improvement is empirical, not a performance guarantee.",
+  "variables": 1186500,
+  "clauses": 3069024,
+  "inputs": [
+    {
+      "role": "cnf",
+      "path": "acceleration/results/20261002_drat_restart_prepare01/candidate/restart.cnf",
+      "sha256": "59698435dfd8954dc3420098d43a9e9c94eb3175190c3cc1133ef7a5b6fdad9e",
+      "bytes": 71451166
+    },
+    {
+      "role": "model",
+      "path": "acceleration/results/20260930_unrestricted_full99_cnf/model.json",
+      "sha256": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+      "bytes": 122319858
+    },
+    {
+      "role": "scope",
+      "path": "acceleration/results/20260930_unrestricted_full99_preflight_v2/scope.json",
+      "sha256": "2359c7389b4bb23475cf9607a99c07060119976abff8bc70bbdb5d131ab1921d",
+      "bytes": 307524
+    },
+    {
+      "role": "original_cnf",
+      "path": "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf",
+      "sha256": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+      "bytes": 84919934
+    },
+    {
+      "role": "original_partial_proof",
+      "path": "acceleration/results/20260930_unrestricted_native_pilot/main/proof.drat",
+      "sha256": "11abdc29b502b8b09d4dc6ac3e9f03fa7ea8947496bc8e538a5043d113272f22",
+      "bytes": 346616832
+    },
+    {
+      "role": "retained_prefix",
+      "path": "acceleration/results/20261002_drat_restart_prepare01/candidate/retained_prefix.drat",
+      "sha256": "4b966350baab1677ae37c4104d5cd48ad76641e3f5974e3f9757591b298bcf80",
+      "bytes": 346616796
+    },
+    {
+      "role": "transform_record",
+      "path": "acceleration/results/20261002_drat_restart_prepare01/candidate/parser_summary.json",
+      "sha256": "01956c2df33f05ba761bed508a2a53e86e27312cba7159d5e75194b8df9b0268",
+      "bytes": 795
+    }
+  ],
+  "mathematical_gates": [
+    {
+      "path": "acceleration/results/20260930_independent_review/unrestricted_full99_cnf/summary.json",
+      "sha256": "2d6702d0f60341378fcf6b5b0808e6c34ea6a1025775cfae60500626f199ef58",
+      "expected_status": "INDEPENDENT_UNRESTRICTED_FULL99_CNF_ENCODING_PASS",
+      "required_input_bindings": {
+        "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+        "acceleration/results/20260930_unrestricted_full99_cnf/model.json": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+        "acceleration/results/20260930_unrestricted_full99_preflight_v2/scope.json": "2359c7389b4bb23475cf9607a99c07060119976abff8bc70bbdb5d131ab1921d"
+      },
+      "exact_scope": "Original CNF/model/scope only; this historical gate does not bind or approve derivativeCNF."
+    },
+    {
+      "path": "acceleration/results/20261002_drat_restart_artifact_audit01/summary.json",
+      "sha256": "429026fd035e429ba8f16c0f92a02e9fdfab51cf2fb773321b112b95b3af2e89",
+      "expected_status": "INDEPENDENT_DRAT_RESTART_ARTIFACT_V1_PASS",
+      "required_input_bindings": {
+        "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+        "acceleration/results/20260930_unrestricted_native_pilot/main/proof.drat": "11abdc29b502b8b09d4dc6ac3e9f03fa7ea8947496bc8e538a5043d113272f22",
+        "acceleration/results/20261002_drat_restart_prepare01/candidate/restart.cnf": "59698435dfd8954dc3420098d43a9e9c94eb3175190c3cc1133ef7a5b6fdad9e",
+        "acceleration/results/20261002_drat_restart_prepare01/candidate/retained_prefix.drat": "4b966350baab1677ae37c4104d5cd48ad76641e3f5974e3f9757591b298bcf80",
+        "acceleration/results/20261002_drat_restart_prepare01/candidate/parser_summary.json": "01956c2df33f05ba761bed508a2a53e86e27312cba7159d5e75194b8df9b0268"
+      },
+      "exact_scope": "Complete syntactic state/prefix reconstruction only; no RAT/equisatisfiability assertion."
+    }
+  ],
+  "configuration": {
+    "address_space_bytes": 8589934592,
+    "proof_file_bytes": 4294967296,
+    "seed": 0,
+    "conflict_limit": null,
+    "conflict_limit_null_reason": "Use observed wall/resource progress rather than inheriting the historical one-million-conflict cutoff.",
+    "host_free_reserve_bytes": 34359738368,
+    "ext4_free_reserve_bytes": 8589934592,
+    "aggregate_retained_artifact_bytes": 12884901888,
+    "native_seconds": 1800.0,
+    "producer_seconds": 2050.0,
+    "shutdown_reserve_seconds": 150.0
+  },
+  "execution_gate_path": "acceleration/results/20261002_independent_review/single_v2_calibration01/summary.json",
+  "execution_gate_sha256": "768fa80d515b02194c18c7e9670457b582c0db9f4f434fc66e919bb7c6a7e942",
+  "mathematical_status": "CANDIDATE",
+  "prefix_rat_rup_status": "UNKNOWN",
+  "derivative_equisatisfiability_status": "UNKNOWN",
+  "target_resolution": false,
+  "automatic_retry": false,
+  "automatic_resume": false
+}

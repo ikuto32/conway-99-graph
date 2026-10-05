@@ -1,0 +1,139 @@
+{
+  "schema": "SOURCE_ONLY_MATHEMATICAL_CANDIDATE_V1",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-COLOR-MOMENTS-WEIGHTS48-75",
+  "revision": 1,
+  "timestamp": "2026-10-04T11:23:25.2100682Z",
+  "author": "/root/structural",
+  "producer": "/root/structural",
+  "status": "CANDIDATE",
+  "statement": "For every complete simple SRG(99,14,1,2) with N its99 by231 incidence matrix containing each actual triangle exactly once, every nonconstant word x in ker(N^T mod3) has three vertex color populations divisible by3 between24 and51, and Hamming weight in {48,51,54,57,60,63,66,69,72,75}. Constants retain weights0,99,99 and L=span(j) remains possible. No nonconstant dependency, rank improvement, small right-circuit implication, fixed17 occurrence or target exclusion is asserted.",
+  "proof": {
+    "sha256": "1e3c651af04fe2c0986a168eff8df74a97e7778cb72f6460520aefbf98ebc0d7",
+    "path": "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_COLOR_MOMENTS_WEIGHTS48_75_V1.md"
+  },
+  "scope": {
+    "description": "Universal conditional population/weight bounds for the ternary point left code of every complete hypothetical99/14/lambda1/mu2 target and full actual-triangle incidence. No extra left word is forced; no automorphism or equitable profile is assumed.",
+    "target_resolution": "NONE",
+    "unrestricted_target": true
+  },
+  "assumptions": [
+    "A is symmetric binary zero-diagonal, Aj=14j and A^2=12I-A+2J over the integers.",
+    "N contains each actual triangle exactly once, with row degree7, column weight3 and NN^T=A+7I.",
+    "The new population/weight bounds apply only to nonconstant words; the constant line span(j) is explicitly permitted."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-DOT-FORM-WEIGHTS42-78",
+      "revision": 1
+    }
+  ],
+  "earlier_statement_preserved": true,
+  "old_moment_identities_rederived": true,
+  "complete_written_cases": [
+    {
+      "veto": "DISJOINT_T_INTERVAL",
+      "c": 57,
+      "b": 21,
+      "t_max_from_A_envelope": 126,
+      "t_min": 135
+    },
+    {
+      "veto": "DISJOINT_T_INTERVAL",
+      "c": 54,
+      "b": 24,
+      "t_max_from_A_envelope": 132,
+      "t_min": 135
+    },
+    {
+      "c": 51,
+      "other_t_min": 141,
+      "t_max_from_A_envelope": 138,
+      "veto": "C_INTEGER_SQUARE_ENVELOPE",
+      "t_min": 138,
+      "b": 27
+    },
+    {
+      "c": 48,
+      "other_t_min": 144,
+      "t_max_from_A_envelope": 141,
+      "veto": "B_INTEGER_SQUARE_ENVELOPE",
+      "t_min": 138,
+      "b": 30
+    },
+    {
+      "c": 45,
+      "other_t_min": 147,
+      "t_max_from_A_envelope": 144,
+      "veto": "B_INTEGER_SQUARE_ENVELOPE",
+      "t_min": 135,
+      "b": 33
+    },
+    {
+      "sole_scalar_t": 147,
+      "c": 42,
+      "t_max_from_A_envelope": 147,
+      "veto": "POINTWISE_PAIR_COMMON_NEIGHBOR_CONTRADICTION",
+      "t_min": 135,
+      "b": 36
+    },
+    {
+      "c": 39,
+      "other_t_min": 147,
+      "t_max_from_A_envelope": 147,
+      "t_max_from_A_square_upper": 144,
+      "t_min": 132,
+      "b": 39,
+      "veto": "SQUARE_LOWER_UPPER_CONTRADICTION"
+    }
+  ],
+  "key_steps": [
+    "Prior accepted dotweights gives all populations multiples3 in21..57.",
+    "Old exact Z moments and sharp integer square envelopes reduce every21-class to populations21,36,42 and rainbow147.",
+    "Moment equality forces the21-class independent/allr7 and42-class exactly21r3 plus21r4.",
+    "For arbitraryv in36-class, exact two-step totals give R_B+R_C=42-r and21r+R_B-2R_C=84-r, hence R_C=7r-14.",
+    "Itsr C-neighbors of degree3/4 imply3r<=7r-14<=4r, forcingr4 at every36-classvertex and total144 rather than147.",
+    "All populations are therefore>=24 and<=51, so all nonconstant weights48..75 in multiples3."
+  ],
+  "hand_boundary_checks": 8,
+  "programmatic_enumerations": 0,
+  "executed_mathematical_commands": 0,
+  "imports": 0,
+  "formal_checks": 0,
+  "external_checks": 0,
+  "future_optional_scalar_screen": {
+    "source": null,
+    "command": null,
+    "rainbow_labels_including_zero": 761,
+    "sorted_population_triples": 12,
+    "plan": null,
+    "authorized": false,
+    "purpose": "Necessary-only scalar/histogram follow-up, not needed to establish this complete hand21-class exclusion."
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_COLOR_MOMENTS_WEIGHTS48_75_V1.md": "1e3c651af04fe2c0986a168eff8df74a97e7778cb72f6460520aefbf98ebc0d7",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_DOT_WEIGHTS_V1.md": "653a21966651c9bf47fab5bdbaec4d9299d8faea3e6cc81c6a511ab3338161d8",
+    "docs/DESIGN_20261003_TERNARY_INCIDENCE_NONCONSTANT_KERNEL_V1.md": "45c27c5dcd2217c1f2b09252efa3fa5f9c0242494178c9a0fa4ee50a34b56f67",
+    "acceleration/audit_20261004_target_ternary_left_code_dot_weights_checkpoint_v1.md": "8af5626046d7aa91db683ecc6af746b4ac19f5075bdb9694ea02f2aa28b4b55b",
+    "acceleration/results/20261004_independent_review/target_ternary_left_code_dot_weights01/summary.json": "4bb906fbaa8ffc924047f636f56fcba310e61d542cf2a2975484dd957f88ed7f",
+    "external_conway99_research/attempts/wave174-no-weight3-dual/derivation.md": "455b85435252f9b19311b048575536c13dcdfa470c095bb79039dcf2ed381ac9",
+    "external_conway99_research/attempts/wave191-global-star-module-proof-b/derivation.md": "5bf0758c7a4620364738225f6da1c27b428f82bd10274c9a9d21a015277e30db"
+  },
+  "bounded_overlap": [
+    "Old exact r/Z moments and Rayleigh inequalities are explicitly prior identities.",
+    "Current dotweights paper and Checkpoint independent report retain21..57/42..78; no overwrite or old ID statement change.",
+    "Bounded current-doc exact searches and relevant archive derivation comparisons did not locate exact24..51/48..75 or21/36/42 CN obstruction.",
+    "Wave174 andWave191 have extra endpoint assumptions; other color-root/lattice/binary matches are outside this vertex ternary-code scope.",
+    "This is not an exhaustive archive/literature novelty assertion."
+  ],
+  "limits": [
+    "No nonconstant left word is forced and constant-onlyL remains compatible.",
+    "Scalar33/33/33 and24/24/51 histogram controls survive; no graph construction or full realization claimed.",
+    "Pointwise same-profile conclusionr4 is derived only at the rejected boundary, never assumed as equitability.",
+    "No current scientific source, worker, frozen roster, ledger/index/Git or registration changes."
+  ],
+  "verification_pending": true,
+  "target_resolution": "NONE",
+  "coverage": "UNKNOWN",
+  "novelty": "UNKNOWN",
+  "registry_mutated": false
+}

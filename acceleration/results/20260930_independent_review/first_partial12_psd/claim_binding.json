@@ -1,0 +1,67 @@
+{
+  "id": "C-FIXED-HADAMARD-FIRST-PARTIAL12-RESIDUAL-PSD",
+  "revision": 1,
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "For the exact saved case0 twelve-column partial object, the36x36 residual prescribed Gram matrix is positive semidefinite of rank29 and nullity7 over the rationals/reals, as established by the saved invertible integer congruence to a diagonal matrix with29positive and7zero entries.",
+  "scope": "This one hash-bound partial object and its exact residual matrix only.",
+  "assumptions": [
+    "The literal fixed prescribed Gram and twelve-column matrix; no unknown remaining columns are assumed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+      "revision": 1,
+      "relation": "premise"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-FOUR-EXCEPTION-PARTIAL12-CENSUS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "verifier": "/root/structural_attack",
+  "producer": "/root/state_literature_audit",
+  "method": "Direct integer matrix congruence multiplication after denominator clearing; nonsingular integer basis certified by nonzero modular determinant. No Schur-elimination replay or producer imports.",
+  "shared_components": [
+    "Raw producer rational basis and pivot artifacts, Python exact rational/integer arithmetic.",
+    "Previously independent partial-object check; no producer code imports."
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard_first_partial_psd/summary.json": "df2b1b58ac311c435b5d89356c36e326a2cdc635a196bca4097f07cc9a75405d",
+    "acceleration/results/20260930_hadamard_first_partial_psd/certificate.json": "d63b345e717205e32d2d48b02c77d9964b24e1be769afc8f6f82a09456cfff0b",
+    "acceleration/results/20260930_hadamard_four_group_joint_v2/case_000/first_witness.json": "b4973edd9d4cbf2ca965b36ccfa9cb22515e81a68315368c772487b57b6e7b9d",
+    "acceleration/results/20260930_independent_review/four_group_partial12_object/summary.json": "8a48a303d687f48c3a84b2427b303a16a32f16e336677e194c4b7b19eafb5fe1",
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_srg243_residual_fixture/triangle_blocks.json": "3f8dfa3803d6a5db8146dd24a0857477e1aa061ab10dac0f9e6e564aabc86439",
+    "acceleration/theory_20260930_hadamard_first_partial_psd.py": "0aea0470eb927d36097c30d52b2f4ec3a0175124156747353403642b28b71bbe",
+    "acceleration/theory_20260930_hadamard_first_partial_psd_spec.md": "47787745eedffac4de904c09b6d5c4ef560b4e9eff048c929290558aef142f74",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_hadamard_first_partial_psd/controls.json": "159b729d73f7f26fb1f216a38ed992e6a827a03913aba51d51ca1a55ab40665b",
+    "acceleration/results/20260930_hadamard_first_partial_psd/manifest.json": "bde4baf2961bc9f09b4d57440517e8c675a1441c2cd7fe509d50373fdfa238fd",
+    "acceleration/audit_20260930_first_partial_psd.py": "5f0d41b8bd28225d3926ded05082c833b657c9020855e134884c383384780ead",
+    "docs/AUDIT_20260930_HADAMARD_FIRST_PARTIAL_PSD.md": "b0b2a10ee2a57e185d3d40c3acbbd6a5b94e6039a3502bd27c6c38447fa01086"
+  },
+  "evidence_sha256": {
+    "acceleration/results/20260930_independent_review/first_partial12_psd/controls.json": "085ba8ebb6d777ba4c4f7a2249d004da705f56d62f49268b56e2302b603cd617",
+    "acceleration/results/20260930_independent_review/first_partial12_psd/independent_congruence.json": "32a5c9147bdb86d56918de8f09fdb4893de0dfcfb22b673e83d29fc6fbbcccc1",
+    "acceleration/results/20260930_independent_review/first_partial12_psd/manifest.json": "b8d27c655478c9100986ee4c50388829a1734825643b126054b9010d337302f2"
+  },
+  "artifact_availability": "LOCAL_ONLY",
+  "availability_reason": "Workspace evidence pending parent publication.",
+  "external_review": null,
+  "external_review_reason": "No external review asserted.",
+  "limitations": [
+    "PSD does not establish a binary48-column factor or any residual graph completion.",
+    "No other enumerated partial object has its PSD certified by this single-object report.",
+    "Producer recursive coefficient metadata is not replayed; the independently sufficient full congruence identity is checked instead."
+  ],
+  "created_at": "2026-09-30T06:17:36.488894+00:00",
+  "updated_at": "2026-09-30T06:17:36.488894+00:00"
+}

@@ -1,0 +1,386 @@
+{
+  "status": "AUTHOR_FROZEN_ROOT_TWO_LINE_V1_CONTROLS_PENDING_INDEPENDENT_GATE",
+  "timestamp": "2026-10-02T23:41:11.839748+00:00",
+  "source_commit": "16be41cee26421941eaecb615b64bd21095c5765",
+  "command": [
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/native_budget_env_v1/build/native-budget-linux-venv/bin/python3",
+    "acceleration/census_20261003_root_focused_selected_neighbor_v1.py",
+    "controls",
+    "--seconds",
+    "100",
+    "--out",
+    "acceleration/results/20261003_root_focused_selected_neighbor_controls01",
+    "--source-commit",
+    "16be41cee26421941eaecb615b64bd21095c5765"
+  ],
+  "cwd": "/mnt/c/Users/ikuto/projects/conway-99-graph",
+  "python": "3.12.3",
+  "tqdm": "4.67.1",
+  "fixtures": {
+    "rook9": {
+      "n": 9,
+      "degree": 2,
+      "root": 0,
+      "triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          8
+        ]
+      ]
+    },
+    "prism9": {
+      "n": 9,
+      "degree": 2,
+      "root": 8,
+      "triples": [
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          1,
+          7
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          3,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          7
+        ],
+        [
+          4,
+          5,
+          8
+        ]
+      ]
+    },
+    "cube12": {
+      "n": 12,
+      "degree": 2,
+      "root": 0,
+      "triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          3,
+          5,
+          7
+        ],
+        [
+          2,
+          8,
+          9
+        ],
+        [
+          4,
+          8,
+          10
+        ],
+        [
+          6,
+          9,
+          11
+        ],
+        [
+          7,
+          10,
+          11
+        ]
+      ]
+    }
+  },
+  "unique_complete_proposal_records_checked": 243,
+  "recorded_proposal_evaluation_calls": 486,
+  "additional_known_overlap_evaluation_calls": 1,
+  "whole_split_equal": true,
+  "strict_negative_count": 41,
+  "strict_negatives": [
+    {
+      "label": "rook9_checkpoint_aggregate",
+      "stage": "CHECKPOINT_AGGREGATE",
+      "diagnostic": "CHECKPOINT_AGGREGATE: prefix metadata reproduced"
+    },
+    {
+      "label": "rook9_common_cache",
+      "stage": "CN_CACHE",
+      "diagnostic": "CN_CACHE: common-neighbor cache"
+    },
+    {
+      "label": "rook9_score_cache",
+      "stage": "ENERGY_CACHE",
+      "diagnostic": "ENERGY_CACHE: integer score cache"
+    },
+    {
+      "label": "rook9_adjacency_cache",
+      "stage": "ADJ_CACHE",
+      "diagnostic": "ADJ_CACHE: adjacency cache"
+    },
+    {
+      "label": "prism9_checkpoint_aggregate",
+      "stage": "CHECKPOINT_AGGREGATE",
+      "diagnostic": "CHECKPOINT_AGGREGATE: prefix metadata reproduced"
+    },
+    {
+      "label": "prism9_common_cache",
+      "stage": "CN_CACHE",
+      "diagnostic": "CN_CACHE: common-neighbor cache"
+    },
+    {
+      "label": "prism9_score_cache",
+      "stage": "ENERGY_CACHE",
+      "diagnostic": "ENERGY_CACHE: integer score cache"
+    },
+    {
+      "label": "prism9_adjacency_cache",
+      "stage": "ADJ_CACHE",
+      "diagnostic": "ADJ_CACHE: adjacency cache"
+    },
+    {
+      "label": "cube12_checkpoint_aggregate",
+      "stage": "CHECKPOINT_AGGREGATE",
+      "diagnostic": "CHECKPOINT_AGGREGATE: prefix metadata reproduced"
+    },
+    {
+      "label": "cube12_common_cache",
+      "stage": "CN_CACHE",
+      "diagnostic": "CN_CACHE: common-neighbor cache"
+    },
+    {
+      "label": "cube12_score_cache",
+      "stage": "ENERGY_CACHE",
+      "diagnostic": "ENERGY_CACHE: integer score cache"
+    },
+    {
+      "label": "cube12_adjacency_cache",
+      "stage": "ADJ_CACHE",
+      "diagnostic": "ADJ_CACHE: adjacency cache"
+    },
+    {
+      "label": "duplicate_vertex",
+      "stage": "DOMAIN",
+      "diagnostic": "DOMAIN: three distinct literal points"
+    },
+    {
+      "label": "out_of_range",
+      "stage": "DOMAIN",
+      "diagnostic": "DOMAIN: three distinct literal points"
+    },
+    {
+      "label": "duplicate_triple",
+      "stage": "DOMAIN",
+      "diagnostic": "DOMAIN: duplicate triple"
+    },
+    {
+      "label": "wrong_point_degree",
+      "stage": "DEGREE",
+      "diagnostic": "DEGREE: complete regular incidence"
+    },
+    {
+      "label": "out_of_population_proposal",
+      "stage": "PROPOSAL_DOMAIN",
+      "diagnostic": "PROPOSAL_DOMAIN: proposal ID"
+    },
+    {
+      "label": "rook9_reader_magic",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exact state wrapper"
+    },
+    {
+      "label": "rook9_reader_duplicate_n",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exactly one n"
+    },
+    {
+      "label": "rook9_reader_boolean_n",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: typed n"
+    },
+    {
+      "label": "rook9_reader_wrong_mutable_count",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: mutable count"
+    },
+    {
+      "label": "rook9_reader_wrong_root",
+      "stage": "FROZEN_READER",
+      "diagnostic": "FROZEN_READER: all exact incident/nonincident literal labels"
+    },
+    {
+      "label": "rook9_reader_reordered_frozen",
+      "stage": "FROZEN_READER",
+      "diagnostic": "FROZEN_READER: all exact incident/nonincident literal labels"
+    },
+    {
+      "label": "rook9_excluded_frozen_label",
+      "stage": "FROZEN_UNIVERSE",
+      "diagnostic": "FROZEN_UNIVERSE: only two distinct non-root lines in original order"
+    },
+    {
+      "label": "rook9_reader_truncated",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exact state wrapper"
+    },
+    {
+      "label": "prism9_reader_magic",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exact state wrapper"
+    },
+    {
+      "label": "prism9_reader_duplicate_n",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exactly one n"
+    },
+    {
+      "label": "prism9_reader_boolean_n",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: typed n"
+    },
+    {
+      "label": "prism9_reader_wrong_mutable_count",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: mutable count"
+    },
+    {
+      "label": "prism9_reader_wrong_root",
+      "stage": "FROZEN_READER",
+      "diagnostic": "FROZEN_READER: all exact incident/nonincident literal labels"
+    },
+    {
+      "label": "prism9_reader_reordered_frozen",
+      "stage": "FROZEN_READER",
+      "diagnostic": "FROZEN_READER: all exact incident/nonincident literal labels"
+    },
+    {
+      "label": "prism9_excluded_frozen_label",
+      "stage": "FROZEN_UNIVERSE",
+      "diagnostic": "FROZEN_UNIVERSE: only two distinct non-root lines in original order"
+    },
+    {
+      "label": "prism9_reader_truncated",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exact state wrapper"
+    },
+    {
+      "label": "cube12_reader_magic",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exact state wrapper"
+    },
+    {
+      "label": "cube12_reader_duplicate_n",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exactly one n"
+    },
+    {
+      "label": "cube12_reader_boolean_n",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: typed n"
+    },
+    {
+      "label": "cube12_reader_wrong_mutable_count",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: mutable count"
+    },
+    {
+      "label": "cube12_reader_wrong_root",
+      "stage": "FROZEN_READER",
+      "diagnostic": "FROZEN_READER: all exact incident/nonincident literal labels"
+    },
+    {
+      "label": "cube12_reader_reordered_frozen",
+      "stage": "FROZEN_READER",
+      "diagnostic": "FROZEN_READER: all exact incident/nonincident literal labels"
+    },
+    {
+      "label": "cube12_excluded_frozen_label",
+      "stage": "FROZEN_UNIVERSE",
+      "diagnostic": "FROZEN_UNIVERSE: only two distinct non-root lines in original order"
+    },
+    {
+      "label": "cube12_reader_truncated",
+      "stage": "STATE_READER",
+      "diagnostic": "STATE_READER: exact state wrapper"
+    }
+  ],
+  "new_topology_reader_positive_fixtures": [
+    "rook9",
+    "prism9",
+    "cube12"
+  ],
+  "known_overlap_proposal": 9,
+  "software": {
+    "acceleration/project_20261003_root_focused_neighbor_graph_v1.py": "593b04087da6d54f9d25c159466100dc2b215615d088caf1af7b0eb33009353c",
+    "acceleration/project_20261003_root_focused_neighbor_graph_v1_spec.md": "9842e294d920094140776246c6a36ed2b840f948cefac5607129be23bf0864ec",
+    "acceleration/census_20261003_root_focused_two_line_v1.py": "bbc91ed768a07b302e0e417e8c4415925ef6fac01bd14d78051a56b723419017",
+    "acceleration/census_20261003_root_focused_two_line_v1_spec.md": "9b2fcfc0b330b9183a47c0f3888126ef8dfe8a8dbb4d41366c9adf11006cdcc8",
+    "acceleration/census_20261003_root_focused_selected_neighbor_v1.py": "092a4b7f895724832583909d22e373611960386f2a12a098d1583638b8925f2a",
+    "acceleration/census_20261003_root_focused_selected_neighbor_v1_spec.md": "7a4678e30b256ef5185d1a65385806e192c83dcf4b7431c81791f4d5b38c7617",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434"
+  },
+  "deadline": {
+    "elapsed_seconds": 1.5466243799999972,
+    "remaining_seconds": 98.45337562000002,
+    "review_remaining_seconds": 1798.4533756199999,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 176.48390366,
+    "review_deadline_at": 1876.48390366,
+    "completed_reviews": 0
+  },
+  "independent_approval": false,
+  "scientific_census_launched": false
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "status": "CANDIDATE",
+  "id": "C-UNRESTRICTED-TARGET-ROOK-SQUARE-COVERAGE-N3-EQUIVALENCE",
+  "revision": 1,
+  "created_at": "2026-10-04T16:04:26.3108536+00:00",
+  "producer": "/root/structural",
+  "discovery_context": "Root proposed the scope question; local square lemma appears in preserved October1 note. Structural reconstructs all implications and two-preimage counting.",
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count induced rook-nine subsets, U count induced C4 subsets in no such rook, and n3 count induced six-subsets consisting of two disjoint triangles joined by exactly two independent cross edges. Then U=2079-9R, R=231 iff U=0 iff the graph is N3-free, and 0<=n3<=2U=4158-18R.",
+  "scope": {
+    "description": "Exact target rook/square/subset counts and parameter-free local lambda1/mu2 square-grid equivalence. No cited global exclusion is approved by this derivation.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "The graph is complete, finite and simple with exact SRG(99,14,1,2) parameters.",
+    "R,U,n3 count actual vertex subsets once, rather than embeddings or automorphism classes."
+  ],
+  "dependencies": [],
+  "local_equivalence_scope": "Any graph with exact common-neighbor counts lambda1 and mu2; order99/degree14 only enter2079 coefficients.",
+  "N3": {
+    "presentation_triangles": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "presentation_cross_edges": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "canonical_mask": 5941,
+    "presentation_mask": 28839,
+    "edge_convention": "Increasing lexicographic unordered pairs, first pair low bit",
+    "presentation_to_canonical_vertex_relabeling": [
+      0,
+      1,
+      5,
+      3,
+      2,
+      4
+    ],
+    "canonical_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ]
+  },
+  "proof": {
+    "paper": "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md",
+    "paper_sha256": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72",
+    "steps": [
+      "Exact triangle partners and cross matching.",
+      "At most one rook around a square.",
+      "N3-free forces both opposite edges and compatible ninth point.",
+      "An induced N3 has a unique square which cannot be rook-covered.",
+      "Each uncovered square has at most two N3 preimages.",
+      "4158 nonedges count2079 squares and each rook covers9 disjoint squares."
+    ]
+  },
+  "conditional_cited_consequence": {
+    "statement": "If the exact applicable Makhnev N3-free target exclusion is separately authenticated, R231 is excluded. If the separate R!=230 theorem is also independently accepted, then R<=229 and U>=18.",
+    "status": "CITED_PREMISE_NOT_INDEPENDENTLY_APPROVED_HERE",
+    "Makhnev_original_scope": "Condition(*) forbids exactly two cross edges between two triangles. The matching lemma identifies this with N3-freeness.",
+    "official_record": "https://www.mathnet.ru/eng/mzm4220",
+    "DOI": "10.1007/BF01158426",
+    "fresh_full_proof_read": false,
+    "preserved_pdf_identity_checked": true,
+    "historical_archive_claim": "C-N3-001 DERIVED; proof-not-independently-reconstructed limitation retained",
+    "Hamming_universal_cover": "UNKNOWN"
+  },
+  "evidence_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72",
+    "docs/LITERATURE_20261001_N3_HAMMING_SCOPE.md": "0ef5d90eb745c58fccb41c5fb429254374dee950b471d2026f48d4c4d2f343ab",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc",
+    "external_conway99_research/agents/2026-07-22-wave3-prior-art.md": "b0678e58b7efe04af502d3539cecd01b33c1f77885d917ad45d5cfa9999cf890",
+    "external_conway99_research/verification/wave141-bivariate-graph-code/verification-report.md": "fa303ddbc776528d334c0dfcf9fff3d4c26b1ee9bd2af97c7c89bbceae04a802",
+    "acceleration/results/20261001_n3_hamming_scope/summary.json": "1cfe2e7f9dbae35f91ae2a6c3ed1246cb5380e4e8ed89acf83da16aad92f92f2",
+    "acceleration/results/20261001_n3_hamming_scope/makhnev_1988.pdf": "ca870226aae6a00af8b878d68bc64ca42c987dff40c4df39caefdab186e20431"
+  },
+  "verification": {
+    "different_author_review": null,
+    "mathematical_or_source_executions": 0,
+    "graph_censuses": 0,
+    "new_gate": null
+  },
+  "limitations": [
+    "The local theorem does not exclude R231 or a target.",
+    "No Hamming covering theorem follows or is substituted.",
+    "An uncovered square is not claimed to contain an N3 on its own corners; the implication is global.",
+    "N3-to-square map is at most two-to-one, not injective or surjective.",
+    "Bare N3 need not itself satisfy the complete common-neighbor hypotheses.",
+    "No current ledger/Git/index or frozen evidence bytes are changed."
+  ]
+}

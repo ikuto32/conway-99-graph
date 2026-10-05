@@ -1,0 +1,1 @@
+Source-only plan preparation failed before any launch: PowerShell bare true was parsed as a command instead of Boolean. The original plan bytes are preserved. No supervisor, worker, publication or ledger/index operation was dispatched. A new preparation directory02 uses literal $true and stops on errors.

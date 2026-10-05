@@ -1,0 +1,103 @@
+{
+  "schema": "WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "status": "CANDIDATE",
+  "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+  "revision": 1,
+  "created_at": "2026-10-04T16:15:51.4700370+00:00",
+  "producer": "/root/structural",
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex subsets once, r_T count those containing actual triangle T, d_T=6-r_T and D=sum_T d_T=6(231-R). Whenever D>0, every d_T=m>0 satisfies D>6m and therefore D>=6m+6. Equivalently d_T<=230-R for every T whenever R<231. In particular R=229 forces exactly twelve deficiency-one triangles and zero deficiency on every other triangle.",
+  "scope": {
+    "description": "Exact unrestricted target rook-deficiency necessary condition, eliminating the complete equality boundary of the earlier second-neighbor mass bound. R229 and R231 remain unexcluded.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Complete finite simple SRG(99,14,1,2) with actual triangle and induced rook-nine vertex-subset counts.",
+    "The positive-deficiency inequality is conditioned on D>0; no positive m is assumed when D=0."
+  ],
+  "dependencies": [],
+  "proof": {
+    "paper": "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md",
+    "sha256": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "steps": [
+      "Local defect degree identity and U=3D/2.",
+      "Non-strict D>=6m and complete equality geometry.",
+      "Upper Gram positivity forces equality support induced.",
+      "All uncovered-square corners lie on positive triangles.",
+      "Complete S pair-common-neighbor categories give C4(S)=6m+sum common-matching edges<=9m.",
+      "U=9m forces three identical matchings and an actual rook across a designated defect pair.",
+      "D is a multiple of six, so strictness strengthens the integer bound."
+    ],
+    "equality_support_vertices": "3+6m",
+    "equality_positive_triangles": "1+5m",
+    "required_uncovered_squares": "9m",
+    "maximum_induced_support_squares": "6m+c_ab+c_ac+c_bc",
+    "comparison_evidence_is_not_approval": true
+  },
+  "hand_matching_boundaries": [
+    {
+      "m": 1,
+      "pattern": "Three identical matchings on two nodes",
+      "common_sum": 3,
+      "squares": 9,
+      "required": 9,
+      "veto": "Designated defect pair belongs to induced rook"
+    },
+    {
+      "m": 2,
+      "pattern": "All identical",
+      "common_sum": 6,
+      "squares": 18,
+      "required": 18,
+      "veto": "Designated defect pair belongs to induced rook"
+    },
+    {
+      "m": 2,
+      "pattern": "Exactly two identical",
+      "common_sum": 2,
+      "squares": 14,
+      "required": 18,
+      "veto": "Too few squares"
+    },
+    {
+      "m": 2,
+      "pattern": "All distinct",
+      "common_sum": 0,
+      "squares": 12,
+      "required": 18,
+      "veto": "Too few squares"
+    }
+  ],
+  "R229_remaining_scope": {
+    "positive_triangles": 12,
+    "deficiency_each": 1,
+    "positive_point_multiplicities": [
+      2,
+      4,
+      6
+    ],
+    "all_point_multiplicities_two_assumed": false,
+    "case_excluded": false
+  },
+  "evidence_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_SECOND_NEIGHBOR_BOUND_V1.md": "ba046522585d5a59a857251928d05c0ac59e69425bf58f420e8cd63be83f210c",
+    "acceleration/results/20261004_target_rook_deficiency_second_neighbor_candidate01.json": "d860c4e34ec704a6749a4e51603f86d895b36a693b79ed5c379602b4be719c86",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc"
+  },
+  "sharing": "Root proposed equality challenge and received the outline before freeze. This is not independent approval.",
+  "verification": {
+    "different_author_review": null,
+    "source_or_mathematical_executions": 0,
+    "graph_enumerations": 0
+  },
+  "limitations": [
+    "R231 has D0 and is not excluded.",
+    "No cited Makhnev or universal Hamming covering premise is used.",
+    "No R229 construction or exclusion is proved.",
+    "The all-d1 branch permits multiplicity4/6 points; cubic-dual assumptions would be invalid.",
+    "No old candidate, ledger/Git/index or execution gate is modified."
+  ]
+}

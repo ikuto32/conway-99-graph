@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-09-29T19:17:57.480265+00:00",
+  "source_commit": "048ff18824f076898652da87f4213d74147a0a95",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_rook_joint_pruned.py",
+    "--star",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json",
+    "--pairs",
+    "acceleration/results/20260930_rook_offdiagonal",
+    "--out",
+    "acceleration/results/20260930_rook_joint_pruned"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_joint_pruned.py": "aa1a7f72d6b8b88e0084d76e25be8c5a547711dcdac007f8e8f8b342517067c0",
+    "acceleration/theory_20260930_rook_complete_window.py": "7064776af9e1a955a7c09253b3c2e4632e1ee988b873490e59d9175a465ad294",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration/results/20260930_rook_offdiagonal/pair_0_1.json": "ea66faffce6ac842bb19258128cb27f5c3cf1240381eb07c925cd44cc2e867cb",
+    "acceleration/results/20260930_rook_offdiagonal/pair_0_2.json": "ef750c4795766764857afb983e4b29b7b47e84b52da52dc9af72122c8826ccb8",
+    "acceleration/results/20260930_rook_offdiagonal/pair_1_3.json": "24f7f34c9e86fe80e707aa7c18f8ffc2f2d02c9af81871d8fbf20bc081ae4063",
+    "acceleration/results/20260930_rook_offdiagonal/pair_2_3.json": "5e3f9f90579c9cab64ba68f60cd85d71b20107e5847f67eddc2b38800423891d",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Does the stronger fixed-star local model admit a 50-external-vertex window with every selected cell-to-cell degree and common-neighbor upper bound?",
+  "scope": "One fixed factor star and its fixed internal matchings. Four perfect matchings are sampled; the two missing degree-two blocks are completed by exact DFS when single-edge row/column capacity tests permit. This does not cover all stars or prove global feasibility.",
+  "selection_rule": "Python Random seed 2026093001 samples four pair-domain indices independently; reject all-pair cap failures, then single-edge row/column degree obstructions; solve remaining two blocks by exact DFS.",
+  "success_criteria": "One full 50-vertex local adjacency satisfying prescribed block degrees and all pair common-neighbor caps; emit raw complete local adjacency.",
+  "falsification_criteria": "Reject any sampled window with cap excess or any required row/column with fewer than two individually admissible edges; all such rejections concern only that sample.",
+  "resource_limits": {
+    "wall_seconds": 120,
+    "attempt_cap": 10000000,
+    "per_window_dfs_node_cap": 100000,
+    "stop_on_first_complete_window": true
+  },
+  "numeric_thresholds": null,
+  "numeric_thresholds_reason": "Exact integer bit counts, no numerical threshold.",
+  "random_seed": 2026093001,
+  "status": "CANDIDATE",
+  "independent_review_pending": true
+}

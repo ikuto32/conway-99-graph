@@ -1,0 +1,189 @@
+# V17 admits only three exact ROOT-verifier metadata records. V16 is preserved.
+V17_DESCRIPTOR = dict(
+    path='acceleration/proposal_20261003_registrar_v17_exact_diagnostics_v1.json',
+    sha256='0a0717a7266398532606d99370edde6f82fd552b7ab32178d840754ee532b780')
+V17_EXACT = json.loads(r'''{
+  "C-FIXED-LAMBDA1-REGULAR14-TRIANGLE-INCIDENCE-GF3-RANK98": {
+    "descriptor_index": 0,
+    "binding_path": "acceleration/results/20261003_fixed_graph_diagnostics_bindings_v2_01/rank98/claim_binding_schema2.json",
+    "binding_sha256": "256b6b664f1228c0339ef445a473b6038ff9bb489ab33e48bc7763e214049207"
+  },
+  "C-FIXED-ROOTFOCUSED-SELECTED45369-COMPLETE99-ROOT-RESIDUALS": {
+    "descriptor_index": 1,
+    "binding_path": "acceleration/results/20261003_fixed_graph_diagnostics_bindings_v2_01/all99roots/claim_binding_schema2.json",
+    "binding_sha256": "cd9fce2c51677551608e71668aecc97b1377faf0c851978e52431f0cf8ac7f6c"
+  },
+  "C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUE-ENERGY-BOUNDS": {
+    "descriptor_index": 2,
+    "binding_path": "acceleration/results/20261003_independent_review/ternary_residue_energy_bounds01/claim_binding_schema2.json",
+    "binding_sha256": "528cbe189342b9afb4791494b66b3b2158214bff3f421b87a83f5f703a5a93ac"
+  }
+}''')
+
+
+def v17_descriptor(cid):
+    need(cid in V17_EXACT, 'v17 exact descriptor ID')
+    need(digest(ROOT/V17_DESCRIPTOR['path']) == V17_DESCRIPTOR['sha256'],
+         'v17 immutable reviewed descriptor bytes')
+    declared = json.loads((ROOT/V17_DESCRIPTOR['path']).read_bytes())
+    need(declared['schema'] == 'PROSPECTIVE_EXACT_REGISTRAR_ADAPTER_DESCRIPTORS_V1'
+         and [record['id'] for record in declared['adapters']] == list(V17_EXACT),
+         'v17 exact three descriptor records')
+    exact = V17_EXACT[cid]
+    record = declared['adapters'][exact['descriptor_index']]
+    need(record['id'] == cid and record['binding'] == dict(path=exact['binding_path'], sha256=exact['binding_sha256']),
+         'v17 exact descriptor binding routing')
+    return record
+
+
+def v17_role(cid, expected, binding):
+    if cid not in V17_EXACT: return False
+    exact = V17_EXACT[cid]
+    need(expected == exact['binding_sha256'], 'v17 exact frozen binding identity')
+    record = v17_descriptor(cid)
+    keys = ['id', 'revision', 'status', 'review_state', 'producer', 'verifier', 'method', 'kind', 'basis']
+    need(all(key in binding and v15_same(binding[key], record[key]) for key in keys)
+         and type(binding.get('claim_revision')) is int and binding['claim_revision'] == 1,
+         'v17 exact typed revision status roles method kind basis')
+    need(all(key in binding and v15_same(binding[key], record[key]) for key in ['scope', 'dependencies'])
+         and binding.get('target_resolution') == 'NONE',
+         'v17 exact three-key scope empty dependencies and nonresolution')
+    need('verification_records' not in binding and binding.get('statement') == record['statement']
+         and binding.get('report') == record['primary_report']['path']
+         and binding.get('report_sha256') == record['primary_report']['sha256'],
+         'v17 exact literal statement primary report and no legacy fallback')
+    need(digest(ROOT/exact['binding_path']) == exact['binding_sha256'],
+         'v17 original immutable binding bytes')
+    original = json.loads((ROOT/exact['binding_path']).read_bytes())
+    need(v15_same(binding, original), 'v17 complete literal binding metadata')
+    return True
+
+
+def v17_fixed_evidence(cid, record, binding, report):
+    descriptor = json.loads((ROOT/V17_DESCRIPTOR['path']).read_bytes())
+    review = descriptor['diagnostic_writer_and_identity_review']
+    pins = [record['raw_graph'], record['complete_checking_closure'], record['prior_output_identity_provenance'],
+            review['writer'], review['writer_spec'], review['written_identity_review']]
+    outputs = record.get('literal_checked_outputs', [record.get('literal_checked_output')])
+    need(all(type(row) is dict for row in outputs), 'v17 literal checked output descriptors')
+    pins += outputs
+    for row in pins:
+        name, identity = row['path'], row['sha256']
+        need(binding['inputs_sha256'].get(name) == identity and digest(ROOT/name) == identity,
+             'v17 exact diagnostic graph output closure provenance writer review pins')
+        if 'bytes' in row:
+            need(type(row['bytes']) is int and (ROOT/name).stat().st_size == row['bytes'],
+                 'v17 exact prior output bytes')
+    closure = json.loads((ROOT/record['complete_checking_closure']['path']).read_bytes())
+    need(len(closure['inputs_sha256']) == record['complete_checking_closure']['immutable_members']
+         and v15_same(closure['inputs_sha256'], report['inputs_sha256'])
+         and closure['direct_report'] == record['primary_report']['path']
+         and closure['direct_report_sha256'] == record['primary_report']['sha256'],
+         'v17 complete original diagnostic input closure')
+    for name, identity in closure['inputs_sha256'].items():
+        need(digest(ROOT/name) == identity, 'v17 current immutable diagnostic closure member')
+    provenance = json.loads((ROOT/record['prior_output_identity_provenance']['path']).read_bytes())
+    output_map = {row['path']: row['sha256'] for row in outputs}
+    need(provenance['schema'] == 'LITERAL_PRIOR_CHECKER_OUTPUT_IDENTITY_V1'
+         and provenance['claim_id'] == cid and type(provenance['claim_revision']) is int
+         and provenance['claim_revision'] == 1 and provenance['prior_report'] == record['primary_report']['path']
+         and provenance['prior_report_sha256'] == record['primary_report']['sha256']
+         and provenance['original_summary_self_output_hashes_present'] is False
+         and provenance['raw_output_identity_in_prior_report'] is None
+         and type(provenance['raw_output_identity_in_prior_report_null_reason']) is str
+         and v15_same(provenance['outputs_sha256'], output_map)
+         and provenance['metadata_only'] is True and type(provenance['mathematical_replays']) is int
+         and provenance['mathematical_replays'] == 0,
+         'v17 no retrospective original self-output identity')
+    written_review = json.loads((ROOT/review['written_identity_review']['path']).read_bytes())
+    need(written_review['schema'] == review['identity_review_schema']
+         and written_review['status'] == review['identity_review_status']
+         and written_review['reviewer'] == review['identity_review_reviewer']
+         and written_review['method'] == review['identity_review_method']
+         and type(written_review['mathematical_replays']) is int and written_review['mathematical_replays'] == 0
+         and written_review['target_resolution'] == 'NONE'
+         and written_review['scope'] == review['identity_review_scope']
+         and written_review['writer_inputs_sha256'] == {review['writer']['path']:review['writer']['sha256'],
+                                                       review['writer_spec']['path']:review['writer_spec']['sha256']},
+         'v17 exact separate ROOT output identity review')
+    expected_records = []
+    for item in descriptor['adapters'][:2]:
+        items = item.get('literal_checked_outputs', [item.get('literal_checked_output')])
+        expected_records.append(dict(report_sha256=item['primary_report']['sha256'],
+            outputs_sha256={row['path']:row['sha256'] for row in items}, id=item['id'],
+            report=item['primary_report']['path'], raw_graph_sha256=item['raw_graph']['sha256'],
+            raw_graph=item['raw_graph']['path'], revision=1))
+    need(v15_same(written_review['records'], expected_records), 'v17 exact two prior output review records')
+    if record['id'] == 'C-FIXED-LAMBDA1-REGULAR14-TRIANGLE-INCIDENCE-GF3-RANK98':
+        calibration = record['independent_calibration']
+        need(binding['inputs_sha256'].get(calibration['path']) == calibration['sha256']
+             and digest(ROOT/calibration['path']) == calibration['sha256'], 'v17 exact rank pre-output calibration')
+        cal = json.loads((ROOT/calibration['path']).read_bytes())
+        need(cal['status'] == calibration['status'] and cal['producer_outputs_checked'] is False
+             and type(cal['hand_certificate_positives']) is int and cal['hand_certificate_positives'] == 5
+             and type(cal['precise_certificate_negatives']) is int and cal['precise_certificate_negatives'] == 15
+             and type(cal['precise_graph_negatives']) is int and cal['precise_graph_negatives'] == 4
+             and type(cal['precise_binding_negatives']) is int and cal['precise_binding_negatives'] == 2
+             and len(cal['controls']) == 21,
+             'v17 recorded finite rank calibration population')
+    else:
+        need(v15_same(report['controls'], binding['controls']) and report['controls']['producer_artifact_read_before_controls'] is False,
+             'v17 literal all-root precise controls')
+    return dict(original_output_identity_provenance=record['prior_output_identity_provenance'],
+                later_literal_checked_outputs=outputs, separate_ROOT_written_identity_review=review['written_identity_review'],
+                original_checking_closure=record['complete_checking_closure'])
+
+
+def v17_report(cid, report_sha, binding, report):
+    if cid not in V17_EXACT: return None
+    exact = V17_EXACT[cid]
+    need(v17_role(cid, exact['binding_sha256'], binding), 'v17 exact bound report routing')
+    record = v17_descriptor(cid)
+    need(report_sha == record['primary_report']['sha256'], 'v17 exact primary report identity')
+    wanted = dict(status=record['primary_report_status'], producer=record['producer'], verifier=record['verifier'],
+                  method=record['method'], target_resolution='NONE')
+    need(all(key in report and v15_same(report[key], value) for key, value in wanted.items()),
+         'v17 exact typed independent report status roles and method')
+    if record['scope']['unrestricted_target'] is False:
+        need(all(key not in report for key in record['primary_report_required_absent_keys'])
+             and report.get('mathematical_scope') == record['primary_report_mathematical_scope'],
+             'v17 exact absent diagnostic headlines and finite scope')
+        fields = record['required_literal_results']
+        if cid == 'C-FIXED-LAMBDA1-REGULAR14-TRIANGLE-INCIDENCE-GF3-RANK98':
+            fields = {key: fields[key] for key in ('rank', 'kernel_dimension', 'constant_only_kernel',
+                      'transform_entries_checked', 'both_row_inverse_entries_checked', 'both_minor_inverse_entries_checked', 'target_exclusions')}
+        need(all(key in report and v15_same(report[key], value) for key, value in fields.items()),
+             'v17 exact finite diagnostic results')
+        evidence = v17_fixed_evidence(cid, record, binding, report)
+    else:
+        need(report.get('schema') == record['primary_report_schema'] and report.get('claim_id') == cid
+             and type(report.get('claim_revision')) is int and report['claim_revision'] == 1,
+             'v17 exact written energy schema and revision')
+        need(report.get('statement') == binding['statement'] and v15_same(report.get('scope'), binding['scope'])
+             and v15_same(report.get('assumptions'), binding['assumptions']) and report.get('dependencies') == [],
+             'v17 exact written statement scope and assumptions')
+        need(all(key in report and v15_same(report[key], value) for key, value in record['required_literal_results'].items())
+             and all(key in report and report[key] is None for key in record['required_explicit_nulls'])
+             and report['outcome'] == 'PASS', 'v17 exact written checks and explicit nonexecuted nulls')
+        for row in (record['candidate_source'], record['written_audit']):
+            need(binding['inputs_sha256'].get(row['path']) == row['sha256'] and digest(ROOT/row['path']) == row['sha256'],
+                 'v17 exact written source and independent proof pins')
+    need(digest(ROOT/record['primary_report']['path']) == record['primary_report']['sha256'],
+         'v17 original immutable report bytes')
+    original = json.loads((ROOT/record['primary_report']['path']).read_bytes())
+    need(v15_same(report, original), 'v17 complete literal report metadata')
+    if record['scope']['unrestricted_target'] is True: return None
+    return dict(claim_id=cid, claim_revision=1,
+        original_report=record['primary_report']['path'], original_report_sha256=report_sha,
+        original_report_statement_field=None, original_report_statement=None,
+        original_report_statement_null_reason=record['projection']['original_report_statement_null_reason'],
+        original_report_mathematical_scope=report['mathematical_scope'],
+        recorded_binding=exact['binding_path'], recorded_binding_sha256=exact['binding_sha256'],
+        recorded_binding_statement=binding['statement'],
+        recorded_binding_statement_sha256=hashlib.sha256(binding['statement'].encode()).hexdigest(),
+        original_independent_report_method=report['method'], schema_method=binding['method'],
+        evidence=evidence, descriptor_path=V17_DESCRIPTOR['path'], descriptor_sha256=V17_DESCRIPTOR['sha256'],
+        reason='Exact two finite diagnostic IDs only: preserve the absent raw headline and original finite mathematical_scope. The complete binding statement records already independently checked literal results; no report is rewritten, no retrospective self-output hash is invented, and this registrar performs no new mathematics or wider inference.',
+        raw_statement_changed=False, mathematical_replays=0, target_resolution='NONE')
+
+

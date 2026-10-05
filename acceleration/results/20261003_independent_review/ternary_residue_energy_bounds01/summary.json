@@ -1,0 +1,82 @@
+{
+  "schema": "INDEPENDENT_TERNARY_RESIDUE_ENERGY_WRITTEN_DERIVATION_V1",
+  "status": "INDEPENDENT_TERNARY_RESIDUE_ENERGY_BOUNDS_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-RESIDUE-ENERGY-BOUNDS",
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exact integer row degree14, put r_uv=(A^2)_uv+A_uv-2 for u<v, F3=sum_[u<v] 1[3 does not divide r_uv] and E=sum_[u<v] r_uv^2. Then F3<=E<=28*F3. If q_i counts these unordered residuals congruent to i modulo3, q1-q2 is divisible by3; the same congruence holds in every complete vertex row. Consequently F3=1 is impossible and F3=2 implies q1=q2=1. No existence or realization of these small defects is asserted.",
+  "producer": "/root/structural",
+  "verifier": "/root",
+  "method": "independent_derivation",
+  "timestamp": "2026-10-03T02:25:05+00:00",
+  "timestamp_provenance": "Actual written-review timestamp communicated by ROOT; the preserved written artifact records the UTC date.",
+  "record_created_at": "2026-10-03T02:29:47+00:00",
+  "source_commit": "00ffb6fdd7d91bd38269e1cc5e6b214ebf7591c8",
+  "source_commit_role": "Current published source context; new candidate/audit bytes are independently hash pinned and not inferred present in that commit.",
+  "source": "docs/CANDIDATE_20261003_TERNARY_RESIDUE_ENERGY_BOUNDS_V1.md",
+  "source_sha256": "82f92749d30949fe0dcdcfcf3aab15256f90c31bfcbb1208350397870a123392",
+  "written_audit": "acceleration/audit_20261003_ternary_residue_energy_bounds_v1.md",
+  "written_audit_sha256": "c2ebce87570a6b0828e1ea3feb66121bab6a16f6d14e2d0e6b9d39fc3c2393bf",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_RESIDUE_ENERGY_BOUNDS_V1.md": "82f92749d30949fe0dcdcfcf3aab15256f90c31bfcbb1208350397870a123392",
+    "acceleration/audit_20261003_ternary_residue_energy_bounds_v1.md": "c2ebce87570a6b0828e1ea3feb66121bab6a16f6d14e2d0e6b9d39fc3c2393bf"
+  },
+  "scope": {
+    "description": "Exact metric and complete residue-histogram necessities on the full simple symmetric degree14 adjacency domain of order99; no lambda1 or incidence premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A is binary, symmetric, zero diagonal and of order99.",
+    "Every row has exactly14 ones over the integers.",
+    "F3 and E include all4851 unordered pairs; row histogram claims include every other vertex in the row.",
+    "Residues use the mathematical values0,1,2, including for negative residuals."
+  ],
+  "dependencies": [],
+  "independent_path": [
+    "Count middle vertices: sum_[u<v] CN_uv=99*binom(14,2)=9009, with693 edges and4851 pairs, so the residual sum is zero.",
+    "At edges CN<=13 and at nonedges CN<=14, so -2<=r<=12.",
+    "Positive residual mass P equals absolute negative mass N; E<=12P+2N=14N and N<=2F3.",
+    "Each residue violation has nonzero integer residual and contributes at least1 to E.",
+    "Each complete row has residual sum182+14-196=0; reduction modulo3 proves both histogram congruences and the F3=1/2 consequences."
+  ],
+  "complete_written_derivation_checked": true,
+  "independent_of_discovery_producer": true,
+  "written_falsification_checks": [
+    "The arithmetic sign-control list(-2,-2,-2,6) has zero sum,F3=3,E=48; it is not a graph fixture or executed test.",
+    "Negative residuals use mathematical residues: -2 maps to1,-1 to2.",
+    "Sampled or root-only sums cannot replace a complete pair/row census.",
+    "Exact order, degree, simplicity and symmetry are essential to the counting and sign bounds.",
+    "The inequalities alone cannot validate a cache, force a kernel, establish move coverage or resolve target existence."
+  ],
+  "written_falsification_check_count": 5,
+  "executable_controls": null,
+  "executable_controls_null_reason": "ROOT performed a complete written derivation and paper falsification review; no executable fixtures or controls were run for this theorem.",
+  "command": null,
+  "command_null_reason": "Written independent derivation only; no mathematical computation command.",
+  "executed_proof_or_fixture_commands": 0,
+  "cwd": "C:/Users/ikuto/projects/conway-99-graph",
+  "tool_versions": null,
+  "tool_versions_null_reason": "No solver, software elimination or executable proof checker was used.",
+  "shared_components": ["Exact finite integer arithmetic, middle-vertex walk counting, residual sign bounds and the literal matrix domain; no producer imports or optimizer."],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only; no external or peer review recorded.",
+  "novelty": null,
+  "novelty_null_reason": "No literature-priority audit was performed for these elementary inequalities.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable proof only; no proof-assistant artifact.",
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "target_resolution": "NONE",
+  "new_exclusions": 0,
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read the complete discovery note and separate ROOT written audit at the exact paths in inputs_sha256. Publication availability is separately recorded.",
+  "limitations": [
+    "Necessary metric relations only, with no graph construction, target exclusion or small-defect realizability conclusion.",
+    "No lambda1, incidence factor, automorphism, nonzero kernel or upper rank premise.",
+    "Cache falsification checks are not sufficient verification of any native implementation.",
+    "No engine, temperature, move distribution, numerical optimizer or scientific invocation approved.",
+    "Metadata records ROOT's accepted written checking without adding mathematical replays."
+  ]
+}

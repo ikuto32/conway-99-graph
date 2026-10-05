@@ -1,0 +1,114 @@
+{
+  "status": "INDEPENDENT_SRG243_NONEMPTY_RESIDUAL_FIXTURE_PASS",
+  "claim_id": "C-SRG243-NONEMPTY-RESIDUAL-POSITIVE-CONTROL",
+  "claim_revision": 1,
+  "timestamp": "2026-09-30T00:23:27.305647+00:00",
+  "source_commit": "415a8702cf27e1166ddf14ddd7289db3eaadde2e",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_srg243_residual_fixture.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/srg243_residual_fixture"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_srg243_residual_fixture/summary.json": "cb338497d16b3e79c523d4ac5e749aa7b7f00d68a8873a5edcd8b488bfa64395",
+    "acceleration/results/20260930_srg243_residual_fixture/manifest.json": "2d65eb32dbdfd1af76ee3fcc0f7519d2f4a560423367e42c34853e84f5594d94",
+    "acceleration/theory_20260930_srg243_residual_fixture.py": "d4264c44acde9b6bc30b28f3a1f8597c80d79abf053faed055cc438ea9f7c816",
+    "acceleration/theory_20260930_srg243_residual_fixture_spec.md": "c4648ea24da71a006071133952540301c4984432021324c7cf0a6070f1ac78aa",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_srg243_residual_fixture/adjacency243.json": "5c7c8268b7d62997b5c87a56b11fd673f3f80fcb029b83816179ee8127b8e0d3",
+    "acceleration/results/20260930_srg243_residual_fixture/controls.json": "11b509f1b34f919e18f93983be6dec4e5e096180346b13967aad321b36bd7325",
+    "acceleration/results/20260930_srg243_residual_fixture/polynomial_census.json": "41dba7e85948e486454f8ce3ccdecedb012987cf2364a5548a544a5e5224ca51",
+    "acceleration/results/20260930_srg243_residual_fixture/syndrome_certificate.json": "519aa2861e7a01078bae4abc2ab6f22d76c8ac562097640b3e0ac83ba6cbb9a4",
+    "acceleration/results/20260930_srg243_residual_fixture/triangle_blocks.json": "3f8dfa3803d6a5db8146dd24a0857477e1aa061ab10dac0f9e6e564aabc86439",
+    "acceleration/audit_20260930_srg243_residual_fixture.py": "4f3492aae51dc28688979624c2c095443820818328de2033c9a4b8a7d0a5a8a3"
+  },
+  "verifier": "/root/eight_domain_audit independent literal graph/block integer checker",
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "construction",
+  "basis": [
+    "COMPUTED"
+  ],
+  "statement": "The exact saved243vertex matrix is a symmetric binaryzero-diagonal SRG(243,22,1,2), and its saved triangle extraction gives the exact60x180 incidence factor and180x180 residual graph of degree16 satisfying the coefficient20 block identities.",
+  "scope": "A nonempty positive verification fixture of a different known parameter family; not Conway99 evidence.",
+  "dependencies": [],
+  "checks": {
+    "full_graph": {
+      "vertices": 243,
+      "degree": 22,
+      "integer_square_entries": 59049,
+      "arithmetic": "Literal Python integer dot products, no producer bitset code"
+    },
+    "blocks": {
+      "factor_shape": [
+        60,
+        180
+      ],
+      "residual_shape": [
+        180,
+        180
+      ],
+      "factor_Gram_entries": 3600,
+      "mixed_entries": 10800,
+      "residual_square_entries": 32400,
+      "factor_row_margin": 18,
+      "residual_degree": 16
+    },
+    "known_rook9": {
+      "vertices": 9,
+      "degree": 4,
+      "integer_square_entries": 81,
+      "arithmetic": "Literal Python integer dot products, no producer bitset code"
+    },
+    "corruptions_rejected": [
+      {
+        "control": "deleted_fixture_edge",
+        "error": "simple symmetric regular graph"
+      },
+      {
+        "control": "Boolean_diagonal",
+        "error": "literal binary graph dimensions"
+      },
+      {
+        "control": "degree_preserving_switch",
+        "error": "exact integer identity (0, 2)"
+      },
+      {
+        "control": "factor_bit",
+        "error": "every raw block entry and orientation"
+      },
+      {
+        "control": "residual_bit",
+        "error": "every raw block entry and orientation"
+      },
+      {
+        "control": "vertex_map",
+        "error": "complete raw vertex relabelling"
+      },
+      {
+        "control": "cross_map",
+        "error": "all cross maps"
+      }
+    ],
+    "degree_preserving_switch": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "producer_imports": false,
+  "limitations": [
+    "No99vertex factor or graph is provided.",
+    "Polynomial selection, syndrome census, code construction theory and novelty are not approved by this raw-artifact check.",
+    "The factor has60rows180columns and residual degree16, not36rows60columns anddegree8."
+  ],
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "elapsed_seconds": 0.8590000001713634
+}

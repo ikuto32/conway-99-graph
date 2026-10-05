@@ -1,0 +1,20 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:47:20Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-TWO-D2-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T. Suppose R=226, every d_T belongs to {0,1,2,3}, exactly two actual deficiency-three triangles occur and are disjoint, and b counts actual deficiency-two triangles. Then b is not two.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle","exactly two actual d3 triangles, pairwise disjoint"],
+  "scope":{"description":"Conditional exclusion of disjoint c2/b2 at R226/maxd3, separate from the intersecting-high branch.","unrestricted_target":true,"two_D3_lane_excluded":false,"count226_excluded":false,"maximum_deficiency3_inferred":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_TWO_D2_BOUNDARY_V1.md","sha256":"c2dcb60409b9ad42e4baaf1aad0e42ab3b04e887fdc212ecb0863ad993b74069"},
+  "inputs_sha256":{"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_TWO_D2_BOUNDARY_V1.md":"c2dcb60409b9ad42e4baaf1aad0e42ab3b04e887fdc212ecb0863ad993b74069"},
+  "exact_case_coverage":{"bad_point_domain":[0,1],"h0_weighted_bound":"q<=4-4t, q>0 since each Qw coordinate has fractional part2/3","h0_actual_D3_D2_intersections":0,"h0_cycle_incidence_upper_bounds":[172,172],"h1_high_topologies":["triangle plus isolated D3","triangle with pendant D3"],"h1_cycle_incidence_upper_bounds":[175,178],"required_cycle_incidence":180,"pendant_leaf_D2_refined_cycle_bound":12},
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Root_strict_weighted_zero_and_cycle_outline":true,"Structural_independent_actual_profile_and_opposite_pool_challenge":true,"covered_D2_pair_boundary_retained":true,"earlier_fan_Gram_cycle_components_disclosed":true,"no_pending_gate_used":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["The explicit D3-disjointness hypothesis is not inferred by this branch.","Covered actual X/Y intersections with no F edge are included in the safe h0 bound.","All external high opposites in the pendant Y refinement are counted separately from LL stubs.","No complete two-d3, R226 or target exclusion, realization, automorphism or equitability is claimed."]
+}

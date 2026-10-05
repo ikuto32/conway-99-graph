@@ -1,0 +1,101 @@
+# V12 adds exactly two pinned ROOT-verifier adapters; V11.2 is byte-preserved.
+V12_ROOT_EXACT={
+ 'C-UNRESTRICTED-TRIANGLE-INCIDENCE-BINARY-RANK-LOWER67':dict(
+  binding='4e018e2be2705f4684b31266797571d0eaab1eeb5ce15603d4765a77265e4848',
+  report='f6d37038fa7f5969331e8d7ee9490bdcc6ebda09b3a0770b7a99dea298a9c59b',
+  report_path='acceleration/results/20261003_independent_review/incidence_griesmer01/summary.json',
+  producer='/root/structural',method='independent_derivation',kind='mathematical result',basis=['DERIVED'],unrestricted=True,
+  scope='Universal conditional necessary rank lower bound for the unrestricted target identity. Complete written independent derivation supplies the quantifiers; finite exact controls challenge critical steps only.',
+  statement='For every99x99 binary symmetric zero-diagonal matrix A satisfying A^2=12I-A+2J exactly over the integers, let B be its99x231 binary vertex-by-triangle incidence matrix with one column for every actual triangle. Then rank_GF(2)(B)>=67, equivalently dim_GF(2)ker(B^T)<=32. This is a conditional implication and establishes neither existence nor nonexistence of such A.',
+  controls='acceleration/results/20261003_independent_review/incidence_griesmer01/controls.json',controls_sha256='85ae2978864cdb121b8f76e56669d2aa3eef40e194becc074d51fbadea89a327',
+  proof='acceleration/audit_20261003_incidence_griesmer_v1.md',proof_sha256='65d8eea3f4d72eb56391284f95eb43ad021e92a88a41fdcc2fe7a2e10f9dd92d'),
+ 'C-HYPERGRAPH-WEIGHT60-WARM01-TWO-GRAPH-WARM-ROOT-CENSUS':dict(
+  binding='e49ba355e4ca8cf99e883d69594d6a972480b55aade5c6f60ecf9fe7d4566bff',
+  report='becf048cbb32ec577a78c7084fc949103af91f66c92c5936137a9740c5cdd35a',
+  report_path='acceleration/results/20261003_independent_review/weight60_warm_roots_dense01/summary.json',
+  producer='/root/structural',method='independent_artifact_check',kind='empirical/engineering result',basis=['COMPUTED'],unrestricted=False,
+  scope='Complete198 labelled-root census of exactly two pinned saved partial graphs; no other graphs or hypothetical target objects. No SAT instance, target exclusion, scaffold-equivalence certificate or target resolution.',
+  statement='For exactly the two frozen labelled99-vertex raw warm graphs final_best (adjacency SHA2569d5b88ba2a2eb13d39d2a5edea1c25af9a9105c143c4297fe37e84f666a37a2d) and stepzero first_lambda0 (adjacency SHA256818314b75fccfa0f3fe702602afb02b6415f3138a770ef15ed0621d189d88836), every one of their198 labelled roots has a14-neighbor perfect matching, and no root has common-neighbor count2 for all84 outsiders. The minimum exact row residual sum_over_outsiders(CN(root,v)-2)^2 is52 at all and only roots11,41,77 in final_best and50 uniquely at root81 in stepzero first_lambda0; their exact global mu residual energies are3480 and3608 respectively.',
+  controls='acceleration/results/20261003_independent_review/weight60_warm_roots_dense01/calibration.json',controls_sha256='fb4e8b514c07a85f892fcd2ba0056d7bddb14a6596d6641bb4539624730fd06b'),
+}
+
+
+def v12_root_role(cid,expected,binding):
+    if cid not in V12_ROOT_EXACT:return False
+    exact=V12_ROOT_EXACT[cid]
+    need(expected==exact['binding'],'v12 exact binding identity')
+    need(binding['id']==cid and binding['revision']==binding['claim_revision']==1
+         and binding['status']=='VERIFIED' and binding['review_state']=='CLEAR'
+         and binding['producer']==exact['producer'] and binding['verifier']=='/root'
+         and binding['producer']!=binding['verifier'] and binding['method']==exact['method']
+         and binding['kind']==exact['kind'] and binding['basis']==exact['basis'],
+         'v12 exact revision status method and separate roles')
+    need(binding['scope']==dict(description=exact['scope'],unrestricted_target=exact['unrestricted'],target_resolution='NONE'),'v12 exact scope')
+    need(binding['statement']==exact['statement'],'v12 exact statement')
+    need(binding['report']==exact['report_path']and binding['report_sha256']==exact['report'],'v12 exact report reference')
+    need(binding['dependencies']==[],'v12 exact dependencies')
+    return True
+
+
+def v12_root_controls(cid,binding,report,controlled):
+    exact=V12_ROOT_EXACT[cid]
+    if cid=='C-UNRESTRICTED-TRIANGLE-INCIDENCE-BINARY-RANK-LOWER67':
+        need(controlled==report['controls']and controlled['positive_graph']=='SRG(9,4,1,2) rook graph'
+             and controlled['scalar_matrix_entries']==81 and controlled['complete_kernel_population']==16
+             and controlled['nonzero_kernel_words_checked']==15 and controlled['weight_histogram']=={'0':1,'4':9,'6':6}
+             and controlled['strict_corrupt_controls']==[
+              dict(case='missing_triangle',diagnostic='complete literal triangle incidence'),
+              dict(case='duplicate_triangle',diagnostic='complete literal triangle incidence'),
+              dict(case='altered_incidence',diagnostic='complete literal triangle incidence'),
+              dict(case='altered_graph',diagnostic='diagonal and all degrees'),
+              dict(case='nonminimum_puncturing',diagnostic='puncture a minimum-weight word')]
+             and controlled['small_binary_code_populations']==[dict(length=n,subspaces=s)for n,s in enumerate([1,2,5,16,67,374,2825])]
+             and controlled['total_subspaces']==3290 and controlled['minimum_word_residual_checks']==5855
+             and controlled['general_code_without_incidence_not_given_distance36']is True
+             and controlled['target_even_weight_set']==list(range(36,61,2))
+             and controlled['target_dimension33_griesmer_terms']==[36,18,9,5,3,2]+[1]*27
+             and controlled['target_dimension33_sum']==100,'v12 Griesmer complete finite controls')
+        need(binding['recorded_validation']==dict(written_derivation='Complete incidence partition, exact integer moments/Cauchy, independent residual-code induction and rank-nullity.',positive_fixture='Rook9 complete16-word triangle kernel,15 nonzero words.',small_code_controls=dict(binary_subspaces=3290,lengths='0..6',minimum_word_residual_checks=5855),strict_negative_controls=5,finite_controls_are_general_proof=False),'v12 Griesmer recorded controls')
+    else:
+        recorded=binding['pre_output_calibration']
+        need(controlled==report['controls']and controlled['positive_roots']==9 and controlled['strict_negative_controls']==5
+             and recorded['path']==exact['controls']and recorded['sha256']==exact['controls_sha256']
+             and recorded['positive_root_count']==9 and recorded['negative_control_count']==5
+             and recorded['corrupted_controls']==['diagonal1','asymmetric edge deletion','boolean entry rejected as nonliteral integer','binary-domain entry2','corrupted dense common-neighbor entry inconsistent with literal witnesses']
+             and recorded['timing']==controlled['control_timing'],'v12 warm census complete finite controls')
+
+
+def v12_root_report(cid,report_sha,binding,report):
+    if cid not in V12_ROOT_EXACT:return
+    exact=V12_ROOT_EXACT[cid]
+    need(report_sha==exact['report'],'v12 exact independent report')
+    need(report['producer']==exact['producer']and report['verifier']=='/root'and report['method']==exact['method'],'v12 report roles and method')
+    need(binding['dependencies']==[],'v12 exact dependencies')
+    if cid=='C-UNRESTRICTED-TRIANGLE-INCIDENCE-BINARY-RANK-LOWER67':
+        need(report['status']=='INDEPENDENT_CONDITIONAL_TRIANGLE_INCIDENCE_GRIESMER_DERIVATION_V1_PASS'
+             and report['exact_claim']=='Every binary symmetric zero-diagonal99matrix A satisfying A^2=12I-A+2J has triangle-incidence rank_GF2(B)>=67, equivalently dim ker(B^T)<=32.'
+             and report['minimum_rank']==67 and report['maximum_kernel_dimension']==32
+             and report['nonzero_kernel_weights']==list(range(36,61,2))
+             and report['conditional_premise']=='Existence of a complete graph with the exact target integer identity remains UNKNOWN.'
+             and report['target_resolution']=='NONE'and report['graph_constructed']is False and report['target_nonexistence']is False
+             and report['rank_upper72_status']=='UNKNOWN; refuted generic lemma supplies no such premise.'
+             and binding['premise_state']=='UNKNOWN'
+             and binding['rank_upper72_state']=='UNKNOWN; the separately refuted generic linear lemma is not a dependency or premise.',
+             'v12 exact conditional Griesmer scope')
+        need(binding['written_audit']==report['written_audit']==exact['proof']
+             and report['inputs_sha256'][exact['proof']]==binding['inputs_sha256'][exact['proof']]==exact['proof_sha256']
+             and digest(ROOT/exact['proof'])==exact['proof_sha256'],'v12 exact independently written proof')
+    else:
+        need(report['status']=='INDEPENDENT_WEIGHT60_WARM_TWO_GRAPH_DENSE_ROOT_CENSUS_V2_PASS'
+             and report['raw_graphs']==2 and report['complete_roots']==198
+             and report['literal_triangle_population']==313698 and report['complete_scalar_matrix_entries']==19602
+             and report['target_resolution']=='NONE','v12 exact finite warm census population')
+        need(report['graph_records']==[
+             dict(label='final_best',matching_roots=99,fully_cn2_roots=0,minimum_mu_row_residual=52,minimum_root_ties=[11,41,77],selected_root=11,triangle_count=231,global_mu_energy=3480),
+             dict(label='first_lambda0',matching_roots=99,fully_cn2_roots=0,minimum_mu_row_residual=50,minimum_root_ties=[81],selected_root=81,triangle_count=231,global_mu_energy=3608)],'v12 exact warm census graph records')
+        need(report['inputs_sha256']['acceleration/results/20261003_hypergraph_weight60_warm01/native/best.adj']=='9d5b88ba2a2eb13d39d2a5edea1c25af9a9105c143c4297fe37e84f666a37a2d'
+             and report['inputs_sha256']['acceleration/results/20261003_hypergraph_weight60_warm01/native/first_lambda0.adj']=='818314b75fccfa0f3fe702602afb02b6415f3138a770ef15ed0621d189d88836','v12 exact two warm raw graph identities')
+    need(binding['inputs_sha256'][exact['controls']]==exact['controls_sha256']
+         and digest(ROOT/exact['controls'])==exact['controls_sha256'],'v12 exact control bytes')
+    v12_root_controls(cid,binding,report,json.loads((ROOT/exact['controls']).read_bytes()))
+

@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-29T19:49:49.866664+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/prepare_20260930_large_gpu_native.py"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "question": "Can explicitly bounded 8 GiB / 2 million variable / 200 million nonzero guards admit the audited eight-coordinate model without any numerical code changes?",
+  "selection": "Guard literals only; all kernels, parser array types, exact-transpose checks and numerical acceptance tolerances byte-preserved.",
+  "resource_cap_seconds": 120,
+  "independent_parity_required_before_research_run": true,
+  "changes": [
+    {
+      "before": "uint64_t(2)*1024*1024*1024,\"Input exceeds2GiB limit\"",
+      "after": "uint64_t(8)*1024*1024*1024,\"Input exceeds8GiB limit\""
+    },
+    {
+      "before": "g.n<=1000000 ",
+      "after": "g.n<=2000000 "
+    },
+    {
+      "before": "g.nnz<=100000000,",
+      "after": "g.nnz<=200000000,"
+    },
+    {
+      "before": "total_nnz<=100000000,",
+      "after": "total_nnz<=200000000,"
+    }
+  ],
+  "input_sha256": {
+    "acceleration/moment_pdhg_gpu.cu": "2840eea3f5abc5e9e669788bb7be460ba879e5b52c93e0d1195cb6cf41fb4319",
+    "acceleration/build_moment_pdhg_gpu.ps1": "47799a145ff621dfe2aa1c468cf30dc3dd183a2561634fe2ec016430d15d45ee",
+    "acceleration/prepare_20260930_large_gpu_native.py": "0e680ea4a7c12a5671a65393f9185e0d7a1e5858b3f4bb4ec18b3d39e203f373"
+  },
+  "generated_sha256": {
+    "acceleration/moment_pdhg_gpu_large.cu": "963d4427aeaa24b4ebcae182f981e1662dd8f371621e25eaf4c19ec30a57638a",
+    "acceleration/build_moment_pdhg_gpu_large.ps1": "442357ca39f46c32d82bb7d42ef3930cd7fa176cded209e4c88f171e978c265f"
+  }
+}

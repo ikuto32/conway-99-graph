@@ -1,0 +1,84 @@
+{
+  "claims": [
+    {
+      "id": "C-IDENTITY-P-FACTOR-DISTINCT-COORDINATES-MIXED-CAP-REDUNDANCY",
+      "revision": 1,
+      "statement": "For any three perfect matchings on12coordinates and identity cross matchings, each column of every binary36x60 exact prescribed-Gram factor uses at most one vertex per coordinate triangle, hence every entry of (I+C)F is at most2; with two entries per fibre its six chosen vertices are independent.",
+      "scope": "All internal matching triples with identity cross matchings; conditional factor lemma only.",
+      "dependencies": [],
+      "kind": "mathematical result",
+      "basis": [
+        "DERIVED"
+      ],
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "assumptions": [
+        "No nontrivial target automorphism is assumed.",
+        "The recorded identity-cross premise is explicit."
+      ],
+      "verifier": "/root/state_literature_audit",
+      "method": "independent_derivation_and_exact_artifact_check",
+      "evidence": [
+        {
+          "path": "acceleration/results/20260930_independent_review/identity_p_triangle_partition/summary.json",
+          "sha256": "15a32c8e4fb4928f78a6e931e09054ddcfd90c027717e8c0d0828c6f5406a516",
+          "availability": "LOCAL_ONLY"
+        }
+      ],
+      "limitations": [
+        "Identity cross matchings are a conditional restriction, not unrestricted normalization.",
+        "No actual full36factor, residual completion or target graph is provided.",
+        "No uniqueness of the full99 triangle partition and no novelty claim.",
+        "The finite controls are separate from the universal written proof."
+      ],
+      "created_at": "2026-09-30T02:23:13.449809+00:00",
+      "updated_at": "2026-09-30T02:23:13.449809+00:00"
+    },
+    {
+      "id": "C-IDENTITY-P-COMPLETION-THIRTYTHREE-TRIANGLE-PARTITION",
+      "revision": 1,
+      "statement": "Every SRG(99,14,1,2) completion of a triangle-root core whose three cross matchings are identity has an outside8-regular60vertex graph in which each vertex belongs to exactly one triangle, so its20disjoint triangles together with the root and12coordinate triangles partition all99vertices into33triangles.",
+      "scope": "Conditional identity-cross family only; existence and uniqueness of the global partition are not asserted.",
+      "dependencies": [
+        {
+          "id": "C-IDENTITY-P-FACTOR-DISTINCT-COORDINATES-MIXED-CAP-REDUNDANCY",
+          "revision": 1,
+          "relation": "premise"
+        },
+        {
+          "id": "C-UNRESTRICTED-TRIANGLE-CORE-FACTOR-NORMALIZATION",
+          "revision": 1,
+          "relation": "uses_result"
+        }
+      ],
+      "kind": "mathematical result",
+      "basis": [
+        "DERIVED"
+      ],
+      "recommendation": "VERIFIED",
+      "review_state": "CLEAR",
+      "assumptions": [
+        "No nontrivial target automorphism is assumed.",
+        "The recorded identity-cross premise is explicit."
+      ],
+      "verifier": "/root/state_literature_audit",
+      "method": "independent_derivation_and_exact_artifact_check",
+      "evidence": [
+        {
+          "path": "acceleration/results/20260930_independent_review/identity_p_triangle_partition/summary.json",
+          "sha256": "15a32c8e4fb4928f78a6e931e09054ddcfd90c027717e8c0d0828c6f5406a516",
+          "availability": "LOCAL_ONLY"
+        }
+      ],
+      "limitations": [
+        "Identity cross matchings are a conditional restriction, not unrestricted normalization.",
+        "No actual full36factor, residual completion or target graph is provided.",
+        "No uniqueness of the full99 triangle partition and no novelty claim.",
+        "The finite controls are separate from the universal written proof."
+      ],
+      "created_at": "2026-09-30T02:23:13.449809+00:00",
+      "updated_at": "2026-09-30T02:23:13.449809+00:00"
+    }
+  ],
+  "ledger_changed": false
+}

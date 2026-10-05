@@ -1,0 +1,148 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_WRITTEN_REPORT_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_COUNT227_NO_EIGHT_BOUNDARY_WRITTEN_PASS",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-EIGHT-D1-D2-BOUNDARY",
+  "claim_revision": 1,
+  "revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once and define d_T=6-r_T for each actual triangle. If R=227 and no triangle has deficiency three, it is impossible that exactly eight triangles have deficiency two. Equivalently, the positive deficiency family cannot consist of exactly eight deficiency-one and eight deficiency-two triangles, with every other triangle of deficiency zero. This does not exclude R227 or an arbitrary even eight-triangle incidence relation.",
+  "timestamp": "2026-10-04T19:08:55.3016506Z",
+  "verification_timestamp": "2026-10-04T19:08:55.3016506Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T19:08:55.3357672Z",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "scope": {
+    "description": "Universal conditional exclusion of only the actual a8,b8,c0 rook-deficiency boundary at R227, with actual twelve-point odd support not assumed induced. Cubic8 squares, conditional two-triangle rook uniqueness, even symmetric difference and F2 concurrency are independently derived.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_candidate_scope": {
+    "description": "Universal conditional exclusion of the a8,b8,c0 positive deficiency boundary at R227. The twelve-point odd support is not assumed induced; actual arbitrary extra edges are retained through square and rook uniqueness arguments. No graph construction, equitability or automorphism.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "arbitrary_even_eight_selection_excluded": false
+  },
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "no actual triangle has deficiency d_T=6-r_T equal to three"
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [],
+  "dependency_reason": "Only strict D>=6m+6 is inherited to give maxd3. Even-small-family classification, every-edge cubic-eight square coverage, uniqueness of a rook given disjoint or intersecting triangle pairs, symmetric-difference and F2 common-neighbor arguments are reconstructed. The weaker16-row table is preserved comparison evidence, not an approval premise.",
+  "controls": {
+    "written_proof_checks": 32,
+    "written_boundary_challenges": 8,
+    "written": 40,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "boundary_checked": {
+    "D": 24,
+    "a": 8,
+    "b": 8,
+    "c": 0,
+    "P": 16,
+    "odd_selected_point_multiplicity": 2,
+    "odd_support_points": 12,
+    "odd_dual": {
+      "nodes": 8,
+      "degree": 3,
+      "edges": 12,
+      "triangle_free": true
+    },
+    "odd_dual_every_edge_on_C4": true,
+    "two_triangle_rook_uniqueness": "intersecting pair fixes four opposite gridpoints; disjoint pair fixes three crossedge completions",
+    "rook_overlap_with_odd_selection_at_most": 3,
+    "symmetric_difference_sizes_at_overlap4_5_6": [
+      6,
+      4,
+      2
+    ],
+    "every_odd_intersection_is_defect": true,
+    "D2_on_odd_support_required_fan_weight_at_least": 21,
+    "D2_on_odd_support_actual_positive_population": 16,
+    "D2_point_multiplicity": 3,
+    "D2_global_F2": "K8 minus a perfect matching",
+    "adjacent_F2_pair_common_neighbors": 4,
+    "actual_shared_point_third_positive_nodes": 1
+  },
+  "boundary_excluded": true,
+  "count227_excluded": false,
+  "arbitrary_even_eight_selection_excluded": false,
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count227_no_eight_d1_d2_boundary_candidate01.json",
+    "sha256": "40f57cdca81126207a16dc58d96a5d31148e202ce02fb882df762907a3466814",
+    "original_timestamp": "2026-10-04T18:57:17Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count227_no_eight_boundary_native_v1.md",
+    "sha256": "e641349cc5bedf93b449ecec3718370245fb49325862b0eaf58a2a79a3cb90bc"
+  },
+  "comparison_only_sources": [
+    {
+      "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md",
+      "sha256": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55"
+    },
+    {
+      "path": "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json",
+      "sha256": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70"
+    }
+  ],
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_EIGHT_D1_D2_BOUNDARY_V1.md": "329f6af24023eb306ba726d2cccd6eb19861aa70a75dcb726013ef8e144a00e7",
+    "acceleration/results/20261004_target_rook_count227_no_eight_d1_d2_boundary_candidate01.json": "40f57cdca81126207a16dc58d96a5d31148e202ce02fb882df762907a3466814",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_rook_deficiency_strict_second_neighbor_native01_root_written_acceptance01.json": "7b7c80c0e16492e8203a55671d366ba5d14147b90985e6e6d98bc3043920eb6d",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55",
+    "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70",
+    "acceleration/audit_20261004_target_rook_count227_no_eight_boundary_native_v1.md": "e641349cc5bedf93b449ecec3718370245fb49325862b0eaf58a2a79a3cb90bc"
+  },
+  "input_map_count": 8,
+  "shared_components": [
+    "Structural mathematical producer/prior rook and even-eight source authorship and shared Root skeptical outline are disclosed; agreement is not independent verification.",
+    "Native independently reconstructed cubic8 edge coverage, incident/disjoint rook uniqueness, symmetric-difference classification, filled D1 defects and F2 concurrent-neighbor cap in writing.",
+    "The only inherited theorem is the exact strictmassr1 binding with its distinct Root written acceptance; no historical solver, matrix or graph-census gate is transferred."
+  ],
+  "limits": [
+    "Only the a8,b8,c0 positive-deficiency boundary is excluded; no R227 or target exclusion, remaining-population classification or arbitrary even-eight relation prohibition.",
+    "Only exact strictmassr1 is inherited. The weaker16-row R227 paper/raw are comparison and no current roster/registration presence is assumed.",
+    "No inducedness of the twelve-point odd support, equitability, automorphism, matching symmetry or faithful collapsed-cycle map is assumed.",
+    "Two-triangle rook uniqueness is conditional on a containing induced rook; crossmatching completions alone are not existence proof.",
+    "Forty written hand proof/boundary checks only; no mathematical code, import, backend, enumeration, worker, formal or external check.",
+    "Old candidate/report bytes, closed Wave46 cutoff, ledger/index/Git/publication remain unchanged; exact Root review and next-wave registration are separate."
+  ],
+  "root_exact_new_statement_acceptance": null,
+  "publication_cutoff_inclusion": false,
+  "ledger_current_presence_asserted": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "availability": "LOCAL_ONLY",
+  "metadata_operations": {
+    "workers": 0,
+    "source_imports": 0,
+    "enumerations": 0,
+    "ledger_parsed": false,
+    "protected_state_mutations": 0,
+    "historical_bytes_changed": false
+  }
+}

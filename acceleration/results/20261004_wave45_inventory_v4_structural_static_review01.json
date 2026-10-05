@@ -1,0 +1,366 @@
+{
+  "schema": "STRUCTURAL_WAVE45_INVENTORY_V4_SOURCE_ONLY_STATIC_REVIEW",
+  "timestamp": "2026-10-04T11:15:02.1415419Z",
+  "reviewer": "/root/structural",
+  "source_author": "/root/checkpoint_audit",
+  "source": {
+    "sha256": "250346b8521f82cfbc24bbe2926f65f1cd285786ba5eb3acdda1f7a410c278e9",
+    "path": "acceleration/inventory_20261004_wave45_checkpoint_v4.py"
+  },
+  "specification": {
+    "sha256": "bf302214d06abcdfa907858bf102c3dd040558d5bf4d5c7bbf597324cc31f956",
+    "path": "acceleration/inventory_20261004_wave45_checkpoint_v4_spec.md"
+  },
+  "plan": {
+    "sha256": "917d379ac264be4e76fb3833cefcff65227bd7bee8ac51667b1e5fb4d9af5934",
+    "path": "acceleration/plan_20261004_wave45_inventory_author_controls_root_v4.json"
+  },
+  "audit": {
+    "sha256": "d87473cedcedc8c7b8eae24c96b6318c67ef2dd93131a02529b3b3883dd2bcf4",
+    "path": "acceleration/audit_20261004_wave45_inventory_v4_structural_static_review.md"
+  },
+  "diff": {
+    "path": "acceleration/diff_20261004_wave45_inventory_v3_v4.txt",
+    "sha256": "165023f5a926e5f9366f776756eed466d66dd2b413de786f4803fcaa0b06dbd1"
+  },
+  "clarification": {
+    "sha256": "e04a8954b8b5efd226f34b27092c21e63fe9b6440f92df8a18d7d03ef6a89af1",
+    "path": "acceleration/results/20261004_wave45_inventory_v4_source_preparation_clarification01.json"
+  },
+  "finding": "NO_MATERIAL_STATIC_VETO_IN_EXACT_SCOPE",
+  "complete_plain_text_reconstruction": {
+    "AST_used": false,
+    "new_lines": 519,
+    "hunks": 11,
+    "old_lines": 459,
+    "removed_context_new_line_mismatches": 0
+  },
+  "finite_controls": {
+    "physical_files": 95,
+    "predictions": [
+      {
+        "index": 0,
+        "name": "canonical_nul",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 1,
+        "name": "complete_two_manifest",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 2,
+        "name": "known_abc_hash",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 3,
+        "name": "empty_closed_log_hash",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 4,
+        "name": "selected_index_unselected_gitlink",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 5,
+        "name": "safe_gitignore",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 6,
+        "name": "nul_terminator",
+        "expected_stage": "SELECTED_NUL",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 7,
+        "name": "nul_duplicate",
+        "expected_stage": "SELECTED_UNIQUE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 8,
+        "name": "nul_order",
+        "expected_stage": "SELECTED_ORDER",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 9,
+        "name": "nul_utf8",
+        "expected_stage": "SELECTED_UTF8",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 10,
+        "name": "nul_empty",
+        "expected_stage": "SELECTED_EMPTY",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 11,
+        "name": "parent_path",
+        "expected_stage": "PATH_SCOPE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 12,
+        "name": "git_path",
+        "expected_stage": "PATH_PRIVATE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 13,
+        "name": "environment_path",
+        "expected_stage": "PATH_PRIVATE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 14,
+        "name": "build_path",
+        "expected_stage": "PATH_PRIVATE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 15,
+        "name": "proof_path",
+        "expected_stage": "PATH_PROOF",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 16,
+        "name": "manifest_count_bool",
+        "expected_stage": "MANIFEST_COUNT",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 17,
+        "name": "late_bytes_bool",
+        "expected_stage": "MANIFEST_BYTES",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 18,
+        "name": "late_sha_bool",
+        "expected_stage": "MANIFEST_SHA",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 19,
+        "name": "late_conflicting_hashes",
+        "expected_stage": "MANIFEST_SHA",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 20,
+        "name": "manifest_path_difference",
+        "expected_stage": "SELECTED_MANIFEST",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 21,
+        "name": "member_hash_mismatch",
+        "expected_stage": "MEMBER_SHA",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 22,
+        "name": "raw_blob_mismatch",
+        "expected_stage": "GIT_BLOB_IDENTITY",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 23,
+        "name": "member_size_mismatch",
+        "expected_stage": "MEMBER_BYTES",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 24,
+        "name": "late_member_bound",
+        "expected_stage": "MANIFEST_BYTES",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 25,
+        "name": "selected_gitlink",
+        "expected_stage": "GIT_SELECTED_MODE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 26,
+        "name": "selected_unmerged",
+        "expected_stage": "GIT_SELECTED_STAGE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 27,
+        "name": "index_duplicate",
+        "expected_stage": "GIT_DUPLICATE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 28,
+        "name": "missing_member",
+        "expected_stage": "MEMBER_MISSING",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 29,
+        "name": "authenticated_json_and_nul_helper",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 30,
+        "name": "authenticated_reader_wrong_sha",
+        "expected_stage": "INPUT_SHA",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 31,
+        "name": "authenticated_parser_duplicate",
+        "expected_stage": "JSON_DUPLICATE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 32,
+        "name": "reversed_manifest_exact_bijection",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 33,
+        "name": "duplicated_manifest_path",
+        "expected_stage": "MANIFEST_PATH_DUPLICATE",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 34,
+        "name": "hash_only_union_manifest",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 35,
+        "name": "hash_only_manifest_bytes_bool",
+        "expected_stage": "MANIFEST_BYTES",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 36,
+        "name": "hash_only_manifest_total_alias",
+        "expected_stage": "MANIFEST_TOTAL_BYTES",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 37,
+        "name": "same_unselected_gitlink_identity",
+        "expected_stage": "PASS",
+        "observed_stage": null,
+        "prospective_only": true
+      },
+      {
+        "index": 38,
+        "name": "changed_unselected_gitlink_oid",
+        "expected_stage": "UNSELECTED_INDEX_CHANGED",
+        "observed_stage": null,
+        "prospective_only": true
+      }
+    ],
+    "positive": 10,
+    "actual_stages": null,
+    "negative": 29,
+    "total": 39,
+    "non_summary_hashes": 94
+  },
+  "new_routes": {
+    "hash_only_helper_calls_actual_member": true,
+    "changed_gitlink_calls_actual_staged_preservation_helper": true,
+    "all_five_first_stage_routes_traced": true
+  },
+  "identity_scope": {
+    "unselected_gitlinks_covered": true,
+    "selected_stage0_regular_only": true,
+    "all_unselected_records_hashed": true,
+    "physical_Git_object_replay_claimed": false,
+    "selected_raw_SHA1_equals_index_OID_required_in_staged_mode": true,
+    "working_tree_gitlink_cleanliness_claimed": false
+  },
+  "literal_plan": {
+    "child_words": 22,
+    "allocation": {
+      "outer": 180,
+      "worker": 150,
+      "save": 20,
+      "shutdown": 20
+    },
+    "fresh_mismatches": 0,
+    "direct_small_pins": 6,
+    "exact_suffixes": true,
+    "worker_words": 14,
+    "supervisor_words": 38
+  },
+  "audit_scope": {
+    "target_resolution": "NONE",
+    "availability_promotion": false,
+    "math_replays": 0,
+    "imports": 0,
+    "Git_ledger_index_mutations": 0,
+    "owned_worker": false,
+    "AST_syntax_or_fixture_executions": 0,
+    "application_Git_calls": 0,
+    "member_payload_hashes": 0
+  },
+  "limitations": [
+    "No actual engineering control or source qualification; all stages are predictions.",
+    "Source preparation no-Git sentence corrected by preserved author clarification; this reviewer ran no Git.",
+    "Direct writes are not an atomic/fsync guarantee; provisional summary or partials may coexist with failure.",
+    "No worker launch admission, independent remote/math replay, content-secret audit or physical cat-file replay.",
+    "Standard Git/SHA identity assumptions and external genuine baseline/runtime authentication remain explicit."
+  ]
+}

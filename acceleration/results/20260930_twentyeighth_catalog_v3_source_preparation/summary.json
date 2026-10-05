@@ -1,0 +1,75 @@
+{
+  "status": "TWENTYEIGHTH_CATALOG_V3_SOURCE_PREPARATION_PASS",
+  "inputs_sha256": {
+    "acceleration/package_20260930_twentyeighth_catalog_v3.py": "efb10d9c03602353a0ff6497d4ed576c32be7eee5499394d3ea2730bcf5d84dd",
+    "acceleration/package_20260930_twentyeighth_catalog_v3_spec.md": "1bb9ddac63e7825b471374a3181b8b42da3f002905b340a50f490e91cde63654",
+    "acceleration/prepare_20260930_twentyeighth_catalog_v3.py": "2dfd9c85823eb002f6624227c3ba0cbd891b2df61bb45c9800233583f89e67c0",
+    "acceleration/check_20260930_twentyeighth_catalog_v3_preparation.py": "d6f52a67766e5777a42405a0130583f4ce2bb9dbfd63967dfdd52f80a4c044c2",
+    "acceleration/results/20260930_twentyeighth_guide_update/receipt.json": "ee492b54647b4bbe842df774f336d9332034a7b6ee2953b362bd06b20e96be99",
+    "acceleration/results/20260930_twentyeighth_catalog_source_preparation/summary.json": "bcea09ed695ae91496a5595ef83a6aafac6dd9f3758255ffa1742ab67909f7d5",
+    "acceleration/results/20260930_twentyeighth_candidate_inventory/inventory.json": "0057d4f0101eb1e56516ade234840defb4be5b17d2b0a2b5e35bd85491b48ce1",
+    "acceleration/results/20260930_twentyeighth_raw_recovery/manifest.json": "33b00a791e57a732a27d18061c52f1ac6b3e71d964d9bf03c1e986ae12c82c89"
+  },
+  "source_ast_checked": true,
+  "metadata_overrides": 1,
+  "scientific_overrides": 0,
+  "old_guide_literal_recovered": true,
+  "controls": [
+    {
+      "field": "scientific_entry_overrides",
+      "rejected": true
+    },
+    {
+      "field": "metadata_entry_overrides",
+      "rejected": true
+    },
+    {
+      "field": "path",
+      "rejected": true
+    },
+    {
+      "field": "old_sha256",
+      "rejected": true
+    },
+    {
+      "field": "new_sha256",
+      "rejected": true
+    },
+    {
+      "field": "old_bytes",
+      "rejected": true
+    },
+    {
+      "field": "new_bytes",
+      "rejected": true
+    }
+  ],
+  "prior_safe_path_controls": 20,
+  "catalog_executions": 0,
+  "git_commands": 0,
+  "recovery_streams_executed": 0,
+  "mathematical_verification": false,
+  "required_final_command": [
+    "python",
+    "-B",
+    "acceleration/package_20260930_twentyeighth_catalog_v3.py",
+    "--inventory",
+    "acceleration/results/20260930_twentyeighth_candidate_inventory/inventory.json",
+    "--inventory-sha256",
+    "0057d4f0101eb1e56516ade234840defb4be5b17d2b0a2b5e35bd85491b48ce1",
+    "--recovery-manifest",
+    "acceleration/results/20260930_twentyeighth_raw_recovery/manifest.json",
+    "--recovery-manifest-sha256",
+    "33b00a791e57a732a27d18061c52f1ac6b3e71d964d9bf03c1e986ae12c82c89",
+    "--out",
+    "acceleration/results/20260930_twentyeighth_artifact_packaging",
+    "--extra-dir",
+    "acceleration/results/20260930_twentyeighth_catalog_source_preparation",
+    "--extra-file",
+    "acceleration/check_20260930_twentyeighth_catalog_preparation.py",
+    "--extra-dir",
+    "acceleration/results/20260930_twentyeighth_catalog_v3_source_preparation",
+    "--extra-file",
+    "acceleration/check_20260930_twentyeighth_catalog_v3_preparation.py"
+  ]
+}

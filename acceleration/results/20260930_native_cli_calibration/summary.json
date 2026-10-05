@@ -1,0 +1,569 @@
+{
+  "timestamp": "2026-09-29T21:13:45.849745+00:00",
+  "status": "INDEPENDENT_NATIVE_CADICAL195_CLI_CALIBRATION_PASS",
+  "verifier": "/root/structural_attack, independently checking root-produced native build",
+  "inputs_sha256": {
+    "acceleration/native_20260930_unrestricted_full99.py": "da7ee9c03d454bd5ad0af0d82bead3520f3f270c70e71d4355161d036fd8ef22",
+    "acceleration/native_20260930_unrestricted_full99_spec.md": "f23e204f808f3de1e137495df148e0c93627dbce8422277c09cc05dbbab7dde2",
+    "acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf": "7029f5c0965d0121aec6ce24db2b9a3d2e201e85b72c8ef51595c63bb62b2138",
+    "acceleration/results/20260930_unrestricted_full99_cnf/model.json": "77089d0a9dd94919bff62aa1e552b758eca061f980524131ad8d1861acce7a8e",
+    "build/research-cadical195/source/build/cadical": "021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7",
+    "build/rook-drat-checker/drat-trim.exe": "23d1613cb0b1ed491f4e723ff82492a8be6c349c2426d440412842c5246b90ac",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260930_native_cadical195_build/manifest.json": "57e09d579eb2b6290b783168a135ebeb0f260da74afac3145e94533f2267a709",
+    "acceleration/results/20260930_native_cadical195_build/receipt.json": "7411614171e5c5f2efd2e50231c6d3cff48aaa933e1b95b1a1aa31411e4e3c5d",
+    "acceleration/results/20260930_native_cadical195_build/cadical-1.9.5-source.tar.gz": "4c25c60fc9db60f2f4dce03a32e4c4d4af9e6311482a2cfbb9fd5a5e5b5c91b0",
+    "build/rook-drat-checker/build_manifest.json": "219e14aeb9efb7df5629cb45405b08d45b2613133207e92bd4f7c09a5b2211b7",
+    "build/rook-drat-checker/build_receipt.json": "4862b4cc61fe2832943c988c5418cd85ae795924fd83a40482c0da4fb03b7e4b",
+    "acceleration/results/20260930_native_cadical195_build/compiler.log": "59d1cbef41d4ae78d5063d525b7aa13d18dc0493ea00537efc19b2ee398cb5a8",
+    "acceleration/results/20260930_native_cadical195_build/platform.log": "7952cc96fab1ef06cc2348237f75781a24faefe4116ca9c93263d538285ad613",
+    "acceleration/results/20260930_native_cadical195_build/configure.log": "cfed7e208c93401af4551c2ec3f2bb4715fbb87e7ae768aeef4d92079b0acd6e",
+    "acceleration/results/20260930_native_cadical195_build/make.log": "a1d34e2312a096101d2d2e8c87c0622f86272097f4141514e35a2b67e14c4064",
+    "acceleration/results/20260930_native_cadical195_build/help.log": "936d1f518c3a413c64bf5b99c641c4526d6bc1a8fbaacdc73a7c844af33590e7",
+    "acceleration/results/20260930_native_cli_calibration/manifest.json": "e058e99fd0667b8611c415e21afc0657976de45b76e7f48c2f87143d584460a6",
+    "acceleration/results/20260930_native_cli_calibration/parser_controls.json": "cf16fe63d68d99912e105581c42601ed51a2e75cd79353fc23327ded1cd55294"
+  },
+  "orchestrator_sha256": "da7ee9c03d454bd5ad0af0d82bead3520f3f270c70e71d4355161d036fd8ef22",
+  "protocol_sha256": "f23e204f808f3de1e137495df148e0c93627dbce8422277c09cc05dbbab7dde2",
+  "native_sha256": "021e58781c761296b436cfbdf49507ff290db175f67e5609bf6f41e4cc62d0b7",
+  "checker_sha256": "23d1613cb0b1ed491f4e723ff82492a8be6c349c2426d440412842c5246b90ac",
+  "native_cases": [
+    {
+      "name": "sat",
+      "cnf_sha256": "c723087c6c5f7c739aa6f938795f888f96ddff55f6ff620953f14fb726660296",
+      "proof_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "native_receipt": {
+        "timestamp": "2026-09-29T21:13:45.600995+00:00",
+        "command": [
+          "wsl.exe",
+          "--distribution",
+          "Ubuntu-24.04",
+          "--exec",
+          "/usr/bin/timeout",
+          "--signal=TERM",
+          "--kill-after=5s",
+          "30s",
+          "/usr/bin/prlimit",
+          "--as=8589934592:8589934592",
+          "--fsize=10737418240:10737418240",
+          "--core=0:0",
+          "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+          "--no-binary",
+          "-c",
+          "10000",
+          "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_cli_calibration/sat/instance.cnf",
+          "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_cli_calibration/sat/proof.drat"
+        ],
+        "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+        "actual_exit_code": 10,
+        "outer_windows_guard_expired": false,
+        "outer_windows_guard_seconds": 50,
+        "wall_seconds": 0.09399999980814755,
+        "stdout": "acceleration/results/20260930_native_cli_calibration/sat/solver.stdout.log",
+        "stdout_sha256": "e66a3b2e814a28f079b0a5cca01f3a7425149a29d944aa786653cecca62323f1",
+        "stderr": "acceleration/results/20260930_native_cli_calibration/sat/solver.stderr.log",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+        "exit_interpretation": {
+          "10": "native SAT",
+          "20": "native UNSAT",
+          "0": "native UNKNOWN or non-solver success",
+          "124": "GNU timeout deadline",
+          "137": "forced kill; inspect stderr and receipt"
+        }
+      },
+      "complete_assignment_checked": true,
+      "corrupted_required_literal_rejected": [
+        1,
+        -2
+      ]
+    },
+    {
+      "name": "unsat",
+      "cnf_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "proof_sha256": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+      "native_receipt": {
+        "timestamp": "2026-09-29T21:13:45.700173+00:00",
+        "command": [
+          "wsl.exe",
+          "--distribution",
+          "Ubuntu-24.04",
+          "--exec",
+          "/usr/bin/timeout",
+          "--signal=TERM",
+          "--kill-after=5s",
+          "30s",
+          "/usr/bin/prlimit",
+          "--as=8589934592:8589934592",
+          "--fsize=10737418240:10737418240",
+          "--core=0:0",
+          "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+          "--no-binary",
+          "-c",
+          "10000",
+          "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_cli_calibration/unsat/instance.cnf",
+          "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_cli_calibration/unsat/proof.drat"
+        ],
+        "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+        "actual_exit_code": 20,
+        "outer_windows_guard_expired": false,
+        "outer_windows_guard_seconds": 50,
+        "wall_seconds": 0.0779999999795109,
+        "stdout": "acceleration/results/20260930_native_cli_calibration/unsat/solver.stdout.log",
+        "stdout_sha256": "a3c4162cc23f516762d8690fd5c98df1e857cd3838307991c609ac537c3de595",
+        "stderr": "acceleration/results/20260930_native_cli_calibration/unsat/solver.stderr.log",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+        "exit_interpretation": {
+          "10": "native SAT",
+          "20": "native UNSAT",
+          "0": "native UNKNOWN or non-solver success",
+          "124": "GNU timeout deadline",
+          "137": "forced kill; inspect stderr and receipt"
+        }
+      },
+      "nonempty_reasoning_present": true,
+      "proof_checks": [
+        {
+          "name": "valid",
+          "accepted": true,
+          "proof_sha256": "d027e90f95ec33e919db5f35613674e052720492ec373c64724e47eb9c766ea0",
+          "receipt": {
+            "timestamp": "2026-09-29T21:13:45.762811+00:00",
+            "command": [
+              "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+              "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_cli_calibration\\unsat\\instance.cnf",
+              "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_cli_calibration\\unsat\\proof.drat"
+            ],
+            "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+            "actual_exit_code": 0,
+            "outer_windows_guard_expired": false,
+            "outer_windows_guard_seconds": 30,
+            "wall_seconds": 0.0470000000204891,
+            "stdout": "acceleration/results/20260930_native_cli_calibration/unsat/valid_checker.stdout.log",
+            "stdout_sha256": "4e6d667072ffaf6ed965d7037d4b67126f2171c7fc1537631d0e3a9100c29d81",
+            "stderr": "acceleration/results/20260930_native_cli_calibration/unsat/valid_checker.stderr.log",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+            "exit_interpretation": {
+              "10": "native SAT",
+              "20": "native UNSAT",
+              "0": "native UNKNOWN or non-solver success",
+              "124": "GNU timeout deadline",
+              "137": "forced kill; inspect stderr and receipt"
+            }
+          }
+        },
+        {
+          "name": "empty_only",
+          "accepted": false,
+          "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "receipt": {
+            "timestamp": "2026-09-29T21:13:45.825463+00:00",
+            "command": [
+              "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\rook-drat-checker\\drat-trim.exe",
+              "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_cli_calibration\\unsat\\instance.cnf",
+              "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_native_cli_calibration\\unsat\\empty_only_invalid.drat"
+            ],
+            "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+            "actual_exit_code": 1,
+            "outer_windows_guard_expired": false,
+            "outer_windows_guard_seconds": 30,
+            "wall_seconds": 0.0470000000204891,
+            "stdout": "acceleration/results/20260930_native_cli_calibration/unsat/empty_only_checker.stdout.log",
+            "stdout_sha256": "adb7f3ed96bf0f4ec46848ef93d86751ce57815b4e147a75cad3d9d42ce57f20",
+            "stderr": "acceleration/results/20260930_native_cli_calibration/unsat/empty_only_checker.stderr.log",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+            "exit_interpretation": {
+              "10": "native SAT",
+              "20": "native UNSAT",
+              "0": "native UNKNOWN or non-solver success",
+              "124": "GNU timeout deadline",
+              "137": "forced kill; inspect stderr and receipt"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "inspection_receipts": [
+    {
+      "timestamp": "2026-09-29T21:13:44.513131+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+        "-h"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 3.265000000130385,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/native_short_help.stdout.log",
+      "stdout_sha256": "936d1f518c3a413c64bf5b99c641c4526d6bc1a8fbaacdc73a7c844af33590e7",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/native_short_help.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    {
+      "timestamp": "2026-09-29T21:13:44.600481+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+        "--help"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 0.0779999999795109,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/native_full_help.stdout.log",
+      "stdout_sha256": "4958e610188eb62780aceb78bb466b98fb265dfd4c16553150a6b4c4aadd5c08",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/native_full_help.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    {
+      "timestamp": "2026-09-29T21:13:44.693258+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 0.0779999999795109,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/native_version.stdout.log",
+      "stdout_sha256": "a088ad5a0a611ce244da2409dbde8a63860d183d64ec0d099b8fb71fa7981967",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/native_version.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    {
+      "timestamp": "2026-09-29T21:13:44.771034+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+        "--build"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 0.0779999999795109,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/native_build.stdout.log",
+      "stdout_sha256": "2d60dff400d6868798aa6c92a914f24dafea241b8f97d362f32f145da4ad98bc",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/native_build.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    {
+      "timestamp": "2026-09-29T21:13:44.860243+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/timeout",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 0.0779999999795109,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/timeout_version.stdout.log",
+      "stdout_sha256": "bc80753ce6a5fbb15395fa8402c2824993f8ed3fc987fedfefc120091999b1ef",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/timeout_version.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    {
+      "timestamp": "2026-09-29T21:13:44.963722+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/timeout",
+        "--help"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 0.09300000010989606,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/timeout_help.stdout.log",
+      "stdout_sha256": "5d66a7ae507a4e647c32e62b64231f45697a00aa9b7e7de3dcaf4702424aa1ea",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/timeout_help.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    {
+      "timestamp": "2026-09-29T21:13:45.064200+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 0.0779999999795109,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/prlimit_version.stdout.log",
+      "stdout_sha256": "a71d4143951217a794250a08b7e49731374a00ec6bdc555f709efce971a89959",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/prlimit_version.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    {
+      "timestamp": "2026-09-29T21:13:45.156268+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--help"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 20,
+      "wall_seconds": 0.0779999999795109,
+      "stdout": "acceleration/results/20260930_native_cli_calibration/prlimit_help.stdout.log",
+      "stdout_sha256": "c997ffcf89d775dddd9a75e2031db2a120a9cd0a3fa9bbdd506e0331ac74d185",
+      "stderr": "acceleration/results/20260930_native_cli_calibration/prlimit_help.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    }
+  ],
+  "inherited_limits": {
+    "AS": [
+      "8589934592",
+      "8589934592"
+    ],
+    "CORE": [
+      "0",
+      "0"
+    ],
+    "CPU": [
+      "unlimited",
+      "unlimited"
+    ],
+    "DATA": [
+      "unlimited",
+      "unlimited"
+    ],
+    "FSIZE": [
+      "10737418240",
+      "10737418240"
+    ],
+    "LOCKS": [
+      "unlimited",
+      "unlimited"
+    ],
+    "MEMLOCK": [
+      "67108864",
+      "67108864"
+    ],
+    "MSGQUEUE": [
+      "819200",
+      "819200"
+    ],
+    "NICE": [
+      "0",
+      "0"
+    ],
+    "NOFILE": [
+      "10240",
+      "1048576"
+    ],
+    "NPROC": [
+      "192017",
+      "192017"
+    ],
+    "RSS": [
+      "unlimited",
+      "unlimited"
+    ],
+    "RTPRIO": [
+      "0",
+      "0"
+    ],
+    "RTTIME": [
+      "unlimited",
+      "unlimited"
+    ],
+    "SIGPENDING": [
+      "192017",
+      "192017"
+    ],
+    "STACK": [
+      "8388608",
+      "unlimited"
+    ]
+  },
+  "file_cap_receipt": {
+    "timestamp": "2026-09-29T21:13:45.350098+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "10s",
+      "/usr/bin/prlimit",
+      "--as=8589934592:8589934592",
+      "--fsize=16:16",
+      "--core=0:0",
+      "/usr/bin/dd",
+      "if=/dev/zero",
+      "of=/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_native_cli_calibration/file_cap_probe.bin",
+      "bs=1",
+      "count=17",
+      "status=none"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 25,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 30,
+    "wall_seconds": 0.09399999980814755,
+    "stdout": "acceleration/results/20260930_native_cli_calibration/file_cap_probe.stdout.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "acceleration/results/20260930_native_cli_calibration/file_cap_probe.stderr.log",
+    "stderr_sha256": "f8cc08bbf284c01f9fd9df6d765c76313aee1f800406b91d27e1cc9a6b785026",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "timeout_receipt": {
+    "timestamp": "2026-09-29T21:13:45.511267+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=1s",
+      "0.1s",
+      "/usr/bin/sleep",
+      "10"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 124,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 20,
+    "wall_seconds": 0.15600000019185245,
+    "stdout": "acceleration/results/20260930_native_cli_calibration/timeout_probe.stdout.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "acceleration/results/20260930_native_cli_calibration/timeout_probe.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "native_actual_exit_codes": [
+    10,
+    20
+  ],
+  "research_calls": 0,
+  "target_resolution": false,
+  "proof_of_research_instance": false,
+  "shared_components": [
+    "Official native solver and root-built authenticated DRAT checker; exact binary hashes bound",
+    "Python standard library"
+  ],
+  "limitations": [
+    "Tiny calibration establishes this recorded tool path only; no native solver correctness proof or research performance guarantee.",
+    "Official source build was not independently recompiled by this calibration; archive, compiler/build logs and resulting binary identity were checked."
+  ]
+}

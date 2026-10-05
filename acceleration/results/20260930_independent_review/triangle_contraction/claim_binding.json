@@ -1,0 +1,50 @@
+{
+  "id": "C-IDENTITY-P-RESIDUAL-TRIANGLE-CONTRACTION",
+  "revision": 1,
+  "statement": "For every actual SRG(99,14,1,2) completion in the identity-cross triangle-root family and its actual residual triangle partition R, T=FR and W=DR-2R satisfy binary W with row6/column18, B=R^TW symmetric with zero diagonal entries0..3 and row18, T^TT+5B+W^TW=18I+18J and FW=6J-(C+3I)T; T is binary with row10/column18.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Actual identity-P target completions and their actual residual triangle partition only.",
+  "assumptions": [
+    "No nontrivial target automorphism is assumed.",
+    "R is an actual residual-D triangle partition, not a prescribed arbitrary cover."
+  ],
+  "dependencies": [
+    {
+      "id": "C-IDENTITY-P-COMPLETION-THIRTYTHREE-TRIANGLE-PARTITION",
+      "revision": 1,
+      "relation": "premise"
+    },
+    {
+      "id": "C-TRIANGLE-FACTOR-RESIDUAL60-COMPLETION-EQUIVALENCE",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-SRG243-NONEMPTY-RESIDUAL-POSITIVE-CONTROL",
+      "revision": 1,
+      "relation": "verification_dependency"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "acceleration/results/20260930_independent_review/triangle_contraction/summary.json",
+      "sha256": "5b190d159e2fc2b681dc52be1083d2f74f402c86f1305b7acdaf58435fcdc96a",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "verifier": "/root/state_literature_audit",
+  "method": "independent_derivation_and_exact_artifact_check",
+  "limitations": [
+    "No99factor or completion is produced.",
+    "A chosen cyclic or other predetermined partition is not asserted WLOG.",
+    "The243 controls use residual degree16 and60triangles, not the99parameters.",
+    "New capacity-floor corollary is separately CANDIDATE pending parent review."
+  ],
+  "created_at": "2026-09-30T02:44:03.360989+00:00",
+  "updated_at": "2026-09-30T02:44:03.360989+00:00"
+}

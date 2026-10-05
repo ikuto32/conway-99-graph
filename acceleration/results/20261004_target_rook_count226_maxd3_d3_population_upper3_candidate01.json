@@ -1,0 +1,27 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:18:56Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-D3-POPULATION-UPPER3",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle. Suppose R=226 and every d_T belongs to {0,1,2,3}. Then the number c of actual triangles with deficiency three is at most three.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle"],
+  "scope":{"description":"Conditional upper-three bound on the deficiency-three population at R226, with maxd3 stated explicitly.","unrestricted_target":true,"maximum_deficiency3_inferred":false,"count226_excluded":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_D3_POPULATION_UPPER3_V1.md","sha256":"691bf52a1885b37372fea5594f28cfdcacd5c361574431e441c8dc6208ab079a"},
+  "inputs_sha256":{"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_D3_POPULATION_UPPER3_V1.md":"691bf52a1885b37372fea5594f28cfdcacd5c361574431e441c8dc6208ab079a"},
+  "proof_route":["For c>=3, complete local parity/fan/degree checks make all d3 roots pairwise disjoint.","For c>=4, every d3 point has at least three d1 roots except possibly one point containing both d2 roots when b2.","Total d1 incidences at the3c disjoint points are at least9c-2h and at most3a, yielding integer a>=3c and6c+2b<=30.","Only c4/b0..3 and c5/b0 remain.","Distinct actual central and d1 triangle edges give e(S)>=12c-2h-a; the upper Gram gives e(S)<=(9c+c^2)/2.","The resulting a lower bound contradicts all five remaining rows."],
+  "hand_table":[
+    {"c":4,"b":0,"a":18,"maximum_bad_points":0,"required_a_minimum":22},
+    {"c":4,"b":1,"a":16,"maximum_bad_points":0,"required_a_minimum":22},
+    {"c":4,"b":2,"a":14,"maximum_bad_points":1,"required_a_minimum":20},
+    {"c":4,"b":3,"a":12,"maximum_bad_points":0,"required_a_minimum":22},
+    {"c":5,"b":0,"a":15,"maximum_bad_points":0,"required_a_minimum":25}
+  ],
+  "pending_gates_at_preparation":{"written_report":null,"Root_acceptance":null},
+  "shared_origin":{"Root_pair_disjointness_bad_point_support_Gram_outline":true,"Structural_independent_local_checks_and_integer_large_c_coverage":true,"earlier_fan_Gram_components_disclosed":true,"pending_R226_upper3_gate_not_used":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["The maxd3 hypothesis is not concluded by this claim.","No parity of D1 alone, selected inducedness, faithful F4 census, automorphism, equitability or realizability is assumed.","The valid local(3,2,2,1) pattern is retained with one possible bad point.","No surviving c0..3 population, R226 or target is excluded by this statement."]
+}

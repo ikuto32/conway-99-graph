@@ -1,0 +1,107 @@
+{
+  "schema": "CLAIM_BINDING_SCHEMA2",
+  "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-PATTERN-RESTRICTION",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, set d_T=6-r_T for every actual triangle T. All d_T lie in{0,1,2}; if h counts deficiency-two triangles, then1<=h<=5 and exactly18-2h>=8 triangles have deficiency one. Every deficiency-two triangle has at most three deficiency-two defect partners across its three points; if it has three, then h=4. Thus at h=5 the deficiency-two defect graph has maximum degree two; if a degree-three node occurs, the graph is a three-leaf star or that star with one leaf edge. No count228 or target exclusion follows.",
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED"
+  ],
+  "producer": "/root/structural",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "scope": {
+    "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_report_scope": {
+    "description": "Universal conditional necessary deficiency-pattern restriction on targets with exactly228 actual induced rook-nine subsets; actual point labels and extra support edges retained. Surviving abstract patterns are not claimed realizable.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "target_resolution": "NONE",
+    "scientific_coverage": "UNKNOWN",
+    "count228_excluded": false
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "The two accepted conditional results imply maximum deficiency exactly two atR228. Local defect degrees, parity and the even-six rook classification are reconstructed directly in this new paper; prior R230/R229/R231 statements are not approval transfer.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=228 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts actual such subsets containing T; a defect pair means no actual induced rook contains both intersecting actual triangles"
+  ],
+  "limitations": [
+    "Exact r1 conditional statement only; no R228 or target exclusion.",
+    "No construction, automorphism, equitable profile or nonconstant-codeword assumption.",
+    "Written checks are not executed controls, a formal proof or a computation gate.",
+    "No whole-archive or worldwide novelty assertion.",
+    "Root administrative review, registration and availability remain separate."
+  ],
+  "shared_components": [
+    "Root suggested the gap-six direction before the Structural freeze",
+    "Structural authored both R228 papers and prior rook arguments",
+    "Native independently reviewed the two inherited r1 dependencies",
+    "CP reconstructed the exact conditional proof and attempted actual-point falsification",
+    "Same disclosed strategy does not constitute independent discovery",
+    "No previous R229/R230/R231 or computation gate transferred"
+  ],
+  "report": "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json",
+  "report_sha256": "fb517be28e709aaec2c68419488bbf2eb38e42f094b4721231c1ac035ee26353",
+  "verification_timestamp": "2026-10-04T18:14:25.5998263+00:00",
+  "verification_started_at": null,
+  "verification_started_at_null_reason": "The written review start was not durably timestamped; no start is inferred.",
+  "original_report_status": "INDEPENDENT_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1_WRITTEN_PASS",
+  "original_report_statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, set d_T=6-r_T for every actual triangle T. All d_T lie in{0,1,2}; if h counts deficiency-two triangles, then1<=h<=5 and exactly18-2h>=8 triangles have deficiency one. Every deficiency-two triangle has at most three deficiency-two defect partners across its three points; if it has three, then h=4. Thus at h=5 the deficiency-two defect graph has maximum degree two; if a degree-three node occurs, the graph is a three-leaf star or that star with one leaf edge. No count228 or target exclusion follows.",
+  "original_raw_report_changed": false,
+  "controls": {
+    "written_checks": 27,
+    "written_derivation_checks": 15,
+    "hand_falsification_boundaries": 12,
+    "executed_mathematical_commands": 0,
+    "enumerations": 0,
+    "formal_proof": false,
+    "external_review": false
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "acceleration/audit_20261004_rook_count228_deficiency_patterns_checkpoint_v1.md": "4e72a1d287145cf6ee944ed9a1e5929160d6ef2a69ba9c389e8f94c480593adc",
+    "acceleration/results/20261004_independent_review/rook_count228_deficiency_patterns_checkpoint01/summary.json": "fb517be28e709aaec2c68419488bbf2eb38e42f094b4721231c1ac035ee26353"
+  },
+  "input_map_count": 9,
+  "root_written_acceptance": null,
+  "root_written_acceptance_null_reason": "Root review of this new exact report is pending; no acceptance hash is fabricated.",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "availability": "LOCAL_ONLY",
+  "registration_authorized": false,
+  "created_at": "2026-10-04T18:14:25.5998263+00:00",
+  "updated_at": "2026-10-04T18:14:25.5998263+00:00",
+  "metadata_mapping": {
+    "statement_roles_time_assumptions_dependencies_preserved": true,
+    "scope_three_required_keys_projected": true,
+    "original_scope_retained": true,
+    "old_gate_transfer": false,
+    "new_mathematical_check": false,
+    "ledger_Git_index_mutations": 0
+  }
+}

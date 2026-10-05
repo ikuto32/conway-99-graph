@@ -1,0 +1,150 @@
+{
+  "status": "CANDIDATE_PUBLIC_JSON_RESUME_REGRESSION_PASS",
+  "calibration_only": true,
+  "records": [
+    {
+      "core": "shift6",
+      "first_checkpoint": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/shift6_first23/checkpoint_00000.json",
+      "first_checkpoint_sha256": "30500a2ea45b895532c9e0a3c5af4122c22ae3f33a3fc10fe442ff560608c4f6",
+      "resumed_checkpoint": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/shift6_resume41/checkpoint_00000.json",
+      "resumed_checkpoint_sha256": "ff88900ec9893e42b04c698b0494ca6ed0791db6ef2709ef8c03406b8a683eca",
+      "whole_checkpoint": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/shift6_whole64/checkpoint_00000.json",
+      "whole_checkpoint_sha256": "635bc89882f627b6d9bf15b2c9506bd534548d72a90c15b78ced2b4d487652cd",
+      "chains": 2,
+      "first_steps": 23,
+      "resumed_steps": 41,
+      "whole_steps": 64,
+      "all_persisted_fields_and_trace_equal": true
+    },
+    {
+      "core": "six_prism",
+      "first_checkpoint": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/six_prism_first23/checkpoint_00000.json",
+      "first_checkpoint_sha256": "2802007674993a44cbb4048ea822b06a78e0c5e82fe62d9d56917bf17b0c917e",
+      "resumed_checkpoint": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/six_prism_resume41/checkpoint_00000.json",
+      "resumed_checkpoint_sha256": "0d774ab86a2e2fb9d74bec86dde1b2fe8582ff776b74c647cf5aa6cf1c18042f",
+      "whole_checkpoint": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/six_prism_whole64/checkpoint_00000.json",
+      "whole_checkpoint_sha256": "b5ad7ee7f85690a63adf9fac6fff451c4cf6985d4f7cc7cc048988ea79e73503",
+      "chains": 2,
+      "first_steps": 23,
+      "resumed_steps": 41,
+      "whole_steps": 64,
+      "all_persisted_fields_and_trace_equal": true
+    }
+  ],
+  "public_wrapper_native_calls": 6,
+  "calibration_proposals": 512,
+  "corrupt_public_resume_controls": [
+    {
+      "control": "wrong_target",
+      "failure": {
+        "timestamp": "2026-09-30T01:07:43.508433+00:00",
+        "error_type": "ValueError",
+        "error": "resume domain/objective binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "changed_edge_pair",
+      "failure": {
+        "timestamp": "2026-09-30T01:07:43.655087+00:00",
+        "error_type": "ValueError",
+        "error": "resume domain/objective binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "wrong_objective",
+      "failure": {
+        "timestamp": "2026-09-30T01:07:43.805950+00:00",
+        "error_type": "ValueError",
+        "error": "resume domain/objective binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "wrong_source_hash",
+      "failure": {
+        "timestamp": "2026-09-30T01:07:43.957527+00:00",
+        "error_type": "ValueError",
+        "error": "resume exact engine binding"
+      },
+      "native_calls": 0
+    },
+    {
+      "control": "wrong_binary_hash",
+      "failure": {
+        "timestamp": "2026-09-30T01:07:44.101597+00:00",
+        "error_type": "ValueError",
+        "error": "resume exact engine binding"
+      },
+      "native_calls": 0
+    }
+  ],
+  "independent_review_required": true,
+  "target_resolution": false,
+  "unchanged_native_source_sha256": "95c4efd8683d3a36b6b7c97e9b93253847630de680f125a32af8f02160a3c560",
+  "unchanged_binary_sha256": "3db33f4d8e75cf25eab7c70fda37f3856b1c0d70af7c778a86ecc297e7bd9f5c",
+  "scope": "Actual disk-checkpoint public Python-wrapper resume only; native algorithm and objective unchanged.",
+  "timestamp": "2026-09-30T01:07:41.477077+00:00",
+  "source_commit": "22fc0ea2f81faa791ee99daf456a3c9785c55dc0",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py",
+    "resume-calibrate",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\public_wrapper_replay"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/theory_20260930_factor_permutation_annealer_v3.py": "8f2a85f5a87d1c6a3a37fdb104628c126c67c4ba6ace846b7c9f3b3aba0525b3",
+    "acceleration/factor_permutation_anneal_20260930_v2.cu": "95c4efd8683d3a36b6b7c97e9b93253847630de680f125a32af8f02160a3c560",
+    "acceleration/build_factor_permutation_anneal_20260930_v2.ps1": "e1176d33a9cf98d7107f3b7297c46ad75330266a30a2422481b4e7bdd85612b1",
+    "acceleration/build/factor_permutation_anneal_20260930_v2.exe": "3db33f4d8e75cf25eab7c70fda37f3856b1c0d70af7c778a86ecc297e7bd9f5c",
+    "acceleration/theory_20260930_factor_permutation_annealer_v3_spec.md": "2e342b7be1650385407c2c9811ee51eb16ac6bcc84fcb1a0657386bdb1704c04",
+    "acceleration/theory_20260930_factor_permutation_annealer_v2.py": "5d367ebc6683c4c5e473573c7edf14dd571973f75f1612e2be5121892f37cd35",
+    "acceleration/results/20260930_independent_review/factor_permutation_annealer_bound/summary.json": "70c54735a3331f4bc9dff3ace2f5d1dd4bae49ec051f415a262538f9385b20b9",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/results/20260930_independent_review/prism_all_columns_cnf/derived_geometry.json": "6cce4aa318f821563568679a01624f25a74104eb8527a3a61c55ad7aac36a542",
+    "acceleration/results/20260930_triangle_joint_factor_cnf/scope.json": "51d5f51ba4177d41247239fc2d7a3753b26150e9660960b7452f38e304d731d0",
+    "acceleration/results/20260930_independent_review/triangle_factor_column_caps/summary.json": "675dae8635175088bff026c59e171c1d2b2b66a4a880cd6a10500ae66bb74331",
+    "acceleration/results/20260930_independent_review/prism_all_columns_cnf/summary.json": "07c589160e930205bc7e42f9524846280b4a8f0573ca9e5dfa06b627a6d115c3",
+    "acceleration/results/20260930_srg243_residual_fixture/triangle_blocks.json": "3f8dfa3803d6a5db8146dd24a0857477e1aa061ab10dac0f9e6e564aabc86439",
+    "acceleration/results/20260930_independent_review/srg243_residual_fixture/summary.json": "28bbd97b8e69515c3eb0345e5aa2db12debfaa8a44e83b2e3487342104c5d50e"
+  },
+  "configuration": {
+    "mode": "resume-calibrate",
+    "out": "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\public_wrapper_replay",
+    "core": "shift6",
+    "chains": 32,
+    "chunks": 1,
+    "steps": 256,
+    "seconds": 60,
+    "temperature": 3.25,
+    "seed": 20260930,
+    "resume": null,
+    "independent_gate": null,
+    "independent_gate_sha256": null
+  },
+  "binary_sha256": "3db33f4d8e75cf25eab7c70fda37f3856b1c0d70af7c778a86ecc297e7bd9f5c",
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_changed_edge_pair.receipt.json": "80409e26cf8c97e45605548ba7a7fb3c3d815c2d68d08a1ce4825f2b5ce42a37",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_changed_edge_pair_checkpoint.json": "554441164737f32e402542c0d7d01c1114547bff7b6172f6c561239ba8c2b1dd",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_binary_hash.receipt.json": "92b097d98510f627a481dc5823e563ea692d5d9bbb24f8c0dcdc70e5b3d4981a",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_binary_hash_checkpoint.json": "cb672d9413c8a29f28f241d7d606ede68e529afd29416cd25404f2b9870ef98e",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_objective.receipt.json": "8a91686ee2a349c6d1226d6f8732247f57b1ca9e65035b58b610e27e5f714f4b",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_objective_checkpoint.json": "f49f3d17662cbe46efcdece646b0b1b5ee8261cc4ee85e366959908a24a536eb",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_source_hash.receipt.json": "0c42e246d2e6db6d4d9f0f338d2dda7a0f6da25f2d06227492fba562a4115fa1",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_source_hash_checkpoint.json": "81583581ddf593e221cbe0b55b4ff56958054d829645a63b9aaf628bf668e9de",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_target.receipt.json": "361b2deb76d174a43959731fac52a87b6913bcba366b4047eaae30383fc8931c",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_target_checkpoint.json": "426b1699dd28ccd1402dbfcb1311b7d6f2a270c06b22526a574adf46cf50764b",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/manifest.json": "4e114deb491866a39e06e09562683124973c730eb5d027d83c865bdc74927288",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/shift6_first23.receipt.json": "2014bc8b53c5c8f63521d96d1bd38437378c9741d4b89ddbd6024a6758569045",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/shift6_resume41.receipt.json": "0b331898aa6e6c651bc7e2e91eae787e47a06915638277ad496111aa720fdb7b",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/shift6_whole64.receipt.json": "6bd0371d68f69898730df01a07a65a2362b1d028b05968e498b44e43f4058bbe",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/six_prism_first23.receipt.json": "d07f33a0c3f4281d3a7ce106c7dfb53c6033f845e3ca423c132e976df06796f1",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/six_prism_resume41.receipt.json": "3f54fc411f8212c7299cd9087a11305d735f9b806107e0b2b5f2931f08bf4f77",
+    "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/six_prism_whole64.receipt.json": "0aed46bb660395d32e1123b9724297aed63370087b649955c012958b2289ca6c"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "BOUND_LITERAL_FINITE_HARNESS_CRLF_CORRECTION_V4",
+  "timestamp": "2026-10-04T21:53:16.499Z",
+  "author": "/root/checkpoint_audit",
+  "actual_failed_invocation": "9333a647a38e4b7d98fa88ff88d6f17e",
+  "failed_review": {
+    "path": "acceleration/results/20261004_bound_literal_claims_controls_root_failed_review02.json",
+    "sha256": "6746cd524a32fd4c9fbca56a3ac759d21c3383a3632af1903ce9363793c17a0a"
+  },
+  "completed_controls": 8,
+  "attempted": 9,
+  "unattempted": 13,
+  "physical_preserved": 108,
+  "cause": "The configured AssertionError83 was genuine, but raw Windows CRLF leaves carriage return before newline, so the V3 multiline class regex failed at harness209.",
+  "repair": "Decoded stderr.splitlines exact class or class-colon comparison; raw saved stderr/stdout remain unchanged. Subject-line matcher, routes, copierV3/checkerV2 and output criteria unchanged.",
+  "old_sources_preserved": true,
+  "old_gates_transferred": false,
+  "automatic_retry": false,
+  "new_invocation_authority": null,
+  "mathematical_replays": 0,
+  "live_ledger_writes": 0,
+  "target_resolution": "NONE",
+  "new_harness": {
+    "path": "acceleration/exercise_20261004_bound_literal_claims_v4.py",
+    "sha256": "f114915de5fb2960a2f837ff8e7fc693588b7333e66c60b28dc0080597a5029f"
+  }
+}
+

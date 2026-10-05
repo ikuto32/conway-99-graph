@@ -1,0 +1,196 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2023 A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt
+c 
+c Version 1.9.5 146207318796f094dcded87349a64f0c6927309e
+c g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 -Wall -Wextra -O3 -DNDEBUG
+c Wed Sep 30 06:02:32 JST 2026 Linux ikutoPC 6.6.87.2-microsoft-standard-WSL2 x86_64
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting conflict limit to 1000000 conflicts (due to '1000000')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/tmp/conway99-profile-090-ONxopT/proof.drat'
+c writing non-binary proof trace to '/tmp/conway99-profile-090-ONxopT/proof.drat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_four_profile_cnfs/case_090/instance.cnf'
+c opening file to read '/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_four_profile_cnfs/case_090/instance.cnf'
+c found 'p cnf 10564 187408' header
+c parsed 187408 clauses in 0.09 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail      variables
+c          level   conflicts       glue        remaining
+c 
+c *  0.09 19  0 0   0    0    0  0% 0 138126 7750 73%
+c {  0.10 20  0 0   0    0    0  0% 0 138126 7750 73%
+c -  0.12 21 20 1  12  302  238 52% 5 138066 7750 73%
+c -  0.17 27 24 2  50  989  749 56% 6 138066 7750 73%
+c }  0.17 27 24 2  52 1000  760 56% 6 138066 7750 73%
+c [  0.17 27  0 2  52 1000  760  0% 0 138066 7750 73%
+c O  0.17 27 21 2  52 1002  762 62% 3 138066 7750 73%
+c i  0.19 27 22 2  52 1464 1133 57% 6 138066 7749 73%
+c -  0.23 27 54 3  52 2017 1025 50% 21 138019 7749 73%
+c ]  0.29 26 74 3  53 3005 1800 28% 28 138019 7749 73%
+c {  0.29 26 24 3  53 3005 1800 76% 6 138019 7749 73%
+c F  0.29 26 24 3  54 3006 1801 76% 6 138019 7749 73%
+c -  0.32 27 26 4  86 3385 1563 65% 6 138019 7749 73%
+c i  0.33 27 25 4  90 3526 1657 62% 6 138019 7748 73%
+c i  0.33 27 25 4  90 3532 1662 62% 6 138019 7747 73%
+c i  0.33 27 25 4  90 3541 1669 62% 6 138019 7746 73%
+c i  0.35 27 23 4 103 3994 2022 57% 6 138019 7745 73%
+c i  0.35 27 23 4 103 3995 2022 57% 6 138019 7743 73%
+c i  0.35 27 23 4 103 3996 2022 57% 6 138019 7742 73%
+c i  0.36 27 25 4 104 4036 2041 56% 6 138019 7741 73%
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail      variables
+c          level   conflicts       glue        remaining
+c 
+c i  0.36 27 26 4 116 4216 2125 54% 6 138019 7740 73%
+c i  0.36 27 26 4 116 4259 2162 54% 6 138019 7739 73%
+c i  0.36 27 26 4 116 4260 2162 54% 6 138019 7738 73%
+c i  0.36 27 26 4 116 4275 2166 54% 6 138019 7737 73%
+c i  0.37 27 26 4 116 4307 2185 53% 6 138019 7736 73%
+c i  0.37 27 25 4 116 4308 2185 53% 6 138019 7735 73%
+c i  0.37 27 25 4 116 4309 2185 53% 6 138019 7732 73%
+c i  0.37 27 25 4 116 4310 2185 53% 6 138019 7731 73%
+c i  0.37 27 25 4 116 4311 2185 53% 6 138019 7730 73%
+c i  0.37 27 25 4 116 4312 2185 53% 6 138019 7729 73%
+c i  0.37 27 25 4 116 4313 2185 53% 6 138019 7728 73%
+c i  0.37 27 25 4 116 4314 2185 53% 6 138019 7727 73%
+c i  0.37 27 25 4 116 4315 2185 53% 6 138019 7726 73%
+c i  0.37 27 25 4 116 4316 2185 53% 6 138019 7725 73%
+c i  0.37 27 25 4 116 4317 2185 53% 6 138019 7645 72%
+c i  0.37 27 25 4 116 4344 2187 52% 6 138019 7533 71%
+c i  0.37 27 26 4 118 4434 2269 52% 6 138019 7507 71%
+c i  0.37 27 26 4 119 4436 2270 52% 6 138019 7499 71%
+c i  0.37 27 26 4 119 4456 2286 52% 6 138019 7498 71%
+c i  0.37 27 26 4 119 4470 2298 52% 6 138019 7496 71%
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail      variables
+c          level   conflicts       glue        remaining
+c 
+c i  0.37 27 26 4 119 4499 2324 51% 6 138019 7495 71%
+c i  0.39 27 26 4 163 4806 2533 50% 6 138019 7494 71%
+c i  0.39 27 26 4 163 4807 2533 50% 6 138019 7388 70%
+c i  0.40 27 25 4 181 5005 2655 50% 6 138019 7387 70%
+c d  0.41 27 25 4 181 5005 1966 50% 6 127643 7352 70%
+c d  0.41 27 25 4 181 5005 1965 50% 6 127445 7253 69%
+c p  0.48 27 25 4 181 5005 85215 50% 6 127445 7249 69%
+c d  0.49 28 25 4 181 5005 84621 50% 6 127257 7221 68%
+c d  0.49 28 25 4 181 5005 84621 50% 6 127249 7217 68%
+c -  0.51 28 25 5 182 5106 2043 49% 6 127249 7217 68%
+c i  0.53 28 25 5 231 5420 2276 48% 7 127249 7216 68%
+c i  0.54 28 25 5 240 5526 2346 47% 7 127249 7215 68%
+c i  0.54 28 25 5 240 5544 2362 47% 7 127249 7214 68%
+c #  0.56 28 25 5 262 6008 2732 47% 7 127249 7214 68%
+c i  0.57 28 24 5 280 6309 2954 46% 7 127249 7213 68%
+c i  0.59 28 24 5 302 6715 3274 45% 6 127249 7212 68%
+c i  0.60 28 24 5 302 6750 3298 45% 6 127249 7211 68%
+c }  0.60 28 23 5 303 7005 3480 44% 6 127249 7211 68%
+c [  0.60 28 74 5 303 7005 3480 28% 28 127249 7211 68%
+c -  0.62 33 78 6 303 7095 2755 29% 30 126973 7211 68%
+c 
+c  seconds  reductions  redundant   irredundant
+c         MB    restarts       trail       variables
+c          level   conflicts       glue         remaining
+c 
+c i  0.64 33 76 6 304 7434 3025 30% 29 126973 7210 68%
+c s  0.70 33 80 6 304 8313 3687 31% 29 125121 7210 68%
+c v  0.71 33 80 6 304 8313 3687 31% 29 125096 7210 68%
+c t  0.73 33 80 6 304 8313 3687 31% 29 125095 7209 68%
+c e  0.75 33 80 6 304 8313 3320 31% 29 123785 6021 57%
+c s  0.76 33 80 6 304 8313 3316 31% 29 123785 6021 57%
+c i  0.82 33 73 6 304 9101 3651 38% 27 123785 6020 57%
+c i  0.82 33 72 6 304 9165 3704 38% 27 123785 6019 57%
+c i  0.82 33 72 6 304 9166 3704 38% 27 123785 6018 57%
+c i  0.83 33 71 6 304 9194 3729 38% 27 123785 6017 57%
+c i  0.83 33 71 6 304 9216 3740 37% 26 123785 4967 47%
+c ]  0.83 33 71 6 304 9218 3740 37% 26 123785 4804 45%
+c 0  0.83 33 71 6 304 9218 3740 37% 26 123785 4804 45%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c DRAT proof file '/tmp/conway99-profile-090-ONxopT/proof.drat' closed
+c DRAT 107395 added clauses 39.74%
+c DRAT 162871 deleted clauses 60.26%
+c DRAT 7589397 bytes (7.24 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.57   77.43% search
+c         0.29   40.06% unstable
+c         0.27   37.14% stable
+c         0.16   22.45% simplify
+c         0.09   12.83% parse
+c         0.06    8.31% probe
+c         0.03    4.48% elim
+c         0.02    2.69% subsume
+c         0.01    1.74% vivify
+c         0.01    1.23% ternary
+c         0.00    0.23% lucky
+c   =================================
+c         0.73   88.54% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:              4105        44.53 %  of conflicts
+c conflicts:                  9218     12582.02    per second
+c decisions:                 31551     43065.22    per second
+c eliminated:                 1188        11.25 %  of all variables
+c fixed:                      4406        41.71 %  of all variables
+c learned:                    8372        90.82 %  per conflict
+c learned_lits:             729366       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                 331661        45.47 %  learned literals
+c minishrunken:              70125         9.61 %  learned literals
+c otfs:                         65         0.71 %  of conflict
+c propagations:            7294118         9.96 M  per second
+c reduced:                    1773        19.23 %  per conflict
+c rephased:                      3      3072.67    interval
+c restarts:                    304        30.32    interval
+c stabilizing:                   2        45.76 %  of conflicts
+c substituted:                 166         1.57 %  of all variables
+c subsumed:                   3272         1.38 %  of all clauses
+c strengthened:                557         0.23 %  of all clauses
+c ternary:                       4         0.07 %  of resolved
+c trail reuses:                  0         0.00 %  of incremental calls
+c vivified:                     23         0.01 %  of all clauses
+c weakened:                   3891         2.30    average size
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.83    seconds
+c total real time since initialization:            1.53    seconds
+c maximum resident set size of process:           33.16    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

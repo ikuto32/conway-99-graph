@@ -1,0 +1,206 @@
+{
+  "timestamp": "2026-09-30T04:37:38.926307+00:00",
+  "source_commit": "81320d3cf74339d2ffb1e671f51f0865218ac161",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_eighteenth_checkpoint.py",
+    "--registration",
+    "acceleration/results/20260930_eighteenth_preparation_registration",
+    "--registration",
+    "acceleration/results/20260930_eighteenth_zero_row_and_constant_registration",
+    "--registration",
+    "acceleration/results/20260930_eighteenth_support_cut_parity_registration",
+    "--next-experiment",
+    "Independently check the second selected parity branch through its exact balanced-lift matrix and affine phase equations over GF(3); if an obstruction survives review, derive a broader sound phase-screening rule. This later work belongs to the nineteenth cohort."
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "previous_report": "docs/RESEARCH_20260930_SEVENTEENTH_WAVE.md",
+  "previous_checkpoint_sha256": "e36487c58fadb9234cc89eab0354aa0c5a8e10f2129da2f021cf67d7cb5d197a",
+  "claim_population": 178,
+  "verified_clear": 176,
+  "candidate_clear": 2,
+  "claim_status_counts": {
+    "VERIFIED": 176,
+    "CANDIDATE": 2
+  },
+  "claim_review_counts": {
+    "CLEAR": 178
+  },
+  "new_verified_ids": [
+    "C-FIXED-HADAMARD-SIX-PRISM-BINARY-MIP-ENCODING",
+    "C-FIXED-HADAMARD-SIX-PRISM-BALANCED-PARITY-PROJECTION",
+    "C-FIXED-HADAMARD-SIX-PRISM-NONCYCLIC-PARITY-PROJECTION-WITNESS",
+    "C-FIXED-HADAMARD-SIX-PRISM-FIRST-PARITY-LIFT-EXCLUSION",
+    "C-FIXED-HADAMARD-BALANCED-PARITY-CONSTANT-GROUP-NECESSITY",
+    "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-PROJECTION",
+    "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-SAT-WITNESS"
+  ],
+  "evidence_only_revision_changes": [],
+  "target_resolution": "UNKNOWN",
+  "external_review": null,
+  "external_review_null_reason": "No target-resolution artifact exists.",
+  "native": {
+    "distinct_models": 2,
+    "attempts": 2,
+    "completed_attempts": 2,
+    "SAT": 2,
+    "UNSAT": 0,
+    "UNKNOWN": 0,
+    "checked_projection_objects": 2,
+    "checked_full_factors": 0,
+    "runs": [
+      {
+        "name": "hadamard_balanced_parity",
+        "attempts": 1,
+        "exit_code": 10,
+        "independently_checked_projection": true,
+        "full_factor": false,
+        "conflicts": 8999,
+        "wrapper_wall_seconds": 0.21899999980814755,
+        "object_gate": "acceleration/results/20260930_independent_review/hadamard_balanced_parity_sat_v2/summary.json",
+        "object_gate_sha256": "d2536119ac3fa0d45c190a6562de2ccc67c3f9c9765fbfc03257e37b15097f9c"
+      },
+      {
+        "name": "hadamard_parity_support_cuts",
+        "attempts": 1,
+        "exit_code": 10,
+        "independently_checked_projection": true,
+        "full_factor": false,
+        "conflicts": 11790,
+        "wrapper_wall_seconds": 0.25,
+        "object_gate": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat/summary.json",
+        "object_gate_sha256": "02ae20d479a0d2589c02f435e2a8fdd781ec0459b60095d130b68b5f2721a04a"
+      }
+    ]
+  },
+  "mip": {
+    "attempts": 1,
+    "completed_attempts": 1,
+    "UNKNOWN": 1,
+    "result": {
+      "native_values_checked": 5400,
+      "exact_float_hex_pairs_checked": 5400,
+      "vector_all_zero": true,
+      "first_onehot_value": 0.0,
+      "first_onehot_required": 1,
+      "original_rows": 766,
+      "original_variables": 5400,
+      "original_nonzeros": 125920,
+      "research_calls": 1,
+      "native_internal_sub_mips_not_counted_as_separate_research_calls": true,
+      "valid_native_incumbent": false,
+      "saved_Gram_objects": 0,
+      "saved_lazy_cuts": 0,
+      "native_log_time_seconds": 120.0,
+      "native_cumulative_runtime_seconds": 120.00855550006963,
+      "wrapper_wall_seconds": 120.25,
+      "cooperative_overrun_seconds": 0.25
+    },
+    "exclusion": false
+  },
+  "first_selected_lift": {
+    "result": "EXACT_NONNEGATIVE_INFEASIBILITY",
+    "counts": {
+      "variables": 312,
+      "equations": 560,
+      "nonzeros": 14352,
+      "mixed_groups": 16,
+      "constant_groups": 4,
+      "zero_rows": 6,
+      "positive_uniform_control_variables": 3000,
+      "positive_uniform_control_rows": 560
+    },
+    "independent_gate": "acceleration/results/20260930_independent_review/balanced_lift_zero_rows/summary.json",
+    "zero_rows": [
+      139,
+      215,
+      399,
+      445,
+      539,
+      555
+    ],
+    "scope": "Only this one fully specified selected-parity colouring branch on one fixed support. No other parity assignment, unbalanced factor, whole support, core or Conway99 exclusion.",
+    "solver_calls": 0
+  },
+  "skipped_lp": {
+    "timestamp": "2026-09-30T04:20:08.214601+00:00",
+    "source_commit": "81320d3cf74339d2ffb1e671f51f0865218ac161",
+    "command": [
+      "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+      "acceleration/record_20260930_balanced_lift_lp_cancellation.py"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "inputs_sha256": {
+      "acceleration/theory_20260930_balanced_lift_lp.py": "a8bda807e0c8a9012c3b5268df0eda11730e07ec9dabbb44af6bc6ae492c8dbe",
+      "acceleration/theory_20260930_balanced_lift_lp_spec.md": "66c50dd275b81df5cbdd98abda4ccfb7829a5c44fee3547e7bb77b2269016cf7",
+      "acceleration/results/20260930_hadamard_parity_lift_cnf/exact_model.json": "dc9534f38c2bf2cb6c7f24c027c7a0ef15e8a5282e3b1c83d87ed5679555fbbd",
+      "acceleration/results/20260930_independent_review/balanced_lift_zero_rows/summary.json": "a6b7b5fd408e694b12cc630cf0e53e89542b1fe304f2f9d23d94735abe45af7f"
+    },
+    "status": "SKIPPED_BEFORE_EXECUTION_EXACT_OBSTRUCTION",
+    "planned_research_calls": 1,
+    "actual_research_calls": 0,
+    "actual_control_solver_calls": 0,
+    "actual_solver_command": null,
+    "actual_solver_command_null_reason": "The prepared LP source was never invoked; no numeric solver was needed after independent exact zero-row exclusion.",
+    "reason": "The complete selected branch has six required Gram rows with all-zero coefficients and RHS one. The independent exact certificate supersedes the planned numerical screen.",
+    "scope": "Only this first selected parity branch; other parity assignments remain open.",
+    "source_retained": true,
+    "mathematical_verification_performed_by_this_recorder": false,
+    "target_resolution": "UNKNOWN"
+  },
+  "failed_cnf_builds": 1,
+  "new_full_factors": 0,
+  "complete99_graphs": 0,
+  "new_selected_parity_exclusions": 1,
+  "new_whole_support_exclusions": 0,
+  "new_core_exclusions": 0,
+  "new_unrestricted_exclusions": 0,
+  "coverage": "Overall search coverage: UNKNOWN; no validated denominator.",
+  "ledger_snapshot_sha256": "05067868e977581f8fb83595abe8936074fe3ebd473a487ea404a21f07c2800b",
+  "evidence_sha256": {
+    "acceleration/results/20260930_balanced_lift_lp_not_run/summary.json": "a7c27e32cb0f2470c16cb5be6fb9c8615c5588e28ff2751d9dbcefbd385df1ca",
+    "acceleration/results/20260930_eighteenth_artifact_packaging/catalog.json": "d3a413b6b04a09d01d8261043f9b5b907df5f6892238bbe1db8bd6e559a23adb",
+    "acceleration/results/20260930_eighteenth_artifact_packaging/summary.json": "0a53bf468d61a87316b8191804c52c12544ec3fb0df80da43de144ee307949a2",
+    "acceleration/results/20260930_eighteenth_preparation_registration/summary.json": "16469b8f45b5d85c8347fe425ef0e51a3b6a51eae4880f48e27c6bfd0b05060a",
+    "acceleration/results/20260930_eighteenth_support_cut_parity_registration/summary.json": "edb8ec8b3b7674d7354458158b1bd1fdad7a4e85658a0461d0a94ca2c2562d4a",
+    "acceleration/results/20260930_eighteenth_zero_row_and_constant_registration/summary.json": "10f67937e5360470f41092ace4e58d8946806dadb64a1c8c3c3c25c3699d04ea",
+    "acceleration/results/20260930_independent_review/balanced_lift_zero_rows/independent_matrix.json": "b27b7e23ae5cfc658be75a11b7efb4d826769d7735077712672201f66edf89e7",
+    "acceleration/results/20260930_independent_review/balanced_lift_zero_rows/summary.json": "a6b7b5fd408e694b12cc630cf0e53e89542b1fe304f2f9d23d94735abe45af7f",
+    "acceleration/results/20260930_independent_review/balanced_lift_zero_rows/zero_row_certificate.json": "f6944250a540077a6211a979f4ad0fdbfd773635ad8c003612e64505efeac4d1",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity/summary.json": "8134ed25d5dc06704e6f7f668fa03deec56874eca6d5fad9e6a4138787c7dd76",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_cuts/claim_binding.json": "7da260d8fa89a13b58bed86097bdfaa5c9a4b9c738f43cb06336e476ccb583d5",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_cuts/necessary_clauses.json": "2204fd00f447d9df0c71f9500538987a185bc43ffc323366d62ad7ec3f87fef1",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_cuts/summary.json": "31c47c1faccc8ae043433f814932e2d419e1c2a188ffc1bd54a53b21ceeca6c1",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_object_calibration_v2/summary.json": "101b4af16c1356cad1951f04626d3fcc4a244f3afac220ed94b717b9ee1e8dec",
+    "acceleration/results/20260930_independent_review/hadamard_balanced_parity_sat_v2/summary.json": "d2536119ac3fa0d45c190a6562de2ccc67c3f9c9765fbfc03257e37b15097f9c",
+    "acceleration/results/20260930_independent_review/hadamard_parity_object_v2_delta/summary.json": "599b7b2f713124e658ce0a7c3b06be0d0a79f170a5fb9fed45531eb5aec914b5",
+    "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_encoding/summary.json": "7a9b76b9e139f065c850194b6968ebf4a98c0211668e1f824d2ac75640b7dd12",
+    "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_object_calibration/summary.json": "31ee1edda7ac30c17bc1d2287da9c7b81222ad7f50ae761da2e1761199c88eb4",
+    "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat/summary.json": "02ae20d479a0d2589c02f435e2a8fdd781ec0459b60095d130b68b5f2721a04a",
+    "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat_outcome/claim_bindings.json": "bc3db0bb70b087488046ef438dfd44f2b25da13d3426ee2fbff21c863f793422",
+    "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat_outcome/summary.json": "66d21a6be04f471c870ab9fac40c0aaa8cd64717924582ae4520e0f2e3fadc39",
+    "acceleration/results/20260930_independent_review/hadamard_prism_binary_mip_calibration/summary.json": "4c27ffee59dbfae792e6776cb5d6175750e31c7f65c9f5e14337d07b3acab6ca",
+    "acceleration/results/20260930_independent_review/hadamard_prism_binary_mip_claim_binding/summary.json": "91d6d1cbef4d091dba9187b53a7cfdddb2a1d309a079cf3f658aa81546bc89bf",
+    "acceleration/results/20260930_independent_review/hadamard_prism_binary_mip_execution/summary.json": "d50203c013ad81f480317c9543d141a94ef43413f031cf4a8ccbb09973019654"
+  },
+  "next_experiment": "Independently check the second selected parity branch through its exact balanced-lift matrix and affine phase equations over GF(3); if an obstruction survives review, derive a broader sound phase-screening rule. This later work belongs to the nineteenth cohort.",
+  "execution": {
+    "observed_at": "2026-09-30T04:37:39.440449+00:00",
+    "command": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu-24.04",
+      "--",
+      "ps",
+      "-C",
+      "cadical",
+      "-o",
+      "pid,etime,pcpu,rss,args"
+    ],
+    "exit_code": 1,
+    "state": "NO_CADICAL_PROCESS_OBSERVED",
+    "stdout_sha256": "52e94ae4c71741e9e6f749bfbb0f2f1a20db92a5d22ac2c8d4fe85dd54cc250d",
+    "stderr_sha256": "b9295050338450e1f2fe7f4bd4411764002b46d9dfe5fea0bc86c964e426bc8c",
+    "scope": "Both eighteenth native attempts and the MIP call completed; later selected-lift work is outside this checkpoint. No live claim about other processes."
+  }
+}

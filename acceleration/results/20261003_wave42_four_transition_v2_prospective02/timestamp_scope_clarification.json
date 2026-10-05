@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-03T05:33:19.9461742+00:00",
+  "source": "acceleration/audit_20261003_wave42_four_transition_v2.py",
+  "source_sha256": "8af5b2a20cdca934261d8375af9265a10480cc5b7dd39020a63a7746c3a56b90",
+  "spec_sha256": "28a54365f392c7150f82e6f7db63b3d3449b206418e454cb0e410ebac1ec1ba7",
+  "reviewer": "/root/checkpoint_audit",
+  "method": "independent_whole_source_written_review",
+  "actual_ignored_field_positions": 9,
+  "affected_metadata_records": 5,
+  "exact_fields": [
+    "ledger.updated_at",
+    "new_claim1.created_at",
+    "new_claim1.updated_at",
+    "new_claim2.created_at",
+    "new_claim2.updated_at",
+    "new_claim3.created_at",
+    "new_claim3.updated_at",
+    "new_claim4.created_at",
+    "new_claim4.updated_at"
+  ],
+  "condition": "All nine positions must equal actualregistration summary.timestamp as timezone-aware string; every other field typed-comparison remains exact",
+  "editorial_error": "Preserved source/spec refer to five timestamp locations/values; this conflated five affected records with nine field positions",
+  "code_changed": false,
+  "checker_or_main_executed": false,
+  "target_resolution": "NONE",
+  "interpretation": "Source algorithm already implements all nine explicit positions; this new record corrects scope wording without altering historical bytes or acceptance algorithm"
+}

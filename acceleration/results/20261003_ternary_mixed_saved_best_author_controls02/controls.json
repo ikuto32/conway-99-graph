@@ -1,0 +1,323 @@
+{
+  "positive": [
+    {
+      "case": "rook9",
+      "binary_matrix_entries": 81,
+      "unordered_pair_dot_products": 36,
+      "metrics": {
+        "F3": 0,
+        "E_lambda": 0,
+        "E_mu": 0,
+        "E": 0,
+        "scalar_weight": 577,
+        "scalar": 0,
+        "residue_population": [
+          36,
+          0,
+          0
+        ]
+      },
+      "exact_best_order": true,
+      "exact_wire": true,
+      "opaque_seed_step_rng_excluded": true,
+      "full_native_state_fixture": false
+    },
+    {
+      "case": "cube12",
+      "binary_matrix_entries": 144,
+      "unordered_pair_dot_products": 66,
+      "metrics": {
+        "F3": 30,
+        "E_lambda": 0,
+        "E_mu": 48,
+        "E": 48,
+        "scalar_weight": 1057,
+        "scalar": 31758,
+        "residue_population": [
+          36,
+          6,
+          24
+        ]
+      },
+      "exact_best_order": true,
+      "exact_wire": true,
+      "opaque_seed_step_rng_excluded": true,
+      "full_native_state_fixture": false
+    },
+    {
+      "case": "cyclic99_initializer",
+      "binary_matrix_entries": 9801,
+      "unordered_pair_dot_products": 4851,
+      "metrics": {
+        "F3": 2871,
+        "E_lambda": 6930,
+        "E_mu": 12870,
+        "E": 19800,
+        "scalar_weight": 819820,
+        "scalar": 2353723020,
+        "residue_population": [
+          1980,
+          2475,
+          396
+        ]
+      },
+      "exact_best_order": true,
+      "exact_wire": true,
+      "opaque_seed_step_rng_excluded": true,
+      "full_native_state_fixture": false
+    }
+  ],
+  "synthetic_report_relation_positive": true,
+  "budget_predicate_positive": [
+    {
+      "case": "budget_above_reserve",
+      "snapshot": {
+        "remaining_seconds": 20.000001,
+        "stop_required": false
+      },
+      "status_reads": 1,
+      "accepted": true
+    },
+    {
+      "case": "budget_full_worker",
+      "snapshot": {
+        "remaining_seconds": 100.0,
+        "stop_required": false
+      },
+      "status_reads": 1,
+      "accepted": true
+    }
+  ],
+  "strict_negative": [
+    {
+      "case": "nonbytes",
+      "expected_stage": "STATE_BYTES",
+      "actual_stage": "STATE_BYTES"
+    },
+    {
+      "case": "oversize",
+      "expected_stage": "STATE_BYTES",
+      "actual_stage": "STATE_BYTES"
+    },
+    {
+      "case": "nonascii",
+      "expected_stage": "STATE_ASCII",
+      "actual_stage": "STATE_ASCII"
+    },
+    {
+      "case": "crlf",
+      "expected_stage": "STATE_NEWLINE",
+      "actual_stage": "STATE_NEWLINE"
+    },
+    {
+      "case": "no_newline",
+      "expected_stage": "STATE_NEWLINE",
+      "actual_stage": "STATE_NEWLINE"
+    },
+    {
+      "case": "wrong_header",
+      "expected_stage": "STATE_HEADER",
+      "actual_stage": "STATE_HEADER"
+    },
+    {
+      "case": "wrong_end",
+      "expected_stage": "STATE_HEADER",
+      "actual_stage": "STATE_HEADER"
+    },
+    {
+      "case": "duplicate_n",
+      "expected_stage": "BEST_FIELD_UNIQUE:n",
+      "actual_stage": "BEST_FIELD_UNIQUE:n"
+    },
+    {
+      "case": "duplicate_degree",
+      "expected_stage": "BEST_FIELD_UNIQUE:degree",
+      "actual_stage": "BEST_FIELD_UNIQUE:degree"
+    },
+    {
+      "case": "duplicate_best",
+      "expected_stage": "BEST_FIELD_UNIQUE:best",
+      "actual_stage": "BEST_FIELD_UNIQUE:best"
+    },
+    {
+      "case": "duplicate_best_metrics",
+      "expected_stage": "BEST_FIELD_UNIQUE:best_metrics",
+      "actual_stage": "BEST_FIELD_UNIQUE:best_metrics"
+    },
+    {
+      "case": "bool_n",
+      "expected_stage": "BEST_DOMAIN_INTEGER",
+      "actual_stage": "BEST_DOMAIN_INTEGER"
+    },
+    {
+      "case": "float_degree",
+      "expected_stage": "BEST_DOMAIN_INTEGER",
+      "actual_stage": "BEST_DOMAIN_INTEGER"
+    },
+    {
+      "case": "bad_domain",
+      "expected_stage": "BEST_DOMAIN",
+      "actual_stage": "BEST_DOMAIN"
+    },
+    {
+      "case": "float_count",
+      "expected_stage": "BEST_COUNT_INTEGER",
+      "actual_stage": "BEST_COUNT_INTEGER"
+    },
+    {
+      "case": "wrong_count",
+      "expected_stage": "BEST_COUNT",
+      "actual_stage": "BEST_COUNT"
+    },
+    {
+      "case": "bool_row",
+      "expected_stage": "BEST_ROW_INTEGER",
+      "actual_stage": "BEST_ROW_INTEGER"
+    },
+    {
+      "case": "float_row",
+      "expected_stage": "BEST_ROW_INTEGER",
+      "actual_stage": "BEST_ROW_INTEGER"
+    },
+    {
+      "case": "repeated_point",
+      "expected_stage": "TRIPLE_DISTINCT",
+      "actual_stage": "TRIPLE_DISTINCT"
+    },
+    {
+      "case": "negative_row",
+      "expected_stage": "BEST_ROW_INTEGER",
+      "actual_stage": "BEST_ROW_INTEGER"
+    },
+    {
+      "case": "bad_metric",
+      "expected_stage": "BEST_METRICS",
+      "actual_stage": "BEST_METRICS"
+    },
+    {
+      "case": "float_metric",
+      "expected_stage": "BEST_METRIC_INTEGER",
+      "actual_stage": "BEST_METRIC_INTEGER"
+    },
+    {
+      "case": "report_status",
+      "expected_stage": "SAVED_HEADER",
+      "actual_stage": "SAVED_HEADER"
+    },
+    {
+      "case": "report_producer",
+      "expected_stage": "SAVED_HEADER",
+      "actual_stage": "SAVED_HEADER"
+    },
+    {
+      "case": "report_verifier",
+      "expected_stage": "SAVED_HEADER",
+      "actual_stage": "SAVED_HEADER"
+    },
+    {
+      "case": "report_method",
+      "expected_stage": "SAVED_HEADER",
+      "actual_stage": "SAVED_HEADER"
+    },
+    {
+      "case": "report_target_resolution",
+      "expected_stage": "SAVED_HEADER",
+      "actual_stage": "SAVED_HEADER"
+    },
+    {
+      "case": "report_checker_implementation_version",
+      "expected_stage": "SAVED_IMPLEMENTATION",
+      "actual_stage": "SAVED_IMPLEMENTATION"
+    },
+    {
+      "case": "report_source_sha256",
+      "expected_stage": "SAVED_IMPLEMENTATION",
+      "actual_stage": "SAVED_IMPLEMENTATION"
+    },
+    {
+      "case": "report_spec_sha256",
+      "expected_stage": "SAVED_IMPLEMENTATION",
+      "actual_stage": "SAVED_IMPLEMENTATION"
+    },
+    {
+      "case": "report_inputs_sha256",
+      "expected_stage": "SAVED_INPUTS",
+      "actual_stage": "SAVED_INPUTS"
+    },
+    {
+      "case": "closure_31",
+      "expected_stage": "SAVED_BEST_IDENTITIES",
+      "actual_stage": "SAVED_BEST_IDENTITIES"
+    },
+    {
+      "case": "closure_32",
+      "expected_stage": "SAVED_BEST_IDENTITIES",
+      "actual_stage": "SAVED_BEST_IDENTITIES"
+    },
+    {
+      "case": "closure_33",
+      "expected_stage": "SAVED_ANCESTRY",
+      "actual_stage": "SAVED_ANCESTRY"
+    },
+    {
+      "case": "closure_34",
+      "expected_stage": "SAVED_ANCESTRY",
+      "actual_stage": "SAVED_ANCESTRY"
+    },
+    {
+      "case": "closure_35",
+      "expected_stage": "SAVED_ANCESTRY",
+      "actual_stage": "SAVED_ANCESTRY"
+    },
+    {
+      "case": "closure_36",
+      "expected_stage": "SAVED_ANCESTRY",
+      "actual_stage": "SAVED_ANCESTRY"
+    },
+    {
+      "case": "scope_best",
+      "expected_stage": "SAVED_BEST_METRICS",
+      "actual_stage": "SAVED_BEST_METRICS"
+    },
+    {
+      "case": "scope_saved_state_files",
+      "expected_stage": "SAVED_COMPLETE_SCOPE:saved_state_files",
+      "actual_stage": "SAVED_COMPLETE_SCOPE:saved_state_files"
+    },
+    {
+      "case": "scope_complete_current_best_matrix_observations",
+      "expected_stage": "SAVED_COMPLETE_SCOPE:complete_current_best_matrix_observations",
+      "actual_stage": "SAVED_COMPLETE_SCOPE:complete_current_best_matrix_observations"
+    },
+    {
+      "case": "scope_complete_scalar_matrix_products",
+      "expected_stage": "SAVED_COMPLETE_SCOPE:complete_scalar_matrix_products",
+      "actual_stage": "SAVED_COMPLETE_SCOPE:complete_scalar_matrix_products"
+    },
+    {
+      "case": "scope_authenticated_native_reported_proposals",
+      "expected_stage": "SAVED_COMPLETE_SCOPE:proposals",
+      "actual_stage": "SAVED_COMPLETE_SCOPE:proposals"
+    },
+    {
+      "case": "budget_at_reserve",
+      "expected_stage": "SAVE_RESERVE",
+      "actual_stage": "SAVE_RESERVE"
+    },
+    {
+      "case": "budget_below_reserve",
+      "expected_stage": "SAVE_RESERVE",
+      "actual_stage": "SAVE_RESERVE"
+    },
+    {
+      "case": "budget_expired",
+      "expected_stage": "SAVE_RESERVE",
+      "actual_stage": "SAVE_RESERVE"
+    },
+    {
+      "case": "budget_stop_required",
+      "expected_stage": "SAVE_RESERVE",
+      "actual_stage": "SAVE_RESERVE"
+    }
+  ]
+}

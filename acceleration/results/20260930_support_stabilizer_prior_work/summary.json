@@ -1,0 +1,50 @@
+{
+  "status": "PRIOR_VERIFIED_STABILIZER_CENSUS_APPLIES_NO_NEW_CENSUS",
+  "created_at": "2026-09-30T12:52:49.665069+00:00",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_input_relabeling/summary.json": "9f188fd497b622b8e87611c220ddf931365089905cbd7b9f1fdbf9deb8ad4dd5",
+    "acceleration/results/20260930_independent_review/hadamard_input_relabeling/claim_binding.json": "17d5e786c40ccc3b654ad7ffc197388bd2ad8e279dd59d8524ebf72c1f557647",
+    "acceleration/audit_20260930_hadamard_input_relabeling.py": "01cb2425dbec6ad8f7f5724a8c16f2f4f6f9512ca804b4ecbeb766f9ed33222e",
+    "docs/AUDIT_20260930_HADAMARD_INPUT_RELABELING.md": "1984de12867bdadd49a7ed84510e0fae37e4be6b46b75cb4f8a6b798332f3866",
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_independent_review/hadamard_input_relabeling/accepted_coordinate_maps.json": "b56bf1a847607c265f68025885823cbf24bb71f2386a09c374bcf4b09adb80ac",
+    "acceleration/record_20260930_support_stabilizer_prior_work.py": "cbeb9ad9577a913b1f33dc9dfe4719c7f19f2f67d7f1a0358fea753b0cb05017"
+  },
+  "existing_claim_id": "C-FIXED-HADAMARD-MATCHING-COORDINATE-RELABELING-CENSUS",
+  "existing_claim_revision": 1,
+  "existing_verifier": "/root/eight_domain_audit",
+  "new_census_calls": 0,
+  "new_native_calls": 0,
+  "new_claims": 0,
+  "prior_search_limitation": {
+    "reported_by": "/root",
+    "scope": "Prior Hadamard source and milestone-document search omitted the input_relabeling names. The exact earlier query was not supplied to this recorder.",
+    "reason_preserved": "The initial no-prior-census impression was a search-coverage error, not a new result."
+  },
+  "successful_lookup": {
+    "command": [
+      "rg",
+      "-n",
+      "--max-count",
+      "3",
+      "--max-columns",
+      "180",
+      "support.*stabiliz|stabiliz.*support|Hadamard.*automorph|hadamard.*relabel",
+      "acceleration",
+      "docs",
+      "-g",
+      "*.py",
+      "-g",
+      "*.md",
+      "-g",
+      "!**/results/**"
+    ],
+    "found": "docs/AUDIT_20260930_HADAMARD_INPUT_RELABELING.md and its independent checker/report"
+  },
+  "applicability": "The old census enumerates exactly the requested 6! times 2^6 matching-preserving coordinate actions on the identical raw20-support multiset, each support repeated3. Only identity survives. Its coordinate action therefore fixes every one of the new792 count classes and adds no reduction.",
+  "limitations": [
+    "Old18 total/16 surviving orbit counts concern the older108-profile population only and are not transferred as counts for the new population.",
+    "No new census, new normalization claim, arbitrary36-row automorphism census or target automorphism assumption.",
+    "No campaign selection changes; this note is outside frozen wave26."
+  ]
+}

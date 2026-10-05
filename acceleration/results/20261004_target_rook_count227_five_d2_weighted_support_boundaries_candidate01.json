@@ -1,0 +1,236 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T20:06:13Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced nine-vertex rook subsets once by vertex sets and let d_T=6-r_T. Suppose R=227, every d_T is0,1 or2, and exactly five triangles have deficiency2. There are fourteen deficiency1 triangles. Let S be their support, k their fourfold-incidence point count, h the number of outside-S points on deficiency2 triangles, w half the deficiency1 point incidence and E_w the actual weighted edge sum. Selected multiplicities are2 or4. Exactly one necessary case occurs: k0/h1 with |S|21,e(S)51 or52 and its outside point S-degree6..8 or6..7 respectively; k0/h2 with |S|21,e(S)46..53 and shared-one-root triple fans; or k1/h2 with |S|20,shared-one-root triple fans,w2 at its unique fourfold point and E_w54,55 or56. In the last case, if the fourfold point is the joining root's only S point, E_w54 or55. No surviving case is asserted realizable and this does not exclude b5 or R227.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced nine-vertex rook subsets once by their vertex sets",
+    "d_T=6-r_T belongs to {0,1,2} for every actual triangle",
+    "exactly five actual triangles have deficiency2"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary weighted-support and ordinary edge/neighbor ranges for the five-d2 R227 population. Retains the k1/h2 fourfold branch and both outside-concurrence patterns; no equitability, support-inducedness or realization premise.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "five_D2_population_excluded": false,
+    "survivor_realizability_claimed": false
+  },
+  "dependencies": [],
+  "dependency_reason": "D24, local parity and both fan injections, exact five-triangle concurrence, weighted edge/Gram identity and integer residue/degree refinements are reconstructed from the complete target and explicit hypotheses. Earlier descendants are comparison evidence only.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md",
+    "sha256": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SEVEN_D2_BOUNDARY_V1.md": "fdac5f82b885cb956f7b12b649edc7f5466c12fa055aeb6d02082862dea23f3b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_SIX_D2_BOUNDARY_V2.md": "8355242189237d78409b9c84b1dc402267f5314135158d1ce3a8148a370def8a",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "comparison_claims_not_inherited": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2",
+      "revision": 1
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SEVEN-D2-BOUNDARY",
+      "revision": 1
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-SIX-D2-BOUNDARY",
+      "revision": 1
+    }
+  ],
+  "exact_definitions": {
+    "R": 227,
+    "D": 24,
+    "a_d1": 14,
+    "b_d2": 5,
+    "P": 19,
+    "k": "#points with selected incidence4",
+    "h": "#outside-S points on D2 triangles",
+    "S": "support of selected D1 family",
+    "w": "half selected point incidence, in0/1/2",
+    "E_w": "sum_{u<v,A_uv=1} w_u*w_v",
+    "selected_multiplicities": [
+      2,
+      4
+    ],
+    "S_size": "21-k",
+    "w_sum": 21,
+    "w_squared_norm": "21+2k",
+    "selected_edges": 42,
+    "selected_weighted_edge_sum": "42+8k+l, l=#selected edges between fourfoldpoints",
+    "outside_D2_point_multiplicity": 3
+  },
+  "outside_point_table": [
+    {
+      "h": 0,
+      "t": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "D2_inside_edges": 15
+    },
+    {
+      "h": 1,
+      "t": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "D2_inside_edges": 9
+    },
+    {
+      "h": 2,
+      "t": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "D2_inside_edges": 4
+    }
+  ],
+  "Gram_bounds": {
+    "Q": "3I-A+J/9",
+    "Q_squared": "7Q",
+    "q": "w^T Qw=112+6k-2E_w",
+    "q_upper": "28-10k-2l-2H",
+    "q_strictly_positive": "Qw cannot vanish because every coordinate has fractional term7/3 plus integer",
+    "Y": "3Qw=9w-3Aw+7j",
+    "Y_integer": true,
+    "Y_entry_residue": "1mod3",
+    "Y_sum": 0,
+    "Y_norm": "63q",
+    "residue_identity": "y²+y-2=9z(z+1)>=0 for y1+3z",
+    "residue_norm_floor": 198,
+    "excess_at_minus8": 54,
+    "excess_at_minus11": 108
+  },
+  "necessary_cases": [
+    {
+      "k": 0,
+      "h": 1,
+      "S_size": 21,
+      "eS": [
+        51,
+        52
+      ],
+      "outside_point_S_degree_when_e51": [
+        6,
+        7,
+        8
+      ],
+      "outside_point_S_degree_when_e52": [
+        6,
+        7
+      ],
+      "two_D2_roots_wholly_S": true
+    },
+    {
+      "k": 0,
+      "h": 2,
+      "S_size": 21,
+      "eS_min": 46,
+      "eS_max": 53,
+      "shared_D2_root_count": 1,
+      "all_five_D2_roots_used": true
+    },
+    {
+      "k": 1,
+      "h": 2,
+      "S_size": 20,
+      "E_w": [
+        54,
+        55,
+        56
+      ],
+      "shared_D2_root_count": 1,
+      "fourfold_shared_root_S_point_E_w": [
+        54,
+        55
+      ]
+    }
+  ],
+  "correct_k0_h1_refinement": {
+    "eS": "51+z",
+    "outside_point_degree": "6+a",
+    "sum_internal_increment": "18+2z",
+    "whole_S_D2_forced_increment_excess": "sum k_v(k_v-1)>=12",
+    "inside_Y_norm_lower": "174-30z",
+    "inside_Y_sum": "30-6z",
+    "outside_entries_other_than_p": 77,
+    "Y_p": "-11-3a",
+    "total_Y_norm_lower": "468-36z+63a+9a²",
+    "actual_Y_norm": "630-126z",
+    "necessary_scalar": "162-90z-63a-9a²>=0",
+    "allowed_z": [
+      0,
+      1
+    ],
+    "allowed_a_at_z0_max": 2,
+    "allowed_a_at_z1_max": 1
+  },
+  "proof_route": [
+    "Local degree parity and selected14 fan force multiplicities2/4; D24 fixes a14/P19.",
+    "Five D2 triangles have h<=2 outside-S triple points; h2 necessarily shares exactly one root.",
+    "Weighted selected edge42+8k+l plus D2 edgesH gives strict q<=28-10k-2l-2H.",
+    "Only k0/h1,k0/h2,k1/h2 have positive possible q; the last branch is retained.",
+    "Correct Y3Qw has integral residue1mod3 and norm63q, with universal floor198 plus outside-entry excess.",
+    "At h2, outside five-neighbor bounds give norm>=306 and the stated unweighted/weighted edge ranges.",
+    "If the fourfold point is the shared root's S vertex, both outside weighted degrees>=6 improve norm>=414.",
+    "At k0/h1 the two wholly-S D2 triangles and77 outside residue inequalities force e51/52 and outside-degree ranges."
+  ],
+  "hand_boundaries": [
+    "The h2 fan has five, not six, guaranteed S neighbors; each root set shares one root.",
+    "The surviving k1/h2 branch has w2 at one point and cannot be replaced with the k0 support.",
+    "The scalar sum0/norm198 vector66 ones33 minus-twos shows the residue floor sharp as a scalar condition.",
+    "The z0/a2 and z1/a1 scalar boundaries are retained and not asserted unrealizable.",
+    "Additional actual edges and weighted incidences are included in E_w and degree increments.",
+    "No ordinary or weighted equality case is treated as a graph construction."
+  ],
+  "failed_outline_preserved": {
+    "path": "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json",
+    "sha256": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "wrong_formula": "norm(9Qchi)^2=7(27n+n²-18e)",
+    "correct_formula": "63(27n+n²-18e)",
+    "rejected_fourfold_exclusion_used": false
+  },
+  "shared_origin": {
+    "Root_weighted_support_derivation": true,
+    "Structural_exact_concurrence_and_integer_refinements": true,
+    "Structural_factor9_outline_error_disclosed": true,
+    "new_candidate_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "This supplies necessary conditions only; no b5 or R227 exclusion.",
+    "All hypotheses and definitions must be preserved in any metadata projection.",
+    "Previous R227 candidates/gates cannot approve these new weighted bytes.",
+    "No scientific execution, registry action or publication cutoff change is requested."
+  ]
+}

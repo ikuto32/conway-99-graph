@@ -1,0 +1,107 @@
+{
+  "status": "INDEPENDENT_EIGHT_COORDINATE_MATCHING_FILTER_CLAIM_BINDING_PASS",
+  "claim_id": "C-PARTIAL-K-EIGHT-COORDINATE-NEIGHBORHOOD-MATCHING-FILTER",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "verifier": "Codex subagent /root/state_literature_audit",
+  "timestamp": "2026-09-29T19:36:57.297804+00:00",
+  "statement": "For every one of the 2290122 independently audited eight-coordinate local center stars, the saved surviving IDs are exactly those whose individually cap-permitted residual neighborhood graph has a perfect matching. Exactly 414908 stars fail this necessary condition and 1875214 survive, with no empty center domain; every target extension of the declared fixed family must use surviving stars.",
+  "scope": "Exact frozen 120-fixed-overlap-edge family with same-fibre and other-coordinate prescribed absences, 2160 unknown edges and 2290122 original choices. Original center/domain IDs retained.",
+  "dependencies": [
+    {
+      "id": "C-PARTIAL-K-EIGHT-COORDINATE-DOMAINS",
+      "revision": 1,
+      "relation": "coverage"
+    }
+  ],
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_eight_matching_filter_binding.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/eight_matching_filter_claim_binding.json"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/eight_coordinate_matching_filter/summary.json": "4fcd5fd7f02cd5362bda1f8f0a1c8e4669ce036bde56a04dcd1b6a3391b262f4",
+    "acceleration/results/20260930_independent_review/eight_domains_claim_binding.json": "170871c99ed16a160bf1403e4f6443275ca00c3a6ce68775fb56ba5f02783302",
+    "acceleration/results/20260930_independent_review/eight_filter_protocol.md": "df737864a89729a2552073b74da9a72e92e97a7858162f1a5d600210e36b65d1",
+    "acceleration/results/20260930_independent_review/eight_coordinate_matching_filter/DERIVATION.md": "9d6a2166ca1f84c9c3ee7be81b7b4009e2157920562a16f5f3ad695e339f855f",
+    "acceleration/audit_20260930_eight_coordinate_matching_filter.py": "6a8d0d7e7934e3037ec2f022dacbb7f037de9c8f56b8a8c8c106a7fb6738ba61",
+    "acceleration/results/20260930_eight_matching_filter/run01/manifest.json": "d06f4330795b3a06c2958aad05a8737e49424e198f329be72e142f324b9103bd",
+    "acceleration/results/20260930_eight_matching_filter/run01/summary.json": "7dd9531d66181123ef8ba91bee1e9397338b183cda4a7c34eec33f4728d9cb40",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/audit_20260930_eight_matching_filter_binding.py": "3e33a67f178be51859b6fdfdb0a68df91b1ad5a402cb3a081dc0b14dded1ccd1"
+  },
+  "checking_method": "Full99 row mutation checks all affected common-neighbor cap pairs for each prospective edge; positive matching witnesses checked directly; every rejection checked by edge-processing reachable-subset DP, distinct from producer vertex recurrence. Base-star cap validity and domain completeness reused from pinned independent full-domain audit.",
+  "counts": {
+    "original_count": 2290122,
+    "rejected_count": 414908,
+    "surviving_count": 1875214,
+    "prospective_edges_checked": 34407638,
+    "negative_DP_states_visited": 14776539
+  },
+  "centers": 84,
+  "empty_domains": 0,
+  "controls": {
+    "edge_DP_fixtures": 5,
+    "prior_independent_graph_mutation_and_exhaustive_controls": [
+      {
+        "name": "K4",
+        "expected": 3,
+        "observed": 3,
+        "edge_subsets_checked": 15
+      },
+      {
+        "name": "K6",
+        "expected": 15,
+        "observed": 15,
+        "edge_subsets_checked": 455
+      },
+      {
+        "name": "seven_prescribed_pairs",
+        "expected": 1,
+        "observed": 1,
+        "edge_subsets_checked": 1
+      },
+      {
+        "name": "deleted_prescribed_pair",
+        "expected": 0,
+        "observed": 0,
+        "edge_subsets_checked": 0
+      },
+      {
+        "name": "empty_perfect_matching",
+        "expected": 1,
+        "observed": 1,
+        "edge_subsets_checked": 1
+      },
+      {
+        "name": "windmill_addition_and_corrupt_second_edge",
+        "observed": "PASS"
+      }
+    ],
+    "gzip_positive_and_corrupt_crc": "PASS"
+  },
+  "verification_type": "independent_artifact_check plus independently reviewed written necessity derivation",
+  "shared_components": [
+    "Python standard library",
+    "tqdm progress",
+    "prior independent six-coordinate checker adapted; artifact helpers and graph-mutation checker",
+    "pinned independently complete domain audit",
+    "independent streaming zlib recovery helper"
+  ],
+  "limitations": [
+    "Only the exact rejected/surviving local-star partition is checked; an empty-domain exclusion would require separately checking the declared family dependencies, and no unrestricted exclusion is claimed.",
+    "Positive witnesses establish only a matching in individually permissible edges, not simultaneous cap feasibility or a graph completion.",
+    "Positive matching multiplicities are not independently recounted; only existence and the exact rejected/surviving partition are claimed."
+  ],
+  "numeric_acceptance_threshold": null,
+  "numeric_acceptance_threshold_reason": "All checks are exact integer or finite combinatorial checks.",
+  "random_seed": null,
+  "random_seed_reason": "Deterministic checking with no randomized step.",
+  "target_resolution": false,
+  "external_review": null,
+  "external_review_reason": "Internal independent audit; no external review claimed."
+}

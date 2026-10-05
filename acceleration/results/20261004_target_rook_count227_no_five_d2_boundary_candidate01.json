@@ -1,0 +1,89 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T20:39:23Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FIVE-D2-BOUNDARY",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not five.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}"
+  ],
+  "scope": {
+    "description": "Universal conditional exclusion of exactly five deficiency-two triangles at R227 under explicit maximum deficiency2, composed from four exact r1 result statements.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "four_D2_population_excluded": false,
+    "maximum_deficiency2_inferred": false
+  },
+  "dependencies": [
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES", "revision": 1, "relation": "uses_result"},
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT", "revision": 1, "relation": "uses_result"},
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS", "revision": 1, "relation": "uses_result"},
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS", "revision": 1, "relation": "uses_result"}
+  ],
+  "dependency_reason": "The first exact statement supplies exhaustive k0/h1, k0/h2 or k1/h2 necessary coverage; the other three statements exclude precisely their matching literal branches. No other result or scope projection is used.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FIVE_D2_BOUNDARY_V1.md",
+    "sha256": "cd17ee00d44895a57797dd09e21962bfede98322053009b4e69060dcf156b25d"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FIVE_D2_BOUNDARY_V1.md": "cd17ee00d44895a57797dd09e21962bfede98322053009b4e69060dcf156b25d",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "acceleration/results/20261004_target_rook_count227_five_d2_weighted_support_boundaries_candidate01.json": "eacf26e07eb2d0a77dc3f4c7b69f37ad277aaf0a1140f001df5930248bfe6e0b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_SINGLE_OUTSIDE_POINT_V1.md": "2127b52a44b3f667131c357a41972e631d7c3242d22bfe59e9af46dc65932492",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_point_candidate01.json": "6b152c9bb6138078fa1324690ca64251c9deec23d6c8a4e8cbcaffd87c344819",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_FOURFOLD_SUPPORT_V1.md": "3d711b5cda4b0b657aed1fcbf21214cfe5c44fef8ae95ae837c34ff731053bfc",
+    "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_support_candidate01.json": "62b71f4a7d088cd68d138b54db320741294173647855a1adcecef3f0b6af3d4b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_ORDINARY_TWO_OUTSIDE_POINTS_V1.md": "be3621b85bd10a5d6ca9b3b961a0b1a7bdadfa5cbece6af6f6edc96d81afe0a6",
+    "acceleration/results/20261004_target_rook_count227_five_d2_ordinary_two_outside_points_candidate01.json": "031ff160a35f2b0d06d14fd81cb24e2b0c7f0cd594042817446c5cdeae967805",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/claim_binding_schema2_02.json": "c4fdfea30a3b70439afa682dbc4b813144b93b2abfe655e270da6528bfeaddaa",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/claim_binding_schema2.json": "8ad081ff7d9edb8228a88d385daec2b6a4d53215c7ff7b980646dbcddfa19bc5",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/claim_binding_schema2.json": "435ba1f1b167370f08dca364db6df29e369de21cbbbdbd97ba226fbed2bf6ef2",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "fourth_dependency_verification_at_preparation": {
+    "candidate_paper_and_raw_are_frozen": true,
+    "Native_whole_challenge_report_received": false,
+    "Native_binding": null,
+    "Root_acceptance": null,
+    "future_gate_fabricated": false
+  },
+  "complete_case_table": [
+    {"k": 0, "h": 1, "selected_incidence": "all2", "matching_exclusion": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT", "revision": 1},
+    {"k": 0, "h": 2, "selected_incidence": "all2", "matching_exclusion": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS", "revision": 1},
+    {"k": 1, "h": 2, "selected_incidence": "one4 and allothers2", "matching_exclusion": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS", "revision": 1}
+  ],
+  "exact_implication": [
+    "Suppose b5 under the target and explicit maxd2; D24 fixes a14/P19.",
+    "The weighted necessary r1 statement supplies exactly one of k0/h1,k0/h2,k1/h2, with literal selected multiplicities.",
+    "Each case meets exactly the hypotheses of its corresponding branch exclusion r1.",
+    "All three necessary branches are impossible, so b5 is impossible."
+  ],
+  "shared_origin": {
+    "Structural_author_of_dependency_papers": true,
+    "Root_pointwise_and_leaf_outline_discovery_disclosed": true,
+    "distinct_composition_verification_required": true,
+    "existing_branch_verification_is_new_composition_verification": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "The four named r1 result scopes and applicable verification identities must be retained for promotion.",
+    "This is a new CANDIDATE composition, not an automatic status promotion from older reports.",
+    "No R227, b4, target, construction or scientific coverage conclusion is asserted.",
+    "No scientific invocation, registry action or frozen publication selection change occurred."
+  ]
+}

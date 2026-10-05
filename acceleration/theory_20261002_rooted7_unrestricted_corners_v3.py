@@ -1,0 +1,94 @@
+"""Global domain, positive-prism slice and eight frozen unrestricted corners.
+
+Uses the pinned V1 producer's exact scalar checks/numerical mechanics. Separate
+artifact checking is required; numerical statuses alone approve no claim.
+"""
+import argparse
+from datetime import datetime,timezone
+import json
+import math
+from pathlib import Path
+import platform
+import subprocess
+import sys
+import time
+from tqdm import tqdm
+from command_deadline import CommandDeadline
+import theory_20261002_rooted7_unrestricted_corners_v1 as B
+
+ROOT=B.ROOT
+SPEC=ROOT/'docs/PROTOCOL_20261002_UNRESTRICTED_ROOTED7_CORNERS_V3.md'
+SHARED_SHA=None  # Frozen closure is recorded before invocation; no historical gate.
+
+
+def extended(rows,columns,positive_prism):
+    result=[]
+    for row in rows:
+        terms=[list(term)for term in row['terms']]
+        terms +=[[columns+j,-row['rhs_affine'][j+1]]for j in range(3)if row['rhs_affine'][j+1]]
+        result.append(dict(terms=sorted(terms),rhs_affine=[row['rhs_affine'][0],0,0,0]))
+    # Nonnegative c,a,b and upper slack variables exactly encode all six facets.
+    result.extend([dict(terms=[[columns,1],[columns+3,1]],rhs_affine=[2,0,0,0]),dict(terms=[[columns+1,1],[columns+4,1]],rhs_affine=[20,0,0,0]),dict(terms=[[columns,-1],[columns+2,2],[columns+5,1]],rhs_affine=[18,0,0,0])])
+    if positive_prism:result.append(dict(terms=[[columns,1],[columns+6,-1]],rhs_affine=[1,0,0,0]))
+    return result,columns+6+int(positive_prism)
+
+
+def case_label(name,point):
+    return dict(case=name,parameters=None if name in['global_domain','c_ge_1_slice']else list(point))
+
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--seconds',type=float,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--controls-only',action='store_true');args=ap.parse_args()
+    deadline=CommandDeadline(args.seconds,allocation_reason='Ten sparse guides/global facets plus651 exact interpolation checks; old4corner guides .53s+210checks24.2s;450outer400worker60internalreserve')
+    start=time.monotonic();out=args.out.resolve();out.mkdir(parents=True,exist_ok=False)
+    try:
+        B.need(B.sha(B.MODEL)==B.MODEL_SHA and B.sha(B.AUDIT)==B.AUDIT_SHA,'frozen literal operator and independent semantics audit')
+        pins={p.relative_to(ROOT).as_posix():B.sha(p)for p in[B.MODEL,B.AUDIT,SPEC,Path(__file__),Path(B.__file__),ROOT/'docs/PROTOCOL_20261002_UNRESTRICTED_ROOTED7_CORNERS_V1.md',ROOT/'uv.lock',ROOT/'pyproject.toml',ROOT/'acceleration/command_deadline.py',ROOT/'acceleration/run_compute_command.py']}
+        B.save(out/'manifest.json',dict(timestamp=datetime.now(timezone.utc).isoformat(),source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),command=[sys.executable,*sys.argv],cwd=str(ROOT),inputs_sha256=pins,python_version=platform.python_version(),highs_version=B.highspy.Highs().version(),numpy_version=B.np.__version__,case_population=['global_domain','c_ge_1_slice',*['corner_'+str(j)for j in range(8)]],selected_corners=B.CORNERS,selected_integer_parameter_profiles=B.POPULATION,settings=dict(solver='simplex',presolve='off',threads=1,seed=0,feasibility_tolerance=1e-10,native_case_limit=25,rational_max_individual_denominators=B.GRIDS),success='Complete literal primal nonnegativity/rows or Farkas nonnegative columns/strict RHS. Separate independent artifact verification required.',scope='Unrestricted necessary continuous count model; rational primals do not certify graph or integer realization. Exact global Farkas requires independently verified domain extension; slice Farkas could imply prism absence only with independent root/prism coverage derivation.',shared_producer=B.__file__,shared_code_approval_transferred=False,source_v1_ever_executed=False,automatic_retry=False,restart='Completed numeric vectors and bases saved; no automatic extension.'))
+        B.controls(out)
+        tiny=[dict(terms=[[0,2]],rhs_affine=[1,0,0,0])];erows,n=extended(tiny,1,False)
+        B.need(n==7 and B.primal(erows,[1,0,0,0,4,40,36],2,[0,0,0]),'exact domain-extension tiny positive')
+        bad=[1,0,0,0,4,40,35];B.need(not B.primal(erows,bad,2,[0,0,0]),'exact upper facet corruption')
+        slice_rows,n=extended(tiny,1,True);B.need(n==8 and B.primal(slice_rows,[1,2,0,0,2,40,38,0],2,[0,0,0]),'exact c_ge_1 slice tiny positive')
+        B.need(not B.primal(slice_rows,[1,0,0,0,4,40,36,0],2,[0,0,0]),'c_ge_1 slice rejects c0')
+        B.save(out/'domain_extension_controls.json',dict(global_and_slice_exact_positive=True,upper_facet_and_slice_corruption_rejected=True,producer_calibration_only=True))
+        if args.controls_only:B.save(out/'summary.json',dict(status='UNRESTRICTED_ROOTED7_TEN_CASE_DRIVER_CALIBRATION_PASS',elapsed_seconds=time.monotonic()-start,producer_calibration_only=True));return
+        model=json.loads(B.MODEL.read_bytes());rows=model['equations'];columns=len(model['variables']);B.need(columns==2810 and len(rows)==11769,'frozen operator dimensions')
+        originals_scales=[math.comb(97,5)if v[0]==7 else 1420 for v in model['variables']]
+        cases=[]
+        for positive in[False,True]:
+            name='c_ge_1_slice'if positive else'global_domain';operator,n=extended(rows,columns,positive)
+            B.need(n==(2817 if positive else 2816)and len(operator)==(11773 if positive else 11772),'exact extended dimensions')
+            path=out/(name+'_operator.json');B.save(path,dict(format='UNRESTRICTED_ROOTED7_PRIMARY_DOMAIN_LIFT_V1',base_model_sha256=B.MODEL_SHA,base_rows=11769,base_columns=2810,equations=operator,columns=n,primary_variables={'c':2810,'a':2811,'b':2812},facet_slacks={'2_minus_c':2813,'20_minus_a':2814,'18_plus_c_minus_2b':2815},c_ge_1_slack=2816 if positive else None,scope='Continuous necessary extension with all variables nonnegative. Original rows retain order; upper facets appended, slice row last.'))
+            cases.append((name,operator,n,[0,0,0],originals_scales+[2,20,10,2,20,20]+([2]if positive else[])))
+        cases.extend((f'corner_{j}',rows,columns,point,originals_scales)for j,point in enumerate(B.CORNERS))
+        records=[];primals={};rays=[]
+        for index,(name,operator,n,point,scales)in enumerate(cases):
+            B.need(not deadline.status()['stop_required'],'not completed within the allocated budget')
+            seconds=min(25,(deadline.status()['remaining_seconds']-60)/(10-index));B.need(seconds>0,'save/replay reserve retained')
+            record=B.guide(operator,n,point,seconds,scales,out,name);B.certify(operator,n,record);record.update(case_label(name,point));record['operator_rows']=len(operator);record['operator_columns']=n
+            B.save(out/(name+'.json'),record);records.append(record)
+            if name.startswith('corner_'):
+                if record['status']=='CANDIDATE_EXACT_RATIONAL_PRIMAL':primals[tuple(point)]=record
+                elif record['status']=='CANDIDATE_EXACT_FARKAS_EXCLUSION':rays.append(record)
+            print(json.dumps(dict(case=name,status=record['status'],native_seconds=record['native_seconds'])),flush=True)
+        full=len(primals)==8;outcomes=[]
+        with(out/'all651_rational_witnesses.jsonl').open('x',encoding='utf8',newline='\n')as stream:
+            for point in tqdm(B.POPULATION,desc='651 frozen profile certificate checks',mininterval=5):
+                B.need(not deadline.status()['stop_required'],'not completed within the allocated budget')
+                excluded=[j for j,r in enumerate(rays)if sum(v*w for v,w in zip(r['certificate_rhs_affine'],[1,*point]))<0]
+                row=dict(parameters=list(point),status='UNKNOWN_NO_EXACT_CERTIFICATE')
+                if excluded:row.update(status='CANDIDATE_EXACT_FARKAS_EXCLUDED',ray_index=excluded[0])
+                elif full:
+                    ws=B.weights(point);den=math.lcm(*(w.denominator*primals[p]['certificate_denominator']for w,p in zip(ws,B.CORNERS)))
+                    values=[sum(w.numerator*(den//(w.denominator*primals[p]['certificate_denominator']))*primals[p]['certificate_numerators'][j]for w,p in zip(ws,B.CORNERS))for j in range(columns)]
+                    B.need(B.primal(rows,values,den,point),'every original row and nonnegative coordinate of full convex witness')
+                    row.update(status='CANDIDATE_EXACT_RATIONAL_PRIMAL',integer_vector=all(v%den==0 for v in values));stream.write(json.dumps(dict(parameters=list(point),numerators=values,denominator=den,corner_weights=[[w.numerator,w.denominator]for w in ws]),separators=(',',':'))+'\n')
+                elif point in primals:row.update(status='CANDIDATE_EXACT_RATIONAL_PRIMAL',corner_certificate=B.CORNERS.index(point),integer_vector=primals[point]['integer_vector'])
+                outcomes.append(row)
+        B.save(out/'all651_outcomes.json',outcomes)
+        B.save(out/'summary.json',dict(status='CANDIDATE_UNRESTRICTED_ROOTED7_TEN_CASE_RESULTS',timestamp=datetime.now(timezone.utc).isoformat(),frozen_case_population=10,numerical_case_attempts=len(records),case_results=[dict(case=r['case'],status=r['status'],native_seconds=r['native_seconds'])for r in records],frozen_corner_population=8,numerical_corner_attempts=8,exact_corner_primals=len(primals),exact_corner_farkas=len(rays),frozen_integer_parameter_population=651,completed_actual_exact_convex_witnesses=sum(r['status']=='CANDIDATE_EXACT_RATIONAL_PRIMAL'for r in outcomes),exact_ray_excluded_profiles=sum(r['status']=='CANDIDATE_EXACT_FARKAS_EXCLUDED'for r in outcomes),unknown_profiles=sum(r['status']=='UNKNOWN_NO_EXACT_CERTIFICATE'for r in outcomes),integer_count_vectors=sum(r.get('integer_vector',False)for r in outcomes),complete_convex_certificate=full,independent_review=None,target_resolution=False,overall_search_coverage='UNKNOWN; no validated denominator.',elapsed_seconds=time.monotonic()-start,deadline=deadline.status(),outputs_sha256={p.relative_to(ROOT).as_posix():B.sha(p)for p in out.iterdir()if p.is_file()}))
+    except BaseException as error:B.save(out/'failure.json',dict(error=repr(error),elapsed_seconds=time.monotonic()-start,all_completed_outputs_preserved=True));raise
+
+
+if __name__=='__main__':main()

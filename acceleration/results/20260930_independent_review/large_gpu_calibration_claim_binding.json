@@ -1,0 +1,79 @@
+{
+  "status": "INDEPENDENT_LARGE_GPU_CALIBRATION_CLAIM_BINDING_PASS",
+  "claim_id": "C-GPU-LARGE-MOMENT-PDHG-CALIBRATION",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "verifier": "/root/state_literature_audit independent checking agent",
+  "timestamp": "2026-09-29T19:56:51.079938+00:00",
+  "statement": "The exact recorded large-reader CUDA source differs from the previously audited source only in four input/geometry guard literal replacements, and its recorded executable passes all 14 saved malformed/boundary controls. On each of the four frozen calibration inputs, its five saved state vectors at iterations 1, 2, 10 and 100 agree with the separate CPU reference within absolute Linf 1e-8, and the checked scalar diagnostics agree within 1e-7.",
+  "kind": "empirical/engineering result",
+  "basis": [
+    "COMPUTED"
+  ],
+  "scope": "Only the two pinned source/executable versions, 14 reader controls, and four inputs run for 100 iterations with 16 inspected case-checkpoints. No eight-coordinate numerical trajectory guarantee, performance claim, exact feasibility or mathematical exclusion.",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_large_gpu_claim_binding.py"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/large_gpu_cpu_parity/summary.json": "e71cee4a33b855a8986419ad6643e145e5ce4c8ebef083778e21a54700e25e48",
+    "acceleration/audit_20260930_large_gpu_claim_binding.py": "3e02ad1daf10da2c17c7a61e842196c33fd6b6f88287fdf2e965aaaeafdd2c1b",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20260930_large_gpu_reader/pilot/summary.json": "53b0a7938322b43ca49af7a7189f8541d35c52ddc19b3cf3da16b5ae934a4bbc",
+    "acceleration/results/20260930_large_gpu_reader/pilot/source_delta.json": "ecdfd5e5a82afe7b6c2357152617849970c930003a95639fb8acfb838898f348",
+    "acceleration/results/20260930_independent_review/large_gpu_sparse_fixture_storage.json": "984f0ee58bc7f51318deb4e0d60acb65ffb2c178c7b90c0eb632e92684fb59a7"
+  },
+  "source_sha256": "963d4427aeaa24b4ebcae182f981e1662dd8f371621e25eaf4c19ec30a57638a",
+  "executable_sha256": "feb23cfee5bd26abbc37334d3304ee7b5a3e43a386cca9905b8becd58f2df55b",
+  "dependencies": [
+    {
+      "id": "C-MOMENT-PDHG-GPU-CPU-PARITY",
+      "revision": 1,
+      "relation": "verification_dependency"
+    },
+    {
+      "id": "C-PARTIAL-K-TWO-COORDINATE-FULL-MOMENT-ENCODING",
+      "revision": 1,
+      "relation": "verification_dependency"
+    }
+  ],
+  "counts": {
+    "guard_literal_replacements": 4,
+    "native_controls": 14,
+    "old_malformed_inputs": 4,
+    "tiny_header_dimension_boundaries": 8,
+    "sparse_file_length_boundaries": 2,
+    "numerical_inputs": 4,
+    "case_checkpoints": 16,
+    "iterations_per_case": 100
+  },
+  "numerical_comparison": {
+    "vector_absolute_Linf_tolerance": 1e-08,
+    "scalar_absolute_tolerance": 1e-07,
+    "maximum_vector_error": 1.2789769243681803e-13,
+    "maximum_scalar_error": 1.5916157281026244e-12,
+    "engineering_only": true
+  },
+  "checking_method": "Exact byte replacement delta; separate executable executions at rejection boundaries and four frozen inputs; independent binary parser and CPU update using sorted-threshold simplex projection; complete every-vector-entry and scalar comparisons at 16 case-checkpoints.",
+  "shared_components": [
+    "Python standard library",
+    "NumPy/SciPy numerical sparse multiplication",
+    "prior independent artifact hashing helper and exact model audit",
+    "tqdm"
+  ],
+  "controls": "Known uniform, unbounded hard dual, 45882-variable simplex, audited 89308-column two-coordinate model; malformed binaries, guard boundaries, and injected vector corruption.",
+  "limitations": [
+    "Numerical engineering parity on exactly four100iteration inputs only.",
+    "No floating score is a graph, exact certificate, primal upper bound, or mathematical resolution.",
+    "No claim about eight-coordinate behavior, arbitrary iteration counts, certified floating error, or speedup.",
+    "Aggregate geometry guards are reviewed in source; exactly-one-model parsing means a separate multi-model aggregate scenario is unreachable.",
+    "Sparse fixtures are LOCAL_ONLY under ignored build paths and have exact all-zero generation recipes; no whole-file hash is claimed. Storage allocation correction preserves their logical bytes.",
+    "The original pilot record integer_review used a strict word below where the exact cap is at most 2010131; the main audit explicitly records this editorial correction, retaining original evidence."
+  ],
+  "unrestricted_target_resolution": false,
+  "external_review": false
+}

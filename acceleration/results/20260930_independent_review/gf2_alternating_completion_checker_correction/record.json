@@ -1,0 +1,13 @@
+{
+  "status": "CHECKER_ASSUMPTION_CORRECTED_BEFORE_FINAL_REVIEW",
+  "original_source": "acceleration/audit_20260930_gf2_alternating_completion.py",
+  "original_source_sha256": "872163d89e34b883b79be2a8fe4b23ae2fa257e32bcf4c5a14bb4d2b87dbaaf0",
+  "failure": "acceleration/results/20260930_independent_review/gf2_alternating_completion/failure.json",
+  "replacement_source": "acceleration/audit_20260930_gf2_alternating_completion_v2.py",
+  "cause": "V1 compared the prescribed image of independently chosen preimages even when kernel compatibility was false. Well-definedness is conditional on kernel compatibility.",
+  "correction": "Check the producer's saved preimage by its literal F and H products. Compare its image to the independently selected preimage only when the kernel condition holds. All overall existence conjunctions remain compared with direct unknown-D linear systems and exhaustive alternating-D enumeration.",
+  "producer_or_candidate_changed": false,
+  "universal_statement_changed": false,
+  "mathematical_veto": false,
+  "original_failure_preserved": true
+}

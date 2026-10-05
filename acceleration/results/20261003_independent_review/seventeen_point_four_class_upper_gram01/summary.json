@@ -1,0 +1,161 @@
+{
+  "schema": "NATIVE_INDEPENDENT_FOUR_CLASS_UPPER_GRAM_WRITTEN_REPORT_V1",
+  "timestamp": "2026-10-03T22:26:14.4646922+00:00",
+  "verification_started_at": null,
+  "verification_started_at_null_reason": "No contemporaneous starting time was recorded for the written reconstruction; final report timestamp is current authentic UTC.",
+  "status": "INDEPENDENT_SEVENTEEN_POINT_FOUR_CLASS_UPPER_GRAM_WRITTEN_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-SEVENTEEN-POINT-FOUR-CLASS-UPPER-GRAM-CLASSIFICATION",
+  "claim_revision": 1,
+  "statement": "For precisely the 17-point twelve-triangle edge unions in C-SEVENTEEN-POINT-LABELLED-TRIANGLE-FAMILY-FOUR-ISOMORPHISM-CLASSES r1, U=3I17-H+J17/9 has inertia (16,1,0) when PA=PB=PR, and is positive definite with inertia (17,0,0) for each of the other three named partition patterns. The first exact edgeunion therefore cannot occur as an induced principal subgraph of a (99,14,1,2) target; additional internal edges and completion of the other classes are not covered.",
+  "scope": {
+    "description": "The four exactly defined 17-point edgeunion classes, with no additional internal edges; exact principal upper Gram signs only",
+    "unrestricted": false,
+    "target_resolution": "NONE"
+  },
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "target_resolution": "NONE",
+  "dependencies": [
+    {
+      "id": "C-SEVENTEEN-POINT-LABELLED-TRIANGLE-FAMILY-FOUR-ISOMORPHISM-CLASSES",
+      "revision": 1,
+      "type": "uses_result"
+    },
+    {
+      "id": "C-TARGET-GRAM-PSD-AND-SUPPORT-NOGOODS",
+      "revision": 1,
+      "type": "uses_result"
+    }
+  ],
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_SEVENTEEN_POINT_FOUR_CLASS_UPPER_GRAM_V1.md": "1750e24a5d2a5664778efeaf9a86fa9d6774a8f7daee9d87e96c4e614f8dcf67",
+    "acceleration/results/20261003_seventeen_point_four_class_upper_gram_candidate01.json": "742f81eb056a81010764db7cd7f3884e62b5d1fe2c516798db55e933d8055e72",
+    "docs/CANDIDATE_20261003_SEVENTEEN_POINT_FAMILY_FOUR_CLASSES_V1.md": "1faee8e574557fcbb75847e92dbfb6c8e5efd125a2f660b406641e4ed9104ed9",
+    "acceleration/results/20261003_seventeen_point_family_four_classes_root_written_packet_acceptance01.json": "f1dce2b282b46d7d6a3c9c87336ba94982f5fbd50d1b465bdd686cc1fc42d32c",
+    "docs/DERIVATION_20260930_TARGET_GRAM_NOGOODS.md": "a450e71f0d566c218123b831a6ad07b3b2bd17e8c78edaab2cb380d306693153",
+    "acceleration/theory_20260930_closed28_gram_redundancy.md": "7e925f56b520e6b06aa028b252aa7d4137b41071730ae5e0dbc873dcf97e7407",
+    "docs/DERIVATION_20260930_TRIANGLE39_GRAM_SOS.md": "1dead12449d33270d3adca585fc44616d4865bfe8fbe9532b7412861cbd544fb",
+    "acceleration/audit_20261003_seventeen_point_four_class_upper_gram_native_v1.md": "6cde8a83d98b6f6bdba0f6bebbddd53d45c7a29574d329a477fcdb4e37ffba5d"
+  },
+  "complete_source_and_candidate_read": true,
+  "exact_construction_whole_read": true,
+  "historical_target_gram_rederived": true,
+  "all_block_coefficients_reconstructed_from_edges": true,
+  "inertia_by_pattern": [
+    {
+      "negative": 1,
+      "zero": 0,
+      "positive": 16,
+      "pattern": "PA=PB=PR"
+    },
+    {
+      "negative": 0,
+      "zero": 0,
+      "positive": 17,
+      "pattern": "PA=PB!=PR"
+    },
+    {
+      "negative": 0,
+      "zero": 0,
+      "positive": 17,
+      "pattern": "PR equal exactly one of PA/PB"
+    },
+    {
+      "negative": 0,
+      "zero": 0,
+      "positive": 17,
+      "pattern": "PA,PB,PR all different"
+    }
+  ],
+  "hand_checks": {
+    "aligned_U_quadratic": -8,
+    "j_inverse_B_j": "-23/2",
+    "border_scalar": "5/2",
+    "endpoint_coupling": "sqrt(2) derived from normalized side sums; its square2 enters rational elimination",
+    "common_even_inertia": [
+      5,
+      0,
+      0
+    ],
+    "decomposition_dimensions": [
+      3,
+      3,
+      4,
+      7
+    ],
+    "uncoupled_blocks": "Both PD from K3 Laplacian plus nonnegative diagonal with final entry2",
+    "aligned_witness_edge_product_sum": 79,
+    "aligned_witness_squared_norm": 50,
+    "common_B_inertia": [
+      4,
+      1,
+      0
+    ],
+    "common_reduced_pair_determinant": -256,
+    "theta_final_pivots": [
+      "-1/2",
+      "5/6",
+      "5/14",
+      "5/14"
+    ],
+    "edge_count": 36,
+    "aligned_G_quadratic": -72,
+    "common_odd_determinant": 8,
+    "B_inverse_j_products": [
+      "2",
+      "1",
+      "2",
+      "8",
+      "4"
+    ],
+    "common_total_inertia": [
+      7,
+      0,
+      0
+    ]
+  },
+  "witness_orientation_clarification": {
+    "source_bytes_changed": false,
+    "reversing_chi_alone_edge_product_sum": 63,
+    "existential_negative_witness_refuted": false,
+    "required": "chi positive on the common PR pair attached to ell, negative on the r pair when w(ell)=1,w(r)=-1; equivalently reverse chi and both endpoint signs together",
+    "reversing_chi_alone_U_quadratic": 24,
+    "scope_changed": false
+  },
+  "written_falsification_boundaries": 14,
+  "shared_origins": {
+    "root_proposed_historical_gram_question": true,
+    "written_construction_and_archive_material_shared": true,
+    "native_reconstructed_edge_counts_character_couplings_and_congruence_signs": true,
+    "producer_import_or_executed_arithmetic_reused": false,
+    "structural_discovered_negative_direction_and_classification": true,
+    "frozen_author_derivation_read": true
+  },
+  "archive_overlap": true,
+  "novelty": "UNKNOWN",
+  "external_review": null,
+  "external_review_null_reason": "None performed",
+  "executed_mathematical_commands": 0,
+  "executed_matrix_arithmetic": 0,
+  "numerical_spectrum_used": false,
+  "actual_saved_matrix_read_or_computed": false,
+  "raw5184_replay_used_as_mathematical_premise": false,
+  "fixed_type_or_pair_evaluations": 0,
+  "formal_checks": 0,
+  "executed_control_cases": 0,
+  "ledger_index_git_mutations": 0,
+  "new_execution_gate": false,
+  "registration_authorized": false,
+  "limitations": [
+    "Only the four exact defined17-point edge unions without additional internal edges are classified.",
+    "First-class negative principal upper Gram forbids only an induced copy with precisely those adjacencies.",
+    "Opposite-sign added edges can increase the witness quadratic; edge-containing copies are not excluded by this report.",
+    "Other three positive definite principal Grams are necessary-condition passes, not extensions or integer completions.",
+    "The matching basis and odd split are small-matrix mechanisms, not target automorphism assumptions.",
+    "The historical universal target Gram and two separately stated r1 dependencies are explicit; no novel global premise or rank bound.",
+    "No labelled multiplicities, small graph automorphism orders, actual inverse or computational isomorphism classification is claimed.",
+    "No global graph exclusion, target-family coverage or target-resolution transition."
+  ]
+}

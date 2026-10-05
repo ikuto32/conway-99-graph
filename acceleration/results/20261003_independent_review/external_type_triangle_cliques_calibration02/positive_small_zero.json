@@ -1,0 +1,161 @@
+{
+  "payload": {
+    "masks": [
+      1,
+      7,
+      63,
+      455,
+      504
+    ],
+    "weights": [
+      "99",
+      "0",
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    "packet": {
+      "population": [
+        {
+          "column": 2,
+          "mask": 63,
+          "cardinality": 6,
+          "weight": "1/2"
+        },
+        {
+          "column": 3,
+          "mask": 455,
+          "cardinality": 6,
+          "weight": "1/2"
+        },
+        {
+          "column": 4,
+          "mask": 504,
+          "cardinality": 6,
+          "weight": "1/2"
+        }
+      ],
+      "pairs": [
+        {
+          "positions": [
+            0,
+            1
+          ],
+          "columns": [
+            2,
+            3
+          ],
+          "intersection_cardinality": 3,
+          "incompatible": true,
+          "weights": [
+            "1/2",
+            "1/2"
+          ],
+          "exact_sum": "1",
+          "pair_inequality_violated": false
+        },
+        {
+          "positions": [
+            0,
+            2
+          ],
+          "columns": [
+            2,
+            4
+          ],
+          "intersection_cardinality": 3,
+          "incompatible": true,
+          "weights": [
+            "1/2",
+            "1/2"
+          ],
+          "exact_sum": "1",
+          "pair_inequality_violated": false
+        },
+        {
+          "positions": [
+            1,
+            2
+          ],
+          "columns": [
+            3,
+            4
+          ],
+          "intersection_cardinality": 3,
+          "incompatible": true,
+          "weights": [
+            "1/2",
+            "1/2"
+          ],
+          "exact_sum": "1",
+          "pair_inequality_violated": false
+        }
+      ],
+      "triangles": [
+        {
+          "positions": [
+            0,
+            1,
+            2
+          ],
+          "columns": [
+            2,
+            3,
+            4
+          ],
+          "masks": [
+            63,
+            455,
+            504
+          ],
+          "weights": [
+            "1/2",
+            "1/2",
+            "1/2"
+          ],
+          "exact_sum": "3/2",
+          "threshold": "1",
+          "violated": true
+        }
+      ],
+      "violations": [
+        {
+          "positions": [
+            0,
+            1,
+            2
+          ],
+          "columns": [
+            2,
+            3,
+            4
+          ],
+          "masks": [
+            63,
+            455,
+            504
+          ],
+          "weights": [
+            "1/2",
+            "1/2",
+            "1/2"
+          ],
+          "exact_sum": "3/2",
+          "threshold": "1",
+          "violated": true
+        }
+      ]
+    }
+  },
+  "observed": {
+    "positive_types": 3,
+    "unordered_pairs": 3,
+    "incompatible_pairs": 3,
+    "violated_incompatible_pairs": 0,
+    "all_three_subsets": 1,
+    "triangle_cliques": 1,
+    "violated_triangle_cliques": 1,
+    "maximum_triangle_sum": "3/2"
+  },
+  "synthetic": true
+}

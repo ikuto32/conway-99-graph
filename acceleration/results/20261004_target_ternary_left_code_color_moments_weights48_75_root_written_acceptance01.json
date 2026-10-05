@@ -1,0 +1,80 @@
+{
+  "schema": "ROOT_TARGET_TERNARY_LEFT_CODE_COLOR_MOMENTS_WEIGHTS48_75_WRITTEN_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T11:45:38.3565057+00:00",
+  "reviewer": "/root",
+  "independent_verifier": "/root/native_driver",
+  "discovery": "/root/structural",
+  "method": "acceptance_of_independent_derivation",
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-COLOR-MOMENTS-WEIGHTS48-75",
+  "revision": 1,
+  "statement": "For every complete simple SRG(99,14,1,2) with N its99 by231 incidence matrix containing each actual triangle exactly once, every nonconstant word x in ker(N^T mod3) has three vertex color populations divisible by3 between24 and51, and Hamming weight in {48,51,54,57,60,63,66,69,72,75}. Constants retain weights0,99,99 and L=span(j) remains possible. No nonconstant dependency, rank improvement, small right-circuit implication, fixed17 occurrence or target exclusion is asserted.",
+  "result": "PASS_EXACT_CONDITIONAL_WRITTEN_CLAIM",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "report": {
+    "path": "acceleration/results/20261004_independent_review/target_ternary_left_code_color_moments_weights48_75_01/summary.json",
+    "sha256": "2a13f16d2fcc1a7629e952b9b79fad0198e5c0cd6f854416233ba94bae7c3a0d"
+  },
+  "verification_timestamp": "2026-10-04T11:41:34.7683560+00:00",
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-DOT-FORM-WEIGHTS42-78",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "fresh_pins": {
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_COLOR_MOMENTS_WEIGHTS48_75_V1.md": "1e3c651af04fe2c0986a168eff8df74a97e7778cb72f6460520aefbf98ebc0d7",
+    "acceleration/results/20261004_target_ternary_left_code_color_moments_weights48_75_candidate01.json": "74ee86ea15776413044dfabd4c998185b8ca68c8a03b07daabde6578b34e06c4",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_DOT_WEIGHTS_V1.md": "653a21966651c9bf47fab5bdbaec4d9299d8faea3e6cc81c6a511ab3338161d8",
+    "acceleration/results/20261004_target_ternary_left_code_dot_weights_candidate01.json": "0e256cfc7280e7cc9b1c7ad4c05ee6e453a128028515fd35766c6a41b4915208",
+    "docs/DESIGN_20261003_TERNARY_INCIDENCE_NONCONSTANT_KERNEL_V1.md": "45c27c5dcd2217c1f2b09252efa3fa5f9c0242494178c9a0fa4ee50a34b56f67",
+    "acceleration/audit_20261004_target_ternary_left_code_dot_weights_checkpoint_v1.md": "8af5626046d7aa91db683ecc6af746b4ac19f5075bdb9694ea02f2aa28b4b55b",
+    "acceleration/results/20261004_independent_review/target_ternary_left_code_dot_weights01/summary.json": "4bb906fbaa8ffc924047f636f56fcba310e61d542cf2a2975484dd957f88ed7f",
+    "acceleration/results/20261004_independent_review/target_ternary_left_code_dot_weights01/claim_binding_schema2.json": "0caaf5c3c022362d70ec47a766f9e9f2b9abd672e1ae8bda4dc28d0821fbb3e5",
+    "acceleration/results/20261004_target_ternary_left_code_dot_weights_root_written_acceptance01.json": "7d44f421cf559bcbd922dc67d41fdaf1bbf471aa4c57ea6bb3abba309c3cc57b",
+    "external_conway99_research/attempts/wave174-no-weight3-dual/derivation.md": "455b85435252f9b19311b048575536c13dcdfa470c095bb79039dcf2ed381ac9",
+    "external_conway99_research/attempts/wave191-global-star-module-proof-b/derivation.md": "5bf0758c7a4620364738225f6da1c27b428f82bd10274c9a9d21a015277e30db",
+    "acceleration/audit_20261004_target_ternary_left_code_color_moments_weights48_75_native_v1.md": "b84968bcd51ccdf97d13b72bf497d9ed7f4ead425fe5a8eb923431284bd177c1",
+    "acceleration/results/20261004_independent_review/target_ternary_left_code_color_moments_weights48_75_01/summary.json": "2a13f16d2fcc1a7629e952b9b79fad0198e5c0cd6f854416233ba94bae7c3a0d"
+  },
+  "fresh_count": 13,
+  "read_scope": "Root whole candidate paper, whole Native written audit and report exact statement/scope/dependencies/all36written boundaries/table/pointwise/scalar controls reviewed. Native remains actual independent verifier.",
+  "source_commit_context": "adffeee94206e640a2648d050fd8ab2406449517",
+  "outcome": {
+    "population_minimum": 24,
+    "population_maximum": 51,
+    "nonconstant_weights": [
+      48,
+      51,
+      54,
+      57,
+      60,
+      63,
+      66,
+      69,
+      72,
+      75
+    ],
+    "constant_weights": [
+      0,
+      99,
+      99
+    ],
+    "all_seven_a21_cases_excluded": true,
+    "nonconstant_word_exists_proved": false,
+    "incidence_rank_improvement": false,
+    "target_resolution": "NONE"
+  },
+  "target_resolution": "NONE",
+  "registry_mutated": false,
+  "external_review": null,
+  "external_review_null_reason": "No external review performed",
+  "limitations": [
+    "Universal conditional complete-target statement only; no nonconstant word is forced and constant-only L remains possible.",
+    "No extra incidence-rank bound, small right circuit, fixed17 occurrence, graph construction, automorphism/equitability premise or target exclusion.",
+    "Hand scalar controls are not graph realizations; pointwise CN is essential to the rejected boundary.",
+    "Named archival comparison was bounded. No exhaustive search, external literature or novelty assertion.",
+    "Written mathematical checking only; no executable gate, solver/proof-checker run, numerical enumeration, formal verification or scientific replay."
+  ]
+}

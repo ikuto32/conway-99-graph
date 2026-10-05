@@ -1,0 +1,208 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_WRITTEN_REPORT_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SIX_D2_PROFILE_WRITTEN_PASS",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SIX-D2-PROFILE",
+  "revision": 1,
+  "timestamp": "2026-10-04T23:05:34.8274842+00:00",
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_U=6-r_U, where r_U counts such sets containing the actual triangle U. Suppose R=226, every d_U belongs to {0,1,2,3}, exactly one actual triangle T has deficiency three, and exactly six actual triangles have deficiency two. There are then fifteen d1 triangles. Each point of T is incident either to exactly three d1 triangles and zero or one d2 triangle, or to exactly one d1 and two d2 triangles. At most one T point has the latter profile. If all three T points have the former profile, all their d2 incidences are zero. The even selected family O=D1 union {T} has sixteen triangles and support S=T union B_s of size21. Its three T points have selected incidence four; the eighteen B_s points have selected incidence two. The actual induced S has exactly the48 selected triangle edges. There is a partition T(3 points), B_s(18), B_o(18), C(60) whose actual per-vertex neighbor counts, in that order, are T:(2,6,6,0), B_s:(1,3,0,10), B_o:(1,0,3,10), C:(0,3,3,8). The induced B_o is the disjoint union of three six-vertex triangular prisms, each of which, together with T, is an actual induced rook-nine. The induced B_s is a connected cubic graph. Six actual d1 triangles partition B_s, and the other nine d1 triangles meet T once and provide a perfect matching on the eighteen B_s points. Each of the six triangles contains one neighbor of each T point; its matching edges join points with the same T neighbor.",
+  "verification_timestamp": "2026-10-04T23:05:34.8274842+00:00",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T23:09:16.4528267+00:00",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "scope": {
+    "description": "Exact necessary profile only for actual R226 with literal maxd3, one d3 and six d2 triangles. All allowed focal profiles including the r1five star with separate local edge are checked; h2/h3 are excluded and h1 retained. In h0 the selected support is exactly21 points with48 actual edges; the derived3/18/18/60 cells have the four literal neighbor rows, all good d2 attachments vanish, Bo comprises three actual T-rook prisms and Bs is connected cubic18. Neither surviving branch, the one-d3 lane nor R226 is constructed or excluded.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_candidate_scope": {
+    "description": "Necessary focal profile for the one-d3/six-d2 R226/maxd3 lane, with a derived exact four-cell profile only in the zero-bad-point branch.",
+    "unrestricted_target": true,
+    "single_D3_six_D2_lane_excluded": false,
+    "one_bad_point_branch_retained": true,
+    "zero_bad_point_branch_constructed_or_excluded": false,
+    "maximum_deficiency3_inferred": false,
+    "count226_excluded": false,
+    "target_resolution": "NONE",
+    "scientific_coverage": "UNKNOWN"
+  },
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=226 counts actual induced rook-nine vertex sets once",
+    "d_U=6-r_U belongs to {0,1,2,3} for every actual triangle U",
+    "exactly one actual triangle T has deficiency three",
+    "exactly six actual triangles have deficiency two"
+  ],
+  "dependencies": [],
+  "original_decorated_dependencies": [],
+  "dependency_evidence": [],
+  "original_pending_gates_at_preparation": {
+    "different_author_written_report": null,
+    "canonical_binding": null,
+    "Root_acceptance": null
+  },
+  "controls": {
+    "written_proof_checks": 42,
+    "written_failure_boundary_challenges": 18,
+    "written": 60,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_six_d2_profile_candidate01.json",
+    "sha256": "3209080c5e6d41892e0af54cc93c1fbce0c0c1df98a0bb3f0ea9f6e932e2410a",
+    "original_timestamp": "2026-10-04T22:59:52Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count226_single_d3_six_d2_profile_native_v1.md",
+    "sha256": "27d8b257721c8cb451806d55ac7ac7eaade2913078a311a194acaad8cd533270"
+  },
+  "shared_components": [
+    "Root shared per-center capacity, eigenvector and h0 Gram-equality outlines; Structural authored and challenged the exact frozen proof and containing-rook argument, as preserved in original_shared_origin.",
+    "Native independently reconstructed actual fan labels, the exact weighted expansion, all four local patterns and extra-edge allowances; a separate norm path was developed before challenging the frozen h2/G0 AY31<40 route. Agreement is not verification or independent discovery.",
+    "The h0 partition and connectedness are derived consequences. Native separately checked all containing-rook indicators, cubic-six alternatives and actual color matching; no simplicity assertion about a contracted triangle graph is shared as a premise.",
+    "Fan/parity/Gram and older prism-cell overlap is disclosed; no archive novelty claim or old profile/numerical gate transfer is made."
+  ],
+  "original_shared_origin": {
+    "Root_per_center_capacity_and_h0_Gram_equality_outline": true,
+    "Structural_independent_case_and_neighbor_eigenvector_challenge": true,
+    "Structural_h0_containing_rook_and_connectedness_derivation": true,
+    "fan_parity_Gram_and_older_prism_cell_overlap_disclosed": true,
+    "archive_novelty_claim": false,
+    "no_old_gate_transfer": true
+  },
+  "root_exact_new_statement_acceptance": null,
+  "maximum_deficiency3_inferred": false,
+  "single_D3_six_D2_lane_excluded": false,
+  "one_bad_point_branch_retained": true,
+  "zero_bad_point_branch_constructed_or_excluded": false,
+  "count226_excluded": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "novelty_claimed": false,
+  "availability": "LOCAL_ONLY",
+  "ledger_current_presence_asserted": false,
+  "publication_cutoff_inclusion": false,
+  "limits": [
+    "Only the exact revision1 necessary profile is verified under literal R226/maxd3/one-d3/six-d2 hypotheses. The h1 branch, entire lane, R226 and target remain unresolved.",
+    "Empty dependencies: every actual-label, fan, Gram and rook fact used is rederived from the complete SRG hypotheses; no previous result approval is silently inherited.",
+    "The r1five local star plus a separate low-low edge and G1 good attachment are explicitly included before rejection. Selected incidence above four and arbitrary extra edges are retained until exact inequalities force the later weights.",
+    "The h2/G0 survivor has K2, not an assumed K4. The actual eight-neighbor Y inequality31<40 handles it; all exterior neighbors and additional S edges remain in its residual count.",
+    "All norm factors, integer residues and lane-specific rejection of q0 are explicit. H contains every nonselected actual internal edge; inducedness and regular cell rows are conclusions, not assumptions.",
+    "Only conditional uniqueness of a containing rook is used. Distinct actual rook vertex sets, prism color matching, K3,3 rejection and the fourth-rook count are checked before eliminating good attachments.",
+    "Connected Bs is proved by actual whole-triangle components and same-color perfect-matching parity. The contracted triangle graph is not assumed simple or connected.",
+    "Original candidate null gates, timestamps and bytes remain; current completed verification and later metadata creation are distinct. New Root acceptance and registration are separate.",
+    "Written only: zero mathematical program/import/AST/backend/worker/census/enumeration/solver/formal/external checking and no ledger/Git/index/protected/publication mutation.",
+    "Root-reported live467 is context only, with no new direct protected-state observation and no current ledger presence assertion."
+  ],
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SIX_D2_PROFILE_V1.md": "dc40b2a3aecf6709a14b3a9d88ded6dfddc596d7fdc65a6faabf15fd7daa4a5c",
+    "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_six_d2_profile_candidate01.json": "3209080c5e6d41892e0af54cc93c1fbce0c0c1df98a0bb3f0ea9f6e932e2410a",
+    "acceleration/audit_20261004_target_rook_count226_single_d3_six_d2_profile_native_v1.md": "27d8b257721c8cb451806d55ac7ac7eaade2913078a311a194acaad8cd533270",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "input_map_count": 4,
+  "metadata_operations": {
+    "workers": 0,
+    "source_imports": 0,
+    "enumerations": 0,
+    "ledger_parsed": false,
+    "protected_state_mutations": 0,
+    "historical_bytes_changed": false
+  },
+  "exact_hand_coverage": {
+    "a": 15,
+    "positive_population": 22,
+    "selected_size": 16,
+    "selected_weight_sum": 24,
+    "selected_Gram_base": 40,
+    "all_T_local_profiles": [
+      "r1one/r2two",
+      "r1three/r2zero",
+      "r1three/r2one",
+      "r1five/r2zero with separate low-low edge"
+    ],
+    "incidence_six_with_another_good_Gram_upper": -4,
+    "incidence_six_with_two_bad_H_lower": 8,
+    "incidence_six_with_two_bad_Gram_upper": -6,
+    "h2_g0_H_lower": 10,
+    "h2_g0_forced_K": 2,
+    "h2_g0_bad_center_neighbor_Y_sum_upper": 31,
+    "h2_g0_eigenvector_neighbor_Y_sum_lower": 40,
+    "h2_g1_H_lower": 17,
+    "h2_g1_Gram_upper": -4,
+    "h3_H_lower": 18,
+    "h3_inside_norm_lower": "384-42z",
+    "h3_total_norm": "252-126z",
+    "surviving_bad_point_counts": [
+      0,
+      1
+    ],
+    "h0_K": 6,
+    "h0_ell": 3,
+    "h0_inside_baseline_norm": 120,
+    "h0_inside_baseline_sum": 24,
+    "h0_combined_norm_lower": "252+36d",
+    "h0_total_norm": "252-126H",
+    "h0_H": 0,
+    "h0_support_size": 21,
+    "h0_actual_support_edges": 48,
+    "h0_cell_sizes": [
+      3,
+      18,
+      18,
+      60
+    ],
+    "h0_neighbor_count_rows": [
+      [
+        2,
+        6,
+        6,
+        0
+      ],
+      [
+        1,
+        3,
+        0,
+        10
+      ],
+      [
+        1,
+        0,
+        3,
+        10
+      ],
+      [
+        0,
+        3,
+        3,
+        8
+      ]
+    ],
+    "h0_containing_rooks_on_T": 3,
+    "h0_all_good_attachments_one_impossible_fourth_rook": true,
+    "h0_actual_good_attachments": 0,
+    "h0_B_o_prism_components": 3,
+    "h0_B_s_connected": true
+  },
+  "original_actual_local_boundaries": [
+    "The r1five star plus a separate d1-d1 edge is retained until its exact Gram and per-center capacity rejection.",
+    "The h2/g0 equality uses forced K2, not an incorrect forced K4: larger K is separately impossible.",
+    "Arbitrary extra S edges and all exterior edges are included in the AY neighbor inequality.",
+    "The h0 good-attachment indicators are not assumed zero or equal before the actual containing-rook argument.",
+    "Only conditional uniqueness of a rook containing an intersecting triangle pair is used; arbitrary pairs are not asserted to have rooks.",
+    "The cubic-six classification explicitly rejects K3,3 by mu2 and forces prism matching colors by the already-saturated two prism common neighbors.",
+    "No simplicity assertion about the contracted six-triangle graph of B_s is needed; two cross-matching edges are not presumed to force a third.",
+    "The one-bad-point branch remains unresolved by this claim."
+  ]
+}

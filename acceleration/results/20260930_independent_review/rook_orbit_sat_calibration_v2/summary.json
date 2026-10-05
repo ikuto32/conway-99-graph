@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-09-29T20:49:16.615348+00:00",
+  "source_commit": "cc5ddc379526873f8d38888f8a2085f3b3123aae",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_rook_orbit_sat_v2.py",
+    "calibrate",
+    "--out",
+    "acceleration/results/20260930_independent_review/rook_orbit_sat_calibration_v2"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/state_literature_audit independent checking agent",
+  "producer_imported": false,
+  "shared_components": [
+    "Frozen independently authored exact SAT stream checker and raw59 graph validator",
+    "Python exact arithmetic"
+  ],
+  "solver_launched": false,
+  "target_resolution": false,
+  "external_review": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "status": "INDEPENDENT_ROOK_ORBIT_SAT_CHECKER_CALIBRATION_PASS",
+  "scope": "Calibration only: original full base SAT with zero added orbit clauses; exact stream controls additionally exercise appended clauses and corruption cases.",
+  "positive_complete_base_artifacts": 1,
+  "positive_record": {
+    "checked_clauses": 3689820,
+    "graph_result": {
+      "vertices": 59,
+      "pair_caps_checked": 1711,
+      "free_edges": 780,
+      "complete_block_degrees_checked": true,
+      "known_edges": 253,
+      "target_graph": false
+    }
+  },
+  "raw_graph_sha256": "8b92f60746777fd3a5fa2c1f290b14a3daab71b7b85c9a3f1c4484342a6053ee",
+  "full_artifact_corruptions_rejected": [
+    {
+      "case": "flipped_edge_assignment",
+      "error": "unsatisfied raw clause"
+    },
+    {
+      "case": "missing_variable_assignment",
+      "error": "complete unique variable assignment"
+    },
+    {
+      "case": "duplicate_variable_assignment",
+      "error": "complete unique variable assignment"
+    },
+    {
+      "case": "graph_loop",
+      "error": "simple59graph"
+    },
+    {
+      "case": "deleted_fixed_edge",
+      "error": "rook core"
+    }
+  ],
+  "stream_controls": {
+    "positive_base_plus_cut_passed": true,
+    "corruptions_rejected": [
+      "wrong_assignment",
+      "changed_base_clause",
+      "wrong_appended_clause",
+      "missing_clause",
+      "extra_clause",
+      "wrong_header"
+    ]
+  },
+  "legacy_path_normalization_checked": true,
+  "conflicting_alias_rejected": true,
+  "inputs_sha256": {
+    "acceleration/results/20260930_rook_free_internal_sat/instance.cnf": "ed9d0e102b16481fdbcecef34240b5be2b8a357af8c219606bb688dcb5fe9403",
+    "acceleration/results/20260930_rook_free_internal_sat/model.json": "26908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e",
+    "acceleration/results/20260930_rook_free_internal_sat/independent_cnf_encoding.json": "a74e821f70680187e0ee14fb956d51928e6aa9517acc1bc0186448b32c985ba0",
+    "acceleration/results/20260930_rook_free_internal_pilot/main/model.json": "0e043949cdfe9d91f46b2262d9933f3b068810286f524334e2764c57849aba65",
+    "acceleration/results/20260930_rook_free_internal_independent_certificate/summary.json": "5c0e621742afc7b73b3756cb5743c09e80d9a5072d6a6f7384a8f124212fc53e",
+    "acceleration/results/20260930_rook_free_internal_independent_certificate/independent_full59.json": "dd3167d5b609e716283ba80aaffacffdbbc6e04f9524e895eb26f1ff04a4974e",
+    "acceleration/results/20260930_rook_cell_factors/local_witness.json": "da71c5381af0a68f8a7e7dea36535b92cbcfc67d95e3b57d6cc3591dd1dda33f",
+    "acceleration/audit_20260930_rook_orbit_sat_v2.py": "487f6d3a5d88107361d381daeb9f7c7bf1062584b1cd2cd9723c4bf6a275b35f",
+    "acceleration/audit_20260930_rook_augmented_sat_v1.py": "4c07ecc9d2a7c682d995008598ae120688ac46a936973991a4efe887368dc9a9",
+    "acceleration/audit_20260930_gram_nogood_v1.py": "020daac8a0340f74af5a0cd588efc292cba0283b2f8d1b6bd9efd458ac0ca6d9",
+    "acceleration/audit_20260930_rook_free_internal_cnf_v1.py": "676e6c9be00fdf677e74a1c3a1f6317b64c7011996692e07ee4f379933914666",
+    "acceleration/audit_20260930_rook_window_cnf_v1.py": "bab0c88e4feab56e7d454c01aaefba2565e1d4e71a7228b163fdb50d9655b088",
+    "acceleration/audit_20260930_rook_window_graph_v1.py": "e42e6189115977b0b8cb337d6b1302f0572d324e6376f0759068d860f4b43d8d",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "limitations": [
+    "No orbit-augmented SAT assignment has been checked by this calibration.",
+    "The finite controls test the checker; they are not a completeness proof for this local encoding."
+  ]
+}

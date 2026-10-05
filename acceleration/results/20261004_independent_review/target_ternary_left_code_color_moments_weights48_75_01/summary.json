@@ -1,0 +1,457 @@
+{
+  "schema": "INDEPENDENT_WRITTEN_MATHEMATICAL_REVIEW_V1",
+  "status": "INDEPENDENT_TARGET_TERNARY_LEFT_CODE_COLOR_MOMENTS_WEIGHTS48_75_V1_WRITTEN_PASS",
+  "implementation_version": 1,
+  "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-COLOR-MOMENTS-WEIGHTS48-75",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete simple SRG(99,14,1,2) with N its99 by231 incidence matrix containing each actual triangle exactly once, every nonconstant word x in ker(N^T mod3) has three vertex color populations divisible by3 between24 and51, and Hamming weight in {48,51,54,57,60,63,66,69,72,75}. Constants retain weights0,99,99 and L=span(j) remains possible. No nonconstant dependency, rank improvement, small right-circuit implication, fixed17 occurrence or target exclusion is asserted.",
+  "timestamp": "2026-10-04T11:41:34.7683560+00:00",
+  "verification_timestamp": "2026-10-04T11:41:34.7683560+00:00",
+  "verification_started_at": null,
+  "verification_started_at_null_reason": "The beginning of the written review was not separately recorded; this authentic final report timestamp is not a reconstructed start time.",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "scope": {
+    "description": "Universal conditional population/weight bounds for the ternary point left code of every complete hypothetical99/14/lambda1/mu2 target and full actual-triangle incidence. No extra left word is forced; no automorphism or equitable profile is assumed.",
+    "target_resolution": "NONE",
+    "unrestricted_target": true
+  },
+  "assumptions": [
+    "A is symmetric binary zero-diagonal, Aj=14j and A^2=12I-A+2J over the integers.",
+    "N contains each actual triangle exactly once, with row degree7, column weight3 and NN^T=A+7I.",
+    "The new population/weight bounds apply only to nonconstant words; the constant line span(j) is explicitly permitted."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-DOT-FORM-WEIGHTS42-78",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_candidate_dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-DOT-FORM-WEIGHTS42-78",
+      "revision": 1
+    }
+  ],
+  "prior_result": {
+    "report": "acceleration/results/20261004_independent_review/target_ternary_left_code_dot_weights01/summary.json",
+    "sha256": "4bb906fbaa8ffc924047f636f56fcba310e61d542cf2a2975484dd957f88ed7f",
+    "verifier": "/root/checkpoint_audit",
+    "method": "independent_derivation",
+    "verification_timestamp": "2026-10-04T10:52:01.9239772+00:00",
+    "claim_id": "C-UNRESTRICTED-TARGET-TERNARY-LEFT-CODE-DOT-FORM-WEIGHTS42-78",
+    "revision": 1,
+    "inheritance": "Exact accepted21..57/divisibility/local profile premise; no rerun or new approval of its divided-form derivation."
+  },
+  "written_checks": 36,
+  "written_check_boundaries": [
+    "Exact new claim ID/revision and literal raw statement bound to unchanged paper/raw hashes.",
+    "Complete 99/14/lambda1/mu2 target and full actual 231-column incidence hypotheses preserved.",
+    "Exact prior weights42..78 revision1 authenticated through its distinct Checkpoint written report and canonical binding.",
+    "Zero-sum triangle colors are monochromatic or rainbow over F3.",
+    "Lambda1 partitions fourteen neighbors into seven triangle pairs.",
+    "Mu2 connectivity excludes a nonconstant two-color word.",
+    "Population divisibility inherited from prior ordinary self-orthogonality and j orthogonality.",
+    "Local integer neighbor counts 14-2r,r,r and range0..7 reconstructed.",
+    "Each class rainbow total and each cross-class edge count equals t.",
+    "Monochromatic counts (7s-t)/3 imply t divisible3 and t<=7min(s).",
+    "Cross scalar product expanded as28t-2Zi-2Zj+Zk.",
+    "Integer adjacency identity gives the distinct-indicator product2sisj-t.",
+    "All three cross equations solved to Zi=(29t+2sjsk)/3-4Q/9.",
+    "Rayleigh bound independently reconstructed from eigenvalue3 on j-perp and exact indicator quadratic.",
+    "Integer square lower envelope and its equality condition reconstructed by unit balancing.",
+    "Pointwise r^2<=7r upper envelope checked without assuming sharp concentrated maximum.",
+    "Sorted a21,b+c78 has exactly seven possible b labels.",
+    "Case21,57 exact lower135 exceeds exact upper126.",
+    "Case24,54 exact lower135 exceeds rounded upper132.",
+    "Case27,51 exact C envelope requires t>=984/7 and rounded141, beyond upper138.",
+    "Case30,48 exact B envelope requires t>=144, beyond upper141.",
+    "Case33,45 exact B envelope requires t>=147, beyond upper144.",
+    "Case36,42 exact C envelope retains only t147.",
+    "Case39,39 exact lower and upper585/4 require opposite rounded147/144 thresholds.",
+    "Every linear-envelope q value valid on its complete admitted interval, including the t147 endpoint.",
+    "Boundary Q3150 gives exact squares1029,609,525.",
+    "Boundary A allr7 and C exactly21r3/21r4 follow from sharp equality, not equitability.",
+    "Walks to A reconstructed as RB+RC=42-r with no return vertex.",
+    "Walks to C reconstructed as21r+RB-2RC=84-r using correct own-color degrees.",
+    "Elimination RC=7r-14 forces arbitrary B vertex r4 and contradictory class total144.",
+    "Population24..51 implies exact nonconstant weight set48..75; constants and L=span(j) retained.",
+    "Scalar21,36,42 control passes prior moments, so pointwise contradiction is essential.",
+    "Deliberately damaged own-color/walk-total/diagonal variants fail actual endpoint counting.",
+    "Scalar33,33,33,t132 control independently matches Z550 and remains possible.",
+    "Scalar24,24,51,t141 endpoint and genuine rook9 row-color controls reconstructed with parameter restrictions.",
+    "Prior archive overlap, incidental hand12/761 counts, integrality restrictions and zero execution/novelty/target-resolution boundaries preserved."
+  ],
+  "complete_written_cases": [
+    {
+      "b": 21,
+      "c": 57,
+      "raw_rayleigh_lower": "133",
+      "t_min": 135,
+      "D_A": 462,
+      "raw_A_upper": "126",
+      "t_max": 126,
+      "veto": "DISJOINT_T_INTERVAL"
+    },
+    {
+      "b": 24,
+      "c": 54,
+      "raw_rayleigh_lower": "135",
+      "t_min": 135,
+      "D_A": 440,
+      "raw_A_upper": "663/5",
+      "t_max": 132,
+      "veto": "DISJOINT_T_INTERVAL"
+    },
+    {
+      "b": 27,
+      "c": 51,
+      "raw_rayleigh_lower": "136",
+      "t_min": 138,
+      "D_A": 422,
+      "raw_A_upper": "138",
+      "t_max": 138,
+      "other_raw_t_min": "984/7",
+      "other_t_min": 141,
+      "veto": "C_INTEGER_SQUARE_ENVELOPE"
+    },
+    {
+      "b": 30,
+      "c": 48,
+      "raw_rayleigh_lower": "136",
+      "t_min": 138,
+      "D_A": 408,
+      "raw_A_upper": "711/5",
+      "t_max": 141,
+      "other_raw_t_min": "144",
+      "other_t_min": 144,
+      "veto": "B_INTEGER_SQUARE_ENVELOPE"
+    },
+    {
+      "b": 33,
+      "c": 45,
+      "raw_rayleigh_lower": "135",
+      "t_min": 135,
+      "D_A": 398,
+      "raw_A_upper": "726/5",
+      "t_max": 144,
+      "other_raw_t_min": "147",
+      "other_t_min": 147,
+      "veto": "B_INTEGER_SQUARE_ENVELOPE"
+    },
+    {
+      "b": 36,
+      "c": 42,
+      "raw_rayleigh_lower": "133",
+      "t_min": 135,
+      "D_A": 392,
+      "raw_A_upper": "147",
+      "t_max": 147,
+      "sole_scalar_t": 147,
+      "veto": "POINTWISE_PAIR_COMMON_NEIGHBOR_CONTRADICTION"
+    },
+    {
+      "b": 39,
+      "c": 39,
+      "raw_rayleigh_lower": "130",
+      "t_min": 132,
+      "D_A": 390,
+      "raw_A_upper": "738/5",
+      "t_max": 147,
+      "other_raw_t_min": "585/4",
+      "other_t_min": 147,
+      "raw_A_square_upper": "585/4",
+      "t_max_from_A_square_upper": 144,
+      "veto": "SQUARE_LOWER_UPPER_CONTRADICTION"
+    }
+  ],
+  "last_scalar_boundary": {
+    "sizes": [
+      21,
+      36,
+      42
+    ],
+    "t": 147,
+    "squares": [
+      1029,
+      609,
+      525
+    ],
+    "A_r": 7,
+    "C_r_histogram": [
+      [
+        3,
+        21
+      ],
+      [
+        4,
+        21
+      ]
+    ],
+    "pointwise_equations": [
+      "R_B+R_C=42-r",
+      "21r+R_B-2R_C=84-r",
+      "R_C=7r-14",
+      "3r<=7r-14<=4r"
+    ],
+    "arbitrary_B_integer_r": 4,
+    "forced_B_total": 144,
+    "required_B_total": 147,
+    "contradiction": true
+  },
+  "hand_controls": [
+    {
+      "label": "LAST_SCALAR_BOUNDARY_PASSES_MOMENTS",
+      "sizes": [
+        21,
+        36,
+        42
+      ],
+      "t": 147,
+      "histograms": [
+        [
+          [
+            7,
+            21
+          ]
+        ],
+        [
+          [
+            7,
+            1
+          ],
+          [
+            4,
+            35
+          ]
+        ],
+        [
+          [
+            3,
+            21
+          ],
+          [
+            4,
+            21
+          ]
+        ]
+      ],
+      "squares": [
+        1029,
+        609,
+        525
+      ],
+      "monochromatic_triangles": [
+        0,
+        35,
+        49
+      ],
+      "interpretation": "Necessary scalar data only; pointwise CN rejects every graph at this boundary."
+    },
+    {
+      "label": "DAMAGED_WALK_IDENTITIES",
+      "result": "REJECTED_IN_WRITING",
+      "variants": [
+        "C middle vertices contribute r_w rather than14-2r_w",
+        "Replace84-r by84 or84-2r",
+        "Add a diagonal return term for v outside A and C"
+      ],
+      "interpretation": "Each variant conflicts with actual class degree or adjacent/nonadjacent endpoint counting."
+    },
+    {
+      "label": "SYMMETRIC_SCALAR_CONTROL",
+      "sizes": [
+        33,
+        33,
+        33
+      ],
+      "t": 132,
+      "histogram_each": [
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "squares_each": 550,
+      "interpretation": "Scalar-possible, no graph/word construction."
+    },
+    {
+      "label": "ENDPOINT_SCALAR_CONTROL",
+      "sizes": [
+        24,
+        24,
+        51
+      ],
+      "t": 141,
+      "histogram_24": [
+        [
+          6,
+          17
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "histogram_51": [
+        [
+          3,
+          35
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "squares": [
+        835,
+        835,
+        403
+      ],
+      "monochromatic_triangles": [
+        9,
+        9,
+        72
+      ],
+      "interpretation": "Scalar-possible; this argument does not lower51 or raise48. No graph/word construction."
+    },
+    {
+      "label": "KNOWN_VALID_DIFFERENT_PARAMETER_ROOK",
+      "graph": "rook(9,4,1,2)",
+      "coloring": "Three rows carry colors0,1,2",
+      "sizes": [
+        3,
+        3,
+        3
+      ],
+      "t": 3,
+      "r_each": 1,
+      "word_weight": 6,
+      "interpretation": "A genuine hand-known left word; invalidates parameter-free target numeric transfer, not the target claim."
+    },
+    {
+      "label": "CONSTANT_LINE_ALLOWED",
+      "weights": [
+        0,
+        99,
+        99
+      ],
+      "interpretation": "Two empty classes fail the positive-class premise; no extra left word is forced."
+    },
+    {
+      "label": "INTEGRAL_AND_COMPLETE_IDENTITY_REQUIRED",
+      "interpretation": "Removing integer/divisibility/exact-CN/full-incidence premises invalidates the table and pointwise conclusion."
+    }
+  ],
+  "outcome": {
+    "population_minimum": 24,
+    "population_maximum": 51,
+    "nonconstant_weights": [
+      48,
+      51,
+      54,
+      57,
+      60,
+      63,
+      66,
+      69,
+      72,
+      75
+    ],
+    "constant_weights": [
+      0,
+      99,
+      99
+    ],
+    "all_seven_a21_cases_excluded": true,
+    "nonconstant_word_exists_proved": false,
+    "incidence_rank_improvement": false,
+    "target_resolution": "NONE"
+  },
+  "audit": {
+    "path": "acceleration/audit_20261004_target_ternary_left_code_color_moments_weights48_75_native_v1.md",
+    "sha256": "b84968bcd51ccdf97d13b72bf497d9ed7f4ead425fe5a8eb923431284bd177c1",
+    "lines": 284
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_COLOR_MOMENTS_WEIGHTS48_75_V1.md": "1e3c651af04fe2c0986a168eff8df74a97e7778cb72f6460520aefbf98ebc0d7",
+    "acceleration/results/20261004_target_ternary_left_code_color_moments_weights48_75_candidate01.json": "74ee86ea15776413044dfabd4c998185b8ca68c8a03b07daabde6578b34e06c4",
+    "docs/CANDIDATE_20261004_TARGET_TERNARY_LEFT_CODE_DOT_WEIGHTS_V1.md": "653a21966651c9bf47fab5bdbaec4d9299d8faea3e6cc81c6a511ab3338161d8",
+    "acceleration/results/20261004_target_ternary_left_code_dot_weights_candidate01.json": "0e256cfc7280e7cc9b1c7ad4c05ee6e453a128028515fd35766c6a41b4915208",
+    "docs/DESIGN_20261003_TERNARY_INCIDENCE_NONCONSTANT_KERNEL_V1.md": "45c27c5dcd2217c1f2b09252efa3fa5f9c0242494178c9a0fa4ee50a34b56f67",
+    "acceleration/audit_20261004_target_ternary_left_code_dot_weights_checkpoint_v1.md": "8af5626046d7aa91db683ecc6af746b4ac19f5075bdb9694ea02f2aa28b4b55b",
+    "acceleration/results/20261004_independent_review/target_ternary_left_code_dot_weights01/summary.json": "4bb906fbaa8ffc924047f636f56fcba310e61d542cf2a2975484dd957f88ed7f",
+    "acceleration/results/20261004_independent_review/target_ternary_left_code_dot_weights01/claim_binding_schema2.json": "0caaf5c3c022362d70ec47a766f9e9f2b9abd672e1ae8bda4dc28d0821fbb3e5",
+    "acceleration/results/20261004_target_ternary_left_code_dot_weights_root_written_acceptance01.json": "7d44f421cf559bcbd922dc67d41fdaf1bbf471aa4c57ea6bb3abba309c3cc57b",
+    "external_conway99_research/attempts/wave174-no-weight3-dual/derivation.md": "455b85435252f9b19311b048575536c13dcdfa470c095bb79039dcf2ed381ac9",
+    "external_conway99_research/attempts/wave191-global-star-module-proof-b/derivation.md": "5bf0758c7a4620364738225f6da1c27b428f82bd10274c9a9d21a015277e30db",
+    "acceleration/audit_20261004_target_ternary_left_code_color_moments_weights48_75_native_v1.md": "b84968bcd51ccdf97d13b72bf497d9ed7f4ead425fe5a8eb923431284bd177c1"
+  },
+  "input_map_count": 12,
+  "read_scope": {
+    "whole": [
+      "New paper and raw candidate",
+      "Prior weights42..78 paper and Checkpoint audit/report/binding",
+      "Prior Root written acceptance",
+      "October3 nonconstant-kernel design"
+    ],
+    "selected": [
+      "Relevant Wave174 and Wave191 endpoint/color passages"
+    ],
+    "scientific_artifact_replay": false,
+    "ledger_parsed": false
+  },
+  "shared_components": [
+    "Structural authored the new discovery after Root requested a strengthening. Native read the candidate and independently reconstructed all moment/table/pointwise arithmetic.",
+    "Exact complete-target and full-incidence hypotheses, plus the separately accepted Checkpoint weights42..78 revision1 premise, are shared and disclosed.",
+    "The older design already contains moment and integer-envelope identities; those are rederived, not claimed novel. No candidate producer functions, builders or imported algorithms were used."
+  ],
+  "limitations": [
+    "Universal conditional complete-target statement only; no nonconstant word is forced and constant-only L remains possible.",
+    "No extra incidence-rank bound, small right circuit, fixed17 occurrence, graph construction, automorphism/equitability premise or target exclusion.",
+    "Hand scalar controls are not graph realizations; pointwise CN is essential to the rejected boundary.",
+    "Named archival comparison was bounded. No exhaustive search, external literature or novelty assertion.",
+    "Written mathematical checking only; no executable gate, solver/proof-checker run, numerical enumeration, formal verification or scientific replay."
+  ],
+  "executed_mathematical_commands": 0,
+  "programmatic_enumerations": 0,
+  "imports": 0,
+  "formal_checks": 0,
+  "external_checks": 0,
+  "scientific_worker_launches": 0,
+  "metadata_operations": "Bounded local document reads, SHA256 identity checks, and append-only audit/report writes only.",
+  "candidate_bytes_changed": false,
+  "original_dependency_bytes_changed": false,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "git_mutations": 0,
+  "registration_performed": false,
+  "source_commit": null,
+  "source_commit_null_reason": "No new source commit was queried or invented for this local written report.",
+  "availability": "LOCAL_ONLY",
+  "novelty_claimed": false,
+  "coverage": "UNKNOWN",
+  "target_resolution": "NONE"
+}

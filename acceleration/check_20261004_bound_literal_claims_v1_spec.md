@@ -1,0 +1,8 @@
+# Parameterized deep typed administrative checker V1
+
+Source-only successor of the CP eight checker (itself Root-five ancestry). It imports no copier, ledger helper, scientific algorithm or mathematical verifier. It reconstructs the whole expected append from the authenticated literal packet and candidate, with a separate Python JSON duplicate-key/NaN-rejecting parser and recursive type-preserving equality (bool differs from int).
+
+Dynamic strict integer packet counts, schema_version2, sum, PUBLIC count, full claim evidence map/list union, local artifact prefix/reason, path/hash bytes, ordinal-first PUBLIC/LOCAL_ONLY reuse, exact new artifacts and full claim objects are checked. Complete previous claim/artifact prefixes and every other top field are compared. All candidate new evidence IDs, verification artifact hash maps, unknowns/external_source/reproducibility references come only from packet literals. Original literal verification timestamps remain unchanged. Output is one summary.json with PASS_ADMINISTRATIVE_ONLY and every fresh path/hash; it provides no mathematical approval, feasibility result, availability promotion or live installation.
+
+One command deadline includes parsing/hashing; regular relative input paths must resolve within the workspace, output must be fresh and contained in acceleration/results. Check reserve before output creation and after summary serialization. Containing supervisor receipt remains required. CP shared copier/checker adaptation is explicit; Root independent raw prefix/core audit and unchanged generic schema validator remain separate requirements. Initial changed-source finite controls and Root qualification are mandatory. No command may use -O (assertions are contract checks).
+

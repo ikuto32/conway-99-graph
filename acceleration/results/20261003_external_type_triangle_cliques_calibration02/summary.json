@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-10-03T22:12:12.105925+00:00",
+  "status": "EXTERNAL_TYPE_TRIANGLE_CLIQUES_V1_AUTHOR_CALIBRATION_PASS",
+  "producer": "/root/checkpoint_audit",
+  "independent_verifier_required": "/root/native_driver",
+  "target_resolution": "NONE",
+  "source_sha256": "be5edffa96cd9619eab5a6976b4a786b89631aa63e6685c04cf6a01471fd979c",
+  "spec_sha256": "b0c0ceecbee43cdbd32a3735981b6d6e0c53fd7c202be1e1ecdc852ae8a681f2",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/survey_20261003_external_type_triangle_cliques_v2.py",
+    "calibrate",
+    "--seconds",
+    "150",
+    "--out",
+    "acceleration/results/20261003_external_type_triangle_cliques_calibration02",
+    "--source-sha256",
+    "be5edffa96cd9619eab5a6976b4a786b89631aa63e6685c04cf6a01471fd979c",
+    "--spec-sha256",
+    "b0c0ceecbee43cdbd32a3735981b6d6e0c53fd7c202be1e1ecdc852ae8a681f2"
+  ],
+  "inputs_sha256": {
+    "acceleration/survey_20261003_external_type_triangle_cliques_v2.py": "be5edffa96cd9619eab5a6976b4a786b89631aa63e6685c04cf6a01471fd979c",
+    "acceleration/survey_20261003_external_type_triangle_cliques_v2_spec.md": "b0c0ceecbee43cdbd32a3735981b6d6e0c53fd7c202be1e1ecdc852ae8a681f2",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "outputs_sha256": {
+    "control_pairwise_without_common_Q.json": "7a57111d4b5198cb539eb4014d2a1958a894a540dc47320166b8cef3f32f6f91",
+    "control_pairwise_without_common_Q_cuts.json": "cc60d52d7d30163c191630bd8043f7310714811f77d5607d12d947d92945ab1a",
+    "control_exact_one_not_violated.json": "e2602e9e223d715c5a99a206066a97c4a4f3880599ef1be077df521cbee8bb96",
+    "control_below_one.json": "0419f9aa119287fcbc90688ab95f24061161bb256afe7e3cc961e61e3bfc4acb",
+    "control_one_edge_not_triangle.json": "02ae93961af4e8157a18c4c1c371d7c8f12189170985dc86bf43cf0bfd1e6c4c",
+    "control_small_and_zero_excluded.json": "6a40debb33125fe272f8ecb378c2258bba877d73635dbb9a146ac15142e6b342",
+    "control_genuine_primal_header.json": "a21bf54866001cc90a6998563d12633dbc5703e64226e43c649c995df441a328",
+    "control_bool_mask.json": "33de82004962f6dd26411664bc8ef0200cabb7a92e91bef53160d812bf55f3d5",
+    "control_float_mask.json": "f65f51ec0d862bf552487634ec81f452478df28d1dc69e9f68bb5db8c3842186",
+    "control_duplicate_mask.json": "9784c3565a562aa367849959ce81ebb9629daf2ceeb8fea07f668b4f721fcaa2",
+    "control_reverse_masks.json": "0d1f91415cd4f8efa1c26e30bfa0f02de303b401a7e6c40b94f75c0a13c969b0",
+    "control_out_of_domain.json": "7e6c01db41dc91b4addccbc00cefdd2a90e07d87018fc84be41b697cb791d18e",
+    "control_float_weight.json": "f7ddf0b1d8712f0b60c9cc8b8f919c8c322468125428b92c1e6af895db6fa6e7",
+    "control_bool_weight.json": "1a0f3a859a0ab080ff00373766ecbe29dbb52fc86241d5a52628af3e6297bca4",
+    "control_unreduced_weight.json": "868a214c8353e04b3597d55a94acf45891ea66c21f692e85c11f3890bcbe9678",
+    "control_negative_weight.json": "3fb124c11d2a855a814b1becc959b8f554465ddad5a01752eddccb06d2fbc7c8",
+    "control_wrong_weight_count.json": "00637a93893ef3acfb08b7064d9c3cc19265080734637d56926bc54fdba3f0f6",
+    "control_legacy_method.json": "f7d509ec3c7fee852023ebf6d4ccd06b2a9ec644132c439721332001746b3d2f",
+    "control_dual_not_primal.json": "aa7e31d3cc5dfdb4652ff9df003f14d12df4c62169f893b774d8b70810e1391a",
+    "control_bool_dimension.json": "ecdfbc01cff28a205b19f4726e5ddc3fba5db472bf1587e1dbc40f0a49e48f5b",
+    "controls.json": "80fa03a406e1e869eb2eaaff9f6095ed96e431947e5dee7731ed8d97818e9a4c"
+  },
+  "controls": [
+    {
+      "case": "pairwise_without_common_Q",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "exact_one_not_violated",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "below_one",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "one_edge_not_triangle",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "small_and_zero_excluded",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "genuine_primal_header",
+      "expected_stage": "PASS",
+      "actual_stage": "PASS"
+    },
+    {
+      "case": "bool_mask",
+      "expected_stage": "MASK_INTEGER",
+      "actual_stage": "MASK_INTEGER"
+    },
+    {
+      "case": "float_mask",
+      "expected_stage": "MASK_INTEGER",
+      "actual_stage": "MASK_INTEGER"
+    },
+    {
+      "case": "duplicate_mask",
+      "expected_stage": "MASK_ORDER",
+      "actual_stage": "MASK_ORDER"
+    },
+    {
+      "case": "reverse_masks",
+      "expected_stage": "MASK_ORDER",
+      "actual_stage": "MASK_ORDER"
+    },
+    {
+      "case": "out_of_domain",
+      "expected_stage": "MASK_INTEGER",
+      "actual_stage": "MASK_INTEGER"
+    },
+    {
+      "case": "float_weight",
+      "expected_stage": "WEIGHT_STRING",
+      "actual_stage": "WEIGHT_STRING"
+    },
+    {
+      "case": "bool_weight",
+      "expected_stage": "WEIGHT_STRING",
+      "actual_stage": "WEIGHT_STRING"
+    },
+    {
+      "case": "unreduced_weight",
+      "expected_stage": "WEIGHT_CANONICAL",
+      "actual_stage": "WEIGHT_CANONICAL"
+    },
+    {
+      "case": "negative_weight",
+      "expected_stage": "WEIGHT_NONNEGATIVE",
+      "actual_stage": "WEIGHT_NONNEGATIVE"
+    },
+    {
+      "case": "wrong_weight_count",
+      "expected_stage": "WEIGHT_SHAPE",
+      "actual_stage": "WEIGHT_SHAPE"
+    },
+    {
+      "case": "legacy_method",
+      "expected_stage": "EXACT_PRIMAL_GATE_HEADER",
+      "actual_stage": "EXACT_PRIMAL_GATE_HEADER"
+    },
+    {
+      "case": "dual_not_primal",
+      "expected_stage": "EXACT_PRIMAL_GATE_SCOPE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SCOPE"
+    },
+    {
+      "case": "bool_dimension",
+      "expected_stage": "EXACT_PRIMAL_GATE_SCOPE",
+      "actual_stage": "EXACT_PRIMAL_GATE_SCOPE"
+    }
+  ],
+  "outcome": null,
+  "LP_calls": 0,
+  "RREF_calls": 0,
+  "actual_primal_read": false,
+  "full_trajectory_or_graph_claim": false,
+  "deadline": {
+    "elapsed_seconds": 0.1720000000204891,
+    "remaining_seconds": 149.8279999999795,
+    "review_remaining_seconds": 1799.8279999999795,
+    "review_due": false,
+    "review_overdue_seconds": 0.0,
+    "deadline_reached": false,
+    "stop_required": false,
+    "deadline_at": 270697.671,
+    "review_deadline_at": 272347.671,
+    "completed_reviews": 0
+  }
+}

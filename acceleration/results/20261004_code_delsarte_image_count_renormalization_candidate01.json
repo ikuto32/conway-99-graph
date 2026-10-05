@@ -1,0 +1,55 @@
+{
+  "schema": "WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "status": "CANDIDATE",
+  "id": "C-CODE-DELSARTE-IMAGE-LOWER-COUNT-RENORMALIZATION",
+  "revision": 1,
+  "created_at": "2026-10-04T17:19:16+00:00",
+  "producer": "/root/structural",
+  "statement": "For a linear code C with a constant-basis-one Delsarte dual F=1+sum_j y_j K_j, y_j>=0, nonpositive at every permitted nonzero weight, and separately justified dual-image counts B_j>=ell_j>=0, put d=1+sum_j y_j ell_j. Then |C|<=F(0)/d and 1+sum_j(y_j/d)(K_j-ell_j)=F/d exactly, preserving every tail sign.",
+  "scope": {
+    "description": "Conditional generic code-dual algebra and target application only after exact support/image-count premises; no novelty/rank-gain assertion",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Linear finite-field code and exact MacWilliams character orthogonality.",
+    "Baseline exact constant Krawtchouk coefficient one, all remaining coefficients nonnegative, and all permitted nonzero tail values nonpositive.",
+    "Separately justified actual dual weight lower counts ell_j with 0<=ell_j<=B_j."
+  ],
+  "dependencies": [],
+  "proof": {
+    "paper": {
+      "path": "docs/CANDIDATE_20261004_CODE_DELSARTE_IMAGE_COUNT_RENORMALIZATION_V1.md",
+      "sha256": "102ab220a98c72599c762996af55c82109e13411f89c6b9ac4f8a1e3994b08ec"
+    },
+    "steps": [
+      "MacWilliams sum >=|C|*(1+sum y ell)",
+      "Nonpositive tails bound the sum by F0",
+      "Normalize multipliers and lower-count constant to get exactly F/d"
+    ]
+  },
+  "hand_controls": [
+    {
+      "name": "Zero q5 n2 code with full dual",
+      "baseline_size": "25",
+      "image_lower_counts": {
+        "1": 8,
+        "2": 16
+      },
+      "denominator": "25",
+      "rescaled_size": "1"
+    },
+    {
+      "name": "Full q5 n2 code with zero dual",
+      "boundary": "The same positive image lower counts are false, so the bound1 cannot be applied."
+    }
+  ],
+  "sharing": "Root supplied rescaling idea; no independent approval by agreement.",
+  "source_or_mathematical_executions": 0,
+  "independent_review": null,
+  "limitations": [
+    "A smaller rational size need not improve integer dimension.",
+    "No nonzero code, target resolution or optimum is forced.",
+    "This algebra overlaps the declared lower-count MacWilliams inequality; no literature-novelty claim."
+  ]
+}

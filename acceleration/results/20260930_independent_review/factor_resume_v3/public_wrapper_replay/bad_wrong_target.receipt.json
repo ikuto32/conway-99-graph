@@ -1,0 +1,33 @@
+{
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py",
+    "calibration-chunk",
+    "--out",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\public_wrapper_replay\\bad_wrong_target",
+    "--core",
+    "shift6",
+    "--seed",
+    "20260930",
+    "--chains",
+    "2",
+    "--chunks",
+    "1",
+    "--steps",
+    "41",
+    "--seconds",
+    "30",
+    "--temperature",
+    "3.25",
+    "--resume",
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\results\\20260930_independent_review\\factor_resume_v3\\public_wrapper_replay\\bad_wrong_target_checkpoint.json"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "exit_code": 1,
+  "wall_seconds": 0.14000000013038516,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 302, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 296, in main\n    result=resume_regression(out) if args.mode=='resume-calibrate' else run_chunks(args,out,calibration_only=args.mode=='calibration-chunk')\n                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 218, in run_chunks\n    prev=read(args.resume);need(prev['problem']==p and prev['objective_version']==VERSION,'resume domain/objective binding');ss=prev['chains']\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ikuto\\projects\\conway-99-graph\\acceleration\\theory_20260930_factor_permutation_annealer_v3.py\", line 37, in need\n    if not b: raise ValueError(s)\n              ^^^^^^^^^^^^^^^^^^^\nValueError: resume domain/objective binding\n",
+  "resume_path": "acceleration/results/20260930_independent_review/factor_resume_v3/public_wrapper_replay/bad_wrong_target_checkpoint.json",
+  "resume_sha256": "426b1699dd28ccd1402dbfcb1311b7d6f2a270c06b22526a574adf46cf50764b",
+  "expect_ok": false
+}

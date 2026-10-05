@@ -1,0 +1,131 @@
+{
+  "status": "ORIENTED_TRIPLE_NATIVE_PENDING_INDEPENDENT_REVIEW",
+  "timestamp": "2026-09-30T05:20:46.194763+00:00",
+  "receipt": {
+    "timestamp": "2026-09-30T05:20:46.184922+00:00",
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--exec",
+      "/usr/bin/timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "60s",
+      "/usr/bin/prlimit",
+      "--as=4294967296:4294967296",
+      "--fsize=10737418240:10737418240",
+      "--core=0:0",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+      "--no-binary",
+      "-c",
+      "1000000",
+      "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_oriented_triples/instance.cnf",
+      "/tmp/conway99-oriented-triples-S7TSWr/proof.drat"
+    ],
+    "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+    "actual_exit_code": 0,
+    "outer_windows_guard_expired": false,
+    "outer_windows_guard_seconds": 70,
+    "wall_seconds": 24.609000000171363,
+    "stdout": "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/solver.stdout.log",
+    "stdout_sha256": "f7231a8793f4676808ce148cdb4ddb966b0f6670ea75f90e212e0190616e9b2b",
+    "stderr": "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/solver.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+    "exit_interpretation": {
+      "10": "native SAT",
+      "20": "native UNSAT",
+      "0": "native UNKNOWN or non-solver success",
+      "124": "GNU timeout deadline",
+      "137": "forced kill; inspect stderr and receipt"
+    }
+  },
+  "research_calls": 1,
+  "target_resolution": false,
+  "automatic_retry": false,
+  "proof_copy": {
+    "linux_source": "/tmp/conway99-oriented-triples-S7TSWr/proof.drat",
+    "sha256": "3b6f8b0d776225ac091586211ca9ee33e6d6a933b3bd03df83a274f21a4328f4",
+    "bytes": 331620166,
+    "native_hash_receipt": {
+      "timestamp": "2026-09-30T05:20:46.397016+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/sha256sum",
+        "/tmp/conway99-oriented-triples-S7TSWr/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 90,
+      "wall_seconds": 0.2029999999795109,
+      "stdout": "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_hash.stdout.log",
+      "stdout_sha256": "a8d99a5d83fab475d6f3a8b8598bc20bc2eccee2b18d7d49ce5d2552f897d431",
+      "stderr": "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_hash.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "copy_receipt": {
+      "timestamp": "2026-09-30T05:20:47.907973+00:00",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu-24.04",
+        "--exec",
+        "/usr/bin/cp",
+        "--",
+        "/tmp/conway99-oriented-triples-S7TSWr/proof.drat",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/proof.drat"
+      ],
+      "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+      "actual_exit_code": 0,
+      "outer_windows_guard_expired": false,
+      "outer_windows_guard_seconds": 180,
+      "wall_seconds": 1.5160000000614673,
+      "stdout": "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_copy.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_copy.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+      "exit_interpretation": {
+        "10": "native SAT",
+        "20": "native UNSAT",
+        "0": "native UNKNOWN or non-solver success",
+        "124": "GNU timeout deadline",
+        "137": "forced kill; inspect stderr and receipt"
+      }
+    },
+    "windows_hash_wall_seconds": 0.2339999999385327
+  },
+  "interpreted_result": "UNKNOWN_NATIVE_OR_RESOURCE_OUTCOME",
+  "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+  "outputs_sha256": {
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/launch.json": "22afb45e4311cf07452f5a5e23578fac256842d6db40e608fb6706979c7390d7",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/proof.drat": "3b6f8b0d776225ac091586211ca9ee33e6d6a933b3bd03df83a274f21a4328f4",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/solver.receipt.json": "25eea91346465de2d72203981d3d46dd69ca9d5d740edd8ad4e9b54aa07f4822",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/solver.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/solver.stdout.log": "f7231a8793f4676808ce148cdb4ddb966b0f6670ea75f90e212e0190616e9b2b",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_copy.receipt.json": "576449711c5f34af8b1fc96b22306745b84a71b2d67ad5468a3c7cecfa1dcdb4",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_copy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_copy.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_hash.receipt.json": "fb06e584099acd9d551c20ab7bb3948a760883ddb590928b368ae2f1eedebf42",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_hash.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "acceleration/results/20260930_hadamard_oriented_triples_native_pilot/main/transfer_hash.stdout.log": "a8d99a5d83fab475d6f3a8b8598bc20bc2eccee2b18d7d49ce5d2552f897d431"
+  },
+  "limitations": [
+    "Independent complete cover checking required for SAT. No full factor or target graph follows.",
+    "UNSAT needs exact complete proof replay and checked subfamily coverage; never unrestricted nonexistence.",
+    "No numerical tolerances; UNKNOWN excludes nothing. Trace copy time is separately recorded, outside the native wall allocation."
+  ]
+}

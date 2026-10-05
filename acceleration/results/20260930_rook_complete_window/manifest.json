@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-29T19:14:36.444790+00:00",
+  "source_commit": "048ff18824f076898652da87f4213d74147a0a95",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_rook_complete_window.py",
+    "--input",
+    "acceleration/results/20260930_rook_joint/joint_witness.json",
+    "--out",
+    "acceleration/results/20260930_rook_complete_window"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_complete_window.py": "7064776af9e1a955a7c09253b3c2e4632e1ee988b873490e59d9175a465ad294",
+    "acceleration/results/20260930_rook_joint/joint_witness.json": "ada6539e1860952381337468e234602eeaf0c83af5ed0d7f5546538fde7cc817",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Can the two opposite right-cell degree-two blocks complete the frozen 50-vertex window without exceeding any target common-neighbor count?",
+  "scope": "Only the exact saved central star, all internal matchings, and four already-chosen perfect matchings. There are 200 candidate new edges in two disjoint cell pairs, each requiring a 2-regular bipartite block. Remaining 40 external vertices are absent; passing is only local necessity.",
+  "selection_rule": "First reject single edges whose addition violates a monotone common-neighbor upper bound, then depth-first search row neighbor pairs in lexicographic order, with most-constrained-row ordering.",
+  "success_criteria": "A complete 2-regular pair of blocks passing every integer cap; first witness stops search.",
+  "falsification_criteria": "A row with fewer than two individually possible edges is an exact exclusion of this frozen window; otherwise only complete DFS exhaustion excludes it.",
+  "resource_limits": {
+    "nodes": 1000000,
+    "wall_seconds": 120,
+    "stop_on_first_witness": true
+  },
+  "numeric_thresholds": null,
+  "numeric_thresholds_reason": "Exact bit counts and integer degree capacities.",
+  "status": "CANDIDATE",
+  "independent_review_pending": true
+}

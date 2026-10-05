@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-09-29T19:41:48.819270+00:00",
+  "source_commit": "dacbbaa157f30182f877dc38b2017f790ddc5938",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/theory_20260930_rook_gram_minimize.py",
+    "--graph",
+    "acceleration/results/20260930_rook_free_internal_independent_certificate/independent_full59.json",
+    "--certificate",
+    "acceleration/results/20260930_rook_free_internal_gram/result.json",
+    "--encoding-model",
+    "acceleration/results/20260930_rook_free_internal_sat/model.json",
+    "--cnf",
+    "acceleration/results/20260930_rook_free_internal_sat/instance.cnf",
+    "--out",
+    "acceleration/results/20260930_rook_gram_minimized"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "input_hashes": {
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/theory_20260930_rook_gram_minimize.py": "e261af21abd463c3ce9b8a1700d17fe8fe46e581076b9689069c965baf2abb10",
+    "acceleration/theory_20260930_rook_gram_falsifier.py": "b2d6581c9b458307198d84344233c18748df75b8b0a2b97f8cdbcc6e6cd20b3b",
+    "acceleration/results/20260930_rook_free_internal_independent_certificate/independent_full59.json": "dd3167d5b609e716283ba80aaffacffdbbc6e04f9524e895eb26f1ff04a4974e",
+    "acceleration/results/20260930_rook_free_internal_gram/result.json": "40bba02e170e584ff37778032c40ca8a1ea8bbbdf6acccfb88d19c4994b3eaf3",
+    "acceleration/results/20260930_rook_free_internal_sat/model.json": "26908e992235e307cfc6145275deb3d2765a930c7c59a774c9a7bc42f2f0f95e",
+    "acceleration/results/20260930_rook_free_internal_sat/instance.cnf": "ed9d0e102b16481fdbcecef34240b5be2b8a357af8c219606bb688dcb5fe9403",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db"
+  },
+  "question": "Can deletion of principal Gram rows shrink the exact negative-direction support and the corresponding sound assignment-blocking clause?",
+  "scope": "One independently decoded local59 graph and the fixed780-edge model. A resulting nogood is necessary for any target extension, not a proof of family nonexistence.",
+  "selection_rule": "Try support vertices in descending full59 index, so right-cell vertices are attempted first. Keep a deletion only when fresh exact rational elimination proves the remaining principal matrix indefinite. Repeat up to three passes or until no deletion.",
+  "resource_limits": {
+    "wall_seconds": 120,
+    "passes": 3
+  },
+  "success_criteria": "Emit an explicit integer vector with directly computed negative v^T(27I-9A+J)v, then block only current values of encoding variables with nonzero quadratic coefficients.",
+  "falsification_criteria": "Reject any nonnegative final quadratic, malformed mapping, or mismatch between the full quadratic and reconstructed coefficient sum.",
+  "status": "CANDIDATE",
+  "independent_review_pending": true,
+  "no_sat_launch": true
+}

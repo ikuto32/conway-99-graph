@@ -1,0 +1,131 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T20:45:28Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FOUR-D2-ORDINARY-SUPPORT-TOPOLOGIES",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets and put d_T=6-r_T for each actual triangle. Suppose R=227, every d_T belongs to {0,1,2}, and exactly four actual triangles have deficiency two. Then there are sixteen deficiency-one triangles. Every vertex used by them lies in exactly two of them, so their support S has twenty-four vertices. All four deficiency-two triangles lie wholly in S, and their actual intersection graph is a four-node star K1,3, a four-node path P4, or a four-cycle C4.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}",
+    "exactly four actual triangles have deficiency two"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary selected-support and four-high intersection topology at R227/b4. Excludes outside d2 points and selected fourfold incidence, retaining three possible ordinary-support topologies.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "four_D2_population_excluded": false,
+    "survivor_realizability_claimed": false
+  },
+  "dependencies": [
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FOUR-D2-COMMON-POINT", "revision": 1, "relation": "uses_result"}
+  ],
+  "dependency_reason": "The sole inherited result rejects all four d2 roots through an outside point. Selected parity, weighted support, local cycle map, h1/topology bounds and k1/h0 complete norm obstruction are reconstructed independently in the paper.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md",
+    "sha256": "f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_ORDINARY_SUPPORT_TOPOLOGIES_V1.md": "f40e99a2b53aea39ab02ad332cacd1202c9bd193bb8d4673732aec918030b488",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FOUR_D2_COMMON_POINT_V1.md": "19484aab2a31ba6cec339a2c1cdcb0b23a007963453ee38e459741067cb73e17",
+    "acceleration/results/20261004_independent_review/target_rook_count227_four_d2_common_point_native01/claim_binding_schema2.json": "ba845921017175de16810e69425290244762500b4c600b00e32946f56d552939",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_MAXD2_D2_POPULATION_LOWER4_V1.md": "8598aea89b6f61130e71bd7f79aee979f71945e86c9578acb8d78c7c637629b7",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136"
+  },
+  "first_necessary_cases": {
+    "D": 24,
+    "D1_triangles": 16,
+    "D2_triangles": 4,
+    "positive_triangles": 20,
+    "selected_multiplicities": [2,4],
+    "S_size": "24-k",
+    "w_sum": 24,
+    "w_squared_norm": "24+2k",
+    "outside_D2_points_h": [0,1],
+    "outside_triple_roots_when_h1": 3,
+    "k_when_h0": [0,1],
+    "k_when_h1": [0,1,2],
+    "weighted_Gram": "q=136+6k-2E>0",
+    "weighted_edge_lower": "48+8k+ell+H; H12 at h0/H6 at h1"
+  },
+  "exact_cycle_premises": {
+    "defect_vertices": 20,
+    "defect_edges": 36,
+    "collapsed_F4": 0,
+    "actual_uncovered_squares": 36,
+    "required_cycle_incidence": 144,
+    "K33": "none, including repeated-label local degree3 and distinct-label actual rook cases",
+    "max_codegree": 3,
+    "high_root_bound": "B=12+3k_T-2e(N_F(T)); c<=B withloss1 if B notdivisible3"
+  },
+  "h1_complete_table": [
+    {"high_graph": "K3+isolated", "low_max": 80, "high_bounds": [15,15,15,12], "total_max": 137},
+    {"high_graph": "K3+pendant", "low_max": 80, "high_bounds": [18,15,15,15], "total_max": 143}
+  ],
+  "h0_low_edge_complete_table": [
+    {"high_graph": "empty", "edges": 0, "low_max": 88, "high_max": 48, "total_max": 136},
+    {"high_graph": "oneedge+2isolates", "edges": 1, "low_max": 87, "high_max": 54, "total_max": 141},
+    {"high_graph": "matching2", "edges": 2, "low_max": 80, "high_max": 60, "total_max": 140},
+    {"high_graph": "P3+isolate", "edges": 2, "low_max": 83, "high_max": 60, "total_max": 143}
+  ],
+  "k1_h0_norm_obstruction": {
+    "S_size": 23,
+    "E": "68+z, z0/1",
+    "q": "6-2z",
+    "Y": "3Qw, integral2mod3,sum0",
+    "actual_norm_squared": "378-126z",
+    "peak_on_D2": "would forceE>=70, impossible",
+    "extra_peak_edge": "would forceE>=70, impossible",
+    "selected_Y_baseline": "nine2 values/fourteen5 values, sum88/norm386",
+    "high_intersections": "t>=3 distinctshared points;12-2t privatepoints",
+    "known_D2_inside_norm_lower": "98+72t",
+    "extra_nonpeak_edge_norm_loss_max": "42z",
+    "inside_sum": "16-6z",
+    "outside_entries": 76,
+    "outside_norm_lower": "136+6z",
+    "full_norm_lower": "234+72t-36z>=450-36z",
+    "strict_gap": "72+90z>0"
+  },
+  "final_necessary_cases": {
+    "D1_incidence": "exactly2 at every selected point",
+    "S_size": 24,
+    "outside_D2_points": 0,
+    "high_intersection_graphs": ["K1,3","P4","C4"],
+    "realizability_claimed": false
+  },
+  "proof_route": [
+    "Selected local parity and the16-root selected fan force nonzero incidences2/4; full positive fan and exact common-point theorem give h0/1.",
+    "Weighted PSD gives k0/1 at h0 and k0/1/2 at h1.",
+    "Exact local graph types exclude collapsed cycles, giving full144 incidence, K33 prohibition and max codegree3.",
+    "Both h1 high topologies have incidence bounds137/143, so h0.",
+    "At h0 the high graph is triangle-free; all edge0/1/2 topologies have bounds136/141/140/143, so t>=3.",
+    "At k1/h0, E68/69 prohibits peak D2 or extra peak edges; complete internal/outside residue norms force a strict gap for t>=3.",
+    "Hence k0/h0 and the remaining triangle-free four-node topologies star,path,cycle."
+  ],
+  "shared_origin": {
+    "Root_h1_topology_and_fourfold_norm_outlines": true,
+    "Structural_independent_label_count_and_full_norm_reconstruction": true,
+    "earlier_cycle_and_Gram_component_overlap_disclosed": true,
+    "agreement_is_verification": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "No remaining high topology or b4/R227 population is excluded or constructed.",
+    "The exact common-point theorem r1 remains a logical dependency, not an informal role waiver.",
+    "This new CANDIDATE needs separate whole proof verification; previous gates do not approve it.",
+    "No scientific invocation, registry action or frozen publication selection change occurred."
+  ]
+}

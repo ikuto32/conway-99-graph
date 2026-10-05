@@ -1,0 +1,47 @@
+{
+  "id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-PROJECTION",
+  "revision": 1,
+  "statement": "Every coordinatewise balanced full-prescribed-Gram factor on the fixed six-prism Hadamard support that satisfies all outside-column caps induces a satisfying assignment of the authenticated 520-variable, 4541-clause formula consisting of the original parity projection and all sixty constant-group support cuts.",
+  "kind": "encoding",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Necessary projection only for the balanced-triplet fixed-support family with outside-column caps; no full factor equivalence.",
+  "assumptions": [
+    "The explicit fixed support, full Gram, coordinatewise balance and outside-column caps.",
+    "No nontrivial target automorphism is assumed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-BALANCED-PARITY-PROJECTION",
+      "revision": 1,
+      "relation": "premise"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-BALANCED-PARITY-CONSTANT-GROUP-NECESSITY",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "verifier": "/root/state_literature_audit",
+  "method": "Full independent original-clause reconstruction plus independent proved-extension mapping; complete raw projection checking",
+  "evidence": [
+    {
+      "path": "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_encoding/summary.json",
+      "sha256": "7a9b76b9e139f065c850194b6968ebf4a98c0211668e1f824d2ac75640b7dd12",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "limitations": [
+    "Necessary projection only for the balanced-triplet fixed-support family with outside-column caps; no full factor equivalence.",
+    "No proof that arbitrary factors are balanced; no other support covered.",
+    "A SAT projection is neither a Gram factor nor a target graph; residual D is absent.",
+    "UNSAT needs separate complete proof replay; the complete semantic premise includes the earlier cyclic-factor exclusion through the original nonconstant-group clause.",
+    "No solver called by this checker; no full research-positive projection for the new formula is invented."
+  ],
+  "created_at": "2026-09-30T04:23:44.895438+00:00",
+  "updated_at": "2026-09-30T04:23:44.895438+00:00"
+}

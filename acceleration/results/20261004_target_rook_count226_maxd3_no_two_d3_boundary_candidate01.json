@@ -1,0 +1,40 @@
+{
+  "schema":"CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp":"2026-10-04T21:52:06Z",
+  "status":"CANDIDATE",
+  "claim_id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-NO-TWO-D3-BOUNDARY",
+  "claim_revision":1,
+  "producer":"/root/structural",
+  "verification":null,
+  "statement":"For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_T=6-r_T for each actual triangle. Suppose R=226 and every d_T belongs to {0,1,2,3}. Then the number of actual triangles with deficiency three is not two.",
+  "assumptions":["complete finite simple SRG(99,14,1,2)","R=226 counts actual induced rook-nine vertex sets once","d_T=6-r_T belongs to {0,1,2,3} for every actual triangle"],
+  "scope":{"description":"Exact five-result composition excluding c2 at R226/maxd3.","unrestricted_target":true,"maximum_deficiency3_inferred":false,"D3_population_upper1_inferred":false,"count226_excluded":false,"graph_construction":false,"target_resolution":"NONE","scientific_coverage":"UNKNOWN"},
+  "dependencies":[
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-D2-BOUNDARIES","revision":1,"relation":"uses_result"},
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-B2-NO-INTERSECTION","revision":1,"relation":"uses_result"},
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-TWO-D2-BOUNDARY","revision":1,"relation":"uses_result"},
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-THREE-D2-BOUNDARY","revision":1,"relation":"uses_result"},
+    {"id":"C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-TWO-D3-NO-FOUR-THROUGH-SIX-D2-BOUNDARY","revision":1,"relation":"uses_result"}
+  ],
+  "paper":{"path":"docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_NO_TWO_D3_BOUNDARY_V1.md","sha256":"f52390265082a0afaa18f5a0d3f6c787c6d4a422552754284dcb05f610e9e0e4"},
+  "inputs_sha256":{
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_NO_TWO_D3_BOUNDARY_V1.md":"f52390265082a0afaa18f5a0d3f6c787c6d4a422552754284dcb05f610e9e0e4",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_D2_BOUNDARIES_V1.md":"5f61d9abceed621ab6cd5b011fb1056eae89f0ce1b64451917de914097334ba4",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_d2_boundaries_candidate01.json":"da07f67deb74fd8f7c89d0f869b84c0a686460563c24e6b10e0670fe4c590b1a",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_B2_NO_INTERSECTION_V2.md":"deea56556dd520bffffbf484e6b2efef5469e5eb092567ac2d6d974661412279",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_b2_no_intersection_candidate02.json":"9eba53d256a1b19b84ac685c2304e6de473ebe8307e19528c71475f187136a77",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_TWO_D2_BOUNDARY_V1.md":"c2dcb60409b9ad42e4baaf1aad0e42ab3b04e887fdc212ecb0863ad993b74069",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_no_two_d2_boundary_candidate01.json":"547d64b978304c37c6a8f5feb2ee70978a4cb2108cf58f6dcbb6f6f660138d2f",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_THREE_D2_BOUNDARY_V1.md":"504d0387a68375519cd3b6415dc974a76dc83d19791d88657bf2c9edf42c1420",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_no_three_d2_boundary_candidate01.json":"2d36c30a63fd54c2b22d5b43edbb523757013e1479e94a0eb136dfc57f959ae1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_TWO_D3_NO_FOUR_THROUGH_SIX_D2_V1.md":"b1431c80962d0a8b65dd12d9fdf5f2a2ad057261954d38757b735cff48b5861d",
+    "acceleration/results/20261004_target_rook_count226_maxd3_two_d3_no_four_through_six_d2_candidate01.json":"da7620d4e2d7f1eaf028accb60335fead8cfc7dfd8982e53706ae63f7c6b4b4c",
+    "acceleration/results/20261004_target_rook_count226_two_d3_b2_external_opposite_native_veto01.json":"a3144351d3de865e04d5635c4fb2844ebb0496b3a023dc0134ac3a5cb33e81c0"
+  },
+  "exact_composition":["Assume c2 at unchanged R226/maxd3.","The exact necessary boundary gives b2..6 and intersection only at b2.","The corrected V2 intersection branch forces the two D3 roots to be disjoint.","The exact disjoint b2 and b3 results exclude those two integers.","The exact disjoint b4..6 result excludes the remaining three integers.","Every possible integer b is excluded under its literal hypotheses; hence c2 is impossible."],
+  "pending_gates_at_preparation":{"necessary_boundary_report":null,"corrected_V2_intersection_report":null,"disjoint_b2_report":null,"disjoint_b3_report":null,"disjoint_b4_through6_report":null,"composition_report":null,"Root_acceptance":null},
+  "source_boundaries":{"intersection_proof_version":2,"V1_omitted_opposite_veto_preserved":true,"V2_complete_cycle_bound":164,"b3_middle_high_bound":16,"bad_graph_valid_P3_retained":true},
+  "shared_origin":{"Structural_author_of_dependency_papers":true,"Root_shared_outlines_disclosed_in_each":true,"distinct_composition_verification_required":true},
+  "mathematical_programs_executed":0,"solver_calls":0,"formal_checks":0,"ledger_writes":0,"Git_writes":0,"old_artifacts_modified":false,"publication_cutoff_inclusion":false,
+  "limitations":["This composition requires genuine exact r1 gates for all five dependency scopes, not author agreement.","It does not supply the separate maxd3, c<=3 or c!=3 conclusions.","It uses corrected intersection V2 only; no V1 gate or rejected bounds are transferred.","No R226 or target exclusion, survivor construction or scientific execution is claimed."]
+}

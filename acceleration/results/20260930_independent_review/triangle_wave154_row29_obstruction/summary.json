@@ -1,0 +1,152 @@
+{
+  "status": "INDEPENDENT_FIXED_WAVE154_ROW29_EMPTY_DOMAIN_PASS",
+  "timestamp": "2026-09-29T22:35:15.197015+00:00",
+  "source_commit": "9177adf62f6d27bd41b064c35552ceeea55338c4",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_triangle_row29_obstruction.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction"
+  ],
+  "working_directory": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "verifier": "/root/state_literature_audit independent raw constraint and certificate checking agent",
+  "claim_id": "C-FIXED-WAVE154-ROW29-EMPTY-DOMAIN",
+  "claim_revision": 1,
+  "recommendation": "VERIFIED",
+  "kind": "exclusion",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "statement": "For the exact propagated Wave154 partial99graph, no Boolean assignment to its38 unknown row29 edges satisfies the required degree10, the24 exact common-neighbor equations against vertices3 through26, and the53 pair incompatibilities forced by already known common neighbors. Consequently no row29 of a target completion of the exact initial Wave154 family is possible.",
+  "scope": "Only row29 of the exact fixed labelled Wave154/Q1 partial graph; the claim is a necessary-row obstruction, not an equivalence of this row relaxation with full graph completion.",
+  "assumptions": [
+    "The frozen initial Wave154 partial graph is the fixed configuration under consideration.",
+    "No nontrivial target automorphism or universal containment of this configuration is assumed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-TRIANGLE-FIXED-Q1-PARTIAL99-PROPAGATION",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "inputs_sha256": {
+    "acceleration/results/20260930_triangle_wave154_row29_obstruction/summary.json": "a0814f7972a8592d454f7c4c9f5fabaf78bf3bc91ffc59e9509102c0b403205f",
+    "acceleration/results/20260930_triangle_partial99/wave154.json": "e8581587313cf8207799dcf781d8469eb66a699687e023faf0a435000ab9f69b",
+    "acceleration/results/20260930_independent_review/triangle_q1_partial99/summary.json": "bad7ddc51101377b8eaa284c650db8adcee5c261a0717073b90fc9e2347d7594",
+    "acceleration/results/20260930_triangle_wave154_row29_obstruction/constraints.json": "069433c93cf639c41d017a92a1851992e1170be4bb06f118c2b7ce0b5857648a",
+    "acceleration/results/20260930_triangle_wave154_row29_obstruction/controls.json": "5b489402b7c5026901b57ab4907b525d0a11cdc5247203896ca8498682ddc551",
+    "acceleration/results/20260930_triangle_wave154_row29_obstruction/manifest.json": "d0ce027fb895bf01491caab7aebbb11f9faa3e19d3881f36c2f0a16e70e15684",
+    "acceleration/results/20260930_triangle_wave154_row29_obstruction/proof_tree.json": "8ec00ae48cf46e4da377b7bcbe52c36b1b92eb0ba896ddb367d9df896947b892",
+    "acceleration/theory_20260930_triangle_row_obstruction.py": "ea449560d9c9a676bd80d291af177110b17972b3c6d25ec33eabee2edfd3fa41",
+    "acceleration/theory_20260930_triangle_row_obstruction_spec.md": "12e8143387a4ad3b448e02ee4f9126e518b1534d9c0cc532972b288e105f9254",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/audit_20260930_triangle_row29_obstruction.py": "109671d882976ab68b350883340f3f0d7437571caa56b01d56a875f7897c4730",
+    "docs/AUDIT_20260930_TRIANGLE_ROW29_OBSTRUCTION.md": "f6785542e2c54da40a7e5c30d8611aa2e8589c7e4cc0c5a7b122a25e85fd29c5"
+  },
+  "raw_matrix_sha256": "e8581587313cf8207799dcf781d8469eb66a699687e023faf0a435000ab9f69b",
+  "final_matrix_compact_json_sha256": "e3d47b467cfe3ee2e963175204c1460186eeb2fde4c11eee8d4ec824664472bf",
+  "constraints": {
+    "unknown_row_bits": 38,
+    "degree_equations": 1,
+    "degree_quota": 10,
+    "exact_common_equations": 24,
+    "pair_incompatibilities": 53
+  },
+  "tree": {
+    "nodes": 139,
+    "splits": 69,
+    "conflict_leaves": 70,
+    "sat_leaves": 0,
+    "forced_batches": 557,
+    "individually_checked_forced_bits": 1080,
+    "max_split_depth": 13,
+    "leaf_constraint_histogram": {
+      "3": 1,
+      "18": 7,
+      "63": 7,
+      "2": 1,
+      "17": 6,
+      "24": 5,
+      "13": 2,
+      "21": 3,
+      "20": 2,
+      "16": 4,
+      "65": 1,
+      "66": 1,
+      "19": 6,
+      "7": 2,
+      "14": 1,
+      "6": 2,
+      "69": 2,
+      "8": 2,
+      "11": 3,
+      "12": 1,
+      "5": 2,
+      "54": 2,
+      "75": 1,
+      "41": 2,
+      "15": 1,
+      "23": 2,
+      "44": 1
+    }
+  },
+  "controls": {
+    "known_unsat_eight_assignment_oracle": true,
+    "known_unsat_tree": {
+      "nodes": 3,
+      "splits": 1,
+      "conflict_leaves": 2,
+      "sat_leaves": 0,
+      "forced_batches": 4,
+      "individually_checked_forced_bits": 4,
+      "max_split_depth": 1,
+      "leaf_constraint_histogram": {
+        "2": 2
+      },
+      "receipts": []
+    },
+    "known_sat_tree": {
+      "nodes": 3,
+      "splits": 1,
+      "conflict_leaves": 0,
+      "sat_leaves": 2,
+      "forced_batches": 2,
+      "individually_checked_forced_bits": 2,
+      "max_split_depth": 1,
+      "leaf_constraint_histogram": {},
+      "receipts": []
+    },
+    "rook9_exact_SRG_positive": true,
+    "rook9_masked_row_necessary_constraints_preserve_valid_row": true,
+    "false_sat_status_rejected": true,
+    "trust": "Independent literal truth-table and raw graph controls; no producer code imports."
+  },
+  "complete_verification": "Every reconstructed input constraint, every forced bit by counterfactual contradiction, both children of every split, every leaf witness and every reachable node; no sampling.",
+  "producer_imports": false,
+  "SAT_solver_calls": 0,
+  "SAT_core_used_as_premise": false,
+  "artifact_availability": "LOCAL_ONLY",
+  "artifact_availability_reason": "All raw matrices, tree, audit receipts and sources are local; parent controls publication.",
+  "target_resolution": false,
+  "external_review": false,
+  "elapsed_seconds": 0.07899999991059303,
+  "limitations": [
+    "Fixed Wave154 family only; no unrestricted Conway-99 nonexistence or complete triangle-core coverage.",
+    "Necessary projected row constraints are weaker than full target feasibility; infeasibility suffices here, but a feasible row would not be a target graph.",
+    "The mathematical use of the initial configuration relies on the pinned independently checked propagation dependency.",
+    "The extracted SAT core and the separate DRAT exclusion are not premises of this derivation."
+  ],
+  "audit_artifact_hashes": {
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction/actual_constraint_corruptions.json": "5025c80d0b513a0f1530475b76022439f3bb1f36913eed7839ed81cfea111ee4",
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction/actual_tree_corruptions.json": "4f49120c30066d3fe9c1b11d76711a765d7553fc8eed17471e948d863fa9ba7d",
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction/complete_node_check.json": "13843a490509a26894cf392b571623a46f1af296ce5aaf718f66c515bbb42373",
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction/controls.json": "2ac0ab810268266e197ce40ba1933d949fbd770d69484f4e684048c1b27401d7",
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction/manifest.json": "9fc375e1e9c95412b2564d2e9dc2054ef6db632da1fe9a51fbb0f4c3a25c333a",
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction/reconstructed_constraints.json": "65073a7135abd8ed408f76aee54bf592b286624be1c199e126f74c153713182f",
+    "acceleration/results/20260930_independent_review/triangle_wave154_row29_obstruction/tiny_unsat_tree.json": "e7438e58c56efd2b0d4502502c712ce6b3f43e083dbd1ce248251418a2638fae"
+  }
+}

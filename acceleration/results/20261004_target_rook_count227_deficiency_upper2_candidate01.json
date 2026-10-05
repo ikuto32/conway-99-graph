@@ -1,0 +1,122 @@
+{
+  "schema": "CLAIM_BOUND_WRITTEN_MATHEMATICAL_CANDIDATE_V1",
+  "timestamp": "2026-10-04T19:11:49Z",
+  "status": "CANDIDATE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-UPPER2",
+  "claim_revision": 1,
+  "producer": "/root/structural",
+  "verification": null,
+  "statement": "For every complete finite simple SRG(99,14,1,2), suppose R=227 actual induced rook-nine vertex subsets occur, counted once by their vertex sets. For every actual triangle T put d_T=6-r_T, where r_T counts those subsets containing T. Then every d_T is zero, one or two; no deficiency-three triangle occurs. This does not exclude count227 or resolve the target.",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts those actual subsets containing actual triangle T"
+  ],
+  "scope": {
+    "description": "Universal conditional upper bound2 on every triangle deficiency at R227, via a complete labeled ordinary defect-four-cycle count for the at-most-three high-node cases. The allowed local high triangle is retained with exact residue losses. No induced positive support, uniformity, equitability, automorphism or N3-free assumption.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false
+  },
+  "dependencies": [
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND", "revision": 1, "relation": "uses_result"},
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE", "revision": 1, "relation": "uses_result"},
+    {"id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-SINGLE-D3-D2-POPULATION-UPPER2", "revision": 1, "relation": "uses_result"}
+  ],
+  "dependency_reason": "The explicit population premises leave c2,b0/1 and c1,b0/1/2. Each has a separately authored Native exact-r1 written report, but none approves the new labeled global cycle argument. Direct strictmass ensures maxd3. Root administrative receipts for the two fresh population premises were not supplied at creation and are not invented.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md",
+    "sha256": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_UPPER2_V1.md": "f966c0a6af78762d64ab47a8db9b9686a27b6790879bf02ac4e3138f68032f76",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55",
+    "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_SINGLE_D3_BOUND_V1.md": "c75f1295d17a9f1fee8fea30f72e30e714aae620ba33c359ac50f45ccb1917a3",
+    "acceleration/results/20261004_target_rook_count227_single_d3_bound_candidate01.json": "b0fbd63defa758d7531a5f81a7c10f4a926a02a9bc06c6588552953e64f60dc0",
+    "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/claim_binding_schema2.json": "f7a5f598c1942aa181eb059f5b94cb35a155c3426f38f6a5378244cadc6a3526",
+    "acceleration/results/20261004_independent_review/target_rook_count227_population_table_native01/summary.json": "dace9455e57c7970724a5ce2ac205a6208a6c4055df71152d67a767252651029",
+    "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/claim_binding_schema2.json": "b1606c7c38f3837cc77187e6823bbe0f982f15177442967f45766fd20aa59ab9",
+    "acceleration/results/20261004_independent_review/target_rook_count227_single_d3_native01/summary.json": "a1c55cd5b626ff08333a4ac06d2e43681120a1a9bee5452da1492361d2a2c09a",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1"
+  },
+  "exact_global_cycle_requirements": {
+    "D": 24,
+    "F_edges": 36,
+    "uncovered_actual_squares": 36,
+    "C4_F": 36,
+    "cycle_node_incidence_required": 144,
+    "faithful_C4_scope": "at mostthree high nodes only; no extension to c0,b>=4",
+    "K33_veto": "repeatedlabels force six localdegree3 nodes; distinctlabels induce rook",
+    "highpair_common_F_neighbors_at_most": 3,
+    "D1_cycle_bound_with_low_neighbor": 5,
+    "D1_exception_cycle_bound": 6,
+    "D1_exception_count_at_most": 3,
+    "root_formula": "B=sum_C globaldegrees-rootdegree-2*internal_C_edges; croot=sum_outside choose(l,2), l<=3; internal_C_degree<=1",
+    "nonmultiple_three_loss": "B notdivisible3 implies croot<=B-1"
+  },
+  "complete_cycle_incidence_table": [
+    {"c": 2, "b": 0, "a": 18, "high_configuration": "disjoint stars", "D1_bound": 90, "high_bound": 36, "total_bound": 126},
+    {"c": 2, "b": 1, "a": 16, "high_configuration": "disjoint D3 stars plus D2", "D1_bound": 83, "high_bound": 48, "total_bound": 131},
+    {"c": 1, "b": 0, "a": 21, "high_configuration": "D3 with possibleextra D1 matches", "D1_bound": 105, "high_bound": 18, "total_bound": 123},
+    {"c": 1, "b": 1, "a": 19, "high_configuration": "highedge absent", "D1_bound": 95, "high_bound": 30, "total_bound": 125},
+    {"c": 1, "b": 1, "a": 19, "high_configuration": "highedge present", "D1_bound": 95, "high_bound": 39, "total_bound": 134},
+    {"c": 1, "b": 2, "a": 17, "high_configuration": "D3 disjoint frombothD2", "D1_bound": 88, "high_bound": 48, "total_bound": 136},
+    {"c": 1, "b": 2, "a": 17, "high_configuration": "localhightriangle plusD1leaf", "D1_bound": 85, "high_bound": 57, "total_bound": 142}
+  ],
+  "tight_nonstar_integer_data": {
+    "local_degrees": [3, 2, 2, 1],
+    "D3_root_neighbor_counts": {"D1": 7, "D2": 2, "internal_edges": 1},
+    "D3_B": 22,
+    "D3_cycle_bound": 21,
+    "each_D2_root_neighbor_counts": {"D1": 4, "D2": 1, "D3": 1, "internal_edges": 1},
+    "each_D2_B": 19,
+    "each_D2_cycle_bound": 18,
+    "D1_exceptions": 0,
+    "loose_without_residue_losses": 145,
+    "exact_with_losses": 142,
+    "required": 144
+  },
+  "proof_route": [
+    "Use exact population premises to restrict allc>0 cases to five (b,c) possibilities.",
+    "At mostthree high nodes prevents repeatedlabels in anyordinary F4cycle and yields C4F36.",
+    "Repeatedlabels inK33 require sixd3 nodes; distinctlabels produce aninduced rook ofdefectpairs.",
+    "Actual disjointtriangle crossmatching or localhigh concurrency caps every highpair commonFneighbors at3.",
+    "D1 cycle6 withanylow neighbor wouldforce forbiddenK33; only atmost3 allhigh exceptions remain.",
+    "Rootneighbor internalgraphs have atmostoneedge; compute B and all l<=3 exactly.",
+    "Six handtable rows, splitting the b1 highedge flag, all have cycleincidence below144.",
+    "The permitted3,2,2,1 boundary fails onlyafter exact22->21 and19->18 losses.",
+    "Everyc>0 branch fails; maxd2 follows atR227."
+  ],
+  "hand_boundaries": [
+    "No globaltriangle-free assumption: the valid local threehigh triangle is retained.",
+    "A collapsedF4cycle onfour d2 nodes is notruledout in surviving c0,b>=4 families.",
+    "The local3,2,2,1 branch reaches loose145, so residue losses are necessary.",
+    "Extra D1 matches at a c1b0 D3 point do notbelong toits rootneighbor set and are retained.",
+    "K33 labels are tested for repetitions before aninduced rook is concluded.",
+    "The c0b8 exclusion is separate and notused as a premise ofthis claim."
+  ],
+  "shared_origin": {
+    "Root_R227_followup_and_nonstar_fan_suggestion": true,
+    "Structural_prior_defect_cycle_proof_authorship": true,
+    "Native_two_population_independent_reports": true,
+    "new_global_cycle_argument_independently_approved": false
+  },
+  "mathematical_programs_executed": 0,
+  "solver_calls": 0,
+  "formal_checks": 0,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "independent_review_required": true,
+  "publication_cutoff_inclusion": false,
+  "limitations": [
+    "R227 and Conway99 remain unresolved.",
+    "The cycle correspondence is notextended to four or more highnodes.",
+    "All earlierpopulation andboundary papers retain their own statements and gates.",
+    "No graph census or scientific execution is produced or requested."
+  ]
+}

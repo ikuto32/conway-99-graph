@@ -1,0 +1,93 @@
+{
+  "status": "INDEPENDENT_TRIANGLE_GF2_MAXRANK_MIXED_CONSISTENCY_PASS",
+  "claim_id": "C-TRIANGLE-GF2-MAXIMAL-RANK-MIXED-CONSISTENCY",
+  "claim_revision": 1,
+  "statement": "For every GF2 matrix F with three disjoint nonempty n-row cell indicators r_i satisfying r_i^T F=0 and rank(F)=3n-3, and every C satisfying r_i^T C=j^T, there is a GF2 matrix D with FD=2J-(I+C)F.",
+  "kind": "mathematical result",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "Conditional linear solvability over GF2; valid triangle cores supply the left-action premise by symmetry, and valid factors supply even cell-column parity. Full binary rank remains an explicit premise.",
+  "assumptions": [
+    "The three n-row cells are nonempty and disjoint.",
+    "Required action is r_i^T C=j^T; C r_i=j alone requires symmetry to imply it.",
+    "No nontrivial target automorphism is assumed."
+  ],
+  "dependencies": [
+    {
+      "id": "C-SRG243-NONEMPTY-RESIDUAL-POSITIVE-CONTROL",
+      "revision": 1,
+      "relation": "verification_dependency"
+    }
+  ],
+  "verifier": "/root/state_literature_audit independent derivation of root-proposed lemma",
+  "method": "independent_derivation_and_artifact_check",
+  "written_audit": "docs/AUDIT_20260930_TRIANGLE_GF2_MAXRANK.md",
+  "controls": {
+    "known243_binary_rank": 57,
+    "known243_actual_D_checks": 10800,
+    "all_two_by_three_binary_matrices": 64,
+    "negative_controls": [
+      {
+        "control": "odd_cell",
+        "reason": "cell left-kernel parity"
+      },
+      {
+        "control": "wrong_left_action",
+        "reason": "required left action"
+      },
+      {
+        "control": "wrong_rank",
+        "reason": "claimed rank identity"
+      },
+      {
+        "control": "lower_rank",
+        "reason": "maximal binary rank"
+      },
+      {
+        "control": "changed_mixed_rhs",
+        "reason": "Actual independently verified D fails the altered equation."
+      }
+    ],
+    "lower_rank_counterexample_augmented_rank": 2
+  },
+  "shared_components": [
+    "Python standard library only; independently approved raw243 fixture; no producer elimination or scoring imports."
+  ],
+  "limitations": [
+    "No symmetric or zero-diagonal D is established.",
+    "Field solvability is not exact integer or binary graph completion; residual degrees and quadratic equations are omitted.",
+    "Lower-rank factors are not covered.",
+    "Lower-rank countercontrol is not asserted to satisfy a prescribed target Gram.",
+    "No novelty, target construction, exclusion or coverage claim."
+  ],
+  "created_at": "2026-09-30T01:19:39.731119+00:00",
+  "updated_at": "2026-09-30T01:19:39.731119+00:00",
+  "timestamp": "2026-09-30T01:19:39.731119+00:00",
+  "source_commit": "22fc0ea2f81faa791ee99daf456a3c9785c55dc0",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/audit_20260930_triangle_gf2_maxrank.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/triangle_gf2_maxrank"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "acceleration/audit_20260930_triangle_gf2_maxrank.py": "0f0c1e252a1d55b6cb08ad05d0f56c3f1f56cc0ec6bed00f5a4669deb44bb510",
+    "docs/AUDIT_20260930_TRIANGLE_GF2_MAXRANK.md": "fc831702c706566685f4078cf4906c5f032c3c673e6ebe489b24e8713b11b342",
+    "acceleration/results/20260930_srg243_residual_fixture/triangle_blocks.json": "3f8dfa3803d6a5db8146dd24a0857477e1aa061ab10dac0f9e6e564aabc86439",
+    "acceleration/results/20260930_independent_review/srg243_residual_fixture/summary.json": "28bbd97b8e69515c3eb0345e5aa2db12debfaa8a44e83b2e3487342104c5d50e",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339"
+  },
+  "outputs_sha256": {
+    "acceleration/results/20260930_independent_review/triangle_gf2_maxrank/raw_controls.json": "b9b53f2438c5a908fa2e015621f5e8296614793c40e978a644eb0fa738220712"
+  },
+  "artifact_availability": "LOCAL_ONLY",
+  "target_resolution": false,
+  "external_review": false
+}

@@ -1,0 +1,7 @@
+# First literal seven-profile native pilot
+
+Question: does the exact rank5_07_profile_0001 full-Gram formula have a solution? Selection is the first lexicographic survivor among216 independently checked seven-profile representatives. The formula retains all initial domains, 13balanced groups and7 exceptional groups of sizes48,48,48,21,48,48,48. It omits cross-group column caps and residualD; this is one fixed-support count profile, with no target automorphism assumption.
+
+One research call is authorized after exact independent encoding and object-calibration gates. The call uses CaDiCaL1.9.5,60wall seconds,1000000conflicts,4GiB address space,10GiB proof cap,5-second kill grace and70-second host guard. Require21GiB host and11GiB ext4 free space. Proofs are retained in a fresh ext4 directory and copied byte-exactly to the host. No automatic retry. A separate preflight makes zero research calls. Frozen native helpers and decoder source closure are authenticated by the object gate.
+
+SAT is accepted only after every assignment literal/clause and the raw36x60 integer factor pass a separate checker; even then residual completion and omitted caps remain. UNSAT is a candidate literal-profile exclusion pending independent full proof replay. UNKNOWN excludes nothing. All commands, environment, source commit, hashes and actual limits/results are preserved. Positive/corrupted controls precede native work.

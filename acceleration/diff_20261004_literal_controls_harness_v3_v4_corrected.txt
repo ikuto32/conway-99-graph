@@ -1,0 +1,13 @@
+--- acceleration/exercise_20261004_bound_literal_claims_v3.py
++++ acceleration/exercise_20261004_bound_literal_claims_v4.py
+@@ -206,7 +206,8 @@
+                 stderr = checked.stderr.decode("utf8", errors="replace")
+                 assert checked.returncode == 1 and re.search(
+                     r'File ".*' + re.escape(Path(checker["path"]).name) + r'", line ' + str(route["expected_line"]) + r"\b", stderr)
+-                assert re.search(r"^" + re.escape(route["expected_exception"]) + r"(?:\:|$)", stderr, re.M), stderr
++                assert any(line == route["expected_exception"] or
++                           line.startswith(route["expected_exception"] + ":") for line in stderr.splitlines()), stderr
+                 observed = route["expected_exception"] + ":" + str(route["expected_line"])
+             result_code = checked.returncode
+         row = {"ordinal": route["ordinal"], "name": route["name"], "positive": route["positive"],
+

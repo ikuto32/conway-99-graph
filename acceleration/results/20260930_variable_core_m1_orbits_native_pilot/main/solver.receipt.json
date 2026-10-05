@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-30T00:49:17.794349+00:00",
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "900s",
+    "/usr/bin/prlimit",
+    "--as=4294967296:4294967296",
+    "--fsize=10737418240:10737418240",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "-c",
+    "5000000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_variable_core_m1_orbits/instance.cnf",
+    "/tmp/conway99-variable-core-m1-orbits-dRMviT/proof.drat"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "actual_exit_code": 0,
+  "outer_windows_guard_expired": false,
+  "outer_windows_guard_seconds": 920,
+  "wall_seconds": 788.4220000000205,
+  "stdout": "acceleration/results/20260930_variable_core_m1_orbits_native_pilot/main/solver.stdout.log",
+  "stdout_sha256": "e8dfe74c1b014de4ed2057434669b612f41ec0f29e64e7ff374ab7d72eca9760",
+  "stderr": "acceleration/results/20260930_variable_core_m1_orbits_native_pilot/main/solver.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "linux_process_state": "WRAPPED_COMMAND_RETURNED",
+  "exit_interpretation": {
+    "10": "native SAT",
+    "20": "native UNSAT",
+    "0": "native UNKNOWN or non-solver success",
+    "124": "GNU timeout deadline",
+    "137": "forced kill; inspect stderr and receipt"
+  }
+}

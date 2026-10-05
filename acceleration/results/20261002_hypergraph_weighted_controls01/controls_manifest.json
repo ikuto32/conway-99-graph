@@ -1,0 +1,2958 @@
+{
+  "schema": "HYPERGRAPH_WEIGHTED_ANNEAL_CONTROLS_V1",
+  "timestamp": "2026-10-02T12:19:37.933933+00:00",
+  "source_commit": "f7834874ad7a9c1ef3ba9daabd09fc18fe24a76a",
+  "inputs_sha256": {
+    "acceleration/prepare_20261002_hypergraph_weighted_v1.py": "c9e95c0dee72845013233a731e17913fcfda46e64854214a3bba91f3d94890c0",
+    "acceleration/hypergraph_weighted_anneal_20261002_v1.cpp": "235b3bae6647ed76652f23978bc3fd9841855ab49e81c6b622016e1d23ee6e70",
+    "acceleration/prepare_20261002_hypergraph_weighted_v1_spec.md": "d8be3174c7d7d6c571481f308a401756d809e438701d902cd7d8ff5479642111",
+    "acceleration/design_20261002_hypergraph_weighted_v1.md": "e3adc9f030d3f4085d852b38d2c98360cb461ea3fb628fec44ed78097aa7817f",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/native_budget_env_v1/pyproject.toml": "96f96d7345153b4bde50d7f4a640a33d43dfd6458c35f4e6a4ab798b11673782",
+    "acceleration/native_budget_env_v1/uv.lock": "54ecb16b929dac1035b5a8691df419d58eab33dc3f07c76c5259094e265a4434",
+    "acceleration/results/20261002_hypergraph_weighted_build01/hypergraph_weighted_anneal": "01cb37543a9c6a93edbef15d66de8fb75c044ba01741a620587825321f91f01a",
+    "acceleration/results/20261002_hypergraph_weighted_build01/build_manifest.json": "c5b53b6c39e794f4141958ac0cc4b84be94f02165a230636493d2f41a3d34bca",
+    "acceleration/results/20261002_independent_review/hypergraph_controls02/summary.json": "81aa0427d80d66b45ae48d47cea98c02de02bc4ae096d5a0bcc688d6df2bacb3",
+    "acceleration/results/20261002_hypergraph_controls01/target99_mixed/final.state": "ef9e5ca27c248413d62efdb0888eb23d2eb734ed955431653145e830ef0872c1"
+  },
+  "supervision": {
+    "path": "acceleration/results/20261002_hypergraph_weighted_controls_supervision01/manifest.json",
+    "sha256": "8730a454a4cf1e37f6233a4e04c0409d4653eb831d04db1dd1dd98f2c00d4f3e",
+    "invocation_id": "710d48bb43fc4a37ad2a1f9961031bfc",
+    "outer_seconds": 600.0,
+    "producer_seconds": 540.0,
+    "group": 385,
+    "guard_argv": [
+      "/usr/bin/timeout",
+      "--signal=KILL",
+      "589.993812s",
+      "/usr/bin/env",
+      "UV_PROJECT_ENVIRONMENT=build/native-budget-linux-venv",
+      "/root/.local/bin/uv",
+      "run",
+      "--locked",
+      "--offline",
+      "--project",
+      "acceleration/native_budget_env_v1",
+      "--cache-dir",
+      "build/native-budget-linux-cache",
+      "--python",
+      "/usr/bin/python3",
+      "python",
+      "acceleration/prepare_20261002_hypergraph_weighted_v1.py",
+      "controls",
+      "--seconds",
+      "540",
+      "--allocation-reason",
+      "Declared32calls19456proposals, complete integer F/components/cache/domain producer controls and immutable artifacts;20sworker reserve, no scientificsearch.",
+      "--source-commit",
+      "f7834874ad7a9c1ef3ba9daabd09fc18fe24a76a",
+      "--supervision-out",
+      "acceleration/results/20261002_hypergraph_weighted_controls_supervision01",
+      "--out",
+      "acceleration/results/20261002_hypergraph_weighted_controls01",
+      "--native-seconds",
+      "30",
+      "--binary",
+      "acceleration/results/20261002_hypergraph_weighted_build01/hypergraph_weighted_anneal",
+      "--binary-sha256",
+      "01cb37543a9c6a93edbef15d66de8fb75c044ba01741a620587825321f91f01a",
+      "--build-manifest",
+      "acceleration/results/20261002_hypergraph_weighted_build01/build_manifest.json",
+      "--build-manifest-sha256",
+      "c5b53b6c39e794f4141958ac0cc4b84be94f02165a230636493d2f41a3d34bca"
+    ]
+  },
+  "objective": "SRG_LAMBDA_WEIGHTED_PAIR_RESIDUAL_V1",
+  "lambda_weight": 6,
+  "runs": [
+    {
+      "label": "rook9_positive",
+      "options": [
+        "--fixture",
+        "rook9",
+        "--steps",
+        "0",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "0",
+        "--temperature-end",
+        "0",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "0",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive.receipt.json",
+      "receipt_sha256": "8ae8c8b1c8dda22937231f7ed9c040d3990a8759fe360a560203f71c6ac07f0c",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive/best.adj": {
+          "sha256": "0d95e1ca093e5a0b6d9939c2ea3d5a5d83f0d8047d773e3b4691672d799c2649",
+          "bytes": 92
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive/current.adj": {
+          "sha256": "0d95e1ca093e5a0b6d9939c2ea3d5a5d83f0d8047d773e3b4691672d799c2649",
+          "bytes": 92
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive/final.state": {
+          "sha256": "6e0c7116a1f81ba83ff543a1ce27b8f067aee7d6d67f41d762b8bd99a9bb0e77",
+          "bytes": 628
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive/initial.state": {
+          "sha256": "6e0c7116a1f81ba83ff543a1ce27b8f067aee7d6d67f41d762b8bd99a9bb0e77",
+          "bytes": 628
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive/moves.jsonl": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_positive/result.json": {
+          "sha256": "ed7def002602831caf8aec109aa4b458d292c67ad72dc6330ba4015dbf911907",
+          "bytes": 652
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "rook9_forced",
+      "options": [
+        "--fixture",
+        "rook9",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "0",
+        "--temperature-end",
+        "0",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs",
+        "--forced"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced.receipt.json",
+      "receipt_sha256": "a924b59a006352333bd6b0bffbdd7a341b9d848a8b88a7a883eedebc86e5ce2c",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/best.adj": {
+          "sha256": "0d95e1ca093e5a0b6d9939c2ea3d5a5d83f0d8047d773e3b4691672d799c2649",
+          "bytes": 92
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1024.state": {
+          "sha256": "9ce3c7670c463c5536617399d5ecf25d56b0ef76f8f1b7cd92c74800db24c105",
+          "bytes": 636
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1088.state": {
+          "sha256": "e68b1c7948eb5d5cb339e0b8dbff3a41b01879e3802c5cbf39ccd355fdd42217",
+          "bytes": 636
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1152.state": {
+          "sha256": "685171a7b83d8a38701211132b9731a6dfaf9af93ace2b7ee45e7b1cb97c52da",
+          "bytes": 637
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1216.state": {
+          "sha256": "71c429af1e4eb038ee414663416bfddd7a051d023c7ec9a68404a6b86af55f39",
+          "bytes": 633
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_128.state": {
+          "sha256": "906198536637f9de2adcca65b52872c2adf02aedec9b875d9b002def923b3fbb",
+          "bytes": 632
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1280.state": {
+          "sha256": "b496edd11f5df04e65369529b1eb7d7063aef572e1110a76b3e11894f8da6353",
+          "bytes": 636
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1344.state": {
+          "sha256": "230db45b1052293ba5dc85b2a0a8b635a70dd9e71bb730bc3d7cef78a3dc9318",
+          "bytes": 633
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1408.state": {
+          "sha256": "49f248c21149e80531e6b69077bdd5ad1767d72e837e29807c6c36d898dabf95",
+          "bytes": 635
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1472.state": {
+          "sha256": "9dbefbe7e586da6b299fa742f605f3441f58309a76a1ed7fe7a5d4036b7a54cb",
+          "bytes": 634
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1536.state": {
+          "sha256": "eecbeda5d20d4f41c5cf87431622afe1da5f0afe1a6f1a49b91d6e02384ba7ec",
+          "bytes": 635
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1600.state": {
+          "sha256": "da4ed2f15d677d0e4a22b25d32e51a937b4e44b141647a5d99d0bdd7c70f5a98",
+          "bytes": 635
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1664.state": {
+          "sha256": "1726328e8316bcbc8fc60620f311476e12569a0b4b8e646f0a2b94d3001b2b9d",
+          "bytes": 634
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1728.state": {
+          "sha256": "cb3ec5e8f3f918e057c9a7c7e03a2f8066391fd5bd5e9ccd048e597dcada40b4",
+          "bytes": 637
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1792.state": {
+          "sha256": "f24be56e56672b8cf4c92ca40cd5ef7b07faec420bea6b32abdea3e916c3e6ea",
+          "bytes": 634
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1856.state": {
+          "sha256": "8036a5ee80d9421f536756c7d23ab175c721c73a1113f72bee3cf088c8e0d89a",
+          "bytes": 635
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_192.state": {
+          "sha256": "d33aa81f9621c4a293e3760e0936694cb984f67740d444972aba5a2604125173",
+          "bytes": 633
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1920.state": {
+          "sha256": "3d4db51234f4732ee53af2caad5a02de16a7c17b671d45a7d877ff4232699a95",
+          "bytes": 635
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_1984.state": {
+          "sha256": "e4ba7a27995c40fd365864da2e1a2ee12564af61e768efcf2322e9e9f0a45089",
+          "bytes": 635
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_2048.state": {
+          "sha256": "7bb4f061c4e359be40171dea4861df73cf074755bb7d306c601cc272c26f0461",
+          "bytes": 633
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_256.state": {
+          "sha256": "e1f6f856b93c1f7e7b7a9d59472e1e63570b005e3e7ac5de35140902b2c59fc0",
+          "bytes": 631
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_320.state": {
+          "sha256": "0a0f61ff0e659c7cf56bc9e4c31e11c6e0beb486bfc9e447c768d5a8b7511318",
+          "bytes": 631
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_384.state": {
+          "sha256": "0c6f43bd660093b5c1b546518def724a2f2a32b7f8fcf8d811f46c0cc1ecd81f",
+          "bytes": 631
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_448.state": {
+          "sha256": "9311a3b7462717590315b9e1dd4df1aaac306033bf32156f2ec0e2d06fe3cc31",
+          "bytes": 631
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_512.state": {
+          "sha256": "5d8746a91f1853e9fa4596cede4b4b01431f740c84b6609aa807ab0f843f73e1",
+          "bytes": 631
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_576.state": {
+          "sha256": "2837b7e9d8eaf8ea3ce861aee4d83dd34d5353c33c86b1c6c8c88c444546b7af",
+          "bytes": 632
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_64.state": {
+          "sha256": "d9c23e8accc4b8668846557df615f5bf57cf33ccd5028e696912f4b82fd2e1db",
+          "bytes": 632
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_640.state": {
+          "sha256": "c091a003d510d98e62fa1d1c17c948b67a0feabc0bc6ccca8aeffeb3ff55e51f",
+          "bytes": 629
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_704.state": {
+          "sha256": "394143cc6dd82c5dadd47575a307485d97edcc3c165268f943316595c5c88cba",
+          "bytes": 630
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_768.state": {
+          "sha256": "f3fb15ea939f7028f2f078c48283fb2705bd91cda2c274e8de876f671b499ba0",
+          "bytes": 632
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_832.state": {
+          "sha256": "51ea01f05641641d3eaa441b60a6edfd279a8e952c6e79a3b80b48497af41a9e",
+          "bytes": 635
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_896.state": {
+          "sha256": "6d287fe44189549cc8606849e1409f4f2ccc582fea7a3b373d0ebdd39cdc1f0f",
+          "bytes": 633
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/checkpoint_960.state": {
+          "sha256": "29c491b380b04705565a7379446c69b992c685ccab078ce67be69be79810c3fd",
+          "bytes": 633
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/current.adj": {
+          "sha256": "3577ac55fbebaf5259c20f618a792a83d7a76811896121b36c397971fd65af68",
+          "bytes": 92
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/final.state": {
+          "sha256": "7bb4f061c4e359be40171dea4861df73cf074755bb7d306c601cc272c26f0461",
+          "bytes": 633
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/initial.state": {
+          "sha256": "7a6e7e7827342bae7dc0fffda727a6ff15551fd16b3bfaae1c7a3d02bda5ca14",
+          "bytes": 628
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/moves.jsonl": {
+          "sha256": "e42d5e94f99e2a5f61014e2b0d174f47ffe07ecea1a35115c08c9589aa0c7f5f",
+          "bytes": 1407276
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/rook9_forced/result.json": {
+          "sha256": "a3953d2fe950a6fde7aa5e00d1df35768d533d8e7aea13d794ec9dc07043baf9",
+          "bytes": 670
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "target99_forced",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "0",
+        "--temperature-end",
+        "0",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs",
+        "--forced"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced.receipt.json",
+      "receipt_sha256": "ca00411b90bf8f01a232bf41d2b13705c4be7b2c02e8970bcefee0c9a8515123",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/best.adj": {
+          "sha256": "5d578770a00c3753ed9480628af0a0878d5ff6e4a7bf017dd8da4d100c6f6b25",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1024.state": {
+          "sha256": "391601c5b049b24bea38cd1188144751e67ec6a65927f451ad1b6bb63d26dddf",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1088.state": {
+          "sha256": "b97bfc86eff5944082b34233ad20c740aad4a3c8bc34d6001b305b524afb4fa9",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1152.state": {
+          "sha256": "efc42ee61655e8eebe380147f06a72e25a3c8fc8a40608bb936bf40f27f18d54",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1216.state": {
+          "sha256": "19946dd7aecb50bfce77b5a51737847f136b6fad8c75ed2536cf54d0dee778fd",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_128.state": {
+          "sha256": "62f1131d163fcee7dd70265793a20e5986e8b1b324651a9cf55fdf91d72f5c35",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1280.state": {
+          "sha256": "14501ade9bcb4edc2e52b134fb457cb669593954cfdef5153d7d1f71d24b1e4b",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1344.state": {
+          "sha256": "547041a7decfcdab35bec079eeb583fdf9baed7098e67462214a447c3544f2a5",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1408.state": {
+          "sha256": "9ffa6406b313c87f2ddad654ce864f26d3954cf387e55c02a7853e06d7637954",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1472.state": {
+          "sha256": "4b8ede22633e9f3ee07f4451ab25807187c07af6b59a712a5a1080371cc61870",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1536.state": {
+          "sha256": "f344405ad0532a24612592969fc68c7dc151ec4a3d11f3ffb7da86d7e38d2739",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1600.state": {
+          "sha256": "1d5f3dff5293582cc45864d0b678dbcb888e981cb34cf7be9a1ab8720f9310bb",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1664.state": {
+          "sha256": "a326a3e3afec9bd715105d36030a875df523f70b41a074aa9ffb21a417489d1b",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1728.state": {
+          "sha256": "95b4c21e110bebbf3bd2a8ee25405e6bde935d68723e4352ee5450c651534a62",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1792.state": {
+          "sha256": "4d8c93c306bae735445875b72b81a6921105b9e7a32966cb49c65c1696327740",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1856.state": {
+          "sha256": "4063e6a39e47ad5dbb2b66010ab9e6b28f477841c1bcd6cbb1c46337a082f03f",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_192.state": {
+          "sha256": "191e0bdcae065aabaa77803a05deb533b10b0c886ae7f15e102a40e502053bed",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1920.state": {
+          "sha256": "5f12ca8348e08f8f3d3abd27d5730a22619928a4a54fc1d1fa407db6b3c4476e",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_1984.state": {
+          "sha256": "214a7973609376872621d0b1a3bf4c5090135dcc484e825e23bee4246991553f",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_2048.state": {
+          "sha256": "de0c830754441e90df456b2e40ae38a14444c08061ddbd7cd9c694846c91fe1a",
+          "bytes": 14249
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_256.state": {
+          "sha256": "93b5c52ca0d389d8ae4ce0aa4fec56bb8a26d7c61934c906dd007cd76f94b6d1",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_320.state": {
+          "sha256": "a75de35f06f48abb5348a36d93cce4a552bc72f487dc6660fe90f3e67fe7bc07",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_384.state": {
+          "sha256": "0ed7cb82d9a5e57833c8dcf98c24d21d3e22add7f54d22f09dacea1f0e8c972a",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_448.state": {
+          "sha256": "2845083640363a883aee33e028e876e7205d72188921cd3e73f7dc1ce73824fd",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_512.state": {
+          "sha256": "e5ce844132971d6a7f27187fef69dbef4cfdbc70da6ed32ea24876d72ee37cee",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_576.state": {
+          "sha256": "3d820dae4856ca0712b6f9b20a076be4cbe5eeebd8fb414965b201b580005d18",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_64.state": {
+          "sha256": "62098aee43bd76e5554bdf3f70a5f05f0096e776713b4c9893a7462a8550abd3",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_640.state": {
+          "sha256": "3eeb76a6a58cc805812c694371422d2c06e491bae305ecd18537a95f9eace3b1",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_704.state": {
+          "sha256": "b8c794a7abbf6267011e8fd29872fc59e68f133b17bd108e1ff091d47789b816",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_768.state": {
+          "sha256": "2b3cf353c1b037c271099bb040d51c0a3cffe9d779e5c431facaee3cabf7fdb4",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_832.state": {
+          "sha256": "e2669a9cfe5f3f1cc171218ccea8e2d5c1247fd23a61e11d3986635c94ca5dae",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_896.state": {
+          "sha256": "d8ea70ec396e04fcaaae28b6cab4cfb084e4fc89eecaef8063a2186e57763ca8",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/checkpoint_960.state": {
+          "sha256": "8311f72d2d60044ce0d14349b299ffb800b72a376049a4cb394e3bf06c66acf6",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/current.adj": {
+          "sha256": "5d578770a00c3753ed9480628af0a0878d5ff6e4a7bf017dd8da4d100c6f6b25",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/final.state": {
+          "sha256": "de0c830754441e90df456b2e40ae38a14444c08061ddbd7cd9c694846c91fe1a",
+          "bytes": 14249
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/initial.state": {
+          "sha256": "8c506d1277c02f2bbd38c5cc147b61867126d2bb9b92284c77181ddab778bdba",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/moves.jsonl": {
+          "sha256": "ece6c560362cd2b4f6b7e09655eee5cbddbac900fcf29224e68ebf754143de6b",
+          "bytes": 1500448
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_forced/result.json": {
+          "sha256": "bd6de4074c20b429b76f611098b18f1eb20c0eeccf5c952910d4113160bd3a04",
+          "bytes": 718
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "target99_greedy",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "0",
+        "--temperature-end",
+        "0",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy.receipt.json",
+      "receipt_sha256": "728627d8552de794abe98c1b4188cae0e524825f781dcdef450796b2e5e3faae",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/best.adj": {
+          "sha256": "46404cee8ade0db80134137b3c3db2541520a3d195652594c774591b763d2f52",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1024.state": {
+          "sha256": "181a8900d257d6a08300bdb1f20bd3a74d2a821677532fda129b8dfb619bb37e",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1088.state": {
+          "sha256": "927e377e44d4e2e6c44b7ee07eba6e6ff0a4c7e876a278b03f539422bc54bf41",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1152.state": {
+          "sha256": "70daf8094f573956ea8de979ebaac0f21ba9404d3eb0812c1d75305e10097aad",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1216.state": {
+          "sha256": "aa4e916e9a72610365d1b60e6d0728cecd3e8a3c4762d814fb274f61efc8f35b",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_128.state": {
+          "sha256": "b36b5725c3b2748566b3040292eb86ccc8044c3e2534a03aa3d2d8a992704b31",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1280.state": {
+          "sha256": "76361850e3d321f8bb1a13f61184f0182f84420df879a907e7d3090f3844e377",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1344.state": {
+          "sha256": "e162d7650992e70eb0db67ed8b0d4e5392e8da79c1760484773d0a72bd2234b1",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1408.state": {
+          "sha256": "c5593ee60486e0e90397f3f685ffcdee04dd5fc3532061f4b8f311903c608db5",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1472.state": {
+          "sha256": "f0c0d4eff2323c4f48fe983d708fc4bd51a7f2ecee1aeb6982d8a27acff1f1ab",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1536.state": {
+          "sha256": "ef17eb1f472b0ce0906e54974f051050e6b046fbf0e1fdddb2f138d238edf252",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1600.state": {
+          "sha256": "60fc8aea2cd7919804f4089595d7cb0b310b1dcb5d6edc090066db068b741e40",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1664.state": {
+          "sha256": "f2b7be3578716731d3232f0f0f6177a11de0bf368e92142dfb86da8bfada988f",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1728.state": {
+          "sha256": "3741325cd89c6827944f5587f86799a84ad5e6717df58b6dcc920479fcf03390",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1792.state": {
+          "sha256": "6999e39ee01c81acbad5c691783609cbbe1e8d525a881c7d238c0690450d7924",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1856.state": {
+          "sha256": "2da7bdb716bbd671b2484277ce386e769fe263be12aa7a16ba182b656b98dc29",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_192.state": {
+          "sha256": "36a4302115daa8b10056fa06f44f0a39317a80cc91ca39f6345c5f75a3415cd1",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1920.state": {
+          "sha256": "c848987e3ca63b2c832a3e3a54a8934f9c398e1952014d66c9e6e2ccc1ee1016",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_1984.state": {
+          "sha256": "33153de55561c33a2871c47407aa0005e77068ea0afe7b19f628ea6902d55cdf",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_2048.state": {
+          "sha256": "ed1ebbcacee5515c56fe8cfffc0f3284e99d4efdf47b7b581d79181d8ec49aaf",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_256.state": {
+          "sha256": "a0c823c94061819758e16cc6c52735f25f7d3fa952762a1befaf9e41e59a31f2",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_320.state": {
+          "sha256": "707f8ff14359c67a4989c2b3d898cdbdd304cacb2105f198990f97fe99229fc3",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_384.state": {
+          "sha256": "01f8dcd644ad4db8902ed27dc65e4f14b6579be209f35c5d922c3a04b63c5833",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_448.state": {
+          "sha256": "0b3ac35eb16be069edb079241bb2b402d3c37fba267021a09dda0ca00b8c88cf",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_512.state": {
+          "sha256": "3b3fb0758125e00477315763b564b64138a2ce59e5b181bf56c0e4f02f768a3d",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_576.state": {
+          "sha256": "b0cc5f8a5f02bf31591c0a16318d11bc6d64a090d4c20e902f9ba9c25abde4a7",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_64.state": {
+          "sha256": "3b30f9a2b00737161f7f1f3caefb83daba17d05dd1939d5d454ba128fe7fa568",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_640.state": {
+          "sha256": "16625fd0d775a5704e2aec4b4b6275d33a37afcb85349a747b0f81633791cc34",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_704.state": {
+          "sha256": "60ba2996451075bc1d86ad14529c2d3075df73f280750b064c6bbd6dc779198b",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_768.state": {
+          "sha256": "5eaf43c8ce764a2998e150a57ebbe12ec5c1542a45a1b76a0343e4129d292ee9",
+          "bytes": 14239
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_832.state": {
+          "sha256": "e166ee5823b567227c50ccba37eb4ed3d9c99c0c36834b492186fba892af85b8",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_896.state": {
+          "sha256": "c5c3a40389f4a413ea58ef4b5938e5a5e020d6d5395057d86d69a98e6d011043",
+          "bytes": 14240
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/checkpoint_960.state": {
+          "sha256": "e0e5f9265d433e541e7162112bd3a59ba375ad57d70afacc57b12c0f246b49b3",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/current.adj": {
+          "sha256": "46404cee8ade0db80134137b3c3db2541520a3d195652594c774591b763d2f52",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/final.state": {
+          "sha256": "ed1ebbcacee5515c56fe8cfffc0f3284e99d4efdf47b7b581d79181d8ec49aaf",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/initial.state": {
+          "sha256": "e27a0a16d7b7d62eaaa234770b6f3776787ab1f78dd01a33cbc1d47ef26badb0",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/moves.jsonl": {
+          "sha256": "d21616f9743f2a619c01e1eedd18f0879cb62d5388b9bc71f3d169f4a0f5350d",
+          "bytes": 1493709
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_greedy/result.json": {
+          "sha256": "c06d6d64b64d1d69fb03836110f226931c1851e16b2c9922301561e25f0ae240",
+          "bytes": 705
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "target99_anneal",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal.receipt.json",
+      "receipt_sha256": "ca582b8ded4ae7c7454370a4bf21417cde243d72501796736b4fe692c582bff3",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/best.adj": {
+          "sha256": "5b63d6f365240452d1e204fc949cf1cfcc808817802ced314b8c57e33b3fdf45",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1024.state": {
+          "sha256": "27b036d5a05db1488d5562e037cf231c2c33c753824acf9970f69c6047cea98f",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1088.state": {
+          "sha256": "62745d155da37d483125f9636d7ee080388d96aea892dae9e6ed6b201be7eec0",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1152.state": {
+          "sha256": "cab90b0f2784dd17ad5b887830cbf14832324b3b91a09f991fa1119035a48429",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1216.state": {
+          "sha256": "1cb101d9ff30c6357970a45a9fedbd68cbc95ce537f16ba1e01016936904cd3a",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_128.state": {
+          "sha256": "7984a4033901bd2066c95c61c8a23250f55cf0a20d15756a15fda8b3a7728ad0",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1280.state": {
+          "sha256": "198b2127b56d94060537f3e68ab057c62db0c898fc9a7234a76588b19ef84ceb",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1344.state": {
+          "sha256": "cd913d21c813241cc792a3d29d22cff90163a7c8271f984f9d23212db56c7de0",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1408.state": {
+          "sha256": "2988d57e72c217a1c0031d1659165240cb6c3f3aef2c64cccaf2687845e5c895",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1472.state": {
+          "sha256": "2627eb7660b745b38d8d8cedfcf9211fbbedec13a5ba6452c9fb34205ceaea2f",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1536.state": {
+          "sha256": "b0419c4314cc7f889925f53ba70e54d08bbacb1b6c0e21ffc6a95c4c3b786ca2",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1600.state": {
+          "sha256": "aa190822303a09c9da4349a1a755033e7f62833d15abd00c8441ec8013cb8718",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1664.state": {
+          "sha256": "35ed456bc2252b374597b9bb2cb49a9a9dbf9103be8a077b1f775e15559b34d8",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1728.state": {
+          "sha256": "d85292e51794a54fc4cb12bfc1c6f30f54581c3930458adafb8ec1e692d4eaeb",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1792.state": {
+          "sha256": "444912f2f433cfff340d5039852e37a9c4a0263bd0304b6373328819a6607096",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1856.state": {
+          "sha256": "4e8bb4e4dab34a35f09f144e06d693c998c70ee29d5142b0cbd59bae86d8ea10",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_192.state": {
+          "sha256": "9bd68dec38b6d72cadb2bc33a06037978618ac2ddfc989716266ea7635977bd4",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1920.state": {
+          "sha256": "425fe6b3f1a14447dac7c928762faa7aee1cc11d0d5f6718285b24a55b840c72",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_1984.state": {
+          "sha256": "d34962210268c1506b8bceeafc9e2119948e75260943b011aa6d8f52eef95321",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_2048.state": {
+          "sha256": "1e7b8299b82d811867f88e857ee8ce99b3a9af77ce9162474ddddadcea4c8acf",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_256.state": {
+          "sha256": "7fef24be6c6ac60926f592f02dce5e76eb8f5bdb4f65cfc307d297deb389fbcc",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_320.state": {
+          "sha256": "cefa9174898c0d3371eb343875af5eea7e0ce3c436ee04efcfcfd03071876901",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_384.state": {
+          "sha256": "49dc659a4824345ed0f22777d4d147911236e4de007501cce337b7876ea5da1d",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_448.state": {
+          "sha256": "dde2cb2560709e8586d9b510b42f8c38119ac3eaaecf9b90ab1a6169b4488057",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_512.state": {
+          "sha256": "ea31f7a26245ad11259497f66a76084e800e4599867fa742a8ceab1cd7e74d25",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_576.state": {
+          "sha256": "98ce7f0fa5f3beecd4aaf2e0ae3b574cc85c1f88dc7c721053ad33e12d17bff9",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_64.state": {
+          "sha256": "9205f6cb3826d13ac742b675b75671b1d0287266acd4156f693b8959e6dc8328",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_640.state": {
+          "sha256": "009c6e66ba3c595feb1611cd16c98b6dd9406da2cdbb199df42e0150582b7584",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_704.state": {
+          "sha256": "e1f32ae33decd1907e44e1efe0b7becd6028f2e4231e894d5cf8d49303ec1fc1",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_768.state": {
+          "sha256": "319d42bf3a882f1dd6bfbc07f4736b36110d56be3a26a027ff05e056de6e2921",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_832.state": {
+          "sha256": "304e1e8efcddbd9a09dc7d249ac7affe652f39cc63459df03bd6c34390027ae8",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_896.state": {
+          "sha256": "851feec99388081c01fc9322dc2a2c3457b76a188cd4b25c4e446c79b7d3405d",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/checkpoint_960.state": {
+          "sha256": "ebe27aa5313edb9543aed6a955d5f6e63f83e041a7800a7a92bdcb7cb64ee5d5",
+          "bytes": 14241
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/current.adj": {
+          "sha256": "161deaeae9270a03784ffedc0710cb7fc2d609034d215842ac7c105b44550cad",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/final.state": {
+          "sha256": "1e7b8299b82d811867f88e857ee8ce99b3a9af77ce9162474ddddadcea4c8acf",
+          "bytes": 14242
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/initial.state": {
+          "sha256": "4758014b760a509b0c72c74e0f0c8846ee2014783f96891858285efba8faed77",
+          "bytes": 14243
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/moves.jsonl": {
+          "sha256": "8cbda82c1e73087b962dc63d310f10af587741214431863243455d7f30857e8d",
+          "bytes": 1496017
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_anneal/result.json": {
+          "sha256": "94832e21ee228953ae8e9db25a8e09dd4ac0a5e62ded672083d6ba906611918e",
+          "bytes": 713
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "target99_cooling",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "48",
+        "--temperature-end",
+        "0.2",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling.receipt.json",
+      "receipt_sha256": "d010fa7512fba7ffdefe6b4d9215742fe217c65d90d1c04a2498a5afbc853b21",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/best.adj": {
+          "sha256": "83de221a0492f3ee03957dca19567336d335f9cf3e337a0cfcec319959b56e79",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1024.state": {
+          "sha256": "ebb9686bf6ae121487d43a7b2871b399fd89f6f15b1fbedac2069037797ee607",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1088.state": {
+          "sha256": "a5878e4d191b71da0915f2b1551efdd872b1dec7d4ec1a69f27c3e2446e692d4",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1152.state": {
+          "sha256": "49fb95f8a4bd3d4defa02ce12d503c8b394f67cb89365f5929a466dda817af72",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1216.state": {
+          "sha256": "9886b96843b7e973aeaf5d7cf82dfaac64e0f8c6164a3be97b4eb392e14838b8",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_128.state": {
+          "sha256": "a62b7ea457390a7eb9ee9780044c61a76995e4600ff0e3758b39d8d89521dc7b",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1280.state": {
+          "sha256": "bddbacd2765fdf33a540a3e74c11ef39bd1cd4944f8f35161ec9985f4a1d1752",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1344.state": {
+          "sha256": "b1d4c24585654e1870384f2f28f6c9ab04e6045633b3e1ec02260c5851a021b8",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1408.state": {
+          "sha256": "49ca5c83595a3ca87d358241954bec2b3f18e50cf622de42608fbfc2276dad7d",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1472.state": {
+          "sha256": "2b832c45f484d938eb419f4818bbd33b31a19b69ebf179ac3365815937cf97c3",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1536.state": {
+          "sha256": "e54619487ebe7c0b28271176852ae39404c213b98720ed059569c81281ba730e",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1600.state": {
+          "sha256": "634080615bfc83880c0ba3703386fcdbdaf83ccbcd892104b6beca3e919681c4",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1664.state": {
+          "sha256": "0215f1e7a7984f387eed865a33a8eddeb81606c6390717b0a809d492e0094c60",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1728.state": {
+          "sha256": "43e206ce889bd2b4f173fa44da24480b3139af76e563eda9ec18a0b6717a43cd",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1792.state": {
+          "sha256": "b1c998302b09214e03299b390f07550b94a60a269fd60579b17d56e7d5c36f7e",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1856.state": {
+          "sha256": "e735b96e7aea2447b6b3f80ac246984084498fc5732933419a334f128b8e7b99",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_192.state": {
+          "sha256": "dc28ff5979a3fe7791c41716425af666ad71b7350b6514b8a3b7df146f31d11e",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1920.state": {
+          "sha256": "1ce399a2b09522011ea87d0cb460941f3226d3c482ca3c8b3049b5df8a64a003",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_1984.state": {
+          "sha256": "fa399097585dce82084d4dca773a12c6d6c77aaf1cd8a62749dd2ed8fbe4a02c",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_2048.state": {
+          "sha256": "65c962139ea86196a7d9da9edc3404acb123d02fa19ce9b55f26e6dd66de53f1",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_256.state": {
+          "sha256": "876db1144a9501e83d290eec1ec0ce60fbedc2fd88ea2dc93c2a7f675319e0ba",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_320.state": {
+          "sha256": "92648c321d26519dc574fe265c312018c62e5700d255e0ddc3c1605d27293b37",
+          "bytes": 14264
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_384.state": {
+          "sha256": "0fdb936c24eaf51cab8c27bd49dee9ac9474f01f4ee2b037284e13f066641cd0",
+          "bytes": 14265
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_448.state": {
+          "sha256": "a11e819733b7e47db672ebbda408e42494e2cbcc6dce0f50b98485b872aab672",
+          "bytes": 14264
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_512.state": {
+          "sha256": "8074e068b1a9ebe2234db9d2581e2d24f1638f31f070ef873812b7ee0dfebc79",
+          "bytes": 14263
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_576.state": {
+          "sha256": "51d997c685f40ad206d36122c56de4ede8294f6d91da49b3ada1c96383ee02d9",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_64.state": {
+          "sha256": "f72a1e1b1cd19607d58c8502b6d29e6311af57ea9433a8359bdb4ce36492bba4",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_640.state": {
+          "sha256": "3fda35c4b51b6120eb2fd43460866966b24ede3d47a8368aed7f67a7f9dd1deb",
+          "bytes": 14263
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_704.state": {
+          "sha256": "7300a55376b80dab2e42d05e886ae4c0fce97ad81a5c7e35673d6b901b4f8133",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_768.state": {
+          "sha256": "ec8cf1016d166da652ca713ffc62cf92cc36e30a7a704adf19c307642dd1f2d2",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_832.state": {
+          "sha256": "dfc4fe28ec73270d6d0cbed04459a2d0e1362455e479c5a5793aa655b8219beb",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_896.state": {
+          "sha256": "43c551212153ec534c1c8e16bce206c5610d1dd0b373a993da8a5665475b53e3",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/checkpoint_960.state": {
+          "sha256": "1624632d974498242fdc02d5d8b300cd5692abd5cff17a6645258b38a3d695ff",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/current.adj": {
+          "sha256": "83de221a0492f3ee03957dca19567336d335f9cf3e337a0cfcec319959b56e79",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/final.state": {
+          "sha256": "65c962139ea86196a7d9da9edc3404acb123d02fa19ce9b55f26e6dd66de53f1",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/initial.state": {
+          "sha256": "1b3ff26c60b56e2447d00be4e16163d67ba4024e8e03fee2ecc2c9ea9fa4166a",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/moves.jsonl": {
+          "sha256": "9c8ce76c724ac6db685e37378d6f3f2b8cb0e5f6334db87c7bb28bc92f6626bc",
+          "bytes": 1529054
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_cooling/result.json": {
+          "sha256": "35fa62502d3bf1ffd707a86d6d712899e1806d19c7353ec66b109bb7e7902277",
+          "bytes": 705
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "target99_warming",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "0.2",
+        "--temperature-end",
+        "48",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming.receipt.json",
+      "receipt_sha256": "b8a15145d79e838657fb2bd300977d13bd59cbc57c450cfc635cdd92d33995cb",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/best.adj": {
+          "sha256": "b5e2beed96a5d926b238f0b4108e080d006c12fc2c2f09351ece6edce4744f45",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1024.state": {
+          "sha256": "0564fdcc426e659830587c22575b2af23eecb99a6587855ae7f6c57aa27d2bba",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1088.state": {
+          "sha256": "9dfac6854abb9bdf3f59a3acbb2da8fdea5023bf33e2a0509a1dda3a4dfe1e99",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1152.state": {
+          "sha256": "5230b911dab130f6b327438c265ca64cc9f1fd3896d0c104a61f53a66de66c75",
+          "bytes": 14258
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1216.state": {
+          "sha256": "9befbd481344dd04b1754ac8c7113527155fc0028ba832acf52df226889ae28e",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_128.state": {
+          "sha256": "abfb171531b7ee7188e3f7f51dbe98baf866a61d32bbddbd062caf62b16e4271",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1280.state": {
+          "sha256": "12a8d40a2fcb7a0c1d39fa483a5161e56a5ba8d5d7aac19862b1c95c2e3b8e83",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1344.state": {
+          "sha256": "d5fd890bf2b69f697ad8b1c91435d6a47f47a6b41100a0d2b56344d7b7eac729",
+          "bytes": 14258
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1408.state": {
+          "sha256": "2ab3d6482dc3795ed85efc704ba6e759283f6b8dfda385161d1d85c387143942",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1472.state": {
+          "sha256": "08344cf153ace0e35e5ee3db1047b133d991bc9a0ccc5dfb4259cb048b37bc54",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1536.state": {
+          "sha256": "97f777e380c3aa3ca6b57386ecde0e7c74b76a4d391872027939d19aa5ab9c8a",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1600.state": {
+          "sha256": "a1fd7f621acb419b292d5f22b6aafcf5912239914b050a069dcd18020ca05e03",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1664.state": {
+          "sha256": "d49ecb5eb438c4d955ae65f1850096abc471edc8e01e6ceb183aac9195f7408b",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1728.state": {
+          "sha256": "41e04bebd3111c5c603448e173bb8e8b496cf462e14ff4fade3a982114cdd95b",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1792.state": {
+          "sha256": "e303fa968d5989bea356d9bd86ecb595e3c9b0b6027a7bf261909e7e520b4d9c",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1856.state": {
+          "sha256": "6dc1641b0dbd941aaa1ec34784ea0d9c49f3f15c1fb47da45e3938230ac0540c",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_192.state": {
+          "sha256": "d2bb0f5436f9e734bc0b936da7cfa2141041e5a785e26af328333e5d91396d15",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1920.state": {
+          "sha256": "9ae3ee331392084640425ab583f4572adff31c4fdac09129f945bc69b096922b",
+          "bytes": 14263
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_1984.state": {
+          "sha256": "6e1d80e4f47bfd01302883b2ee2e5761c45ce0da1bb9b642c0a4b8d8682421c0",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_2048.state": {
+          "sha256": "fa54362fc5822d36e7107cbab35398a2e223cdc378593598153205bb77595cf2",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_256.state": {
+          "sha256": "0b1a84f7b917957cd1a52369ff1d42f04f32d55b35b30236f81d1d835f62aca9",
+          "bytes": 14263
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_320.state": {
+          "sha256": "2931d08bcf4b5aace4c00e026d368c7cfd87f8a35710f25bd8f0f5edc2f38997",
+          "bytes": 14265
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_384.state": {
+          "sha256": "745dda29a81cdbdd14870619d66ee130f5adaa97d0184c3dea6b39791c22f027",
+          "bytes": 14263
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_448.state": {
+          "sha256": "27adf95f569e3648537d3ffc4827b43556746a7e6e63a9290bf715e6e6b3f237",
+          "bytes": 14264
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_512.state": {
+          "sha256": "8570688f5ac52ec914c16dbb9f105b25ce3c23ef10fa302c6f2c452d58ff44c0",
+          "bytes": 14263
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_576.state": {
+          "sha256": "793e1e4c296acc1329177326d10a4976646072133b61bc048a6e239cdc510664",
+          "bytes": 14264
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_64.state": {
+          "sha256": "7aaeeb132b7ca75311cbe35214b38b7528855535be7050df0967e207293fe65a",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_640.state": {
+          "sha256": "3acf0fd32e8b82a19ab4ce99876f59e22e8a12d62fbb4e951c03d8fb289faa16",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_704.state": {
+          "sha256": "aff872db4a81d1e122cf67d86ada6852db4330fab36f27ba71ac406eb043532d",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_768.state": {
+          "sha256": "0107683acfd87ec4f2bf7313c3a7176c759062aacadef9666a1140b72c322142",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_832.state": {
+          "sha256": "22e0ac6946568a89cd7b89d0788af0196d55c6506f98afde7f231e49c249b39c",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_896.state": {
+          "sha256": "cbd7aefc68a6467392bf7eb0ea19706caafd36f4025bb003a20e15542fe8db61",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/checkpoint_960.state": {
+          "sha256": "93fdc26aa545e5c9fe10323e40ab3d073f519d719d9dcc7761c73eebdee527ca",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/current.adj": {
+          "sha256": "e5f4d8f92cb30a274d99de18069e9b4ce0c7aa53e91b9eedd514aaea9d7a3531",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/final.state": {
+          "sha256": "fa54362fc5822d36e7107cbab35398a2e223cdc378593598153205bb77595cf2",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/initial.state": {
+          "sha256": "abd285f7be1699b737bae357f28cd602c0c0036cd2ac032cfb22fd210a4c611a",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/moves.jsonl": {
+          "sha256": "5aca8ac2548eb80ec6aa2e106399bcee1faaab559e20cb4a1d55ace6fccdf3ee",
+          "bytes": 1512286
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_warming/result.json": {
+          "sha256": "aa073c65e3318fb10f26754fbb84547d06ba633377937fc71eddcccf99959515",
+          "bytes": 713
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "target99_mixed",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "256",
+        "--temperature-start",
+        "24",
+        "--temperature-end",
+        "24",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed.receipt.json",
+      "receipt_sha256": "edce18df9cc7e5f38268d7687d2812c1d4c50d055ca7366b9a355df132b58941",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/best.adj": {
+          "sha256": "f1124c0143749fa7f88c6390d3ac40776858ceaa59fabb80d3e8a2d4ca2c29e8",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1024.state": {
+          "sha256": "b01c621aa3d869d88be18dfbe14775121c22491e225033c47ed57ebeed212c14",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1088.state": {
+          "sha256": "c76152a324e8d24476e4cf06da130605101ff38edc3b2429febb5897fa9f36f2",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1152.state": {
+          "sha256": "265fd8a95269abe6e1892d0b0a7c9171c44786924c92c4352ae1a7d5ea5deabb",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1216.state": {
+          "sha256": "a2799195c7b374b888c8f701af4f9df01992b80929a47c4d826375ee88a3ca55",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_128.state": {
+          "sha256": "cf54a15ef21075fdcfcc0a081a1948dafc060e4cb2937bac35793cfc2f5bfc1b",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1280.state": {
+          "sha256": "a3e579ac044199255be0f547e9702091707fa821491e7371b423e3558eaaf338",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1344.state": {
+          "sha256": "29908fa1fc88bd98b5e0dbb953ae5049341e3f45e51d9d09d2f56310e8b8dde1",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1408.state": {
+          "sha256": "61856f52b1dcf13e91363c5d49e6108bba4f000f009c37403fe20162cb48332e",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1472.state": {
+          "sha256": "a8bbc5660a7190623aaf6345359153d1ae64242282459f2cc153a415f2c297c6",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1536.state": {
+          "sha256": "72e7b81ec4a97e3c8842371bf55e21043c42f166c6c805b2db92db7efb3afbe0",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1600.state": {
+          "sha256": "8641361b728a0891185777d5d3d70beaf15fa2f6f597a60a9b678038515a7081",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1664.state": {
+          "sha256": "ac59ed53693a65ab6c5aeb0af9a04346870ffc5897dba2493dc1ab38295fc1c0",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1728.state": {
+          "sha256": "d1ee3a71572fd9923e17483bfc007001221588948ce87388363705c5388e7e66",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1792.state": {
+          "sha256": "5591cc3eb17d7bf72ef624a8807a10ea11dae61435d3114debd4b9755826a921",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1856.state": {
+          "sha256": "9fc681b0c6b2a45e4a9a71022b1776c9ead754ef86bd0501b6e7dac4d1402db8",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_192.state": {
+          "sha256": "2f5040933c6e978776c9cc0f73f7e73134fba1b9543a4fb09834dc22135813d5",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1920.state": {
+          "sha256": "26295db3d84cbede1622676913cccca4cdf7ddddd4defa6ba55359cc9f34dd3f",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_1984.state": {
+          "sha256": "990ed73ddfd9a268ba6edd51f877c03a9a18113940dc146845f12eb49e917070",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_2048.state": {
+          "sha256": "e94d90a0481ec142de3d53fa5c6d31e52d04aa46ce0fba073ddd28f29c9634a0",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_256.state": {
+          "sha256": "19355ba6028b09fbea862497f8033fe64e1d665391192af20e8d3a9f7fe737ef",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_320.state": {
+          "sha256": "e0cba90dc05f21e084deb3d117d2d9d74b7b0e0226e320f00fac47f512be1b0c",
+          "bytes": 14249
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_384.state": {
+          "sha256": "3dcaa89f3aa2981cbc5c649ba92580cdbe4894fd30ea8729a97410ee859f553c",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_448.state": {
+          "sha256": "41511b17c39ad4576b3140c26b18167e26a4166e05e80e0bb36cc66f472478c4",
+          "bytes": 14250
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_512.state": {
+          "sha256": "cc6c919108e577c590058efe9979da6f40be58db30df93eb987a4295d0f4f1b8",
+          "bytes": 14251
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_576.state": {
+          "sha256": "645d0b00eff1513f2fd45b32b0b78cf5c97c1279d970c11ed4f0967c0327b1a7",
+          "bytes": 14249
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_64.state": {
+          "sha256": "648a12f68e42bfeafbce2ac1b0b362465fe4fc7d0326963637dc6a1c7a52b7fc",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_640.state": {
+          "sha256": "ff7e11f81c64b772e509a80c22338918b8b2db452a723689eaf509eec85c2b69",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_704.state": {
+          "sha256": "f2280f4d5ce8c48ded77465cd3421d58786055a5fb03e9fb476f58101823bfab",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_768.state": {
+          "sha256": "f918c096493d1f4d5604abc921377496d5d8be9fc11be8bb83ecdfc139b5c0e2",
+          "bytes": 14247
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_832.state": {
+          "sha256": "ee8742b1f4170bc23617f8c1bf30d7149f3882135d2750230c6d5861f18ea583",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_896.state": {
+          "sha256": "87646375af2bdcae4b11cefe7cce5e3b1165800de1901ac3d1e6daec199194a9",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/checkpoint_960.state": {
+          "sha256": "9b01589ad15234c02828d8b9627f4f0beef37b3c8ad3b3943eb15ec877932d17",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/current.adj": {
+          "sha256": "f1124c0143749fa7f88c6390d3ac40776858ceaa59fabb80d3e8a2d4ca2c29e8",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/final.state": {
+          "sha256": "e94d90a0481ec142de3d53fa5c6d31e52d04aa46ce0fba073ddd28f29c9634a0",
+          "bytes": 14246
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/initial.state": {
+          "sha256": "a22650fbaf30a98e22010916d89007573231c4681639cbd4809d209f0c16eefe",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/moves.jsonl": {
+          "sha256": "46ef1ff103890d1745f13e37aec43e490e37034ed7b3c1e02b3ce66e973b9e60",
+          "bytes": 1496464
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/target99_mixed/result.json": {
+          "sha256": "c2f982b073a12d62742bf02745a4273ee2556e4432bbd113903fbbc196811512",
+          "bytes": 713
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "resume_whole",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "256",
+        "--seed",
+        "99032021",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "256",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole.receipt.json",
+      "receipt_sha256": "f427cd8d5245203a831f120d25b7fe2725e07806a733a1d2cf7dc373f5e41b6d",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/best.adj": {
+          "sha256": "11a0f9ad62799f5f0217c71c8839085189f5cae5db38d3fb07b1fa10e29d38ac",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/checkpoint_128.state": {
+          "sha256": "aa4cb893cff62dec17451ede4facd330cdbcd132741141b6fe1c90fb396dab1e",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/checkpoint_192.state": {
+          "sha256": "6a96f9a0dca1dd5934b9d1aedb8963419ec7180a19231504336a6f8df2b80d82",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/checkpoint_256.state": {
+          "sha256": "b90dfa1a9332907ba3a00a7a60718287f9d1f6cd3a29aead5c7e3d7eaf1ce646",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/checkpoint_64.state": {
+          "sha256": "d40c4187e1947fddbe669fc4c9b5b4f26e8f434f463e2183c78cb887bfafaa30",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/current.adj": {
+          "sha256": "11a0f9ad62799f5f0217c71c8839085189f5cae5db38d3fb07b1fa10e29d38ac",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/final.state": {
+          "sha256": "b90dfa1a9332907ba3a00a7a60718287f9d1f6cd3a29aead5c7e3d7eaf1ce646",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/initial.state": {
+          "sha256": "e479ad7bee736c940bf9b1df2972fb716fb982a09a992cc48bf7dd115320af87",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/moves.jsonl": {
+          "sha256": "5999c06cf3f670cf6a850d31decb4b880f9d56d8f376b9c897640ffddef7a277",
+          "bytes": 187817
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_whole/result.json": {
+          "sha256": "4ba456c2a6bbf6a37abf84e82e8f828b1a6626caf757165d2241269aa916d0f6",
+          "bytes": 705
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "resume_first",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "73",
+        "--seed",
+        "99032021",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "73",
+        "--emit-pair-costs"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first.receipt.json",
+      "receipt_sha256": "0483a77573c1beec41b121c06749ce931bd2f1c6e337831310b04d4e06061a34",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/best.adj": {
+          "sha256": "4ecfe2f1080ca9ef608dd8cc4104eee28534a5fa861a2a8abbbdef7c442be2a7",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/checkpoint_64.state": {
+          "sha256": "d40c4187e1947fddbe669fc4c9b5b4f26e8f434f463e2183c78cb887bfafaa30",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/current.adj": {
+          "sha256": "4ecfe2f1080ca9ef608dd8cc4104eee28534a5fa861a2a8abbbdef7c442be2a7",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/final.state": {
+          "sha256": "647a4135b50297245b74422c78c1a966629c2eac50cb8234b8f0a6762771cceb",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/initial.state": {
+          "sha256": "e479ad7bee736c940bf9b1df2972fb716fb982a09a992cc48bf7dd115320af87",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/moves.jsonl": {
+          "sha256": "4182cee6fd4a7332f4d56fee06fb39149023158b34b4554d099aa01913c224dc",
+          "bytes": 53549
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/result.json": {
+          "sha256": "c7010fdec84f711f949c44b2eeea9c5d35bfd0b36dc8d76012df1beeef8a3520",
+          "bytes": 712
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "resume_second",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "183",
+        "--seed",
+        "99032021",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "183",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/resume_first/final.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second.receipt.json",
+      "receipt_sha256": "9e00d2dfd870ce5da8c3490c89529851ca4c2a4b32a835ae26ce10c4b1eef186",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/best.adj": {
+          "sha256": "11a0f9ad62799f5f0217c71c8839085189f5cae5db38d3fb07b1fa10e29d38ac",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/checkpoint_128.state": {
+          "sha256": "aa4cb893cff62dec17451ede4facd330cdbcd132741141b6fe1c90fb396dab1e",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/checkpoint_192.state": {
+          "sha256": "6a96f9a0dca1dd5934b9d1aedb8963419ec7180a19231504336a6f8df2b80d82",
+          "bytes": 14244
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/checkpoint_256.state": {
+          "sha256": "b90dfa1a9332907ba3a00a7a60718287f9d1f6cd3a29aead5c7e3d7eaf1ce646",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/current.adj": {
+          "sha256": "11a0f9ad62799f5f0217c71c8839085189f5cae5db38d3fb07b1fa10e29d38ac",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/final.state": {
+          "sha256": "b90dfa1a9332907ba3a00a7a60718287f9d1f6cd3a29aead5c7e3d7eaf1ce646",
+          "bytes": 14248
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/initial.state": {
+          "sha256": "647a4135b50297245b74422c78c1a966629c2eac50cb8234b8f0a6762771cceb",
+          "bytes": 14245
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/moves.jsonl": {
+          "sha256": "dbc3a2f6eedef52580ac55b5c5c5466976361b8e03af81ac70ec7ea9f0e0a499",
+          "bytes": 134268
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/resume_second/result.json": {
+          "sha256": "2c2a6a86cb87abcd767e6129cb99c433248b66bbb91ec8e09438835b517c1302",
+          "bytes": 714
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "import_v1_current",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032022",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "24",
+        "--temperature-end",
+        "0.2",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_controls01/target99_mixed/final.state",
+        "--import-select",
+        "current"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current.receipt.json",
+      "receipt_sha256": "f50e0c75cc5feb1f6edd2785992b0feb870e71cb50239ab66d9fa0b6d2d61655",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/best.adj": {
+          "sha256": "5f6801a7d6bc40239a2eeb343148c7419453662c3b3a27bfb5fff2c8bb7bdb0d",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1024.state": {
+          "sha256": "9240b39bca40307ad9949b5abac18f5d87230479dd8bfed5741f0c8501d4d2df",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1088.state": {
+          "sha256": "0d175f969aa224e99b243ef0b61ba60d9d96fec3bb8933fe3578ff4223583dc9",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1152.state": {
+          "sha256": "8814e5164fecb3e593c506ba60407d6174cd5b18666f966bcf14f2cda17cd6d0",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1216.state": {
+          "sha256": "ac6519dcdec3afcd1667fccc242a7fe77849d522fe433e56fa42f8bb92acff60",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_128.state": {
+          "sha256": "8d6ea98ae5839e7a10c97e961c71c3af7d7961f582ffcb50972c63bfd21d634b",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1280.state": {
+          "sha256": "86235956ac5e0f39c7c2974b9bc6011150b0c9ecbd81c5dfd0caa16d4075bee8",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1344.state": {
+          "sha256": "0cec08fcad937f4219b6e4bc20f2247d1dd07e6f28b1fd21892a9b237ac5366f",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1408.state": {
+          "sha256": "c5c86cbc2441177012427c05158d29985038ec224c372f7d7832c25112d4cba0",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1472.state": {
+          "sha256": "60797da7bb3e281f2a9d466a5919eca2521a8bef3dff88e31d291a1c7e23cef9",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1536.state": {
+          "sha256": "7e95737980a012ae0995d8ac1c09af424e4fd9450f7d52ca9ebd7377cc939941",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1600.state": {
+          "sha256": "e22466d12c47151a07aced9b7c7e039bba6592b4a76555dfb342515948fdd108",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1664.state": {
+          "sha256": "ad78124bd92d6cc6ea7b610ddd26bc478585a23bc311442371436a67d001079e",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1728.state": {
+          "sha256": "abb4e6ec83c4db90a9cbd24fe05111737cf1e4023d579e8efd8802afde70bf1b",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1792.state": {
+          "sha256": "24acb1ccaeb4bdde16b2eaeb05ce721dc65f5b616a60297b3ffca87e3cd749ea",
+          "bytes": 14264
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1856.state": {
+          "sha256": "6f5b7a668523103278e51f7242326bfebe2c5fe07f79ea48ff00ec280b81a80b",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_192.state": {
+          "sha256": "87de3e288614ae5ec2a91041142a76813afb4b468ef65fa8683efdd9010bf858",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1920.state": {
+          "sha256": "92b340fac90544862d419255016202448fc07b3488632eaf66cf1c47fb22716d",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_1984.state": {
+          "sha256": "3a9b8a736ee57959795be642603ea1e52f2aac70315e59be09023527cea5cf5c",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_2048.state": {
+          "sha256": "40f9ebb61087f6112de85ecdb7d054d219e506f39d990c8ccf417c720db11954",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_256.state": {
+          "sha256": "ece6088452b42c5df3af1c6128e062e6c2b8f8f55ffecbe524235f732c844e24",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_320.state": {
+          "sha256": "2ab6a2255c4e6060f41f70a1e5a584f1971da0926858c7a775a7352b1c796098",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_384.state": {
+          "sha256": "6818bda8d46a5a3b9af5941a1d83b29ececa2aed11076f6a5366748381aaa3be",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_448.state": {
+          "sha256": "6f229ed4ab1afe6ea9075f1e8f44f78ba24e2c51b64a2319abebbbd1a84e2d89",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_512.state": {
+          "sha256": "fffcd9286149d4df87f3b4b544bb1996d8e91040f4bec73376d7998c1e1811af",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_576.state": {
+          "sha256": "fa9e2b52c531de4e0415441beb66b645eea29ac1d497d6688bb307d7219899d8",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_64.state": {
+          "sha256": "d1876cc54aab7c40b52e2495bf6a58e348f7c3d82a7221dedd272fbc885611ed",
+          "bytes": 14258
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_640.state": {
+          "sha256": "2cb5058de89ebfd9c3c60084a0337deb8a0d532dd33ef1c4f6fdbb6cbda74093",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_704.state": {
+          "sha256": "a247118f8a39c828222b5c26ae71cd93fab62f514b0486b10186f039d79e1ff0",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_768.state": {
+          "sha256": "9701d773e94115edfb7c7c51a633e20aec4c40b2cdc464075f740d3400491915",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_832.state": {
+          "sha256": "409a76ba4ecc9dfa108b48e0c9d36283f61182d58818fd9f3ab82dc607ef999b",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_896.state": {
+          "sha256": "01015eb42ec9725065526cad9ab136d595f08f619f2633da8a2e45e37b654413",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/checkpoint_960.state": {
+          "sha256": "9b11d1bf86eec20b61efc3872916418a4c1d3aeb0b798b39c075c5355a984f34",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/current.adj": {
+          "sha256": "5f6801a7d6bc40239a2eeb343148c7419453662c3b3a27bfb5fff2c8bb7bdb0d",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/final.state": {
+          "sha256": "40f9ebb61087f6112de85ecdb7d054d219e506f39d990c8ccf417c720db11954",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/initial.state": {
+          "sha256": "ac254760b2ff53e35f20f076ae43c76c1567a2b9373174aca2ea8fe24f107fb7",
+          "bytes": 14255
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/moves.jsonl": {
+          "sha256": "590b076cc157e49f2a318b2c3b72318ef2005b1615379d697a1013c6bb592e1d",
+          "bytes": 1524852
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_current/result.json": {
+          "sha256": "428dde5f1d78381a3a7df2121fdcfb0243cc31220594c71ab8b44e0ec4445a37",
+          "bytes": 709
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "import_v1_best",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "2048",
+        "--seed",
+        "99032022",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "24",
+        "--temperature-end",
+        "0.2",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "2048",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_controls01/target99_mixed/final.state",
+        "--import-select",
+        "best"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best.receipt.json",
+      "receipt_sha256": "526461b04242b2bd3a100f35b71202ece70298fbfaddc31790e72d2f8ffdcce9",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/best.adj": {
+          "sha256": "20eb8f68936fcb753cdda69969228e1b5033785d840d4f0070886c2b86046c0d",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1024.state": {
+          "sha256": "abd9248109768ecc26dff7ee10a9fb06c765832d1771815400f7bb14a3673c01",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1088.state": {
+          "sha256": "b7f15af1b5cfa4dfa6a5df8d0126101b1c9adcfb3bb60810c2391a431a47902e",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1152.state": {
+          "sha256": "97aa2ccbf56ae3e768249f7de3b06f5d9fab932cd58464569f5cf044f14ff66e",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1216.state": {
+          "sha256": "e8dd3fbc98b7f2514abb29337f08fa30dd8c38a63d663bd84ab1a14adfb96ee1",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_128.state": {
+          "sha256": "dd66f1ad9aec267291182491df74d9a668d5ae5983078cffd104f893ec47920a",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1280.state": {
+          "sha256": "4437a8218926b53a26f031e732f51f173398cbba5e62f8debcf66b7291930a4d",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1344.state": {
+          "sha256": "5c10366a6ae939e54f94e395bd5e23db22a6802d00bde159d482a6ac53e0c854",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1408.state": {
+          "sha256": "c9a1b89cea5f841c055c9582957806babe9c82bd89b8f3ede15cf9b43ecc35f4",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1472.state": {
+          "sha256": "ba92bfd70e270cc465ec008da294337f9fcd4652d12d54c4e73247a92ad263ff",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1536.state": {
+          "sha256": "6457eb0ca16d01c167aebacd45a661c14a15e9464b33632dfa539aea075657b8",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1600.state": {
+          "sha256": "c50c82ec1037fb9020c5e8add38c0d9bd564ffa5a03318d04b58b9cb5511b146",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1664.state": {
+          "sha256": "52f3a6e9b9b3cb362be860bef2492cc43cf2f9c3f6e4ff154e76bf7d1c0dd53b",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1728.state": {
+          "sha256": "2ecb1491bbca1578ec147869659524dba94f15dd46d497d575214c75b1d17ed7",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1792.state": {
+          "sha256": "4dd3f3cfd88211a2ace98191b3ba3d837ca7d4029926c577380fcec0a76205d6",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1856.state": {
+          "sha256": "93d1ebf6675bfc14f07b12ed1fbc226aa606c7fd04870de5a2ee70cbb959370a",
+          "bytes": 14262
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_192.state": {
+          "sha256": "23e8b383ddc38c8ec07f9b7cd43d93e3ddda5a31dddde42bbb976ba12e34ac0f",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1920.state": {
+          "sha256": "77094b1f3c4b28425e709acdcfedfd73e30852063eb9579afbde1efbf2adcc6a",
+          "bytes": 14264
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_1984.state": {
+          "sha256": "28f9f6b674208964f12d6e91d80c3fc5b0bc8ccfcc0da61d7fc97bad3bf478ab",
+          "bytes": 14261
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_2048.state": {
+          "sha256": "92980026a366b6c8e77d47710ede482720de326bf6dee8399a1a648bad27cedf",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_256.state": {
+          "sha256": "d0ea21d1e2d24caf3ce0675ad9f7a4611b75c33f50a312dbadd02f772866caed",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_320.state": {
+          "sha256": "a49fd7524bcec8634d66ab8042c87e160109cb1492fad2d6b80b3f8d00a4cab5",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_384.state": {
+          "sha256": "a3aa991f0da8565addb63ea5680fb2773fba7dc0f14bcb8047c11a064758704c",
+          "bytes": 14257
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_448.state": {
+          "sha256": "891d552cdb5be94da3edcb92877cfcc62b42382bc4d13bf5ba9597541fde4456",
+          "bytes": 14258
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_512.state": {
+          "sha256": "efd2013c185ce61f0bf73443a9af6603ec70023b41ec3aae23ba00f0bea60848",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_576.state": {
+          "sha256": "8602d784205cc609f74cd8f246139a8fc989336b93ee70e0bde31815f9c4c33a",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_64.state": {
+          "sha256": "f6c954d3a54eed1def6300c5602f35be906579ea25793012c1c4ad6e2742a391",
+          "bytes": 14257
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_640.state": {
+          "sha256": "c04712978c5386845bcdf550cc7904331f6278953bf64286a12764724fd7f55c",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_704.state": {
+          "sha256": "49bea4fc8be2d0f24c8598d616f559ddcf3b2a2a81c633310f06c1aa1559eee8",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_768.state": {
+          "sha256": "996a46d4414d4bced0b50039609ed6747f1685d7d98634a15eeb52d337de70df",
+          "bytes": 14256
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_832.state": {
+          "sha256": "94a2853128a71d7a39d54a96b2cfd742ed23b84094a417e1762285c39e021224",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_896.state": {
+          "sha256": "c77400f296e3e38e008825240fffc78ebb6776f20194f53dbdffc80208c68e2c",
+          "bytes": 14258
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/checkpoint_960.state": {
+          "sha256": "ef4112aa2406c99b2c2ed798aff95d4f5c397ab9aa1a46a60c32aeeb87b99ed5",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/current.adj": {
+          "sha256": "20eb8f68936fcb753cdda69969228e1b5033785d840d4f0070886c2b86046c0d",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/final.state": {
+          "sha256": "92980026a366b6c8e77d47710ede482720de326bf6dee8399a1a648bad27cedf",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/initial.state": {
+          "sha256": "8d3130cf21388c1162e2a46b88d4607c448de6bbfc7a8bb502b8831e0fdda731",
+          "bytes": 14253
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/moves.jsonl": {
+          "sha256": "b9c316b77e336321d8f701a7a76303aee2fe35fe396cab83a35fe5e214a0f3c2",
+          "bytes": 1524857
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/result.json": {
+          "sha256": "cb2f6f8767d2cda5287893897998a4e15148b1967521bc55a29a47a8ad376d88",
+          "bytes": 708
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "import_resume_whole",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "256",
+        "--seed",
+        "99032022",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "24",
+        "--temperature-end",
+        "0.2",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "256",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/initial.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole.receipt.json",
+      "receipt_sha256": "4606c50c56821c73bd26dd10439d3cf14750fc2625477ac895da0d6893536925",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/best.adj": {
+          "sha256": "4e95e2ebb9f25c3f181b9ee38b0ca60c51f840beb074976f0156d8ddc375eea8",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/checkpoint_128.state": {
+          "sha256": "dd66f1ad9aec267291182491df74d9a668d5ae5983078cffd104f893ec47920a",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/checkpoint_192.state": {
+          "sha256": "23e8b383ddc38c8ec07f9b7cd43d93e3ddda5a31dddde42bbb976ba12e34ac0f",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/checkpoint_256.state": {
+          "sha256": "d0ea21d1e2d24caf3ce0675ad9f7a4611b75c33f50a312dbadd02f772866caed",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/checkpoint_64.state": {
+          "sha256": "f6c954d3a54eed1def6300c5602f35be906579ea25793012c1c4ad6e2742a391",
+          "bytes": 14257
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/current.adj": {
+          "sha256": "d06b571e904a3cfaa6325d7525a7df90f0c9cb3f89eaa581cbaa40d0504aba4f",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/final.state": {
+          "sha256": "d0ea21d1e2d24caf3ce0675ad9f7a4611b75c33f50a312dbadd02f772866caed",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/initial.state": {
+          "sha256": "8d3130cf21388c1162e2a46b88d4607c448de6bbfc7a8bb502b8831e0fdda731",
+          "bytes": 14253
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/moves.jsonl": {
+          "sha256": "6a97f1cd0d3c9a87faace8a2acb17c8d5053d51989a5a638d5e66c0b9bc0daf7",
+          "bytes": 189858
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_whole/result.json": {
+          "sha256": "18782b2a6471887d00715b89ad38d6f7841e3f68de450037ab03dc2c5803d074",
+          "bytes": 696
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "import_resume_first",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "73",
+        "--seed",
+        "99032022",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "24",
+        "--temperature-end",
+        "0.2",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "73",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_v1_best/initial.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first.receipt.json",
+      "receipt_sha256": "b6f5c4e75634f379ebb4c7dcd185e03626fe8e287221e0b32804dc366d4bcb93",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/best.adj": {
+          "sha256": "4e95e2ebb9f25c3f181b9ee38b0ca60c51f840beb074976f0156d8ddc375eea8",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/checkpoint_64.state": {
+          "sha256": "f6c954d3a54eed1def6300c5602f35be906579ea25793012c1c4ad6e2742a391",
+          "bytes": 14257
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/current.adj": {
+          "sha256": "7e47e933126e5fca4e660557bb2a0da8205cccbc4f5540824b59ed5374dbdb85",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/final.state": {
+          "sha256": "1cb353d8897acdd413e1eb62937ed7dab931baede3ce9bc713b190d511101d7c",
+          "bytes": 14258
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/initial.state": {
+          "sha256": "8d3130cf21388c1162e2a46b88d4607c448de6bbfc7a8bb502b8831e0fdda731",
+          "bytes": 14253
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/moves.jsonl": {
+          "sha256": "2f15eb975f4245d2b6c2085d94223a4737b65ee6bdd078519d389fe4555d8aea",
+          "bytes": 53395
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/result.json": {
+          "sha256": "44b034ee065ad824c06544f2baa49bb77ba45d474e1b3b5ecabbe205b9726393",
+          "bytes": 703
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "import_resume_second",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "183",
+        "--seed",
+        "99032022",
+        "--mix-steps",
+        "64",
+        "--temperature-start",
+        "24",
+        "--temperature-end",
+        "0.2",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "183",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_first/final.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second.receipt.json",
+      "receipt_sha256": "d9768e13fc3b9d056b00bd44cfd0c2c6a28945a2ce1191ee95a241263e6401f2",
+      "artifacts": {
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/best.adj": {
+          "sha256": "4e95e2ebb9f25c3f181b9ee38b0ca60c51f840beb074976f0156d8ddc375eea8",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/checkpoint_128.state": {
+          "sha256": "dd66f1ad9aec267291182491df74d9a668d5ae5983078cffd104f893ec47920a",
+          "bytes": 14259
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/checkpoint_192.state": {
+          "sha256": "23e8b383ddc38c8ec07f9b7cd43d93e3ddda5a31dddde42bbb976ba12e34ac0f",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/checkpoint_256.state": {
+          "sha256": "d0ea21d1e2d24caf3ce0675ad9f7a4611b75c33f50a312dbadd02f772866caed",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/current.adj": {
+          "sha256": "d06b571e904a3cfaa6325d7525a7df90f0c9cb3f89eaa581cbaa40d0504aba4f",
+          "bytes": 9903
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/final.state": {
+          "sha256": "d0ea21d1e2d24caf3ce0675ad9f7a4611b75c33f50a312dbadd02f772866caed",
+          "bytes": 14260
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/initial.state": {
+          "sha256": "1cb353d8897acdd413e1eb62937ed7dab931baede3ce9bc713b190d511101d7c",
+          "bytes": 14258
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/moves.jsonl": {
+          "sha256": "b055050057c5c67c53c44efbf49675300fc5a9dfa8e2cb13b5de867d45629262",
+          "bytes": 136463
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/pair_costs.jsonl": {
+          "sha256": "88923d59aa7d4aefe46855e22af73f2ecd4564548f96b090302a3a4f77430bdf",
+          "bytes": 10760
+        },
+        "acceleration/results/20261002_hypergraph_weighted_controls01/import_resume_second/result.json": {
+          "sha256": "9e95c7958d63e3b19e4eef636693a4201c14112e9016f2c89758fb07432911d5",
+          "bytes": 707
+        }
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "label": "reject_lambda_weight",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/lambda_weight_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_lambda_weight.receipt.json",
+      "receipt_sha256": "bc0b07e0dceae15dd910ea6b3a732dac68a9f60b56f55528c5b7ef57a3fa3dcd",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_weighted_energy",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/weighted_energy_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_weighted_energy.receipt.json",
+      "receipt_sha256": "b6ef7bbb74af68922d0bf82363c08cb4790e0637b13cc6fc0c9ea9349063a87c",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_best_weighted_energy",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/best_weighted_energy_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_best_weighted_energy.receipt.json",
+      "receipt_sha256": "aeade03b252924cf26bf1bdefbc34ef03224a6bee70330212d68f840583a3bf8",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_lambda_energy",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/lambda_energy_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_lambda_energy.receipt.json",
+      "receipt_sha256": "775b7800a3af76a174baad9f9675c3cbc229a0a84c129272821d4cfc044491c2",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_mu_energy",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/mu_energy_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_mu_energy.receipt.json",
+      "receipt_sha256": "3c90a147151315801b9264ce0b30b379f6cf84e42c56d0d34d3bfbea0a0c6757",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_base_energy",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/base_energy_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_base_energy.receipt.json",
+      "receipt_sha256": "413fcf9095e9d64c56c06518f9f99fdb54b0fa26d7441f8bbfcb95061d8ee392",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_cn",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/cn_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_cn.receipt.json",
+      "receipt_sha256": "1ba0d407082013720d33fbac702ca7ddd5de9de240e6541beca02c79131683af",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_duplicate_triple",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/duplicate_triple_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_duplicate_triple.receipt.json",
+      "receipt_sha256": "a1643d1157a5851e1a60252f527549652d7ee00706e625575145f3f3f4c85613",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_zero_rng",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/zero_rng_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_zero_rng.receipt.json",
+      "receipt_sha256": "c7ae266ee1132f6878b6c2435a3bb9831da7b5ccd53562b5e4b0e39bdad92842",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_counter",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--resume",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/counter_corrupt.state"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_counter.receipt.json",
+      "receipt_sha256": "ee0063b0c3ef0bca862c2a0a8f40d05b27598cbd3d4d3cbc37ab829f4dcff694",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_import_energy",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_energy_corrupt.state",
+        "--import-select",
+        "best"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_import_energy.receipt.json",
+      "receipt_sha256": "f7b475737376ef80f9e3006e2b17622efe111040afee44e6ab7d2ada6a10c48a",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_import_cn",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_cn_corrupt.state",
+        "--import-select",
+        "best"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_import_cn.receipt.json",
+      "receipt_sha256": "cd170bad92371a19f57fcf860b26c36603a7e7762f23047c188281fada96a1bc",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_import_triple",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_triple_corrupt.state",
+        "--import-select",
+        "best"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_import_triple.receipt.json",
+      "receipt_sha256": "823fa03b73c524bd459e36ca2897513555ef6ff9e7c039fd977d174a837b859d",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_import_counter",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_counter_corrupt.state",
+        "--import-select",
+        "best"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_import_counter.receipt.json",
+      "receipt_sha256": "bba253eed624bc627af8f6fa40dd1274df0320aa901a436392e6a84df103c610",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_import_zero_rng",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_weighted_controls01/import_zero_rng_corrupt.state",
+        "--import-select",
+        "best"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_import_zero_rng.receipt.json",
+      "receipt_sha256": "c88db2edfb7e863cceacc79fd610d51f64a95d7001e6abdba899bfc172989690",
+      "artifacts": {},
+      "actual_exit_code": 2
+    },
+    {
+      "label": "reject_import_selector",
+      "options": [
+        "--fixture",
+        "target99",
+        "--steps",
+        "1",
+        "--seed",
+        "99032020",
+        "--mix-steps",
+        "0",
+        "--temperature-start",
+        "16",
+        "--temperature-end",
+        "16",
+        "--schedule-steps",
+        "1024",
+        "--verify-every",
+        "1",
+        "--checkpoint-every",
+        "64",
+        "--checkpoint-seconds",
+        "15",
+        "--trace-max",
+        "1",
+        "--emit-pair-costs",
+        "--import-v1",
+        "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20261002_hypergraph_controls01/target99_mixed/final.state",
+        "--import-select",
+        "wrong"
+      ],
+      "receipt": "acceleration/results/20261002_hypergraph_weighted_controls01/reject_import_selector.receipt.json",
+      "receipt_sha256": "96747f2a56da79e8e01f0040d21e0e82239fd6fb96a6b5b260a834c874d5bd77",
+      "artifacts": {},
+      "actual_exit_code": 2
+    }
+  ],
+  "corruptions": [
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/lambda_weight_corrupt.state",
+      "sha256": "e9a50d9edf1a4d6f6300ab85d590b269229647f15ff3f202a26e17ace704386d",
+      "type": "lambda_weight",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/weighted_energy_corrupt.state",
+      "sha256": "2697e2ba88ffcd9a42d08fea8b7b607c6f7000ae034701a126cfc4ced25fd8ae",
+      "type": "weighted_energy",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/best_weighted_energy_corrupt.state",
+      "sha256": "ee4f3dacdf327d51c77190fcf275cf63d8ff82f5540705435bcd931ce24ac8eb",
+      "type": "best_weighted_energy",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/lambda_energy_corrupt.state",
+      "sha256": "e280e252631c48ef304af220f9081ee0b8fa38aeb649b79842a94896ed106583",
+      "type": "lambda_energy",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/mu_energy_corrupt.state",
+      "sha256": "852f19a80433b17093ee15374a09d09865c84a20a97fd9bb5d0f05064e057181",
+      "type": "mu_energy",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/base_energy_corrupt.state",
+      "sha256": "7c6be71efe5b37c498680710effa1640d8a7a8a3f286b21c701edcaca7d014d5",
+      "type": "base_energy",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/cn_corrupt.state",
+      "sha256": "7e6083d37d28d54208a81a63fb5e22b871b35cc08857c118d07bdacfaa88475f",
+      "type": "cn",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/duplicate_triple_corrupt.state",
+      "sha256": "992837e657b211173a61174029a6e8a5dfb03f3a2c3cfb8c28327f5419a29345",
+      "type": "duplicate_triple",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/zero_rng_corrupt.state",
+      "sha256": "af631d4de0ba242b49a42e1abd08bf15a6c1406faccd88adf2bed4b0cf005f78",
+      "type": "zero_rng",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/counter_corrupt.state",
+      "sha256": "05b71c671945a8a0322f8154b153919099dba399d9ef122ea88bc538e2bfa6e2",
+      "type": "counter",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/import_energy_corrupt.state",
+      "sha256": "7bc97050d6c33f3e36d430db7f48968953376db8ae76d7a4625741f526e2ade3",
+      "type": "import_energy",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/import_cn_corrupt.state",
+      "sha256": "ef9988ab1d86d62ab2da32347e8e8036829999dc530786d710c50322b21f6470",
+      "type": "import_cn",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/import_triple_corrupt.state",
+      "sha256": "02a61e6cc7b02bdcbeae60b5b9411f93113d16f9007215b08328ec2a6e5fdef5",
+      "type": "import_triple",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/import_counter_corrupt.state",
+      "sha256": "5eb6606fac5569d4adbd464843981cb96ceaf877c9f3124f0eb58c2d9b918d78",
+      "type": "import_counter",
+      "expected_exit_code": 2
+    },
+    {
+      "path": "acceleration/results/20261002_hypergraph_weighted_controls01/import_zero_rng_corrupt.state",
+      "sha256": "bfc20be5d86c9d79f8b57e8b3acce059a028de70f34d8c3997378aeed2b922f2",
+      "type": "import_zero_rng",
+      "expected_exit_code": 2
+    }
+  ],
+  "producer_resume_exact_byte_identity": true,
+  "producer_imported_resume_exact_byte_identity": true,
+  "import_v1_source": {
+    "path": "acceleration/results/20261002_hypergraph_controls01/target99_mixed/final.state",
+    "sha256": "ef9e5ca27c248413d62efdb0888eb23d2eb734ed955431653145e830ef0872c1",
+    "raw_gate": "acceleration/results/20261002_independent_review/hypergraph_controls02/summary.json",
+    "raw_gate_sha256": "81aa0427d80d66b45ae48d47cea98c02de02bc4ae096d5a0bcc688d6df2bacb3",
+    "selection": [
+      "current",
+      "best"
+    ],
+    "new_seed": 99032022,
+    "counters_reset": true,
+    "new_config": {
+      "temperature_start": 24,
+      "temperature_end": 0.2,
+      "mix_steps": 64,
+      "schedule_steps": 1024
+    },
+    "old_base_scores": {
+      "current": 5304,
+      "best": 5248
+    }
+  },
+  "full_recomputation_frequency": "Every proposal for engineering controls",
+  "independent_approval": false,
+  "target_resolution": false,
+  "independent_requirement": "Separate adjacency-set scorer replays every raw control proposal, exact RNG, all component/weighted scores, CN cache, domain and weighted category-switch arithmetic; exact positive/corrupted/import controls and fresh/imported split resume; no producer import.",
+  "scope": "Finite engineering controls, rook9 fixture and full99 linear3uniform pointdegree7 domain; not an exhaustive search or graph construction."
+}

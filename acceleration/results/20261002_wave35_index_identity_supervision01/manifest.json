@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "invocation_id": "816eb95fea034ed8be5bfe2515fc7320",
+  "timestamp": "2026-10-02T15:04:07.069239+00:00",
+  "source_sha256": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+  "command": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-c",
+    "import hashlib,json,subprocess,sys\nfrom datetime import datetime,timezone\nfrom pathlib import Path\nmanifest=Path('acceleration/results/20261002_wave35_stage01/manifest.json')\nstage=json.loads(manifest.read_bytes());mismatches=[]\np=subprocess.Popen(['git','cat-file','--batch'],stdin=subprocess.PIPE,stdout=subprocess.PIPE)\ntry:\n    for row in stage['records']:\n        p.stdin.write((':'+row['path']+'\\n').encode());p.stdin.flush();header=p.stdout.readline().split()\n        if header[-1:]==[b'missing']:mismatches.append({'path':row['path'],'problem':'missing index blob'});continue\n        size=int(header[2]);remaining=size;h=hashlib.sha256()\n        while remaining:\n            block=p.stdout.read(min(8*1024**2,remaining))\n            if not block:raise ValueError('Incomplete Git index blob')\n            h.update(block);remaining-=len(block)\n        if p.stdout.read(1)!=b'\\n':raise ValueError('Index record separator')\n        if (size,h.hexdigest())!=(row['bytes'],row['sha256']):mismatches.append({'path':row['path'],'expected_sha256':row['sha256'],'index_sha256':h.hexdigest(),'expected_bytes':row['bytes'],'index_bytes':size})\n    p.stdin.close()\n    if p.wait(timeout=10)!=0:raise ValueError('Git completion')\nfinally:\n    if p.poll()is None:p.kill();p.wait()\nreport={'timestamp':datetime.now(timezone.utc).isoformat(),'command':[sys.executable,*sys.argv],'cwd':str(Path.cwd()),'stage_manifest_sha256':hashlib.sha256(manifest.read_bytes()).hexdigest(),'checked_records':len(stage['records']),'mismatches':mismatches,'mathematical_verification':False,'gitattributes_sha256':hashlib.sha256(Path('.gitattributes').read_bytes()).hexdigest()}\nPath('acceleration/results/20261002_wave35_index_identity01.json').write_text(json.dumps(report,indent=2)+'\\n',encoding='utf8',newline='\\n')\nprint(json.dumps({'checked_records':len(stage['records']),'mismatches':mismatches}))\nif mismatches:raise ValueError('Index bytes must match frozen stage evidence')"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "seconds": 60.0,
+  "allocation_reason": "Check frozen stage01 hashes against actual Git index; guard byte normalization beforepublication",
+  "success_criterion": "All298staged byte identities match, no missingblob or normalization change",
+  "verification_criterion": "Index identity only; independent public remote artifact audit separate",
+  "reassessment_seconds": 1800,
+  "shutdown_reserve_seconds": 10.0,
+  "cumulative_across_commands": false,
+  "automatic_retry": false,
+  "process_scope": "Local non-escaping process tree only; remote/daemonized compute is unsupported"
+}

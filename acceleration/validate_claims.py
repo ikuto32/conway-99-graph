@@ -54,6 +54,146 @@ def digest(path):
     return h.hexdigest()
 
 
+# This is a deliberately finite migration authorization, not a general trust
+# policy for files bearing a reviewer name or a PASS string. New editorial
+# classes/reviews require an explicit separately reviewed code change.
+EDITORIAL_REVIEWS = {
+    "1584c3c0ef52fdee47c056fec317260d6952fdbd46a9e47e0742ce1f6d711388": {
+        "snapshot_sha256": "20b3ee7d9c13c5142205492832a85ba877f35492ab26c0db1fdd5e3b9ba7e168",
+        "status": "INDEPENDENT_AUTOMORPHISM_ASSUMPTION_EDITORIAL_IMPACT_PASS",
+        "verifier": "/root/state_literature_audit independent editorial impact reviewer",
+        "claim_count": 17,
+    }
+}
+
+
+def canonical_claim_digest(claim):
+    """The serialization used by the immutable editorial review's claim hashes."""
+    return hashlib.sha256(json.dumps(claim, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def check_editorial_migrations(data, root, artifacts, claims):
+    """Authenticate finite old/new approvals even when general hashes are skipped.
+
+    A migration is evidence-preserving bookkeeping. It neither generates a
+    verification record nor bypasses ordinary dependency-impact review.
+    """
+    errors, checked, approvals = [], [], {}
+    seen_migrations = set()
+    for migration in data.get("editorial_migrations", []):
+        mid = migration["id"]
+        if mid in seen_migrations:
+            errors.append(f"editorial {mid}: duplicate migration id")
+            continue
+        seen_migrations.add(mid)
+        try:
+            def require(condition, message):
+                if not condition:
+                    raise ValueError(message)
+
+            def authenticated(binding):
+                aid = binding["artifact"]
+                require(aid in artifacts, f"unknown artifact {aid}")
+                artifact = artifacts[aid]
+                require(artifact["sha256"] == binding["sha256"], f"artifact binding differs for {aid}")
+                require(artifact["availability"] != "MISSING" and artifact["path"] is not None,
+                        f"migration artifact {aid} must be available")
+                path = Path(artifact["path"])
+                if not path.is_absolute():
+                    path = Path(root) / path
+                require(path.is_file(), f"migration artifact {aid} must resolve locally")
+                require(digest(path) == binding["sha256"], f"migration artifact {aid} SHA-256 mismatch")
+                checked.append(aid)
+                return path
+
+            review_binding = migration["review_artifact"]
+            require(review_binding["sha256"] in EDITORIAL_REVIEWS, "review is not an explicitly approved immutable editorial review")
+            policy = EDITORIAL_REVIEWS[review_binding["sha256"]]
+            review_path = authenticated(review_binding)
+            review = json.loads(review_path.read_text(encoding="utf-8"))
+            require(review["status"] == policy["status"] and review["verifier"] == policy["verifier"], "review identity/status mismatch")
+            require(review["mathematical_claim_changed"] is False, "review does not certify an editorial-only change")
+            snapshot_binding = migration["snapshot_artifact"]
+            require(snapshot_binding["sha256"] == policy["snapshot_sha256"] == review["reviewed_ledger_sha256"], "reviewed ledger snapshot hash mismatch")
+            snapshot_path = authenticated(snapshot_binding)
+            require(snapshot_path.resolve() == (Path(root) / review["reviewed_ledger_snapshot"]).resolve(), "reviewed snapshot path differs")
+            snapshot = read_ledger(snapshot_path)
+            old_claims = {c["id"]: c for c in snapshot["claims"]}
+            require(len(old_claims) == len(snapshot["claims"]), "duplicate old snapshot claim")
+            reviewed = {r["claim_id"]: r for r in review["records"]}
+            members = {r["claim_id"]: r for r in migration["claims"]}
+            require(len(reviewed) == len(review["records"]) == policy["claim_count"], "reviewed claim population differs")
+            require(len(members) == len(migration["claims"]) and set(members) == set(reviewed), "migration must name exactly every approved claim once")
+            batch = {}
+            for cid, member in members.items():
+                require(cid in old_claims and cid in claims and cid not in approvals, f"unknown or multiply migrated claim {cid}")
+                old, new, record = old_claims[cid], claims[cid], reviewed[cid]
+                require(member["from_revision"] == old["revision"] == record["reviewed_revision"], f"{cid}: old revision mismatch")
+                require(member["to_revision"] == member["from_revision"] + 1, f"{cid}: migration requires one revision increment")
+                require(member["old_claim_sha256"] == record["reviewed_claim_sha256"] == canonical_claim_digest(old), f"{cid}: immutable old claim hash mismatch")
+                require(member["old_assumptions"] == old["assumptions"] == record["original_assumptions"], f"{cid}: old assumptions mismatch")
+                require(member["new_assumptions"] == record["recommended_assumptions"], f"{cid}: new assumptions not approved")
+                require(member["new_assumptions"] == [review["approved_replacements"].get(x, x) for x in member["old_assumptions"]], f"{cid}: unrelated assumption edit")
+                require(record["retain_prior_verification_for_exact_editorial_change"] is True, f"{cid}: no retention approval")
+                require(new["revision"] >= member["to_revision"] and new["assumptions"] == member["new_assumptions"], f"{cid}: migration not applied at approved revision/assumptions")
+                for field in ("statement", "scope", "kind"):
+                    require(new[field] == old[field], f"{cid}: editorial migration cannot alter {field}")
+                require(record["statement"] == old["statement"] and record["scope"] == old["scope"], f"{cid}: reviewed statement/scope mismatch")
+                require(all(v in new["verification"] for v in old["verification"]), f"{cid}: old verification evidence not preserved")
+                require(all(aid in new["evidence"] for aid in old["evidence"]), f"{cid}: old evidence not preserved")
+                require(review_binding["artifact"] in new["evidence"] and snapshot_binding["artifact"] in new["evidence"], f"{cid}: migration artifacts must be claim evidence")
+                approval = dict(migration_id=mid, member=member, old=old, review=review,
+                                review_path=review_path, bindings={review_binding["artifact"]: review_binding["sha256"],
+                                                                snapshot_binding["artifact"]: snapshot_binding["sha256"]})
+                # The immutable snapshot is a mandatory comparison base for
+                # the initial approved revision, even without --previous (or
+                # when a PR base does not yet contain this claim). Otherwise
+                # an unrelated field edit could piggyback on editorial PASS.
+                if new["revision"] == member["to_revision"]:
+                    require(editorial_change_allowed(old, new, approval),
+                            f"{cid}: unapproved initial editorial fields requires new stable id or separate review")
+                require(any(editorial_verification_matches(v, new, approval, root) for v in new["verification"]), f"{cid}: exact editorial review record missing")
+                batch[cid] = approval
+            approvals.update(batch)
+        except (ValueError, KeyError, OSError, TypeError, yaml.YAMLError) as exc:
+            errors.append(f"editorial {mid}: {exc}")
+    return approvals, errors, checked
+
+
+def editorial_verification_matches(record, claim, approval, root):
+    path = Path(record["command_or_audit"])
+    if not path.is_absolute():
+        path = Path(root) / path
+    return (record["method"] == "editorial_impact_review"
+            and record["claim_revision"] == approval["member"]["to_revision"]
+            and record["outcome"] == "PASS"
+            and record["verifier"] == approval["review"]["verifier"]
+            and record["scope"] == claim["scope"]["description"]
+            and path.resolve() == approval["review_path"].resolve()
+            and all(record["artifact_hashes"].get(aid) == sha for aid, sha in approval["bindings"].items()))
+
+
+def editorial_change_allowed(old, new, approval):
+    """Only exact assumptions plus strictly limited revision bookkeeping."""
+    if approval is None or old != approval["old"]:
+        return False
+    member = approval["member"]
+    if old["revision"] != member["from_revision"] or new["revision"] != member["to_revision"]:
+        return False
+    if old["assumptions"] != member["old_assumptions"] or new["assumptions"] != member["new_assumptions"]:
+        return False
+    allowed = {"assumptions", "revision", "updated_at", "evidence", "verification", "dependencies"}
+    if any(new[field] != value for field, value in old.items() if field not in allowed):
+        return False
+    if any(aid not in old["evidence"] and aid not in approval["bindings"] for aid in new["evidence"]):
+        return False
+    # Updating pins is ordinary dependent-impact bookkeeping, not authority to
+    # introduce/delete mathematical premises or change their relation.
+    old_deps = {(d["id"], d["relation"]): d["revision"] for d in old["dependencies"]}
+    new_deps = {(d["id"], d["relation"]): d["revision"] for d in new["dependencies"]}
+    return old_deps.keys() == new_deps.keys() and all(new_deps[k] >= old_deps[k] for k in old_deps)
+
+
 def validate(data, root, schema, hash_mode="available", previous=None):
     errors, skipped, checked = [], [], []
     validator = jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
@@ -74,6 +214,9 @@ def validate(data, root, schema, hash_mode="available", previous=None):
     archives = indexed(data["archives"], "archive")
     artifacts = indexed(data["artifacts"], "artifact")
     claims = indexed(data["claims"], "claim")
+    editorial, editorial_errors, editorial_hashes = check_editorial_migrations(data, root, artifacts, claims)
+    errors.extend(editorial_errors)
+    checked.extend(editorial_hashes)
     historical = [a for a in archives.values() if a["repository"].removesuffix(".git") == "https://github.com/YesterdaysLemon/conway-99-research" and a["commit"] == "85e705cc6c2a14d123120c93a847e30aaab1789e" and a["path"] == "CLAIMS.yaml"]
     if not historical:
         errors.append("archives: missing immutable historical registry repository/commit/path reference")
@@ -85,6 +228,10 @@ def validate(data, root, schema, hash_mode="available", previous=None):
             errors.append(f"{aid}: nonpublic artifact requires unavailable_reason")
         if (artifact["path"] is None or artifact["sha256"] is None or artifact["retrieval"] is None) and not artifact["unavailable_reason"]:
             errors.append(f"{aid}: null artifact field requires unavailable_reason")
+        if aid in editorial_hashes:
+            # Mandatory migration authentication has already checked these bytes,
+            # even in modes that would otherwise skip local or all hash checks.
+            continue
         if hash_mode == "none":
             skipped.append(f"hash {aid}: hash verification disabled")
             continue
@@ -155,6 +302,9 @@ def validate(data, root, schema, hash_mode="available", previous=None):
                     errors.append(f"{cid}: conditional premise must be explicit in assumptions")
         successful = []
         for verification in claim["verification"]:
+            if verification["method"] == "editorial_impact_review" and not (
+                    cid in editorial and editorial_verification_matches(verification, claim, editorial[cid], root)):
+                errors.append(f"{cid}: editorial verification lacks exact authenticated migration approval")
             if verification["claim_revision"] > claim["revision"]:
                 errors.append(f"{cid}: verification bound to a future revision")
             for aid, sha in verification["artifact_hashes"].items():
@@ -213,15 +363,21 @@ def validate(data, root, schema, hash_mode="available", previous=None):
         if not any(cid in claims and claims[cid]["status"] == "VERIFIED" and claims[cid]["review_state"] == "CLEAR" and claims[cid]["scope"]["target_resolution"] == direction for cid in target["supporting_claims"]):
             errors.append("target: candidate resolution requires current internally VERIFIED unrestricted supporting claim")
     if previous is not None:
-        errors.extend(check_impact(previous, data))
+        errors.extend(check_impact(previous, data, editorial))
     skipped.append("expensive mathematical replay, SAT/UNSAT proof checking, literature review, and reviewer-independence audit: not performed by registry validation")
     return {"valid": not errors, "errors": errors, "skipped": skipped, "hashes_checked": checked,
             "progress": progress(data, trusted=not errors)}
 
 
-def check_impact(previous, current):
+def check_impact(previous, current, editorial=None):
     """Conservative edit gate; previous revisions remain available in Git."""
     errors = []
+    editorial = editorial or {}
+    old_migrations = {m["id"]: m for m in previous.get("editorial_migrations", [])}
+    new_migrations = {m["id"]: m for m in current.get("editorial_migrations", [])}
+    for mid, old_migration in old_migrations.items():
+        if new_migrations.get(mid) != old_migration:
+            errors.append(f"impact editorial {mid}: preserve immutable migration record")
     old_claims = {c["id"]: c for c in previous["claims"]}
     new_claims = {c["id"]: c for c in current["claims"]}
     old_artifacts = {a["id"]: a for a in previous["artifacts"]}
@@ -236,7 +392,9 @@ def check_impact(previous, current):
         new = new_claims[cid]
         if new["revision"] < old["revision"]:
             errors.append(f"impact {cid}: revision decreased")
-        if any(new[field] != old[field] for field in ("statement", "scope", "kind", "assumptions")):
+        mathematical_change = any(new[field] != old[field] for field in ("statement", "scope", "kind"))
+        assumption_change = new["assumptions"] != old["assumptions"]
+        if mathematical_change or (assumption_change and not editorial_change_allowed(old, new, editorial.get(cid))):
             errors.append(f"impact {cid}: changed mathematical statement/scope/assumptions requires new stable id (editorial corrections require manual migration)")
         material = any(new[field] != old[field] for field in ("dependencies", "basis", "evidence", "reproducibility", "external_source"))
         if material or any(aid in changed_artifacts for aid in old["evidence"]) or new["revision"] != old["revision"]:

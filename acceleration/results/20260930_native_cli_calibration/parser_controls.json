@@ -1,0 +1,55 @@
+{
+  "positive_fixture": "c fixture\ns SATISFIABLE\nv 1\nv -2 3 0\n",
+  "positive_assignment": [
+    1,
+    -2,
+    3
+  ],
+  "rejected": [
+    {
+      "name": "duplicate",
+      "reason": "duplicate/conflicting model variable",
+      "fixture": "s SATISFIABLE\nv 1 -2 3 1 0\n"
+    },
+    {
+      "name": "conflict",
+      "reason": "duplicate/conflicting model variable",
+      "fixture": "s SATISFIABLE\nv 1 -1 -2 3 0\n"
+    },
+    {
+      "name": "missing",
+      "reason": "incomplete model",
+      "fixture": "s SATISFIABLE\nv 1 -2 0\n"
+    },
+    {
+      "name": "out_of_range",
+      "reason": "model variable out of range",
+      "fixture": "s SATISFIABLE\nv 1 -2 4 0\n"
+    },
+    {
+      "name": "no_terminator",
+      "reason": "model terminator missing",
+      "fixture": "s SATISFIABLE\nv 1 -2 3\n"
+    },
+    {
+      "name": "after_terminator",
+      "reason": "tokens after model terminator",
+      "fixture": "s SATISFIABLE\nv 1 -2 3 0 1\n"
+    },
+    {
+      "name": "wrong_status",
+      "reason": "unique SAT status required",
+      "fixture": "s UNSATISFIABLE\nv 1 -2 3 0\n"
+    },
+    {
+      "name": "duplicate_status",
+      "reason": "unique SAT status required",
+      "fixture": "s SATISFIABLE\ns SATISFIABLE\nv 1 -2 3 0\n"
+    },
+    {
+      "name": "noninteger",
+      "reason": "noninteger model literal",
+      "fixture": "s SATISFIABLE\nv 1 nope 3 0\n"
+    }
+  ]
+}

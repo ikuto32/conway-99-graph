@@ -1,0 +1,202 @@
+{
+  "schema": "TEN_ROOK_UNCHANGED_GENERIC_SCHEMA_SOURCE_ONLY_PLAN_V1",
+  "timestamp": "2026-10-04T21:58:52.820Z",
+  "author": "/root/checkpoint_audit",
+  "executor": "/root",
+  "source": {
+    "path": "acceleration/validate_claims.py",
+    "sha256": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265"
+  },
+  "schema_definition": {
+    "path": "docs/claims.schema.json",
+    "sha256": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac"
+  },
+  "candidate": {
+    "path": "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.candidate.yaml",
+    "sha256": null
+  },
+  "previous": {
+    "path": "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.before.yaml",
+    "sha256": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1"
+  },
+  "source_unchanged": true,
+  "expected_context": {
+    "HEAD": "155a99539b86206520d8b8cc0f002d66cdc1b3e1",
+    "index_sha256": "b7ff36caa9dc2a0233c77373be7c7bb195fab909ac4d30fdc3cb137f8dba0f2c",
+    "ledger_sha256": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1",
+    "claims": 457,
+    "artifact_records": 23892,
+    "public_records": 6054
+  },
+  "inputs_sha256": {
+    "acceleration/run_compute_command.py": "593a9feed6250739dc9672338df23ab171fc9a6a6db4196c1feb312efa33957a",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/validate_claims.py": "a48f55b54918b0c494e6f06f80bdcdc52f304dfc370dd25842aeae3a0f861265",
+    "docs/claims.schema.json": "0d752f62c7c9a43c7ddc5fbfe8d2c5644eec3d70d1baea236cb290d475aa5dac",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "CLAIMS.yaml": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1",
+    "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.before.yaml": "9eec39f07bb726ddbf69c71ac9df59bdf6fe860a31c69d7513b89ddeb05fc2b1"
+  },
+  "pending_inputs": [
+    {
+      "path": "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.candidate.yaml",
+      "sha256": null
+    }
+  ],
+  "actual_materializer_acceptance": null,
+  "actual_controls": {
+    "copier": {
+      "path": "acceleration/materialize_20261004_bound_literal_claims_v3.ps1",
+      "sha256": "48dade5d0c49bb27351e459f3c5cf5830d0c4fdf2c8c6e3ef26ac0404640f5b3",
+      "spec_path": "acceleration/materialize_20261004_bound_literal_claims_v3_spec.md",
+      "spec_sha256": "7e8ce19b0bf34e6b8d2fe915586057de75108bdcf80edc325cefbc34cb14cb19"
+    },
+    "checker": {
+      "path": "acceleration/check_20261004_bound_literal_claims_v2.py",
+      "sha256": "a73eb0281173c76af4ee9b98ab296c615c6b0ef0c84b75aa0f6d68f98230d07e",
+      "spec_path": "acceleration/check_20261004_bound_literal_claims_v2_spec.md",
+      "spec_sha256": "a9caf9a14f76d40826c9f5af28baccf95ee64691f29786597aa34766e12239f8"
+    },
+    "harness": {
+      "path": "acceleration/exercise_20261004_bound_literal_claims_v4.py",
+      "sha256": "f114915de5fb2960a2f837ff8e7fc693588b7333e66c60b28dc0080597a5029f"
+    },
+    "plan": {
+      "path": "acceleration/plan_20261004_bound_literal_claims_controls_v4.json",
+      "sha256": "e397e772e9a7eecfa9b4433368626bf44deda664f4475b5feaf7c4e7daa9d48c"
+    },
+    "actual_summary": null,
+    "Root_acceptance": null,
+    "null_reason": "Current actual Root qualification5f6b... is not yet accepted; full22/3/19 gate must be authentic before launch."
+  },
+  "actual_typed_acceptance": null,
+  "launchers": {
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe": "f41189ee84825ffeea37fcea2dd7d3004fafa86458ce4f1243a4be59dc611907",
+    "C:/Users/ikuto/.local/bin/uv.exe": "274e36788b60cc52494b7d69bb7a69ec4f5e34d2929b1b30b1d225cede70da66"
+  },
+  "allocation": {
+    "outer": 300,
+    "worker": "Shared contained outer deadline; unchanged validator has no separate --seconds parameter.",
+    "shutdown": 20
+  },
+  "allocation_reason": "One unchanged generic schema/semantic467 candidate validation against exact457 immutable predecessor. Previous457 validation22.907seconds supports300outer20shutdown; hashmode none explicitly skips historical payload hashes and does not replay math, oldproofs or Gitblobbytes.",
+  "success_criterion": "Native0/validtrue/errors[] and exact467claim counts458V3C6R/CLEAR467,6054PUBLIC unchanged; artifact total reported from actual candidate, actual skip count retained without inventing it. Complete actual input hashes and cleanWindows593 terminal required.",
+  "verification_criterion": "Actual complete typed457-prefix/10core/evidence check and fresh22controls accepted separately. Generic validator/schema unchanged; Root final install remains separate. No mathematical proof, target resolution, payload byte replay or availability promotion.",
+  "command": null,
+  "supervisor_argv": null,
+  "command_template": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/run_compute_command.py",
+    "--seconds",
+    "300",
+    "--shutdown-reserve-seconds",
+    "20",
+    "--allocation-reason",
+    "One unchanged generic schema/semantic467 candidate validation against exact457 immutable predecessor. Previous457 validation22.907seconds supports300outer20shutdown; hashmode none explicitly skips historical payload hashes and does not replay math, oldproofs or Gitblobbytes.",
+    "--success-criterion",
+    "Native0/validtrue/errors[] and exact467claim counts458V3C6R/CLEAR467,6054PUBLIC unchanged; artifact total reported from actual candidate, actual skip count retained without inventing it. Complete actual input hashes and cleanWindows593 terminal required.",
+    "--verification-criterion",
+    "Actual complete typed457-prefix/10core/evidence check and fresh22controls accepted separately. Generic validator/schema unchanged; Root final install remains separate. No mathematical proof, target resolution, payload byte replay or availability promotion.",
+    "--out",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/20261004_wave47_ten_rook_candidate_schema_supervision01",
+    "--",
+    "C:/Users/ikuto/.local/bin/uv.exe",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    "C:/Users/ikuto/projects/conway-99-graph/build/uv-cache",
+    "--python",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/validate_claims.py",
+    "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.candidate.yaml",
+    "--schema",
+    "docs/claims.schema.json",
+    "--root",
+    ".",
+    "--previous",
+    "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.before.yaml",
+    "--hashes",
+    "none",
+    "--out",
+    "acceleration/results/20261004_wave47_ten_rook_candidate_schema_report01.json"
+  ],
+  "child_argv_template": [
+    "C:/Users/ikuto/.local/bin/uv.exe",
+    "run",
+    "--locked",
+    "--offline",
+    "--cache-dir",
+    "C:/Users/ikuto/projects/conway-99-graph/build/uv-cache",
+    "--python",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/validate_claims.py",
+    "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.candidate.yaml",
+    "--schema",
+    "docs/claims.schema.json",
+    "--root",
+    ".",
+    "--previous",
+    "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.before.yaml",
+    "--hashes",
+    "none",
+    "--out",
+    "acceleration/results/20261004_wave47_ten_rook_candidate_schema_report01.json"
+  ],
+  "worker_argv_template": [
+    "C:/Users/ikuto/projects/conway-99-graph/build/research-venv/Scripts/python.exe",
+    "-B",
+    "C:/Users/ikuto/projects/conway-99-graph/acceleration/validate_claims.py",
+    "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.candidate.yaml",
+    "--schema",
+    "docs/claims.schema.json",
+    "--root",
+    ".",
+    "--previous",
+    "acceleration/results/20261004_wave47_ten_rook_append_candidate01/CLAIMS.before.yaml",
+    "--hashes",
+    "none",
+    "--out",
+    "acceleration/results/20261004_wave47_ten_rook_candidate_schema_report01.json"
+  ],
+  "word_counts": {
+    "supervisor": 38,
+    "child": 22,
+    "worker": 14
+  },
+  "hash_mode": "none",
+  "old_payload_rehashed": false,
+  "payload_hash_skip_count": null,
+  "payload_hash_skip_count_null_reason": "Actual unchanged validator report supplies count; no old payload replay is inferred.",
+  "Root_ONE": null,
+  "actual_admission": null,
+  "actual_generic_report": null,
+  "Root_acceptance": null,
+  "installation": null,
+  "report_path": "acceleration/results/20261004_wave47_ten_rook_candidate_schema_report01.json",
+  "supervision_directory": "acceleration/results/20261004_wave47_ten_rook_candidate_schema_supervision01",
+  "expected_worker_physical_outputs": 1,
+  "environment": {
+    "UV_PROJECT_ENVIRONMENT": "build/research-venv",
+    "preserve_and_restore": true,
+    "locked": true,
+    "offline": true,
+    "python_optimization_forbidden": true,
+    "dependency_installation": false
+  },
+  "read_only_Git_provenance_queries": true,
+  "Git_mutation": false,
+  "live_ledger_admin_mutation": false,
+  "source_only": true,
+  "dispatch_authorized": false,
+  "automatic_retry": false,
+  "mathematical_replays": 0,
+  "target_resolution": "UNKNOWN"
+}
+

@@ -1,0 +1,154 @@
+{
+  "schema": "INDEPENDENT_WRITTEN_MATHEMATICAL_REVIEW_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1_WRITTEN_PASS",
+  "implementation_version": 1,
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-TWO-POPULATION-FOUR-OR-FIVE",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly228 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. Exactly four or five actual triangles have deficiency two, exactly ten or eight respectively have deficiency one, and all remaining triangles have deficiency zero. This does not exclude count228 or a target graph.",
+  "timestamp": "2026-10-04T18:14:25.5998263+00:00",
+  "verification_timestamp": "2026-10-04T18:14:25.5998263+00:00",
+  "verification_started_at": null,
+  "verification_started_at_null_reason": "The written review start was not durably timestamped; no start is inferred.",
+  "producer": "/root/structural",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=228 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts actual such subsets containing T; defect edges mean no actual induced rook contains both intersecting actual triangles"
+  ],
+  "scope": {
+    "description": "Universal conditional necessary population restriction for an R228 target. Ordinary global defect-four-cycle to uncovered-square correspondence is used only for at most three deficiency-two triangles; no extension to the surviving four/five cases, actual extra edges retained.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count228_excluded": false
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "dependency_reason": "Only the strict bound and nonempty maximum bound are inherited to force maximum deficiency exactly two. All global defect graph, cycle labeling, K3,3 exclusion, population and saturation steps are reconstructed. Prior weaker R228 candidate is preserved comparison evidence, not an approval or an assumed theorem gate.",
+  "candidate": {
+    "path": "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json",
+    "sha256": "22826b9350197f1dab780ef71574585ba6d8dfb8d61fea4c5d8421cfe5052d16",
+    "producer_timestamp": "2026-10-04T18:06:22Z",
+    "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT228-DEFICIENCY-TWO-POPULATION-FOUR-OR-FIVE",
+    "claim_revision": 1
+  },
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md",
+    "sha256": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1"
+  },
+  "proof": {
+    "path": "acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md",
+    "sha256": "c7269281cddac6432a65d81a441a23a9e4d5faa99dc15c29ab33467f613d1a95"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_D2_POPULATION_FOUR_OR_FIVE_V1.md": "91ae9decf6e16eca3d6fd306d310031eefab8db6bd467fd1d0ac470b73ca45e1",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT228_DEFICIENCY_PATTERNS_V1.md": "3e99eb702f0d5e14ce42008af47f1bb0684ab13de431893f3dfc2edb813f5fd8",
+    "acceleration/results/20261004_target_rook_count228_deficiency_patterns_candidate01.json": "c779d998246255d1aa1187c3ff961ff8cdb372caa01b69b56541d7b887277f09",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_NINE_DEFICIENCY_GAP_V1.md": "48faa6ca4ed0797b45ccd0bb16b1d3ddcfb0e6ca8b8bba8696479df452b3440c",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_target_rook_count228_d2_population_four_or_five_candidate01.json": "22826b9350197f1dab780ef71574585ba6d8dfb8d61fea4c5d8421cfe5052d16",
+    "acceleration/audit_20261004_rook_count228_d2_four_or_five_checkpoint_v1.md": "c7269281cddac6432a65d81a441a23a9e4d5faa99dc15c29ab33467f613d1a95"
+  },
+  "written_derivation_checks": [
+    "Reconstruct h1..5 using only two accepted r1 bounds",
+    "2079 target squares counted twice by opposite nonedges",
+    "Unique containing rook and nine squares per rook give U27",
+    "Global defect graph degree3d and 27 edges",
+    "Any F triangle has one actual point and only d2 nodes",
+    "Repeated cycle labels require four d2 nodes",
+    "Faithful ordinary F four-cycle and uncovered square bijection only h<=3",
+    "K33 repeated labels force forbidden local degree3",
+    "K33 distinct labels force actual rook nondefect edges",
+    "Disjoint actual triangles have at most three common F neighbors via cross matching",
+    "d1 root neighbors at distinct points make any d2 pair disjoint",
+    "d1 cycle count at most6 and at most5 with a d1 neighbor",
+    "At most three exceptions only edgeless h3",
+    "Root C incidence B12+3k-2a and all external l<=3",
+    "Local d2 triangle B16 gives c<=15 by mod-three loss",
+    "Seven table totals 92/94/100/99/102/108/105 versus required108",
+    "Path equality gives six active external nodes, endpoint five-subsets and four common neighbors"
+  ],
+  "written_falsification_boundaries": [
+    "Ordinary cycles not a selected induced-cycle catalog",
+    "Four coincident local labels at h4 remain allowed",
+    "Local d2 triangle is retained, not incorrectly triangle-free",
+    "Common-neighbor bound requires actual disjoint triangles",
+    "F K33 prohibition does not forbid nondefective actual rook",
+    "K33 sides are disjoint because d1 cannot lie on F triangle",
+    "External d2 l<=3 uses at most one d2 in C for h<=3",
+    "Binomial equality requires only l0/l3",
+    "Table path row is not excluded by scalar counts alone",
+    "Both endpoints need five distinct nodes among the same six active nodes",
+    "High point multiplicities and extra target edges retained",
+    "No h4/h5 classification, R228 exclusion or target graph conclusion"
+  ],
+  "controls": {
+    "written_derivation": 17,
+    "written_boundaries": 12,
+    "total_written": 29,
+    "executed_mathematical": 0,
+    "solver_calls": 0,
+    "formal": 0
+  },
+  "shared_components": [
+    "Root suggested the gap-six direction before the Structural freeze",
+    "Structural authored both R228 papers and prior rook arguments",
+    "Native independently reviewed the two inherited r1 dependencies",
+    "CP reconstructed the exact conditional proof and attempted actual-point falsification",
+    "Same disclosed strategy does not constitute independent discovery",
+    "No previous R229/R230/R231 or computation gate transferred"
+  ],
+  "coverage": {
+    "candidate_and_raw_whole_read": true,
+    "dependency_papers_whole_read": true,
+    "cycle_and_point_arguments_written": true,
+    "mathematical_programs_executed": 0,
+    "computational_coverage_claimed": false
+  },
+  "runtime": {
+    "command": null,
+    "invocation_id": null,
+    "worker_start": null,
+    "worker_terminal": null,
+    "mathematical_programs_executed": 0
+  },
+  "root_acceptance": null,
+  "ledger_writes": 0,
+  "Git_writes": 0,
+  "old_artifacts_modified": false,
+  "operational_context": {
+    "basis": "Root-supplied protected context, not a new ledger parse or process census",
+    "ledger_count": 435,
+    "ledger_sha256": "95e8ffba7f7a8554c0de753495b3aba3a8eae0b8d238aecba81d3f1213db704c",
+    "HEAD": "9349bd83bda2c9ae72671ed6a8ab2efd3ae118f5",
+    "index_sha256": "3ceb7b2e8b98c7b0dac05e193b328b00d55666ceecad8a9d5e9799159fe5c56c",
+    "owned_computational_worker": null
+  },
+  "limitations": [
+    "Exact r1 conditional statement only; no R228 or target exclusion.",
+    "No construction, automorphism, equitable profile or nonconstant-codeword assumption.",
+    "Written checks are not executed controls, a formal proof or a computation gate.",
+    "No whole-archive or worldwide novelty assertion.",
+    "Root administrative review, registration and availability remain separate."
+  ]
+}

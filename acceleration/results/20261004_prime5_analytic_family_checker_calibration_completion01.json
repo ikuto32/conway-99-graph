@@ -1,0 +1,411 @@
+{
+  "schema": "NATIVE_PRIME5_ANALYTIC_FAMILY_CHECKER_CALIBRATION_COMPLETION_V1",
+  "timestamp": "2026-10-04T18:16:36.8503639+00:00",
+  "plan": {
+    "path": "acceleration/plan_20261004_prime5_analytic_delsarte_family_independent_calibration_v1.json",
+    "sha256": "af0a82eda86fa2e905b72d69b9ed53038a2f74df68141eaab778ad80b3fde57c"
+  },
+  "invocation_id": "4e4b8d53cb9c4d438a7e96e64e07c087",
+  "actual_executor": "/root/native_driver",
+  "frozen_planned_executor": "/root",
+  "mathematical_producer": "/root/structural",
+  "checker_implementation_author": "/root/native_driver",
+  "status": "ACTUAL_FINITE_27_COMPLETE_ROOT_ACCEPTANCE_PENDING",
+  "independent_Root_actual_acceptance_pending": true,
+  "self_approval": false,
+  "elapsed_outer_seconds": 0.42199999996228144,
+  "elapsed_worker_seconds": 0.18700000003445894,
+  "actual_exit_code": 0,
+  "stop_reason": "COMMAND_EXITED",
+  "error": null,
+  "deadline_reached": false,
+  "cleanup": {
+    "pid": 35692,
+    "resumed": true,
+    "started_monotonic": 342627.296,
+    "deadline_monotonic": 342787.296,
+    "stop_requested": true,
+    "stop_reason": "COMMAND_EXITED",
+    "actual_exit_code": 0,
+    "reaped": true,
+    "job_active_zero_observed": true,
+    "cleanup_errors": [],
+    "created_suspended": true,
+    "suspended_job_active": 1
+  },
+  "controls": {
+    "total": 27,
+    "positive": 8,
+    "negative": 19,
+    "all_expected_actual_stages_match": true,
+    "raw_payloads_match_table": true,
+    "stage_mismatches": [],
+    "payload_mismatches": [],
+    "rows": [
+      {
+        "index": 0,
+        "name": "actual_v2_header",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": null
+      },
+      {
+        "index": 1,
+        "name": "positive_recurrence_g",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": null
+      },
+      {
+        "index": 2,
+        "name": "legitimate_first_p_rejection",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": null
+      },
+      {
+        "index": 3,
+        "name": "legitimate_g_rejection",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": null
+      },
+      {
+        "index": 4,
+        "name": "tiny_complete_polynomial",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": {
+          "index": 0,
+          "t": 1,
+          "s": "3",
+          "status": "CANDIDATE_CERTIFICATES",
+          "first_veto": null,
+          "baseline_size": "112",
+          "baseline_dimension": 2,
+          "low_size": "112",
+          "low_dimension": 2
+        }
+      },
+      {
+        "index": 5,
+        "name": "n2_exact_rescaling",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": {
+          "denominator": "25",
+          "bound": "1"
+        }
+      },
+      {
+        "index": 6,
+        "name": "first_equal_bound_tie",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": {
+          "baseline": {
+            "case_index": 0,
+            "t": 1,
+            "s": "3",
+            "code_size_upper": "25",
+            "integer_dimension_upper": 2,
+            "dimension_lower_power": 25,
+            "dimension_next_power": 125,
+            "stronger_than_historical27": true
+          },
+          "low_image_counts": {
+            "case_index": 0,
+            "t": 1,
+            "s": "3",
+            "code_size_upper": "25",
+            "integer_dimension_upper": 2,
+            "dimension_lower_power": 25,
+            "dimension_next_power": 125,
+            "stronger_than_historical27": true
+          }
+        }
+      },
+      {
+        "index": 7,
+        "name": "old_implementation",
+        "expected": "FAMILY_HEADER",
+        "actual": "FAMILY_HEADER",
+        "result": null
+      },
+      {
+        "index": 8,
+        "name": "boolean_implementation",
+        "expected": "FAMILY_HEADER",
+        "actual": "FAMILY_HEADER",
+        "result": null
+      },
+      {
+        "index": 9,
+        "name": "old_source",
+        "expected": "FAMILY_SOURCE",
+        "actual": "FAMILY_SOURCE",
+        "result": null
+      },
+      {
+        "index": 10,
+        "name": "missing_software",
+        "expected": "FAMILY_INPUTS",
+        "actual": "FAMILY_INPUTS",
+        "result": null
+      },
+      {
+        "index": 11,
+        "name": "wrong_p_value",
+        "expected": "TRACE_RECURRENCE",
+        "actual": "TRACE_RECURRENCE",
+        "result": null
+      },
+      {
+        "index": 12,
+        "name": "missed_first_nonpositive_p",
+        "expected": "TRACE_SIGN",
+        "actual": "TRACE_SIGN",
+        "result": null
+      },
+      {
+        "index": 13,
+        "name": "wrong_g_value",
+        "expected": "TRACE_G",
+        "actual": "TRACE_G",
+        "result": null
+      },
+      {
+        "index": 14,
+        "name": "false_p_rejection",
+        "expected": "TRACE_SIGN",
+        "actual": "TRACE_SIGN",
+        "result": null
+      },
+      {
+        "index": 15,
+        "name": "wrong_failed_g_value",
+        "expected": "TRACE_FAILED_VALUE",
+        "actual": "TRACE_FAILED_VALUE",
+        "result": null
+      },
+      {
+        "index": 16,
+        "name": "wrong_full_product_coefficient",
+        "expected": "FACTORIZATION",
+        "actual": "FACTORIZATION",
+        "result": null
+      },
+      {
+        "index": 17,
+        "name": "wrong_constant",
+        "expected": "CONSTANT_COEFFICIENT",
+        "actual": "CONSTANT_COEFFICIENT",
+        "result": null
+      },
+      {
+        "index": 18,
+        "name": "wrong_rescaling_denominator",
+        "expected": "RESCALING_DENOMINATOR",
+        "actual": "RESCALING_DENOMINATOR",
+        "result": null
+      },
+      {
+        "index": 19,
+        "name": "wrong_rescaled_multiplier",
+        "expected": "RESCALING_MULTIPLIERS",
+        "actual": "RESCALING_MULTIPLIERS",
+        "result": null
+      },
+      {
+        "index": 20,
+        "name": "wrong_last_certificate_value",
+        "expected": "VALUE_TABLE",
+        "actual": "VALUE_TABLE",
+        "result": null
+      },
+      {
+        "index": 21,
+        "name": "actual_flat_runtime",
+        "expected": "PASS",
+        "actual": "PASS",
+        "result": {
+          "--seconds": "550",
+          "--out": "C:/Users/ikuto/projects/conway-99-graph/acceleration/results/family_fixture",
+          "--self-sha256": "a4294996414f86337e1726628d337319a0f3c3b85b9afd6f37713a09cb91b624",
+          "--spec-sha256": "cae1a819d0b603f1243393cab0a4f86401a943d6b19fa1c7527aeea114d3b4f4"
+        }
+      },
+      {
+        "index": 22,
+        "name": "boolean_native_exit",
+        "expected": "RUNTIME_EXIT",
+        "actual": "RUNTIME_EXIT",
+        "result": null
+      },
+      {
+        "index": 23,
+        "name": "old_caller_runtime",
+        "expected": "RUNTIME_SUFFIX",
+        "actual": "RUNTIME_SUFFIX",
+        "result": null
+      },
+      {
+        "index": 24,
+        "name": "checkpoint_wrong_tie",
+        "expected": "FAMILY_CHECKPOINT",
+        "actual": "FAMILY_CHECKPOINT",
+        "result": null
+      },
+      {
+        "index": 25,
+        "name": "reordered_case",
+        "expected": "FAMILY_LABEL",
+        "actual": "FAMILY_LABEL",
+        "result": null
+      },
+      {
+        "index": 26,
+        "name": "boolean_summary_count",
+        "expected": "FAMILY_SUMMARY",
+        "actual": "FAMILY_SUMMARY",
+        "result": null
+      }
+    ]
+  },
+  "raw_inputs_declared_sha256": {
+    "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py": "ae82538770a314f5aa2fc7c698ba2ff305b92e59a27d5de9cfb69798ebbdc977",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1_spec.md": "523c6419a3139f6153dc8ab303c38dbef51ee707cba992d7370f3977294c29e9",
+    "acceleration/audit_20261004_prime5_code_delsarte_v1.py": "0333acd3790a7d9dee631a7c27fd1346e24f67e923d74bc54c824f099acc187f",
+    "acceleration/audit_20261004_prime5_code_delsarte_v1_spec.md": "a3b39fceb90fd8595bc34dd50c5579fa6b205c7141e5a416f600537c0bfe4b87",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v2.py": "a4294996414f86337e1726628d337319a0f3c3b85b9afd6f37713a09cb91b624",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v2_spec.md": "cae1a819d0b603f1243393cab0a4f86401a943d6b19fa1c7527aeea114d3b4f4",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command_v2.py": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20261004_independent_review/prime5_code_delsarte_calibration01/summary.json": "098fc604985244c42cfea8b8d9e40a1c98f21c8bfb7947a7f9a3b4543359dee0",
+    "acceleration/results/20261004_prime5_code_delsarte_checker_calibration_root_acceptance01.json": "c0c157a581f43e36b681f292bd4064db2584652b6e4f81bbc33284239e902c52",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_v1.py": "3d43158c8e564fb6b645a17dfaf3cdac84d7f8f16c6ac51c95f2b1e00dddee84",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_v1_spec.md": "f46453b25f4cb7971b9c8cb7ac413013284a2dc465ede836c1dad5add21a132e",
+    "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_calibration01/summary.json": "0fa8a74edfe31a1979a464d05034b37760097626c3762abd4784daba72a1087d",
+    "acceleration/results/20261004_prime5_analytic_delsarte_adapter_root_acceptance01.json": "06000964ef34c1b704d43f79f90658d50911663baeb4ccf062346ec11141207a"
+  },
+  "raw_inputs_fresh_sha256": {
+    "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1.py": "ae82538770a314f5aa2fc7c698ba2ff305b92e59a27d5de9cfb69798ebbdc977",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_family_v1_spec.md": "523c6419a3139f6153dc8ab303c38dbef51ee707cba992d7370f3977294c29e9",
+    "acceleration/audit_20261004_prime5_code_delsarte_v1.py": "0333acd3790a7d9dee631a7c27fd1346e24f67e923d74bc54c824f099acc187f",
+    "acceleration/audit_20261004_prime5_code_delsarte_v1_spec.md": "a3b39fceb90fd8595bc34dd50c5579fa6b205c7141e5a416f600537c0bfe4b87",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v2.py": "a4294996414f86337e1726628d337319a0f3c3b85b9afd6f37713a09cb91b624",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v2_spec.md": "cae1a819d0b603f1243393cab0a4f86401a943d6b19fa1c7527aeea114d3b4f4",
+    "acceleration/command_deadline.py": "9876cc751a598845e55e27353f68557ff20054c1e2570239b27981ff950ca6b9",
+    "acceleration/run_compute_command_v2.py": "46410201dcad20eb056b8206a1b6687f9ac74f0f34e3cc66197eff5c59d55e17",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "acceleration/results/20261004_independent_review/prime5_code_delsarte_calibration01/summary.json": "098fc604985244c42cfea8b8d9e40a1c98f21c8bfb7947a7f9a3b4543359dee0",
+    "acceleration/results/20261004_prime5_code_delsarte_checker_calibration_root_acceptance01.json": "c0c157a581f43e36b681f292bd4064db2584652b6e4f81bbc33284239e902c52",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_v1.py": "3d43158c8e564fb6b645a17dfaf3cdac84d7f8f16c6ac51c95f2b1e00dddee84",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_v1_spec.md": "f46453b25f4cb7971b9c8cb7ac413013284a2dc465ede836c1dad5add21a132e",
+    "acceleration/results/20261004_independent_review/prime5_analytic_delsarte_calibration01/summary.json": "0fa8a74edfe31a1979a464d05034b37760097626c3762abd4784daba72a1087d",
+    "acceleration/results/20261004_prime5_analytic_delsarte_adapter_root_acceptance01.json": "06000964ef34c1b704d43f79f90658d50911663baeb4ccf062346ec11141207a"
+  },
+  "raw_outputs_declared_sha256": {
+    "control_0.json": "7ad34c56de32cb0f384c9d5ec280cc2bbc9e4f59d188174a17b0ce45e11785d8",
+    "control_1.json": "1352b0c95971c2fbb5210631707e5e990b83d8800149dc21f64fccd2f2f3746e",
+    "control_10.json": "2950e65ca975adb00d2fb8787146ec29a11447c57eed4e75993c33bb4579f095",
+    "control_11.json": "b697d8d33ad017f8622b5b3c12e82bd2830ee68ce05f280f65317e46812d57fc",
+    "control_12.json": "be0700edc2de72c3472c6798d086f2a845b1e791f985554054a07cbb306b8147",
+    "control_13.json": "44c2bba0e4e3d67007e56f6be84a52b71e1e7c244c5ca2f02d219deb29c8d5e6",
+    "control_14.json": "fc1922e6cc5929a098b383f1704c804bc7905dd0969709b8712783d96be9b24c",
+    "control_15.json": "3bbc5a0628d94d1e9fcc0eaecebed95751558d984a053d3da3da3d0d714a16d6",
+    "control_16.json": "b84b15025639d537052b7349d900bdf2194a16620fdd7b1d0c24cc11b0e99129",
+    "control_17.json": "c5b16fa840633e80fa6c689ee244cc0ad665496d1e53f48d8c16ae9d745c6eec",
+    "control_18.json": "b47c4b4ba9baa4a768a1c719eae3b05b614afd2bbf4d4c9eae00062fd720dc0f",
+    "control_19.json": "085f91d296d01729d0241fe23ad65652e8038956288187ca5add831f89cd902b",
+    "control_2.json": "07a5f5dbe8ec025e11bde139cac8669c254f38ba2fc8fe15f7044e6c96bf559f",
+    "control_20.json": "b06242dece598b63b6aaf835fe27a1f9ee7fd30b0520c39eff549f214e569596",
+    "control_21.json": "8066012c3fcc4694b81bea91a7ce128d8f0dd799484458633b16d27ed34212ec",
+    "control_22.json": "0e894b1dc337fc9bfcb30005279ee919ed550c1d3079e814f8d5948c350958ab",
+    "control_23.json": "8d17e512558ccadc411e08045a1439fe84d59305c6b632e0ba62612de7950247",
+    "control_24.json": "79587655dd7a47a00c783ef25ccbc8c7dedbe474b74e50d68dbc6b12175ec6ff",
+    "control_25.json": "11f996122ebe32f4e8e66677363c1a6d3a740f4f0499a304511e2f3111a3b529",
+    "control_26.json": "8262b98e6c4bda43264fec59c5b787829f0f3be4d18b39a7de85da2de6830798",
+    "control_3.json": "c4926e37ded5883ae27f113bee3811f9c8a2871febe1c465550c4088d4a5343f",
+    "control_4.json": "49dadbd0e631b9452b71cce9bd833754406e9969ff4a24d1a3ff6ab6667e0db3",
+    "control_5.json": "d2eabbd08a6ac429232764c3096c435f2a9738c0e72ab2ecd3bdaf2f4567ae88",
+    "control_6.json": "b752093f66c7d1461d06e17c72c57a36a3691093b24438b8123b2742d770507a",
+    "control_7.json": "94bafc304195a3715057ab6f7158802000361751a25cd40250e5e9e704ce2199",
+    "control_8.json": "030449b719f3851591037f9aacc241d6dd669f1701aa347e6a7c82858b533f3b",
+    "control_9.json": "975bba4ec9cf82a49c521eb42a05fc3b7181dc47f87a031b7b4bd5d12d4ca1c4",
+    "controls.json": "47420509dd9edb10acd437d51933faa87f6e28feed027faf9c8c85ac876dd6d9"
+  },
+  "raw_outputs_fresh_sha256": {
+    "control_0.json": "7ad34c56de32cb0f384c9d5ec280cc2bbc9e4f59d188174a17b0ce45e11785d8",
+    "control_1.json": "1352b0c95971c2fbb5210631707e5e990b83d8800149dc21f64fccd2f2f3746e",
+    "control_10.json": "2950e65ca975adb00d2fb8787146ec29a11447c57eed4e75993c33bb4579f095",
+    "control_11.json": "b697d8d33ad017f8622b5b3c12e82bd2830ee68ce05f280f65317e46812d57fc",
+    "control_12.json": "be0700edc2de72c3472c6798d086f2a845b1e791f985554054a07cbb306b8147",
+    "control_13.json": "44c2bba0e4e3d67007e56f6be84a52b71e1e7c244c5ca2f02d219deb29c8d5e6",
+    "control_14.json": "fc1922e6cc5929a098b383f1704c804bc7905dd0969709b8712783d96be9b24c",
+    "control_15.json": "3bbc5a0628d94d1e9fcc0eaecebed95751558d984a053d3da3da3d0d714a16d6",
+    "control_16.json": "b84b15025639d537052b7349d900bdf2194a16620fdd7b1d0c24cc11b0e99129",
+    "control_17.json": "c5b16fa840633e80fa6c689ee244cc0ad665496d1e53f48d8c16ae9d745c6eec",
+    "control_18.json": "b47c4b4ba9baa4a768a1c719eae3b05b614afd2bbf4d4c9eae00062fd720dc0f",
+    "control_19.json": "085f91d296d01729d0241fe23ad65652e8038956288187ca5add831f89cd902b",
+    "control_2.json": "07a5f5dbe8ec025e11bde139cac8669c254f38ba2fc8fe15f7044e6c96bf559f",
+    "control_20.json": "b06242dece598b63b6aaf835fe27a1f9ee7fd30b0520c39eff549f214e569596",
+    "control_21.json": "8066012c3fcc4694b81bea91a7ce128d8f0dd799484458633b16d27ed34212ec",
+    "control_22.json": "0e894b1dc337fc9bfcb30005279ee919ed550c1d3079e814f8d5948c350958ab",
+    "control_23.json": "8d17e512558ccadc411e08045a1439fe84d59305c6b632e0ba62612de7950247",
+    "control_24.json": "79587655dd7a47a00c783ef25ccbc8c7dedbe474b74e50d68dbc6b12175ec6ff",
+    "control_25.json": "11f996122ebe32f4e8e66677363c1a6d3a740f4f0499a304511e2f3111a3b529",
+    "control_26.json": "8262b98e6c4bda43264fec59c5b787829f0f3be4d18b39a7de85da2de6830798",
+    "control_3.json": "c4926e37ded5883ae27f113bee3811f9c8a2871febe1c465550c4088d4a5343f",
+    "control_4.json": "49dadbd0e631b9452b71cce9bd833754406e9969ff4a24d1a3ff6ab6667e0db3",
+    "control_5.json": "d2eabbd08a6ac429232764c3096c435f2a9738c0e72ab2ecd3bdaf2f4567ae88",
+    "control_6.json": "b752093f66c7d1461d06e17c72c57a36a3691093b24438b8123b2742d770507a",
+    "control_7.json": "94bafc304195a3715057ab6f7158802000361751a25cd40250e5e9e704ce2199",
+    "control_8.json": "030449b719f3851591037f9aacc241d6dd669f1701aa347e6a7c82858b533f3b",
+    "control_9.json": "975bba4ec9cf82a49c521eb42a05fc3b7181dc47f87a031b7b4bd5d12d4ca1c4",
+    "controls.json": "47420509dd9edb10acd437d51933faa87f6e28feed027faf9c8c85ac876dd6d9"
+  },
+  "input_count": 16,
+  "output_payload_count": 28,
+  "physical_file_count": 29,
+  "JSON_files_parsed": 29,
+  "input_mismatches": [],
+  "output_mismatches": [],
+  "inventory_difference": [],
+  "endpoints_sha256": {
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration01/summary.json": "e85e19a6d5cc72665211441b829f66721a7554cad408486d180a30cb7063bb50",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration01/controls.json": "47420509dd9edb10acd437d51933faa87f6e28feed027faf9c8c85ac876dd6d9",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration_supervision01/manifest.json": "b8bd773150a955e0e4e44dfe68516d30ef52e4d8f03525b92c64e18ef8f53dba",
+    "acceleration/results/20261004_independent_review/prime5_analytic_family_calibration_supervision01/summary.json": "5abd19ff540d715fa275a91ecc392190db13781a5066519ad0ffb9d5123a9e11",
+    "acceleration/results/20261004_prime5_analytic_family_checker_native_admission01.json": "2aaef548fc66744767bc5e90ee514b76a991062fd4576dc80eefd97649554833",
+    "acceleration/results/20261004_prime5_analytic_family_checker_native_one_authority01.json": "e7cd40566a80be360432227b9ba00032e37fc802043ecd6d99c7bf6be15d1c6b",
+    "acceleration/results/20261004_prime5_analytic_family_checker_native_dispatch01.json": "bd182eafc947623c0067ec23d835070f79e7097fe6810f188926314ca465bdea"
+  },
+  "closing_context": {
+    "HEAD": "9349bd83bda2c9ae72671ed6a8ab2efd3ae118f5",
+    "ledger_sha256": "95e8ffba7f7a8554c0de753495b3aba3a8eae0b8d238aecba81d3f1213db704c",
+    "index_sha256": "3ceb7b2e8b98c7b0dac05e193b328b00d55666ceecad8a9d5e9799159fe5c56c",
+    "ledger_parsed": false
+  },
+  "protected_interval_still_matches": true,
+  "former_job_PID_now_absent": true,
+  "current_owned_workers": 0,
+  "qualified_old68_actions_rerun": 0,
+  "qualified_old15_actions_rerun": 0,
+  "scientific_population_calculations": 0,
+  "LP_backend_calls": 0,
+  "full_replay_authorized": false,
+  "automatic_retry": false,
+  "ledger_index_git_mutations": 0,
+  "completion_metadata_first_attempt": {
+    "failure": "PowerShell comma/concatenation precedence made the endpoint list a single path",
+    "failure_stage": "Get-FileHash on endpoint list",
+    "completion_file_written": false,
+    "corrected_by": "Parentheses around each concatenated path",
+    "raw_worker_files_changed": false,
+    "computational_invocation_repeated": false
+  }
+}

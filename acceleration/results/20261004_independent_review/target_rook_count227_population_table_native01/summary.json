@@ -1,0 +1,230 @@
+{
+  "schema": "CLAIM_BOUND_INDEPENDENT_WRITTEN_REPORT_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_COUNT227_POPULATION_TABLE_WRITTEN_PASS",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-DEFICIENCY-POPULATION-TABLE",
+  "claim_revision": 1,
+  "revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2) having exactly227 actual induced rook-nine vertex subsets counted once, let r_T count those containing actual triangle T and put d_T=6-r_T. All deficiencies are zero, one, two or three. If a,b,c count deficiency-one, deficiency-two and deficiency-three triangles, respectively, then a+2b+3c=24 and precisely the following necessary population ranges hold: c=0 with 1<=b<=8 and a=24-2b; c=1 with 0<=b<=5 and a=21-2b; or c=2 with b in {0,1} and a=18-2b. No c>=3 occurs. This does not assert realizability of a listed population, exclude count227 or resolve the target.",
+  "timestamp": "2026-10-04T18:54:45.9157103Z",
+  "verification_timestamp": "2026-10-04T18:54:45.9157103Z",
+  "verification_started_at": null,
+  "executed_worker_start_time": null,
+  "metadata_created_at": "2026-10-04T18:56:18.2015428Z",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "actual_executor": null,
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "scope": {
+    "description": "Universal conditional necessary16-row deficiency population table for exactly227 actual induced rook-nine subsets in a complete SRG(99,14,1,2). Arbitrary other target edges, actual point labels and parity of d1+d3 are retained. No realization or count227 exclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "original_candidate_scope": {
+    "description": "Universal conditional sixteen-row necessary population restriction at R227. Actual point labels, arbitrary other target edges and the parity of deficiency-one plus deficiency-three triangles are retained. No equitability, automorphism or faithful collapsed-defect-cycle-to-square assumption.",
+    "unrestricted_target": true,
+    "graph_construction": false,
+    "scientific_coverage": "UNKNOWN",
+    "target_resolution": "NONE",
+    "count227_excluded": false,
+    "population_realizability_claimed": false
+  },
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced9-vertex rook subsets once by their vertex sets",
+    "r_T counts those actual subsets containing T; local defect edges mean no induced rook contains both intersecting actual triangles"
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-NONZERO-ROOK-DEFICIENCY-MAXIMUM-LOWER2",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "original_decorated_dependencies": [],
+  "dependency_reason": "Only strict D>=6m+6 and nonempty maximum>=2 are inherited. Local defect degrees, odd-family parity, point-fan incidence bound, target upper Gram, disjoint-triangle matching cap, even-six induced rook and outside-one-neighbor equality are reconstructed in the paper. Previous R228 papers and the regular-set audit are overlap/comparison sources, not approval gates for this new statement.",
+  "controls": {
+    "written_proof_checks": 30,
+    "written_boundary_challenges": 8,
+    "written": 38,
+    "population_rows_hand_checked": 16,
+    "executed": 0,
+    "formal": 0,
+    "external": 0,
+    "solver_calls": 0
+  },
+  "necessary_population_rows": [
+    {
+      "a": 22,
+      "b": 1,
+      "c": 0,
+      "P": 23
+    },
+    {
+      "a": 20,
+      "b": 2,
+      "c": 0,
+      "P": 22
+    },
+    {
+      "a": 18,
+      "b": 3,
+      "c": 0,
+      "P": 21
+    },
+    {
+      "a": 16,
+      "b": 4,
+      "c": 0,
+      "P": 20
+    },
+    {
+      "a": 14,
+      "b": 5,
+      "c": 0,
+      "P": 19
+    },
+    {
+      "a": 12,
+      "b": 6,
+      "c": 0,
+      "P": 18
+    },
+    {
+      "a": 10,
+      "b": 7,
+      "c": 0,
+      "P": 17
+    },
+    {
+      "a": 8,
+      "b": 8,
+      "c": 0,
+      "P": 16
+    },
+    {
+      "a": 21,
+      "b": 0,
+      "c": 1,
+      "P": 22
+    },
+    {
+      "a": 19,
+      "b": 1,
+      "c": 1,
+      "P": 21
+    },
+    {
+      "a": 17,
+      "b": 2,
+      "c": 1,
+      "P": 20
+    },
+    {
+      "a": 15,
+      "b": 3,
+      "c": 1,
+      "P": 19
+    },
+    {
+      "a": 13,
+      "b": 4,
+      "c": 1,
+      "P": 18
+    },
+    {
+      "a": 11,
+      "b": 5,
+      "c": 1,
+      "P": 17
+    },
+    {
+      "a": 18,
+      "b": 0,
+      "c": 2,
+      "P": 20
+    },
+    {
+      "a": 16,
+      "b": 1,
+      "c": 2,
+      "P": 19
+    }
+  ],
+  "proof_summary": [
+    "D24 and exact inherited strict bound give maxd3; nonempty maximum>=2.",
+    "Local degree parity and actual fan injection give even r1+r3 and P>=3r1+5r2+7r3.",
+    "For c>=2, actual d3 triangles are disjoint with star degree3,1,1,1 at every point. Known edges and full target Q PSD exclude c3/c4; crossmatching cap3 gives c2,b<=1.",
+    "For c1,b>=3 stars supply9 distinct d1 triangles; b6 saturates all6 external d2 triangle points and violates unique d1 defect degree, so b<=5.",
+    "For c0, b>=1; b12 fails fan/outer-mass, b11/b10 fail even-two/four, b9 produces an induced rook from even-six.",
+    "Full99 Q indicator equality, also independent90 boundary-edge saturation, gives exactly one rook neighbor at every outside vertex; distinct-root d2 cannot share outerpoints and has no defect partners there.",
+    "Sixteen rows are retained necessary possibilities only; no feasibility or target resolution is inferred."
+  ],
+  "source_candidate": {
+    "path": "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json",
+    "sha256": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70",
+    "original_timestamp": "2026-10-04T18:42:00Z",
+    "original_status": "CANDIDATE"
+  },
+  "source_audit": {
+    "path": "acceleration/audit_20261004_target_rook_count227_population_table_native_v1.md",
+    "sha256": "40879d6c0f1abc473b5cf765404889bc39edbbb7542cf5b1f2f425febc4010c6"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_DEFICIENCY_POPULATION_TABLE_V1.md": "b5a76e8f0fe994007e5714931bca03d22e7064886e5971f85b7d02fdb8015f55",
+    "acceleration/results/20261004_target_rook_count227_deficiency_population_table_candidate01.json": "82e17eba237b222a9188044a8600f04a32bed9e3272c6432f460d8b5f9253c70",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "docs/CANDIDATE_20261004_TARGET_NONZERO_ROOK_DEFICIENCY_MAXIMUM_LOWER2_V1.md": "8253a55dc9cac834a8ffca449fb2c43eff23489ace1cbccc0897d2e38cea0929",
+    "acceleration/results/20261004_independent_review/rook_deficiency_strict_second_neighbor_native01/claim_binding_schema2.json": "edbfc835f0f6ee7b507f563960178111e11fc04d59adb08f4f96190902dcc6cf",
+    "acceleration/results/20261004_independent_review/nonzero_rook_deficiency_maximum_lower2_native01/claim_binding_schema2_02.json": "20a08c9f55d3b0dd79baa3f9be361ce6997ff4acc3f019affa8f476393618533",
+    "acceleration/results/20261004_rook_deficiency_strict_second_neighbor_native01_root_written_acceptance01.json": "7b7c80c0e16492e8203a55671d366ba5d14147b90985e6e6d98bc3043920eb6d",
+    "acceleration/results/20261004_nonzero_rook_deficiency_maximum_lower2_native01_root_written_acceptance01.json": "fd293dd532197a48900e54c05963d1832c84769b3877e2b04b8501f2a28b46cb",
+    "docs/AUDIT_20260917_ROOK_REGULAR_SET.md": "c0f380a4199281af7f8e0cd3ddbac30e5c50589f66a665e89d6b8e847439f3fc",
+    "acceleration/audit_20261004_target_rook_count227_population_table_native_v1.md": "40879d6c0f1abc473b5cf765404889bc39edbbb7542cf5b1f2f425febc4010c6"
+  },
+  "input_map_count": 10,
+  "shared_components": [
+    "Structural is mathematical producer and authored prior rook candidates; Root suggested the follow-up/shared outline. Agreement is not verification.",
+    "Native independently reconstructed the exact new population statement and every fan/parity/PSD/rook equality step in writing; no discovery source or computational gate was imported.",
+    "Only the exactr1 strict deficiency bound and nonempty maximum-lower2 results are inherited, with their canonical bindings and distinct Root acceptances explicitly pinned.",
+    "The September17 regular-set one-neighbor overlap was read directly and rederived; no historical computation or global rook exclusion is used."
+  ],
+  "limits": [
+    "Necessary population table only: no retained row is asserted realizable and R227 is not excluded.",
+    "No unassigned stronger R227 follow-up, Makhnev/global Hamming exclusion or future execution gate is approved.",
+    "No equitable partition, automorphism, uniform point profile, nonconstant codeword or full positive-support inducedness is assumed.",
+    "All thirty proof checks, eight boundary challenges and16 arithmetic rows were written hand derivations; no mathematical worker, enumeration, source import, backend, formal or external proof check ran.",
+    "Old candidate/artifact bytes, ledger/index/Git/publication and frozen Wave46 roster remain unchanged; this is separate next-wave written evidence."
+  ],
+  "root_exact_new_statement_acceptance": null,
+  "root_acceptance_null_reason": "Root separate whole written review and exact-binding acceptance are pending; inherited dependency acceptances do not approve this new statement.",
+  "scope_controls": {
+    "point_parity": "r1+r3 even",
+    "positive_fan": "P>=3r1+5r2+7r3",
+    "full99_rook_Q_equality": true,
+    "three_crossedges_allowed": true,
+    "c1_b2_boundary_retained": true,
+    "all_retained_rows_realizable_claimed": false,
+    "count227_excluded": false
+  },
+  "publication_cutoff_inclusion": false,
+  "ledger_current_presence_asserted": false,
+  "scientific_coverage": "UNKNOWN",
+  "target_resolution": "NONE",
+  "availability": "LOCAL_ONLY",
+  "metadata_operations": {
+    "new_computational_workers": 0,
+    "source_imports": 0,
+    "enumerations": 0,
+    "ledger_parsed": false,
+    "ledger_index_git_publication_mutations": 0,
+    "historical_bytes_changed": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "NATIVE_UNRESTRICTED_RESEARCH_PREFLIGHT_PASS",
+  "research_calls": 0,
+  "all_three_gates_checked": true,
+  "proposed_command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "300s",
+    "/usr/bin/prlimit",
+    "--as=8589934592:8589934592",
+    "--fsize=10737418240:10737418240",
+    "--core=0:0",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/build/research-cadical195/source/build/cadical",
+    "--no-binary",
+    "-c",
+    "1000000",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_unrestricted_full99_cnf/instance.cnf",
+    "/mnt/c/Users/ikuto/projects/conway-99-graph/acceleration/results/20260930_unrestricted_native_preflight/main/proof.drat"
+  ]
+}

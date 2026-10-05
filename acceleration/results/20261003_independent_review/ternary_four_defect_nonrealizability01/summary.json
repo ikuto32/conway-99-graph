@@ -1,0 +1,122 @@
+{
+  "schema": "INDEPENDENT_TERNARY_FOUR_DEFECT_NONREALIZABILITY_WRITTEN_DERIVATION_V1",
+  "status": "INDEPENDENT_DEGREE14_TERNARY_FOUR_DEFECT_NONREALIZABILITY_WRITTEN_V1_PASS",
+  "outcome": "PASS",
+  "claim_id": "C-UNRESTRICTED-DEGREE14-TERNARY-FOUR-DEFECT-NONREALIZABILITY",
+  "claim_revision": 1,
+  "statement": "For every 99-by-99 symmetric binary zero-diagonal matrix A with exactly 14 ones in each integer row, put r_uv=(A^2)_uv+A_uv-2 for u<v and let F3 count all unordered residuals not divisible by 3. Then F3 is not 4. Together with C-UNRESTRICTED-DEGREE14-TERNARY-SMALL-DEFECT-SUPPORT r1, this gives F3=0 or F3>=6. No realization of any allowed value and no target existence or nonexistence conclusion is asserted.",
+  "producer": "/root",
+  "verifier": "/root/checkpoint_audit",
+  "method": "independent_derivation",
+  "timestamp": "2026-10-03T04:43:43.693410+00:00",
+  "source_context_commit": "63437c9b9fc2dd58b3bdfb51fc347b880b397503",
+  "source_context_role": "ROOT-supplied published context; new working candidate, proof and report are separately pinned and not claimed present in that commit.",
+  "source": "docs/CANDIDATE_20261003_TERNARY_FOUR_DEFECT_NONREALIZABILITY_V1.md",
+  "source_sha256": "08845d97676d050b137e8183f10d38bf3df2424b71aa2997db9fb82384f86364",
+  "written_audit": "acceleration/audit_20261003_ternary_four_defect_nonrealizability_v1.md",
+  "written_audit_sha256": "0cf272ed968d83ccd57a14bfece8025bf7b22362ee4e902458f5b2475f4eddf4",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261003_TERNARY_FOUR_DEFECT_NONREALIZABILITY_V1.md": "08845d97676d050b137e8183f10d38bf3df2424b71aa2997db9fb82384f86364",
+    "acceleration/audit_20261003_ternary_four_defect_nonrealizability_v1.md": "0cf272ed968d83ccd57a14bfece8025bf7b22362ee4e902458f5b2475f4eddf4",
+    "acceleration/results/20261003_independent_review/ternary_small_defect_support01/claim_binding_schema2.json": "764dfa3e0684ee26ff8fbd332260263e1ff32acd82385052cc4f399f100c9f1c",
+    "acceleration/results/20261003_independent_review/ternary_small_defect_support01/summary.json": "74b3043bb5ea79603db65bf6d6f11504274cf5be189525a204d8f6c014946246",
+    "acceleration/audit_20261003_ternary_small_defect_support_v1.md": "f083053e29d51488d9dc4e6d624fde2781b36a5921a25912ae9d57b7058bcab8",
+    "docs/CANDIDATE_20261003_TERNARY_SMALL_DEFECT_SUPPORT_V1.md": "d887daf8e80a8751049f472c54f80d7c61abd245a40020ed93c9114d22677ffd",
+    "acceleration/results/20261003_ternary_four_defect_source01/draft_before_timestamp.md": "be87b6a288b8527924fcd9d174fb6e887d1cd26b2c5d7984591ed979b3bfa6dc",
+    "acceleration/results/20261003_ternary_four_defect_source01/timestamp_correction.json": "a927812a6105a2b335982295b27c79ebfe61c47b0f3e3fae3ad6700d816b8eda"
+  },
+  "scope": {
+    "description": "Universal necessary exclusion of the single ternary residual count F3=4 in the complete simple symmetric zero-diagonal degree14 adjacency domain of order99. No lambda1, incidence, fixed graph, prism, automorphism or numerical premise.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "A has order99, symmetric binary entries and zero diagonal.",
+    "Every integer row has exactly14 ones; all common-neighbor and residual row sums use the complete matrix.",
+    "F3 counts all4851 unordered pairs with identical endpoint residues.",
+    "The pinned small-support theorem r1 supplies only the necessary alternating C4 support shape when F3=4."
+  ],
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-DEGREE14-TERNARY-SMALL-DEFECT-SUPPORT",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "independent_path": [
+    "Reconstruct diagonal0 and complete integer residual row sum (196-14)+14-196=0 directly.",
+    "Expand AD and DA over the integers; AJ=JA=14J implies AD=DA, hence AM=MA over GF(3).",
+    "Use the other opposite support pair b,d and the (z,a) commutator entry to force exact binary outside-neighbor equality for all95 outside vertices.",
+    "At most3 internal neighbors imply at least11 common outside neighbors and r_bd>=9.",
+    "Every good residual is nonnegative; only2 bad residuals in row b can supply at most4 negative budget, so the good multiple-of3 residual r_bd is at most3. Contradiction."
+  ],
+  "complete_written_derivation_checked": true,
+  "independent_of_discovery_producer": true,
+  "commutator_checked_over_integers": true,
+  "binary_external_twins_checked": true,
+  "common_outside_neighbor_lower_bound": 11,
+  "opposite_good_residual_lower_bound": 9,
+  "opposite_good_residual_upper_bound": 3,
+  "excluded_residual_values": [4],
+  "combined_necessary_residual_domain": "F3=0 or F3>=6, using the exact prior small-support theorem r1; no allowed value asserted realizable.",
+  "written_falsification_checks": [
+    "Symmetric binary diagonal14 makes D diagonal0.",
+    "Complete integer off-diagonal row sum182+14-196=0.",
+    "Expand both products and require AJ=JA=14J.",
+    "Pinned4-edge support classification supplies exactly alternatingC4.",
+    "Both nonzero GF(3) signs give the exact2-term column equation.",
+    "Only outside rows are zero; internal adjacency is arbitrary.",
+    "Binary differences-1,0,1 force integer equality; weighted3 versus0 does not.",
+    "Allow all3 internal neighbors and still obtain11 outside.",
+    "Symmetry makes every shared outside neighbor a positive CN term; adjacency of opposite pair cannot lower it.",
+    "Good multiples of3 at least-2 are nonnegative; -3 is impossible.",
+    "Relax both bad entries to-2, bound good pair by4 then by3, contradict9.",
+    "Alternating modularC4 remains a valid written zero-row support, not an adjacency realization."
+  ],
+  "written_falsification_check_count": 12,
+  "written_control_population": {
+    "positive_modular_supports": 1,
+    "positive_names": ["Alternating C4 retained from the prior support proof"],
+    "adjacency_realizations": 0,
+    "executed_fixtures": 0
+  },
+  "command": null,
+  "command_null_reason": "Independent human-checkable exact universal derivation only; no mathematical computation command executed. Read/hash/document metadata operations are not theorem fixtures.",
+  "executable_controls": null,
+  "executable_controls_null_reason": "Twelve written falsification boundaries; zero executed graph or support fixtures.",
+  "tool_versions": null,
+  "tool_versions_null_reason": "No solver, enumeration, executable proof checker or proof assistant used.",
+  "mathematical_computation_commands": 0,
+  "executed_proof_or_fixture_commands": 0,
+  "ledger_mutations": 0,
+  "index_mutations": 0,
+  "target_graphs_produced": 0,
+  "target_exclusions_produced": 0,
+  "target_exclusions_meaning": "Zero unrestricted target existence/nonexistence resolutions or exhaustive graph-space branches; the exact necessary residual-value exclusion is separately recorded as [4].",
+  "target_resolution": "NONE",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "shared_components": [
+    "The prior necessary support theorem is an explicit uses_result dependency. The same Checkpoint identity independently verified that prior theorem; its exact proof, report and binding are pinned.",
+    "Elementary integer/GF(3) arithmetic and the exact candidate definition are shared. No producer code, graph sample, numerical score or agent agreement is a premise.",
+    "Candidate timestamp-only draft/correction records are preserved and pinned; their metadata correction is not a mathematical change."
+  ],
+  "external_review": null,
+  "external_review_null_reason": "Internal independent written review only; no external or peer review recorded.",
+  "novelty": null,
+  "novelty_null_reason": "No literature-priority or novelty audit.",
+  "formalization": null,
+  "formalization_null_reason": "Human-checkable written proof only; no formal proof artifact.",
+  "human_reviewer": null,
+  "human_reviewer_null_reason": "Independent checking agent identity is recorded; no human reviewer claimed.",
+  "raw_adjacency_realization": null,
+  "raw_adjacency_realization_null_reason": "No degree14 adjacency realization of this modular support exists by the checked claim; no graph fixture was produced.",
+  "availability": "LOCAL_ONLY",
+  "retrieval": "Read exact candidate, independent proof, prior theorem and preserved timestamp history through inputs_sha256. Publication requires a separate immutable availability audit.",
+  "limitations": [
+    "Only F3=4 is excluded here; prior support restrictions imply F3=0 or at least6. No allowed residual count is asserted realizable.",
+    "This is a new strengthening, not a revision or refutation of the prior support theorem.",
+    "No general nonexistence, target graph, automorphism assumption, engine/cache/performance approval or justified target-wide denominator.",
+    "Candidate bytes remain historically CANDIDATE; subsequent independent written verification is this separate report.",
+    "Outside the frozen prospective V17 four-claim batch; any future registration and publication require separate exact bookkeeping checks."
+  ]
+}

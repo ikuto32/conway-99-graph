@@ -1,0 +1,80 @@
+{
+  "id": "C-FIXED-HADAMARD-FOURTEEN-PATTERN-PHASE-EXCLUSION",
+  "revision": 1,
+  "kind": "exclusion",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "status": "VERIFIED",
+  "review_state": "CLEAR",
+  "statement": "No binary36x60factor with the prescribed Gram on the fixed six-prism Hadamard support and coordinatewise-balanced identical-support triples can realize all14 specified normalized group patterns; the normalized parity patterns of groups1,2,5,17,18,19 are unrestricted.",
+  "scope": "The exact14group-pattern partial assignment in verified_nogood.json; this is broader than the single20pattern witness but excludes neither allbalancedfactors on the support nor any unrestrictedtarget.",
+  "assumptions": [
+    "Fixed raw support/core and prescribed Gram.",
+    "Coordinatewise balance within each identical-support triple.",
+    "The14listed group patterns are fixed exactly; sixothers are free."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-GENERAL-BALANCED-GF3-PHASE-NECESSITY",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-FIVE-FIXED-HADAMARD20-SUPPORT-PROJECTIONS",
+      "revision": 1,
+      "relation": "premise"
+    },
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-SUPPORT-CUT-PARITY-SAT-WITNESS",
+      "revision": 1,
+      "relation": "derived_from"
+    }
+  ],
+  "dependency_note": "The witness supplies saved pattern values and selection history only; the earlier full20branch exclusion is not a premise of this broader proof.",
+  "verifier": "/root/structural_attack",
+  "producer": "/root",
+  "method": "Independent raw equation/dependency reconstruction, direct row-combination certificate, alternate rank-membership checks and exact14selector mapping.",
+  "shared_components": [
+    "Previously independent literal core/phase and column-rank helper reused with frozen hash; no root discovery code imported.",
+    "Raw support and authenticated parity object shared as immutable inputs.",
+    "Only Pythonstandardlibrary exact arithmetic and JSON trusted."
+  ],
+  "limitations": [
+    "No global minimum-cardinality claim.",
+    "No joint enumeration of sixfreepatterns is needed or asserted; universal validity follows from used-row dependency independence.",
+    "Outside-columncaps/residualD absent and unnecessary for this obstruction.",
+    "No SAT formula modified or solver called."
+  ],
+  "artifact_availability": "LOCAL_ONLY",
+  "availability_reason": "Workspace verification only until parent publication.",
+  "external_review": null,
+  "external_review_reason": "No external review asserted.",
+  "created_at": "2026-09-30T04:57:45.916196+00:00",
+  "updated_at": "2026-09-30T04:57:45.916196+00:00",
+  "inputs_sha256": {
+    "acceleration/results/20260930_hadamard_phase_premise_subset/summary.json": "17e183d83dc983b63e5dd5e874f60e308e5e7e202f14d19e3363c10a2fb14484",
+    "acceleration/results/20260930_hadamard_phase_premise_subset/certificate.json": "2fd565b2286154190a657e4d6ecff5f53945c8c9eb4651aeb86b1e7374dc4850",
+    "acceleration/results/20260930_hadamard_phase_premise_subset/attempts.json": "a698fc9cbf1f7aa1ecf6e15c31303775d6281ad576a94edcc539c71ab9b6a8af",
+    "acceleration/theory_20260930_hadamard_phase_premise_subset.py": "ee64eb1ef3f8b88a47b8dfc4e9a6f7ae81a923fe3456dce2f54ab76a8bb44c04",
+    "acceleration/theory_20260930_hadamard_phase_premise_subset_spec.md": "cfe8d51a8dc8418c6da0913e3e87c1bbbb2d7e019b2c9e1f3b3e2f4773832611",
+    "acceleration/results/20260930_hadamard20_support/six_prism.json": "ea8b3356fb9790a60bdc57442339099b1052b2a9a1ca95f7f146f71598059b9d",
+    "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat/independent_projection.json": "f43ad5f79d6fc8c8f6825f52d0140a07852a873207642b4edb7c035cb5ed4a8c",
+    "acceleration/results/20260930_independent_review/hadamard_parity_support_cuts_sat/summary.json": "02ae20d479a0d2589c02f435e2a8fdd781ec0459b60095d130b68b5f2721a04a",
+    "acceleration/results/20260930_hadamard_parity_support_cuts/model.json": "c477693bbf634609c234bf5b791c499f8f9ded091795b01bec297746288b4f4f",
+    "acceleration/results/20260930_independent_review/hadamard_general_f3_phase_necessity/summary.json": "30dd4e571140a139f7e36baf47f62a4428b752c79bbddd164ec6e54f3b232d67",
+    "acceleration/audit_20260930_hadamard_f3_phase_obstruction.py": "7c6c3708b994f55c5e5ec3809639d2a88ec958c4ef66659325a1cef6e4d22e19",
+    "uv.lock": "a6da29ef244bb0e6495d577944880be595a40246938af99c4c4a325ee32122db",
+    "pyproject.toml": "273251fecebf5ea3d63cc568193026c684a54a7daf56da318aabbd31fadb8339",
+    "acceleration/audit_20260930_hadamard_phase_premise_subset.py": "fc3fbe445b4f5ae3d811f2d0317008de3a008d93950c9135f1807cb9ffa9fc2e",
+    "docs/AUDIT_20260930_HADAMARD_FOURTEEN_PATTERN_EXCLUSION.md": "568d1c0d59d9132d50874a0ee76ca2608bf96f27ca31f177ad6a2f2928ad6923"
+  },
+  "evidence_sha256": {
+    "acceleration/results/20260930_independent_review/hadamard_phase_premise_subset/certificate_replay.json": "48716ad3ce7b9228308c9ee86031cdb2e6b095675ad220fc4f7ba109b53c6b8e",
+    "acceleration/results/20260930_independent_review/hadamard_phase_premise_subset/controls.json": "f45452c8164f1052a7acbd0b7b5f44868c2087c55a7f45faf147b19985b17ebc",
+    "acceleration/results/20260930_independent_review/hadamard_phase_premise_subset/independent_attempt_checks.json": "4742f241cb0e55683417f4d643119b9a5a11653ef8b6381f253294d5f2720de0",
+    "acceleration/results/20260930_independent_review/hadamard_phase_premise_subset/manifest.json": "f63070dff47420270c0236b6c8887db4df30e5bcde9ceb19642e0a7e5389813e",
+    "acceleration/results/20260930_independent_review/hadamard_phase_premise_subset/verified_nogood.json": "f25f3c876a7285be983061852259060d8ea2d07cecafef9dfb43d6928230c287"
+  }
+}

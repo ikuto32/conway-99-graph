@@ -1,0 +1,13 @@
+{
+  "status": "PRESERVED_CHECKER_METADATA_CORRECTION",
+  "timestamp": "2026-09-30T05:14:04.6935930+00:00",
+  "original_source": "acceleration/audit_20260930_balanced_phase_matrix_form.py",
+  "original_failure": "acceleration/results/20260930_independent_review/balanced_phase_matrix_form/failure.json",
+  "reason": "The first independent checker expected gauge_first_phase_zero but the saved immutable schema uses column_gauge. Its coefficient semantics were unchanged.",
+  "correction": "New v2 accepts the actual column_gauge metadata token and independently validates all gauge coefficients. Original checker, failure, producer and written audit are preserved.",
+  "successful_source": "acceleration/audit_20260930_balanced_phase_matrix_form_v2.py",
+  "successful_report": "acceleration/results/20260930_independent_review/balanced_phase_matrix_form_v2/summary.json",
+  "successful_report_sha256": "c20758ad6c8cdb264a28aae97242efdc70ed8cfc582a914cad624bf83cc60c0b",
+  "successful_replay_command": "$env:UV_PROJECT_ENVIRONMENT='build/research-venv'; uv run --locked --offline --cache-dir .uv-cache-20260917 python -B acceleration/audit_20260930_balanced_phase_matrix_form_v2.py --out NEW_DIRECTORY",
+  "written_audit_command_correction": "Use the v2 source and a fresh output directory instead of the v1 reproduction command in the preserved written audit."
+}

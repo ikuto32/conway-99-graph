@@ -1,0 +1,64 @@
+{
+  "schema": "ROOT_EXACT_R226_WRITTEN_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T23:24:52.4001542+00:00",
+  "reviewer": "/root",
+  "result": "PASS_INDEPENDENT_WRITTEN_SCOPE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT226-MAXD3-SINGLE-D3-SIX-D2-PROFILE",
+  "claim_revision": 2,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex sets once and put d_U=6-r_U, where r_U counts such sets containing the actual triangle U. Suppose R=226, every d_U belongs to {0,1,2,3}, exactly one actual triangle T has deficiency three, and exactly six actual triangles have deficiency two. There are then fifteen d1 triangles. Each point of T is incident either to exactly three d1 triangles and zero or one d2 triangle, or to exactly one d1 and two d2 triangles. At most one T point has the latter profile. If all three T points have the former profile, all their d2 incidences are zero. In that zero-bad-point case, the even selected family O=D1 union {T} has sixteen triangles and support S=T union B_s of size21. Its three T points have selected incidence four; the eighteen B_s points have selected incidence two. The actual induced S has exactly the48 selected triangle edges. There is a partition T(3 points), B_s(18), B_o(18), C(60) whose actual per-vertex neighbor counts, in that order, are T:(2,6,6,0), B_s:(1,3,0,10), B_o:(1,0,3,10), C:(0,3,3,8). The induced B_o is the disjoint union of three six-vertex triangular prisms, each of which, together with T, is an actual induced rook-nine. The induced B_s is a connected cubic graph. Six actual d1 triangles partition B_s, and the other nine d1 triangles meet T once and provide a perfect matching on the eighteen B_s points. Each of the six triangles contains one neighbor of each T point; its matching edges join points with the same T neighbor.",
+  "independent_verifier": "/root/native_driver",
+  "producer": "/root/structural",
+  "independent_verification_timestamp": "2026-10-04T23:20:12.5416603+00:00",
+  "scope": {
+    "description": "Exact necessary profile only for actual R226 with literal maxd3, one d3 and six d2 triangles. All allowed focal profiles including the r1five star with separate local edge are checked; h2/h3 are excluded and h1 retained. In h0 the selected support is exactly21 points with48 actual edges; the derived3/18/18/60 cells have the four literal neighbor rows, all good d2 attachments vanish, Bo comprises three actual T-rook prisms and Bs is connected cubic18. Neither surviving branch, the one-d3 lane nor R226 is constructed or excluded.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [],
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=226 counts actual induced rook-nine vertex sets once",
+    "d_U=6-r_U belongs to {0,1,2,3} for every actual triangle U",
+    "exactly one actual triangle T has deficiency three",
+    "exactly six actual triangles have deficiency two"
+  ],
+  "fresh_inputs_sha256": {
+    "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_six_d2_profile_native02/summary.json": "03a5271c95aae6c03bc1a61e80f27c5846d522c0415c7376c73326b5e6cde1e3",
+    "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_six_d2_profile_native02/claim_binding_schema2.json": "89f6758513b0031ad8acf1d253196e3b96d92855e3420981fd23bb6ea4c79363",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SIX_D2_PROFILE_V2.md": "e21cf94b0b55892275c412f1c4ef62d4461ad46c8fd25171befd86821efba812",
+    "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_six_d2_profile_candidate02.json": "f148299f027cf99760f77ee11415093034000e6e82799a4c1ef50f9bc444784a",
+    "acceleration/audit_20261004_target_rook_count226_single_d3_six_d2_profile_native_v2.md": "f218df3e08298218bb029ad694d6ff9f71bb52303c198412d59f72854159b68b",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT226_MAXD3_SINGLE_D3_SIX_D2_PROFILE_V1.md": "dc40b2a3aecf6709a14b3a9d88ded6dfddc596d7fdc65a6faabf15fd7daa4a5c",
+    "acceleration/results/20261004_target_rook_count226_maxd3_single_d3_six_d2_profile_candidate01.json": "3209080c5e6d41892e0af54cc93c1fbce0c0c1df98a0bb3f0ea9f6e932e2410a",
+    "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_six_d2_profile_native01/summary.json": "a377085e79fd9889227c7d39b0bf3b477e9be81fa4ff527bc024b8676560cd71",
+    "acceleration/results/20261004_independent_review/target_rook_count226_single_d3_six_d2_profile_native01/claim_binding_schema2.json": "f67442ce79c17b7a6eeb678bb63ddff9f2a12ac1df11be6c36baf7f7557ce191",
+    "acceleration/audit_20261004_target_rook_count226_single_d3_six_d2_profile_native_v1.md": "27d8b257721c8cb451806d55ac7ac7eaade2913078a311a194acaad8cd533270"
+  },
+  "fresh_small_identities": 11,
+  "written_checks": [
+    "Root whole corrected V2 paper/raw and new Native audit/report/binding read. Native separately reevaluated full mathematical proof for exactr2; oldr1 literal ambiguity withheld and preserved, not refuted or transferred. All S21/four-cell/prism/matching/connected clauses explicitly apply only in the zero-bad-point case.",
+    "Necessary c1/b6 maxd3/R226 profile only: all four localF/B/G0/G1 cases, selected incidence abovefour and every actualextraedge retained; h2 AY31<40, h3 exactnormlower, and h0 equality force stated restrictions without assuming automorphisms/equity. The h1 branch remains.",
+    "Root shared per-center and equality discovery outlines, Structural produced/challenged whole exactproof; Native independent derivation and falsification is the approval path, not Root selfapproval or agreement. Factor63, integer2mod3 and strict q0 nonintegrality separately retained.",
+    "Containing rooks are actual vertexsets with conditional pair uniqueness; G1 indicators and cubic-six/K3,3/color matching fourth-rook argument remove h0 good attachments. Whole-triangle component and color-matching parity force Bs connected without contracted simplicity.",
+    "Native66 written checks (42derivation24boundary), zero mathematical executions/formal/external reviews. Exact literal prefix/commonmetadata/commonproof comparison is supplementary documentary identity only. Empty dependencies and neither surviving branch/R226/target excluded."
+  ],
+  "shared_components": [
+    "Root shared per-center capacity, eigenvector and h0 Gram-equality outlines; Structural authored and challenged the full frozen proof and containing-rook argument. Original shared origin is preserved.",
+    "Native whole-read exact revision2 paper/raw/appendix and reevaluated all local patterns, weighted inequalities, actual rook/cell and component consequences under the now explicit zero-bad-point condition. Shared agreement is not verification or independent discovery.",
+    "Native original derivation/scope conditioned the cell consequences on h0 but missed the ambiguous sentence boundary in the r1 literal statement. Checkpoint data admission and Root caught it and withheld r1. Preserved r1 review is history only; this new exact r2 verification is separate.",
+    "Only documentary text/typed comparisons confirm the unchanged common proof and eight metadata fields. No r1 approval, pending six-profile gate or separate h1 refinement is a premise.",
+    "Fan/parity/Gram and older prism-cell overlap is disclosed. No archive novelty, broad survey or old gate transfer is claimed."
+  ],
+  "current_ledger_sha256": "32418255444775febd70512bdac6a62e8e3b33de1b540fba03d9a167032faa49",
+  "source_commit": "f795e9e83e3b3a1e0808a5a6b623cdd7e5e2100e",
+  "index_sha256": "029a21fcd78ff77774131aff86088dbfffa6f14cdf28381c1b5a0c5c8a2c6e4a",
+  "registration": "Pending later R226 milestone. Frozen Wave47 eighteen cutoff excludes R226.",
+  "mathematical_programs": 0,
+  "formal_reviews": 0,
+  "external_reviews": 0,
+  "ledger_Git_PUBLIC_mutations": 0,
+  "target_resolution": "UNKNOWN",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "elapsed_seconds": 0.2907573
+}

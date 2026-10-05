@@ -1,0 +1,54 @@
+{
+  "id": "C-FIXED-HADAMARD-SIX-PRISM-CYCLIC-FACTOR-EXCLUSION",
+  "revision": 1,
+  "statement": "No binary36x60 prescribed-Gram factor of the frozen six-prism coordinate support L satisfies both all1770 column-pair overlap caps and the prescribed cyclic fibre-triplet construction restriction; its exact26360-variable122394-clause CNF is UNSAT.",
+  "kind": "exclusion",
+  "basis": [
+    "DERIVED",
+    "COMPUTED"
+  ],
+  "recommendation": "VERIFIED",
+  "review_state": "CLEAR",
+  "scope": "This excludes only the extra cyclic construction subfamily of one literal support, not all factors for that support or core.",
+  "assumptions": [
+    "No nontrivial target automorphism is assumed.",
+    "The cyclic restriction is an additional condition on the partial factor, not a normalization of all fixed-support factors."
+  ],
+  "dependencies": [
+    {
+      "id": "C-FIXED-HADAMARD-SIX-PRISM-CYCLIC-COLORING-CNF",
+      "revision": 1,
+      "relation": "encoding_equivalence"
+    }
+  ],
+  "reduction_dependency": {
+    "path": "acceleration/results/20260930_independent_review/hadamard_six_prism_cyclic_reduction/summary.json",
+    "sha256": "7b9d988b946284d7a9fbcccccf1c2f32592dbdeb2e30cb6201e1565ea75d4de1",
+    "relation": "normalization",
+    "ledger_id": null,
+    "ledger_id_null_reason": "Await exact proposed reduction claim ID; mathematical artifact binding is complete."
+  },
+  "evidence": [
+    {
+      "path": "acceleration/results/20260930_independent_review/hadamard_cyclic_unsat/summary.json",
+      "sha256": "83029350b25523c015dfe916d8056324c0970021d2b024d68941dd41fb8c2b70",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "acceleration/results/20260930_hadamard_cyclic_native_pilot/main/proof.drat",
+      "sha256": "51d67cf0f60365e01a744d2066e0999e944c27a56e3024a73dd5135b000e6ed9",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "verifier": "/root/state_literature_audit",
+  "method": "independent_complete_DRAT_artifact_check_and_native_receipt_review",
+  "limitations": [
+    "This excludes only the extra cyclic construction subfamily of one literal support, not all factors for that support or core.",
+    "No residual D, full99 graph, target automorphism premise or general nonexistence claim.",
+    "DRAT-trim, its reviewed Windows portability block, MSVC and runtime remain trusted; no fresh diverse compilation.",
+    "Complete trace was replayed; solver correctness is not trusted for UNSAT.",
+    "Encoding/reduction mathematics rely on separately pinned independent audits."
+  ],
+  "created_at": "2026-09-30T03:19:48.246621+00:00",
+  "updated_at": "2026-09-30T03:19:48.246621+00:00"
+}

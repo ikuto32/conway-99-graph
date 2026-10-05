@@ -1,0 +1,44 @@
+{
+  "status": "ARTIFACT_AVAILABILITY_METADATA_CORRECTION",
+  "timestamp": "2026-09-30T01:08:46.077311+00:00",
+  "source_commit": "22fc0ea2f81faa791ee99daf456a3c9785c55dc0",
+  "command": [
+    "C:\\Users\\ikuto\\projects\\conway-99-graph\\build\\research-venv\\Scripts\\python.exe",
+    "acceleration/record_20260930_factor_pilot_availability.py",
+    "--out",
+    "acceleration/results/20260930_independent_review/factor_annealer_pilot_availability_correction"
+  ],
+  "cwd": "C:\\Users\\ikuto\\projects\\conway-99-graph",
+  "corrected_report": {
+    "path": "acceleration/results/20260930_independent_review/factor_annealer_pilot/summary.json",
+    "sha256": "97858230f5e777d601554e51184f0cb3b57ce6d39ed022a3850005b49c27fdd5",
+    "claim_id": "C-FACTOR-PERMUTATION-ANNEALER-PILOT-SAVED-STATES",
+    "claim_revision": 1
+  },
+  "field": "artifact_availability",
+  "original_value": "PUBLIC",
+  "corrected_value": "LOCAL_ONLY",
+  "reason": "The pilot cohort had not been published when this independent report was created. Public retrieval at an immutable pushed commit has not yet been confirmed. The original PUBLIC metadata was premature.",
+  "retrieval": "Existing local paths pinned by the original report. A later separate publication binder may establish PUBLIC availability with immutable retrieval links.",
+  "exact_metadata_scope": "This correction changes availability metadata only. The checked artifact bytes, exact objective scores, verifier method, calibration outcomes and scoped saved-state statement remain unchanged.",
+  "original_report_unchanged": true,
+  "public_publication_confirmed": false,
+  "mathematical_status_changed": false,
+  "target_resolution": false,
+  "read_only_index_observation": {
+    "command": [
+      "git",
+      "ls-files",
+      "--error-unmatch",
+      "--",
+      "acceleration/results/20260930_independent_review/factor_annealer_pilot/summary.json"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "error: pathspec 'acceleration/results/20260930_independent_review/factor_annealer_pilot/summary.json' did not match any file(s) known to git\nDid you forget to 'git add'?\n"
+  },
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/factor_annealer_pilot/summary.json": "97858230f5e777d601554e51184f0cb3b57ce6d39ed022a3850005b49c27fdd5",
+    "acceleration/record_20260930_factor_pilot_availability.py": "c7d0117d4cfa9e4ff7e4ecb5d2edc44a6a531036aae26e81fd24963ac627ad82"
+  }
+}

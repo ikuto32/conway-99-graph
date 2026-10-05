@@ -1,0 +1,3 @@
+# Source-only wave30 registration review
+
+Authenticate frozen registrar121d... and spec7ad8..., parse AST, read actual batch03 reports/bindings and preparation receipt. Do not import or execute the registrar, validators, native tools, or mathematical checkers. Check exact declared six-claim order, dependency/current-revision guards, old-object equality, and actual03 identity alignment. Record direct-write operation order and absence of atomic replacement/observed-commit failure classification as an execution-safety change request. No fault simulation, source modification, ledger/Git writes, mathematical reapproval or REFUTED claim. Future04/05 artifacts remain mandatory and unapproved. Freeze this source/spec before the cheap read-only review.

@@ -1,0 +1,59 @@
+{
+  "schema": "ROOT_NATIVE_STOP_RAW_ARTIFACT_REVIEW_V4",
+  "timestamp": "2026-10-03T11:13:49.7659991+00:00",
+  "verifier": "/root",
+  "source_context_commit": "d0c0dd7db0d3de420b1d718b59122b069df01107",
+  "label": "mixed_reassessment",
+  "claim": "Finite observed declared live processes and ordinary descendants stopped; saved exact identities and original numeric group absent in complete same-context post snapshot",
+  "result": "PASS",
+  "inputs_sha256": {
+    "acceleration/plan_20261003_native_active_stop_v8.json": "40e5e54933cac31db110568c09618a8fda4e61abebc672da1d28e118ccc4bd36",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06/launch.json": "e4c113c77c4e56c76bd8783b0e123b43817102a08499d869bb61144c356f2c25",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06/live_ready.json": "24be51ee92d7f8f4aaa2045f1db61e45d60c3418560684b137bb82182d61ef2f",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06/observations.jsonl": "d9b22f7a1377b299c558af788f066404092c0f9c6d0082a84e2e641c3755869f",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06_after/raw_snapshot.json": "33907dc2f3b427367ab125458c0d27489022aafc1c7364b9d18a777d7993586d",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06_after/observation.json": "47e1104d12932492952968f12f4b31b66f4c449007b8d008d93fa37b0c504d3a",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment_supervision06/summary.json": "62058c3e5ec747d2acc70f527febe97ce5ce5357516da1789d4d7083ac87eed7",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment_supervision06/manifest.json": "a17c331f41dd3008edc935d213b7ddaa26569356105ed581af2a2d28af93c166",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment_supervision06/linux_cleanup_observations.jsonl": "8f4f8a85ad61edec82acef45a5c6f8b34feef49bbe987727806b82664818a2aa",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06_after_supervision/summary.json": "9980100802c24e82799b8ccde2f54bc10d97fd6ca67a2ad8d6e9c45e5eed97db",
+    "acceleration/results/20261003_native_active_stop_mixed_reassessment06_after_supervision/manifest.json": "fe7506a254ab4d7b45e7943e24cecb9c39d9cbc7fa65d18de862202395f87563"
+  },
+  "checking_source_sha256": "df7828184494352a11246ef2c59477a83591581f9b88504e60424e8b089d6f41",
+  "method": "Independent PowerShell parser of every saved frame and every raw current row; no producer or supervisor imports; exact PID/startticks matching; complete literal command and terminal checks",
+  "raw_frame_count": 35,
+  "raw_saved_rows_checked": 140,
+  "known_distinct_identities": 4,
+  "raw_post_rows_checked": 30,
+  "unrelated_zero_group_or_session_pids": [
+    2,
+    8
+  ],
+  "declared_comm": "hypergraph_tern",
+  "declared_live_frame_count": 35,
+  "readiness_interval_seconds": 1.0450105499999998,
+  "cleanup_scan_count": 1,
+  "final_nonlive_cleanup_rows": 0,
+  "worker_invocation": "c41c120209b6494e83500bdba99b66d0",
+  "worker_elapsed_seconds": 4.029180125,
+  "post_invocation": "4cd246cd4e6f4772af7c72671fd84586",
+  "post_elapsed_seconds": 0.3319998430000002,
+  "predicate_controls": [
+    "saved exact live worker selected",
+    "changed startticks rejected",
+    "known zombie excluded from live population"
+  ],
+  "shared_trusted_components": [
+    "Producer raw Linux proc collector",
+    "PowerShell JSON decoder",
+    "Recorded Linux kernel identity context"
+  ],
+  "scientific_launched": false,
+  "mathematical_approval": false,
+  "target_resolution": "NONE",
+  "limitations": [
+    "Finite observed case only; cannot guarantee all possible escaping descendants or future runs",
+    "Raw proc collection is trusted and not independently repeated in the historical interval",
+    "Supervisor literal NOT_COMPLETED_WITHIN_ALLOCATED_BUDGET and verification_pending fields preserved; intentional finite control completion is separate"
+  ]
+}

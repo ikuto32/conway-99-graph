@@ -1,0 +1,9 @@
+# One-shot joint count-model pilot
+
+Question: do the complete coordinate marginal domains and complete local count-signature domains admit a joint assignment with at least seven unbalanced groups on the literal support? Run only the separately augmented formula; baseline SAT is already witnessed by calibrated count tables. No Gram interval extension is included in this pilot.
+
+Before any call, require independent complete encoding and object-calibration gates bound to the exact155939-variable705833-clause input, model, scope, native wrapper/spec and all runtime sources. The separate ≥7 consequence applies only to potential full-Gram factors with all outside-column caps. SAT supplies a necessary count profile, not a factor or target graph. A decoded result must independently pass every actual clause and the raw integer count equations. UNSAT needs a separate complete proof check before any exclusion is claimed. The encoding intentionally omits full unsummed Gram equations, cross-group caps and residualD; no target automorphism is assumed.
+
+Limits: one research call,60seconds wall,1000000conflicts,4GiB address space,10GiB proof file,5-second kill grace,70-second host guard. Require21GiB host and11GiB ext4 free space. Use the calibrated CaDiCaL1.9.5 native executable and ext4 proof location, preserving complete command/environment/source/input/output hashes. Transfer the raw trace byte-exactly and retain its ext4 original. There is no automatic retry. UNKNOWN excludes nothing. A separate preflight makes zero solver calls. Preserve failed parsing/decoding/checking records and raw solver output.
+
+Independent SAT ABI: `sat --variant at_least_seven --encoding-gate PATH --encoding-gate-sha256 SHA --assignment JSON --native-output LOG [--decoded JSON] --out NEW`. Controls must include genuine count-CSP positives and corrupted assignments, while disclosing that no full research factor is a positive fixture.

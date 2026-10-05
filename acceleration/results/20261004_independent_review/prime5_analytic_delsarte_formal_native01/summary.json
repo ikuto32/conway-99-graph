@@ -1,0 +1,93 @@
+{
+  "schema": "INDEPENDENT_WRITTEN_MATHEMATICAL_REVIEW_V1",
+  "status": "INDEPENDENT_PRIME5_ANALYTIC_DELSARTE_FORMAL_V1_WRITTEN_PASS",
+  "claim_id": null,
+  "revision": null,
+  "statement": "The explicit rational p recurrence at q=5,n=99,s=122,t=10 makes F=(K1-122)p^2/a0 have constant Krawtchouk coefficient one, nonnegative remaining coefficients, degree21 and F(i)<=0 for every i55..99. Padding to degree32 gives an exact Delsarte dual candidate for every linear F5 code of length99/minimum nonzero weight at least55.",
+  "timestamp": "2026-10-04T17:09:24.8609755+00:00",
+  "verification_timestamp": "2026-10-04T17:09:24.8609755+00:00",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "result": "PASS_FORMAL_CONSTRUCTION_ONLY",
+  "scope": {
+    "description": "Formal analytic q5/n99/d55 recurrence/product dual. No numerical value arrays, size, integer dimension, optimality or improvement have been computationally checked.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Linear F5 code of length99 with minimum nonzero weight at least55 for the conditional bound; zero code allowed."
+  ],
+  "dependencies": [],
+  "proof": "acceleration/audit_20261004_prime5_analytic_delsarte_native_v1.md",
+  "proof_sha256": "f56bb06d0293497467c22678f400a500a68dc953b3cd0f7c3679e23979897826",
+  "candidate": {
+    "path": "acceleration/results/20261004_prime5_analytic_delsarte_candidate01.json",
+    "sha256": "c9e69939c5f9db4e5542e864c1a588d9e5a169ffb105c673abde596e68fd151c"
+  },
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_PRIME5_ANALYTIC_DELSARTE_DUAL_V1.md": "609c0164b2df6e122719bd77944df7f70964d9d927f9030a3259ff1fa0b29355",
+    "acceleration/results/20261004_prime5_analytic_delsarte_candidate01.json": "c9e69939c5f9db4e5542e864c1a588d9e5a169ffb105c673abde596e68fd151c",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v1.py": "42944723499b6016608d27c33e89e4e8784e542847010f066b1ec4397ca4e755",
+    "acceleration/construct_20261004_prime5_analytic_delsarte_v1_spec.md": "b3ddb4830d68c2d9f57cbebe1c9046a664d049fa1428c40d6d330bd06e354dd1",
+    "acceleration/audit_20261004_prime5_analytic_delsarte_native_v1.md": "f56bb06d0293497467c22678f400a500a68dc953b3cd0f7c3679e23979897826"
+  },
+  "input_map_count": 5,
+  "written_checks": 30,
+  "written_check_boundaries": [
+    "Character generating function normalization",
+    "Linear code orthogonality and no shell factor",
+    "Zero code allowed",
+    "Nonzero coordinate product3 choices",
+    "Zero coordinate product4 choices",
+    "Nonnegative structure constants by fixed-vector convolution",
+    "K1 multiplication coefficient shifts",
+    "Truncated recurrence lower10 coefficients zero",
+    "Ratio0 two strict integer margins",
+    "Ratio1 exact lower and upper integer margins",
+    "Ratio2 exact lower and upper integer margins",
+    "Ratio3 exact lower and upper integer margins",
+    "Ratio4 exact lower and upper integer margins",
+    "Ratio5 exact lower and upper integer margins",
+    "Ratio6 exact lower and upper integer margins",
+    "Ratio7 exact lower and upper integer margins",
+    "Ratio8 exact lower and upper integer margins",
+    "Ratio9 exact lower and upper integer margins",
+    "g10 positivity892/99",
+    "g11 positivity",
+    "Constant only a=b10 and shell count",
+    "Leading21 coefficient positive",
+    "All45 tail signs by strict K1 cutoff and square",
+    "Weight0 positive274 factor",
+    "Constant-one nonnegative MacWilliams upper bound",
+    "Exact neighboring powers dimension rule",
+    "n2 product64/9/4 written check",
+    "Sharp n2 full-space written check",
+    "Wrong constant and negative multiplier boundaries",
+    "Source term formula coordinate count"
+  ],
+  "controls": {
+    "written": 30,
+    "executed": 0,
+    "formal": 0,
+    "external": 0
+  },
+  "actual_coefficients_checked": false,
+  "actual_certificate": null,
+  "code_size_upper": null,
+  "integer_dimension_upper": null,
+  "command": null,
+  "runtime": null,
+  "executed_worker_start_time": null,
+  "shared_components": [
+    "Root proposed truncated positive multiplication; Structural supplied recurrence and source.",
+    "Native independently derives characters/product constants and hand-checks all rational interval margins.",
+    "Actual certificate is to use qualified Native0333 coordinate folds through a new analytic applicability adapter; no old numerical source/runtime gate transfer."
+  ],
+  "root_acceptance": null,
+  "limitations": [
+    "Written formal construction only; no target coefficient calculation executed.",
+    "Target applicability requires separately accepted support55.",
+    "Numerical status2 does not prove infeasibility; no nonzero code, optimum or rank improvement inferred."
+  ]
+}

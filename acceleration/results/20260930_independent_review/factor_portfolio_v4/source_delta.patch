@@ -1,0 +1,174 @@
+--- acceleration/theory_20260930_factor_permutation_annealer_v3.py
++++ acceleration/theory_20260930_factor_permutation_annealer_v4.py
+@@ -17,10 +17,18 @@
+ SOURCE=ROOT/'acceleration/factor_permutation_anneal_20260930_v2.cu'
+ BUILDER=ROOT/'acceleration/build_factor_permutation_anneal_20260930_v2.ps1'
+ EXE=ROOT/'acceleration/build/factor_permutation_anneal_20260930_v2.exe'
+-SPEC=ROOT/'acceleration/theory_20260930_factor_permutation_annealer_v3_spec.md'
+-PREDECESSOR=ROOT/'acceleration/theory_20260930_factor_permutation_annealer_v2.py'
++SPEC=ROOT/'acceleration/theory_20260930_factor_permutation_annealer_v4_spec.md'
++PREDECESSOR=ROOT/'acceleration/theory_20260930_factor_permutation_annealer_v3.py'
+ NATIVE_GATE=ROOT/'acceleration/results/20260930_independent_review/factor_permutation_annealer_bound/summary.json'
+ VERSION='TRIANGLE_FACTOR_CROSS_GRAM_SQUARED_V1'
++PORTFOLIO_SUMMARY=ROOT/'acceleration/results/20260930_connected_identity_cores/summary.json'
++PORTFOLIO_SUMMARY_SHA='3ab78be8b7a7582c730e4cfe4c95533a2bc68cecccdfca45fa7d3f8cd58190b5'
++PORTFOLIO={
++ 'connected_00':(ROOT/'acceleration/results/20260930_connected_identity_cores/core_00.json','3d4ad2d5b8ff92ca3d7761ac79e3651e306052897c3327b4eec87d7a85dabe81'),
++ 'connected_01':(ROOT/'acceleration/results/20260930_connected_identity_cores/core_01.json','23fb79efbc42fcaf7d54edb32311703be47fa96014a1c46ed00859a0753576e4'),
++ 'connected_02':(ROOT/'acceleration/results/20260930_connected_identity_cores/core_02.json','40c23054a9276039b0dc1320594f102ae65d06c8e2c819a31d6600c3ee279eeb'),
++ 'connected_03':(ROOT/'acceleration/results/20260930_connected_identity_cores/core_03.json','cdd61bb140888090f092af7bbc3dbc40399f8e06bb3b41781dcfba22f0f701f1')}
++CORE_NAMES=('shift6','six_prism',*PORTFOLIO)
+ SHIFT=ROOT/'acceleration/results/20260930_triangle_joint_factor_cnf/scope.json'
+ SHIFT_GATE=ROOT/'acceleration/results/20260930_independent_review/triangle_factor_column_caps/summary.json'
+ PRISM=ROOT/'acceleration/results/20260930_independent_review/prism_all_columns_cnf/derived_geometry.json'
+@@ -45,6 +53,11 @@
+ def timestamp():return datetime.now(timezone.utc).isoformat()
+ 
+ def core_data(label):
++    if label in PORTFOLIO:
++        path,identity=PORTFOLIO[label];need(digest(path)==identity,'exact selected portfolio core bytes')
++        raw=read(path);derived=problem(raw['core_adjacency'])
++        need(derived['target']==raw['target_gram'] and derived['edges']==raw['nonmatching_edge_catalogs'],'portfolio raw Gram/catalog equals wrapper derivation')
++        return raw['core_adjacency'],None
+     if label=='shift6':
+         x=read(SHIFT)['core'];n=12;c=[[0]*36 for _ in range(36)]
+         for g in range(3):
+@@ -53,7 +66,24 @@
+             for i,j in enumerate(x[name]):c[g*n+i][h*n+j]=c[h*n+j][g*n+i]=1
+         return c,None
+     if label=='six_prism':return read(PRISM)['core_adjacency'],None
++    need(label=='fixture243','unknown core label')
+     x=read(FIXTURE);return x['cubic_core60'],x['factor60x180']
++
++def bind_portfolio(args):
++    needed=args.core in PORTFOLIO or args.mode=='portfolio-calibrate'
++    if not needed:
++        need(args.portfolio_domain_gate is None and args.portfolio_domain_gate_sha256 is None,'old-core modes do not accept unused portfolio gate arguments')
++        return []
++    need(args.portfolio_domain_gate is not None and args.portfolio_domain_gate_sha256 is not None,'separate independent portfolio domain gate required')
++    need(digest(args.portfolio_domain_gate)==args.portfolio_domain_gate_sha256,'portfolio domain gate hash')
++    gate=read(args.portfolio_domain_gate)
++    need(gate['status']=='INDEPENDENT_CONNECTED_IDENTITY_CORE_PORTFOLIO_PASS','independent exact local-domain gate')
++    need(digest(PORTFOLIO_SUMMARY)==PORTFOLIO_SUMMARY_SHA,'fixed portfolio selection summary')
++    paths=[PORTFOLIO_SUMMARY,args.portfolio_domain_gate.resolve()]
++    for p in [PORTFOLIO_SUMMARY,*[item[0] for item in PORTFOLIO.values()]]:
++        need(gate['inputs_sha256'].get(key(p))==digest(p),'domain gate binds every selected source artifact');paths.append(p)
++    for p,h in PORTFOLIO.values():need(digest(p)==h,'frozen four-core portfolio membership')
++    return list(dict.fromkeys(paths))
+ 
+ def problem(c):
+     n=len(c)//3;m=n*(n-2)//2
+@@ -199,7 +229,7 @@
+ def run_chunks(args,out,calibration_only=False):
+     if calibration_only:
+         need(args.independent_gate is None and args.independent_gate_sha256 is None,'calibration route does not fabricate a research gate')
+-        need(args.core in ('shift6','six_prism') and args.seed==20260930 and args.chains==2 and args.chunks==1 and args.steps in (23,41,64) and args.seconds==30 and args.temperature==3.25,'fixed small public-resume calibration configuration')
++        need(args.core in CORE_NAMES and args.seed==20260930 and args.chains==2 and args.chunks==1 and args.steps in (23,41,64) and args.seconds==30 and args.temperature==3.25,'fixed small public-resume calibration configuration')
+         need(bool(args.resume)==(args.steps==41),'only41-step calibration chunk resumes')
+         kernel_gate=NATIVE_GATE
+         need(digest(kernel_gate)=='70c54735a3331f4bc9dff3ace2f5d1dd4bae49ec051f415a262538f9385b20b9','frozen native calibration gate')
+@@ -210,7 +240,10 @@
+         need(digest(args.independent_gate)==args.independent_gate_sha256,'gate digest');gate=read(args.independent_gate)
+         need(gate['status']=='INDEPENDENT_FACTOR_PERMUTATION_ANNEALER_CALIBRATION_PASS','gate status')
+         for p in [SOURCE,BUILDER,EXE,Path(__file__),SPEC]:need(gate['inputs_sha256'].get(key(p))==digest(p),'gate exact source/binary binding')
+-    need(args.core in ('shift6','six_prism'),'only two audited target cores enabled')
++        if args.core in PORTFOLIO:
++            for p in [args.portfolio_domain_gate.resolve(),PORTFOLIO_SUMMARY,*[item[0] for item in PORTFOLIO.values()]]:
++                need(gate['inputs_sha256'].get(key(p))==digest(p),'fresh wrapper gate binds exact independent portfolio admission')
++    need(args.core in CORE_NAMES,'only the two old cores and four hash-bound connected cores enabled')
+     need(1<=args.chains<=256 and 1<=args.chunks<=10000 and 1<=args.steps<=1024 and 0<args.seconds<=3600,'bounded resource configuration')
+     need(0<=args.temperature<=1e6,'temperature bound')
+     p=problem(core_data(args.core)[0]);ss=states(p,args.seed,args.chains)
+@@ -230,15 +263,18 @@
+         if best['best_score']==0:break
+     return dict(status='CALIBRATION_ONLY_FACTOR_PERMUTATION_CHUNK_COMPLETED' if calibration_only else 'CANDIDATE_FACTOR_PERMUTATION_CHUNKS_COMPLETED',calibration_only=calibration_only,objective_version=VERSION,completed_chunks=completed,best_raw_object=key(best_path) if best_path else None,best_score=min(s.get('best_score',full_score(p,s['best_permutations'])) for s in ss),search_seconds=time.monotonic()-start,independent_review_required=True,target_resolution=False,stopping='E0, declared chunk cap or time checked between chunks; a native call may add at most its 60-second subprocess cap.')
+ 
+-def resume_regression(out):
++def resume_regression(out,args=None,core_names=('shift6','six_prism')):
+     """Actual public wrapper processes and disk JSON; no synthetic PASS gate."""
+-    records=[];negative=[]
++    records=[];negative=[];parity=[]
+     def launch(label,core,steps,resume=None,expect_ok=True):
+         directory=out/label
+         command=[sys.executable,str(Path(__file__).resolve()),'calibration-chunk','--out',str(directory),
+             '--core',core,'--seed','20260930','--chains','2','--chunks','1','--steps',str(steps),
+             '--seconds','30','--temperature','3.25']
+         if resume:command+=['--resume',str(resume)]
++        if core in PORTFOLIO:
++            need(args is not None,'portfolio calibration arguments')
++            command+=['--portfolio-domain-gate',str(args.portfolio_domain_gate),'--portfolio-domain-gate-sha256',args.portfolio_domain_gate_sha256]
+         start=time.monotonic();result=subprocess.run(command,cwd=ROOT,capture_output=True,text=True,timeout=45)
+         receipt=dict(command=command,cwd=str(ROOT),exit_code=result.returncode,wall_seconds=time.monotonic()-start,
+             stdout=result.stdout,stderr=result.stderr,resume_path=key(resume) if resume else None,
+@@ -246,7 +282,7 @@
+         save(out/(label+'.receipt.json'),receipt)
+         need((result.returncode==0)==expect_ok,'actual public wrapper outcome '+label)
+         return directory
+-    for core in ('shift6','six_prism'):
++    for core in core_names:
+         first=launch(core+'_first23',core,23);checkpoint=first/'checkpoint_00000.json'
+         second=launch(core+'_resume41',core,41,checkpoint);whole=launch(core+'_whole64',core,64)
+         a,b,z=[read(path/'checkpoint_00000.json') for path in (first,second,whole)]
+@@ -261,7 +297,18 @@
+             resumed_checkpoint=key(second/'checkpoint_00000.json'),resumed_checkpoint_sha256=digest(second/'checkpoint_00000.json'),
+             whole_checkpoint=key(whole/'checkpoint_00000.json'),whole_checkpoint_sha256=digest(whole/'checkpoint_00000.json'),
+             chains=2,first_steps=23,resumed_steps=41,whole_steps=64,all_persisted_fields_and_trace_equal=True))
+-    original=read(out/'shift6_first23/checkpoint_00000.json')
++        if core in PORTFOLIO:
++            p=problem(core_data(core)[0]);initial=states(p,20260930,2)
++            gpu=read(whole/'chunk_00000.json');cpu=invoke(whole/'chunk_00000.txt',out/(core+'_whole64_cpu.json'),'cpu')
++            need(cpu['chains']==gpu['chains'],'new-core full CPU vs unchanged GPU parity')
++            checked=check_trace(p,initial,gpu)
++            for i,s in enumerate(gpu['chains']):
++                save(out/f'{core}_chain{i}_raw_initial.json',raw_object(p,initial[i]['permutations'],full_score(p,initial[i]['permutations'])))
++                save(out/f'{core}_chain{i}_raw_final.json',raw_object(p,s['permutations'],s['score']))
++                save(out/f'{core}_chain{i}_raw_best.json',raw_best(p,s))
++            parity.append(dict(core=core,whole_proposals=checked,CPU_GPU_all_chain_fields_equal=True,Python_full_recomputation_all_deltas_equal=True,core_sha256=PORTFOLIO[core][1]))
++    control_core=core_names[0]
++    original=read(out/(control_core+'_first23')/'checkpoint_00000.json')
+     for label in ('wrong_target','changed_edge_pair','wrong_objective','wrong_source_hash','wrong_binary_hash'):
+         bad=deepcopy(original)
+         if label=='wrong_target':bad['problem']['target'][0][0]+=1
+@@ -270,30 +317,33 @@
+         elif label=='wrong_source_hash':bad['source_sha256']='0'*64
+         else:bad['binary_sha256']='0'*64
+         path=out/('bad_'+label+'_checkpoint.json');save(path,bad)
+-        directory=launch('bad_'+label,'shift6',41,path,expect_ok=False)
++        directory=launch('bad_'+label,control_core,41,path,expect_ok=False)
+         need(not list(directory.glob('chunk_*')),'corrupt checkpoint rejected before native invocation')
+         negative.append(dict(control=label,failure=read(directory/'failure.json'),native_calls=0))
+-    return dict(status='CANDIDATE_PUBLIC_JSON_RESUME_REGRESSION_PASS',calibration_only=True,
+-        records=records,public_wrapper_native_calls=6,calibration_proposals=512,
++    return dict(status='CANDIDATE_FOUR_CORE_WRAPPER_CALIBRATION_PASS' if parity else 'CANDIDATE_PUBLIC_JSON_RESUME_REGRESSION_PASS',calibration_only=True,
++        records=records,public_wrapper_native_calls=3*len(core_names),calibration_proposals=256*len(core_names),new_core_parity=parity,CPU_parity_calls=len(parity),distinct_whole_trajectory_proposals_checked=sum(r['whole_proposals'] for r in parity),
+         corrupt_public_resume_controls=negative,independent_review_required=True,target_resolution=False,
+         unchanged_native_source_sha256=digest(SOURCE),unchanged_binary_sha256=digest(EXE),
+-        scope='Actual disk-checkpoint public Python-wrapper resume only; native algorithm and objective unchanged.')
++        scope='Four exact connected-core domains, native CPU/GPU/Python parity and actual public disk-checkpoint resume.' if parity else 'Actual disk-checkpoint public Python-wrapper resume only; native algorithm and objective unchanged.')
+ 
+ def main():
+-    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['resume-calibrate','calibration-chunk','run']);ap.add_argument('--out',type=Path,required=True)
+-    ap.add_argument('--core',choices=['shift6','six_prism'],default='shift6');ap.add_argument('--chains',type=int,default=32);ap.add_argument('--chunks',type=int,default=1);ap.add_argument('--steps',type=int,default=256);ap.add_argument('--seconds',type=float,default=60);ap.add_argument('--temperature',type=float,default=3.25);ap.add_argument('--seed',type=int,default=20260930);ap.add_argument('--resume',type=Path);ap.add_argument('--independent-gate',type=Path);ap.add_argument('--independent-gate-sha256')
++    ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['resume-calibrate','portfolio-calibrate','calibration-chunk','run']);ap.add_argument('--out',type=Path,required=True)
++    ap.add_argument('--core',choices=CORE_NAMES,default='shift6');ap.add_argument('--chains',type=int,default=32);ap.add_argument('--chunks',type=int,default=1);ap.add_argument('--steps',type=int,default=256);ap.add_argument('--seconds',type=float,default=60);ap.add_argument('--temperature',type=float,default=3.25);ap.add_argument('--seed',type=int,default=20260930);ap.add_argument('--resume',type=Path);ap.add_argument('--independent-gate',type=Path);ap.add_argument('--independent-gate-sha256');ap.add_argument('--portfolio-domain-gate',type=Path);ap.add_argument('--portfolio-domain-gate-sha256')
+     args=ap.parse_args();out=args.out.resolve();out.mkdir(parents=True,exist_ok=False)
+     for p,h in PINS.items():need(digest(p)==h,'pinned local-core/fixture source changed')
+     geometry_pin=read(PRISM_GATE)['derived_geometry_sha256']
+     need(digest(PRISM)==geometry_pin,'independent prism geometry pin')
+-    need(digest(PREDECESSOR)=='5d367ebc6683c4c5e473573c7edf14dd571973f75f1612e2be5121892f37cd35','unchanged predecessor Python source')
++    need(digest(PREDECESSOR)=='8f2a85f5a87d1c6a3a37fdb104628c126c67c4ba6ace846b7c9f3b3aba0525b3','unchanged predecessor Python source')
+     inputs=[Path(__file__),SOURCE,BUILDER,EXE,SPEC,PREDECESSOR,NATIVE_GATE,ROOT/'uv.lock',ROOT/'pyproject.toml',PRISM,*PINS]
++    inputs+=bind_portfolio(args)
+     for p in [args.resume,args.independent_gate]:
+         if p:inputs.append(p.resolve())
+-    common=dict(timestamp=timestamp(),source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),command=[sys.executable,*sys.argv],cwd=str(ROOT),python=platform.python_version(),inputs_sha256=pins(inputs),configuration=vars(args)|{'out':str(args.out),'resume':str(args.resume) if args.resume else None,'independent_gate':str(args.independent_gate) if args.independent_gate else None})
++    common=dict(timestamp=timestamp(),source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),command=[sys.executable,*sys.argv],cwd=str(ROOT),python=platform.python_version(),inputs_sha256=pins(inputs),configuration=vars(args)|{'out':str(args.out),'resume':str(args.resume) if args.resume else None,'independent_gate':str(args.independent_gate) if args.independent_gate else None,'portfolio_domain_gate':str(args.portfolio_domain_gate) if args.portfolio_domain_gate else None})
+     save(out/'manifest.json',common)
+     try:
+-        result=resume_regression(out) if args.mode=='resume-calibrate' else run_chunks(args,out,calibration_only=args.mode=='calibration-chunk')
++        if args.mode=='portfolio-calibrate':result=resume_regression(out,args,tuple(PORTFOLIO))
++        elif args.mode=='resume-calibrate':result=resume_regression(out)
++        else:result=run_chunks(args,out,calibration_only=args.mode=='calibration-chunk')
+         result.update(common);result['binary_sha256']=digest(EXE);result['outputs_sha256']=pins([p for p in out.iterdir() if p.is_file()])
+         save(out/'summary.json',result);print(json.dumps({'status':result['status'],'summary_sha256':digest(out/'summary.json')}))
+     except Exception as e:

@@ -1,0 +1,99 @@
+{
+  "schema": "ROOT_EXACT_R227_WRITTEN_ACCEPTANCE_V1",
+  "timestamp": "2026-10-04T20:55:28.9942827+00:00",
+  "reviewer": "/root",
+  "result": "PASS_INDEPENDENT_WRITTEN_SCOPE",
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-NO-FIVE-D2-BOUNDARY",
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), count actual induced rook-nine vertex subsets once by their vertex sets, and put d_T=6-r_T for each actual triangle. If R=227 and every d_T belongs to {0,1,2}, then the number of actual triangles having deficiency two is not five.",
+  "independent_verifier": "/root/native_driver",
+  "producer": "/root/structural",
+  "independent_verification_timestamp": "2026-10-04T20:46:35.7519671Z",
+  "scope": {
+    "description": "Universal conditional exclusion of exactly five actual deficiency-two triangles at R227 under explicit maximum deficiency2. Four literal r1 uses_result premises give exhaustive necessary k0/h1,k0/h2,k1/h2 coverage and matching branch contradictions. No R227, b4, another rook count or target exclusion.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "dependencies": [
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-WEIGHTED-SUPPORT-BOUNDARIES",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-SINGLE-OUTSIDE-POINT",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-FOURFOLD-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result"
+    },
+    {
+      "id": "C-UNRESTRICTED-TARGET-ROOK-COUNT227-FIVE-D2-NO-ORDINARY-TWO-OUTSIDE-POINTS",
+      "revision": 1,
+      "relation": "uses_result"
+    }
+  ],
+  "assumptions": [
+    "complete finite simple SRG(99,14,1,2)",
+    "R=227 counts actual induced rook-nine vertex sets once",
+    "every actual triangle has deficiency d_T=6-r_T in {0,1,2}"
+  ],
+  "fresh_inputs_sha256": {
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/summary.json": "3620b3e3963492324f4ee967739b3487c49fec02e4af84170be2434d07bc14d7",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/claim_binding_schema2.json": "40d5975397957df435a39f8f70e5c5fd35a69f36e75d0d5c32a53e41d1ad0d05",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_NO_FIVE_D2_BOUNDARY_V1.md": "cd17ee00d44895a57797dd09e21962bfede98322053009b4e69060dcf156b25d",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_WEIGHTED_SUPPORT_BOUNDARIES_V1.md": "72b1b152a9551efb31e7ff98e9c06ae49587a031dbb6d226b64e5b5d7dd5cbee",
+    "acceleration/results/20261004_target_rook_count227_five_d2_weighted_support_boundaries_candidate01.json": "eacf26e07eb2d0a77dc3f4c7b69f37ad277aaf0a1140f001df5930248bfe6e0b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_SINGLE_OUTSIDE_POINT_V1.md": "2127b52a44b3f667131c357a41972e631d7c3242d22bfe59e9af46dc65932492",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_point_candidate01.json": "6b152c9bb6138078fa1324690ca64251c9deec23d6c8a4e8cbcaffd87c344819",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_FOURFOLD_SUPPORT_V1.md": "3d711b5cda4b0b657aed1fcbf21214cfe5c44fef8ae95ae837c34ff731053bfc",
+    "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_support_candidate01.json": "62b71f4a7d088cd68d138b54db320741294173647855a1adcecef3f0b6af3d4b",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_COUNT227_FIVE_D2_ORDINARY_TWO_OUTSIDE_POINTS_V1.md": "be3621b85bd10a5d6ca9b3b961a0b1a7bdadfa5cbece6af6f6edc96d81afe0a6",
+    "acceleration/results/20261004_target_rook_count227_five_d2_ordinary_two_outside_points_candidate01.json": "031ff160a35f2b0d06d14fd81cb24e2b0c7f0cd594042817446c5cdeae967805",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/claim_binding_schema2_02.json": "c4fdfea30a3b70439afa682dbc4b813144b93b2abfe655e270da6528bfeaddaa",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/claim_binding_schema2.json": "8ad081ff7d9edb8228a88d385daec2b6a4d53215c7ff7b980646dbcddfa19bc5",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/claim_binding_schema2.json": "435ba1f1b167370f08dca364db6df29e369de21cbbbdbd97ba226fbed2bf6ef2",
+    "docs/COMPUTE_POLICY.md": "9d3f57e8e36376e71fe5fb2733d19d6c0eacf92c71f763e66224dda95f59e136",
+    "acceleration/results/20261004_target_rook_count227_no_five_d2_boundary_candidate01.json": "83d140b75c136d3ef07f32f88f1af2e84b1b747a0b8841bc8d8c97f6ead91831",
+    "acceleration/audit_20261004_target_rook_count227_no_five_d2_boundary_native_v1.md": "fe3e83b01557af907939fcc7143a9aa54f30d0f911150d6ab7d3505182dd6a0d",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/summary02.json": "8c236eb15befe2f473d6490a16ab1f16b1a5ffbf049d0c73bd6cc03449d347a4",
+    "acceleration/results/20261004_target_rook_count227_five_d2_weighted_boundaries_root_written_acceptance01.json": "d07de7ae26ba330f14cba1ff7bb50e97a28bc0bb5f62e13e85240d51cfd4864a",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_single_outside_native01/summary.json": "dbd09b074c9c8439e582fa1d089179235d05e2d2767d6b9038344e7945342d54",
+    "acceleration/results/20261004_target_rook_count227_five_d2_single_outside_root_written_acceptance01.json": "c615dafa83018fb5c54a9958d2c6e818a418413f609a22dc2299f627ca712cd6",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_fourfold_native01/summary.json": "8f7686c817adac17661edd1ec2f894e7a64f403784962dd48948b06da24a327e",
+    "acceleration/results/20261004_target_rook_count227_five_d2_fourfold_root_written_acceptance01.json": "d328903b763312e55f0b2f69b64b48a5d0b674cf48be43710aa560a23649ee72",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/claim_binding_schema2.json": "ce55983c0fcbf7da0a272023a056368e8956aab97a74a2a4112567a2cb43f538",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_ordinary_two_outside_native01/summary.json": "5e662c819fcd2208589e1c5f13967b10b28e90b7111227e44b47a790e737c218",
+    "acceleration/results/20261004_independent_review/target_rook_count227_five_d2_weighted_boundaries_native01/metadata_writer_correction02.json": "c088482d85243d70b3c2b1aba93296f6171ecb401690bfdc2f3e56992fe82767",
+    "acceleration/results/20261004_target_rook_count227_five_d2_scaling_outline_veto01.json": "59638497433f0601414a2e335d4ae2f01bac5681c96b1535d4ca0b46a7ec3e5b",
+    "acceleration/results/20261004_independent_review/target_rook_count227_no_five_d2_boundary_native01/metadata_writer_correction01.json": "0b60aeb4f56539da9649d2f1660b07db23d393977d5dbec3d586bd1e82b37876"
+  },
+  "fresh_small_identities": 28,
+  "written_checks": [
+    "Root whole frozen separate composition/source/raw and Native complete new written audit read. Exact R227/maxd2 b!=5 r1 statement retained; four uses_result r1 dependencies and original order authenticated.",
+    "Distinct composition proof establishes identical actual rook/deficiency/S/k/h/weight definitions and strict q>0 via complete-target integer-plus7/3 coordinates. h0 upper-2 rejects allk; h1 upper10-10k-2l leavesk0; h2 upper20-10k-2l leavesk0/1.",
+    "The three remaining tuples match exact ordinary/h1, ordinary/h2 and fourfold/h2 scopes, each with authentic separate raw mathematical gate. Old edge endpoints are not presumed excluded by other tuple arithmetic.",
+    "Producer fourth-dependency preparation false/null record preserved. Later actual ce559/5e662 fourth gate is independent new evidence; Rootordinary/h2 acceptance7bc078 likewise saved separately, not inserted in old candidate or Native sealed slots.",
+    "Native source-only h/H parser metadata failure receipt preserved0b60ae; corrected inside_D2_edges field genuine. No mathematical failure, fabricated worker/gate or theorem refutation.",
+    "Only b5 excluded under explicit maxd2. No b4/R227/target result or inferred noD3; branch reviews are premises and not an old composition gate. Registration separate after eight candidate typed/schema gates."
+  ],
+  "shared_components": [
+    "Structural authored the composition and constituent candidates; Root weighted/pointwise/leaf discovery outlines are disclosed.",
+    "Native authored different-author independent constituent reviews and now separately derives exhaustive tuple coverage and exact hypothesis matching.",
+    "Agreement and shared mechanisms are not verification; four prior mathematical statements are explicit inherited premises, with no code or status gate transfer.",
+    "New composition verification time differs from constituent times; no computational executor exists."
+  ],
+  "current_ledger_sha256": "f4a1bbd17119baedcf0222745c96c0530e4f2e9e3e6c3543650b51c4d4982c93",
+  "source_commit": "155a99539b86206520d8b8cc0f002d66cdc1b3e1",
+  "registration": "Pending nextWave47; frozenWave46 449 cutoff untouched.",
+  "mathematical_programs": 0,
+  "formal_reviews": 0,
+  "external_reviews": 0,
+  "ledger_Git_PUBLIC_mutations": 0,
+  "target_resolution": "UNKNOWN",
+  "overall_search_coverage": "UNKNOWN; no validated denominator.",
+  "elapsed_seconds": 0.2492968
+}

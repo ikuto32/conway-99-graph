@@ -1,0 +1,472 @@
+[
+  {
+    "case": "author_id_-1",
+    "expected_stage": "PROPOSAL_ID_RANGE",
+    "actual_stage": "PROPOSAL_ID_RANGE"
+  },
+  {
+    "case": "author_id_5184",
+    "expected_stage": "PROPOSAL_ID_RANGE",
+    "actual_stage": "PROPOSAL_ID_RANGE"
+  },
+  {
+    "case": "author_id_False",
+    "expected_stage": "PROPOSAL_ID_TYPE",
+    "actual_stage": "PROPOSAL_ID_TYPE"
+  },
+  {
+    "case": "author_id_1.0",
+    "expected_stage": "PROPOSAL_ID_TYPE",
+    "actual_stage": "PROPOSAL_ID_TYPE"
+  },
+  {
+    "case": "author_missing_row",
+    "expected_stage": "ROW_SHAPE",
+    "actual_stage": "ROW_SHAPE"
+  },
+  {
+    "case": "author_row_object",
+    "expected_stage": "ROW_SHAPE",
+    "actual_stage": "ROW_SHAPE"
+  },
+  {
+    "case": "author_bool_point",
+    "expected_stage": "ROW_TYPES",
+    "actual_stage": "ROW_TYPES"
+  },
+  {
+    "case": "author_float_point",
+    "expected_stage": "ROW_TYPES",
+    "actual_stage": "ROW_TYPES"
+  },
+  {
+    "case": "author_outside_point",
+    "expected_stage": "ROW_RANGE",
+    "actual_stage": "ROW_RANGE"
+  },
+  {
+    "case": "author_repeated_point",
+    "expected_stage": "ROW_DISTINCT_POINTS",
+    "actual_stage": "ROW_DISTINCT_POINTS"
+  },
+  {
+    "case": "author_duplicate_row",
+    "expected_stage": "DISTINCT_ROWS",
+    "actual_stage": "DISTINCT_ROWS"
+  },
+  {
+    "case": "author_reused_pair",
+    "expected_stage": "PAIR_LINEARITY",
+    "actual_stage": "PAIR_LINEARITY"
+  },
+  {
+    "case": "author_missing_coefficient",
+    "expected_stage": "COEFFICIENT_POPULATION",
+    "actual_stage": "COEFFICIENT_POPULATION"
+  },
+  {
+    "case": "author_bool_coefficient",
+    "expected_stage": "COEFFICIENT_TYPES",
+    "actual_stage": "COEFFICIENT_TYPES"
+  },
+  {
+    "case": "author_float_coefficient",
+    "expected_stage": "COEFFICIENT_TYPES",
+    "actual_stage": "COEFFICIENT_TYPES"
+  },
+  {
+    "case": "author_zero_coefficient",
+    "expected_stage": "COEFFICIENT_DOMAIN",
+    "actual_stage": "COEFFICIENT_DOMAIN"
+  },
+  {
+    "case": "author_all_positive",
+    "expected_stage": "SIGN_COUNTS",
+    "actual_stage": "SIGN_COUNTS"
+  },
+  {
+    "case": "author_opposite_sign_exchange",
+    "expected_stage": "GF3_WORD",
+    "actual_stage": "GF3_WORD"
+  },
+  {
+    "case": "author_short_matrix",
+    "expected_stage": "MATRIX_SHAPE",
+    "actual_stage": "MATRIX_SHAPE"
+  },
+  {
+    "case": "author_bool_zero",
+    "expected_stage": "MATRIX_TYPES",
+    "actual_stage": "MATRIX_TYPES"
+  },
+  {
+    "case": "author_float_one",
+    "expected_stage": "MATRIX_TYPES",
+    "actual_stage": "MATRIX_TYPES"
+  },
+  {
+    "case": "author_nonbinary",
+    "expected_stage": "MATRIX_BINARY",
+    "actual_stage": "MATRIX_BINARY"
+  },
+  {
+    "case": "author_loop",
+    "expected_stage": "MATRIX_DIAGONAL",
+    "actual_stage": "MATRIX_DIAGONAL"
+  },
+  {
+    "case": "author_asymmetry",
+    "expected_stage": "MATRIX_SYMMETRY",
+    "actual_stage": "MATRIX_SYMMETRY"
+  },
+  {
+    "case": "author_edge_two_CN",
+    "expected_stage": "EDGE_CN",
+    "actual_stage": "EDGE_CN"
+  },
+  {
+    "case": "author_nonedge_three_CN",
+    "expected_stage": "NONEDGE_CN",
+    "actual_stage": "NONEDGE_CN"
+  },
+  {
+    "case": "record_proposal_id",
+    "expected_stage": "RECORD:proposal_id",
+    "actual_stage": "RECORD:proposal_id"
+  },
+  {
+    "case": "record_role",
+    "expected_stage": "RECORD:role",
+    "actual_stage": "RECORD:role"
+  },
+  {
+    "case": "record_negative_centers",
+    "expected_stage": "RECORD:negative_centers",
+    "actual_stage": "RECORD:negative_centers"
+  },
+  {
+    "case": "record_triples",
+    "expected_stage": "RECORD:triples",
+    "actual_stage": "RECORD:triples"
+  },
+  {
+    "case": "record_coefficients",
+    "expected_stage": "RECORD:coefficients",
+    "actual_stage": "RECORD:coefficients"
+  },
+  {
+    "case": "record_adjacency_rows",
+    "expected_stage": "RECORD:adjacency_rows",
+    "actual_stage": "RECORD:adjacency_rows"
+  },
+  {
+    "case": "record_common_neighbors",
+    "expected_stage": "RECORD:common_neighbors",
+    "actual_stage": "RECORD:common_neighbors"
+  },
+  {
+    "case": "record_selected_degrees",
+    "expected_stage": "RECORD:selected_degrees",
+    "actual_stage": "RECORD:selected_degrees"
+  },
+  {
+    "case": "record_graph_degrees",
+    "expected_stage": "RECORD:graph_degrees",
+    "actual_stage": "RECORD:graph_degrees"
+  },
+  {
+    "case": "record_actual_triangles",
+    "expected_stage": "RECORD:actual_triangles",
+    "actual_stage": "RECORD:actual_triangles"
+  },
+  {
+    "case": "record_integer_incidence_sum",
+    "expected_stage": "RECORD:integer_incidence_sum",
+    "actual_stage": "RECORD:integer_incidence_sum"
+  },
+  {
+    "case": "record_coefficient_sum_mod3",
+    "expected_stage": "RECORD:coefficient_sum_mod3",
+    "actual_stage": "RECORD:coefficient_sum_mod3"
+  },
+  {
+    "case": "record_valid_local_geometry",
+    "expected_stage": "RECORD:valid_local_geometry",
+    "actual_stage": "RECORD:valid_local_geometry"
+  },
+  {
+    "case": "record_first_veto",
+    "expected_stage": "RECORD:first_veto",
+    "actual_stage": "RECORD:first_veto"
+  },
+  {
+    "case": "record_veto_detail",
+    "expected_stage": "RECORD:veto_detail",
+    "actual_stage": "RECORD:veto_detail"
+  },
+  {
+    "case": "record_labelled_graph_sha256",
+    "expected_stage": "RECORD:labelled_graph_sha256",
+    "actual_stage": "RECORD:labelled_graph_sha256"
+  },
+  {
+    "case": "late_ordinal_5183",
+    "expected_stage": "RECORD:proposal_id",
+    "actual_stage": "RECORD:proposal_id"
+  },
+  {
+    "case": "cache_0_bool",
+    "expected_stage": "RECORD:common_neighbors",
+    "actual_stage": "RECORD:common_neighbors"
+  },
+  {
+    "case": "cache_0_float",
+    "expected_stage": "RECORD:common_neighbors",
+    "actual_stage": "RECORD:common_neighbors"
+  },
+  {
+    "case": "cache_1_bool",
+    "expected_stage": "RECORD:common_neighbors",
+    "actual_stage": "RECORD:common_neighbors"
+  },
+  {
+    "case": "part_schema",
+    "expected_stage": "PART_SCHEMA",
+    "actual_stage": "PART_SCHEMA"
+  },
+  {
+    "case": "part_start",
+    "expected_stage": "PART_START",
+    "actual_stage": "PART_START"
+  },
+  {
+    "case": "part_stop",
+    "expected_stage": "PART_STOP",
+    "actual_stage": "PART_STOP"
+  },
+  {
+    "case": "part_drop",
+    "expected_stage": "PART_POPULATION",
+    "actual_stage": "PART_POPULATION"
+  },
+  {
+    "case": "part_duplicate",
+    "expected_stage": "RECORD:proposal_id",
+    "actual_stage": "RECORD:proposal_id"
+  },
+  {
+    "case": "part_shift",
+    "expected_stage": "RECORD:proposal_id",
+    "actual_stage": "RECORD:proposal_id"
+  },
+  {
+    "case": "checkpoint_schema",
+    "expected_stage": "CHECKPOINT:schema",
+    "actual_stage": "CHECKPOINT:schema"
+  },
+  {
+    "case": "checkpoint_next_proposal_id",
+    "expected_stage": "CHECKPOINT:next_proposal_id",
+    "actual_stage": "CHECKPOINT:next_proposal_id"
+  },
+  {
+    "case": "checkpoint_tallies",
+    "expected_stage": "CHECKPOINT:tallies",
+    "actual_stage": "CHECKPOINT:tallies"
+  },
+  {
+    "case": "checkpoint_valid_graphs",
+    "expected_stage": "CHECKPOINT:valid_graphs",
+    "actual_stage": "CHECKPOINT:valid_graphs"
+  },
+  {
+    "case": "checkpoint_parts",
+    "expected_stage": "CHECKPOINT:parts",
+    "actual_stage": "CHECKPOINT:parts"
+  },
+  {
+    "case": "checkpoint_coverage",
+    "expected_stage": "CHECKPOINT:coverage",
+    "actual_stage": "CHECKPOINT:coverage"
+  },
+  {
+    "case": "checkpoint_missing",
+    "expected_stage": "CHECKPOINT_KEYS",
+    "actual_stage": "CHECKPOINT_KEYS"
+  },
+  {
+    "case": "group_missing",
+    "expected_stage": "GRAPH_GROUPS",
+    "actual_stage": "GRAPH_GROUPS"
+  },
+  {
+    "case": "group_float_id",
+    "expected_stage": "GRAPH_GROUPS",
+    "actual_stage": "GRAPH_GROUPS"
+  },
+  {
+    "case": "group_duplicate",
+    "expected_stage": "GRAPH_GROUPS",
+    "actual_stage": "GRAPH_GROUPS"
+  },
+  {
+    "case": "group_wrong_hash",
+    "expected_stage": "GRAPH_GROUPS",
+    "actual_stage": "GRAPH_GROUPS"
+  },
+  {
+    "case": "runtime_source",
+    "expected_stage": "OUTER_SOURCE",
+    "actual_stage": "OUTER_SOURCE"
+  },
+  {
+    "case": "runtime_schema_bool",
+    "expected_stage": "OUTER_SCHEMA",
+    "actual_stage": "OUTER_SCHEMA"
+  },
+  {
+    "case": "runtime_scope",
+    "expected_stage": "OUTER_SCOPE",
+    "actual_stage": "OUTER_SCOPE"
+  },
+  {
+    "case": "runtime_process_scope",
+    "expected_stage": "OUTER_PROCESS_SCOPE",
+    "actual_stage": "OUTER_PROCESS_SCOPE"
+  },
+  {
+    "case": "runtime_invocation_format",
+    "expected_stage": "OUTER_INVOCATION",
+    "actual_stage": "OUTER_INVOCATION"
+  },
+  {
+    "case": "runtime_cwd",
+    "expected_stage": "OUTER_CWD",
+    "actual_stage": "OUTER_CWD"
+  },
+  {
+    "case": "runtime_child",
+    "expected_stage": "OUTER_CHILD",
+    "actual_stage": "OUTER_CHILD"
+  },
+  {
+    "case": "runtime_seconds_bool",
+    "expected_stage": "OUTER_SECONDS",
+    "actual_stage": "OUTER_SECONDS"
+  },
+  {
+    "case": "runtime_shutdown_bool",
+    "expected_stage": "OUTER_SHUTDOWN",
+    "actual_stage": "OUTER_SHUTDOWN"
+  },
+  {
+    "case": "runtime_retry",
+    "expected_stage": "OUTER_RETRY",
+    "actual_stage": "OUTER_RETRY"
+  },
+  {
+    "case": "runtime_cumulative",
+    "expected_stage": "OUTER_CUMULATIVE",
+    "actual_stage": "OUTER_CUMULATIVE"
+  },
+  {
+    "case": "runtime_status",
+    "expected_stage": "TERMINAL_STATUS",
+    "actual_stage": "TERMINAL_STATUS"
+  },
+  {
+    "case": "runtime_invocation_mismatch",
+    "expected_stage": "TERMINAL_INVOCATION",
+    "actual_stage": "TERMINAL_INVOCATION"
+  },
+  {
+    "case": "runtime_exit_bool",
+    "expected_stage": "TERMINAL_EXIT",
+    "actual_stage": "TERMINAL_EXIT"
+  },
+  {
+    "case": "runtime_exit_float",
+    "expected_stage": "TERMINAL_EXIT",
+    "actual_stage": "TERMINAL_EXIT"
+  },
+  {
+    "case": "runtime_stop",
+    "expected_stage": "TERMINAL_STOP",
+    "actual_stage": "TERMINAL_STOP"
+  },
+  {
+    "case": "runtime_deadline",
+    "expected_stage": "TERMINAL_DEADLINE",
+    "actual_stage": "TERMINAL_DEADLINE"
+  },
+  {
+    "case": "runtime_error",
+    "expected_stage": "TERMINAL_ERROR",
+    "actual_stage": "TERMINAL_ERROR"
+  },
+  {
+    "case": "runtime_elapsed_bool",
+    "expected_stage": "TERMINAL_ELAPSED",
+    "actual_stage": "TERMINAL_ELAPSED"
+  },
+  {
+    "case": "runtime_elapsed_over_allocation",
+    "expected_stage": "TERMINAL_ELAPSED",
+    "actual_stage": "TERMINAL_ELAPSED"
+  },
+  {
+    "case": "runtime_created_suspended",
+    "expected_stage": "TERMINAL:created_suspended",
+    "actual_stage": "TERMINAL:created_suspended"
+  },
+  {
+    "case": "runtime_resumed",
+    "expected_stage": "TERMINAL:resumed",
+    "actual_stage": "TERMINAL:resumed"
+  },
+  {
+    "case": "runtime_reaped",
+    "expected_stage": "TERMINAL:reaped",
+    "actual_stage": "TERMINAL:reaped"
+  },
+  {
+    "case": "runtime_empty",
+    "expected_stage": "TERMINAL:job_active_zero_observed",
+    "actual_stage": "TERMINAL:job_active_zero_observed"
+  },
+  {
+    "case": "runtime_errors",
+    "expected_stage": "TERMINAL:cleanup_errors",
+    "actual_stage": "TERMINAL:cleanup_errors"
+  },
+  {
+    "case": "runtime_actual_exit_bool",
+    "expected_stage": "TERMINAL:actual_exit_code",
+    "actual_stage": "TERMINAL:actual_exit_code"
+  },
+  {
+    "case": "runtime_worker_prefix",
+    "expected_stage": "PLAN_WORKER",
+    "actual_stage": "PLAN_WORKER"
+  },
+  {
+    "case": "runtime_criteria",
+    "expected_stage": "PLAN_CRITERIA",
+    "actual_stage": "PLAN_CRITERIA"
+  },
+  {
+    "case": "runtime_worker_mode",
+    "expected_stage": "PLAN_WORKER_PREFIX",
+    "actual_stage": "PLAN_WORKER_PREFIX"
+  },
+  {
+    "case": "duplicate_JSON",
+    "expected_stage": "JSON_DUPLICATE",
+    "actual_stage": "JSON_DUPLICATE"
+  },
+  {
+    "case": "nonfinite_JSON",
+    "expected_stage": "JSON_NONFINITE",
+    "actual_stage": "JSON_NONFINITE"
+  }
+]

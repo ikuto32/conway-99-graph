@@ -1,0 +1,92 @@
+{
+  "schema": "INDEPENDENT_WRITTEN_MATHEMATICAL_REVIEW_V1",
+  "status": "INDEPENDENT_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_V1_WRITTEN_PASS",
+  "implementation_version": 1,
+  "claim_id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+  "revision": 1,
+  "claim_revision": 1,
+  "statement": "For every complete finite simple SRG(99,14,1,2), let R count actual induced rook-nine vertex subsets once, r_T count those containing actual triangle T, d_T=6-r_T and D=sum_T d_T=6(231-R). Whenever D>0, every d_T=m>0 satisfies D>6m and therefore D>=6m+6. Equivalently d_T<=230-R for every T whenever R<231. In particular R=229 forces exactly twelve deficiency-one triangles and zero deficiency on every other triangle.",
+  "timestamp": "2026-10-04T16:28:28Z",
+  "verification_timestamp": "2026-10-04T16:28:28Z",
+  "verification_started_at": "2026-10-04T16:25:24Z",
+  "producer": "/root/structural",
+  "verifier": "/root/native_driver",
+  "method": "independent_derivation",
+  "result": "PASS",
+  "recommended_status": "VERIFIED",
+  "recommended_review_state": "CLEAR",
+  "scope": {
+    "description": "Exact unrestricted target rook-deficiency necessary condition, eliminating the complete equality boundary of the earlier second-neighbor mass bound. R229 and R231 remain unexcluded.",
+    "unrestricted_target": true,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Complete finite simple SRG(99,14,1,2) with actual triangle and induced rook-nine vertex-subset counts.",
+    "The positive-deficiency inequality is conditioned on D>0; no positive m is assumed when D=0."
+  ],
+  "dependencies": [],
+  "dependency_reason": "Every required local triangle, square and target spectral identity is independently reconstructed in the written audit; other frozen papers provide exact comparison context without gate transfer.",
+  "paper": {
+    "path": "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md",
+    "sha256": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0"
+  },
+  "candidate": {
+    "path": "acceleration/results/20261004_target_rook_deficiency_strict_second_neighbor_candidate01.json",
+    "sha256": "976e676fc75eec3c81870770852c26ab9de6cd88b0f87613152dec019ebcdaed",
+    "claim_id": "C-UNRESTRICTED-TARGET-ROOK-DEFICIENCY-STRICT-SECOND-NEIGHBOR-BOUND",
+    "revision": 1
+  },
+  "proof": "acceleration/audit_20261004_rook_deficiency_and_n3_native_v1.md",
+  "proof_sha256": "338eabe14478f0b80f8527268c4267e474f72c979149943e61ed0bf224ffdd58",
+  "inputs_sha256": {
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_SECOND_NEIGHBOR_BOUND_V1.md": "ba046522585d5a59a857251928d05c0ac59e69425bf58f420e8cd63be83f210c",
+    "acceleration/results/20261004_target_rook_deficiency_second_neighbor_candidate01.json": "d860c4e34ec704a6749a4e51603f86d895b36a693b79ed5c379602b4be719c86",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_SQUARE_COVERAGE_N3_EQUIVALENCE_V1.md": "6a9783a607272fc9ebef29d37af3b1864e57efb2012ea1d510255e15e824fd72",
+    "acceleration/results/20261004_target_rook_square_coverage_n3_candidate01.json": "e9dd7c981af6b04e17bb5b9b432d6542beb9004c2229312440d89fab42128738",
+    "docs/CANDIDATE_20261004_TARGET_ROOK_DEFICIENCY_STRICT_SECOND_NEIGHBOR_BOUND_V1.md": "85cc1a88615f019af8e02582b821defeb3508a329842bc3c9f9874e608cb38a0",
+    "acceleration/results/20261004_target_rook_deficiency_strict_second_neighbor_candidate01.json": "976e676fc75eec3c81870770852c26ab9de6cd88b0f87613152dec019ebcdaed",
+    "acceleration/audit_20261004_rook_deficiency_and_n3_native_v1.md": "338eabe14478f0b80f8527268c4267e474f72c979149943e61ed0bf224ffdd58"
+  },
+  "input_map_count": 7,
+  "written_checks": 15,
+  "written_check_boundaries": [
+    "Uncovered-square corner pair must be defect",
+    "U=3D/2",
+    "Equality positive support contains all uncovered-square corners",
+    "Three actual perfect matchings on2m nodes",
+    "Central-other-bucket nonedges12m",
+    "All adjacent categories separated",
+    "Unmatched same-bucket has one common neighbor",
+    "Different-bucket different-node common-neighbor indicators",
+    "Two opposite-pair contributions per common matching edge",
+    "C4(S)=6m+c_ab+c_ac+c_bc<=9m",
+    "U9m forces each intersectionm",
+    "Identical matchings create induced rook through defect pair",
+    "D positive multiple6 gives strict integer bound",
+    "R229 exactlytwelve d1 with even2/4/6 incidence",
+    "m1 and three m2 hand matching boundaries/no completion conclusion"
+  ],
+  "controls": {
+    "written": 15,
+    "executed": 0,
+    "formal": 0,
+    "external": 0
+  },
+  "verification_started_at_is_worker_start": false,
+  "command": null,
+  "runtime": null,
+  "executed_worker_start_time": null,
+  "shared_components": [
+    "Root proposed portions of discovery/equality outline; Structural produced all candidate bytes.",
+    "The same Native written audit explicitly separates three exact claim scopes and uses direct set/Gram arguments.",
+    "Previously archived rook identities and scope notes are comparison history; no novelty or external theorem approval."
+  ],
+  "limitations": [
+    "No graph or matching computation or census was executed.",
+    "R229 and R231 remain unexcluded; necessary conditions do not construct completions.",
+    "Makhnev global exclusion and Hamming universal cover are not approved premises.",
+    "No hypothetical equitable profile, automorphism or nonconstant codeword is assumed.",
+    "Current ledger/index/Git and original evidence bytes are untouched."
+  ],
+  "root_acceptance": null
+}

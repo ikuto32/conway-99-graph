@@ -1,0 +1,78 @@
+{
+  "id": "C-EXACT-EIGHT-PARALLEL-BUILD-V1-UNCONDITIONAL-TREE-CONTAINMENT",
+  "revision": 1,
+  "kind": "empirical/engineering result",
+  "basis": [
+    "COMPUTED"
+  ],
+  "status": "REFUTED",
+  "review_state": "CLEAR",
+  "statement": "The frozen v1 Windows launch protocol, consisting of Popen of the locked virtual-environment Python followed by assigning only its root PID to a Job Object before releasing a stdin RUN barrier, guarantees containment of every worker interpreter and descendant under every permitted scheduling interleaving.",
+  "scope": {
+    "description": "Only the unconditional containment guarantee of build_20260930_exact_eight_parallel_batch.py SHA6b1b4c4f80a24e6851643032689df37a5a9641ee4c465ae04aab3f008ae8ec44 on the observed Windows virtual-environment interpreter launch path. A live harmless pre-assignment scheduling countercontrol refutes universality; historical research-run containment is not adjudicated.",
+    "unrestricted_target": false,
+    "target_resolution": "NONE"
+  },
+  "assumptions": [
+    "Popen may schedule the interpreter launcher before the parent executes AssignProcessToJobObject.",
+    "The canary application remains blocked on RUN until after root assignment; a startup record proves its interpreter already exists.",
+    "Only exact owned process handles and explicit runtime-child records are inspected."
+  ],
+  "dependencies": [],
+  "verifier": "/root/state_literature_audit",
+  "method": "Harmless real three-generation writer tree using the unchanged WindowsJob assign/terminate implementation; controlled pre-assignment scheduling delay, exact IsProcessInJob/WaitForSingleObject queries and heartbeat observations; explicit cleanup of all known owned handles.",
+  "created_at": "2026-09-30T14:32:24.753564+00:00",
+  "updated_at": "2026-09-30T14:32:24.753564+00:00",
+  "artifact_availability": "LOCAL_ONLY",
+  "independent_verification": {
+    "report": "acceleration/results/20260930_independent_review/windows_job_assignment_race/summary.json",
+    "sha256": "758e611699d893f831c4071c59093864e5f33dcd570e6c75eea719d10a25516f",
+    "status": "INDEPENDENT_WINDOWS_JOB_PREASSIGNMENT_RACE_DEMONSTRATED"
+  },
+  "inputs_sha256": {
+    "acceleration/results/20260930_independent_review/windows_job_assignment_race/summary.json": "758e611699d893f831c4071c59093864e5f33dcd570e6c75eea719d10a25516f",
+    "acceleration/results/20260930_independent_review/windows_job_assignment_race/observation.json": "2f271934500497962d0216dc9ef2290edc41381d6077cd7bf105d9198e67139b",
+    "acceleration/audit_20260930_windows_job_assignment_race.py": "1b44120e2e31fbe568e33080a7a79826a7af18a30390ea8d640428381aa12646",
+    "acceleration/audit_20260930_windows_job_assignment_race_spec.md": "e4c887900ae1865f100405f83e3045aed03d07afebc91997c7b19d84c3f2c255",
+    "acceleration/calibrate_20260930_parallel_build_canary_v3.py": "56ca0ba8b1b646fda713541be245fbed58264ab7c190421ca43f3924bcfa6a3b",
+    "acceleration/build_20260930_exact_eight_parallel_batch.py": "6b1b4c4f80a24e6851643032689df37a5a9641ee4c465ae04aab3f008ae8ec44",
+    "acceleration/build_20260930_exact_eight_parallel_batch_spec.md": "52d82fcbe56600b68d6e85d62bed983dad4859f1ad370a8a1899f9a139a95928",
+    "acceleration/results/20260930_independent_review/parallel_windows_job_v2/summary.json": "e92568166a0022544ff2eeeae46bb883ac520195f228e506bdef2fcf94abc5b7"
+  },
+  "counterexample": {
+    "seconds_before_assignment": 0.125,
+    "root_assigned": true,
+    "preexisting_interpreter_assigned": false,
+    "escaped_application_generations": 3,
+    "job_active_zero_after_termination": true,
+    "escaped_application_handles_still_running": 3,
+    "heartbeat_before": [
+      7,
+      5,
+      2
+    ],
+    "heartbeat_after": [
+      7,
+      10,
+      7
+    ],
+    "manual_exact_handle_cleanup_completed": true
+  },
+  "controls": [
+    "Positive membership of the explicitly assigned Popen root.",
+    "Exact owned runtime chain reconstructed from application/child Popen records.",
+    "No application RUN work before job assignment.",
+    "Complete Job active-zero observation followed by still-live external handles and continued descendant writes.",
+    "All known owned handles terminated and signalled after observation.",
+    "Earlier immediate-assignment finite component successes retained separately."
+  ],
+  "shared_components": [
+    "Exact frozen WindowsJob class under test; independent canary and observation code."
+  ],
+  "limitations": [
+    "A concrete possible launch interleaving, not a race-frequency estimate.",
+    "No assertion that any historical formula builder or native solver escaped containment.",
+    "Earlier finite backend successes remain true but do not imply a universal guarantee.",
+    "No formula, native research, ledger or Git operation executed."
+  ]
+}
